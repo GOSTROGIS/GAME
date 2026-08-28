@@ -14,7 +14,7 @@
   "dependencies": {
     "@colyseus/core": "^0.17.32",
     "@colyseus/redis-driver": "^0.17.6",
-    "@colyseus/redis-presence": "^0.17.6",
+    "@colyseus/redis-presence": "^0.18.2",
     "@colyseus/schema": "^4.0.31",
     "@colyseus/ws-transport": "^0.17.9",
     "@hollow-march/shared": "workspace:*",
