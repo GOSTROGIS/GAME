@@ -1,6 +1,6 @@
 # Numerical base shared by the generator. Use requirements-gis.txt for the
 # complete canonical GeoTIFF/GeoPackage/TopoJSON build and validation stack.
-numpy==2.3.5
+numpy==2.5.2
 shapely==2.1.1
 rasterio==1.4.3
 whitebox==2.3.6
