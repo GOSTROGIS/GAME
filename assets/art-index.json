@@ -1,0 +1,73 @@
+{
+  "schema": "SableReachArtIndexV1",
+  "auditedOn": "2026-08-26",
+  "playableOrigins": [
+    {"id":"gloamfarer","conceptMaster":"assets/characters/gloamfarer-v2.png","transparentCutout":"assets/characters/gloamfarer-v2-cutout.png"},
+    {"id":"bell_warden","conceptMaster":"assets/characters/bell-warden-v2.png","transparentCutout":"assets/characters/bell-warden-v2-cutout.png"},
+    {"id":"grave_tithe_runner","conceptMaster":"assets/characters/grave-tithe-runner-v2.png","transparentCutout":"assets/characters/grave-tithe-runner-v2-cutout.png"},
+    {"id":"mire_physicker","conceptMaster":"assets/characters/mire-physicker-v2.png","transparentCutout":"assets/characters/mire-physicker-v2-cutout.png"},
+    {"id":"oathless_scion","conceptMaster":"assets/characters/oathless-scion-v2.png","transparentCutout":"assets/characters/oathless-scion-v2-cutout.png"},
+    {"id":"cinder_mason","conceptMaster":"assets/characters/cinder-mason-v2.png","transparentCutout":"assets/characters/cinder-mason-v2-cutout.png"},
+    {"id":"starved_seer","conceptMaster":"assets/characters/starved-seer-v2.png","transparentCutout":"assets/characters/starved-seer-v2-cutout.png"},
+    {"id":"thorn_poacher","conceptMaster":"assets/characters/thorn-poacher-v2.png","transparentCutout":"assets/characters/thorn-poacher-v2-cutout.png"}
+  ],
+  "namedCharacters": [
+    {"id":"maela_voss","factionId":"ember_ledger","regionId":"hearthmere","conceptMaster":"assets/characters/npcs/ember-ledger/maela-voss-v1.png","transparentCutout":"assets/characters/npcs/ember-ledger/maela-voss-v1-cutout.png"},
+    {"id":"avren_doss","factionId":"ember_ledger","regionId":"hearthmere","conceptMaster":"assets/characters/npcs/ember-ledger/avren-doss-v1.png","transparentCutout":"assets/characters/npcs/ember-ledger/avren-doss-v1-cutout.png"},
+    {"id":"bera_claymother","factionId":"ember_ledger","regionId":"hearthmere","conceptMaster":"assets/characters/npcs/ember-ledger/bera-claymother-v1.png","transparentCutout":"assets/characters/npcs/ember-ledger/bera-claymother-v1-cutout.png"},
+    {"id":"fenn_joryn","factionId":"ember_ledger","regionId":"hearthmere","conceptMaster":"assets/characters/npcs/ember-ledger/fenn-joryn-v1.png","transparentCutout":"assets/characters/npcs/ember-ledger/fenn-joryn-v1-cutout.png"},
+    {"id":"dessa_mirel","factionId":"ember_ledger","regionId":"hearthmere","conceptMaster":"assets/characters/npcs/ember-ledger/dessa-mirel-v1.png","transparentCutout":"assets/characters/npcs/ember-ledger/dessa-mirel-v1-cutout.png"},
+    {"id":"kett_sable","factionId":"ember_ledger","regionId":"hearthmere","conceptMaster":"assets/characters/npcs/ember-ledger/kett-sable-v1.png","transparentCutout":"assets/characters/npcs/ember-ledger/kett-sable-v1-cutout.png"},
+    {"id":"torren_vale","factionId":"bell_wardens","regionId":"hearthmere","conceptMaster":"assets/characters/npcs/bell-wardens/torren-vale-v1.png","transparentCutout":"assets/characters/npcs/bell-wardens/torren-vale-v1-cutout.png"},
+    {"id":"alda_rime","factionId":"bell_wardens","regionId":"hearthmere","conceptMaster":"assets/characters/npcs/bell-wardens/alda-rime-v1.png","transparentCutout":"assets/characters/npcs/bell-wardens/alda-rime-v1-cutout.png"},
+    {"id":"neris_thorn","factionId":"bell_wardens","regionId":"dunmire","conceptMaster":"assets/characters/npcs/bell-wardens/neris-thorn-v1.png","transparentCutout":"assets/characters/npcs/bell-wardens/neris-thorn-v1-cutout.png"},
+    {"id":"edda_quill","factionId":"bell_wardens","regionId":"cinderward","conceptMaster":"assets/characters/npcs/bell-wardens/edda-quill-v1.png","transparentCutout":"assets/characters/npcs/bell-wardens/edda-quill-v1-cutout.png"},
+    {"id":"bram_caul","factionId":"bell_wardens","regionId":"graven_march","conceptMaster":"assets/characters/npcs/bell-wardens/bram-caul-v1.png","transparentCutout":"assets/characters/npcs/bell-wardens/bram-caul-v1-cutout.png"},
+    {"id":"olan_vey","factionId":"bell_wardens","regionId":"graven_march","conceptMaster":"assets/characters/npcs/bell-wardens/olan-vey-v1.png","transparentCutout":"assets/characters/npcs/bell-wardens/olan-vey-v1-cutout.png"},
+    {"id":"ysra_pell","factionId":"reed_sisters","regionId":"dunmire","conceptMaster":"assets/characters/npcs/reed-sisters/ysra-pell-v1.png","transparentCutout":"assets/characters/npcs/reed-sisters/ysra-pell-v1-cutout.png"},
+    {"id":"nima_reed","factionId":"reed_sisters","regionId":"dunmire","conceptMaster":"assets/characters/npcs/reed-sisters/nima-reed-v1.png","transparentCutout":"assets/characters/npcs/reed-sisters/nima-reed-v1-cutout.png"},
+    {"id":"cal_harrow","factionId":"reed_sisters","regionId":"dunmire","conceptMaster":"assets/characters/npcs/reed-sisters/cal-harrow-v1.png","transparentCutout":"assets/characters/npcs/reed-sisters/cal-harrow-v1-cutout.png"},
+    {"id":"iva_pell","factionId":"reed_sisters","regionId":"hearthmere","conceptMaster":"assets/characters/npcs/reed-sisters/iva-pell-v1.png","transparentCutout":"assets/characters/npcs/reed-sisters/iva-pell-v1-cutout.png"},
+    {"id":"tess_fen","factionId":"reed_sisters","regionId":"dunmire","conceptMaster":"assets/characters/npcs/reed-sisters/tess-fen-v1.png","transparentCutout":"assets/characters/npcs/reed-sisters/tess-fen-v1-cutout.png"},
+    {"id":"roan_drel","factionId":"reed_sisters","regionId":"dunmire","conceptMaster":"assets/characters/npcs/reed-sisters/roan-drel-v1.png","transparentCutout":"assets/characters/npcs/reed-sisters/roan-drel-v1-cutout.png"},
+    {"id":"orik_senn","factionId":"cinder_compact","regionId":"cinderward","conceptMaster":"assets/characters/npcs/cinder-compact/orik-senn-v1.png","transparentCutout":"assets/characters/npcs/cinder-compact/orik-senn-v1-cutout.png"},
+    {"id":"sava_quench","factionId":"cinder_compact","regionId":"cinderward","conceptMaster":"assets/characters/npcs/cinder-compact/sava-quench-v1.png","transparentCutout":"assets/characters/npcs/cinder-compact/sava-quench-v1-cutout.png"},
+    {"id":"tarn_widow","factionId":"cinder_compact","regionId":"cinderward","conceptMaster":"assets/characters/npcs/cinder-compact/tarn-widow-v1.png","transparentCutout":"assets/characters/npcs/cinder-compact/tarn-widow-v1-cutout.png"},
+    {"id":"mera_bolt","factionId":"cinder_compact","regionId":"cinderward","conceptMaster":"assets/characters/npcs/cinder-compact/mera-bolt-v1.png","transparentCutout":"assets/characters/npcs/cinder-compact/mera-bolt-v1-cutout.png"},
+    {"id":"dain_coal","factionId":"cinder_compact","regionId":"cinderward","conceptMaster":"assets/characters/npcs/cinder-compact/dain-coal-v1.png","transparentCutout":"assets/characters/npcs/cinder-compact/dain-coal-v1-cutout.png"},
+    {"id":"pritch_glass","factionId":"cinder_compact","regionId":"cinderward","conceptMaster":"assets/characters/npcs/cinder-compact/pritch-glass-v1.png","transparentCutout":"assets/characters/npcs/cinder-compact/pritch-glass-v1-cutout.png"}
+  ],
+  "bestiaryFamilies": [
+    {"id":"ashbound","conceptPlate":"assets/bestiary/ashbound-plate.png"},
+    {"id":"cairn_beasts","conceptPlate":"assets/bestiary/cairn-beasts-plate.png"},
+    {"id":"march_deserters","conceptPlate":"assets/bestiary/march-deserters-plate.png"},
+    {"id":"drowned_parish","conceptPlate":"assets/bestiary/drowned-parish-plate.png"},
+    {"id":"reed_coven","conceptPlate":"assets/bestiary/reed-coven-plate.png"},
+    {"id":"kilnforged","conceptPlate":"assets/bestiary/kilnforged-plate.png"},
+    {"id":"glasswood","conceptPlate":"assets/bestiary/glasswood-brood-plate.png"},
+    {"id":"hush_order","conceptPlate":"assets/bestiary/hush-order-plate.png"},
+    {"id":"echo_choir","conceptPlate":"assets/bestiary/echo-choir-plate.png"},
+    {"id":"ossuary_vermin","conceptPlate":"assets/bestiary/ossuary-vermin-plate.png"},
+    {"id":"bell_revenants","conceptPlate":"assets/bestiary/bell-revenants-plate.png"},
+    {"id":"salt_waste","conceptPlate":"assets/bestiary/salt-waste-plate.png"},
+    {"id":"veil_coast","conceptPlate":"assets/bestiary/veil-coast-plate.png"},
+    {"id":"shuttered_ward","conceptPlate":"assets/bestiary/shuttered-ward-plate.png"},
+    {"id":"charnel_measures","conceptPlate":"assets/bestiary/charnel-measures-plate.png"},
+    {"id":"black_sluice","conceptPlate":"assets/bestiary/black-sluice-plate.png"},
+    {"id":"last_pest_cart","conceptPlate":"assets/bestiary/last-pest-cart-plate.png"},
+    {"id":"breath_tithe","conceptPlate":"assets/bestiary/breath-tithe-plate.png"},
+    {"id":"white_ague","conceptPlate":"assets/bestiary/white-ague-plate.png"},
+    {"id":"pallid_root_communion","conceptPlate":"assets/bestiary/pallid-root-communion-plate.png"},
+    {"id":"anchored_quarantine","conceptPlate":"assets/bestiary/anchored-quarantine-plate.png"}
+  ],
+  "coverage": {
+    "namedCharacters": {"subjects":42,"conceptMasters":24,"transparentCutouts":24},
+    "individualBestiaryForms": {"subjects":178,"conceptMasters":0,"transparentCutouts":0}
+  },
+  "maturity": {
+    "conceptMasters":"authored",
+    "transparentCutouts":"prototype_billboards",
+    "runtimeIntegrated":false,
+    "productionAssets":false
+  }
+}

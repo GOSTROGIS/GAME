@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Maker — Sable Reach</title>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+    "three/addons/exporters/OBJExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js",
+    "three/addons/exporters/GLTFExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js": "sha384-nbwtoZENJD3Vq+ACK0CuGQdPMuDWHkamC2KJD70EV5nfg6jQjfppKOea07YJN+N3",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js": "sha384-VofkvpG6HERhFCYbsUOHeNXBCqID2nfqkQqnVzE1jc/oPcz+qJ13ADdXH08hE+cQ"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./tokens/colors.css">
+<link rel="stylesheet" href="./tokens/typography.css">
+<link rel="stylesheet" href="./tokens/spacing.css">
+<link rel="stylesheet" href="./tokens/effects.css">
+<style>
+  html, body { margin:0; padding:0; height:100%; background:var(--ink); color:var(--bone); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(185,149,82,.35); }
+  a:hover { color:var(--gold-bright); border-bottom-color:var(--gold-bright); }
+  three-d-stage:not(:defined) { visibility:hidden; }
+  .eyebrow { color:var(--gold); font:var(--type-eyebrow); letter-spacing:var(--track-eyebrow); text-transform:uppercase; }
+  .micro { font:var(--type-micro); letter-spacing:var(--track-micro); text-transform:uppercase; }
+  .nano { font:var(--type-nano); letter-spacing:.08em; text-transform:uppercase; font-style:normal; }
+  .btn { min-height:var(--touch-min); padding:0 14px; color:var(--bone); background:var(--ghost-bg); border:1px solid var(--line);
+         font:var(--type-button); letter-spacing:var(--track-button); text-transform:uppercase; cursor:pointer; transition:.2s ease; }
+  .btn:hover { color:var(--gold-bright); border-color:var(--gold); }
+  .btn[aria-pressed="true"] { color:var(--gold-bright); background:var(--selected-bg); border-color:var(--gold); box-shadow:inset 3px 0 var(--gold); }
+  .btn:focus-visible { outline:2px solid var(--gold-bright); outline-offset:3px; }
+  .btn.sm { min-height:30px; padding:0 9px; font:500 9px var(--display); letter-spacing:.1em; }
+  .grain { position:fixed; inset:var(--grain-inset); z-index:7; pointer-events:none; opacity:var(--grain-opacity);
+           background-image:var(--grain-url); animation:grain var(--grain-step) steps(2) infinite; }
+  .vig { position:fixed; inset:0; z-index:8; pointer-events:none; box-shadow:var(--vignette); }
+  aside::-webkit-scrollbar { width:9px; }
+  aside::-webkit-scrollbar-thumb { background:#3a352c; }
+  table.sil { width:100%; border-collapse:collapse; font:400 11px var(--sans); }
+  table.sil th { color:#7f857f; font:var(--type-nano); letter-spacing:.09em; text-transform:uppercase; text-align:right; padding:0 0 5px; font-weight:400; }
+  table.sil th:first-child { text-align:left; }
+  table.sil td { padding:2px 0; text-align:right; color:#a7aaa4; border-top:1px solid rgba(255,255,255,.045); font-variant-numeric:tabular-nums; }
+  table.sil td:first-child { text-align:left; color:var(--bone); }
+  .sect { padding:10px 12px; background:var(--glass-bg); border:1px solid var(--line-soft); border-left:3px solid rgba(82,102,92,.45); }
+  .sect[data-off="true"] { opacity:.45; border-left-color:rgba(189,97,53,.5); }
+  #cmpBox { display:flex; align-items:center; gap:9px; }
+  #cmpBox[hidden] { display:none; }
+  #selectorBtn::after { content:" \25be"; }
+  #selPanel { position:fixed; top:74px; left:28px; width:420px; max-height:74vh; overflow-y:auto; overflow-x:hidden; background:#0a0e10;
+              border:1px solid var(--line); box-shadow:0 24px 70px rgba(0,0,0,.65); z-index:50; }
+  #selPanel[hidden] { display:none; }
+  #selPanel::-webkit-scrollbar { width:9px; }
+  #selPanel::-webkit-scrollbar-thumb { background:#3a352c; }
+  .selsearch { position:sticky; top:0; z-index:2; padding:10px; background:#0a0e10; border-bottom:1px solid var(--line); }
+  .selsearch input { width:100%; background:var(--ghost-bg); border:1px solid var(--line); color:var(--bone);
+                      padding:9px 10px; font:400 12px var(--sans); }
+  .selsearch input:focus-visible { outline:2px solid var(--gold-bright); outline-offset:2px; }
+  .selgroup { padding:9px 12px 5px; color:var(--gold); font:var(--type-eyebrow); letter-spacing:var(--track-eyebrow);
+              text-transform:uppercase; background:#0d1214; position:sticky; top:41px; z-index:1; }
+  .selrow { display:flex; align-items:center; gap:10px; padding:8px 12px; cursor:pointer; border-bottom:1px solid var(--line-soft); background:none; width:100%; text-align:left; border-left:0; border-right:0; border-top:0; }
+  .selrow:hover { background:var(--ghost-bg); }
+  .selrow[aria-current="true"] { background:var(--selected-bg); box-shadow:inset 3px 0 var(--gold); }
+  .selrow img, .selrow .noart { width:32px; height:32px; object-fit:cover; flex:0 0 auto; background:#141a1c; border:1px solid var(--line-soft); }
+  .selrow .noart { display:flex; align-items:center; justify-content:center; color:#5a5f58; font:500 13px var(--display); }
+  .selrow .meta { flex:1 1 auto; min-width:0; }
+  .selrow .meta b { display:block; color:var(--bone); font:500 12px var(--display); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .selrow .meta i { display:block; margin-top:2px; color:#8d938d; font:400 10px var(--sans); font-style:normal; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .pill { flex:0 0 auto; padding:3px 6px; font:500 8px var(--display); letter-spacing:.08em; text-transform:uppercase; }
+  .pill.sculpted { color:#8aa596; background:rgba(82,102,92,.16); border:1px solid rgba(82,102,92,.45); }
+  .pill.generic-rig { color:#7ba6b6; background:rgba(60,90,100,.18); border:1px solid rgba(60,90,100,.5); }
+  .pill.queued { color:#c9a25f; background:rgba(150,110,40,.14); border:1px solid rgba(150,110,40,.4); }
+  .pill.refused { color:#c98d78; background:rgba(110,37,37,.18); border:1px solid rgba(110,37,37,.55); }
+  .pill.reference { color:#8d938d; background:rgba(255,255,255,.05); border:1px solid var(--line); }
+  #placeholderView { position:absolute; inset:0; z-index:9; background:#0a0e10; display:flex; align-items:center; justify-content:center; }
+  #placeholderView[hidden] { display:none; }
+  #placeholderView img { max-width:52%; max-height:76%; object-fit:contain; filter:var(--grade-atlas); }
+  #placeholderView .msg { position:absolute; left:24px; bottom:24px; right:24px; max-width:560px; }
+  #vpControls[hidden] { display:none; }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vig" aria-hidden="true"></div>
+
+<div style="position:relative;z-index:2;display:grid;grid-template-columns:1fr 430px;grid-template-rows:auto 1fr;height:100vh;min-height:620px">
+
+  <header style="grid-column:1 / -1;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:18px;padding:20px 28px 16px;border-bottom:1px solid var(--line)">
+    <div style="display:flex;align-items:flex-start;gap:18px;min-width:0;flex:1 1 auto">
+      <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro);flex:0 0 auto">01</span>
+      <div style="min-width:0">
+        <p id="roster" class="nano" style="margin:0 0 6px;color:#6b7069"></p>
+        <p id="eyebrow" class="eyebrow" style="margin:0 0 7px"></p>
+        <h1 id="title" style="margin:0 0 6px;color:var(--bone-bright);font:500 30px var(--display);letter-spacing:var(--track-name)"></h1>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+          <span id="idTag" style="color:var(--muted);font:400 15px var(--sans);white-space:nowrap"></span>
+          <button id="selectorBtn" class="btn sm" type="button">Change subject</button>
+        </div>
+      </div>
+    </div>
+    <p id="stat" class="micro" style="margin:4px 0 0;color:var(--muted);max-width:400px;flex:0 0 auto;text-align:right">Building&hellip;</p>
+  </header>
+
+  <div id="selPanel" hidden>
+    <div class="selsearch"><input id="selSearch" type="text" placeholder="Filter by name, role or family&hellip;" autocomplete="off"></div>
+    <div id="selList"></div>
+  </div>
+
+  <main id="viewport" style="position:relative;min-height:0;border-right:1px solid var(--line)">
+    <three-d-stage id="stage" name="model" background="#0a0e10" style="display:block;width:100%;height:100%"></three-d-stage>
+    <img id="overlay" alt="" hidden
+         style="position:absolute;pointer-events:none;z-index:4;mix-blend-mode:screen;opacity:.5">
+    <div id="vpControls" hidden>
+      <div style="position:absolute;left:20px;right:200px;bottom:18px;display:flex;flex-direction:column-reverse;gap:6px;z-index:5">
+        <div id="clipBar" style="display:flex;flex-wrap:wrap;gap:6px"></div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <button class="btn" id="light" aria-pressed="false">Region light</button>
+          <button class="btn" id="cmp" aria-pressed="false" hidden>Plate overlay</button>
+        </div>
+      </div>
+      <div id="cmpBox" hidden style="position:absolute;right:20px;bottom:18px;z-index:5;padding:8px 12px;background:rgba(8,11,12,.86);border:1px solid var(--line)">
+        <span class="nano" style="color:var(--muted)">Plate</span>
+        <input id="cmpOpacity" type="range" min="0" max="100" value="50" style="width:110px;accent-color:#b99552">
+        <button class="btn sm" id="cmpBlend" aria-pressed="true">Screen</button>
+      </div>
+    </div>
+    <div id="placeholderView" hidden>
+      <img id="placeholderImg" alt="">
+      <div class="msg"></div>
+    </div>
+  </main>
+
+  <aside style="overflow-y:auto;padding:22px 24px 40px;background:linear-gradient(180deg,rgba(13,20,22,.62),rgba(6,9,10,.92))">
+    <div id="plateBlock"></div>
+    <div id="tierBody"></div>
+  </aside>
+</div>
+
+<script src="three-d-stage.js"></script>
+<script type="module">
+import { buildActor, drawCalls } from './kit/hm-actor.js';
+import { makeState, stepActor, CLIP_LIST } from './kit/hm-actor-anim.js';
+import { CAST_BY_ID, VOICES, FACTION_META } from './kit/hm-actor-cast.js';
+import { buildRegistry, tally } from './kit/hm-model-registry.js';
+
+const stage = document.getElementById('stage');
+const { THREE } = await stage.ready;
+
+const REG = buildRegistry();
+const ALL = [...REG.sculpted, ...REG.namedCast, ...REG.queuedBestiary, ...REG.origins];
+const BY_ID = new Map(ALL.map((s) => [s.id, s]));
+const FRONT_VIEW = { 'enemy.ash-husk': { pos: [1.35, 1.06, 2.35], target: [0, 0.90, 0] } };
+
+document.getElementById('roster').textContent =
+  `${ALL.length} subjects catalogued \u00b7 ${REG.sculpted.length} sculpted \u00b7 ${REG.namedCast.length} generic-rig \u00b7 `
+  + `${REG.queuedBestiary.filter((r) => r.tier === 'queued').length} queued \u00b7 `
+  + `${REG.queuedBestiary.filter((r) => r.tier === 'refused').length} refused \u00b7 ${REG.origins.length} reference`;
+
+/* ---------------------------------------------------------------- shell */
+const eyebrowEl = document.getElementById('eyebrow');
+const titleEl = document.getElementById('title');
+const statEl = document.getElementById('stat');
+const plateBlock = document.getElementById('plateBlock');
+const tierBody = document.getElementById('tierBody');
+const clipBar = document.getElementById('clipBar');
+const vpControls = document.getElementById('vpControls');
+const placeholderView = document.getElementById('placeholderView');
+const placeholderImg = document.getElementById('placeholderImg');
+const overlay = document.getElementById('overlay');
+const cmp = document.getElementById('cmp');
+const cmpBox = document.getElementById('cmpBox');
+const cmpOpacity = document.getElementById('cmpOpacity');
+const cmpBlend = document.getElementById('cmpBlend');
+const lightBtn = document.getElementById('light');
+const idTagEl = document.getElementById('idTag');
+
+function setHeader({ eyebrow, title, idTag, stat }) {
+  eyebrowEl.textContent = eyebrow;
+  titleEl.textContent = title;
+  idTagEl.textContent = idTag || '';
+  statEl.textContent = stat;
+}
+
+function titleCase(id) { return id.length ? id[0].toUpperCase() + id.slice(1) : id; }
+
+/* ------------------------------------------------------------- clip bar */
+function renderClipBar(items) {
+  clipBar.innerHTML = items.map((it, i) => `<button class="btn" data-clip="${it.id}" aria-pressed="${i === 0}">${it.label}</button>`).join('');
+  const buttons = [...clipBar.querySelectorAll('button')];
+  buttons.forEach((b) => b.addEventListener('click', () => {
+    buttons.forEach((o) => o.setAttribute('aria-pressed', String(o === b)));
+    onClipSelect(b.dataset.clip);
+  }));
+  if (buttons[0]) onClipSelect(buttons[0].dataset.clip);
+}
+let onClipSelect = () => {};
+
+/* ------------------------------------------------------------ run loop */
+let active = null;           // { kind:'sculpted', model } | { kind:'actor', rig, spec, st }
+let actorClip = 'idle';
+let last = performance.now();
+function tick(now) {
+  const dt = Math.min(0.05, (now - last) / 1000);
+  last = now;
+  if (active) {
+    if (active.kind === 'sculpted') active.model.update(dt);
+    else if (active.kind === 'actor') {
+      stepActor(active.rig, active.spec, active.st, dt, actorClip);
+      active.rig.root.updateMatrixWorld(true);
+    }
+  }
+  requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+
+lightBtn.addEventListener('click', () => {
+  const on = lightBtn.getAttribute('aria-pressed') !== 'true';
+  lightBtn.setAttribute('aria-pressed', String(on));
+  lightBtn.textContent = on ? 'Studio light' : 'Region light';
+  if (stage.setLightMode) stage.setLightMode(on ? 'region' : 'studio');
+});
+
+/* --------------------------------------------------------- plate compare
+   Only sculpted subjects carry a PLATE.scale precise enough to align an
+   overlay pixel-for-pixel; generic-rig and placeholder subjects hide the
+   control entirely rather than offer a compare that would be meaningless. */
+let currentScale = null, restoreView = null, comparing = false;
+function layoutOverlay() {
+  if (!currentScale) return;
+  const rect = document.getElementById('viewport').getBoundingClientRect();
+  const cam = stage._camera, ctr = stage._controls;
+  const dist = cam.position.distanceTo(ctr.target);
+  const visible = 2 * dist * Math.tan((cam.fov * Math.PI) / 360);
+  const pxPerM = rect.height / visible;
+  const S = currentScale;
+  const figPx = S.height * pxPerM;
+  const imgH = (figPx * 1536) / (S.solePx - S.crownPx);
+  const imgW = (imgH * 1024) / 1536;
+  overlay.style.width = imgW + 'px';
+  overlay.style.height = imgH + 'px';
+  overlay.style.left = (rect.width / 2 - (S.centrePx * imgW) / 1024) + 'px';
+  overlay.style.top = (rect.height / 2 + ctr.target.y * pxPerM - (S.crownPx * imgH) / 1536 - ((S.solePx - S.crownPx) * 0)) + 'px';
+}
+cmp.addEventListener('click', () => {
+  comparing = !comparing;
+  cmp.setAttribute('aria-pressed', String(comparing));
+  overlay.hidden = !comparing;
+  cmpBox.hidden = !comparing;
+  const cam = stage._camera, ctr = stage._controls;
+  if (comparing) {
+    cam.fov = 16;
+    cam.updateProjectionMatrix();
+    const visible = currentScale.height / 0.80;
+    const dist = (visible / 2) / Math.tan((cam.fov * Math.PI) / 360);
+    ctr.target.set(0, currentScale.height * 0.5, 0);
+    cam.position.set(0, currentScale.height * 0.5, dist);
+    ctr.enabled = false;
+    ctr.update();
+    layoutOverlay();
+  } else {
+    cam.fov = 45;
+    cam.updateProjectionMatrix();
+    if (restoreView) { ctr.target.copy(restoreView.target); cam.position.copy(restoreView.pos); }
+    ctr.enabled = true;
+    ctr.update();
+  }
+});
+cmpOpacity.addEventListener('input', () => { overlay.style.opacity = String(cmpOpacity.value / 100); });
+cmpBlend.addEventListener('click', () => {
+  const on = cmpBlend.getAttribute('aria-pressed') !== 'true';
+  cmpBlend.setAttribute('aria-pressed', String(on));
+  cmpBlend.textContent = on ? 'Screen' : 'Difference';
+  overlay.style.mixBlendMode = on ? 'screen' : 'difference';
+});
+addEventListener('resize', () => { if (comparing) layoutOverlay(); });
+
+/* ------------------------------------------------------------ plate block */
+function plateMethodLine(scale) {
+  if (!scale) return '';
+  const pxPerCm = (10 / scale.mmPerPx).toFixed(1);
+  return `Crown at row ${scale.crownPx}, sole at row ${scale.solePx}: ${scale.solePx - scale.crownPx} px spans the declared ${scale.height} m, so one centimetre is ${pxPerCm} px.`;
+}
+function renderPlateBlock(plateSrc, caption, methodLine) {
+  if (!plateSrc) {
+    plateBlock.innerHTML = `<p class="eyebrow" style="margin:0 0 10px">Concept art</p>
+      <div style="padding:16px;border:1px solid var(--line);background:var(--ink);color:#8d938d;font:var(--type-body-sm)">No concept plate is vendored for this subject.</div>`;
+    return;
+  }
+  plateBlock.innerHTML = `<p class="eyebrow" style="margin:0 0 10px">Concept art \u00b7 the authority this was built from</p>
+    <div style="position:relative;border:1px solid var(--line);background:var(--ink)">
+      <img src="${plateSrc}" alt="Concept plate" style="display:block;width:100%;height:270px;object-fit:contain;filter:var(--grade-atlas)">
+      <p class="micro" style="position:absolute;left:10px;bottom:8px;margin:0;color:#7ba6b6">${caption}</p>
+    </div>
+    ${methodLine ? `<p style="margin:12px 0 0;color:#a7aaa4;font:14px/1.55 var(--serif)">${methodLine}</p>` : ''}`;
+}
+
+/* ============================================================ SCULPTED */
+async function mountSculpted(subject) {
+  vpControls.hidden = false;
+  placeholderView.hidden = true;
+  statEl.textContent = 'Building\u2026';
+  let mod;
+  try { mod = await import(subject.module); }
+  catch (err) {
+    tierBody.innerHTML = `<p style="color:#c98d78">Failed to load ${subject.module}: ${err.message}</p>`;
+    return;
+  }
+  const plateImg = await mod.loadPlate(mod.SUBJECT.plate);
+  const model = mod[subject.buildFn]({ plate: plateImg });
+  stage.setObject(model.group);
+  const fv = FRONT_VIEW[subject.id];
+  if (fv && stage._camera && stage._controls) {
+    stage._controls.target.set(...fv.target);
+    stage._camera.position.set(...fv.pos);
+    stage._controls.update();
+  }
+  restoreView = { pos: stage._camera.position.clone(), target: stage._controls.target.clone() };
+  active = { kind: 'sculpted', model };
+  currentScale = mod.PLATE?.scale || null;
+  cmp.hidden = !currentScale;
+  comparing = false; overlay.hidden = true; cmpBox.hidden = true; cmp.setAttribute('aria-pressed', 'false');
+  overlay.src = mod.SUBJECT.plate;
+
+  renderClipBar(model.clipNames.map((id) => ({ id, label: titleCase(id) })));
+  onClipSelect = (id) => model.setClip(id);
+
+  setHeader({
+    eyebrow: `Sable Reach \u00b7 bestiary model \u00b7 ${model.sectionReport.length} section generators, measured against the plate`,
+    title: mod.SUBJECT.name, idTag: mod.SUBJECT.id,
+    stat: `${model.triangles.toLocaleString()} triangles \u00b7 ${model.sectionReport.length} sections \u00b7 ${model.bones.length} bones \u00b7 `
+      + `${model.metrics.figureHeight.toFixed(3)} m sole to crown (target ${mod.SUBJECT.targetHeightMeters}, `
+      + `${model.metrics.errorMm >= 0 ? '+' : ''}${model.metrics.errorMm} mm) \u00b7 ${model.metrics.width.toFixed(3)} m wide \u00b7 `
+      + `${model.clipNames.length} clips \u00b7 ${model.plateLoaded ? 'plate-sampled albedo, roughness and normal' : 'plate unreadable \u2014 flat palette'}`,
+  });
+  renderPlateBlock(mod.SUBJECT.plate, 'Concept plate \u00b7 vendored', plateMethodLine(currentScale));
+  renderSculptedBody(mod, model);
+}
+
+function renderSculptedBody(mod, model) {
+  const state = {}; let solo = null;
+  for (const s of model.sectionReport) state[s.id] = true;
+
+  tierBody.innerHTML = `
+    <p class="eyebrow" style="margin:26px 0 4px">Review \u00b7 method and faults</p>
+    <div id="rvList" style="display:grid;gap:7px"></div>
+
+    <p class="eyebrow" style="margin:26px 0 4px">Section generators</p>
+    <p style="margin:0 0 10px;color:#8d938d;font:var(--type-body-xs)">One per region of the plate. Switch any one off, or solo it, and see what it was carrying.</p>
+    <div style="display:flex;gap:6px;margin:0 0 10px">
+      <button class="btn sm" id="allOn">All on</button>
+      <button class="btn sm" id="soloOff" aria-pressed="true">Clear solo</button>
+    </div>
+    <div id="secList" style="display:grid;gap:7px"></div>
+
+    <p class="eyebrow" style="margin:26px 0 4px">Silhouette, measured against the plate</p>
+    <p id="silSummary" style="margin:0 0 10px;color:#8d938d;font:var(--type-body-xs)"></p>
+    <table class="sil"><thead><tr><th>Height</th><th>Plate</th><th>Model</th><th>&Delta;</th></tr></thead><tbody id="silRows"></tbody></table>
+
+    <p class="eyebrow" style="margin:26px 0 4px">Layer clipping, measured</p>
+    <div id="clipWrap"></div>
+
+    <p class="eyebrow" style="margin:26px 0 10px">Conformance against the plate</p>
+    <div id="confList" style="display:grid;gap:6px"></div>
+
+    <p class="eyebrow" style="margin:26px 0 10px">Export</p>
+    <p style="margin:0;color:#9fa59f;font:var(--type-body-sm)">The toolbar writes <strong style="color:var(--bone)">OBJ + MTL</strong> or <strong style="color:var(--bone)">GLB</strong>. Section and material names survive both. Plate-sampled maps survive GLB only \u2014 OBJ carries geometry and material colour, not textures.</p>
+  `;
+
+  const rv = document.getElementById('rvList');
+  for (const r of mod.REVIEW) {
+    const el = document.createElement('article');
+    el.style.cssText = 'padding:10px 12px;background:var(--glass-bg);border:1px solid var(--line-soft);border-left:3px solid rgba(189,97,53,.45)';
+    el.innerHTML = `<h3 style="margin:0 0 5px;color:var(--bone);font:500 12px var(--display)">${r.fault}</h3>
+      <p style="margin:0 0 4px;color:#c98d78;font:var(--type-body-xs)">Was \u2014 ${r.was}</p>
+      <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Now \u2014 ${r.now}</p>`;
+    rv.append(el);
+  }
+
+  const secList = document.getElementById('secList');
+  function renderSections() {
+    secList.innerHTML = model.sectionReport.map((s) => {
+      const on = solo ? s.id === solo : state[s.id];
+      return `<article class="sect" data-off="${!on}">
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:5px">
+          <h3 style="margin:0;flex:1 1 auto;color:var(--bone);font:500 13px var(--display)">${s.name}</h3>
+          <i class="nano" style="flex:0 0 auto;color:#7f857f">${s.triangles.toLocaleString()} tri \u00b7 ${s.meshes} mesh</i>
+        </div>
+        <p style="margin:0 0 4px;color:#a7aaa4;font:var(--type-body-xs)">Reads \u2014 ${s.reads}</p>
+        <p style="margin:0 0 8px;color:#8d938d;font:var(--type-body-xs)">Builds \u2014 ${s.method}</p>
+        <div style="display:flex;gap:6px">
+          <button class="btn sm" data-vis="${s.id}" aria-pressed="${state[s.id]}">${state[s.id] ? 'Shown' : 'Hidden'}</button>
+          <button class="btn sm" data-solo="${s.id}" aria-pressed="${solo === s.id}">Solo</button>
+        </div>
+      </article>`;
+    }).join('');
+    secList.querySelectorAll('[data-vis]').forEach((b) => b.addEventListener('click', () => { state[b.dataset.vis] = !state[b.dataset.vis]; solo = null; applyVisibility(); }));
+    secList.querySelectorAll('[data-solo]').forEach((b) => b.addEventListener('click', () => { solo = solo === b.dataset.solo ? null : b.dataset.solo; applyVisibility(); }));
+  }
+  function applyVisibility() {
+    for (const id of Object.keys(state)) model.setSection(id, solo ? id === solo : state[id]);
+    document.getElementById('soloOff').setAttribute('aria-pressed', String(!solo));
+    renderSections();
+    renderSilhouette();
+  }
+  document.getElementById('allOn').addEventListener('click', () => { for (const id of Object.keys(state)) state[id] = true; solo = null; applyVisibility(); });
+  document.getElementById('soloOff').addEventListener('click', () => { solo = null; applyVisibility(); });
+
+  const silSummary = document.getElementById('silSummary');
+  const silRows = document.getElementById('silRows');
+  function renderSilhouette() {
+    const rep = model.silhouette();
+    const excludedGrades = [...new Set(rep.rows.filter((r) => !r.counted).map((r) => r.grade))];
+    silSummary.textContent = `${rep.within} of ${rep.total} scored bands inside tolerance.`
+      + (excludedGrades.length ? ` Rows graded ${excludedGrades.join('/')} are printed for reference and not counted \u2014 see the file header for why.` : '');
+    silRows.innerHTML = rep.rows.map((r) => {
+      const dim = !r.counted ? 'opacity:.5' : '';
+      const dCol = !r.counted ? '#7f857f' : (r.samples ? (r.ok ? '#8aa596' : '#d4855f') : '#7f857f');
+      return `<tr style="${dim}"><td>${r.h.toFixed(2)} m</td><td>${r.plateW.toFixed(3)}</td>
+        <td>${r.samples ? r.modelW.toFixed(3) : '\u2014'}</td>
+        <td style="color:${dCol}">${r.samples ? (r.dev >= 0 ? '+' : '') + r.dev : '\u2014'}</td></tr>`;
+    }).join('');
+  }
+
+  const clipWrap = document.getElementById('clipWrap');
+  const rep = model.clipping();
+  if (!rep.rows.length) {
+    clipWrap.innerHTML = `<p style="margin:0 0 10px;color:#8d938d;font:var(--type-body-xs)">No nested garment layers on this subject \u2014 see Conformance below.</p>`;
+  } else {
+    clipWrap.innerHTML = `<p style="margin:0 0 10px;color:#8d938d;font:var(--type-body-xs)">${rep.clean} of ${rep.total} layer pairs clear. Negative is daylight between the two surfaces; positive means the inner one comes through the garment covering it.</p>
+      <table class="sil"><thead><tr><th>Layer pair</th><th>Worst</th></tr></thead><tbody>${rep.rows.map((r) => {
+        if (r.missing) return `<tr><td>${r.label}</td><td style="color:#7f857f">\u2014</td></tr>`;
+        return `<tr><td>${r.label}</td><td style="color:${r.ok ? '#8aa596' : '#d4855f'}">${r.worstMm >= 0 ? '+' : ''}${r.worstMm} mm</td></tr>`;
+      }).join('')}</tbody></table>`;
+  }
+
+  const TONE = {
+    built: { fg: '#8aa596', bg: 'rgba(82,102,92,.16)', edge: 'rgba(82,102,92,.45)', label: 'Built' },
+    deviation: { fg: '#d4855f', bg: 'rgba(189,97,53,.14)', edge: 'rgba(189,97,53,.4)', label: 'Deviation' },
+    absent: { fg: '#d4855f', bg: 'rgba(189,97,53,.14)', edge: 'rgba(189,97,53,.4)', label: 'Absent' },
+    refused: { fg: '#c98d78', bg: 'rgba(110,37,37,.18)', edge: 'rgba(110,37,37,.55)', label: 'Refused' },
+  };
+  document.getElementById('confList').innerHTML = mod.CONFORMANCE.map((row) => {
+    const t = TONE[row.state];
+    return `<article style="padding:11px 13px;background:var(--glass-bg);border:1px solid var(--line-soft);border-left:3px solid ${t.edge}">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:${row.detail ? '6px' : '0'}">
+        <h3 style="margin:0;color:var(--bone);font:500 13px var(--display)">${row.feature}</h3>
+        <i class="nano" style="flex:0 0 auto;padding:3px 5px;color:${t.fg};background:${t.bg};border:1px solid ${t.edge}">${t.label}</i>
+      </div>
+      ${row.detail ? `<p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">${row.detail}</p>` : ''}
+    </article>`;
+  }).join('');
+
+  applyVisibility();
+}
+
+/* =============================================================== ACTOR */
+function mountActor(subject) {
+  vpControls.hidden = false;
+  placeholderView.hidden = true;
+  const spec = CAST_BY_ID[subject.id];
+  const rig = buildActor(spec);
+  stage.setObject(rig.root);
+  restoreView = { pos: stage._camera.position.clone(), target: stage._controls.target.clone() };
+  const st = makeState(rig, spec);
+  actorClip = 'idle';
+  active = { kind: 'actor', rig, spec, st };
+  currentScale = null;
+  cmp.hidden = true;
+  comparing = false; overlay.hidden = true; cmpBox.hidden = true;
+
+  const ids = ['idle', 'walk', 'run', spec.authoredClip ? 'signature' : null, 'work', 'declare', 'attack_a', 'attack_b', 'block', 'hurt', 'death', 'turn'].filter(Boolean);
+  renderClipBar(ids.map((id) => ({ id, label: (CLIP_LIST.find((c) => c.id === id) || {}).label || titleCase(id) })));
+  onClipSelect = (id) => { actorClip = id; };
+
+  const fam = FACTION_META[spec.faction] || {};
+  setHeader({
+    eyebrow: 'Sable Reach \u00b7 named character \u00b7 generic parametric rig, not sculpted to its own plate',
+    title: spec.name, idTag: subject.id,
+    stat: `${rig.measured.verts.toLocaleString()} vertices \u00b7 ${rig.measured.bones} bones \u00b7 ${drawCalls(rig)} draw calls \u00b7 `
+      + `${rig.measured.crown.toFixed(3)} m crown (target ${rig.measured.intended}, ${rig.measured.errorMm >= 0 ? '+' : ''}${rig.measured.errorMm} mm) \u00b7 `
+      + `${rig.measured.span.toFixed(3)} m wide \u00b7 ${ids.length} clips`,
+  });
+  renderPlateBlock(subject.plate, 'Concept plate \u00b7 vendored', '');
+  renderActorBody(subject, spec, rig, fam);
+}
+
+function renderActorBody(subject, spec, rig, fam) {
+  const voice = VOICES[subject.id];
+  const tierLabel = spec.tier === 'placed' ? 'Placed \u2014 the player meets this character repeatedly'
+    : spec.tier === 'lead' ? 'Faction lead' : 'Remainder cast';
+  tierBody.innerHTML = `
+    <p class="eyebrow" style="margin:0 0 4px">${fam.name || spec.faction} \u00b7 ${fam.seat || ''}</p>
+    <h2 style="margin:0 0 4px;color:var(--bone-bright);font:500 17px var(--display)">${spec.role}</h2>
+    <p class="nano" style="margin:0 0 16px;color:#7f857f">${tierLabel} \u00b7 ${spec.clipTier === 'authored' ? 'authored signature clip' : 'occupational base clip, awaiting an authored signature'}</p>
+
+    <p class="eyebrow" style="margin:16px 0 6px">Mark</p>
+    <p style="margin:0 0 14px;color:#c9c2ae;font:15px/1.6 var(--serif)">${spec.mark || '\u2014'}</p>
+
+    <p class="eyebrow" style="margin:0 0 6px">Garment</p>
+    <p style="margin:0 0 14px;color:#a7aaa4;font:var(--type-body-sm)">${spec.garment || '\u2014'}</p>
+
+    <p class="eyebrow" style="margin:0 0 6px">Signature</p>
+    <p style="margin:0 0 14px;color:#a7aaa4;font:var(--type-body-sm)">${spec.signature || '\u2014'}</p>
+
+    ${voice ? `<p class="eyebrow" style="margin:0 0 6px">Voice</p><p style="margin:0 0 18px;color:#c9c2ae;font:italic 15px/1.6 var(--serif)">${voice}</p>` : ''}
+
+    <p class="eyebrow" style="margin:18px 0 10px">Rig conformance</p>
+    <article style="padding:11px 13px;background:var(--glass-bg);border:1px solid var(--line-soft);border-left:3px solid rgba(60,90,100,.5)">
+      <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Built from kit/hm-actor.js\u2019s shared skinned humanoid rig: real bones, anthropometric proportion, automatic weight solving, a measured-and-corrected height fit. Proportion and wardrobe were authored against this character\u2019s brief in kit/hm-actor-cast.js, not sculpted against ${subject.plate ? 'the plate shown above' : 'a plate \u2014 none is vendored for this character'}. ${subject.plate ? 'Treat this as a body double built to the right proportions, not a verified likeness \u2014 nobody has measured this render against that art the way the sculpted bestiary models are.' : ''}</p>
+    </article>
+
+    <p class="eyebrow" style="margin:20px 0 10px">Export</p>
+    <p style="margin:0;color:#9fa59f;font:var(--type-body-sm)">OBJ + MTL or GLB from the toolbar. Coat panels and hood/veil are spring-driven, unskinned meshes \u2014 they export in whatever pose they were in at the moment of export, not bound to a bone.</p>
+  `;
+}
+
+/* ========================================================== PLACEHOLDER */
+function mountPlaceholder(subject) {
+  vpControls.hidden = true;
+  active = null;
+  comparing = false; overlay.hidden = true; cmpBox.hidden = true; cmp.hidden = true;
+  placeholderView.hidden = false;
+  if (subject.plate) { placeholderImg.src = subject.plate; placeholderImg.style.visibility = 'visible'; }
+  else { placeholderImg.removeAttribute('src'); placeholderImg.style.visibility = 'hidden'; }
+
+  const TIER_LABEL = { queued: 'Queued', refused: 'Refused', reference: 'Reference only' };
+  const TIER_COLOR = { queued: '#c9a25f', refused: '#c98d78', reference: '#8d938d' };
+  placeholderView.querySelector('.msg').innerHTML = `
+    <p class="nano" style="margin:0 0 8px;color:${TIER_COLOR[subject.tier]}">${TIER_LABEL[subject.tier]}${subject.family ? ' \u00b7 ' + subject.family : ''}</p>
+    <h2 style="margin:0 0 8px;color:var(--bone-bright);font:500 22px var(--display)">${subject.name}</h2>
+    <p style="margin:0;color:#c9c2ae;font:14px/1.6 var(--serif)">${subject.reason}</p>
+    ${subject.promptCall ? `<p class="nano" style="margin:8px 0 0;color:#7f857f">Prompt call \u2014 ${subject.promptCall}</p>` : ''}
+  `;
+
+  setHeader({
+    eyebrow: `Sable Reach \u00b7 ${subject.kind === 'origin' ? 'playable origin' : 'bestiary'} \u00b7 ${TIER_LABEL[subject.tier].toLowerCase()}`,
+    title: subject.name, idTag: subject.id,
+    stat: subject.plate ? 'Concept art exists; no 3D model yet.' : 'No concept art vendored, and no model.',
+  });
+  renderPlateBlock(subject.plate, subject.plate ? 'Concept plate \u00b7 vendored' : '', '');
+  tierBody.innerHTML = `
+    <p class="eyebrow" style="margin:26px 0 10px">Why there is no model here</p>
+    <article style="padding:13px 15px;background:var(--glass-bg);border:1px solid var(--line-soft);border-left:3px solid ${TIER_COLOR[subject.tier]}">
+      <p style="margin:0;color:#c9c2ae;font:14px/1.6 var(--serif)">${subject.reason}</p>
+    </article>
+    ${subject.promptCall ? `<p style="margin:12px 0 0;color:#8d938d;font:var(--type-body-xs)">Rank-1 authority: <code>${subject.promptCall}</code>, in kit/hm-art-law.js.</p>` : ''}
+    <p class="eyebrow" style="margin:24px 0 8px">Roadmap</p>
+    <p style="margin:0;color:#9fa59f;font:var(--type-body-sm)">${subject.tier === 'queued'
+      ? 'Next in line for section-generator authoring \u2014 see GAP-ANALYSIS-MODELS.md.'
+      : subject.tier === 'refused'
+        ? 'Blocked on a chassis or an approved prompt this pipeline does not have yet, not on modelling effort. Building it anyway would be exactly the invention the manifest law forbids.'
+        : 'Reference art for a playable origin. Building a body needs an appearance spec this project does not have (see GAP-ANALYSIS-CONTENT.md, "appearanceDefaults").'}</p>
+  `;
+}
+
+/* ========================================================== dispatcher */
+function selectSubject(id) {
+  const subject = BY_ID.get(id);
+  if (!subject) return;
+  document.querySelectorAll('.selrow[aria-current="true"]').forEach((r) => r.removeAttribute('aria-current'));
+  const row = document.querySelector(`.selrow[data-id="${cssEscape(id)}"]`);
+  if (row) row.setAttribute('aria-current', 'true');
+  closeSelector();
+  if (subject.tier === 'sculpted') mountSculpted(subject);
+  else if (subject.tier === 'generic-rig') mountActor(subject);
+  else mountPlaceholder(subject);
+}
+function cssEscape(s) { return s.replace(/[".\\[\]]/g, '\\$&'); }
+
+/* -------------------------------------------------------------- selector */
+const selectorBtn = document.getElementById('selectorBtn');
+const selPanel = document.getElementById('selPanel');
+const selList = document.getElementById('selList');
+const selSearch = document.getElementById('selSearch');
+
+function pillFor(tier) { return `<i class="pill ${tier}">${tier === 'generic-rig' ? 'generic' : tier}</i>`; }
+function rowHtml(s, subtitle) {
+  return `<button class="selrow" type="button" data-id="${s.id}"><span class="noart">${s.name[0]}</span>
+    <span class="meta"><b>${s.name}</b><i>${subtitle}</i></span>${pillFor(s.tier)}</button>`;
+}
+function buildGroups(filter) {
+  const f = filter.trim().toLowerCase();
+  const match = (s, extra) => !f || s.name.toLowerCase().includes(f) || (extra || '').toLowerCase().includes(f);
+  const groups = [
+    { label: `Bestiary \u2014 sculpted (${REG.sculpted.length})`, rows: REG.sculpted.filter((s) => match(s, s.family)).map((s) => rowHtml(s, s.family)) },
+    { label: `Named characters \u2014 generic rig (${REG.namedCast.length})`, rows: REG.namedCast.filter((s) => match(s, s.role + ' ' + s.faction)).map((s) => rowHtml(s, s.role)) },
+    { label: `Bestiary \u2014 queued`, rows: REG.queuedBestiary.filter((s) => s.tier === 'queued' && match(s, s.family)).map((s) => rowHtml(s, s.family)) },
+    { label: `Bestiary \u2014 refused (chassis or authority missing)`, rows: REG.queuedBestiary.filter((s) => s.tier === 'refused' && match(s, s.family)).map((s) => rowHtml(s, s.family)) },
+    { label: `Playable origins \u2014 reference art`, rows: REG.origins.filter((s) => match(s, '')).map((s) => rowHtml(s, 'origin')) },
+  ];
+  return groups.filter((g) => g.rows.length).map((g) => `<p class="selgroup">${g.label}</p>${g.rows.join('')}`).join('');
+}
+function renderSelector() { selList.innerHTML = buildGroups(selSearch.value); }
+selSearch.addEventListener('input', renderSelector);
+selList.addEventListener('click', (e) => {
+  const row = e.target.closest('.selrow');
+  if (row) selectSubject(row.dataset.id);
+});
+function openSelector() { renderSelector(); selPanel.hidden = false; selSearch.focus(); }
+function closeSelector() { selPanel.hidden = true; }
+selectorBtn.addEventListener('click', () => { selPanel.hidden ? openSelector() : closeSelector(); });
+document.addEventListener('click', (e) => {
+  if (!selPanel.hidden && !selPanel.contains(e.target) && e.target !== selectorBtn) closeSelector();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSelector(); });
+
+window.selectSubject = selectSubject;
+selectSubject('enemy.ash-husk');
+</script>
+</body>
+</html>

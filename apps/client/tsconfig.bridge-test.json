@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.test.json",
+  "compilerOptions": {
+    "outDir": ".bridge-test-dist",
+    "tsBuildInfoFile": ".bridge-test-dist/.tsbuildinfo"
+  },
+  "include": [
+    "src/world/AssetResidencyManager.ts",
+    "src/world/RuntimePackLoader.ts",
+    "src/showcase/BridgeSiteScene.ts",
+    "test/bridge-runtime.test.ts"
+  ]
+}

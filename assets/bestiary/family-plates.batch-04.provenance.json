@@ -1,0 +1,15 @@
+{
+  "schema": "FamilyPlateBatchProvenanceV1",
+  "batchId": "family-plates-batch-04",
+  "generatedOn": "2026-08-25",
+  "tool": "OpenAI built-in image generation",
+  "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+  "records": [
+    {"familyId":"last_pest_cart","path":"assets/bestiary/last-pest-cart-plate.png","source":"exec-33e694ee-08e5-4e43-ac53-8c67f742844e.png"},
+    {"familyId":"breath_tithe","path":"assets/bestiary/breath-tithe-plate.png","source":"exec-ccd86c47-7bae-4317-8d2a-e87ed62e54f2.png"},
+    {"familyId":"white_ague","path":"assets/bestiary/white-ague-plate.png","source":"exec-1ff07539-d520-448d-85f7-1faa13f39ed0.png","supersedesRejectedSource":"exec-ba9eb1f7-c9bf-4941-86e2-39454d848d41.png","review":"reconnected front-left leg at approximately x=19.7%, y=71.8%"},
+    {"familyId":"pallid_root_communion","path":"assets/bestiary/pallid-root-communion-plate.png","source":"exec-45b8e85f-d560-4921-929e-8c7e1eba1248.png"},
+    {"familyId":"anchored_quarantine","path":"assets/bestiary/anchored-quarantine-plate.png","source":"exec-9766dce1-f64c-4ca0-91a0-890e7397e24a.png"}
+  ],
+  "maturity": {"concept_master":"authored","runtime_integrated":false,"production_asset":false}
+}

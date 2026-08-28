@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1013" />
+    <title>The Hollow March</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='25' fill='none' stroke='%23c5a35f' stroke-width='6'/%3E%3Cpath d='M32 7v16M21 42l11-19 11 19' stroke='%23d8d0bd' stroke-width='4' fill='none'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="game-shell" aria-label="The Hollow March game">
+      <canvas id="world" aria-label="Game world" tabindex="0"></canvas>
+      <canvas id="world-3d" aria-label="Three-dimensional game world" tabindex="0" hidden></canvas>
+      <canvas id="turn-world-projection" class="turn-world-projection" aria-hidden="true" hidden></canvas>
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <section id="title-screen" class="title-screen">
+        <div class="title-content">
+          <p class="eyebrow">An oathbound chronicle</p>
+          <h1>The Hollow<br /><span>March</span></h1>
+          <p class="title-deck">The saints are gone. Their promises remain.</p>
+          <div class="title-actions">
+            <button class="primary ornate" data-action="new-game">Begin a new pilgrimage</button>
+            <button class="ghost" data-action="continue" hidden>Continue the march</button>
+          </div>
+        </div>
+        <p class="version">Playable vertical slice · v0.1</p>
+      </section>
+
+      <section id="creator" class="creator modal" hidden aria-label="Character creator">
+        <header class="creator-header">
+          <div>
+            <p class="eyebrow">Shape the oathbound</p>
+            <h2>Create your pilgrim</h2>
+          </div>
+          <div id="creator-steps" class="step-dots" aria-label="Creator progress"></div>
+        </header>
+        <div class="creator-body">
+          <aside class="portrait-stage">
+            <img id="origin-art" class="origin-art" src="./assets/characters/gloamfarer-v2.png" alt="Gaunt Gloamfarer origin character" />
+            <canvas id="portrait" width="460" height="650" aria-label="Character preview"></canvas>
+            <div class="portrait-caption">
+              <strong id="preview-name">The Unnamed</strong>
+              <span id="preview-epithet">One road farther than the maps</span>
+            </div>
+          </aside>
+          <div id="creator-form" class="creator-form"></div>
+        </div>
+        <footer class="creator-footer">
+          <button class="ghost" data-action="creator-back">Back</button>
+          <span id="creator-hint">Choose the life you led before the bells went silent.</span>
+          <button class="primary" data-action="creator-next">Continue</button>
+        </footer>
+      </section>
+
+      <div id="hud" class="hud" hidden>
+        <header class="hud-top">
+          <section class="player-card glass">
+            <div id="player-rune" class="player-rune">M</div>
+            <div class="player-vitals">
+              <div class="name-row"><strong id="hud-name">The Unnamed</strong><span id="hud-level">Renown 1</span></div>
+              <div class="meter health"><i id="health-bar"></i><span id="health-text">100 / 100</span></div>
+              <div class="meter stamina"><i id="stamina-bar"></i></div>
+              <div class="meter focus"><i id="focus-bar"></i></div>
+            </div>
+          </section>
+          <section id="target-card" class="target-card glass" hidden>
+            <span id="target-kind">RESTLESS</span>
+            <strong id="target-name">Mire Husk</strong>
+            <div class="meter enemy"><i id="target-health"></i></div>
+          </section>
+          <section class="location-card">
+            <span id="region-label">THE HOLLOW MARCH</span>
+            <strong id="location-label">Lanternwake</strong>
+            <em id="world-time">Night of the Pale Ring</em>
+          </section>
+        </header>
+
+        <nav class="side-nav glass" aria-label="Game menus">
+          <button data-panel="skills" title="Skills (K)"><span>✦</span><small>Skills</small></button>
+          <button data-panel="inventory" title="Inventory (I)"><span>◈</span><small>Pack</small></button>
+          <button data-panel="quests" title="Quests (J)"><span>◇</span><small>Journal</small></button>
+          <button data-panel="world" title="World atlas (M)"><span>⌘</span><small>World</small></button>
+          <button data-panel="bestiary" title="Bestiary (B)"><span>☷</span><small>Beasts</small></button>
+          <button data-panel="lore" title="Lore codex (L)"><span>❧</span><small>Lore</small></button>
+          <button data-panel="character" title="Character (C)"><span>♙</span><small>Self</small></button>
+          <button data-panel="help" title="Controls (?)"><span>?</span><small>Help</small></button>
+        </nav>
+
+        <aside id="quest-tracker" class="quest-tracker glass"></aside>
+        <section id="panel" class="game-panel glass" hidden>
+          <header><div><p id="panel-kicker" class="eyebrow">Pilgrim's record</p><h2 id="panel-title">Skills</h2></div><button data-action="close-panel" aria-label="Close panel">×</button></header>
+          <div id="panel-content" class="panel-content"></div>
+        </section>
+
+        <div id="interaction-prompt" class="interaction-prompt" hidden></div>
+        <div id="toast-stack" class="toast-stack" aria-live="polite"></div>
+        <div id="combat-text" class="combat-text" aria-hidden="true"></div>
+
+        <section id="turn-encounter" class="turn-encounter glass" role="region" aria-labelledby="turn-encounter-title" aria-describedby="turn-encounter-guidance" hidden>
+          <header class="turn-phase-header">
+            <div>
+              <p class="eyebrow">Committed encounter</p>
+              <h2 id="turn-encounter-title" tabindex="-1">Turn planning</h2>
+              <p id="turn-encounter-guidance">Choose up to two action beats, reserve one reaction, then commit the plan.</p>
+            </div>
+            <div id="turn-phase-state" class="turn-phase-state" role="status" aria-live="polite"></div>
+          </header>
+          <div class="turn-layout">
+            <div class="turn-planner-column">
+              <section aria-labelledby="turn-actions-title">
+                <div class="turn-section-heading"><h3 id="turn-actions-title">Actions</h3><span id="turn-budget-summary"></span></div>
+                <div id="turn-action-choices" class="turn-action-choices" role="toolbar" aria-label="Plan action choices"></div>
+              </section>
+              <section aria-labelledby="turn-beats-title">
+                <div class="turn-section-heading"><h3 id="turn-beats-title">Plan</h3><span><kbd>[</kbd> <kbd>]</kbd> change beat</span></div>
+                <div id="turn-beats" class="turn-beats"></div>
+                <div id="turn-targets" class="turn-targets"></div>
+              </section>
+              <section aria-labelledby="turn-reaction-title">
+                <div class="turn-section-heading"><h3 id="turn-reaction-title">Reaction</h3><span>One reservation</span></div>
+                <div id="turn-reactions" class="turn-reactions"></div>
+              </section>
+              <p id="turn-plan-errors" class="turn-plan-errors" role="alert" hidden></p>
+              <div class="turn-commit-row">
+                <button id="turn-join" class="ghost" type="button" hidden>Join encounter</button>
+                <button id="turn-withdraw" class="ghost" type="button">Withdraw</button>
+                <p>Ready is irreversible for this round. Listed costs remain subject to authoritative action contracts.</p>
+                <button id="turn-confirm" class="primary ornate" type="button">Commit plan</button>
+              </div>
+            </div>
+            <aside class="turn-intelligence-column">
+              <section aria-labelledby="turn-intents-title"><h3 id="turn-intents-title">Enemy intents</h3><div id="turn-intents" class="turn-intents"></div></section>
+              <section aria-labelledby="turn-party-title"><h3 id="turn-party-title">Party readiness</h3><div id="turn-party" class="turn-party"></div></section>
+              <section class="turn-log-section" aria-labelledby="turn-log-title"><div class="turn-section-heading"><h3 id="turn-log-title">Resolution log</h3><span id="turn-log-cursor"></span></div><ol id="turn-resolution-log" class="turn-resolution-log" tabindex="0"></ol></section>
+            </aside>
+          </div>
+          <p id="turn-live-summary" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+        </section>
+
+        <section class="bottom-hud">
+          <div id="action-bar" class="action-bar glass">
+            <button data-hotkey="1"><kbd>1</kbd><span>⚔</span><small>Light attack</small></button>
+            <button data-hotkey="2"><kbd>2</kbd><span>◆</span><small>Heavy attack</small></button>
+            <button data-hotkey="3"><kbd>3</kbd><span>◌</span><small>Dodge</small></button>
+            <button data-hotkey="4"><kbd>4</kbd><span>✣</span><small>Mend</small><b id="mend-count">3</b></button>
+            <button data-hotkey="5"><kbd>5</kbd><span>☼</span><small>Lantern</small></button>
+          </div>
+          <div class="hint-strip"><span><kbd>WASD</kbd> Move</span><span><kbd>Click</kbd> Travel / interact</span><span><kbd>Space</kbd> Dodge</span><span><kbd>E</kbd> Use</span></div>
+        </section>
+      </div>
+
+      <section id="dialogue" class="dialogue" hidden aria-label="Dialogue">
+        <div class="speaker-mark" id="speaker-mark">L</div>
+        <div class="dialogue-copy">
+          <span id="speaker-role">LANTERN KEEPER</span>
+          <h3 id="speaker-name">Edda Vale</h3>
+          <p id="dialogue-text"></p>
+          <div id="dialogue-choices" class="dialogue-choices"></div>
+        </div>
+      </section>
+
+      <section id="death-screen" class="death-screen" hidden>
+        <p class="eyebrow">The March remembers</p>
+        <h2>Your oath falters</h2>
+        <p>A lantern still burns at the last wayshrine.</p>
+        <button class="primary ornate" data-action="respawn">Rise again</button>
+      </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+    <script type="module">
+      const flags = new URLSearchParams(location.search);
+      if (flags.get("renderer") === "webgl" || flags.get("network") === "1" || flags.get("assetLab") === "1") import("./apps/client/src/main.ts");
+    </script>
+  </body>
+</html>

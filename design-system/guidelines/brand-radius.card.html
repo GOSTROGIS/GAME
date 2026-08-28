@@ -1,0 +1,25 @@
+<!-- @dsCard group="Brand" viewport="700x150" subtitle="The system is square — three exceptions only" name="Radius" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+  .cap{color:#797f7a;font:9px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="row" style="gap:18px">
+<div style="text-align:center"><div style="width:56px;height:44px;border:1px solid var(--line);background:var(--glass-bg)"></div><p style="margin:6px 0 0;color:#797f7a;font:9px var(--sans)">0 &mdash; everything</p></div>
+<div style="text-align:center"><div style="width:44px;height:26px;border:1px solid var(--kbd-edge);border-radius:var(--radius-kbd);background:var(--kbd-bg);box-shadow:var(--shadow-kbd)"></div><p style="margin:6px 0 0;color:#797f7a;font:9px var(--sans)">2px &mdash; kbd</p></div>
+<div style="text-align:center"><div style="width:44px;height:44px;border-radius:50%;border:1px solid var(--rune-edge);background:#101416;box-shadow:var(--shadow-rune)"></div><p style="margin:6px 0 0;color:#797f7a;font:9px var(--sans)">50% &mdash; rune, swatch</p></div>
+<p style="margin:0;max-width:250px;color:var(--muted);font:12px/1.5 var(--serif)">Hairlines and chamfers do the work corners would. A rounded card is not this system.</p></div>
+</body>
+</html>

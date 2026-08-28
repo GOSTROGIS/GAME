@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sable Reach — Machine Hall</title>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+    "three/addons/postprocessing/EffectComposer.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/EffectComposer.js",
+    "three/addons/postprocessing/RenderPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/RenderPass.js",
+    "three/addons/postprocessing/UnrealBloomPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/UnrealBloomPass.js",
+    "three/addons/postprocessing/OutputPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/OutputPass.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #080b0d; --bone: #d8d0bd; --bone-bright: #e1dbca; --bone-dim: #b7b6ad;
+    --muted: #8e928b; --gold: #b99552; --gold-bright: #e4c77e;
+    --ember: #bd6135; --moss: #52665c; --focus: #658e9e;
+    --line: rgba(216,208,189,.18); --line-soft: rgba(216,208,189,.1);
+    --glass: linear-gradient(140deg, rgba(20,27,29,.91), rgba(7,10,12,.88));
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--ink); color: var(--bone); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(185,149,82,.35); }
+  a:hover { color: var(--gold-bright); border-bottom-color: var(--gold-bright); }
+
+  /* position + overflow so the off-canvas drawer resolves against #app and is
+     clipped by it, instead of extending the document's scroll width. */
+  #app { position: relative; overflow: hidden; display: grid; grid-template-columns: 232px 1fr 280px; grid-template-rows: 58px 1fr auto; height: 100%; }
+
+  header { grid-column: 1 / -1; display: flex; align-items: center; gap: 20px; padding: 0 20px; border-bottom: 1px solid var(--line); background: var(--glass); }
+  header h1 { margin: 0; font: 500 15px/1 Cinzel, Georgia, serif; letter-spacing: .2em; text-transform: uppercase; }
+  header .sub { font-size: 11px; color: var(--muted); letter-spacing: .06em; }
+  header .spacer { flex: 1; }
+  .pill { font: 500 10px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; padding: 5px 9px; border: 1px solid var(--line); border-radius: 2px; color: var(--muted); }
+  .pill.live { color: var(--ember); border-color: rgba(189,97,53,.5); }
+
+  nav { border-right: 1px solid var(--line); overflow-y: auto; padding: 12px 0; }
+  nav .lbl { padding: 6px 16px; font: 500 9px/1 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+  nav button { display: block; width: 100%; text-align: left; padding: 9px 16px; background: none; border: 0; border-left: 2px solid transparent; color: var(--bone-dim); font: 400 12px/1.3 Inter, sans-serif; cursor: pointer; }
+  nav button:hover { background: rgba(216,208,189,.05); color: var(--bone-bright); }
+  nav button.on { border-left-color: var(--ember); color: var(--bone-bright); background: rgba(189,97,53,.09); }
+  nav button small { display: block; margin-top: 3px; font: 400 10px/1.3 var(--mono); color: var(--muted); }
+
+  #stage { position: relative; background: radial-gradient(ellipse at 50% 42%, #121a1c 0%, #080b0d 72%); }
+  #stage canvas { display: block; width: 100%; height: 100%; }
+  #hint { position: absolute; left: 14px; bottom: 12px; font: 400 10px/1.5 var(--mono); color: var(--muted); pointer-events: none; }
+  #fps { position: absolute; right: 14px; top: 12px; font: 500 10px/1 var(--mono); color: var(--muted); }
+
+  aside { border-left: 1px solid var(--line); overflow-y: auto; padding: 16px; }
+  aside h2 { margin: 0 0 4px; font: 500 13px/1.3 Cinzel, Georgia, serif; letter-spacing: .1em; color: var(--bone-bright); }
+  aside .work { margin: 0 0 16px; font: 400 12px/1.55 Inter, sans-serif; color: var(--bone-dim); text-wrap: pretty; }
+  aside .sect { margin: 0 0 7px; font: 500 9px/1 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+  .chain { list-style: none; margin: 0 0 18px; padding: 0; }
+  .chain li { position: relative; padding: 0 0 0 18px; margin-bottom: 6px; font: 400 11px/1.45 Inter, sans-serif; color: var(--bone-dim); }
+  .chain li::before { content: ''; position: absolute; left: 4px; top: 6px; width: 5px; height: 5px; border: 1px solid var(--gold); border-radius: 50%; }
+  .chain li:not(:last-child)::after { content: ''; position: absolute; left: 6px; top: 13px; width: 1px; height: calc(100% - 5px); background: var(--line); }
+  .kv { display: grid; grid-template-columns: 1fr auto; gap: 5px 10px; margin-bottom: 18px; }
+  .kv dt { font: 400 10px/1.4 Inter, sans-serif; color: var(--muted); }
+  .kv dd { margin: 0; font: 500 11px/1.4 var(--mono); color: var(--bone-bright); text-align: right; }
+  .note { margin: 0; padding: 10px 11px; border: 1px solid var(--line-soft); border-radius: 2px; background: rgba(101,142,158,.06); font: 400 10px/1.5 Inter, sans-serif; color: var(--muted); text-wrap: pretty; }
+
+  footer { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding: 12px 20px; border-top: 1px solid var(--line); background: var(--glass); }
+  .ctl { display: flex; align-items: center; gap: 9px; min-width: 0; }
+  .ctl > span { font: 500 9px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  button.act { padding: 8px 15px; border: 1px solid var(--line); border-radius: 2px; background: rgba(216,208,189,.04); color: var(--bone); font: 500 10px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; cursor: pointer; }
+  button.act:hover { border-color: var(--gold); color: var(--gold-bright); }
+  button.act.running { border-color: rgba(189,97,53,.6); color: var(--ember); background: rgba(189,97,53,.1); }
+  .seg { display: flex; border: 1px solid var(--line); border-radius: 2px; overflow: hidden; }
+  .seg button { padding: 7px 11px; background: none; border: 0; border-right: 1px solid var(--line); color: var(--muted); font: 500 10px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+  .seg button:last-child { border-right: 0; }
+  .seg button:hover { color: var(--bone-bright); }
+  .seg button.on { background: rgba(189,97,53,.14); color: var(--ember); }
+  input[type=range] { width: 92px; accent-color: var(--ember); }
+  .step { display: flex; align-items: center; gap: 7px; }
+  .step button { width: 26px; height: 26px; border: 1px solid var(--line); border-radius: 2px; background: none; color: var(--bone-dim); font: 500 13px/1 var(--mono); cursor: pointer; }
+  .step button:hover { border-color: var(--gold); color: var(--gold-bright); }
+  .step output { min-width: 62px; text-align: center; font: 500 11px/1 var(--mono); color: var(--bone-bright); }
+  /* Below 1180px the side panel becomes a collapsible drawer over the stage
+     rather than being deleted: it carries the machine's purpose and power
+     chain, which is the whole point of the page, so it must stay reachable. */
+  #panelToggle { display: none; }
+  @media (max-width: 1180px) {
+    #app { grid-template-columns: 232px 1fr; }
+    #panelToggle { display: inline-flex; }
+    aside {
+      position: absolute; top: 58px; right: 0; bottom: 0; width: 300px; z-index: 20;
+      background: linear-gradient(140deg, rgba(16,22,24,.98), rgba(7,10,12,.97));
+      border-left: 1px solid var(--line); box-shadow: -18px 0 40px rgba(0,0,0,.5);
+      transform: translateX(101%); transition: transform .22s ease;
+    }
+    /* The open state is applied inline by the toggle handler. A descendant
+       selector here lost the cascade argument against the base `aside` rule in
+       testing, and an inline transform cannot. CSS keeps only the transition. */
+    aside.drawer-open { transform: translateX(0) !important; }
+  }
+  @media (max-width: 720px) {
+    #app { grid-template-columns: 1fr; grid-template-rows: 58px auto 1fr auto; }
+    nav { display: flex; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--line); padding: 8px; gap: 6px; }
+    nav .lbl { display: none; }
+    nav button { width: auto; white-space: nowrap; border-left: 0; border-bottom: 2px solid transparent; padding: 7px 11px; }
+    nav button.on { border-left-color: transparent; border-bottom-color: var(--ember); }
+    aside { top: auto; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>Machine Hall</h1>
+    <span class="sub">Mechanisms, geared and running</span>
+    <span class="spacer"></span>
+    <button class="act" id="panelToggle" aria-expanded="false">Detail</button>
+    <span class="pill" id="statePill">stopped</span>
+    <span class="pill">7 machines</span>
+    <a href="Sable Reach Asset Catalogue.html" style="font:400 11px/1 Inter,sans-serif">Catalogue →</a>
+  </header>
+
+  <nav id="nav">
+    <div class="lbl">Prime movers</div>
+    <div class="lbl" style="padding-top:14px">Driven machines</div>
+  </nav>
+
+  <div id="stage">
+    <div id="fps">—</div>
+    <div id="hint">drag to orbit · scroll to zoom</div>
+  </div>
+
+  <aside>
+    <h2 id="mName">—</h2>
+    <p class="work" id="mWork"></p>
+    <div class="sect">Power chain</div>
+    <ul class="chain" id="mChain"></ul>
+    <div class="sect">Measured</div>
+    <dl class="kv" id="mKv"></dl>
+    <p class="note" id="mNote"></p>
+  </aside>
+
+  <footer>
+    <div class="ctl">
+      <button class="act" id="runBtn">Run</button>
+    </div>
+    <div class="ctl">
+      <span>Speed</span>
+      <input type="range" id="speed" min="0.15" max="2.5" step="0.05" value="1">
+      <output id="speedOut" style="font:500 10px/1 var(--mono);color:var(--bone-bright);min-width:34px">1.0×</output>
+    </div>
+    <div class="ctl">
+      <span>Variant</span>
+      <div class="step">
+        <button id="vDown">−</button><output id="vOut">0</output><button id="vUp">+</button>
+      </div>
+    </div>
+    <div class="ctl">
+      <span>Condition</span>
+      <div class="seg" id="wearSeg"></div>
+    </div>
+    <span class="spacer" style="flex:1"></span>
+  </footer>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { applyTextures, measure } from './kit/hm-core.js';
+import { bindSteamTextures } from './kit/hm-steam.js';
+import { MACH2_GENERATORS } from './kit/hm-mach2.js';
+import { WEAR, applyWear } from './kit/hm-wear.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { VFX_ENV } from './kit/hm-vfx.js';
+import { steamVent, STEAMVENT_AXES } from './kit/hm-vfx-veil.js';
+import { indexOfAxes } from './kit/hm-vfx-index.js';
+
+applyTextures(true);
+bindSteamTextures(true);
+
+const PRIME = ['mach2.beam-engine', 'mach2.water-wheel', 'mach2.line-shaft'];
+
+/* ------------------------------------------------------------------ scene */
+const stage = document.getElementById('stage');
+const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.16;
+stage.appendChild(renderer.domElement);
+renderer.info.autoReset = false;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#0b1113');
+scene.fog = new THREE.Fog('#0b1113', 14, 42);
+const camera = new THREE.PerspectiveCamera(44, 2, 0.05, 300);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.target.set(0, 1.1, 0);
+
+/* Post: a bloom pass, so the steam vent's scald glow and any hot metal can run
+   past white. Threshold high — the hall's palette must not bloom, only genuine
+   emissives. */
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloom = new UnrealBloomPass(new THREE.Vector2(1600, 900), 0.4, 0.55, 0.97);
+composer.addPass(bloom);
+composer.addPass(new OutputPass());
+
+/* The machine's breath. This hall is a single-machine viewer, and the comment
+   in the loop below already makes the point that "stopped means the linkage
+   holds its last pose, which is why working is legible" — exhaust is the other
+   half of that read. A working machine vents; a stopped one does not, so the
+   vent is gated on `running` rather than running forever as decoration.
+   Smoothed, because a steam plume has mass and cannot stop on a frame. */
+const hallSteam = steamVent(indexOfAxes(
+  { source: 0, pressure: 1, cadence: 2, plume: 1, condensate: 1, nozzle: 1, scald: 0 },
+  STEAMVENT_AXES), { scale: 0.85 });
+hallSteam.group.position.set(-1.5, 0, -1.1);
+hallSteam.group.rotation.y = 0.5;
+scene.add(hallSteam.group);
+let steamGate = 0;
+VFX_ENV.uWind.value = 0.3;
+VFX_ENV.uGust.value = 0.08;
+VFX_ENV.uNight.value = 0.4;
+VFX_ENV.uFogColor.value.set('#0b1113');
+// This scene uses linear THREE.Fog, not FogExp2; the kit's hand-rolled fog is
+// exponential, so an equivalent density is used rather than the same number.
+VFX_ENV.uFogDensity.value = 0.03;
+/* Lighting: a works is lit from a high window plus its own fire, so one cool
+   key from above and one warm bounce from the hearth side. */
+scene.add(new THREE.HemisphereLight('#7d8f96', '#161c1c', 0.72));
+const key = new THREE.DirectionalLight('#d9e4e6', 2.0);
+key.position.set(5.5, 9, 4.5);
+key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048);
+key.shadow.camera.left = -9; key.shadow.camera.right = 9;
+key.shadow.camera.top = 9; key.shadow.camera.bottom = -9;
+key.shadow.camera.far = 34;
+key.shadow.bias = -0.0016;
+scene.add(key);
+const warm = new THREE.DirectionalLight('#c9723c', 0.62);
+warm.position.set(-5, 2.4, -3.6);
+scene.add(warm);
+
+const floor = new THREE.Mesh(
+  new THREE.CircleGeometry(26, 56),
+  new THREE.MeshStandardMaterial({ color: new THREE.Color('#14191a'), roughness: 0.94, metalness: 0.02 }),
+);
+floor.rotation.x = -Math.PI / 2;
+floor.receiveShadow = true;
+scene.add(floor);
+const grid = new THREE.GridHelper(26, 26, '#243033', '#1a2224');
+grid.position.y = 0.004;
+scene.add(grid);
+
+/* ------------------------------------------------------------------ state */
+let sel = 0, variant = 0, wearId = 'worked', running = false, speed = 1;
+let current = null, mech = null, baseRpm = 0;
+
+const nav = document.getElementById('nav');
+function buildNav() {
+  nav.innerHTML = '';
+  const groups = [['Prime movers', (g) => PRIME.includes(g.id)], ['Driven machines', (g) => !PRIME.includes(g.id)]];
+  groups.forEach(([label, test]) => {
+    const l = document.createElement('div');
+    l.className = 'lbl';
+    l.textContent = label;
+    nav.appendChild(l);
+    MACH2_GENERATORS.forEach((g, i) => {
+      if (!test(g)) return;
+      const b = document.createElement('button');
+      b.innerHTML = g.name + '<small>' + Object.values(g.axes).reduce((a, x) => a * x, 1).toLocaleString() + ' unique</small>';
+      b.onclick = () => { sel = i; variant = 0; build(); };
+      b.dataset.i = i;
+      nav.appendChild(b);
+    });
+  });
+}
+const wearSeg = document.getElementById('wearSeg');
+WEAR.forEach((w) => {
+  const b = document.createElement('button');
+  b.textContent = w.name;
+  b.onclick = () => { wearId = w.id; build(); };
+  b.dataset.w = w.id;
+  wearSeg.appendChild(b);
+});
+
+function syncChrome() {
+  [...nav.querySelectorAll('button')].forEach((b) => b.classList.toggle('on', +b.dataset.i === sel));
+  [...wearSeg.children].forEach((b) => b.classList.toggle('on', b.dataset.w === wearId));
+  document.getElementById('vOut').textContent = variant;
+  const pill = document.getElementById('statePill');
+  pill.textContent = running ? 'running' : 'stopped';
+  pill.classList.toggle('live', running);
+  const rb = document.getElementById('runBtn');
+  rb.textContent = running ? 'Stop' : 'Run';
+  rb.classList.toggle('running', running);
+}
+
+function frame(obj) {
+  const bb = new THREE.Box3().setFromObject(obj);
+  const size = bb.getSize(new THREE.Vector3());
+  const c = bb.getCenter(new THREE.Vector3());
+  const r = Math.max(size.x, size.y, size.z) * 0.62;
+  const d = r / Math.tan((camera.fov * Math.PI) / 360) * 1.5;
+  camera.position.set(c.x + d * 0.72, c.y + d * 0.46, c.z + d * 0.78);
+  controls.target.copy(c);
+  camera.near = Math.max(0.02, d * 0.02);
+  camera.far = d * 14;
+  camera.updateProjectionMatrix();
+  controls.update();
+}
+
+function build() {
+  if (current) {
+    scene.remove(current);
+    current.traverse((o) => { if (o.geometry) o.geometry.dispose(); });
+  }
+  const gen = MACH2_GENERATORS[sel];
+  const space = Object.values(gen.axes).reduce((a, x) => a * x, 1);
+  variant = ((variant % space) + space) % space;
+  const obj = gen.build(variant);
+  mech = obj.userData.mech || null;
+  baseRpm = mech ? mech.rpm : 0;
+  // Wear is applied AFTER the mechanism is wired, so a ruined machine keeps
+  // its linkage references and still animates — a broken machine that cannot
+  // move at all would be a different (and less useful) asset.
+  applyWear(obj, wearId, variant + sel * 31);
+  obj.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
+  scene.add(obj);
+  current = obj;
+  frame(obj);
+
+  const m = measure(obj);
+  document.getElementById('mName').textContent = gen.name;
+  document.getElementById('mWork').textContent = mech ? mech.work : '—';
+  const chain = document.getElementById('mChain');
+  chain.innerHTML = '';
+  (mech ? mech.chain : []).forEach((s) => {
+    const li = document.createElement('li');
+    li.textContent = s;
+    chain.appendChild(li);
+  });
+  const kv = document.getElementById('mKv');
+  const rows = [
+    ['Nominal speed', (mech ? mech.rpm : 0) + ' rpm'],
+    ['Triangles', m.tris.toLocaleString()],
+    ['Named parts', countParts(obj).toLocaleString()],
+    ['Footprint', m.size[0].toFixed(2) + ' × ' + m.size[2].toFixed(2) + ' m'],
+    ['Height', m.size[1].toFixed(2) + ' m'],
+    ['Axis space', space.toLocaleString() + ' unique'],
+  ];
+  if (mech && mech.ratio) rows.splice(1, 0, ['Gear ratio', mech.ratio]);
+  kv.innerHTML = rows.map(([k, v]) => '<dt>' + k + '</dt><dd>' + v + '</dd>').join('');
+  const w = WEAR.find((x) => x.id === wearId);
+  document.getElementById('mNote').textContent = w.blurb;
+  syncChrome();
+}
+
+function countParts(obj) {
+  let n = 0;
+  obj.traverse((o) => { if (o.isMesh && o.name) n++; });
+  return n;
+}
+
+/* ---------------------------------------------------------------- controls */
+document.getElementById('runBtn').onclick = () => { running = !running; syncChrome(); };
+const panelToggle = document.getElementById('panelToggle');
+panelToggle.onclick = () => {
+  const a = document.querySelector('aside');
+  const open = !a.classList.contains('drawer-open');
+  a.classList.toggle('drawer-open', open);
+  a.style.transform = open ? 'translateX(0)' : 'translateX(101%)';
+  document.body.classList.toggle('panel-open', open);
+  panelToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  panelToggle.classList.toggle('running', open);
+  resize();
+};
+document.getElementById('speed').oninput = (e) => {
+  speed = +e.target.value;
+  document.getElementById('speedOut').textContent = speed.toFixed(1) + '×';
+  if (mech) mech.rpm = baseRpm * speed;
+};
+document.getElementById('vUp').onclick = () => { variant++; build(); };
+document.getElementById('vDown').onclick = () => { variant--; build(); };
+addEventListener('keydown', (e) => {
+  if (e.key === ' ') { e.preventDefault(); running = !running; syncChrome(); }
+  if (e.key === 'ArrowRight') { variant++; build(); }
+  if (e.key === 'ArrowLeft') { variant--; build(); }
+});
+
+function resize() {
+  const w = stage.clientWidth, h = stage.clientHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w / Math.max(1, h);
+  camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize);
+
+/* -------------------------------------------------------------------- loop
+ * Own timebase rather than THREE.Clock: getElapsedTime() internally consumes
+ * the delta, so a following getDelta() always returned ~0. */
+let t0 = performance.now(), tPrev = t0;
+let fpsT = 0, fpsN = 0;
+function loop() {
+  const now = performance.now();
+  const t = (now - t0) / 1000;
+  const dt = Math.min(0.1, (now - tPrev) / 1000);
+  tPrev = now;
+  if (mech && current) {
+    // Every machine drives itself from its own kinematics. Stopped means the
+    // linkage holds its last pose, which is why "working" is legible.
+    try { mech.tick(t, running); } catch (err) { console.error('mech tick', err); mech = null; }
+  }
+  controls.update();
+  VFX_ENV.uTime.value = t;
+  // Ease the plume toward the machine's state rather than snapping it.
+  steamGate += ((running ? 1 : 0) - steamGate) * Math.min(1, dt * 1.8);
+  hallSteam.set('pressure', 0.15 + steamGate * 0.95);
+  hallSteam.set('plume', steamGate);
+  hallSteam.update(t);
+  renderer.info.reset();
+  composer.render();
+  fpsN++; fpsT += dt;
+  if (fpsT > 0.5) {
+    document.getElementById('fps').textContent = Math.round(fpsN / fpsT) + ' fps';
+    fpsT = 0; fpsN = 0;
+  }
+  requestAnimationFrame(loop);
+}
+
+buildNav();
+resize();
+build();
+loop();
+window.__hall = { get running() { return running; }, set running(v) { running = v; syncChrome(); }, build, get mech() { return mech; }, get current() { return current; }, select(i) { sel = i; variant = 0; build(); }, setWear(w) { wearId = w; build(); }, gens: MACH2_GENERATORS };
+</script>
+</body>
+</html>

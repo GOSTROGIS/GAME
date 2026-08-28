@@ -1,0 +1,77 @@
+<!-- @dsCard group="Components" viewport="700x330" name="HUD" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_fallback.js"></script>
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+  .cap{color:#797f7a;font:9px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/plain" id="demo-src">
+const { PlayerCard, TargetCard, LocationCard, QuestTracker, SideNav, ActionBar, HintStrip, InteractionPrompt, Toast, CombatText } = window.HollowMarch;
+
+function Demo(){
+  return (
+    <div style={{display:'grid',gap:12}}>
+      <div className="grid2">
+        <PlayerCard name="Gloamfarer" level={14} rune="G"
+          health={{value:72,max:100}} stamina={{value:48,max:100}} focus={{value:86,max:100}}/>
+        <TargetCard role="Elite &middot; Controller" name="Parish Drowner" health={{value:340,max:520}}/>
+      </div>
+      <div className="grid2">
+        <LocationCard region="Dunmire Causeway" name="The Drowned Parish" note="The bells are under water here."/>
+        <QuestTracker chapter="Chapter II" title="The Unquenched Blade" progress={0.5}
+          objectives={[{label:'Recover the blade',done:true},{label:'Lay it at the Warm Cairn'}]}/>
+      </div>
+      <div className="row" style={{alignItems:'flex-start'}}>
+        <SideNav active="skills" onSelect={()=>{}} items={[
+          {id:'pack',icon:'pack',label:'Pack',key:'I'},
+          {id:'skills',icon:'skills',label:'Skills',key:'K'},
+          {id:'lore',icon:'journal',label:'Lore',key:'L'}]}/>
+        <div style={{display:'grid',gap:8}}>
+          <ActionBar slots={[
+            {id:'light',icon:'swordsmanship',label:'Light',key:'1'},
+            {id:'heavy',icon:'heavy_arms',label:'Heavy',key:'2'},
+            {id:'flask',icon:'flask',label:'Flask',key:'4',count:3}]}/>
+          <HintStrip hints={[{key:'E',label:'Use'},{key:'Esc',label:'Close'}]}/>
+        </div>
+        <div style={{display:'grid',gap:8}}>
+          <InteractionPrompt keyLabel="E">Draw from the wayshrine</InteractionPrompt>
+          <Toast style={{animation:'none'}}>Smithing advanced to <b>41</b>.</Toast>
+          <CombatText>&minus;34</CombatText>
+        </div>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+<script>
+/* Babel's type="text/babel" auto-runner does not execute in every host, so the
+   demo source above is transformed and run explicitly. */
+window.HollowMarchReady.then(function () {
+  try {
+    var src = document.getElementById("demo-src").textContent;
+    var out = Babel.transform(src, { presets: [["react", { runtime: "classic" }]] }).code;
+    new Function("React", "ReactDOM", out)(React, ReactDOM);
+  } catch (err) {
+    console.error("[card] " + err.message);
+    document.getElementById("root").textContent = "Card failed: " + err.message;
+  }
+});
+</script>
+</body>
+</html>

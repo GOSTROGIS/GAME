@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sable Reach — Asset Catalogue</title>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+    "three/addons/exporters/OBJExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js",
+    "three/addons/exporters/GLTFExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js": "sha384-nbwtoZENJD3Vq+ACK0CuGQdPMuDWHkamC2KJD70EV5nfg6jQjfppKOea07YJN+N3",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js": "sha384-VofkvpG6HERhFCYbsUOHeNXBCqID2nfqkQqnVzE1jc/oPcz+qJ13ADdXH08hE+cQ"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #080b0d; --bone: #d8d0bd; --bone-bright: #e1dbca; --bone-dim: #b7b6ad;
+    --muted: #8e928b; --gold: #b99552; --gold-bright: #e4c77e;
+    --ember: #bd6135; --moss: #52665c; --focus: #658e9e;
+    --line: rgba(216,208,189,.18); --line-soft: rgba(216,208,189,.1);
+    --glass: linear-gradient(140deg, rgba(20,27,29,.91), rgba(7,10,12,.88));
+    --selected: linear-gradient(135deg, rgba(185,149,82,.13), rgba(19,27,29,.8));
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--ink); color: var(--bone); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(185,149,82,.35); }
+  a:hover { color: var(--gold-bright); border-bottom-color: var(--gold-bright); }
+  canvas { display: block; }
+
+  #grain { position: fixed; inset: -50%; z-index: 9; pointer-events: none; opacity: .07;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    animation: grain .28s steps(2,end) infinite; }
+  @keyframes grain { 0%{transform:translate(0)} 25%{transform:translate(2%,-1%)} 50%{transform:translate(-1%,2%)} 75%{transform:translate(1%,1%)} }
+  @media (prefers-reduced-motion: reduce) { #grain { animation: none; } }
+
+  .eyebrow { margin: 0; color: var(--gold); font: 500 10px/1.3 Cinzel, Georgia, serif; letter-spacing: .28em; text-transform: uppercase; }
+  .micro { margin: 0; color: var(--muted); font: 500 8px/1.3 Cinzel, Georgia, serif; letter-spacing: .18em; text-transform: uppercase; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  #shell { position: relative; z-index: 2; display: grid; grid-template-rows: auto minmax(0,1fr); height: 100%; }
+  header { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; padding: 18px 24px 16px; border-bottom: 1px solid var(--line); }
+  header h1 { margin: 8px 0 0; color: var(--bone-bright); font: 500 27px/1 Cinzel, Georgia, serif; letter-spacing: -.02em; }
+  header h1 em { color: var(--gold-bright); font-style: normal; font-weight: 400; }
+  #ledger { display: flex; gap: 26px; flex-shrink: 0; }
+  #ledger div { text-align: right; }
+  #ledger b { display: block; margin-top: 4px; color: var(--bone); font: 400 19px Cinzel, Georgia, serif; }
+  #ledger b.flag { color: var(--gold-bright); }
+  #ledger b.ok { color: #7f9b8c; }
+
+  main { display: grid; grid-template-columns: 300px minmax(0,1fr) 320px; min-height: 0; }
+  #rail { border-right: 1px solid var(--line); overflow-y: auto; }
+  .ghead { padding: 18px 18px 8px; }
+  .ghead .gn { margin: 6px 0 0; color: var(--muted); font: italic 12.5px/1.4 'IM Fell English', Georgia, serif; }
+  .item { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; width: 100%; padding: 10px 18px; min-height: 44px; background: transparent; border: 0; border-top: 1px solid var(--line-soft); color: inherit; text-align: left; cursor: pointer; font: inherit; transition: background .2s ease; }
+  .item:hover { background: rgba(31,39,40,.5); }
+  .item:hover .nm { color: var(--gold-bright); }
+  .item[aria-selected="true"] { background: var(--selected); box-shadow: inset 3px 0 var(--gold); }
+  .item[aria-selected="true"] .nm { color: var(--gold-bright); }
+  .item[disabled] { cursor: default; opacity: .62; }
+  .item .nm { display: block; color: var(--bone); font: 400 13.5px Cinzel, Georgia, serif; }
+  .item .sub { display: block; margin-top: 3px; color: var(--muted); font: 400 9px Inter, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+  .item .sp { color: var(--bone-dim); font: 500 11px Inter, system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+  .item[data-built="0"] .sp { color: var(--muted); }
+  .item:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: -3px; }
+
+  #stage { position: relative; display: grid; grid-template-rows: auto minmax(0,1fr); min-width: 0; background: #0b1113; }
+  #bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; row-gap: 8px; flex-wrap: wrap; padding: 10px 16px; border-bottom: 1px solid var(--line); background: rgba(7,10,12,.6); }
+  #bar .who { display: flex; align-items: baseline; gap: 11px; min-width: 0; flex: 1 1 200px; }
+  #bar .who h2 { margin: 0; color: var(--bone-bright); font: 400 16px Cinzel, Georgia, serif; white-space: nowrap; }
+  #bar .who code { color: var(--gold); font: 10.5px ui-monospace, Menlo, monospace; }
+  .seg { display: flex; flex-shrink: 0; }
+  .seg button { appearance: none; padding: 7px 9px; min-height: 32px; background: rgba(5,8,9,.55); border: 1px solid var(--line); border-right-width: 0; color: var(--muted); font: 500 8.5px Cinzel, Georgia, serif; letter-spacing: .13em; text-transform: uppercase; white-space: nowrap; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+  .seg button:last-child { border-right-width: 1px; }
+  .seg button:hover { color: var(--gold-bright); }
+  .seg button[aria-pressed="true"] { color: var(--gold-bright); background: rgba(185,149,82,.13); border-color: var(--gold); }
+  .seg button:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+
+  #panel { border-left: 1px solid var(--line); overflow-y: auto; padding: 18px; }
+  .card { padding: 14px 15px; margin-bottom: 8px; background: var(--glass); border: 1px solid var(--line); }
+  .card p { margin: 8px 0 0; }
+  .card p.body { color: var(--bone-dim); font: 14.5px/1.55 'IM Fell English', Georgia, serif; }
+  .card p.sys { color: #a7aaa4; font: 12px/1.6 Inter, system-ui, sans-serif; }
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 5px 0; border-top: 1px solid var(--line-soft); font: 400 12px Inter, system-ui, sans-serif; text-align: right; color: var(--bone-dim); font-variant-numeric: tabular-nums; }
+  td:first-child { text-align: left; color: var(--muted); font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase; }
+  tr:first-child td { border-top: 0; }
+  td.big { color: var(--gold-bright); font-size: 15px; }
+  .pill { display: inline-block; padding: 3px 7px; font: 500 8px Cinzel, Georgia, serif; letter-spacing: .14em; text-transform: uppercase; border: 1px solid; }
+  .pill.ok { color: #7f9b8c; background: rgba(82,102,92,.14); border-color: rgba(82,102,92,.5); }
+  .pill.gold { color: var(--gold-bright); background: rgba(185,149,82,.12); border-color: rgba(185,149,82,.4); }
+  @media (max-width: 1240px) { main { grid-template-columns: 250px minmax(0,1fr); } #panel { display: none; } }
+</style>
+</head>
+<body>
+<div id="grain"></div>
+
+<div id="shell">
+  <header>
+    <div>
+      <p class="eyebrow">Sable Reach &middot; Generator catalogue</p>
+      <h1>One hundred thousand, <em>unique</em></h1>
+    </div>
+    <div id="ledger">
+      <div><p class="micro">Generators</p><b class="num" id="lGen">&mdash;</b></div>
+      <div><p class="micro">Unique, built</p><b class="num ok" id="lAxis">&mdash;</b></div>
+      <div><p class="micro">Unique, declared</p><b class="num" id="lMult">&mdash;</b></div>
+      <div><p class="micro">Of 100k target</p><b class="num flag" id="lTotal">&mdash;</b></div>
+    </div>
+  </header>
+
+  <main>
+    <nav id="rail" aria-label="Generators"></nav>
+
+    <section id="stage">
+      <div id="bar">
+        <div class="who"><h2 id="gName">&mdash;</h2><code id="gId"></code></div>
+        <div class="seg" role="group" aria-label="Biome" id="biomeSeg"></div>
+        <div class="seg" role="group" aria-label="Wear" id="wearSeg"></div>
+        <div class="seg" role="group" aria-label="Variant page">
+          <button id="pgPrev">&larr; Page</button>
+          <button id="pgNext">Page &rarr;</button>
+        </div>
+      </div>
+      <canvas id="gl"></canvas>
+    </section>
+
+    <aside id="panel" aria-label="Generator detail"></aside>
+  </main>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { setLod, applyTextures, measure } from './kit/hm-core.js';
+import { STEAM_GENERATORS, spaceOf, axesOf, bindSteamTextures } from './kit/hm-steam.js';
+import { FLORA_GENERATORS } from './kit/hm-flora2.js';
+import { ARCH_GENERATORS } from './kit/hm-arch.js';
+import { ARMS_GENERATORS } from './kit/hm-arms.js';
+import { GEO_GENERATORS } from './kit/hm-geo.js';
+import { MACH_GENERATORS } from './kit/hm-mach.js';
+import { MACH2_GENERATORS } from './kit/hm-mach2.js';
+import { LAB_GENERATORS } from './kit/hm-lab.js';
+import { FUNGI_GENERATORS } from './kit/hm-fungi.js';
+import { GOODS_GENERATORS } from './kit/hm-goods.js';
+import { SIGN_GENERATORS } from './kit/hm-sign.js';
+import { CAMP_GENERATORS } from './kit/hm-camp.js';
+import { LAND_GENERATORS } from './kit/hm-land.js';
+import { FAUNA_GENERATORS, restPose } from './kit/hm-fauna.js';
+import { FAUNA2_GENERATORS } from './kit/hm-fauna2.js';
+import { BIOMES, WEAR_TIERS, applyFinish, FINISH_MULTIPLIER } from './kit/hm-biome.js';
+import { emberLedgerDesk, clayNameRack, ropeBellSmall, springCupStone } from './kit/hm-props.js';
+import { holdHouseSmall, holdHouseCorner, bellTowerTimber, palisadeRepaired, springChannelArch, vigilShrineOld, gatehousePatchwork } from './kit/hm-structures.js';
+import { clayNameTablet, bellClapperMace } from './kit/hm-artifacts.js';
+
+applyTextures(true);
+bindSteamTextures(true);
+
+/* ---------------------------------------------------------------- registry
+ * BUILT generators run. DECLARED generators are named with their axis space
+ * but have no builder yet — they are shown greyed, and counted separately, so
+ * the headline number can never be mistaken for finished work.
+ *
+ * Declared axis spaces are calibrated against the eight measured ones (which
+ * average 510), not invented upward to hit a target. */
+const HM = (id, name, fn, cls, domain) => ({ id, name, build: () => fn(), axes: null, space: 1, domain: domain || 'named', budgetClass: cls, built: true, oneOff: true });
+
+const BUILT = [
+  ...STEAM_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...FLORA_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...ARCH_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...ARMS_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...GEO_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  // hm-mach.js's `machine` generator is RETIRED. It crammed eight machine
+  // types into one function with nothing kinematically connected, a `state`
+  // axis that only nudged two hardcoded positions, and steam plumbing bolted
+  // onto a loom. hm-mach2.js replaces it with seven real mechanisms.
+  ...MACH_GENERATORS.filter((g) => g.id !== 'mach.machine').map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...MACH2_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...LAB_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...FUNGI_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...GOODS_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...SIGN_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...CAMP_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...LAND_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  // Ambient fauna. Not the bestiary: nothing here fights, drops loot or has a
+  // rank. See `Sable Reach Creature Catalogue.html` for the same families with
+  // the locomotion engine running — in this grid they hold a solved rest pose,
+  // because a still frame of a walk cycle is not a review of a walk cycle.
+  ...FAUNA_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+  ...FAUNA2_GENERATORS.map((g) => ({ ...g, space: spaceOf(g.axes), built: true })),
+];
+
+/* -------------------------------------------------------- named one-offs
+ * A generator with ONE variant is not a category, and counting it as one was
+ * dishonest. Twelve former entries here were generic props and foliage that
+ * later parametric families now cover properly, so they are RETIRED rather
+ * than padded with fake axes:
+ *
+ *   6 foliage singles  -> flora.tree / shrub / flower / grass, fungi.mold-mat
+ *   banked brazier     -> camp.campfire, camp.beacon
+ *   rain barrel        -> mach.container
+ *   market awning      -> camp.tent (awning axis)
+ *   traveler bench     -> mach.furniture
+ *   herb drying frame  -> camp.drying-rack, goods.herb-bundle
+ *   guard weapon rest  -> arms.* on mach.furniture
+ *
+ * What remains below is legitimately singular: there is exactly one
+ * Bell-Clapper Mace and one Old Vigil Shrine. These are NAMED STORY OBJECTS,
+ * not asset categories, so they are listed in their own section and excluded
+ * from both the generator count and the unique total. A named artifact that
+ * claimed 500 variants would be the lie; a category with one would be the
+ * failure. This is neither. */
+const NAMED = [
+  HM('hm.prop.ember-ledger-desk', 'Ember Ledger desk', emberLedgerDesk, 'hero'),
+  HM('hm.prop.clay-name-rack', 'Clay name rack', clayNameRack, 'standard'),
+  HM('hm.prop.rope-bell-small', 'Small rope bell', ropeBellSmall, 'standard'),
+  HM('hm.prop.spring-cup-stone', 'Stone spring cup', springCupStone, 'minor'),
+  HM('hm.artifact.clay-name-tablet', 'Clay name tablet', clayNameTablet, 'hero'),
+  HM('hm.artifact.bell-clapper-mace', 'Bell-clapper mace', bellClapperMace, 'hero'),
+  HM('hm.structure.hold-house-small', 'Small hold house', holdHouseSmall, 'standard'),
+  HM('hm.structure.hold-house-corner', 'Corner hold house', holdHouseCorner, 'standard'),
+  HM('hm.structure.bell-tower-timber', 'Timber bell tower', bellTowerTimber, 'hero'),
+  HM('hm.structure.palisade-repaired', 'Repaired palisade', palisadeRepaired, 'standard'),
+  HM('hm.structure.spring-channel-arch', 'Spring channel arch', springChannelArch, 'hero'),
+  HM('hm.structure.vigil-shrine-old', 'Old Vigil Shrine', vigilShrineOld, 'hero'),
+  HM('hm.structure.gatehouse-patchwork', 'Patchwork gatehouse', gatehousePatchwork, 'hero'),
+];
+
+const D = (name, domain, space) => ({ id: 'planned.' + domain + '.' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-'), name, domain, space, built: false, budgetClass: 'planned' });
+const DECLARED = [
+  D('Cairn ring', 'world', 864), D('Road shrine, split', 'world', 576), D('Pilgrim arch, fallen', 'world', 432),
+  D('Drowned roof peak', 'world', 720), D('Lantern post, crooked', 'world', 288), D('Reedward bridge span', 'world', 1152),
+  D('Salt harvest pan', 'world', 384), D('Grand furnace', 'world', 648), D('Glasswood tree', 'world', 240),
+  D('Ore crusher, manual', 'world', 960), D('Slag gate arch', 'world', 432), D('Cooling cistern', 'world', 576),
+  D('Watch post, empty', 'world', 324), D('March bridge, rope', 'world', 768), D('Grave tithe box', 'world', 216),
+  D('Wind chime, bone', 'world', 512), D('Broken cart, narrow', 'world', 640), D('Mire boat, flat', 'world', 288),
+  D('Parish belfry, broken', 'world', 432), D('Nave arch, broken', 'world', 720), D('Tongueless saint niche', 'world', 384),
+  D('Upper cloister walk', 'world', 576), D('Choir screen, mute', 'world', 288), D('Last Bell vault', 'world', 480),
+
+  D('Cavern wall segment', 'dungeon', 1152), D('Stalactite cluster', 'dungeon', 864), D('Flooded crypt door', 'dungeon', 576),
+  D('Crypt stair, sealed', 'dungeon', 432), D('Gantry walkway', 'dungeon', 720), D('Grate floor panel', 'dungeon', 288),
+  D('Resonant urn', 'dungeon', 960), D('Burial niche stack', 'dungeon', 384), D('Ore vein face', 'dungeon', 648),
+  D('Mine cart rail', 'dungeon', 512), D('Winch housing', 'dungeon', 432), D('Boiler assembly', 'dungeon', 768),
+  D('Condenser bank', 'dungeon', 576), D('Sluice gate', 'dungeon', 324), D('Rope bridge, cavern', 'dungeon', 240),
+  D('Fungal shelf', 'dungeon', 640), D('Aether conduit junction', 'dungeon', 288), D('Collapsed shaft', 'dungeon', 432),
+  D('Portcullis', 'dungeon', 720), D('Pressure door', 'dungeon', 384), D('Cell block frame', 'dungeon', 576),
+  D('Sump pump', 'dungeon', 480),
+
+  D('Arena floor tile set', 'combat', 432), D('Initiative marker plinth', 'combat', 288), D('Cover barricade', 'combat', 576),
+  D('Hazard vent', 'combat', 216), D('Elevation platform', 'combat', 384), D('Turn-order rail post', 'combat', 240),
+  D('Telegraph decal frame', 'combat', 320), D('Destructible pillar', 'combat', 512), D('Chain hazard', 'combat', 288),
+  D('Slag pool hazard', 'combat', 432), D('Ward circle', 'combat', 216), D('Grapple anchor', 'combat', 360),
+
+  D('Ore chunk', 'items', 576), D('Herb bundle', 'items', 432), D('Tonic vial', 'items', 288),
+  D('Relic fragment', 'items', 720), D('Ingot', 'items', 384), D('Timber bundle', 'items', 240),
+  D('Coin hoard', 'items', 960), D('Rune tablet', 'items', 512), D('Fishing creel', 'items', 288),
+  D('Sealed order case', 'items', 432), D('Reliquary', 'items', 648), D('Salt block', 'items', 384),
+  D('Kiln scale heap', 'items', 576), D('Bone charm', 'items', 216), D('Vow thread spool', 'items', 320),
+  D('Map roll', 'items', 480), D('Lantern, portable', 'items', 288), D('Tool roll', 'items', 384),
+
+  D('Blade, one-hand', 'equipment', 1152), D('Blade, two-hand', 'equipment', 864), D('Heavy arm, hafted', 'equipment', 576),
+  D('Bow', 'equipment', 720), D('Crossbow, geared', 'equipment', 432), D('Helm', 'equipment', 960),
+  D('Pauldron set', 'equipment', 384), D('Cuirass', 'equipment', 648), D('Gauntlet set', 'equipment', 512),
+  D('Greave set', 'equipment', 288), D('Shield', 'equipment', 432), D('Cloak and mantle', 'equipment', 768),
+  D('Respirator mask', 'equipment', 576), D('Aether pack', 'equipment', 320), D('Belt and pouches', 'equipment', 480),
+  D('Prosthetic, geared', 'equipment', 384),
+];
+
+const ALL = [...BUILT, ...DECLARED, ...NAMED];
+const DOMAINS = [
+  { key: 'world', label: 'Outside world', note: 'Streams with the region. Everything the player sees above ground.' },
+  { key: 'machinery', label: 'Working machinery', note: 'Real mechanisms with a stated power chain. Every one animates from its own kinematics — see the Machine Hall. Replaces the retired catch-all machine generator.' },
+  { key: 'laboratory', label: 'Laboratory and apparatus', note: 'Pre-electric bench science. Built from documented operating principle rather than dimensioned from spec sheets — semi-real, and labelled as such.' },
+  { key: 'biology', label: 'Biological and specimen work', note: 'Fixation, sectioning, staining, mounting, accession. Laid out so a bench reads left to right in workflow order.' },
+  { key: 'dungeon', label: 'Dungeons and caverns', note: 'Its own streaming scope — a dungeon never loads in sync with the surface, and never renders all at once.' },
+  { key: 'combat', label: 'Turn-based arena', note: 'Assets that only exist during an encounter: cover, hazards, elevation, initiative furniture.' },
+  { key: 'items', label: 'Items and arms', note: 'Inspect-scale. Held, racked, dropped. Weapons live here rather than in equipment because a racked weapon needs no rig.' },
+  { key: 'equipment', label: 'Equipment', note: 'Worn. Still needs attachment sockets and a paper-doll rig the kit does not have — these build as props, not as wearables.' },
+  { key: 'named', label: 'Named one-offs — not categories', note: 'There is exactly one Bell-Clapper Mace. These are story objects with a single legitimate variant, so they are excluded from the generator count and the unique total rather than padded with invented axes.' },
+  { key: 'fauna-ground', label: 'Ambient fauna · ground', note: 'The living-environment layer, not the bestiary. Quadrupeds and ground birds with a solved four-beat gait. The biome finish is NOT applied to fauna — icicles on a hare is a bug, not a rime hare — so condition is an axis inside each generator instead.' },
+  { key: 'fauna-small', label: 'Ambient fauna · arthropods', note: 'Six and eight legs on the real gaits: alternating tripod and metachronal wave. Finish not applied; see the ground note.' },
+  { key: 'fauna-air', label: 'Ambient fauna · fliers', note: 'Moths, bats and birds. `lantern_moth_sparse` is a declared Hearthmere vfx row that had no asset; the flutter behaviour steers toward the nearest practical light. Masked out of the Graven March, which is authored `no_bird_silence`.' },
+  { key: 'fauna-water', label: 'Ambient fauna · water', note: 'Anurans, fish, crustaceans and serpents. Undulation follows the head’s own path rather than a sine wave pinned to the body.' },
+  { key: 'fauna-lit', label: 'Ambient fauna · lit', note: 'Firefly swarms and marsh lights — `marsh_light_drifter` and `bell_dust_pulse`, both declared vfx rows with no asset. Glow is a finish rolled at spawn, never an axis, so it is excluded from the unique total.' },
+];
+
+/* ------------------------------------------------------------- arithmetic
+ * UNIQUE objects only. The biome/wear finish multiplier is deliberately NOT
+ * folded in here: a rimed pipe run and a scorched pipe run are the same
+ * object wearing different weather. The finish system stays valuable at
+ * dressing time; it cannot carry the headline. */
+const axisBuilt = BUILT.reduce((n, g) => n + g.space, 0);
+const axisDeclared = DECLARED.reduce((n, g) => n + g.space, 0);
+const axisTotal = axisBuilt + axisDeclared;
+const TARGET = 100000;
+// Generator count excludes NAMED: a one-off is not a category. Every entry in
+// BUILT and DECLARED must offer 2 or more variants, and this warns if not.
+const singles = BUILT.filter((g) => g.space < 2);
+if (singles.length) console.warn('FAIL — categories with <2 unique:', singles.map((g) => g.id));
+document.getElementById('lGen').textContent = BUILT.length + DECLARED.length;
+document.getElementById('lAxis').textContent = axisBuilt.toLocaleString();
+document.getElementById('lMult').textContent = axisDeclared.toLocaleString();
+document.getElementById('lTotal').textContent = Math.round((axisTotal / TARGET) * 100) + '%';
+
+/* ------------------------------------------------------------------ scene */
+const canvas = document.getElementById('gl');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.25;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#0b1113');
+const camera = new THREE.PerspectiveCamera(46, 2, 0.05, 400);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+
+scene.add(new THREE.HemisphereLight(0x93a9ae, 0x4a3a2c, 0.95));
+const key = new THREE.DirectionalLight(0xc4d1d4, 1.9);
+key.position.set(6, 11, 7);
+key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048);
+scene.add(key);
+const fill = new THREE.DirectionalLight(0xc9793c, 0.85);
+fill.position.set(-6, 2.4, -5);
+scene.add(fill);
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(300, 300), new THREE.ShadowMaterial({ opacity: 0.3 }));
+floor.rotation.x = -Math.PI / 2;
+floor.receiveShadow = true;
+scene.add(floor);
+
+const gridRoot = new THREE.Group();
+scene.add(gridRoot);
+
+let current = BUILT[0];
+let biome = 'ash';
+let wear = 'worked';
+let page = 0;
+
+/* Grid size by cost: a hero structure gets nine, a minor prop twenty-five. */
+const gridFor = (cls) => (cls === 'hero' ? 3 : cls === 'standard' ? 4 : 5);
+
+function buildGrid() {
+  gridRoot.clear();
+  const n = gridFor(current.budgetClass);
+  const count = n * n;
+  const space = current.space;
+  const start = ((page * count) % Math.max(space, 1) + Math.max(space, 1)) % Math.max(space, 1);
+
+  // LOD1 for the grid: twenty-five hero structures at LOD0 is not a review
+  // tool, it is a stall.
+  setLod(current.budgetClass === 'hero' ? 2 : 1);
+  const built = [];
+  let maxSpan = 0;
+  for (let i = 0; i < count; i++) {
+    const variant = space > 1 ? (start + i) % space : 0;
+    let o;
+    try { o = current.build(variant); } catch (e) { o = new THREE.Group(); }
+    // Creatures take neither the biome overlay nor the wear tiers: the overlay
+    // hangs icicles off an animal and wear works by detaching parts to the
+    // floor. They get a solved rest pose instead of a finish.
+    if (String(current.domain).startsWith('fauna')) restPose(o);
+    else applyFinish(o, biome, wear, variant + i);
+    const bb = new THREE.Box3().setFromObject(o);
+    const s = bb.getSize(new THREE.Vector3());
+    maxSpan = Math.max(maxSpan, s.x, s.z);
+    built.push({ o, variant, tris: measure(o).tris });
+  }
+  setLod(0);
+
+  const pitch = maxSpan * 1.22 + 0.16;
+  built.forEach(({ o }, i) => {
+    const gx = i % n, gz = Math.floor(i / n);
+    o.position.x += (gx - (n - 1) / 2) * pitch;
+    o.position.z += (gz - (n - 1) / 2) * pitch;
+    o.traverse((m) => { if (m.isMesh) { m.castShadow = true; m.receiveShadow = true; } });
+    gridRoot.add(o);
+  });
+
+  // Frame the whole grid.
+  const bb = new THREE.Box3().setFromObject(gridRoot);
+  const sph = bb.getBoundingSphere(new THREE.Sphere());
+  const dist = (sph.radius / Math.tan((camera.fov * Math.PI) / 360)) * 0.92;
+  camera.position.copy(sph.center).add(new THREE.Vector3(0.72, 0.5, 1).normalize().multiplyScalar(dist));
+  camera.near = Math.max(dist / 200, 0.02);
+  camera.far = dist * 60;
+  camera.updateProjectionMatrix();
+  controls.target.copy(sph.center);
+  controls.update();
+
+  renderPanel(built, start, count);
+}
+
+function renderPanel(built, start, count) {
+  const b = BIOMES.find((x) => x.id === biome);
+  const w = WEAR_TIERS.find((x) => x.id === wear);
+  const tris = built.reduce((n, x) => n + x.tris, 0);
+  const assetsFromThis = current.space * FINISH_MULTIPLIER;
+  const el = document.getElementById('panel');
+
+  el.innerHTML =
+    '<div class="card"><p class="micro">This generator</p><table><tbody>' +
+    '<tr><td>Unique objects</td><td class="big">' + current.space.toLocaleString() + '</td></tr>' +
+    '<tr><td>Finishes available</td><td>' + FINISH_MULTIPLIER + '</td></tr>' +
+    '<tr><td>Dressed variations</td><td>' + (current.space * FINISH_MULTIPLIER).toLocaleString() + '</td></tr>' +
+    '<tr><td>Showing</td><td>' + (current.space > 1 ? (start + 1) + '\u2013' + Math.min(start + count, current.space) : '1') + '</td></tr>' +
+    '<tr><td>Grid triangles</td><td>' + tris.toLocaleString() + '</td></tr>' +
+    '<tr><td>Status</td><td>' + (current.built ? '<span class="pill ok">built</span>' : '<span class="pill gold">declared</span>') + '</td></tr>' +
+    '</tbody></table></div>' +
+
+    (current.axes ? '<div class="card"><p class="micro">Declared axes</p><table><tbody>' +
+      Object.keys(current.axes).map((k) => '<tr><td>' + k + '</td><td>' + current.axes[k] + '</td></tr>').join('') +
+      '</tbody></table><p class="sys">An axis only counts if it changes silhouette or material. Seed jitter gives infinite micro-variation on top of these and is deliberately <em>not</em> counted \u2014 counting it would make the headline a lie.</p></div>' : '') +
+
+    '<div class="card"><p class="micro">Finish &middot; ' + b.name + ' &middot; ' + w.name + '</p>' +
+    '<p class="body">' + b.blurb + '</p>' +
+    '<p class="sys">A finish is a geometry overlay plus a material retint, placed against the asset\u2019s own bounding box \u2014 so it works on anything without the generator knowing biomes exist. That decoupling is what makes the multiplier honest: the silhouette actually changes.</p></div>' +
+
+    '<div class="card"><p class="micro">Streaming scope</p><p class="sys">' +
+    DOMAINS.find((d) => d.key === current.domain).note + '</p></div>' +
+
+    '<div class="card"><p class="micro">What a catalogue entry is</p><p class="sys">Not a mesh on disk. An asset is addressed as <code style="color:var(--gold);font:11px ui-monospace,Menlo,monospace">(generatorId, variant, biome, wear)</code> and rebuilt deterministically \u2014 which is why a million of them costs kilobytes of recipe rather than terabytes of geometry, and why the repo\u2019s existing <code style="color:var(--gold);font:11px ui-monospace,Menlo,monospace">runtime-procedural-threejs</code> delivery already supports it.</p></div>';
+}
+
+/* -------------------------------------------------------------------- rail */
+const rail = document.getElementById('rail');
+DOMAINS.forEach((d) => {
+  const rows = ALL.filter((g) => g.domain === d.key);
+  const builtN = rows.filter((g) => g.built).length;
+  const head = document.createElement('div');
+  head.className = 'ghead';
+  head.innerHTML = '<p class="micro">' + d.label + ' &middot; ' + rows.length + ' gen &middot; ' + builtN + ' built</p><p class="gn">' + d.note + '</p>';
+  rail.append(head);
+  rows.forEach((g) => {
+    const b = document.createElement('button');
+    b.className = 'item';
+    b.type = 'button';
+    b.dataset.id = g.id;
+    b.dataset.built = g.built ? '1' : '0';
+    b.setAttribute('aria-selected', 'false');
+    if (!g.built) b.disabled = true;
+    b.innerHTML = '<span><span class="nm">' + g.name + '</span><span class="sub">' +
+      (g.built ? g.budgetClass : 'declared') + ' &middot; ' + g.space.toLocaleString() + ' unique</span></span>' +
+      '<span class="sp">' + g.space.toLocaleString() + '</span>';
+    if (g.built) b.addEventListener('click', () => select(g.id));
+    rail.append(b);
+  });
+});
+
+function select(id) {
+  current = ALL.find((g) => g.id === id);
+  page = 0;
+  rail.querySelectorAll('.item').forEach((el) => el.setAttribute('aria-selected', String(el.dataset.id === id)));
+  document.getElementById('gName').textContent = current.name;
+  document.getElementById('gId').textContent = current.id;
+  buildGrid();
+}
+
+/* ---------------------------------------------------------------- controls */
+const biomeSeg = document.getElementById('biomeSeg');
+BIOMES.forEach((b) => {
+  const el = document.createElement('button');
+  el.textContent = b.name;
+  el.setAttribute('aria-pressed', String(b.id === biome));
+  el.addEventListener('click', () => {
+    biome = b.id;
+    biomeSeg.querySelectorAll('button').forEach((x, i) => x.setAttribute('aria-pressed', String(BIOMES[i].id === biome)));
+    buildGrid();
+  });
+  biomeSeg.append(el);
+});
+const wearSeg = document.getElementById('wearSeg');
+WEAR_TIERS.forEach((w) => {
+  const el = document.createElement('button');
+  el.textContent = w.name;
+  el.setAttribute('aria-pressed', String(w.id === wear));
+  el.addEventListener('click', () => {
+    wear = w.id;
+    wearSeg.querySelectorAll('button').forEach((x, i) => x.setAttribute('aria-pressed', String(WEAR_TIERS[i].id === wear)));
+    buildGrid();
+  });
+  wearSeg.append(el);
+});
+document.getElementById('pgPrev').addEventListener('click', () => { page = Math.max(0, page - 1); buildGrid(); });
+document.getElementById('pgNext').addEventListener('click', () => { page++; buildGrid(); });
+
+function resize() {
+  const r = canvas.getBoundingClientRect();
+  renderer.setSize(r.width, r.height, false);
+  camera.aspect = r.width / Math.max(r.height, 1);
+  camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize);
+resize();
+renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); });
+
+select('cw.industrial.aether-lamp');
+</script>
+</body>
+</html>

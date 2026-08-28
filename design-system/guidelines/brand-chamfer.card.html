@@ -1,0 +1,24 @@
+<!-- @dsCard group="Brand" viewport="700x150" subtitle="The ornate silhouette, 8px each vertical edge" name="Chamfer" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+  .cap{color:#797f7a;font:9px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="row" style="gap:14px">
+<button style="min-height:44px;padding:0 26px;background:var(--gold-btn-bg);color:var(--gold-btn-ink);border:1px solid var(--gold-btn-edge);box-shadow:var(--shadow-button);clip-path:var(--clip-ornate);font:var(--type-button);letter-spacing:var(--track-button);text-transform:uppercase">Swear the Vow</button>
+<button style="min-height:44px;padding:0 26px;background:var(--ghost-bg);color:var(--bone);border:1px solid var(--line);clip-path:var(--clip-ornate);font:var(--type-button);letter-spacing:var(--track-button);text-transform:uppercase">Decline</button>
+<p style="margin:0;max-width:260px;color:var(--muted);font:12px/1.5 var(--serif)">Reserve for ceremony &mdash; title screen, oaths. Routine UI stays rectangular.</p></div>
+</body>
+</html>

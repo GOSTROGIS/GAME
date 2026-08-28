@@ -1,0 +1,446 @@
+{
+  "schema": "FamilyPlateBatchProvenanceV1",
+  "batchId": "family-plates-batch-01",
+  "acceptanceScope": {
+    "approvedPlates": 10,
+    "plannedFamilyPlates": 21,
+    "canonicalPngCollectionComplete": false
+  },
+  "promptSource": "assets/bestiary/prompts/family-plates-batch-01.md",
+  "recovery": {
+    "recoveredRecords": 4,
+    "transferredRecords": 6,
+    "date": "2026-08-25",
+    "promptSource": "assets/bestiary/prompts/family-plates-batch-01-recovery.md"
+  },
+  "records": [
+    {
+      "id": "family_plate.ashbound",
+      "familyId": "ashbound",
+      "familyName": "Ashbound",
+      "role": "family_plate",
+      "path": "assets/bestiary/ashbound-plate.png",
+      "sha256": "a2d31b913135c3baeb2c51f865b1a843c7d44d8ddb864c68871a34e2e93af38f",
+      "bytes": 1629960,
+      "dimensions": {
+        "width": 1024,
+        "height": 1535
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "physicalHeightMeters": null,
+      "groundPivot": null,
+      "visualBounds": null,
+      "collisionBounds": null,
+      "prompt": {
+        "file": "assets/bestiary/prompts/family-plates-batch-01-recovery.md",
+        "section": "Ashbound",
+        "sha256": "1d57978bd9d0e074552aea2973b975355265b775093fbae1ae531508c9c54eab"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-4e2bb289-a42d-4890-a35d-c86bf7248a50.png",
+        "tool": {
+          "name": "OpenAI built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "generatedOn": "2026-08-25"
+      },
+      "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "family_plate.cairn_beasts",
+      "familyId": "cairn_beasts",
+      "familyName": "Cairn Beasts",
+      "role": "family_plate",
+      "path": "assets/bestiary/cairn-beasts-plate.png",
+      "sha256": "ddec89f731af0016200cd0b2756e99c763857b65940211f435119cbc2b60165a",
+      "bytes": 2016184,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "physicalHeightMeters": null,
+      "groundPivot": null,
+      "visualBounds": null,
+      "collisionBounds": null,
+      "prompt": {
+        "file": "assets/bestiary/prompts/family-plates-batch-01.md",
+        "section": "Cairn Beasts",
+        "sha256": "9478952c49da7b2d16fb054a628584bcd96523473efa33f70bcfc682268612fc"
+      },
+      "generation": {
+        "callId": "call_3DCkzchVv1431C8jGd8UjVSp",
+        "sourceImageId": "exec-13a50610-2a62-45bf-8073-64c07ff1a165.png",
+        "tool": {
+          "name": "OpenAI built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "generatedOn": "2026-08-25"
+      },
+      "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+      "sourceReferences": [
+        "assets/bestiary/ashbound-plate.png",
+        "assets/characters/gloamfarer-v2.png"
+      ],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "family_plate.march_deserters",
+      "familyId": "march_deserters",
+      "familyName": "March Deserters",
+      "role": "family_plate",
+      "path": "assets/bestiary/march-deserters-plate.png",
+      "sha256": "13842b55dfde028d8ed66a1b56e5d34bcbc1bf088b632f731e04c4db172b1724",
+      "bytes": 2123337,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "physicalHeightMeters": null,
+      "groundPivot": null,
+      "visualBounds": null,
+      "collisionBounds": null,
+      "prompt": {
+        "file": "assets/bestiary/prompts/family-plates-batch-01.md",
+        "section": "March Deserters",
+        "sha256": "9369b9bea0baea63edfea4b769aad53b4cac2455dd4b4ec224a4304d857b5f6c"
+      },
+      "generation": {
+        "callId": "call_tsmk6ScuQHgGgAMN4G0FHUMj",
+        "sourceImageId": "exec-6598fc5e-27c1-407e-b015-a6dab6ccdc9e.png",
+        "tool": {
+          "name": "OpenAI built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "generatedOn": "2026-08-25"
+      },
+      "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+      "sourceReferences": [
+        "generated-draft:sha256:ba050373d9b3c5c7189eabaf7fcc324f2bc5aa36834a642a2229f727902c8749"
+      ],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "family_plate.drowned_parish",
+      "familyId": "drowned_parish",
+      "familyName": "Drowned Parish",
+      "role": "family_plate",
+      "path": "assets/bestiary/drowned-parish-plate.png",
+      "sha256": "49421e5a48983303758cbfb02a128d1635ceb25ffc3e667a86d153fc7b500939",
+      "bytes": 2175461,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "physicalHeightMeters": null,
+      "groundPivot": null,
+      "visualBounds": null,
+      "collisionBounds": null,
+      "prompt": {
+        "file": "assets/bestiary/prompts/family-plates-batch-01.md",
+        "section": "Drowned Parish",
+        "sha256": "4603dc6312b26b74296394a186b3f9c73af329839a6b6c3a50a58b15c0787367"
+      },
+      "generation": {
+        "callId": "call_L3NcHEm8i3Dd9D43p0MrGFli",
+        "sourceImageId": "exec-8c84a50f-f6b9-49bf-9ff6-ceb6bbca2e51.png",
+        "tool": {
+          "name": "OpenAI built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "generatedOn": "2026-08-25"
+      },
+      "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+      "sourceReferences": [
+        "assets/bestiary/cairn-beasts-plate.png",
+        "assets/characters/mire-physicker-v2.png"
+      ],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "family_plate.reed_coven",
+      "familyId": "reed_coven",
+      "familyName": "Reed Coven",
+      "role": "family_plate",
+      "path": "assets/bestiary/reed-coven-plate.png",
+      "sha256": "b4f1e59bc83cda6f805fe003302f298ec6d0a102536b5396083740b2b998ac91",
+      "bytes": 2247008,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "physicalHeightMeters": null,
+      "groundPivot": null,
+      "visualBounds": null,
+      "collisionBounds": null,
+      "prompt": {
+        "file": "assets/bestiary/prompts/family-plates-batch-01.md",
+        "section": "Reed Coven",
+        "sha256": "d0be9c81263d22534b11ed2f83a72d763307b7e7ecd9072a5cdd534fc639ddca"
+      },
+      "generation": {
+        "callId": "call_nT0Nqp15J7zMJmskI6oGcD9Y",
+        "sourceImageId": "exec-383d932e-bb34-4a98-9bf0-d54951abf0fa.png",
+        "tool": {
+          "name": "OpenAI built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "generatedOn": "2026-08-25"
+      },
+      "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+      "sourceReferences": [
+        "assets/bestiary/drowned-parish-plate.png",
+        "assets/characters/mire-physicker-v2.png"
+      ],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "family_plate.kilnforged",
+      "familyId": "kilnforged",
+      "familyName": "Kilnforged",
+      "role": "family_plate",
+      "path": "assets/bestiary/kilnforged-plate.png",
+      "sha256": "eac664912ae587df697badb5fc9836b80ab027ebb5492d0ce21f20f9f753cf4e",
+      "bytes": 2323499,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "physicalHeightMeters": null,
+      "groundPivot": null,
+      "visualBounds": null,
+      "collisionBounds": null,
+      "prompt": {
+        "file": "assets/bestiary/prompts/family-plates-batch-01.md",
+        "section": "Kilnforged",
+        "sha256": "dba4a99c3235d56343f04d7188ca890993925ba1c4de78d96bc0c95a8cf2328b"
+      },
+      "generation": {
+        "callId": "call_8pJvOCIcTUx0WkyNX6yvJl8X",
+        "sourceImageId": "exec-57be9ffa-60a9-470b-bc3e-f0e184b99f80.png",
+        "tool": {
+          "name": "OpenAI built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "generatedOn": "2026-08-25"
+      },
+      "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+      "sourceReferences": [
+        "assets/bestiary/march-deserters-plate.png",
+        "assets/characters/bell-warden-v2.png"
+      ],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "family_plate.glasswood",
+      "familyId": "glasswood",
+      "familyName": "Glasswood Brood",
+      "role": "family_plate",
+      "path": "assets/bestiary/glasswood-plate.png",
+      "sha256": "0c7b5ad9bba9deac681b3c9e5735ddf571d195938a8e812076614705441222a1",
+      "bytes": 1905212,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "physicalHeightMeters": null,
+      "groundPivot": null,
+      "visualBounds": null,
+      "collisionBounds": null,
+      "prompt": {
+        "file": "assets/bestiary/prompts/family-plates-batch-01-recovery.md",
+        "section": "Glasswood Brood",
+        "sha256": "ae189d50af525116aa684eec4b38bd31076b58abc1e34a766fbc0d9abd634d32"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-9d408ef7-ade9-43b4-82d1-538b03d59314.png",
+        "tool": {
+          "name": "OpenAI built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "generatedOn": "2026-08-25"
+      },
+      "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "family_plate.hush_order",
+      "familyId": "hush_order",
+      "familyName": "Hush Order",
+      "role": "family_plate",
+      "path": "assets/bestiary/hush-order-plate.png",
+      "sha256": "f7bac316e098f738de9555e671cd6402d13e943f6b49c085a06dfd8076220857",
+      "bytes": 2091779,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "physicalHeightMeters": null,
+      "groundPivot": null,
+      "visualBounds": null,
+      "collisionBounds": null,
+      "prompt": {
+        "file": "assets/bestiary/prompts/family-plates-batch-01.md",
+        "section": "Hush Order",
+        "sha256": "b71aa92b42a3ecc052e74d3931fb931062dff3ed0083305009d06706ad03d016"
+      },
+      "generation": {
+        "callId": "call_ZMLgkyB03Utfk32EMmXyU5V9",
+        "sourceImageId": "exec-08ac20b5-1f8a-4221-be9c-a17b924695a3.png",
+        "tool": {
+          "name": "OpenAI built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "generatedOn": "2026-08-25"
+      },
+      "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+      "sourceReferences": [
+        "generated-draft:sha256:c2ff81ac1074782b08bc2bbc47e103805a5d8980fe0e400f1a03470eefbfee36"
+      ],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "family_plate.echo_choir",
+      "familyId": "echo_choir",
+      "familyName": "Echo Choir",
+      "role": "family_plate",
+      "path": "assets/bestiary/echo-choir-plate.png",
+      "sha256": "de6c0a19f4e3be45f80a05458475857e038e9d7365c36d9167c520646f370e90",
+      "bytes": 1734167,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "physicalHeightMeters": null,
+      "groundPivot": null,
+      "visualBounds": null,
+      "collisionBounds": null,
+      "prompt": {
+        "file": "assets/bestiary/prompts/family-plates-batch-01-recovery.md",
+        "section": "Echo Choir",
+        "sha256": "dbefeffdce30dee7a109111d3b2e8ff638bfe42d9108b68cf483e483773ded30"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-07e6207b-8ac8-49c8-9f96-d449ee313920.png",
+        "tool": {
+          "name": "OpenAI built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "generatedOn": "2026-08-25"
+      },
+      "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "family_plate.ossuary_vermin",
+      "familyId": "ossuary_vermin",
+      "familyName": "Ossuary Vermin",
+      "role": "family_plate",
+      "path": "assets/bestiary/ossuary-vermin-plate.png",
+      "sha256": "65b75520b95ac0e5071524ca1b5a3b7abd8852b58598090e1ef394dc52df6edc",
+      "bytes": 2034379,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "physicalHeightMeters": null,
+      "groundPivot": null,
+      "visualBounds": null,
+      "collisionBounds": null,
+      "prompt": {
+        "file": "assets/bestiary/prompts/family-plates-batch-01-recovery.md",
+        "section": "Ossuary Vermin",
+        "sha256": "02cf733b5fe994f2cdd211e72b43d21db00ee089ae2ee331141bc39e22246a91"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-98243ac8-8b49-44de-9eef-d47a8cddfed3.png",
+        "tool": {
+          "name": "OpenAI built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "generatedOn": "2026-08-25"
+      },
+      "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+      "sourceReferences": [
+        "generated-draft:exec-39e1fe86-b5a9-4b41-8b84-92300135a2e8.png"
+      ],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    }
+  ]
+}

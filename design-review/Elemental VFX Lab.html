@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sable Reach — Elemental VFX Lab</title>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+    "three/addons/postprocessing/EffectComposer.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/EffectComposer.js",
+    "three/addons/postprocessing/RenderPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/RenderPass.js",
+    "three/addons/postprocessing/UnrealBloomPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/UnrealBloomPass.js",
+    "three/addons/postprocessing/OutputPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/OutputPass.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #080b0d; --bone: #d8d0bd; --bone-bright: #e1dbca; --bone-dim: #b7b6ad;
+    --muted: #8e928b; --gold: #b99552; --gold-bright: #e4c77e;
+    --ember: #bd6135; --moss: #52665c; --focus: #658e9e;
+    --line: rgba(216,208,189,.18); --line-soft: rgba(216,208,189,.1);
+    --glass: linear-gradient(140deg, rgba(20,27,29,.91), rgba(7,10,12,.9));
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--ink); color: var(--bone); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(185,149,82,.35); }
+  a:hover { color: var(--gold-bright); border-bottom-color: var(--gold-bright); }
+  canvas { display: block; }
+
+  #grain { position: fixed; inset: -50%; z-index: 8; pointer-events: none; opacity: .07;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    animation: grain .28s steps(2,end) infinite; }
+  #vig { position: fixed; inset: 0; z-index: 7; pointer-events: none; box-shadow: inset 0 0 200px 40px rgba(0,0,0,.8); }
+  @keyframes grain { 0%{transform:translate(0)} 25%{transform:translate(2%,-1%)} 50%{transform:translate(-1%,2%)} 75%{transform:translate(1%,1%)} }
+  @media (prefers-reduced-motion: reduce) { #grain { animation: none; } }
+
+  .eyebrow { margin: 0; color: var(--gold); font: 500 10px/1.3 Cinzel, Georgia, serif; letter-spacing: .28em; text-transform: uppercase; }
+  .micro { margin: 0; color: var(--muted); font: 500 8px/1.3 Cinzel, Georgia, serif; letter-spacing: .18em; text-transform: uppercase; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  #hud { position: fixed; inset: 0; z-index: 6; pointer-events: none; }
+  #hud > * { pointer-events: auto; }
+
+  /* ---- left rail ---- */
+  #rail { position: absolute; top: 20px; left: 24px; bottom: 20px; width: 312px;
+    display: flex; flex-direction: column; gap: 0;
+    background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(12px); }
+  #railHead { padding: 16px 18px 14px; border-bottom: 1px solid var(--line-soft); flex: none; }
+  #railHead h1 { margin: 8px 0 0; color: var(--bone-bright); font: 500 24px/1 Cinzel, Georgia, serif; letter-spacing: -.02em; }
+  #railHead h1 em { color: var(--gold-bright); font-style: normal; font-weight: 400; }
+  #railHead p.v { margin: 9px 0 0; color: var(--bone-dim); font: italic 13px/1.45 'IM Fell English', Georgia, serif; }
+  #railBody { flex: 1; overflow-y: auto; overflow-x: hidden; padding: 4px 18px 18px; }
+  #railBody::-webkit-scrollbar { width: 8px; }
+  #railBody::-webkit-scrollbar-thumb { background: #4d4434; }
+  #railBody::-webkit-scrollbar-track { background: rgba(0,0,0,.25); }
+
+  .sect { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line-soft); }
+  .sect:first-child { border-top: 0; }
+  .sect > .micro { margin-bottom: 8px; }
+
+  .row { margin-top: 12px; }
+  .row:first-child { margin-top: 0; }
+  .row label { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .row label span.v { color: var(--gold-bright); font: 500 11px Inter, system-ui, sans-serif; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 20px; margin: 2px 0 0; background: transparent; cursor: pointer; }
+  input[type=range]::-webkit-slider-runnable-track { height: 3px; background: #2a3134; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; margin-top: -5px; border-radius: 0; background: var(--gold); border: 1px solid var(--gold-bright); }
+  input[type=range]::-moz-range-track { height: 3px; background: #2a3134; }
+  input[type=range]::-moz-range-thumb { width: 12px; height: 12px; background: var(--gold); border: 1px solid var(--gold-bright); border-radius: 0; }
+  input[type=range]:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+
+  .seg { display: flex; }
+  .seg button { flex: 1; appearance: none; padding: 8px 3px; min-height: 32px; background: rgba(5,8,9,.55);
+    border: 1px solid var(--line); border-right-width: 0; color: var(--muted);
+    font: 500 8px Cinzel, Georgia, serif; letter-spacing: .1em; text-transform: uppercase; cursor: pointer;
+    transition: color .2s ease, border-color .2s ease; }
+  .seg button:last-child { border-right-width: 1px; }
+  .seg button:hover { color: var(--gold-bright); }
+  .seg button[aria-pressed="true"] { color: var(--gold-bright); background: rgba(185,149,82,.13); border-color: var(--gold); }
+  .seg button:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+
+  select, input[type=number] { width: 100%; margin-top: 4px; padding: 8px 9px; min-height: 34px;
+    background: rgba(8,12,14,.68); border: 1px solid var(--line); border-radius: 0; color: var(--bone);
+    font: 400 12px Inter, system-ui, sans-serif; }
+  select:focus-visible, input[type=number]:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+  select optgroup { color: var(--gold); font: 500 10px Cinzel, Georgia, serif; letter-spacing: .1em; }
+  select option { color: var(--bone); background: #0d1214; font-family: Inter, system-ui, sans-serif; }
+
+  .btnrow { display: flex; gap: 6px; margin-top: 8px; }
+  .btn { flex: 1; appearance: none; padding: 9px 6px; min-height: 34px; background: rgba(5,8,9,.55);
+    border: 1px solid var(--line); color: var(--muted); font: 500 8px Cinzel, Georgia, serif;
+    letter-spacing: .12em; text-transform: uppercase; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+  .btn:hover { color: var(--gold-bright); border-color: var(--gold); }
+  .btn:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+
+  .axes { margin-top: 10px; width: 100%; border-collapse: collapse; }
+  .axes td { padding: 4px 0; border-top: 1px solid var(--line-soft); font: 400 11px Inter, system-ui, sans-serif; color: var(--bone-dim); text-align: right; }
+  .axes td:first-child { text-align: left; color: var(--muted); font: 500 8px Cinzel, Georgia, serif; letter-spacing: .14em; text-transform: uppercase; }
+  .axes tr:first-child td { border-top: 0; }
+
+  /* ---- census ---- */
+  #census { position: absolute; top: 20px; right: 24px; width: 262px; padding: 15px 17px;
+    background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(12px); }
+  #census table { width: 100%; border-collapse: collapse; }
+  #census td { padding: 4px 0; border-top: 1px solid var(--line-soft); font: 400 12px Inter, system-ui, sans-serif; text-align: right; color: var(--bone-dim); font-variant-numeric: tabular-nums; }
+  #census td:first-child { text-align: left; color: var(--muted); font-size: 10px; letter-spacing: .07em; text-transform: uppercase; }
+  #census tr:first-child td { border-top: 0; }
+  td.ok { color: #7f9b8c; } td.warn { color: var(--ember); } td.big { color: var(--gold-bright); font-size: 15px; }
+  #bar { height: 5px; margin-top: 11px; background: #0a0d0e; border: 1px solid rgba(255,255,255,.07); }
+  #barFill { height: 100%; width: 0; background: linear-gradient(90deg, #6d5a33, var(--gold-bright)); transition: width .3s ease; }
+  #barNote { margin-top: 6px; }
+
+  /* ---- readout ---- */
+  #readout { position: absolute; bottom: 20px; right: 24px; width: 340px; padding: 15px 17px;
+    background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(12px); }
+  #readout p.f { margin: 0 0 9px; color: var(--bone-dim); font: italic 14px/1.45 'IM Fell English', Georgia, serif; }
+  #readout p.pri { margin: 9px 0 0; padding-top: 9px; border-top: 1px solid var(--line-soft); color: var(--muted); font: 400 11px/1.55 Inter, system-ui, sans-serif; }
+  #readout p.pri b { color: var(--gold); font-weight: 500; }
+
+  #hint { position: absolute; bottom: 22px; left: 356px; color: var(--muted); font: 400 10px/1.7 Inter, system-ui, sans-serif; letter-spacing: .03em; }
+  kbd { display: inline-block; padding: 1px 5px; margin: 0 1px; border-radius: 2px; background: #0b0e10;
+    border: 1px solid #4b4640; box-shadow: inset 0 -2px #08090a; color: var(--bone-dim);
+    font: 500 10px Inter, system-ui, sans-serif; }
+
+  #boot { position: fixed; inset: 0; z-index: 20; display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 14px; background: var(--ink); text-align: center; padding: 40px; }
+  #boot p { margin: 0; }
+  #boot p.err { max-width: 640px; color: var(--ember); font: 400 12px/1.7 Inter, system-ui, sans-serif; white-space: pre-wrap; text-align: left; }
+  @media (max-width: 1240px) { #readout, #hint { display: none; } }
+</style>
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div id="grain"></div>
+<div id="vig"></div>
+
+<div id="hud">
+  <aside id="rail">
+    <div id="railHead">
+      <p class="eyebrow">Sable Reach &middot; Elemental layer</p>
+      <h1>Twenty <em>elements</em></h1>
+      <p class="v">Fire, water, weather, veil and climate &mdash; lit by a real solar model, so the day and the four seasons are the same equation rather than five presets.</p>
+    </div>
+    <div id="railBody">
+      <div class="sect">
+        <p class="micro">Presentation</p>
+        <div class="seg" id="modeSeg">
+          <button data-mode="hero" aria-pressed="true">Hero</button>
+          <button data-mode="grid" aria-pressed="false">Grid</button>
+          <button data-mode="sweep" aria-pressed="false">Sweep</button>
+          <button data-mode="compare" aria-pressed="false">Before</button>
+        </div>
+      </div>
+
+      <div class="sect">
+        <p class="micro">Family</p>
+        <select id="famSel"></select>
+        <div class="row" id="sweepRow" style="display:none">
+          <label for="axisSel"><span class="micro">Sweep axis</span></label>
+          <select id="axisSel"></select>
+        </div>
+      </div>
+
+      <div class="sect">
+        <p class="micro">Variant</p>
+        <div class="row">
+          <label for="varNum"><span class="micro">Index</span><span class="v" id="varOf">&mdash;</span></label>
+          <input type="number" id="varNum" min="0" step="1" value="0">
+        </div>
+        <div class="btnrow">
+          <button class="btn" id="btnPrev">&larr; Prev</button>
+          <button class="btn" id="btnRoll">Roll</button>
+          <button class="btn" id="btnNext">Next &rarr;</button>
+        </div>
+        <table class="axes"><tbody id="axesBody"></tbody></table>
+      </div>
+
+      <div class="sect">
+        <p class="micro">This effect</p>
+        <div id="params"></div>
+      </div>
+
+      <div class="sect">
+        <p class="micro">World</p>
+        <div class="row">
+          <label><span class="micro">Weather</span></label>
+          <div class="seg" id="wxSeg">
+            <button data-wx="clear" aria-pressed="true">Clear</button>
+            <button data-wx="rain" aria-pressed="false">Rain</button>
+            <button data-wx="storm" aria-pressed="false">Storm</button>
+            <button data-wx="snow" aria-pressed="false">Snow</button>
+          </div>
+          <div class="seg" id="wxSeg2" style="margin-top:-1px">
+            <button data-wx="blizzard" aria-pressed="false">Blizzard</button>
+            <button data-wx="sand" aria-pressed="false">Sandstorm</button>
+            <button data-wx="glare" aria-pressed="false">Hard sun</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sect">
+        <p class="micro">Sun, day and season</p>
+        <div class="row">
+          <label for="zoneSel"><span class="micro">Climate zone</span></label>
+          <select id="zoneSel"></select>
+        </div>
+        <div class="row">
+          <label for="doy"><span class="micro">Day of year</span><span class="v" id="doyV">—</span></label>
+          <input type="range" id="doy" min="1" max="365" step="1" value="172">
+        </div>
+        <div class="row">
+          <label for="hour"><span class="micro">Hour</span><span class="v" id="hourV">—</span></label>
+          <input type="range" id="hour" min="0" max="24" step="0.1" value="13">
+        </div>
+        <div class="row">
+          <label for="lat"><span class="micro">Latitude</span><span class="v" id="latV">—</span></label>
+          <input type="range" id="lat" min="0" max="72" step="1" value="58">
+        </div>
+        <div class="btnrow">
+          <button class="btn" id="btnRun">Run the day</button>
+          <button class="btn" id="btnYear">Run the year</button>
+        </div>
+        <table class="axes"><tbody id="solBody"></tbody></table>
+      </div>
+
+      <div class="sect">
+        <p class="micro">Air and gain</p>
+        <div class="row">
+          <label for="wind"><span class="micro">Wind</span><span class="v" id="windV">1.00</span></label>
+          <input type="range" id="wind" min="0" max="2.4" step="0.05" value="1">
+        </div>
+        <div class="row">
+          <label for="gust"><span class="micro">Gust front</span><span class="v" id="gustV">0.55</span></label>
+          <input type="range" id="gust" min="0" max="1.5" step="0.05" value="0.55">
+        </div>
+        <div class="row">
+          <label for="inten"><span class="micro">Effect intensity</span><span class="v" id="intenV">1.00</span></label>
+          <input type="range" id="inten" min="0" max="2.5" step="0.05" value="1">
+        </div>
+        <div class="row">
+          <label for="bloomAmt"><span class="micro">Bloom</span><span class="v" id="bloomV">0.52</span></label>
+          <input type="range" id="bloomAmt" min="0" max="1.6" step="0.02" value="0.52">
+        </div>
+        <div class="row">
+          <label><span class="micro">Camera &amp; stage</span></label>
+          <div class="seg" id="camSeg">
+            <button data-cam="fly" aria-pressed="false">Flythrough</button>
+            <button data-cam="stage" aria-pressed="true">Stage set</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div id="census">
+    <p class="micro">Census</p>
+    <table><tbody>
+      <tr><td>Declared variants</td><td class="big num" id="cSpace">&mdash;</td></tr>
+      <tr><td>Kit total</td><td class="num" id="cTotal">&mdash;</td></tr>
+      <tr><td>Live instances</td><td class="num" id="cInst">&mdash;</td></tr>
+      <tr><td>Particles</td><td class="num" id="cParts">&mdash;</td></tr>
+      <tr><td>Lights</td><td class="num" id="cLights">&mdash;</td></tr>
+      <tr><td>Draw calls</td><td class="num" id="cCalls">&mdash;</td></tr>
+      <tr><td>Triangles</td><td class="num" id="cTris">&mdash;</td></tr>
+      <tr><td>Frame</td><td class="num" id="cFps">&mdash;</td></tr>
+    </tbody></table>
+    <div id="bar"><div id="barFill"></div></div>
+    <p class="micro" id="barNote">In-world cap &middot; 2,400 particles</p>
+  </div>
+
+  <div id="readout">
+    <p class="f" id="roNote">&mdash;</p>
+    <p class="pri" id="roPrior">&mdash;</p>
+  </div>
+
+  <p id="hint"><kbd>1</kbd>&ndash;<kbd>4</kbd> mode &middot; <kbd>&larr;</kbd><kbd>&rarr;</kbd> variant &middot; <kbd>R</kbd> roll &middot; drag to orbit &middot; click a grid cell to open it</p>
+</div>
+
+<div id="boot">
+  <p class="eyebrow">Sable Reach</p>
+  <p class="micro" id="bootMsg">compiling the elemental layer</p>
+  <p class="err" id="bootErr" hidden></p>
+</div>
+
+<script type="module">
+const bootMsg = document.getElementById('bootMsg');
+const bootErr = document.getElementById('bootErr');
+const bootEl = document.getElementById('boot');
+const boot = (m) => { bootMsg.textContent = m; };
+function fail(e) {
+  bootEl.style.display = 'flex';
+  bootMsg.textContent = 'the elemental layer did not compile';
+  bootErr.hidden = false;
+  bootErr.textContent = (e && (e.stack || e.message)) || String(e);
+}
+window.addEventListener('error', (ev) => fail(ev.error || ev.message));
+window.addEventListener('unhandledrejection', (ev) => fail(ev.reason));
+
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+
+import { MAT, setLod, applyTextures, rnd, part, ico, jitter, cnt } from './kit/hm-core.js';
+import {
+  VFX_ENV, setVfxEnv, setVfxQuality, spaceOf, axesOf, measureFx,
+  PlanarReflection, pal,
+} from './kit/hm-vfx.js';
+import { VFX_FAMILIES, VFX_GROUPS, indexOfAxes, totalSpace, DEFERRED } from './kit/hm-vfx-index.js';
+import {
+  climateState, applyClimate, solarPosition, seasonOf, SEASONS, CLIMATE_ZONES,
+} from './kit/hm-vfx-climate.js';
+import { windUniforms, waterUniforms, fireUniforms, makeFire, stepFires, flowWater } from './kit/hm-world.js';
+
+boot('waiting on the type');
+await document.fonts.ready.catch(() => {});
+
+/* ==================================================================== stage */
+const cv = document.getElementById('gl');
+// preserveDrawingBuffer costs a little bandwidth and buys the one thing a VFX
+// lab genuinely needs: the canvas can be read back at any moment, so a still
+// of an effect is a right-click away instead of a lucky frame.
+const renderer = new THREE.WebGLRenderer({ canvas: cv, antialias: true, powerPreference: 'high-performance', preserveDrawingBuffer: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.7));
+renderer.setSize(innerWidth, innerHeight);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+// 1.36 is the Living World's exposure. Authoring under a different exposure
+// than the world would make every value in the kit a lie.
+renderer.toneMappingExposure = 1.36;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#0b1113');
+scene.fog = new THREE.FogExp2(0x0e1518, 0.0072);
+
+const camera = new THREE.PerspectiveCamera(52, innerWidth / innerHeight, 0.25, 900);
+camera.position.set(7, 4.2, 9);
+const controls = new OrbitControls(camera, cv);
+controls.enableDamping = true;
+controls.dampingFactor = 0.06;
+controls.target.set(0, 1.4, 0);
+controls.maxPolarAngle = Math.PI * 0.495;
+controls.minDistance = 1.2;
+controls.maxDistance = 160;
+
+/* The region's declared lighting recipe, copied from the Living World:
+   cold_overcast key, warm_spring_bounce fill, contrast 0.62. */
+const hemi = new THREE.HemisphereLight(0x8fa5ac, 0x2b2318, 1.02);
+scene.add(hemi);
+const key = new THREE.DirectionalLight(0xc4d1d4, 2.15);
+key.position.set(48, 66, 34);
+scene.add(key);
+const fill = new THREE.DirectionalLight(0xc9793c, 0.5);
+fill.position.set(-40, 12, -30);
+scene.add(fill);
+
+try { applyTextures(true); } catch (e) { /* textures are a nicety, not a requirement */ }
+
+/* ---- post: the bloom pass is the whole reason fire can read as blinding.
+   Threshold sits above the palette's darks so only HDR-driven emissives
+   bloom — the grain and the bone type must stay crisp. */
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+// Threshold sits just above white so ONLY the genuinely over-range parts of
+// an effect bloom — the hot core, the sparks, a lightning channel. At a lower
+// threshold the whole flame body blooms and the fire becomes a white ball
+// with no silhouette, which is the opposite of breathtaking.
+const bloom = new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), 0.52, 0.5, 0.98);
+composer.addPass(bloom);
+composer.addPass(new OutputPass());
+// The composer runs several passes per frame and info.render is reset on each
+// one, so the census would otherwise report the final fullscreen quad: one
+// draw call, one triangle. Accumulate across the whole frame instead.
+renderer.info.autoReset = false;
+
+/* ==================================================================== stage set
+   Something for the effects to be lit against. Deliberately spare: wet slate,
+   a boulder field and a broken wall. An effect judged over empty black always
+   looks better than it will in the world. */
+boot('setting the stage');
+const stage = new THREE.Group();
+stage.name = 'stage-set';
+let groundMesh = null;
+{
+  const r = rnd(0x51a9e);
+  const ground = new THREE.CircleGeometry(120, 64);
+  ground.rotateX(-Math.PI / 2);
+  const gm = MAT.wetSlate.clone();
+  gm.name = 'stage-ground';
+  // Rough, and deliberately so: at the wetness the region declares, the key
+  // light throws a specular streak across the ground that the bloom pass then
+  // turns into a blue-white smear through the middle of every effect.
+  gm.roughness = 0.88;
+  gm.metalness = 0;
+  gm.side = THREE.DoubleSide;
+  groundMesh = part(ground, gm, 'stage-ground', { pos: [0, -0.01, 0] });
+  stage.add(groundMesh);
+  for (let i = 0; i < 70; i++) {
+    const a = r() * Math.PI * 2, d = 5 + Math.pow(r(), 0.6) * 46;
+    const s = (0.1 + r() * 0.5);
+    const b = ico(s, 0);
+    b.scale(1.35, 0.6, 1.1);
+    stage.add(part(jitter(b, s * 0.3, r), r() > 0.5 ? MAT.wetSlate : MAT.slateDry, 'boulder-' + i, {
+      pos: [Math.cos(a) * d, s * 0.28, Math.sin(a) * d], rot: [0, r() * 3, 0],
+    }));
+  }
+  // A broken wall, to give the light something vertical to fall on.
+  for (let i = 0; i < 16; i++) {
+    const h = 1.5 - i * 0.06 + Math.sin(i * 1.7) * 0.3;
+    const blk = new THREE.BoxGeometry(1.1, Math.max(0.3, h), 0.7);
+    stage.add(part(jitter(blk, 0.06, r), MAT.slateDry, 'wall-' + i,
+      { pos: [-13 + i * 1.14, Math.max(0.3, h) / 2, -11 + Math.sin(i * 0.6) * 0.4], rot: [0, Math.sin(i) * 0.06, 0] }));
+  }
+}
+scene.add(stage);
+
+/* ==================================================================== state */
+const S = {
+  fam: 0, variant: 0, mode: 'hero', axis: null,
+  wx: 'clear', wind: 1, gust: 0.55, inten: 1, bloom: 0.52,
+  fly: false, stage: true, params: {},
+  // Climate: four inputs, and everything about the light derives from them.
+  day: 172, hour: 13, lat: 58, biome: 'ash',
+  runDay: false, runYear: false,
+};
+const HERO_SCALE = {
+  'hm.vfx.torchlight': 2.2, 'hm.vfx.bonfire': 1.3, 'hm.vfx.forge': 1.4,
+  'hm.vfx.marshlight': 1.3, 'hm.vfx.aether': 1.6, 'hm.vfx.steamvent': 1.7,
+  'hm.vfx.frostcrust': 1.5, 'hm.vfx.geyser': 1.1,
+};
+const SHARED_MATS = new Set(Object.values(MAT));
+const fam = () => VFX_FAMILIES[S.fam];
+const isVolume = (f) => f.stage === 'volume';
+
+/* ==================================================================== labels
+   Cinzel, uppercase, tracked — the system's own micro label, drawn to a
+   canvas so it can live in the scene next to what it names. */
+const labelCache = new Map();
+function labelSprite(text, size = 0.34, colour = '#b7b6ad') {
+  const cacheKey = text + '|' + colour;
+  let tex = labelCache.get(cacheKey);
+  if (!tex) {
+    const pad = 12, fs = 40, track = 5;
+    const meas = document.createElement('canvas').getContext('2d');
+    meas.font = '500 ' + fs + 'px Cinzel, Georgia, serif';
+    const chars = [...text.toUpperCase()];
+    const w = chars.reduce((n, c) => n + meas.measureText(c).width + track, 0);
+    const c2 = document.createElement('canvas');
+    c2.width = Math.ceil(w + pad * 2);
+    c2.height = fs + pad * 2;
+    const g2 = c2.getContext('2d');
+    g2.font = '500 ' + fs + 'px Cinzel, Georgia, serif';
+    g2.fillStyle = colour;
+    g2.textBaseline = 'middle';
+    let x = pad;
+    for (const ch of chars) { g2.fillText(ch, x, c2.height / 2); x += g2.measureText(ch).width + track; }
+    tex = new THREE.CanvasTexture(c2);
+    tex.colorSpace = THREE.SRGBColorSpace;
+    labelCache.set(cacheKey, tex);
+  }
+  const m = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false, opacity: 0.85 }));
+  m.material.name = 'label';
+  m.name = 'label-' + text;
+  const ar = tex.image.width / tex.image.height;
+  m.scale.set(size * ar, size, 1);
+  return m;
+}
+
+/* ==================================================================== priors
+   "Before" is the real prior implementation, not a strawman: the actual
+   makeFire(), flowWater() and 900-point CPU rain the world runs today. */
+function priorBonfire() {
+  const f = makeFire(1.5, 3);
+  const o = { ...f, phase: 2.1, baseIntensity: f.light.intensity };
+  return { group: f.group, step: (t) => stepFires([o], t), particles: f.particles, lights: 1 };
+}
+function priorChannel() {
+  const g = new THREE.Group();
+  g.name = 'prior-channel';
+  const m = flowWater('#1b3a36', [1, 0], 0.035, 0.1);
+  const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 14, 40, 8), m);
+  mesh.rotation.x = -Math.PI / 2;
+  mesh.position.y = 0.05;
+  mesh.name = 'prior-water';
+  g.add(mesh);
+  return { group: g, step: () => {}, particles: 0, lights: 0 };
+}
+function priorRain() {
+  // The world's rain, reproduced exactly: 900 CPU-stepped points, one flat
+  // colour, no streak, no impact, no wind coupling.
+  const N = 900, r = rnd(0x7e44a1);
+  const pos = new Float32Array(N * 3), spd = new Float32Array(N);
+  for (let i = 0; i < N; i++) {
+    pos[i * 3] = (r() - 0.5) * 30;
+    pos[i * 3 + 1] = r() * 22;
+    pos[i * 3 + 2] = (r() - 0.5) * 30;
+    spd[i] = 16 + r() * 16;
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const pts = new THREE.Points(geo, new THREE.PointsMaterial({
+    color: new THREE.Color('#93a9ae'), size: 0.09, transparent: true, opacity: 0.32, depthWrite: false,
+  }));
+  pts.name = 'prior-rain';
+  const g = new THREE.Group();
+  g.name = 'prior-rainfall';
+  g.add(pts);
+  return {
+    group: g, particles: N, lights: 0,
+    step: () => {
+      const a = geo.attributes.position;
+      for (let i = 0; i < N; i++) {
+        a.array[i * 3 + 1] -= spd[i] * 0.016;
+        a.array[i * 3] += 1.1 * 0.016 * spd[i] * 0.12;
+        if (a.array[i * 3 + 1] < -1) { a.array[i * 3 + 1] = 22; a.array[i * 3] = (r() - 0.5) * 30; }
+      }
+      a.needsUpdate = true;
+    },
+  };
+}
+const PRIORS = {
+  'hm.vfx.bonfire': priorBonfire,
+  'hm.vfx.channel': priorChannel,
+  'hm.vfx.rainfall': priorRain,
+};
+
+/* ==================================================================== build */
+const root = new THREE.Group();
+root.name = 'vfx-root';
+scene.add(root);
+let live = [];        // built family instances
+let priorStep = null;
+let pickers = [];
+let refl = null;
+let reflMat = null, reflY = 0;
+
+function disposeTree(node) {
+  node.traverse((o) => {
+    if (o.geometry) o.geometry.dispose();
+    const mats = o.material ? (Array.isArray(o.material) ? o.material : [o.material]) : [];
+    for (const m of mats) if (m && !SHARED_MATS.has(m)) m.dispose();
+  });
+}
+function clearRoot() {
+  disposeTree(root);
+  root.clear();
+  live = [];
+  pickers = [];
+  priorStep = null;
+  reflMat = null;
+}
+
+/** Bind the one planar reflection to a surface, if the family offered one. */
+function bindReflection(fx) {
+  if (!fx || !fx.reflect || !fx.reflect.mesh) return;
+  if (!refl) refl = new PlanarReflection(512);
+  reflMat = fx.reflect.mesh;
+  reflY = fx.reflect.mesh.getWorldPosition(new THREE.Vector3()).y;
+  const u = reflMat.material.uniforms;
+  u.uRefl.value = refl.rt.texture;
+  u.uReflMatrix.value = refl.matrix;
+  u.uHasRefl.value = 1;
+}
+
+function optsFor(f, mode) {
+  const sc = HERO_SCALE[f.id] || 1;
+  if (mode === 'grid') {
+    return isVolume(f)
+      ? { scale: sc * 0.5, extent: 3, height: 4.2, light: false }
+      : { scale: sc * 0.5, light: false, length: 5 };
+  }
+  if (mode === 'sweep') {
+    return isVolume(f)
+      ? { scale: sc * 0.8, extent: 5, height: 6.5, light: false }
+      : { scale: sc * 0.8, light: true, lightScale: 0.4, length: 8 };
+  }
+  return isVolume(f)
+    ? { scale: sc, extent: 22, height: 16, light: true }
+    : { scale: sc, light: true, reflect: true, length: 14 };
+}
+
+function addPicker(variant, x, z, size) {
+  const m = new THREE.Mesh(
+    new THREE.BoxGeometry(size, size * 1.4, size),
+    new THREE.MeshBasicMaterial({ visible: false }));
+  m.name = 'picker-' + variant;
+  m.position.set(x, size * 0.6, z);
+  m.userData.variant = variant;
+  root.add(m);
+  pickers.push(m);
+}
+
+function rebuild() {
+  clearRoot();
+  const f = fam();
+  const space = spaceOf(f.axes);
+  S.variant = ((S.variant % space) + space) % space;
+
+  if (S.mode === 'grid') {
+    setLod(2);
+    setVfxQuality(isVolume(f) ? 0.05 : 0.16);
+    const N = 64, cols = 8;
+    // Sample the WHOLE declared space rather than 64 neighbours: consecutive
+    // variants differ only in the first axis, which would show repetition
+    // instead of range.
+    const stride = Math.max(1, Math.round(space / N));
+    const gap = isVolume(f) ? 8 : f.stage === 'cliff' ? 9.5 : 5;
+    for (let i = 0; i < N; i++) {
+      const v = (S.variant + i * stride) % space;
+      const x = ((i % cols) - (cols - 1) / 2) * gap;
+      const z = (Math.floor(i / cols) - (cols - 1) / 2) * gap;
+      const fx = f.build(v, optsFor(f, 'grid'));
+      fx.group.position.set(x, 0, z);
+      fx.variant = v;
+      root.add(fx.group);
+      live.push(fx);
+      addPicker(v, x, z, gap * 0.55);
+      const lb = labelSprite(String(v), gap * 0.06, '#8e928b');
+      lb.position.set(x, 0.12, z + gap * 0.42);
+      root.add(lb);
+    }
+    S.gridStride = stride;
+  } else if (S.mode === 'sweep') {
+    setLod(1);
+    setVfxQuality(0.55);
+    const axis = S.axis && f.axes[S.axis] ? S.axis : Object.keys(f.axes)[0];
+    S.axis = axis;
+    const n = f.axes[axis];
+    const base = axesOf(S.variant, f.axes);
+    const gap = isVolume(f) ? 12 : f.stage === 'cliff' ? 15 : 7;
+    for (let i = 0; i < n; i++) {
+      const vals = { ...base, [axis]: i };
+      const v = indexOfAxes(vals, f.axes);
+      const x = (i - (n - 1) / 2) * gap;
+      const fx = f.build(v, optsFor(f, 'sweep'));
+      fx.group.position.set(x, 0, 0);
+      fx.variant = v;
+      root.add(fx.group);
+      live.push(fx);
+      addPicker(v, x, 0, gap * 0.5);
+      const val = fx.declared[axis];
+      const lb = labelSprite(axis + ' · ' + (val != null ? val : i), gap * 0.055, i === base[axis] ? '#e4c77e' : '#8e928b');
+      lb.position.set(x, 0.14, gap * 0.42);
+      root.add(lb);
+    }
+  } else if (S.mode === 'compare') {
+    setLod(0);
+    setVfxQuality(1);
+    const mk = PRIORS[f.id];
+    const gap = isVolume(f) ? 26 : 7;
+    const fx = f.build(S.variant, optsFor(f, 'hero'));
+    fx.group.position.set(gap / 2, 0, 0);
+    fx.variant = S.variant;
+    root.add(fx.group);
+    live.push(fx);
+    bindReflection(fx);
+    const lbNew = labelSprite('after · this kit', gap * 0.05, '#e4c77e');
+    lbNew.position.set(gap / 2, 0.18, gap * 0.38);
+    root.add(lbNew);
+    if (mk) {
+      const p = mk();
+      p.group.position.set(-gap / 2, 0, 0);
+      root.add(p.group);
+      priorStep = p.step;
+      live.push({ group: p.group, declared: {}, update: () => {}, set: () => {}, particles: p.particles, lights: p.lights, draws: 0, tris: 0, isPrior: true });
+      const lbOld = labelSprite('before · in the world today', gap * 0.05, '#8e928b');
+      lbOld.position.set(-gap / 2, 0.18, gap * 0.38);
+      root.add(lbOld);
+    }
+  } else {
+    setLod(0);
+    setVfxQuality(1);
+    const fx = f.build(S.variant, optsFor(f, 'hero'));
+    fx.variant = S.variant;
+    root.add(fx.group);
+    live.push(fx);
+    bindReflection(fx);
+  }
+
+  applyParams();
+  frameCamera();
+  syncUi();
+}
+
+/** Frame whatever was built. Volume families get a standing shot instead,
+ *  because the bounding box of a weather volume is the whole sky.
+ *  Light pools, ripple sheets and particle clouds are EXCLUDED from the box:
+ *  they are several times the size of the thing they belong to, and framing
+ *  on them pushes the effect itself into the middle distance. */
+function tightBox() {
+  // Box3.expandByObject refreshes only the object's OWN matrix, not its
+  // parents' — and root was populated microseconds ago, so without this every
+  // instance measures as if it sat at the origin. The box then spans one cell
+  // instead of the whole grid and the camera lands inside the first effect.
+  root.updateMatrixWorld(true);
+  const box = new THREE.Box3();
+  for (const l of live) {
+    if (l.isPrior && S.mode !== 'compare') continue;
+    l.group.traverse((o) => {
+      if (!o.isMesh || !o.visible) return;
+      if (/light-pool|ripple|storm-sheet|picker|label|halo/.test(o.name)) return;
+      box.expandByObject(o);
+    });
+  }
+  return box;
+}
+function frameCamera() {
+  const f = fam();
+  if (isVolume(f) && S.mode === 'hero') {
+    camera.position.set(0, 2.6, 15);
+    controls.target.set(0, 2.2, 0);
+    controls.update();
+    return;
+  }
+  let box = tightBox();
+  if (box.isEmpty()) {
+    for (const l of live) box.expandByObject(l.group);
+  }
+  if (box.isEmpty()) return;
+  const size = box.getSize(new THREE.Vector3());
+  const c = box.getCenter(new THREE.Vector3());
+  const span = Math.max(size.x, size.y, size.z, 0.6);
+  const d = span * (S.mode === 'grid' ? 0.95 : 1.5);
+  camera.position.set(c.x + d * 0.6, c.y + Math.max(span * 0.36, 0.7), c.z + d * 0.8);
+  controls.target.copy(c);
+  controls.update();
+}
+
+function applyParams() {
+  const f = fam();
+  for (const p of f.params || []) {
+    const v = S.params[p.key] != null ? S.params[p.key] : p.value;
+    for (const l of live) if (!l.isPrior) { try { l.set(p.key, v); } catch (e) {} }
+  }
+}
+
+/* ================================================================== weather
+   Ambient weather is separate from the family under inspection, so an effect
+   can be judged in the conditions it will actually ship in. */
+const wxRoot = new THREE.Group();
+wxRoot.name = 'ambient-weather';
+scene.add(wxRoot);
+let wxLive = [];
+const WX = {
+  clear: [],
+  rain: [['hm.vfx.rainfall', 4 + 1 * 4 + 1 * 16 + 1 * 48]],
+  storm: [['hm.vfx.rainfall', 2 + 2 * 4 + 2 * 16 + 2 * 48 + 1 * 144 + 2 * 288], ['hm.vfx.stormflash', 2 + 1 * 4 + 2 * 12 + 2 * 48 + 1 * 144 + 1 * 432]],
+  snow: [['hm.vfx.snowfall', 2 + 1 * 4 + 2 * 12 + 1 * 48 + 1 * 144 + 1 * 288]],
+  blizzard: [['hm.vfx.blizzard', null]],
+  sand: [['hm.vfx.sandstorm', null]],
+  glare: [['hm.vfx.sunglare', null]],
+};
+function setWeather(kind) {
+  S.wx = kind;
+  disposeTree(wxRoot);
+  wxRoot.clear();
+  wxLive = [];
+  for (const [id, variant] of (WX[kind] || [])) {
+    const f = VFX_FAMILIES.find((x) => x.id === id);
+    if (!f) continue;
+    // A null variant means "the family's own hero", which is the right ambient
+    // choice: these three are set-pieces and their hero is the tuned one.
+    const v = variant == null ? heroVariant(f) : variant % spaceOf(f.axes);
+    const fx = f.build(v, { extent: 30, height: 20, light: id === 'hm.vfx.stormflash' });
+    wxRoot.add(fx.group);
+    wxLive.push(fx);
+  }
+  setClimate();
+}
+
+/* ================================================================ daylight
+   Replaced by the real solar model. `setClimate` recomputes the whole lighting
+   state from day-of-year, hour, latitude and biome, so a winter noon has a
+   winter sun ANGLE and not merely a colder colour — which is the difference
+   between four seasons and four filters. */
+let climate = null;
+function setClimate() {
+  const overcast = S.wx === 'storm' ? 0.75 : S.wx === 'rain' ? 0.5
+    : S.wx === 'blizzard' ? 0.85 : S.wx === 'sand' ? 0.7 : S.wx === 'snow' ? 0.45 : 0;
+  // A blizzard or a sandstorm sets its own visibility, measured off the
+  // Koschmieder relation inside the family, so the fog you see and the metres
+  // the readout claims are the same number rather than two guesses.
+  let fogScale = 1;
+  for (const l of wxLive) if (l.group.userData.fogDensity) fogScale = Math.max(fogScale, l.group.userData.fogDensity / 0.0072);
+  climate = climateState({ day: S.day, hour: S.hour, latitude: S.lat, biome: S.biome, overcast, fogScale });
+  applyClimate(climate, { key, hemi, fill, scene, renderer });
+  const sol = climate.sun;
+  const rows = [
+    ['season', climate.season.name + ' · day ' + climate.season.day],
+    ['sun altitude', sol.altitude.toFixed(1) + '°'],
+    ['sun azimuth', ((sol.azimuth + 360) % 360).toFixed(0) + '°'],
+    ['daylight', climate.dayHours < 0.05 ? 'polar night' : climate.dayHours > 23.9 ? 'midnight sun' : climate.dayHours.toFixed(1) + ' h'],
+    ['shadow length', sol.altitude <= 1 ? '—' : climate.shadowLength.toFixed(1) + '× height'],
+    ['air mass', sol.altitude > 0 ? sol.airMass.toFixed(2) : 'below horizon'],
+    ['air temp', climate.temperature.toFixed(1) + ' °C'],
+    ['canopy', climate.canopy + (climate.shortening ? ' · year shortening' : ' · year lengthening')],
+    ['water', climate.freeze > 0.98 ? 'locked' : climate.freeze > 0.02 ? Math.round(climate.freeze * 100) + '% iced' : 'open'],
+    ['ground heat', climate.heat.toFixed(2)],
+    ['zone', climate.biomeLabel + (climate.grounded ? '' : ' · not a declared region')],
+    ['region id', climate.region || '—'],
+  ];
+  const tb = el('solBody');
+  tb.innerHTML = '';
+  for (const [k, v] of rows) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<td></td><td></td>';
+    tr.children[0].textContent = k;
+    tr.children[1].textContent = v;
+    tb.appendChild(tr);
+  }
+  el('doyV').textContent = climate.season.name;
+  const h = Math.floor(S.hour), m = Math.round((S.hour - h) * 60);
+  el('hourV').textContent = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0');
+  el('latV').textContent = S.lat + '°N';
+}
+
+/* ====================================================================== ui */
+const el = (id) => document.getElementById(id);
+const famSel = el('famSel'), axisSel = el('axisSel'), varNum = el('varNum');
+const axesBody = el('axesBody'), paramsBox = el('params');
+
+for (const grp of VFX_GROUPS) {
+  const og = document.createElement('optgroup');
+  og.label = grp.label;
+  VFX_FAMILIES.forEach((f, i) => {
+    if (f.group !== grp.id) return;
+    const o = document.createElement('option');
+    o.value = String(i);
+    o.textContent = f.name + '  ·  ' + spaceOf(f.axes).toLocaleString();
+    og.appendChild(o);
+  });
+  famSel.appendChild(og);
+}
+famSel.value = '0';
+
+function buildParamUi() {
+  const f = fam();
+  paramsBox.innerHTML = '';
+  for (const p of f.params || []) {
+    const cur = S.params[p.key] != null ? S.params[p.key] : p.value;
+    const row = document.createElement('div');
+    row.className = 'row';
+    row.innerHTML = '<label><span class="micro"></span><span class="v"></span></label>';
+    row.querySelector('.micro').textContent = p.label;
+    row.querySelector('.v').textContent = Number(cur).toFixed(2);
+    const inp = document.createElement('input');
+    inp.type = 'range';
+    inp.min = p.min; inp.max = p.max; inp.step = p.step; inp.value = cur;
+    inp.addEventListener('input', () => {
+      const v = parseFloat(inp.value);
+      S.params[p.key] = v;
+      row.querySelector('.v').textContent = v.toFixed(2);
+      for (const l of live) if (!l.isPrior) { try { l.set(p.key, v); } catch (e) {} }
+    });
+    row.appendChild(inp);
+    paramsBox.appendChild(row);
+  }
+  if (!(f.params || []).length) {
+    paramsBox.innerHTML = '<p class="micro" style="color:var(--muted)">No live parameters on this family.</p>';
+  }
+}
+
+function buildAxisUi() {
+  const f = fam();
+  axisSel.innerHTML = '';
+  for (const k of Object.keys(f.axes)) {
+    const o = document.createElement('option');
+    o.value = k;
+    o.textContent = k + '  ·  ' + f.axes[k] + ' values';
+    axisSel.appendChild(o);
+  }
+  if (S.axis && f.axes[S.axis]) axisSel.value = S.axis;
+  else S.axis = Object.keys(f.axes)[0];
+}
+
+function syncUi() {
+  const f = fam();
+  const space = spaceOf(f.axes);
+  varNum.max = String(space - 1);
+  varNum.value = String(S.variant);
+  el('varOf').textContent = 'of ' + space.toLocaleString();
+  el('cSpace').textContent = space.toLocaleString();
+  el('cTotal').textContent = totalSpace().toLocaleString() + ' · ' + VFX_FAMILIES.length + ' families';
+  el('sweepRow').style.display = S.mode === 'sweep' ? 'block' : 'none';
+
+  // Axis readout for the hero variant.
+  const A = axesOf(S.variant, f.axes);
+  const hero = live.find((l) => !l.isPrior);
+  const dec = hero ? hero.declared : {};
+  axesBody.innerHTML = '';
+  for (const k of Object.keys(f.axes)) {
+    const tr = document.createElement('tr');
+    const v = dec[k] != null ? dec[k] : A[k];
+    tr.innerHTML = '<td></td><td></td>';
+    tr.children[0].textContent = k;
+    tr.children[1].textContent = String(v);
+    axesBody.appendChild(tr);
+  }
+  // Anything the family declares beyond its axis names — measured extras.
+  for (const k of Object.keys(dec)) {
+    if (f.axes[k] != null) continue;
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<td></td><td></td>';
+    tr.children[0].textContent = k;
+    tr.children[1].textContent = String(dec[k]);
+    axesBody.appendChild(tr);
+  }
+
+  el('roNote').textContent = f.note;
+  const pri = f.prior;
+  const hasPrior = !!PRIORS[f.id];
+  el('roPrior').innerHTML = pri
+    ? '<b>Prior:</b> ' + pri + (hasPrior ? ' — runnable side by side in Before.' : ' — not runnable standalone, so Before shows this kit only.')
+    : '<b>No prior implementation.</b> This is new vocabulary; Before shows this kit alone.';
+}
+
+el('modeSeg').addEventListener('click', (e) => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  S.mode = b.dataset.mode;
+  [...el('modeSeg').children].forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  rebuild();
+});
+el('wxSeg').addEventListener('click', (e) => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  [...el('wxSeg').children, ...el('wxSeg2').children].forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  setWeather(b.dataset.wx);
+});
+el('wxSeg2').addEventListener('click', (e) => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  [...el('wxSeg').children, ...el('wxSeg2').children].forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  setWeather(b.dataset.wx);
+});
+/* Climate zones come from the module rather than being listed in the markup,
+   so adding a zone to the kit shows up here with no edit — and the grounded
+   ones are separated from the proposed one, because a zone that maps to a real
+   declared region is a different kind of claim from one that does not. */
+const zoneSel = el('zoneSel');
+{
+  const mk = (label) => { const g = document.createElement('optgroup'); g.label = label; return g; };
+  const gr = mk('Declared regions'), pr = mk('Proposed');
+  for (const k of Object.keys(CLIMATE_ZONES)) {
+    const z = CLIMATE_ZONES[k];
+    const o = document.createElement('option');
+    o.value = k;
+    o.textContent = z.label;
+    (z.grounded === false ? pr : gr).appendChild(o);
+  }
+  zoneSel.appendChild(gr);
+  if (pr.children.length) zoneSel.appendChild(pr);
+  zoneSel.value = S.biome;
+}
+zoneSel.addEventListener('change', () => {
+  S.biome = zoneSel.value;
+  const z = CLIMATE_ZONES[S.biome];
+  // The stage follows the zone: a forge floor is not wet slate, and an effect
+  // judged over the wrong ground is judged wrong.
+  if (groundMesh) {
+    groundMesh.material.color.set(
+      S.biome === 'desert' ? '#8a7448' : S.biome === 'rime' ? '#8fa0a6'
+        : S.biome === 'forge' ? '#3a2b23' : S.biome === 'verdant' ? '#3d4636' : '#3b4446');
+    groundMesh.material.roughness = z.wetness > 0.7 ? 0.86 : 0.96;
+  }
+  setClimate();
+});
+el('camSeg').addEventListener('click', (e) => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  if (b.dataset.cam === 'fly') { S.fly = !S.fly; b.setAttribute('aria-pressed', String(S.fly)); }
+  else { S.stage = !S.stage; stage.visible = S.stage; b.setAttribute('aria-pressed', String(S.stage)); }
+});
+/** The variant a family is introduced with. Index 0 is every axis at its
+ *  lowest setting, which for most families is the dullest thing they can
+ *  build — a banked hearth, a dry channel, thin snow. */
+const heroVariant = (f) => (f.hero ? indexOfAxes(f.hero, f.axes) : 0);
+
+famSel.addEventListener('change', () => {
+  S.fam = parseInt(famSel.value, 10);
+  S.variant = heroVariant(fam());
+  S.axis = null;
+  S.params = {};
+  buildAxisUi();
+  buildParamUi();
+  rebuild();
+});
+axisSel.addEventListener('change', () => { S.axis = axisSel.value; rebuild(); });
+varNum.addEventListener('change', () => {
+  const v = parseInt(varNum.value, 10);
+  if (Number.isFinite(v)) { S.variant = v; rebuild(); }
+});
+const step = (d) => { S.variant += d; rebuild(); };
+el('btnPrev').addEventListener('click', () => step(-1));
+el('btnNext').addEventListener('click', () => step(1));
+el('btnRoll').addEventListener('click', () => {
+  S.variant = Math.floor(Math.random() * spaceOf(fam().axes));
+  rebuild();
+});
+
+const bindRange = (id, vid, fn, dp = 2) => {
+  const i = el(id);
+  i.addEventListener('input', () => {
+    const v = parseFloat(i.value);
+    el(vid).textContent = v.toFixed(dp);
+    fn(v);
+  });
+};
+bindRange('wind', 'windV', (v) => { S.wind = v; VFX_ENV.uWind.value = v; windUniforms.uWind.value = v; });
+bindRange('gust', 'gustV', (v) => { S.gust = v; VFX_ENV.uGust.value = v; windUniforms.uGust.value = v; });
+bindRange('inten', 'intenV', (v) => { S.inten = v; VFX_ENV.uIntensity.value = v; });
+bindRange('bloomAmt', 'bloomV', (v) => { S.bloom = v; bloom.strength = v; bloom.enabled = v > 0.001; });
+
+for (const [id, key] of [['doy', 'day'], ['hour', 'hour'], ['lat', 'lat']]) {
+  el(id).addEventListener('input', () => {
+    S[key] = parseFloat(el(id).value);
+    S.runDay = S.runYear = false;
+    el('btnRun').setAttribute('aria-pressed', 'false');
+    setClimate();
+  });
+}
+el('btnRun').addEventListener('click', () => { S.runDay = !S.runDay; S.runYear = false; });
+el('btnYear').addEventListener('click', () => { S.runYear = !S.runYear; S.runDay = false; });
+
+/* Click a grid or sweep cell to open that exact variant. This is the
+   jump-to-variant path that matters: you pick with your eye, not by index. */
+const ray = new THREE.Raycaster();
+cv.addEventListener('pointerdown', (e) => {
+  if (!pickers.length || e.button !== 0) return;
+  const r = cv.getBoundingClientRect();
+  ray.setFromCamera(new THREE.Vector2(
+    ((e.clientX - r.left) / r.width) * 2 - 1,
+    -((e.clientY - r.top) / r.height) * 2 + 1), camera);
+  const hit = ray.intersectObjects(pickers, false)[0];
+  if (!hit) return;
+  S.variant = hit.object.userData.variant;
+  S.mode = 'hero';
+  [...el('modeSeg').children].forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.mode === 'hero')));
+  rebuild();
+});
+
+addEventListener('keydown', (e) => {
+  if (e.target.matches('input, select')) return;
+  const modes = ['hero', 'grid', 'sweep', 'compare'];
+  if (e.key >= '1' && e.key <= '4') {
+    S.mode = modes[+e.key - 1];
+    [...el('modeSeg').children].forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.mode === S.mode)));
+    rebuild();
+  } else if (e.key === 'ArrowLeft') { step(-1); }
+  else if (e.key === 'ArrowRight') { step(1); }
+  else if (e.key === 'r' || e.key === 'R') { el('btnRoll').click(); }
+});
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+  composer.setSize(innerWidth, innerHeight);
+  bloom.resolution.set(innerWidth, innerHeight);
+});
+
+/* ==================================================================== census */
+const cParts = el('cParts'), cLights = el('cLights'), cCalls = el('cCalls');
+const cTris = el('cTris'), cFps = el('cFps'), cInst = el('cInst'), barFill = el('barFill'), barNote = el('barNote');
+let frames = 0, fpsT = 0, fps = 0, censusT = 0;
+
+function census() {
+  let particles = 0, lights = 0;
+  for (const l of live) { particles += l.particles || 0; lights += l.lights || 0; }
+  for (const l of wxLive) { particles += l.particles || 0; lights += l.lights || 0; }
+  cInst.textContent = String(live.filter((l) => !l.isPrior).length + wxLive.length);
+  cParts.textContent = particles.toLocaleString();
+  cLights.textContent = String(lights + 3);
+  cParts.className = 'num ' + (particles <= 2400 ? 'ok' : 'warn');
+  cLights.className = 'num ' + (lights + 3 <= 18 ? 'ok' : 'warn');
+  cCalls.textContent = renderer.info.render.calls.toLocaleString();
+  cTris.textContent = renderer.info.render.triangles.toLocaleString();
+  cFps.textContent = fps ? fps + ' fps' : '—';
+  barFill.style.width = Math.min(100, (particles / 2400) * 100) + '%';
+  barNote.textContent = particles <= 2400
+    ? 'In-world cap · 2,400 particles'
+    : 'Lab is uncapped · ' + (particles / 2400).toFixed(1) + '× the in-world ceiling';
+  barNote.style.color = particles <= 2400 ? 'var(--muted)' : 'var(--ember)';
+}
+
+/* ==================================================================== frame */
+let lastT = performance.now();
+const ctx = { camera };
+let t = 0;
+
+function frame(dt) {
+  t += dt;
+  renderer.info.reset();
+  VFX_ENV.uTime.value = t;
+  windUniforms.uTime.value = t;
+  waterUniforms.uTime.value = t;
+  fireUniforms.uTime.value = t;
+
+  // Dynamic days and dynamic years, on the same model. A full day runs in
+  // 48 s and a full year in 90 s — fast enough to watch the sun's arc flatten
+  // between midsummer and midwinter, which is the thing worth seeing.
+  if (S.runDay) {
+    S.hour = (S.hour + dt * 0.5) % 24;
+    el('hour').value = String(S.hour);
+    setClimate();
+  } else if (S.runYear) {
+    S.day = ((S.day + dt * 4) % 365) || 1;
+    el('doy').value = String(Math.round(S.day));
+    setClimate();
+  }
+
+  if (S.fly) {
+    // A slow crawl around the subject: the only honest way to judge an
+    // effect is moving, because half of these read differently off-axis.
+    const a = t * 0.08;
+    const d = camera.position.distanceTo(controls.target);
+    camera.position.x = controls.target.x + Math.cos(a) * d;
+    camera.position.z = controls.target.z + Math.sin(a) * d;
+  }
+  controls.update();
+
+  for (const l of live) if (l.update) l.update(t, S.mode === 'hero' || S.mode === 'compare' ? ctx : null);
+  for (const l of wxLive) if (l.update) l.update(t, ctx);
+  if (priorStep) priorStep(t);
+
+  // The ground is HIDDEN from the reflection, and that is the whole trick.
+  // It sits below the water plane, so it has no business appearing in a
+  // reflection of what is above the water — left in, the mirrored camera
+  // fills its view with lit grey ground and the pool reads as sheet metal.
+  // Excluding it here is exact and free; the alternative (a global clipping
+  // plane for one pass) recompiles every material twice a frame.
+  if (reflMat && refl) refl.update(renderer, scene, camera, reflY, [reflMat, groundMesh].filter(Boolean));
+  composer.render();
+}
+
+function tick() {
+  const now = performance.now();
+  const dt = Math.min((now - lastT) / 1000, 0.1);
+  lastT = now;
+  frame(dt);
+  frames++;
+  fpsT += dt;
+  if (fpsT >= 0.5) { fps = Math.round(frames / fpsT); frames = 0; fpsT = 0; }
+  censusT += dt;
+  if (censusT >= 0.25) { census(); censusT = 0; }
+  requestAnimationFrame(tick);
+}
+
+boot('building the first effect');
+S.variant = heroVariant(fam());
+// Dev handle. A lab you cannot interrogate from the console is a lab you
+// cannot debug: framing, uniforms and variant state are all reachable here.
+// `settle` advances and renders N frames by hand, which is the only way to
+// inspect a time-driven effect when the frame is not being painted.
+window.__vfx = {
+  THREE, scene, camera, controls, root, stage, S, VFX_ENV, live: () => live,
+  rebuild, bloom, composer, renderer, setClimate, climate: () => climate,
+  solarPosition, climateState,
+  settle: (seconds = 2, steps = 24) => { for (let i = 0; i < steps; i++) frame(seconds / steps); census(); return t; },
+};
+buildAxisUi();
+buildParamUi();
+setWeather('clear');
+VFX_ENV.uWind.value = S.wind;
+VFX_ENV.uGust.value = S.gust;
+rebuild();
+bootEl.style.display = 'none';
+tick();
+
+// Named rather than quietly missing.
+if (DEFERRED.length) console.info('Deferred this pass: ' + DEFERRED.map((d) => d.name + ' — ' + d.reason).join(' | '));
+
+/* Self-check: every axis a family declares must come back NAMED in its
+   `declared` object. When a key drifts (declared.branches vs axes.branch) the
+   axis readout silently falls back to the raw integer and the sweep labels its
+   instances by index — both of which look like data rather than like a bug.
+   Cheap to check on every family at boot, so it cannot quietly return. */
+{
+  const drift = [];
+  for (const f of VFX_FAMILIES) {
+    let probe;
+    try { probe = f.build(heroVariant(f), { light: false, scale: 0.3 }); } catch (e) { drift.push(f.id + ': build threw — ' + e.message); continue; }
+    const missing = Object.keys(f.axes).filter((k) => probe.declared[k] === undefined);
+    if (missing.length) drift.push(f.id + ': declared is missing ' + missing.join(', '));
+    disposeTree(probe.group);
+  }
+  if (drift.length) console.warn('VFX axis/declared drift:\n' + drift.join('\n'));
+  window.__vfx.audit = drift;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+{
+  "schema": "PlayableOriginBatchProvenanceV1",
+  "batchId": "playable-origins-batch-02",
+  "generatedOn": "2026-08-25",
+  "acceptanceScope": {
+    "playableOriginMasters": 8,
+    "playableOriginCutouts": 8,
+    "batchAddedMasters": 4,
+    "batchAddedCutouts": 5,
+    "rosterComplete": true,
+    "runtimeIntegrated": false,
+    "productionAssets": false
+  },
+  "promptSource": "assets/characters/playable-origins-batch-02.md",
+  "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
+  "records": [
+    {
+      "id": "playable_origin.grave_tithe_runner.master",
+      "originId": "grave-tithe-runner",
+      "role": "concept_master",
+      "path": "assets/characters/grave-tithe-runner-v2.png",
+      "sha256": "ecc1837de969b8d707a3e903d2a0667da84b09413268b2d536515c1a31f5d908",
+      "bytes": 1771075,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/playable-origins-batch-02.md",
+        "section": "Grave-Tithe Runner",
+        "sha256": "f205515b3f00a580435c3d6806df3430589f8dad693b31eb178b688d3d82ea2c"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-6f8350bb-2109-442d-8602-0b28e800653f.png",
+        "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" }
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "playable_origin.cinder_mason.master",
+      "originId": "cinder-mason",
+      "role": "concept_master",
+      "path": "assets/characters/cinder-mason-v2.png",
+      "sha256": "45219933773e32fb7c4594f727e3ca8859cf0a4dc868f432d51e14138d707209",
+      "bytes": 2072867,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/playable-origins-batch-02.md",
+        "section": "Cinder Mason",
+        "sha256": "8acf17a332950f65c4b1e3081674a41c55b594e6db3479cbaeed86dcc1080660"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-b61f23e8-51b3-4c41-a4ed-7ea71f00ef0f.png",
+        "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" }
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "playable_origin.starved_seer.master",
+      "originId": "starved-seer",
+      "role": "concept_master",
+      "path": "assets/characters/starved-seer-v2.png",
+      "sha256": "5cfd65de5bf2a6a24eb43a71489865b530e7caa81926da3cb90c6eaeefcd1b49",
+      "bytes": 2046617,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/playable-origins-batch-02.md",
+        "section": "Starved Seer",
+        "sha256": "5de650010052001056f68ecd92a9f25e110846e243c9700623f8e98f5825c2ff"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-e7ad5afb-73b7-4279-a032-8a242c63e7b5.png",
+        "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" }
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "playable_origin.thorn_poacher.master",
+      "originId": "thorn-poacher",
+      "role": "concept_master",
+      "path": "assets/characters/thorn-poacher-v2.png",
+      "sha256": "a1959b070438c6bd4c4c92ce7ccadcdc9e4443cb5ed8d316f1685f4027bea0b8",
+      "bytes": 2230765,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/playable-origins-batch-02.md",
+        "section": "Thorn Poacher",
+        "sha256": "62331a555b96ee5e0cc07fe1d94f0e9b564a83d6787b8257bfa0a0d3d7f81b42"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-f5649349-4f00-491d-a426-999c30cffc96.png",
+        "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" }
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_adversarially_approved",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "playable_origin.gloamfarer.cutout",
+      "originId": "gloamfarer",
+      "role": "runtime_cutout",
+      "path": "assets/characters/gloamfarer-v2-cutout.png",
+      "sha256": "639d4f05662a8f1d328b2438cc0d31ab0464aaaff4aebfce4d2f702ab9d5928f",
+      "bytes": 1954408,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent_cutout",
+      "prompt": {
+        "file": "assets/characters/playable-origins-batch-02.md",
+        "section": "Cutout extraction",
+        "sha256": "2a738d2e6263cde54348edac201ebcbe25eb681f292d1ca9d0c9ffaf5621500d"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-18f83546-1e4c-4d67-932b-eb97f753cf9e.png",
+        "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" }
+      },
+      "sourceReferences": ["assets/characters/gloamfarer-v2.png"],
+      "postProcess": {
+        "tool": "scripts/repair_checker_alpha.py",
+        "reason": "image generator returned an opaque checkerboard backdrop",
+        "alphaValidation": { "transparentPixels": 962915, "opaquePixels": 609949, "cornerAlpha": [0, 0, 0, 0] }
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": true,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "playable_origin.grave_tithe_runner.cutout",
+      "originId": "grave-tithe-runner",
+      "role": "runtime_cutout",
+      "path": "assets/characters/grave-tithe-runner-v2-cutout.png",
+      "sha256": "6a308f2353a0071a628fcd6b89563dbfbfe0063cafb87a7da7c7b61be6c3e81e",
+      "bytes": 1601398,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent_cutout",
+      "prompt": {
+        "file": "assets/characters/playable-origins-batch-02.md",
+        "section": "Cutout extraction",
+        "sha256": "2a738d2e6263cde54348edac201ebcbe25eb681f292d1ca9d0c9ffaf5621500d"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-5a9b1d09-6237-42af-b124-18ef8a22768c.png",
+        "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" }
+      },
+      "sourceReferences": ["assets/characters/grave-tithe-runner-v2.png"],
+      "postProcess": {
+        "tool": "scripts/repair_checker_alpha.py",
+        "reason": "image generator returned an opaque checkerboard backdrop",
+        "alphaValidation": { "transparentPixels": 1129344, "opaquePixels": 443520, "cornerAlpha": [0, 0, 0, 0] }
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": true,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "playable_origin.cinder_mason.cutout",
+      "originId": "cinder-mason",
+      "role": "runtime_cutout",
+      "path": "assets/characters/cinder-mason-v2-cutout.png",
+      "sha256": "863489ae96676a9680991ee5094c21374766d8583572ecf8fc5eec9a5aaa46bb",
+      "bytes": 1727729,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent_cutout",
+      "prompt": {
+        "file": "assets/characters/playable-origins-batch-02.md",
+        "section": "Cutout extraction",
+        "sha256": "2a738d2e6263cde54348edac201ebcbe25eb681f292d1ca9d0c9ffaf5621500d"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-2ab24caa-d2b8-46d4-b6d7-41b58d4e3a85.png",
+        "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" }
+      },
+      "sourceReferences": ["assets/characters/cinder-mason-v2.png"],
+      "postProcess": {
+        "tool": "scripts/repair_checker_alpha.py",
+        "reason": "image generator returned an opaque checkerboard backdrop",
+        "alphaValidation": { "transparentPixels": 1080767, "opaquePixels": 492097, "cornerAlpha": [0, 0, 0, 0] }
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": true,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "playable_origin.starved_seer.cutout",
+      "originId": "starved-seer",
+      "role": "runtime_cutout",
+      "path": "assets/characters/starved-seer-v2-cutout.png",
+      "sha256": "9a9c33e89ed1c1f17731cc632f40339f5731602b0343f2a37b26f226124f2a34",
+      "bytes": 1716325,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent_cutout",
+      "prompt": {
+        "file": "assets/characters/playable-origins-batch-02.md",
+        "section": "Cutout extraction",
+        "sha256": "2a738d2e6263cde54348edac201ebcbe25eb681f292d1ca9d0c9ffaf5621500d"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-e907e869-e058-46c0-a600-b5a6885f8a3a.png",
+        "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" }
+      },
+      "sourceReferences": ["assets/characters/starved-seer-v2.png"],
+      "postProcess": {
+        "tool": "scripts/repair_checker_alpha.py",
+        "reason": "image generator returned an opaque checkerboard backdrop",
+        "alphaValidation": { "transparentPixels": 998156, "opaquePixels": 574708, "cornerAlpha": [0, 0, 0, 0] }
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": true,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "playable_origin.thorn_poacher.cutout",
+      "originId": "thorn-poacher",
+      "role": "runtime_cutout",
+      "path": "assets/characters/thorn-poacher-v2-cutout.png",
+      "sha256": "b61854c3d2c34e7ec1c0c91cb0b1929ea4bb99e526c330d05ce5ce0ddd4e5e4b",
+      "bytes": 1878605,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent_cutout",
+      "prompt": {
+        "file": "assets/characters/playable-origins-batch-02.md",
+        "section": "Cutout extraction",
+        "sha256": "2a738d2e6263cde54348edac201ebcbe25eb681f292d1ca9d0c9ffaf5621500d"
+      },
+      "generation": {
+        "callId": "not_exposed_by_tool",
+        "sourceImageId": "exec-b7b05150-cf68-428d-87ae-7b0b4d5fe143.png",
+        "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" }
+      },
+      "sourceReferences": ["assets/characters/thorn-poacher-v2.png"],
+      "postProcess": {
+        "tool": "scripts/repair_checker_alpha.py",
+        "reason": "image generator returned an opaque checkerboard backdrop",
+        "alphaValidation": { "transparentPixels": 1015268, "opaquePixels": 557596, "cornerAlpha": [0, 0, 0, 0] }
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": true,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
+    }
+  ]
+}

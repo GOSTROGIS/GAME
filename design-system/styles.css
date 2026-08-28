@@ -1,0 +1,9 @@
+/* The Hollow March — design system entry point.
+   Consumers link this one file. Import lines only; no rules here. */
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap");
+
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/effects.css";

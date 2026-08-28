@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinderward Undercroft — Streaming Dungeon</title>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+    "three/addons/postprocessing/EffectComposer.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/EffectComposer.js",
+    "three/addons/postprocessing/RenderPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/RenderPass.js",
+    "three/addons/postprocessing/UnrealBloomPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/UnrealBloomPass.js",
+    "three/addons/postprocessing/OutputPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/OutputPass.js",
+    "three/addons/exporters/OBJExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js",
+    "three/addons/exporters/GLTFExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js": "sha384-nbwtoZENJD3Vq+ACK0CuGQdPMuDWHkamC2KJD70EV5nfg6jQjfppKOea07YJN+N3",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js": "sha384-VofkvpG6HERhFCYbsUOHeNXBCqID2nfqkQqnVzE1jc/oPcz+qJ13ADdXH08hE+cQ"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #080b0d; --bone: #d8d0bd; --bone-bright: #e1dbca; --bone-dim: #b7b6ad;
+    --muted: #8e928b; --gold: #b99552; --gold-bright: #e4c77e;
+    --ember: #bd6135; --moss: #52665c; --focus: #658e9e;
+    --line: rgba(216,208,189,.18); --line-soft: rgba(216,208,189,.1);
+    --glass: linear-gradient(140deg, rgba(20,27,29,.91), rgba(7,10,12,.9));
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--ink); color: var(--bone); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(185,149,82,.35); }
+  a:hover { color: var(--gold-bright); border-bottom-color: var(--gold-bright); }
+  canvas { display: block; }
+
+  #grain { position: fixed; inset: -50%; z-index: 8; pointer-events: none; opacity: .07;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    animation: grain .28s steps(2,end) infinite; }
+  #vig { position: fixed; inset: 0; z-index: 7; pointer-events: none; box-shadow: inset 0 0 220px 50px rgba(0,0,0,.86); }
+  @keyframes grain { 0%{transform:translate(0)} 25%{transform:translate(2%,-1%)} 50%{transform:translate(-1%,2%)} 75%{transform:translate(1%,1%)} }
+  @media (prefers-reduced-motion: reduce) { #grain { animation: none; } }
+
+  .eyebrow { margin: 0; color: var(--gold); font: 500 10px/1.3 Cinzel, Georgia, serif; letter-spacing: .28em; text-transform: uppercase; }
+  .micro { margin: 0; color: var(--muted); font: 500 8px/1.3 Cinzel, Georgia, serif; letter-spacing: .18em; text-transform: uppercase; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  #hud { position: fixed; inset: 0; z-index: 6; pointer-events: none; }
+  #hud > * { pointer-events: auto; }
+  #title { position: absolute; top: 20px; left: 24px; max-width: 400px; }
+  #title h1 { margin: 8px 0 0; color: var(--bone-bright); font: 500 28px/1 Cinzel, Georgia, serif; letter-spacing: -.02em; }
+  #title h1 em { color: var(--gold-bright); font-style: normal; font-weight: 400; }
+  #title p.v { margin: 12px 0 0; color: var(--bone-dim); font: italic 14.5px/1.5 'IM Fell English', Georgia, serif; }
+
+  #stats { position: absolute; top: 20px; right: 24px; width: 276px; padding: 16px 18px; background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(12px); }
+  #stats table { width: 100%; border-collapse: collapse; }
+  #stats td { padding: 5px 0; border-top: 1px solid var(--line-soft); font: 400 12px Inter, system-ui, sans-serif; text-align: right; color: var(--bone-dim); font-variant-numeric: tabular-nums; }
+  #stats td:first-child { text-align: left; color: var(--muted); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+  #stats tr:first-child td { border-top: 0; }
+  td.big { color: var(--gold-bright); font-size: 15px; }
+  td.ok { color: #7f9b8c; } td.warn { color: var(--ember); }
+
+  #panel { position: absolute; bottom: 20px; left: 24px; width: 306px; padding: 16px 18px; background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(12px); }
+  .row { margin-top: 13px; }
+  .row:first-child { margin-top: 0; }
+  .row label { display: flex; justify-content: space-between; align-items: baseline; }
+  .row label span.v { color: var(--gold-bright); font: 500 12px Inter, system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 22px; margin: 4px 0 0; background: transparent; cursor: pointer; }
+  input[type=range]::-webkit-slider-runnable-track { height: 3px; background: #2a3134; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 13px; height: 13px; margin-top: -5px; border-radius: 0; background: var(--gold); border: 1px solid var(--gold-bright); }
+  input[type=range]::-moz-range-track { height: 3px; background: #2a3134; }
+  input[type=range]::-moz-range-thumb { width: 13px; height: 13px; border-radius: 0; background: var(--gold); border: 1px solid var(--gold-bright); }
+  input[type=range]:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+  .seg { display: flex; margin-top: 6px; }
+  .seg button { flex: 1; appearance: none; padding: 8px 4px; min-height: 34px; background: rgba(5,8,9,.55); border: 1px solid var(--line); border-right-width: 0; color: var(--muted); font: 500 8px Cinzel, Georgia, serif; letter-spacing: .11em; text-transform: uppercase; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+  .seg button:last-child { border-right-width: 1px; }
+  .seg button:hover { color: var(--gold-bright); }
+  .seg button[aria-pressed="true"] { color: var(--gold-bright); background: rgba(185,149,82,.13); border-color: var(--gold); }
+  .seg button:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+
+  /* Minimap: the only honest way to show what is resident and what is not. */
+  #mapWrap { position: absolute; bottom: 20px; right: 24px; padding: 14px; background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(12px); }
+  #map { display: block; image-rendering: pixelated; border: 1px solid var(--line-soft); }
+  #mapWrap p { margin: 0 0 9px; }
+  #legend { display: flex; gap: 12px; margin-top: 10px; }
+  #legend span { display: flex; align-items: center; gap: 5px; color: var(--muted); font: 400 9px Inter, system-ui, sans-serif; letter-spacing: .04em; }
+  #legend i { width: 9px; height: 9px; display: block; }
+
+  #note { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); max-width: 420px; text-align: center; }
+  #note p { margin: 0; color: var(--muted); font: 400 11px/1.6 Inter, system-ui, sans-serif; }
+  @media (max-width: 1300px) { #note { display: none; } }
+  /* The minimap is the only visualization of what is resident, so it shrinks
+     rather than disappearing. Hiding it would remove the thing the page
+     exists to demonstrate. */
+  @media (max-width: 1000px) {
+    #title p.v { display: none; }
+    #mapWrap { padding: 10px; }
+    #map { width: 132px; height: 132px; }
+    #legend { flex-wrap: wrap; gap: 6px 10px; }
+  }
+  @media (max-width: 620px) { #mapWrap { display: none; } }
+</style>
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div id="grain"></div>
+<div id="vig"></div>
+
+<div id="hud">
+  <div id="title">
+    <p class="eyebrow">Sable Reach &middot; Cinderward &middot; Undercroft</p>
+    <h1>A dungeon <em>out of sync</em></h1>
+    <p class="v">Its own streaming scope, its own clock, its own light. The floor below is never resident all at once &mdash; which is exactly why it can afford density the surface cannot.</p>
+  </div>
+
+  <div id="stats">
+    <p class="micro">Residency</p>
+    <table><tbody>
+      <tr><td>Chunks resident</td><td class="big num" id="sRes">&mdash;</td></tr>
+      <tr><td>Chunks in floor</td><td class="num" id="sTotal">&mdash;</td></tr>
+      <tr><td>Cells resident</td><td class="num" id="sCells">&mdash;</td></tr>
+      <tr><td>Draw calls &middot; all passes</td><td class="num" id="sDraws">&mdash;</td></tr>
+      <tr><td>Triangles resident</td><td class="num" id="sTris">&mdash;</td></tr>
+      <tr><td>Frame</td><td class="num" id="sFps">&mdash;</td></tr>
+      <tr><td>Built &middot; disposed</td><td class="num" id="sChurn">&mdash;</td></tr>
+      <tr><td>Rooms &middot; arenas</td><td class="num" id="sRooms">&mdash;</td></tr>
+    </tbody></table>
+  </div>
+
+  <div id="panel">
+    <div class="row">
+      <label for="rad"><span class="micro">Streaming radius</span><span class="v" id="radV">2</span></label>
+      <input type="range" id="rad" min="1" max="5" step="1" value="2">
+    </div>
+    <div class="row">
+      <label for="speed"><span class="micro">Walk speed</span><span class="v" id="speedV">6.0</span></label>
+      <input type="range" id="speed" min="0" max="18" step="0.5" value="6">
+    </div>
+    <div class="row">
+      <p class="micro">Finish</p>
+      <div class="seg" role="group" aria-label="Finish" id="bSeg"></div>
+    </div>
+    <div class="row">
+      <p class="micro">Floor seed</p>
+      <div class="seg" role="group" aria-label="Seed">
+        <button id="sd0" aria-pressed="true">I</button>
+        <button id="sd1" aria-pressed="false">II</button>
+        <button id="sd2" aria-pressed="false">III</button>
+        <button id="sd3" aria-pressed="false">IV</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mapWrap">
+    <p class="micro">Floor plan &middot; residency</p>
+    <canvas id="map" width="200" height="200"></canvas>
+    <div id="legend">
+      <span><i style="background:#3a4143"></i>corridor</span>
+      <span><i style="background:#8c5a3c"></i>room</span>
+      <span><i style="background:#bd6135"></i>arena</span>
+      <span><i style="background:#e4c77e"></i>resident</span>
+    </div>
+  </div>
+
+  <div id="note"><p>Drag to look, scroll to zoom. The walker follows the corridors on its own &mdash; watch the resident set change while the triangle count stays flat.</p></div>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { applyTextures } from './kit/hm-core.js';
+import { bindSteamTextures } from './kit/hm-steam.js';
+import { BIOMES } from './kit/hm-biome.js';
+import { generateLayout, ChunkStreamer, CELL, CHUNK, cellAt, worldX, worldZ } from './kit/hm-dungeon.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { VFX_ENV } from './kit/hm-vfx.js';
+import { forgeFire, torchlight, FORGE_AXES, TORCH_AXES } from './kit/hm-vfx-fire.js';
+import { steamVent, aetherGlow, STEAMVENT_AXES, AETHERGLOW_AXES } from './kit/hm-vfx-veil.js';
+import { climateState, applyClimate } from './kit/hm-vfx-climate.js';
+import { indexOfAxes } from './kit/hm-vfx-index.js';
+
+applyTextures(true);
+bindSteamTextures(true);
+
+const canvas = document.getElementById('gl');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.6));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.55;
+// The composer resets renderer.info per pass, so the draw-call census would
+// read the final fullscreen quad. Accumulate over the whole frame instead.
+renderer.info.autoReset = false;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#070a0b');
+// A dungeon's fog is much tighter than the surface's — it is the streaming
+// radius made visible, and it is why the pop-in is never seen.
+scene.fog = new THREE.FogExp2(0x0a0f11, 0.026);
+
+const camera = new THREE.PerspectiveCamera(58, 2, 0.1, 300);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.maxPolarAngle = Math.PI * 0.49;
+controls.minDistance = 3;
+controls.maxDistance = 26;
+
+/* Underground light: no sky, no sun. A cold ambient bounce well above black,
+   plus a warm lamp rig that travels with the walker so the aether lamps in
+   the geometry read as the source. A dungeon lit only by its own practicals
+   is atmospheric in a screenshot and unreadable in play. */
+scene.add(new THREE.HemisphereLight(0x4c5f65, 0x241c14, 1.15));
+scene.add(new THREE.AmbientLight(0x33454b, 0.5));
+const lamp = new THREE.PointLight(0xe8ad68, 26, 34, 2);
+// Deliberately NOT a shadow caster. A shadow-casting PointLight renders a
+// six-face CUBE shadow map — six full depth passes over every resident chunk,
+// every frame. Measured cost of enabling it here: 73 fps → 32 fps. The
+// travelling lamp is a fill; the geometry's own aether lamps carry the read.
+scene.add(lamp);
+const cool = new THREE.PointLight(0x7fa2ae, 9, 28, 2);
+scene.add(cool);
+const trail = new THREE.PointLight(0xc9793c, 7, 22, 2);
+scene.add(trail);
+
+/* Post: one bloom pass, thresholded just above white so only genuinely
+   over-range emissives bleed. Underground this matters more than on the
+   surface — the practicals ARE the lighting, so a forge mouth that cannot run
+   past white has nothing left to distinguish it from painted orange. */
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloom = new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), 0.62, 0.6, 0.96);
+composer.addPass(bloom);
+composer.addPass(new OutputPass());
+
+let SEEDS = [0xc1de01, 0x51ab77, 0x9e3fa2, 0x77c0de];
+let seedIdx = 0;
+let biome = 'forge';
+let radius = 2;
+let speed = 6;
+
+let layout, streamer, walker, path, pathI, pathT;
+
+/* ------------------------------------------------- the elemental layer
+ * Cinderward is the `forge` biome in hm-biome.js and the region that declares
+ * `ember_iron_spark` and `slag_drip_glow` in worldAssets.js — so the forge,
+ * steam and aether families exist for exactly this scene, and until now this
+ * scene had none of them.
+ *
+ * WHY A POOL AND NOT ONE PER ROOM. The floor is generated and streamed, so the
+ * room count is unbounded; instantiating a practical per room would blow both
+ * the 18-light and 2,400-particle ceilings on any large floor and would keep
+ * building effects the player will never reach. Instead a FIXED pool is built
+ * once and re-homed to the nearest unclaimed room centres as the walker moves.
+ * The cost is constant in floor size — the same reasoning the chunk streamer
+ * already applies to geometry.
+ *
+ * Each entry is a different declared variant, so the undercroft's practicals
+ * are not one torch repeated: the axes differ, not just the seed. */
+const POOL_SPEC = [
+  { kind: 'forge', build: forgeFire, axes: FORGE_AXES, reach: 9,
+    v: { bed: 2, blast: 2, slag: 2, spark: 2, vessel: 2, quench: 1, pour: 1 }, opts: { scale: 0.9 } },
+  { kind: 'steam', build: steamVent, axes: STEAMVENT_AXES, reach: 7,
+    v: { source: 1, pressure: 2, cadence: 2, plume: 1, condensate: 1, nozzle: 2, scald: 1 }, opts: { scale: 1.1 } },
+  { kind: 'steam', build: steamVent, axes: STEAMVENT_AXES, reach: 7,
+    v: { source: 0, pressure: 1, cadence: 1, plume: 1, condensate: 2, nozzle: 0, scald: 0 }, opts: { scale: 1.3 } },
+  { kind: 'aether', build: aetherGlow, axes: AETHERGLOW_AXES, reach: 8,
+    v: { form: 2, glyph: 1, orbit: 1, pulse: 1, tendril: 1, ground: 1, collapse: 0 }, opts: { scale: 0.8 } },
+  { kind: 'torch', build: torchlight, axes: TORCH_AXES, reach: 6,
+    v: { kind: 1, mount: 0, flame: 0, housing: 1, soot: 1, halo: 1, wicks: 0 }, opts: { scale: 1.5 } },
+  { kind: 'torch', build: torchlight, axes: TORCH_AXES, reach: 6,
+    v: { kind: 0, mount: 0, flame: 2, housing: 0, soot: 2, halo: 2, wicks: 0 }, opts: { scale: 1.5 } },
+  { kind: 'torch', build: torchlight, axes: TORCH_AXES, reach: 6,
+    v: { kind: 2, mount: 1, flame: 1, housing: 2, soot: 0, halo: 1, wicks: 1 }, opts: { scale: 1.4 } },
+];
+const pool = POOL_SPEC.map((s) => {
+  const fx = s.build(indexOfAxes(s.v, s.axes), s.opts);
+  fx.group.visible = false;
+  fx.kind = s.kind;
+  fx.reach = s.reach;
+  scene.add(fx.group);
+  return fx;
+});
+const poolParticles = pool.reduce((n, f) => n + (f.particles || 0), 0);
+const poolLights = pool.reduce((n, f) => n + (f.lights || 0), 0);
+
+/* Cinderward's air, from the `forge` climate zone. There is no sun underground,
+   so the solar terms are irrelevant and only the zone's atmosphere matters —
+   hot ground, heavy dust, tight warm fog. Applied once: a dungeon has no day. */
+VFX_ENV.uNight.value = 1;
+VFX_ENV.uHeat.value = 0.75;
+VFX_ENV.uDust.value = 0.42;
+VFX_ENV.uWetness.value = 0.3;
+VFX_ENV.uFogColor.value.copy(scene.fog.color);
+VFX_ENV.uFogDensity.value = scene.fog.density;
+VFX_ENV.uWind.value = 0.25;   // still air underground, but not dead
+VFX_ENV.uGust.value = 0.1;
+const vfxCtx = { camera };
+const t0Vfx = performance.now();
+let rehomeT = 0;
+
+/* Re-home the pool. Each effect claims the nearest room centre within reach
+   that no other effect has claimed, and hides when nothing is near enough — so
+   a corridor is genuinely dark and arriving in a room lights it. */
+function rehomePool() {
+  if (!path || !path.length) return;
+  const taken = new Set();
+  for (const fx of pool) {
+    let best = null, bestD = Infinity;
+    for (let i = 0; i < path.length; i++) {
+      if (taken.has(i)) continue;
+      const d = path[i].distanceTo(walker);
+      if (d < bestD) { bestD = d; best = i; }
+    }
+    if (best != null && bestD < fx.reach * 3.4) {
+      taken.add(best);
+      const p = path[best];
+      fx.group.position.set(p.x, 0, p.z);
+      fx.group.visible = true;
+    } else {
+      fx.group.visible = false;
+    }
+  }
+}
+
+function newFloor() {
+  if (streamer) streamer.clear();
+  layout = generateLayout(SEEDS[seedIdx], 40, 40);
+  streamer = new ChunkStreamer(layout, scene, biome, 'neglected', radius);
+
+  // The walker patrols room centres in order, which is enough to exercise
+  // the streamer across the whole floor.
+  path = layout.rooms.map((r) => new THREE.Vector3(worldX(layout, r.cx - 0.5), 0, worldZ(layout, r.cz - 0.5)));
+  pathI = 0;
+  pathT = 0;
+  walker = path[0].clone();
+  document.getElementById('sTotal').textContent = (layout.chunksX * layout.chunksZ).toLocaleString();
+  document.getElementById('sRooms').textContent = layout.rooms.length + ' \u00b7 ' + layout.rooms.filter((r) => r.role === 'arena').length;
+  drawMap();
+}
+
+/* ------------------------------------------------------------- minimap */
+const map = document.getElementById('map');
+const mctx = map.getContext('2d');
+function drawMap() {
+  const px = map.width / layout.gw;
+  mctx.fillStyle = '#0a0d0e';
+  mctx.fillRect(0, 0, map.width, map.height);
+  // Chunk residency underlay first, so cells draw on top of it.
+  for (const k of streamer.resident.keys()) {
+    const [cx, cz] = k.split(',').map(Number);
+    mctx.fillStyle = 'rgba(228,199,126,.16)';
+    mctx.fillRect(cx * CHUNK * px, cz * CHUNK * px, CHUNK * px, CHUNK * px);
+  }
+  for (let z = 0; z < layout.gh; z++) {
+    for (let x = 0; x < layout.gw; x++) {
+      const c = cellAt(layout, x, z);
+      if (!c) continue;
+      if (c.t === 'corridor') mctx.fillStyle = '#3a4143';
+      else {
+        const r = layout.rooms[c.room];
+        mctx.fillStyle = r && r.role === 'arena' ? '#bd6135' : '#8c5a3c';
+      }
+      mctx.fillRect(x * px, z * px, px + 0.5, px + 0.5);
+    }
+  }
+  // Walker.
+  const wx = (walker.x / CELL + layout.gw / 2) * px;
+  const wz = (walker.z / CELL + layout.gh / 2) * px;
+  mctx.fillStyle = '#e4c77e';
+  mctx.fillRect(wx - 2, wz - 2, 4, 4);
+}
+
+/* ------------------------------------------------------------- controls */
+const bSeg = document.getElementById('bSeg');
+BIOMES.forEach((b) => {
+  const el = document.createElement('button');
+  el.textContent = b.name;
+  el.setAttribute('aria-pressed', String(b.id === biome));
+  el.addEventListener('click', () => {
+    biome = b.id;
+    bSeg.querySelectorAll('button').forEach((x, i) => x.setAttribute('aria-pressed', String(BIOMES[i].id === biome)));
+    newFloor();
+  });
+  bSeg.append(el);
+});
+[0, 1, 2, 3].forEach((i) => {
+  document.getElementById('sd' + i).addEventListener('click', () => {
+    seedIdx = i;
+    [0, 1, 2, 3].forEach((j) => document.getElementById('sd' + j).setAttribute('aria-pressed', String(i === j)));
+    newFloor();
+  });
+});
+document.getElementById('rad').addEventListener('input', (e) => {
+  radius = +e.target.value;
+  document.getElementById('radV').textContent = radius;
+  streamer.radius = radius;
+});
+document.getElementById('speed').addEventListener('input', (e) => {
+  speed = +e.target.value;
+  document.getElementById('speedV').textContent = speed.toFixed(1);
+});
+
+/* ---------------------------------------------------------------- loop */
+const sRes = document.getElementById('sRes'), sCells = document.getElementById('sCells');
+const sDraws = document.getElementById('sDraws'), sTris = document.getElementById('sTris');
+const sFps = document.getElementById('sFps'), sChurn = document.getElementById('sChurn');
+
+/* renderer.info.render.calls counts only the final visible pass. Any
+   shadow-casting light adds its own depth passes over the same geometry, so
+   the honest per-frame figure sums them. On a page about residency budgets,
+   the draw-call number is the one a reader would actually act on. */
+function drawCallsAllPasses() {
+  let passes = 1;
+  scene.traverse((o) => {
+    if (!o.isLight || !o.castShadow) return;
+    passes += o.isPointLight ? 6 : 1; // a point light shadow is a cube map
+  });
+  return renderer.info.render.calls * passes;
+}
+
+let frames = 0, fpsT = performance.now(), fps = 0, last = performance.now();
+newFloor();
+rehomePool();
+
+function tick() {
+  const now = performance.now();
+  const dt = Math.min((now - last) / 1000, 0.05);
+  last = now;
+
+  // Walk toward the next room centre.
+  if (path.length > 1 && speed > 0) {
+    const target = path[(pathI + 1) % path.length];
+    const dir = target.clone().sub(walker);
+    const d = dir.length();
+    if (d < 0.6) {
+      pathI = (pathI + 1) % path.length;
+    } else {
+      walker.add(dir.normalize().multiplyScalar(Math.min(speed * dt, d)));
+    }
+  }
+
+  const st = streamer.update(walker);
+  lamp.position.set(walker.x, 2.9, walker.z);
+  cool.position.set(walker.x - 4, 3.4, walker.z + 4);
+  trail.position.set(walker.x + 4, 2.2, walker.z - 4);
+
+  // The elemental layer. Re-homing is throttled: it is an O(rooms) scan and the
+  // answer cannot change meaningfully between frames at walking pace.
+  VFX_ENV.uTime.value = (now - t0Vfx) / 1000;
+  rehomeT += dt;
+  if (rehomeT > 0.4) { rehomePool(); rehomeT = 0; }
+  for (const fx of pool) if (fx.group.visible && fx.update) fx.update(VFX_ENV.uTime.value, vfxCtx);
+
+  // Camera trails the walker without fighting the user's orbit.
+  controls.target.lerp(new THREE.Vector3(walker.x, 1.4, walker.z), 0.06);
+  controls.update();
+  renderer.info.reset();
+  composer.render();
+
+  frames++;
+  if (now - fpsT > 500) {
+    fps = (frames * 1000) / (now - fpsT);
+    frames = 0;
+    fpsT = now;
+    sRes.textContent = streamer.resident.size;
+    sCells.textContent = st.cells.toLocaleString();
+    sDraws.textContent = drawCallsAllPasses().toLocaleString();
+    sTris.textContent = (st.tris / 1000).toFixed(0) + 'k';
+    sFps.textContent = fps.toFixed(0) + ' fps';
+    sFps.className = 'num ' + (fps >= 45 ? 'ok' : fps >= 26 ? '' : 'warn');
+    sChurn.textContent = st.built.toLocaleString() + ' \u00b7 ' + st.disposed.toLocaleString();
+    drawMap();
+  }
+}
+
+function resize() {
+  renderer.setSize(innerWidth, innerHeight, false);
+  composer.setSize(innerWidth, innerHeight);
+  bloom.resolution.set(innerWidth, innerHeight);
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+}
+
+/* Dev handle, same reasoning as the other two scenes: a streaming world you
+   cannot step by hand is one you cannot inspect when rAF is paused. */
+window.__dungeon = {
+  THREE, scene, camera, controls, renderer, composer, pool, VFX_ENV,
+  walker: () => walker, rehomePool,
+  settle: (steps = 8) => { for (let i = 0; i < steps; i++) tick(); return pool.filter((f) => f.group.visible).map((f) => f.kind); },
+};
+addEventListener('resize', resize);
+resize();
+camera.position.set(walker.x + 9, 7, walker.z + 9);
+controls.target.set(walker.x, 1.4, walker.z);
+renderer.setAnimationLoop(tick);
+</script>
+</body>
+</html>

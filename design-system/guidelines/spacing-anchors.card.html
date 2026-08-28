@@ -1,0 +1,29 @@
+<!-- @dsCard group="Spacing" viewport="700x210" subtitle="Reuse an anchor; never invent a position" name="HUD anchors" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+  .cap{color:#797f7a;font:9px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+</style>
+</head>
+<body>
+<div style="position:relative;height:150px;background:var(--world-canvas);border:1px solid var(--line)">
+<div style="position:absolute;top:8px;left:9px;right:9px;display:grid;grid-template-columns:120px 1fr 120px;gap:8px">
+<div style="height:26px;background:rgba(185,149,82,.1);border:1px dashed rgba(185,149,82,.45);color:var(--gold);font:7px var(--display);display:grid;place-items:center">315</div>
+<div style="height:26px;background:rgba(101,142,158,.1);border:1px dashed rgba(101,142,158,.45);color:var(--focus);font:7px var(--display);display:grid;place-items:center">285 centred</div>
+<div style="height:26px;background:rgba(185,149,82,.1);border:1px dashed rgba(185,149,82,.45);color:var(--gold);font:7px var(--display);display:grid;place-items:center">315</div></div>
+<div style="position:absolute;left:9px;top:44px;width:22px;bottom:38px;background:rgba(185,149,82,.1);border:1px dashed rgba(185,149,82,.45);color:var(--gold);font:6px var(--display);display:grid;place-items:center">62</div>
+<div style="position:absolute;left:37px;top:44px;right:120px;bottom:38px;background:rgba(216,208,189,.05);border:1px dashed rgba(216,208,189,.35);color:#a7aaa4;font:7px var(--display);display:grid;place-items:center">GAME PANEL</div>
+<div style="position:absolute;right:9px;top:44px;width:108px;height:70px;background:rgba(82,102,92,.12);border:1px dashed rgba(82,102,92,.5);color:#7d9689;font:7px var(--display);display:grid;place-items:center">288</div>
+<div style="position:absolute;left:50%;bottom:8px;transform:translateX(-50%);width:200px;height:24px;background:rgba(185,149,82,.1);border:1px dashed rgba(185,149,82,.45);color:var(--gold);font:7px var(--display);display:grid;place-items:center">76&times;61 slots</div></div>
+</body>
+</html>

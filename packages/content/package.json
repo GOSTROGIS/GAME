@@ -1,0 +1,89 @@
+{
+  "name": "@hearthmere/content",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pretest": "pnpm --filter @hollow-march/shared build",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsc -p tsconfig.json && tsc -p tsconfig.test.json && node --test .test-dist/test/*.test.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./dist/index.js"
+    },
+    "./runtime": {
+      "types": "./src/runtime.ts",
+      "import": "./dist/runtime.js"
+    },
+    "./bestiary": {
+      "types": "./src/bestiary.ts",
+      "import": "./dist/bestiary.js"
+    },
+    "./atlas": {
+      "types": "./src/atlas.ts",
+      "import": "./dist/atlas.js"
+    },
+    "./showcases": {
+      "types": "./src/showcases.ts",
+      "import": "./dist/showcases.js"
+    },
+    "./turn-combat": {
+      "types": "./src/turnCombatContent.ts",
+      "import": "./dist/turnCombatContent.js"
+    },
+    "./placements": {
+      "types": "./src/placements.ts",
+      "import": "./dist/placements.js"
+    },
+    "./habitats": {
+      "types": "./src/habitats.ts",
+      "import": "./dist/habitats.js"
+    },
+    "./prototype-assets": {
+      "types": "./src/prototypeAssets.ts",
+      "import": "./dist/prototypeAssets.js"
+    },
+    "./bridge-assets": {
+      "types": "./src/bridgeAssets.ts",
+      "import": "./dist/bridgeAssets.js"
+    },
+    "./site-scenes": {
+      "types": "./src/siteScenes.ts",
+      "import": "./dist/siteScenes.js"
+    },
+    "./bridge-runtime": {
+      "types": "./src/bridgeRuntime.ts",
+      "import": "./dist/bridgeRuntime.js"
+    },
+    "./bridge-catalog": {
+      "types": "./src/bridgeCatalog.ts",
+      "import": "./dist/bridgeCatalog.js"
+    },
+    "./sable-reach/bridge-source": "./manifests/sable-reach.bridge-source.json",
+    "./sable-reach/bridge-authored": "./manifests/sable-reach.bridge-authored.json",
+    "./sable-reach/bridge-scenes": "./manifests/sable-reach.bridge-scenes.json",
+    "./sable-reach/bridge-runtime": "./manifests/sable-reach.bridge-runtime.json",
+    "./sable-reach/bridge-lineage": "./manifests/sable-reach.bridge-lineage.json",
+    "./sable-reach/bridge-seed-assignments": "./manifests/sable-reach.bridge-seed-assignments.json",
+    "./sable-reach/atlas": "./manifests/sable-reach.atlas-runtime.json",
+    "./sable-reach/prototype-assets": "./manifests/sable-reach.prototype-assets.json",
+    "./hearthmere/assets": "./manifests/hearthmere.assets.json",
+    "./hearthmere/licenses": "./manifests/hearthmere.licenses.json",
+    "./hearthmere/scene": "./manifests/hearthmere.scene.json"
+  },
+  "files": [
+    "dist",
+    "manifests",
+    "src",
+    "README.md"
+  ],
+  "dependencies": {
+    "@hollow-march/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2"
+  }
+}

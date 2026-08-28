@@ -1,0 +1,51 @@
+{
+  "name": "the-hollow-march",
+  "version": "0.2.0",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "node serve.mjs",
+    "dev:client": "pnpm --filter @hollow-march/shared build && pnpm --filter @hearthmere/content build && pnpm --filter @hollow-march/client dev",
+    "dev:server": "pnpm --filter @hollow-march/server dev",
+    "build": "pnpm -r --if-present build",
+    "test": "node tests/art-index.mjs && node tests/data.mjs && node tests/smoke.mjs",
+    "test:legacy": "node tests/data.mjs && node tests/smoke.mjs",
+    "test:assets": "node tests/raster-art-validator.mjs && node tools/assets/validate-raster-art.mjs && node tools/assets/validate.mjs && node tools/assets/validate-prototypes.mjs && node tests/assets3d.mjs",
+    "bridge:refresh": "node tools/assets/slipcurve-bridge/refresh.mjs",
+    "bridge:source:verify": "node tools/assets/slipcurve-bridge/test.mjs && node tools/assets/slipcurve-bridge/verify-snapshot.mjs",
+    "bridge:runtime:build": "node --experimental-strip-types tools/assets/build-bridge-runtime.ts --write",
+    "bridge:runtime:check": "node --experimental-strip-types tools/assets/build-bridge-runtime.ts --check && node tools/assets/validate-bridge.mjs",
+    "bridge:metadata:check": "node tools/assets/slipcurve-bridge/test.mjs && node tools/assets/slipcurve-bridge/verify-snapshot.mjs && node tools/assets/validate-bridge.mjs --metadata-only && node tools/assets/test-bridge-production-gate.mjs",
+    "bridge:strict-production": "node tools/assets/validate-bridge.mjs --strict-production",
+    "validate:production": "node tools/assets/validate-production.mjs",
+    "test:bridge": "pnpm bridge:source:verify && pnpm bridge:runtime:check && pnpm --filter @hollow-march/client test:bridge",
+    "test:bridge:metadata": "pnpm bridge:metadata:check && pnpm --filter @hollow-march/client test:bridge",
+    "test:content": "pnpm --filter @hearthmere/content test",
+    "test:showcases": "pnpm --filter @hollow-march/client test:showcase",
+    "test:turn-ui": "pnpm --filter @hollow-march/client test:turn",
+    "worldgen:setup": "node tools/worldgen/setup.mjs",
+    "worldgen": "node tools/worldgen/run.mjs --write",
+    "test:worldgen": "node tools/worldgen/run.mjs --check",
+    "test:webgl": "pnpm --filter @hollow-march/shared build && pnpm --filter @hearthmere/content build && node tests/webgl-smoke.mjs",
+    "test:network": "pnpm --filter @hollow-march/shared build && pnpm --filter @hearthmere/content build && pnpm --filter @hollow-march/server build && node apps/client/test/network-smoke.mjs",
+    "test:browser-network": "pnpm --filter @hollow-march/shared build && pnpm --filter @hearthmere/content build && pnpm --filter @hollow-march/server build && pnpm --filter @hollow-march/client build && node apps/client/test/browser-network-smoke.mjs",
+    "test:design-system": "node design-system/validate.mjs",
+    "test:shared": "pnpm --filter @hollow-march/shared test",
+    "test:server": "pnpm --filter @hollow-march/shared build && pnpm --filter @hollow-march/server test",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test:ci": "pnpm test:design-system && pnpm typecheck && pnpm test:worldgen && pnpm test:bridge:metadata && pnpm test:assets && pnpm test:content && pnpm test:showcases && pnpm test:turn-ui && pnpm test:shared && pnpm test:server && pnpm test:network && pnpm test:browser-network && pnpm test:legacy",
+    "test:all": "pnpm test:design-system && pnpm typecheck && pnpm test:worldgen && pnpm test:bridge && pnpm test:assets && pnpm test:content && pnpm test:showcases && pnpm test:turn-ui && pnpm test:shared && pnpm test:server && pnpm test:network && pnpm test:browser-network && pnpm test:legacy && pnpm test:webgl",
+    "test:raster-art": "node tests/raster-art-validator.mjs && node tools/assets/validate-raster-art.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "7.3.6"
+  }
+}

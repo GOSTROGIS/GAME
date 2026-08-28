@@ -1,0 +1,1854 @@
+{
+  "schemaVersion": 1,
+  "id": "sable-reach.bridge.runtime-v1",
+  "maturity": "prototype_geometry",
+  "productionEligible": false,
+  "generatorVersion": "sable-reach-dark-rebuild-v2.0.0",
+  "generatorSha256": "db4c97cb8cbbb13d06be5498acc6c307b5aab139012457029be9f33e6b023a92",
+  "runtimeAssetPacks": [
+    {
+      "schemaVersion": 1,
+      "id": "bridge.pack.hearthmere",
+      "siteId": "site.hearthmere",
+      "maturity": "prototype_geometry",
+      "dependencyIds": [
+        "bridge.asset.hearthmere.crooked-hold-frame",
+        "bridge.asset.hearthmere.springcut-lintel",
+        "bridge.asset.hearthmere.cinder-wattle-corner",
+        "bridge.asset.hearthmere.weathered-slate-bay",
+        "bridge.asset.hearthmere.patched-palisade-run",
+        "bridge.asset.hearthmere.leaning-gate-bent",
+        "bridge.asset.hearthmere.oathless-well",
+        "bridge.asset.hearthmere.rainwood-stack",
+        "bridge.asset.hearthmere.split-slate-tally",
+        "bridge.asset.hearthmere.chainless-lantern-perch",
+        "bridge.asset.hearthmere.peat-drying-rack",
+        "bridge.asset.hearthmere.hush-bell-yoke",
+        "bridge.asset.hearthmere.spring-cup-plinth",
+        "bridge.asset.hearthmere.travellers-splint-bench",
+        "bridge.asset.hearthmere.blackpine-hook-clump",
+        "bridge.asset.hearthmere.ashmoss-braid",
+        "bridge.asset.hearthmere.cold-reed-knot",
+        "bridge.asset.hearthmere.ridge-heather-fan",
+        "bridge.asset.hearthmere.wall-lichen-shroud",
+        "bridge.asset.hearthmere.spring-rill-crossing",
+        "bridge.asset.hearthmere.slate-switchback",
+        "bridge.asset.hearthmere.watchers-timber-step",
+        "bridge.asset.hearthmere.banked-ember-court",
+        "bridge.asset.hearthmere.broken-name-arch"
+      ],
+      "dependencies": [
+        {
+          "id": "bridge.asset.hearthmere.crooked-hold-frame",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/crooked-hold-frame.glb",
+          "sha256": "a54bc1c4551124240163c2f05da6ff06b41367d47917876b8bb3594fa09c215a",
+          "encodedBytes": 31668,
+          "gpuBytes": {
+            "vertex": 13248,
+            "index": 12336,
+            "textureMipChain": 0,
+            "total": 25584
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.springcut-lintel",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/springcut-lintel.glb",
+          "sha256": "14dc054556be44562f303da17acbef97e3f457e31376e82f3f1e983c81ad4ce3",
+          "encodedBytes": 39072,
+          "gpuBytes": {
+            "vertex": 16896,
+            "index": 16224,
+            "textureMipChain": 0,
+            "total": 33120
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.cinder-wattle-corner",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/cinder-wattle-corner.glb",
+          "sha256": "b1824244e2e28e0cee0d37adbceac894c7840fd67f4043bc2b2dd9d3d648f97d",
+          "encodedBytes": 31648,
+          "gpuBytes": {
+            "vertex": 13248,
+            "index": 12336,
+            "textureMipChain": 0,
+            "total": 25584
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.weathered-slate-bay",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/weathered-slate-bay.glb",
+          "sha256": "356aea2a14e5f3e83855bbdc26907549c7b4e1f45928a1a803eae755e65d39f2",
+          "encodedBytes": 31300,
+          "gpuBytes": {
+            "vertex": 13056,
+            "index": 12192,
+            "textureMipChain": 0,
+            "total": 25248
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.patched-palisade-run",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/patched-palisade-run.glb",
+          "sha256": "5bd0a2e08052e18e6777cc2f3b13197bad36a181af613d4d758671fd946b5b3e",
+          "encodedBytes": 31304,
+          "gpuBytes": {
+            "vertex": 13056,
+            "index": 12192,
+            "textureMipChain": 0,
+            "total": 25248
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.leaning-gate-bent",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/leaning-gate-bent.glb",
+          "sha256": "9d22d03335867ab912d52a2735840be28e1518f5a36f3d89d779f60fc1d59bfe",
+          "encodedBytes": 39064,
+          "gpuBytes": {
+            "vertex": 16896,
+            "index": 16224,
+            "textureMipChain": 0,
+            "total": 33120
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.oathless-well",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/oathless-well.glb",
+          "sha256": "374063c3128c6077e2113fcdfb9d1e4aa1a62696a88e721a7ca684f076178a92",
+          "encodedBytes": 47160,
+          "gpuBytes": {
+            "vertex": 21168,
+            "index": 19968,
+            "textureMipChain": 0,
+            "total": 41136
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.rainwood-stack",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/rainwood-stack.glb",
+          "sha256": "3111430560e02f8f7e554aa6b723f71f4654a5094464d6be2525364fd03663e4",
+          "encodedBytes": 36292,
+          "gpuBytes": {
+            "vertex": 15456,
+            "index": 14832,
+            "textureMipChain": 0,
+            "total": 30288
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.split-slate-tally",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/split-slate-tally.glb",
+          "sha256": "cf033519609dc606a301817ebeec7d1065329627bce6bed75ca3ecfa70949740",
+          "encodedBytes": 35908,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.chainless-lantern-perch",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/chainless-lantern-perch.glb",
+          "sha256": "a77ea87a54e384f555723ebd85c5052bcef4576334c565db368481145eaa3f1a",
+          "encodedBytes": 48084,
+          "gpuBytes": {
+            "vertex": 21576,
+            "index": 20544,
+            "textureMipChain": 0,
+            "total": 42120
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.peat-drying-rack",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/peat-drying-rack.glb",
+          "sha256": "6e14c5115639943ea10365e43f92303ac3dd1f8fe51942b47da5108982fb13d2",
+          "encodedBytes": 36052,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.hush-bell-yoke",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/hush-bell-yoke.glb",
+          "sha256": "43c9250aaaa24797055ee0b3bb653e195db8dfc8469725b02b8c51caa6f5cb08",
+          "encodedBytes": 36608,
+          "gpuBytes": {
+            "vertex": 15648,
+            "index": 14976,
+            "textureMipChain": 0,
+            "total": 30624
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.spring-cup-plinth",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/spring-cup-plinth.glb",
+          "sha256": "5c8d5cb8d6fb162962e812f33330bc714bf6c77177df2b08a5e197dc2347963b",
+          "encodedBytes": 47148,
+          "gpuBytes": {
+            "vertex": 21168,
+            "index": 19968,
+            "textureMipChain": 0,
+            "total": 41136
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.travellers-splint-bench",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/travellers-splint-bench.glb",
+          "sha256": "ef85c037458cc1b4a1c645a47afa1a8d8db5c7bd0c1af75c9dd862c05a8b214b",
+          "encodedBytes": 35996,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.blackpine-hook-clump",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/blackpine-hook-clump.glb",
+          "sha256": "a853ca77a04bf4adb52888fca4b6f7c95509c92b747cd249f82e835234ff78a8",
+          "encodedBytes": 47920,
+          "gpuBytes": {
+            "vertex": 21720,
+            "index": 20160,
+            "textureMipChain": 0,
+            "total": 41880
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.ashmoss-braid",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/ashmoss-braid.glb",
+          "sha256": "8c5084b4540e0ac1077284f8403770bb4973414255789e433dab6c8e73a5c87a",
+          "encodedBytes": 51076,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.cold-reed-knot",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/cold-reed-knot.glb",
+          "sha256": "d9d3817f7b089991135c4522f7021c2600cc5aabcea8098519a13095d8cff702",
+          "encodedBytes": 51096,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.ridge-heather-fan",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/ridge-heather-fan.glb",
+          "sha256": "bf5c0e067ed3c79bf0f594c9d8772831b5987f33c56bb73ac49227444f4ef250",
+          "encodedBytes": 51048,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.wall-lichen-shroud",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/wall-lichen-shroud.glb",
+          "sha256": "cb3af1859bf052c281308245ab2910c40efb953cb865b61f14c8185e6dda6cbe",
+          "encodedBytes": 31676,
+          "gpuBytes": {
+            "vertex": 13248,
+            "index": 12336,
+            "textureMipChain": 0,
+            "total": 25584
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.spring-rill-crossing",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/spring-rill-crossing.glb",
+          "sha256": "79eb33cf010443c14d8d04e430ca5f71d837633d3504bd3779ce671fc3166555",
+          "encodedBytes": 32592,
+          "gpuBytes": {
+            "vertex": 13824,
+            "index": 12768,
+            "textureMipChain": 0,
+            "total": 26592
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.slate-switchback",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/slate-switchback.glb",
+          "sha256": "651e22c64c5540c6294b404fa448b44227776b4526cc44236f323f235b9d9c81",
+          "encodedBytes": 32276,
+          "gpuBytes": {
+            "vertex": 13632,
+            "index": 12624,
+            "textureMipChain": 0,
+            "total": 26256
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.watchers-timber-step",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/watchers-timber-step.glb",
+          "sha256": "4e8fb9685dcfa84a7e0b51de50aadccc824e4e893dd8f8cba2fd59cd5deae3b8",
+          "encodedBytes": 32312,
+          "gpuBytes": {
+            "vertex": 13632,
+            "index": 12624,
+            "textureMipChain": 0,
+            "total": 26256
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.banked-ember-court",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/banked-ember-court.glb",
+          "sha256": "215b552e43080e5be70ec9696fe13bcfc9c62458904df71c5cac0a91887e7892",
+          "encodedBytes": 32284,
+          "gpuBytes": {
+            "vertex": 13632,
+            "index": 12624,
+            "textureMipChain": 0,
+            "total": 26256
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hearthmere.broken-name-arch",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hearthmere/broken-name-arch.glb",
+          "sha256": "7b72386210fd2d05ebbfad6124b48d54df94acc2024d864aa2c1f357b90c236a",
+          "encodedBytes": 39048,
+          "gpuBytes": {
+            "vertex": 16896,
+            "index": 16224,
+            "textureMipChain": 0,
+            "total": 33120
+          },
+          "externalUris": []
+        }
+      ],
+      "decodedGpuBytes": 784152,
+      "encodedBytes": 928632,
+      "limits": {
+        "discreteGpuBytes": 268435456,
+        "integratedGpuBytes": 100663296
+      },
+      "lods": [
+        {
+          "level": 0,
+          "maximumDistanceMeters": 28,
+          "triangleBudget": 12000
+        },
+        {
+          "level": 1,
+          "maximumDistanceMeters": 64,
+          "triangleBudget": 4000
+        },
+        {
+          "level": 2,
+          "maximumDistanceMeters": 160,
+          "triangleBudget": 1200
+        }
+      ],
+      "materialIds": [
+        "charred-oak",
+        "rain-dark-slate",
+        "verdigris-iron"
+      ],
+      "provenance": {
+        "sourceId": "slipcurve-sitelib",
+        "authorizationId": "owner-authorized-cross-project-sitelib",
+        "recipeIds": [
+          "bridge.recipe.hearthmere.crooked-hold-frame",
+          "bridge.recipe.hearthmere.springcut-lintel",
+          "bridge.recipe.hearthmere.cinder-wattle-corner",
+          "bridge.recipe.hearthmere.weathered-slate-bay",
+          "bridge.recipe.hearthmere.patched-palisade-run",
+          "bridge.recipe.hearthmere.leaning-gate-bent",
+          "bridge.recipe.hearthmere.oathless-well",
+          "bridge.recipe.hearthmere.rainwood-stack",
+          "bridge.recipe.hearthmere.split-slate-tally",
+          "bridge.recipe.hearthmere.chainless-lantern-perch",
+          "bridge.recipe.hearthmere.peat-drying-rack",
+          "bridge.recipe.hearthmere.hush-bell-yoke",
+          "bridge.recipe.hearthmere.spring-cup-plinth",
+          "bridge.recipe.hearthmere.travellers-splint-bench",
+          "bridge.recipe.hearthmere.blackpine-hook-clump",
+          "bridge.recipe.hearthmere.ashmoss-braid",
+          "bridge.recipe.hearthmere.cold-reed-knot",
+          "bridge.recipe.hearthmere.ridge-heather-fan",
+          "bridge.recipe.hearthmere.wall-lichen-shroud",
+          "bridge.recipe.hearthmere.spring-rill-crossing",
+          "bridge.recipe.hearthmere.slate-switchback",
+          "bridge.recipe.hearthmere.watchers-timber-step",
+          "bridge.recipe.hearthmere.banked-ember-court",
+          "bridge.recipe.hearthmere.broken-name-arch"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "bridge.pack.gloamharbor",
+      "siteId": "site.gloamharbor",
+      "maturity": "prototype_geometry",
+      "dependencyIds": [
+        "bridge.asset.gloamharbor.gloam-quarantine-pier",
+        "bridge.asset.gloamharbor.gloam-tidewall-breach",
+        "bridge.asset.gloamharbor.gloam-shuttered-store-bay",
+        "bridge.asset.gloamharbor.gloam-anchor-shadow-post",
+        "bridge.asset.gloamharbor.gloam-sealed-cargo-cradle",
+        "bridge.asset.gloamharbor.gloam-bell-rope-davit",
+        "bridge.asset.gloamharbor.gloam-brine-censer",
+        "bridge.asset.gloamharbor.gloam-tide-ledger-stone",
+        "bridge.asset.gloamharbor.gloam-saltgrass-whorl",
+        "bridge.asset.gloamharbor.gloam-kelp-rope-tangle",
+        "bridge.asset.gloamharbor.gloam-windthorn-clump",
+        "bridge.asset.gloamharbor.gloam-inward-anchor-walk"
+      ],
+      "dependencies": [
+        {
+          "id": "bridge.asset.gloamharbor.gloam-quarantine-pier",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-quarantine-pier.glb",
+          "sha256": "5a8ba4b89aadd52ba645a41d7b814123223f248f96cb8adb10eccb2b74963cf2",
+          "encodedBytes": 31084,
+          "gpuBytes": {
+            "vertex": 13248,
+            "index": 12336,
+            "textureMipChain": 0,
+            "total": 25584
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.gloamharbor.gloam-tidewall-breach",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-tidewall-breach.glb",
+          "sha256": "a004f080df7f7f263f09aa4c56a28af68ee5d507563b05d1bc89fbf6bf98ca8b",
+          "encodedBytes": 31028,
+          "gpuBytes": {
+            "vertex": 12864,
+            "index": 12048,
+            "textureMipChain": 0,
+            "total": 24912
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.gloamharbor.gloam-shuttered-store-bay",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-shuttered-store-bay.glb",
+          "sha256": "fd74762f54c80f890a7ee3bd3d9264bedd0c204fe0f35eeef072b38f87fac2b4",
+          "encodedBytes": 31664,
+          "gpuBytes": {
+            "vertex": 13248,
+            "index": 12336,
+            "textureMipChain": 0,
+            "total": 25584
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.gloamharbor.gloam-anchor-shadow-post",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-anchor-shadow-post.glb",
+          "sha256": "b180e49ba8986a7cb34679c134491469a5b1f8c04e52bb7d2e5abd4aa8ac1bf7",
+          "encodedBytes": 48472,
+          "gpuBytes": {
+            "vertex": 21456,
+            "index": 20736,
+            "textureMipChain": 0,
+            "total": 42192
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.gloamharbor.gloam-sealed-cargo-cradle",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-sealed-cargo-cradle.glb",
+          "sha256": "09e6272d196a35bb4a0e16487fb8bcb3f0b7c2c5059a270a60a67360d7f55e2f",
+          "encodedBytes": 35932,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.gloamharbor.gloam-bell-rope-davit",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-bell-rope-davit.glb",
+          "sha256": "7ed3711dce4bea8e4e051e98f0a3b0fd7913c32de619f46011f800b90af78f2a",
+          "encodedBytes": 48468,
+          "gpuBytes": {
+            "vertex": 21456,
+            "index": 20736,
+            "textureMipChain": 0,
+            "total": 42192
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.gloamharbor.gloam-brine-censer",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-brine-censer.glb",
+          "sha256": "dcaa25014606c357e7d4fc063f81b6fce6785241325b1c261e0925d4e3f56acc",
+          "encodedBytes": 36044,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.gloamharbor.gloam-tide-ledger-stone",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-tide-ledger-stone.glb",
+          "sha256": "de0ea28b7d28c0a2011954cb70a3b3cb3f6c0ec04b28a07f37a82e1c41f75f95",
+          "encodedBytes": 36404,
+          "gpuBytes": {
+            "vertex": 15456,
+            "index": 14832,
+            "textureMipChain": 0,
+            "total": 30288
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.gloamharbor.gloam-saltgrass-whorl",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-saltgrass-whorl.glb",
+          "sha256": "137adf20fedaa3da4c13ecb32a67d585abcf0de6e093eef340fc9e17a738096f",
+          "encodedBytes": 54276,
+          "gpuBytes": {
+            "vertex": 24984,
+            "index": 23232,
+            "textureMipChain": 0,
+            "total": 48216
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.gloamharbor.gloam-kelp-rope-tangle",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-kelp-rope-tangle.glb",
+          "sha256": "9fa4c64c1d6c5908563e202afb782773117655d317644c71594d647b59cc764e",
+          "encodedBytes": 51112,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.gloamharbor.gloam-windthorn-clump",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-windthorn-clump.glb",
+          "sha256": "1e1c3fa9a749e8427b925db364ce6e154d1de0a7dc9b8dd96f306c13ae020ab8",
+          "encodedBytes": 54316,
+          "gpuBytes": {
+            "vertex": 24984,
+            "index": 23232,
+            "textureMipChain": 0,
+            "total": 48216
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.gloamharbor.gloam-inward-anchor-walk",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/gloamharbor/gloam-inward-anchor-walk.glb",
+          "sha256": "082dfaabf8fcbccdb6d0d6e96eebc14c7e14b328a043d2b8888d600df6c39e20",
+          "encodedBytes": 32248,
+          "gpuBytes": {
+            "vertex": 13632,
+            "index": 12624,
+            "textureMipChain": 0,
+            "total": 26256
+          },
+          "externalUris": []
+        }
+      ],
+      "decodedGpuBytes": 418392,
+      "encodedBytes": 491048,
+      "limits": {
+        "discreteGpuBytes": 268435456,
+        "integratedGpuBytes": 100663296
+      },
+      "lods": [
+        {
+          "level": 0,
+          "maximumDistanceMeters": 28,
+          "triangleBudget": 12000
+        },
+        {
+          "level": 1,
+          "maximumDistanceMeters": 64,
+          "triangleBudget": 4000
+        },
+        {
+          "level": 2,
+          "maximumDistanceMeters": 160,
+          "triangleBudget": 1200
+        }
+      ],
+      "materialIds": [
+        "tarred-driftwood",
+        "salt-black-stone",
+        "tarnished-anchor-iron"
+      ],
+      "provenance": {
+        "sourceId": "slipcurve-sitelib",
+        "authorizationId": "owner-authorized-cross-project-sitelib",
+        "recipeIds": [
+          "bridge.recipe.gloamharbor.gloam-quarantine-pier",
+          "bridge.recipe.gloamharbor.gloam-tidewall-breach",
+          "bridge.recipe.gloamharbor.gloam-shuttered-store-bay",
+          "bridge.recipe.gloamharbor.gloam-anchor-shadow-post",
+          "bridge.recipe.gloamharbor.gloam-sealed-cargo-cradle",
+          "bridge.recipe.gloamharbor.gloam-bell-rope-davit",
+          "bridge.recipe.gloamharbor.gloam-brine-censer",
+          "bridge.recipe.gloamharbor.gloam-tide-ledger-stone",
+          "bridge.recipe.gloamharbor.gloam-saltgrass-whorl",
+          "bridge.recipe.gloamharbor.gloam-kelp-rope-tangle",
+          "bridge.recipe.gloamharbor.gloam-windthorn-clump",
+          "bridge.recipe.gloamharbor.gloam-inward-anchor-walk"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "bridge.pack.warden-reed",
+      "siteId": "site.warden-reed",
+      "maturity": "prototype_geometry",
+      "dependencyIds": [
+        "bridge.asset.warden-reed.reed-sunk-walkway",
+        "bridge.asset.warden-reed.reed-sluice-house-shell",
+        "bridge.asset.warden-reed.reed-reedward-platform",
+        "bridge.asset.warden-reed.reed-drainage-clapper",
+        "bridge.asset.warden-reed.reed-pond-depth-stake",
+        "bridge.asset.warden-reed.reed-mire-lantern-cradle",
+        "bridge.asset.warden-reed.reed-sealed-physic-chest",
+        "bridge.asset.warden-reed.reed-flood-mark-table",
+        "bridge.asset.warden-reed.reed-sedge-crown",
+        "bridge.asset.warden-reed.reed-ghost-reed-sheaf",
+        "bridge.asset.warden-reed.reed-black-fern-fan",
+        "bridge.asset.warden-reed.reed-drowned-bridge-turn"
+      ],
+      "dependencies": [
+        {
+          "id": "bridge.asset.warden-reed.reed-sunk-walkway",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-sunk-walkway.glb",
+          "sha256": "7c92acf8f78acd8b512874629bac07135c6b8a3c402ba2d18e940000dccab3f1",
+          "encodedBytes": 31716,
+          "gpuBytes": {
+            "vertex": 13632,
+            "index": 12624,
+            "textureMipChain": 0,
+            "total": 26256
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.warden-reed.reed-sluice-house-shell",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-sluice-house-shell.glb",
+          "sha256": "48e4566b0423a45d8a7ba18cd3dbb5984274a894d5bac987b9877ccf85087976",
+          "encodedBytes": 31636,
+          "gpuBytes": {
+            "vertex": 13248,
+            "index": 12336,
+            "textureMipChain": 0,
+            "total": 25584
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.warden-reed.reed-reedward-platform",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-reedward-platform.glb",
+          "sha256": "d578fb5c6744be6a3cb24684d0b2cdad4264d129002b741a664f866cca82583d",
+          "encodedBytes": 31668,
+          "gpuBytes": {
+            "vertex": 13248,
+            "index": 12336,
+            "textureMipChain": 0,
+            "total": 25584
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.warden-reed.reed-drainage-clapper",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-drainage-clapper.glb",
+          "sha256": "0056e6c173e885066cc9880f249c38582c4cf0e5b0885af2238eea018a8075e1",
+          "encodedBytes": 35928,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.warden-reed.reed-pond-depth-stake",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-pond-depth-stake.glb",
+          "sha256": "83acd89734624fa17bb59fa8883cd0e4f7135874029738be73ee5004eb8c77d0",
+          "encodedBytes": 43456,
+          "gpuBytes": {
+            "vertex": 19272,
+            "index": 18240,
+            "textureMipChain": 0,
+            "total": 37512
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.warden-reed.reed-mire-lantern-cradle",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-mire-lantern-cradle.glb",
+          "sha256": "92b74592bd7f9390b67e0ecbed7111b1225b0e93a42a8c683d2a63c6f65ac580",
+          "encodedBytes": 35940,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.warden-reed.reed-sealed-physic-chest",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-sealed-physic-chest.glb",
+          "sha256": "6128253301d8d085c186a916009ff8a82a0d4e5af88540b5f0c1df580b484c62",
+          "encodedBytes": 35944,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.warden-reed.reed-flood-mark-table",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-flood-mark-table.glb",
+          "sha256": "72d20319b14c5cd0e31a39577f5b696f6a5037d32a0c5945994ccd5e9e8611aa",
+          "encodedBytes": 36596,
+          "gpuBytes": {
+            "vertex": 15648,
+            "index": 14976,
+            "textureMipChain": 0,
+            "total": 30624
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.warden-reed.reed-sedge-crown",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-sedge-crown.glb",
+          "sha256": "5b7f60392e9b92f24e0ea044af8dfc4f4235bac44fe2d351793a143f3f99ec92",
+          "encodedBytes": 51128,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.warden-reed.reed-ghost-reed-sheaf",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-ghost-reed-sheaf.glb",
+          "sha256": "ecfc604f5e24db83e988b3253dd70bbb8581ca6593ece26ceeb0089137efe349",
+          "encodedBytes": 47848,
+          "gpuBytes": {
+            "vertex": 21720,
+            "index": 20160,
+            "textureMipChain": 0,
+            "total": 41880
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.warden-reed.reed-black-fern-fan",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-black-fern-fan.glb",
+          "sha256": "cbc5be6543c0be40b0fcc0843519668a89b6f884e23f46b1c8ccede1a56ffd7c",
+          "encodedBytes": 51048,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.warden-reed.reed-drowned-bridge-turn",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/warden-reed/reed-drowned-bridge-turn.glb",
+          "sha256": "30abef7d036592ebf58f46f090fb093e278005327b858d34300a840da1e3f20e",
+          "encodedBytes": 32300,
+          "gpuBytes": {
+            "vertex": 13632,
+            "index": 12624,
+            "textureMipChain": 0,
+            "total": 26256
+          },
+          "externalUris": []
+        }
+      ],
+      "decodedGpuBytes": 393648,
+      "encodedBytes": 465208,
+      "limits": {
+        "discreteGpuBytes": 268435456,
+        "integratedGpuBytes": 100663296
+      },
+      "lods": [
+        {
+          "level": 0,
+          "maximumDistanceMeters": 28,
+          "triangleBudget": 12000
+        },
+        {
+          "level": 1,
+          "maximumDistanceMeters": 64,
+          "triangleBudget": 4000
+        },
+        {
+          "level": 2,
+          "maximumDistanceMeters": 160,
+          "triangleBudget": 1200
+        }
+      ],
+      "materialIds": [
+        "bog-cured-timber",
+        "drowned-limestone",
+        "reed-cordage"
+      ],
+      "provenance": {
+        "sourceId": "slipcurve-sitelib",
+        "authorizationId": "owner-authorized-cross-project-sitelib",
+        "recipeIds": [
+          "bridge.recipe.warden-reed.reed-sunk-walkway",
+          "bridge.recipe.warden-reed.reed-sluice-house-shell",
+          "bridge.recipe.warden-reed.reed-reedward-platform",
+          "bridge.recipe.warden-reed.reed-drainage-clapper",
+          "bridge.recipe.warden-reed.reed-pond-depth-stake",
+          "bridge.recipe.warden-reed.reed-mire-lantern-cradle",
+          "bridge.recipe.warden-reed.reed-sealed-physic-chest",
+          "bridge.recipe.warden-reed.reed-flood-mark-table",
+          "bridge.recipe.warden-reed.reed-sedge-crown",
+          "bridge.recipe.warden-reed.reed-ghost-reed-sheaf",
+          "bridge.recipe.warden-reed.reed-black-fern-fan",
+          "bridge.recipe.warden-reed.reed-drowned-bridge-turn"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "bridge.pack.cairnmarket",
+      "siteId": "site.cairnmarket",
+      "maturity": "prototype_geometry",
+      "dependencyIds": [
+        "bridge.asset.cairnmarket.cairn-market-cairn-wall",
+        "bridge.asset.cairnmarket.cairn-ridge-road-shelter",
+        "bridge.asset.cairnmarket.cairn-burial-timber-bay",
+        "bridge.asset.cairnmarket.cairn-stone-weight-stall",
+        "bridge.asset.cairnmarket.cairn-ashcloth-awning",
+        "bridge.asset.cairnmarket.cairn-unread-tally-post",
+        "bridge.asset.cairnmarket.cairn-bonewhite-rope-coil",
+        "bridge.asset.cairnmarket.cairn-mourners-water-trough",
+        "bridge.asset.cairnmarket.cairn-grave-thyme-clump",
+        "bridge.asset.cairnmarket.cairn-wind-heather-crown",
+        "bridge.asset.cairnmarket.cairn-crooked-pine-spray",
+        "bridge.asset.cairnmarket.cairn-procession-switchback"
+      ],
+      "dependencies": [
+        {
+          "id": "bridge.asset.cairnmarket.cairn-market-cairn-wall",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-market-cairn-wall.glb",
+          "sha256": "0ffa7e79aa0ca9dac5905ed74d603e41aa43294bd3965572b8b3c0a3e677b145",
+          "encodedBytes": 31332,
+          "gpuBytes": {
+            "vertex": 13056,
+            "index": 12192,
+            "textureMipChain": 0,
+            "total": 25248
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.cairnmarket.cairn-ridge-road-shelter",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-ridge-road-shelter.glb",
+          "sha256": "42200605e52d330a14e8a3ee785c8e5f1645e5311d97a4fd4085fa3650b75aeb",
+          "encodedBytes": 31020,
+          "gpuBytes": {
+            "vertex": 12864,
+            "index": 12048,
+            "textureMipChain": 0,
+            "total": 24912
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.cairnmarket.cairn-burial-timber-bay",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-burial-timber-bay.glb",
+          "sha256": "a6c1fbdcfc799e8dd44c756c3b0417e027ca9b3a75e1544ea0fa61b4f5f89378",
+          "encodedBytes": 30980,
+          "gpuBytes": {
+            "vertex": 12864,
+            "index": 12048,
+            "textureMipChain": 0,
+            "total": 24912
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.cairnmarket.cairn-stone-weight-stall",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-stone-weight-stall.glb",
+          "sha256": "f29ae43132378a3716c52b5354bca3fa4a13bdbf2021345871a1601b8f94b57f",
+          "encodedBytes": 36256,
+          "gpuBytes": {
+            "vertex": 15456,
+            "index": 14832,
+            "textureMipChain": 0,
+            "total": 30288
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.cairnmarket.cairn-ashcloth-awning",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-ashcloth-awning.glb",
+          "sha256": "e2a5ce99d69f9c9d3ca99f8533346d60663d3da13440b19c513471ccfd0e0f05",
+          "encodedBytes": 36636,
+          "gpuBytes": {
+            "vertex": 15648,
+            "index": 14976,
+            "textureMipChain": 0,
+            "total": 30624
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.cairnmarket.cairn-unread-tally-post",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-unread-tally-post.glb",
+          "sha256": "04e56f17d07fbb5a2f4c17fc6440f33f0006f4a6a37e8ba125d2c0df7c630943",
+          "encodedBytes": 43456,
+          "gpuBytes": {
+            "vertex": 19272,
+            "index": 18240,
+            "textureMipChain": 0,
+            "total": 37512
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.cairnmarket.cairn-bonewhite-rope-coil",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-bonewhite-rope-coil.glb",
+          "sha256": "dae732da39d9c20dd0fccd2b5be5ef11739a6f2be6539d762fdf66cf46a49550",
+          "encodedBytes": 36632,
+          "gpuBytes": {
+            "vertex": 15648,
+            "index": 14976,
+            "textureMipChain": 0,
+            "total": 30624
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.cairnmarket.cairn-mourners-water-trough",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-mourners-water-trough.glb",
+          "sha256": "73622d72ebcf9e19f0b44ae1a6bfb8b1f1bc7296493f065a986456655b96ff1a",
+          "encodedBytes": 47152,
+          "gpuBytes": {
+            "vertex": 21168,
+            "index": 19968,
+            "textureMipChain": 0,
+            "total": 41136
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.cairnmarket.cairn-grave-thyme-clump",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-grave-thyme-clump.glb",
+          "sha256": "3894599d15c22c1761d78829ec7ec2aae580f9496bf994c4aac8c7639c4361d3",
+          "encodedBytes": 51084,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.cairnmarket.cairn-wind-heather-crown",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-wind-heather-crown.glb",
+          "sha256": "4bfdaed9916b4ea0680d72e10663892c55fe29648fc8ed54133f8f7b916394b4",
+          "encodedBytes": 47904,
+          "gpuBytes": {
+            "vertex": 21720,
+            "index": 20160,
+            "textureMipChain": 0,
+            "total": 41880
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.cairnmarket.cairn-crooked-pine-spray",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-crooked-pine-spray.glb",
+          "sha256": "21da983506128a5b21b6f8d957420d949fa2c140337995f979482f14945aa67a",
+          "encodedBytes": 51080,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.cairnmarket.cairn-procession-switchback",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/cairnmarket/cairn-procession-switchback.glb",
+          "sha256": "9d149f24031a12668b5a9c54cdc0ac3fc371e2d6c5875b30ea48c8a56a0dfb03",
+          "encodedBytes": 31704,
+          "gpuBytes": {
+            "vertex": 13632,
+            "index": 12624,
+            "textureMipChain": 0,
+            "total": 26256
+          },
+          "externalUris": []
+        }
+      ],
+      "decodedGpuBytes": 403488,
+      "encodedBytes": 475236,
+      "limits": {
+        "discreteGpuBytes": 268435456,
+        "integratedGpuBytes": 100663296
+      },
+      "lods": [
+        {
+          "level": 0,
+          "maximumDistanceMeters": 28,
+          "triangleBudget": 12000
+        },
+        {
+          "level": 1,
+          "maximumDistanceMeters": 64,
+          "triangleBudget": 4000
+        },
+        {
+          "level": 2,
+          "maximumDistanceMeters": 160,
+          "triangleBudget": 1200
+        }
+      ],
+      "materialIds": [
+        "gravefield-stone",
+        "smoke-aged-oak",
+        "wool-ash-cloth"
+      ],
+      "provenance": {
+        "sourceId": "slipcurve-sitelib",
+        "authorizationId": "owner-authorized-cross-project-sitelib",
+        "recipeIds": [
+          "bridge.recipe.cairnmarket.cairn-market-cairn-wall",
+          "bridge.recipe.cairnmarket.cairn-ridge-road-shelter",
+          "bridge.recipe.cairnmarket.cairn-burial-timber-bay",
+          "bridge.recipe.cairnmarket.cairn-stone-weight-stall",
+          "bridge.recipe.cairnmarket.cairn-ashcloth-awning",
+          "bridge.recipe.cairnmarket.cairn-unread-tally-post",
+          "bridge.recipe.cairnmarket.cairn-bonewhite-rope-coil",
+          "bridge.recipe.cairnmarket.cairn-mourners-water-trough",
+          "bridge.recipe.cairnmarket.cairn-grave-thyme-clump",
+          "bridge.recipe.cairnmarket.cairn-wind-heather-crown",
+          "bridge.recipe.cairnmarket.cairn-crooked-pine-spray",
+          "bridge.recipe.cairnmarket.cairn-procession-switchback"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "bridge.pack.hollow-abbey",
+      "siteId": "site.hollow-abbey",
+      "maturity": "prototype_geometry",
+      "dependencyIds": [
+        "bridge.asset.hollow-abbey.hollow-rootbound-arch",
+        "bridge.asset.hollow-abbey.hollow-ossuary-column",
+        "bridge.asset.hollow-abbey.hollow-sunken-stair-vault",
+        "bridge.asset.hollow-abbey.hollow-gravewax-stand",
+        "bridge.asset.hollow-abbey.hollow-silent-reliquary-box",
+        "bridge.asset.hollow-abbey.hollow-root-signal-basin",
+        "bridge.asset.hollow-abbey.hollow-bone-dust-sieve",
+        "bridge.asset.hollow-abbey.hollow-sealed-name-shelf",
+        "bridge.asset.hollow-abbey.hollow-pallid-root-mat",
+        "bridge.asset.hollow-abbey.hollow-cave-fern-wheel",
+        "bridge.asset.hollow-abbey.hollow-fungal-thread-cluster",
+        "bridge.asset.hollow-abbey.hollow-echo-vault-descent"
+      ],
+      "dependencies": [
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-rootbound-arch",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-rootbound-arch.glb",
+          "sha256": "e9be7b9a428f96f9454bf99d8f496a49f6ac68db180f7fb97791f5efc01ac6fa",
+          "encodedBytes": 37540,
+          "gpuBytes": {
+            "vertex": 16080,
+            "index": 15456,
+            "textureMipChain": 0,
+            "total": 31536
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-ossuary-column",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-ossuary-column.glb",
+          "sha256": "b83e466f812530a83a61b6c28db20d62f258805315f359a3947a464ff2c249a3",
+          "encodedBytes": 43436,
+          "gpuBytes": {
+            "vertex": 19272,
+            "index": 18240,
+            "textureMipChain": 0,
+            "total": 37512
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-sunken-stair-vault",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-sunken-stair-vault.glb",
+          "sha256": "a67ff166b28424610aaf05dd63027d4696c34965289cfdfdc078b1122b44b5c4",
+          "encodedBytes": 31060,
+          "gpuBytes": {
+            "vertex": 13248,
+            "index": 12336,
+            "textureMipChain": 0,
+            "total": 25584
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-gravewax-stand",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-gravewax-stand.glb",
+          "sha256": "c13b4f4c196a549587a85ca752e80ea9ef2f59da6a0b6c4e20164d039deec89c",
+          "encodedBytes": 35924,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-silent-reliquary-box",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-silent-reliquary-box.glb",
+          "sha256": "482672321b398f134d13007abe7c2413a26782b29232d60915b95a7f642fb059",
+          "encodedBytes": 36432,
+          "gpuBytes": {
+            "vertex": 15456,
+            "index": 14832,
+            "textureMipChain": 0,
+            "total": 30288
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-root-signal-basin",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-root-signal-basin.glb",
+          "sha256": "70f3b8a232a922b2b9919d15e838f9fd2dd62058c5ccea56a594c90e455d85a2",
+          "encodedBytes": 47168,
+          "gpuBytes": {
+            "vertex": 21168,
+            "index": 19968,
+            "textureMipChain": 0,
+            "total": 41136
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-bone-dust-sieve",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-bone-dust-sieve.glb",
+          "sha256": "af9821e1e03dd7c65f5ca0633723e5fa259282ee5b00948551cef55fff532038",
+          "encodedBytes": 36660,
+          "gpuBytes": {
+            "vertex": 15648,
+            "index": 14976,
+            "textureMipChain": 0,
+            "total": 30624
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-sealed-name-shelf",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-sealed-name-shelf.glb",
+          "sha256": "11a08ba057f9c7a38c017ad8ed47b9c01d1aa4d398a542f44d6a8f9eec15c2c4",
+          "encodedBytes": 35968,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-pallid-root-mat",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-pallid-root-mat.glb",
+          "sha256": "84d0d758e67b41c853787c7219b46b1dd7f072259078c85d1b2cf74309f5fd10",
+          "encodedBytes": 54308,
+          "gpuBytes": {
+            "vertex": 24984,
+            "index": 23232,
+            "textureMipChain": 0,
+            "total": 48216
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-cave-fern-wheel",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-cave-fern-wheel.glb",
+          "sha256": "64f4b8c7f5c08e24d299233ed1cdc244ac23bbc2f19caaa1d6b86d64823fa66a",
+          "encodedBytes": 51148,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-fungal-thread-cluster",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-fungal-thread-cluster.glb",
+          "sha256": "b5a2766f253476f8543566688a6ce4c700df9c3e71f2929271f14135a179b359",
+          "encodedBytes": 51128,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.hollow-abbey.hollow-echo-vault-descent",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-echo-vault-descent.glb",
+          "sha256": "4ca696d35f34ecfd5d3c98a4eba62793c4da43151788b0bea513853217e6ed60",
+          "encodedBytes": 32284,
+          "gpuBytes": {
+            "vertex": 13632,
+            "index": 12624,
+            "textureMipChain": 0,
+            "total": 26256
+          },
+          "externalUris": []
+        }
+      ],
+      "decodedGpuBytes": 421152,
+      "encodedBytes": 493056,
+      "limits": {
+        "discreteGpuBytes": 268435456,
+        "integratedGpuBytes": 100663296
+      },
+      "lods": [
+        {
+          "level": 0,
+          "maximumDistanceMeters": 28,
+          "triangleBudget": 12000
+        },
+        {
+          "level": 1,
+          "maximumDistanceMeters": 64,
+          "triangleBudget": 4000
+        },
+        {
+          "level": 2,
+          "maximumDistanceMeters": 160,
+          "triangleBudget": 1200
+        }
+      ],
+      "materialIds": [
+        "pale-karst-stone",
+        "root-stained-mortar",
+        "gravewax-bronze"
+      ],
+      "provenance": {
+        "sourceId": "slipcurve-sitelib",
+        "authorizationId": "owner-authorized-cross-project-sitelib",
+        "recipeIds": [
+          "bridge.recipe.hollow-abbey.hollow-rootbound-arch",
+          "bridge.recipe.hollow-abbey.hollow-ossuary-column",
+          "bridge.recipe.hollow-abbey.hollow-sunken-stair-vault",
+          "bridge.recipe.hollow-abbey.hollow-gravewax-stand",
+          "bridge.recipe.hollow-abbey.hollow-silent-reliquary-box",
+          "bridge.recipe.hollow-abbey.hollow-root-signal-basin",
+          "bridge.recipe.hollow-abbey.hollow-bone-dust-sieve",
+          "bridge.recipe.hollow-abbey.hollow-sealed-name-shelf",
+          "bridge.recipe.hollow-abbey.hollow-pallid-root-mat",
+          "bridge.recipe.hollow-abbey.hollow-cave-fern-wheel",
+          "bridge.recipe.hollow-abbey.hollow-fungal-thread-cluster",
+          "bridge.recipe.hollow-abbey.hollow-echo-vault-descent"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "bridge.pack.salt-watch",
+      "siteId": "site.salt-watch",
+      "maturity": "prototype_geometry",
+      "dependencyIds": [
+        "bridge.asset.salt-watch.salt-false-horizon-wall",
+        "bridge.asset.salt-watch.salt-crusted-watch-shelf",
+        "bridge.asset.salt-watch.salt-wind-hollow-buttress",
+        "bridge.asset.salt-watch.salt-ague-direction-vane",
+        "bridge.asset.salt-watch.salt-brine-dry-basin",
+        "bridge.asset.salt-watch.salt-veiled-signal-frame",
+        "bridge.asset.salt-watch.salt-saltbound-pack-cradle",
+        "bridge.asset.salt-watch.salt-horizon-measure-stone",
+        "bridge.asset.salt-watch.salt-glasswort-spine",
+        "bridge.asset.salt-watch.salt-white-thorn-cage",
+        "bridge.asset.salt-watch.salt-dry-lichen-scroll",
+        "bridge.asset.salt-watch.salt-vanishing-causeway"
+      ],
+      "dependencies": [
+        {
+          "id": "bridge.asset.salt-watch.salt-false-horizon-wall",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-false-horizon-wall.glb",
+          "sha256": "9bfcafb209efd8614e12742881b93e878051d88dc528f44e7ed2029c8920a859",
+          "encodedBytes": 31640,
+          "gpuBytes": {
+            "vertex": 13248,
+            "index": 12336,
+            "textureMipChain": 0,
+            "total": 25584
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.salt-watch.salt-crusted-watch-shelf",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-crusted-watch-shelf.glb",
+          "sha256": "19d5b962380b37d15fd34682866101547b82b91befa0efbd91127f66f4cda1d0",
+          "encodedBytes": 31676,
+          "gpuBytes": {
+            "vertex": 13248,
+            "index": 12336,
+            "textureMipChain": 0,
+            "total": 25584
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.salt-watch.salt-wind-hollow-buttress",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-wind-hollow-buttress.glb",
+          "sha256": "1025cd6a422059f7ec7f721ec81e00809f59d47d06557491ab5cbd3e96ba1700",
+          "encodedBytes": 31340,
+          "gpuBytes": {
+            "vertex": 13056,
+            "index": 12192,
+            "textureMipChain": 0,
+            "total": 25248
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.salt-watch.salt-ague-direction-vane",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-ague-direction-vane.glb",
+          "sha256": "a283627ceaaa768f7c78a04ff04dc6ffe880620c4e7d7db5a40e298463386f08",
+          "encodedBytes": 35952,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.salt-watch.salt-brine-dry-basin",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-brine-dry-basin.glb",
+          "sha256": "1c0d14c02bfd0c03d00bf848098bd888eeeb493dfd92f3dc1742baeba7173e72",
+          "encodedBytes": 47244,
+          "gpuBytes": {
+            "vertex": 21168,
+            "index": 19968,
+            "textureMipChain": 0,
+            "total": 41136
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.salt-watch.salt-veiled-signal-frame",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-veiled-signal-frame.glb",
+          "sha256": "87d0a0899b8c64ae9cd442156b884a4ba4ea3a3867fd0b3fec0d82443e548cea",
+          "encodedBytes": 36308,
+          "gpuBytes": {
+            "vertex": 15456,
+            "index": 14832,
+            "textureMipChain": 0,
+            "total": 30288
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.salt-watch.salt-saltbound-pack-cradle",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-saltbound-pack-cradle.glb",
+          "sha256": "5cb585ec0e8b5d23f1c713eedfd9bc56ad02e867d6435e2f8fd7ab7f2e8af820",
+          "encodedBytes": 36780,
+          "gpuBytes": {
+            "vertex": 15648,
+            "index": 14976,
+            "textureMipChain": 0,
+            "total": 30624
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.salt-watch.salt-horizon-measure-stone",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-horizon-measure-stone.glb",
+          "sha256": "2537715265d5261dba7cb52e14d9b969d0d1a03aa4dbd5b9802be7bd7f26958d",
+          "encodedBytes": 36016,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.salt-watch.salt-glasswort-spine",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-glasswort-spine.glb",
+          "sha256": "4a4788a675b4ff30565b29acf501e02cce587943a3f16d94f5d6e52be9fcc891",
+          "encodedBytes": 54300,
+          "gpuBytes": {
+            "vertex": 24984,
+            "index": 23232,
+            "textureMipChain": 0,
+            "total": 48216
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.salt-watch.salt-white-thorn-cage",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-white-thorn-cage.glb",
+          "sha256": "7652702bb1c166d08f4e8109bbf953b7395c7ece1b5f5a35213fd9c3c272419c",
+          "encodedBytes": 51008,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.salt-watch.salt-dry-lichen-scroll",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-dry-lichen-scroll.glb",
+          "sha256": "745eb8163a7a544e39fa020f773c200d36e78a4fd3eda96ab15a71a490dece0e",
+          "encodedBytes": 51112,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.salt-watch.salt-vanishing-causeway",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/salt-watch/salt-vanishing-causeway.glb",
+          "sha256": "c4207ecc78f2caa678b5dbd68040fca4db0c949805e9b15a659e345ee0a07ae4",
+          "encodedBytes": 31384,
+          "gpuBytes": {
+            "vertex": 13440,
+            "index": 12480,
+            "textureMipChain": 0,
+            "total": 25920
+          },
+          "externalUris": []
+        }
+      ],
+      "decodedGpuBytes": 402600,
+      "encodedBytes": 474760,
+      "limits": {
+        "discreteGpuBytes": 268435456,
+        "integratedGpuBytes": 100663296
+      },
+      "lods": [
+        {
+          "level": 0,
+          "maximumDistanceMeters": 28,
+          "triangleBudget": 12000
+        },
+        {
+          "level": 1,
+          "maximumDistanceMeters": 64,
+          "triangleBudget": 4000
+        },
+        {
+          "level": 2,
+          "maximumDistanceMeters": 160,
+          "triangleBudget": 1200
+        }
+      ],
+      "materialIds": [
+        "mirror-salt-crust",
+        "wind-flayed-stone",
+        "clouded-brass"
+      ],
+      "provenance": {
+        "sourceId": "slipcurve-sitelib",
+        "authorizationId": "owner-authorized-cross-project-sitelib",
+        "recipeIds": [
+          "bridge.recipe.salt-watch.salt-false-horizon-wall",
+          "bridge.recipe.salt-watch.salt-crusted-watch-shelf",
+          "bridge.recipe.salt-watch.salt-wind-hollow-buttress",
+          "bridge.recipe.salt-watch.salt-ague-direction-vane",
+          "bridge.recipe.salt-watch.salt-brine-dry-basin",
+          "bridge.recipe.salt-watch.salt-veiled-signal-frame",
+          "bridge.recipe.salt-watch.salt-saltbound-pack-cradle",
+          "bridge.recipe.salt-watch.salt-horizon-measure-stone",
+          "bridge.recipe.salt-watch.salt-glasswort-spine",
+          "bridge.recipe.salt-watch.salt-white-thorn-cage",
+          "bridge.recipe.salt-watch.salt-dry-lichen-scroll",
+          "bridge.recipe.salt-watch.salt-vanishing-causeway"
+        ]
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "bridge.pack.ember-gate",
+      "siteId": "site.ember-gate",
+      "maturity": "prototype_geometry",
+      "dependencyIds": [
+        "bridge.asset.ember-gate.ember-breath-kiln-shell",
+        "bridge.asset.ember-gate.ember-mineral-hoist-frame",
+        "bridge.asset.ember-gate.ember-slag-channel-bay",
+        "bridge.asset.ember-gate.ember-soot-tithe-rack",
+        "bridge.asset.ember-gate.ember-mute-bellows-cradle",
+        "bridge.asset.ember-gate.ember-cinder-measure-bin",
+        "bridge.asset.ember-gate.ember-sealed-ore-casket",
+        "bridge.asset.ember-gate.ember-ash-mask-stand",
+        "bridge.asset.ember-gate.ember-ember-thistle-knot",
+        "bridge.asset.ember-gate.ember-smoke-lichen-fan",
+        "bridge.asset.ember-gate.ember-slag-reed-clump",
+        "bridge.asset.ember-gate.ember-breathless-conveyor-rise"
+      ],
+      "dependencies": [
+        {
+          "id": "bridge.asset.ember-gate.ember-breath-kiln-shell",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-breath-kiln-shell.glb",
+          "sha256": "dab615ad49ed629de3a54addb55fca37b7ae18ba9e11eae21c6685f0117b97be",
+          "encodedBytes": 47260,
+          "gpuBytes": {
+            "vertex": 21408,
+            "index": 19872,
+            "textureMipChain": 0,
+            "total": 41280
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.ember-gate.ember-mineral-hoist-frame",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-mineral-hoist-frame.glb",
+          "sha256": "b676796ff496cd9f9796c124c28f0a872743f500e1d76e35a8582e3126df5c99",
+          "encodedBytes": 31688,
+          "gpuBytes": {
+            "vertex": 13248,
+            "index": 12336,
+            "textureMipChain": 0,
+            "total": 25584
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.ember-gate.ember-slag-channel-bay",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-slag-channel-bay.glb",
+          "sha256": "dd843840543c4217c5e6a2cfcbd09ccd4e164491f562880d3cded3f39d9f0c21",
+          "encodedBytes": 30976,
+          "gpuBytes": {
+            "vertex": 12864,
+            "index": 12048,
+            "textureMipChain": 0,
+            "total": 24912
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.ember-gate.ember-soot-tithe-rack",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-soot-tithe-rack.glb",
+          "sha256": "942f8787927d3efdb348163acdea0c4aca5123e8e35f7cf03fadc2184b9a7f3b",
+          "encodedBytes": 36320,
+          "gpuBytes": {
+            "vertex": 15456,
+            "index": 14832,
+            "textureMipChain": 0,
+            "total": 30288
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.ember-gate.ember-mute-bellows-cradle",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-mute-bellows-cradle.glb",
+          "sha256": "be08b7c763f898c797c92ecd2cac43f30778c3061c9df0f315be22c51c401cd9",
+          "encodedBytes": 36284,
+          "gpuBytes": {
+            "vertex": 15456,
+            "index": 14832,
+            "textureMipChain": 0,
+            "total": 30288
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.ember-gate.ember-cinder-measure-bin",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-cinder-measure-bin.glb",
+          "sha256": "40013ee0a10697d5e6ce64faa6a2775429c6148c0e7e8733e0d389f2cf69811e",
+          "encodedBytes": 35972,
+          "gpuBytes": {
+            "vertex": 15264,
+            "index": 14688,
+            "textureMipChain": 0,
+            "total": 29952
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.ember-gate.ember-sealed-ore-casket",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-sealed-ore-casket.glb",
+          "sha256": "38f205f8ba01e335fb18548dc5565629682956fd0dc080ddf658d4f106d843f6",
+          "encodedBytes": 36348,
+          "gpuBytes": {
+            "vertex": 15456,
+            "index": 14832,
+            "textureMipChain": 0,
+            "total": 30288
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.ember-gate.ember-ash-mask-stand",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-ash-mask-stand.glb",
+          "sha256": "f20a1bec0f35ea24022e0edadc7842bf1a43a048a030db149e3da33c00d635f4",
+          "encodedBytes": 36600,
+          "gpuBytes": {
+            "vertex": 15648,
+            "index": 14976,
+            "textureMipChain": 0,
+            "total": 30624
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.ember-gate.ember-ember-thistle-knot",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-ember-thistle-knot.glb",
+          "sha256": "847f9e9383502f7cdfe91b25a9938d0a00cadb9c7bef18858172add0cc30b5ef",
+          "encodedBytes": 51056,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.ember-gate.ember-smoke-lichen-fan",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-smoke-lichen-fan.glb",
+          "sha256": "122e54f0f12bd123fa32b0cfb8f01ab38425be19837b5695484dbb82af728717",
+          "encodedBytes": 54240,
+          "gpuBytes": {
+            "vertex": 24984,
+            "index": 23232,
+            "textureMipChain": 0,
+            "total": 48216
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.ember-gate.ember-slag-reed-clump",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-slag-reed-clump.glb",
+          "sha256": "a6a6081305963e97197526a20109c328881466da9d5cd1d97fee393228963dd9",
+          "encodedBytes": 51112,
+          "gpuBytes": {
+            "vertex": 23352,
+            "index": 21696,
+            "textureMipChain": 0,
+            "total": 45048
+          },
+          "externalUris": []
+        },
+        {
+          "id": "bridge.asset.ember-gate.ember-breathless-conveyor-rise",
+          "kind": "glb",
+          "path": "assets/3d/runtime/bridge/ember-gate/ember-breathless-conveyor-rise.glb",
+          "sha256": "9fe8c45cd293f4ac3449daaf367a3d706b580736212f3977ad8ab7d52ac5a846",
+          "encodedBytes": 32604,
+          "gpuBytes": {
+            "vertex": 13824,
+            "index": 12768,
+            "textureMipChain": 0,
+            "total": 26592
+          },
+          "externalUris": []
+        }
+      ],
+      "decodedGpuBytes": 408120,
+      "encodedBytes": 480460,
+      "limits": {
+        "discreteGpuBytes": 268435456,
+        "integratedGpuBytes": 100663296
+      },
+      "lods": [
+        {
+          "level": 0,
+          "maximumDistanceMeters": 28,
+          "triangleBudget": 12000
+        },
+        {
+          "level": 1,
+          "maximumDistanceMeters": 64,
+          "triangleBudget": 4000
+        },
+        {
+          "level": 2,
+          "maximumDistanceMeters": 160,
+          "triangleBudget": 1200
+        }
+      ],
+      "materialIds": [
+        "slag-black-basalt",
+        "heat-checked-iron",
+        "sulfur-clay"
+      ],
+      "provenance": {
+        "sourceId": "slipcurve-sitelib",
+        "authorizationId": "owner-authorized-cross-project-sitelib",
+        "recipeIds": [
+          "bridge.recipe.ember-gate.ember-breath-kiln-shell",
+          "bridge.recipe.ember-gate.ember-mineral-hoist-frame",
+          "bridge.recipe.ember-gate.ember-slag-channel-bay",
+          "bridge.recipe.ember-gate.ember-soot-tithe-rack",
+          "bridge.recipe.ember-gate.ember-mute-bellows-cradle",
+          "bridge.recipe.ember-gate.ember-cinder-measure-bin",
+          "bridge.recipe.ember-gate.ember-sealed-ore-casket",
+          "bridge.recipe.ember-gate.ember-ash-mask-stand",
+          "bridge.recipe.ember-gate.ember-ember-thistle-knot",
+          "bridge.recipe.ember-gate.ember-smoke-lichen-fan",
+          "bridge.recipe.ember-gate.ember-slag-reed-clump",
+          "bridge.recipe.ember-gate.ember-breathless-conveyor-rise"
+        ]
+      }
+    }
+  ]
+}

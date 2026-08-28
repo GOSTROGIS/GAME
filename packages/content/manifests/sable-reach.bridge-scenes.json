@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "sable-reach.bridge.scene-index-v1",
+  "canonicalModule": "@hearthmere/content/site-scenes",
+  "atlasCellCount": 768,
+  "sceneBackedCellCount": 7,
+  "dataOnlyCellCount": 761,
+  "proofSiteCount": 7,
+  "nonHearthmereInstancesPerSite": 72,
+  "hearthmereLegacyInstanceCount": 51,
+  "hearthmerePolicy": {
+    "preserveStableInstanceIds": true,
+    "preserveCoordinates": true,
+    "preserveSemanticAnchors": true,
+    "rewriteSaveCoordinates": false
+  },
+  "maturity": "prototype_geometry",
+  "seamlessTraversalApproved": false
+}

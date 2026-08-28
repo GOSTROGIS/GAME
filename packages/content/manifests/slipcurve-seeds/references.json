@@ -1,0 +1,1212 @@
+{
+  "count": 134,
+  "references": [
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-01-excavation.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 1,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-02-foundations.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 2,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-03-ground-slab.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 3,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-04-structural-frame.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 4,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-05-floors-decks.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 5,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-06-blockwork.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 6,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-07-scaffold-cladding.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 7,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-08-glazing.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 8,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-09-roof-on.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 9,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-10-full-glazing.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 10,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-11-rooftop-plant.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 11,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "detached-house-1-storey-site-cleared",
+      "file": "phases/house-12-complete.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 12,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-00-site-cleared.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 0,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-01-excavation.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 1,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-02-foundations.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 2,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-03-ground-slab.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 3,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-04-structural-frame.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 4,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-05-floors-decks.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 5,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-06-blockwork.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 6,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-07-scaffold-cladding.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 7,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-08-glazing.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 8,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-09-roof-on.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 9,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-10-full-glazing.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 10,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-11-rooftop-plant.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 11,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-high-rise-tower-12-storey-site-cleared-2858",
+      "file": "phases/high-rise-tower-12-complete.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 12,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-00-site-cleared.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 0,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-01-excavation.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 1,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-02-foundations.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 2,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-03-ground-slab.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 3,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-04-structural-frame.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 4,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-05-floors-decks.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 5,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-06-blockwork.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 6,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-07-scaffold-cladding.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 7,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-08-glazing.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 8,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-09-roof-on.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 9,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-10-full-glazing.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 10,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-11-rooftop-plant.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 11,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-warehouse-1-storey-site-cleared-3298",
+      "file": "phases/warehouse-12-complete.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 12,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-00-site-cleared.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 0,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-01-excavation.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 1,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-02-foundations.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 2,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-03-ground-slab.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 3,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-04-structural-frame.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 4,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-05-floors-decks.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 5,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-06-blockwork.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 6,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-07-scaffold-cladding.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 7,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-08-glazing.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 8,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-09-roof-on.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 9,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-10-full-glazing.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 10,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-11-rooftop-plant.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 11,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "building-multi-storey-car-park-3-storey-site-cleared-4068",
+      "file": "phases/car-park-12-complete.svg",
+      "generator": "gBuilding",
+      "group": "phase-sequence",
+      "phase": 12,
+      "sceneRotationDeg": null,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-000deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 0,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-030deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 30,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-060deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 60,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-090deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 90,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-120deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 120,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-150deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 150,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-180deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 180,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-210deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 210,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-240deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 240,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-270deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 270,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-300deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 300,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "rotations/tower-crane-330deg.svg",
+      "generator": "gTowerCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 330,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-000deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 0,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-030deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 30,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-060deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 60,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-090deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 90,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-120deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 120,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-150deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 150,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-180deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 180,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-210deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 210,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-240deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 240,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-270deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 270,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-300deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 300,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "mobile-crane",
+      "file": "rotations/mobile-crane-330deg.svg",
+      "generator": "gMobileCrane",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 330,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-000deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 0,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-030deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 30,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-060deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 60,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-090deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 90,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-120deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 120,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-150deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 150,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-180deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 180,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-210deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 210,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-240deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 240,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-270deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 270,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-300deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 300,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "rotations/excavator-330deg.svg",
+      "generator": "gExcavator",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 330,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-000deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 0,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-030deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 30,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-060deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 60,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-090deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 90,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-120deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 120,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-150deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 150,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-180deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 180,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-210deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 210,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-240deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 240,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-270deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 270,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-300deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 300,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "concrete-mixer-truck-white",
+      "file": "rotations/mixer-truck-330deg.svg",
+      "generator": "gMixerTruck",
+      "group": "rotation-study",
+      "phase": null,
+      "sceneRotationDeg": 330,
+      "view": "iso"
+    },
+    {
+      "catalogueId": "tower-crane",
+      "file": "views/tower-crane-side.svg",
+      "generator": "gTowerCrane",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "views/excavator-yellow-top.svg",
+      "generator": "gExcavator",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "top"
+    },
+    {
+      "catalogueId": "excavator-yellow",
+      "file": "views/excavator-yellow-side.svg",
+      "generator": "gExcavator",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": "rigid-dump-truck-yellow",
+      "file": "views/rigid-dump-truck-yellow-top.svg",
+      "generator": "gDumpTruck",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "top"
+    },
+    {
+      "catalogueId": "rigid-dump-truck-yellow",
+      "file": "views/rigid-dump-truck-yellow-side.svg",
+      "generator": "gDumpTruck",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": "concrete-boom-pump-yellow",
+      "file": "views/concrete-boom-pump-yellow-top.svg",
+      "generator": "gConcretePump",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "top"
+    },
+    {
+      "catalogueId": "concrete-boom-pump-yellow",
+      "file": "views/concrete-boom-pump-yellow-side.svg",
+      "generator": "gConcretePump",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": "site-office",
+      "file": "views/site-office-top.svg",
+      "generator": "gCabin",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "top"
+    },
+    {
+      "catalogueId": "site-office",
+      "file": "views/site-office-side.svg",
+      "generator": "gCabin",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": "container-20-ft-blue",
+      "file": "views/container-20-ft-blue-top.svg",
+      "generator": "gContainer",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "top"
+    },
+    {
+      "catalogueId": "container-20-ft-blue",
+      "file": "views/container-20-ft-blue-side.svg",
+      "generator": "gContainer",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": "scaffold-bay",
+      "file": "views/scaffold-bay-top.svg",
+      "generator": "gScaffoldBay",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "top"
+    },
+    {
+      "catalogueId": "scaffold-bay",
+      "file": "views/scaffold-bay-side.svg",
+      "generator": "gScaffoldBay",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": "portable-toilet",
+      "file": "views/portable-toilet-top.svg",
+      "generator": "gPortaloo",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "top"
+    },
+    {
+      "catalogueId": "portable-toilet",
+      "file": "views/portable-toilet-side.svg",
+      "generator": "gPortaloo",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": "wheeled-loader-yellow",
+      "file": "views/wheeled-loader-yellow-top.svg",
+      "generator": "gLoader",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "top"
+    },
+    {
+      "catalogueId": "wheeled-loader-yellow",
+      "file": "views/wheeled-loader-yellow-side.svg",
+      "generator": "gLoader",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": "single-drum-roller-yellow",
+      "file": "views/single-drum-roller-yellow-top.svg",
+      "generator": "gRoller",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "top"
+    },
+    {
+      "catalogueId": "single-drum-roller-yellow",
+      "file": "views/single-drum-roller-yellow-side.svg",
+      "generator": "gRoller",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": "bulldozer-yellow",
+      "file": "views/bulldozer-yellow-top.svg",
+      "generator": "gDozer",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "top"
+    },
+    {
+      "catalogueId": "bulldozer-yellow",
+      "file": "views/bulldozer-yellow-side.svg",
+      "generator": "gDozer",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": "telehandler-yellow",
+      "file": "views/telehandler-yellow-top.svg",
+      "generator": "gTelehandler",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "top"
+    },
+    {
+      "catalogueId": "telehandler-yellow",
+      "file": "views/telehandler-yellow-side.svg",
+      "generator": "gTelehandler",
+      "group": "orthographic-view",
+      "phase": null,
+      "sceneRotationDeg": null,
+      "view": "side"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/site-establishment-iso-000.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 0,
+      "view": "iso"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/site-establishment-iso-045.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 45,
+      "view": "iso"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/site-establishment-iso-090.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 90,
+      "view": "iso"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/site-establishment-top-000.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 0,
+      "view": "top"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/earthworks-iso-000.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 0,
+      "view": "iso"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/earthworks-iso-045.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 45,
+      "view": "iso"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/earthworks-iso-090.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 90,
+      "view": "iso"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/earthworks-top-000.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 0,
+      "view": "top"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/concrete-pour-iso-000.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 0,
+      "view": "iso"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/concrete-pour-iso-045.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 45,
+      "view": "iso"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/concrete-pour-iso-090.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 90,
+      "view": "iso"
+    },
+    {
+      "catalogueId": null,
+      "file": "scenes/concrete-pour-top-000.svg",
+      "generator": "renderScene",
+      "group": "scene",
+      "phase": null,
+      "sceneRotationDeg": 0,
+      "view": "top"
+    }
+  ],
+  "schema": "SlipcurveHistoricalReferenceCrosswalkV1"
+}

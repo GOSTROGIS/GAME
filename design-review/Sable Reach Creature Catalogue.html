@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sable Reach — Creature Catalogue</title>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #080b0d; --bone: #d8d0bd; --bone-bright: #e1dbca; --bone-dim: #b7b6ad;
+    --muted: #8e928b; --gold: #b99552; --gold-bright: #e4c77e;
+    --ember: #bd6135; --moss: #52665c; --focus: #658e9e;
+    --line: rgba(216,208,189,.18); --line-soft: rgba(216,208,189,.1);
+    --glass: linear-gradient(140deg, rgba(20,27,29,.91), rgba(7,10,12,.88));
+    --selected: linear-gradient(135deg, rgba(185,149,82,.13), rgba(19,27,29,.8));
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--ink); color: var(--bone); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(185,149,82,.35); }
+  a:hover { color: var(--gold-bright); border-bottom-color: var(--gold-bright); }
+  canvas { display: block; }
+
+  #grain { position: fixed; inset: -50%; z-index: 9; pointer-events: none; opacity: .07;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    animation: grain .28s steps(2,end) infinite; }
+  @keyframes grain { 0%{transform:translate(0)} 25%{transform:translate(2%,-1%)} 50%{transform:translate(-1%,2%)} 75%{transform:translate(1%,1%)} }
+  @media (prefers-reduced-motion: reduce) { #grain { animation: none; } }
+
+  .eyebrow { margin: 0; color: var(--gold); font: 500 10px/1.3 Cinzel, Georgia, serif; letter-spacing: .28em; text-transform: uppercase; }
+  .micro { margin: 0; color: var(--muted); font: 500 8px/1.3 Cinzel, Georgia, serif; letter-spacing: .18em; text-transform: uppercase; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  #root { height: 100%; }
+  #shell { position: relative; z-index: 2; display: grid; grid-template-rows: auto minmax(0,1fr); height: 100%; }
+  header { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; padding: 18px 24px 16px; border-bottom: 1px solid var(--line); }
+  header h1 { margin: 8px 0 0; color: var(--bone-bright); font: 500 27px/1 Cinzel, Georgia, serif; letter-spacing: -.02em; }
+  header h1 em { color: var(--gold-bright); font-style: normal; font-weight: 400; }
+  #ledger { display: flex; gap: 26px; flex-shrink: 0; }
+  #ledger div { text-align: right; }
+  #ledger b { display: block; margin-top: 4px; color: var(--bone); font: 400 19px Cinzel, Georgia, serif; }
+  #ledger b.flag { color: var(--gold-bright); }
+  #ledger b.ok { color: #7f9b8c; }
+
+  main { display: grid; grid-template-columns: 292px minmax(0,1fr) 330px; min-height: 0; }
+  #rail { border-right: 1px solid var(--line); overflow-y: auto; }
+  .ghead { padding: 18px 18px 8px; }
+  .ghead .gn { margin: 6px 0 0; color: var(--muted); font: italic 12.5px/1.4 'IM Fell English', Georgia, serif; }
+  .item { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px; width: 100%; padding: 10px 18px; min-height: 44px; background: transparent; border: 0; border-top: 1px solid var(--line-soft); color: inherit; text-align: left; cursor: pointer; font: inherit; transition: background .2s ease; }
+  .item:hover { background: rgba(31,39,40,.5); }
+  .item:hover .nm { color: var(--gold-bright); }
+  .item[aria-selected="true"] { background: var(--selected); box-shadow: inset 3px 0 var(--gold); }
+  .item[aria-selected="true"] .nm { color: var(--gold-bright); }
+  .item .nm { display: block; color: var(--bone); font: 400 13.5px Cinzel, Georgia, serif; }
+  .item .sub { display: block; margin-top: 3px; color: var(--muted); font: 400 9px Inter, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+  .item .sp { color: var(--bone-dim); font: 500 11px Inter, system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+  .item:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: -3px; }
+
+  #stage { position: relative; display: grid; grid-template-rows: auto minmax(0,1fr); min-width: 0; background: #0b1113; }
+  #bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; row-gap: 8px; flex-wrap: wrap; padding: 10px 16px; border-bottom: 1px solid var(--line); background: rgba(7,10,12,.6); }
+  #bar .who { display: flex; align-items: baseline; gap: 11px; min-width: 0; flex: 1 1 180px; }
+  #bar .who h2 { margin: 0; color: var(--bone-bright); font: 400 16px Cinzel, Georgia, serif; white-space: nowrap; }
+  #bar .who code { color: var(--gold); font: 10.5px ui-monospace, Menlo, monospace; }
+  .seg { display: flex; flex-shrink: 0; }
+  .seg button { appearance: none; padding: 7px 9px; min-height: 32px; background: rgba(5,8,9,.55); border: 1px solid var(--line); border-right-width: 0; color: var(--muted); font: 500 8.5px Cinzel, Georgia, serif; letter-spacing: .13em; text-transform: uppercase; white-space: nowrap; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+  .seg button:last-child { border-right-width: 1px; }
+  .seg button:hover { color: var(--gold-bright); }
+  .seg button[aria-pressed="true"] { color: var(--gold-bright); background: rgba(185,149,82,.13); border-color: var(--gold); }
+  .seg button:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+
+  #hint { position: absolute; left: 18px; bottom: 16px; display: flex; gap: 14px; align-items: center; pointer-events: none; }
+  #hint span { color: var(--muted); font: 500 8px Cinzel, Georgia, serif; letter-spacing: .17em; text-transform: uppercase; }
+  #hint kbd { padding: 2px 6px; border: 1px solid var(--line); border-radius: 2px; color: var(--bone-dim); font: 500 9px Inter, system-ui, sans-serif; background: rgba(5,8,9,.6); }
+
+  #panel { border-left: 1px solid var(--line); overflow-y: auto; padding: 18px; }
+  .card { padding: 14px 15px; margin-bottom: 8px; background: var(--glass); border: 1px solid var(--line); }
+  .card p { margin: 8px 0 0; }
+  .card p.body { color: var(--bone-dim); font: 14.5px/1.55 'IM Fell English', Georgia, serif; }
+  .card p.sys { color: #a7aaa4; font: 12px/1.6 Inter, system-ui, sans-serif; }
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 5px 0; border-top: 1px solid var(--line-soft); font: 400 12px Inter, system-ui, sans-serif; text-align: right; color: var(--bone-dim); font-variant-numeric: tabular-nums; }
+  td:first-child { text-align: left; color: var(--muted); font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase; }
+  tr:first-child td { border-top: 0; }
+  td.big { color: var(--gold-bright); font-size: 15px; }
+  td.ok { color: #7f9b8c; } td.warn { color: var(--ember); }
+  .pill { display: inline-block; padding: 3px 7px; font: 500 8px Cinzel, Georgia, serif; letter-spacing: .14em; text-transform: uppercase; border: 1px solid; }
+  .pill.ok { color: #7f9b8c; background: rgba(82,102,92,.14); border-color: rgba(82,102,92,.5); }
+  .pill.gold { color: var(--gold-bright); background: rgba(185,149,82,.12); border-color: rgba(185,149,82,.4); }
+  .swatch { display: inline-block; width: 8px; height: 8px; margin-right: 6px; vertical-align: middle; }
+  @media (max-width: 1240px) { main { grid-template-columns: 250px minmax(0,1fr); } #panel { display: none; } }
+</style>
+</head>
+<body>
+<div id="root">
+<div id="grain"></div>
+
+<div id="shell">
+  <header>
+    <div>
+      <p class="eyebrow">Sable Reach &middot; Ambient fauna &middot; not the bestiary</p>
+      <h1>Five thousand <em>small lives</em></h1>
+    </div>
+    <div id="ledger">
+      <div><p class="micro">Families</p><b class="num" id="lFam">&mdash;</b></div>
+      <div><p class="micro">Unique, built</p><b class="num ok" id="lUniq">&mdash;</b></div>
+      <div><p class="micro">Of 5k target</p><b class="num flag" id="lPct">&mdash;</b></div>
+      <div><p class="micro">Dressed</p><b class="num" id="lDress">&mdash;</b></div>
+    </div>
+  </header>
+
+  <main>
+    <nav id="rail" aria-label="Creature families"></nav>
+
+    <section id="stage">
+      <div id="bar">
+        <div class="who"><h2 id="gName">&mdash;</h2><code id="gId"></code></div>
+        <div class="seg" role="group" aria-label="Scene" id="modeSeg"></div>
+        <div class="seg" role="group" aria-label="Biome" id="biomeSeg"></div>
+        <div class="seg" role="group" aria-label="Glow tier" id="glowSeg"></div>
+        <div class="seg" role="group" aria-label="Playback">
+          <button id="pgPrev">&larr; Page</button>
+          <button id="pgNext">Page &rarr;</button>
+          <button id="pause">Pause</button>
+        </div>
+      </div>
+      <canvas id="gl"></canvas>
+      <div id="hint">
+        <span>Move the pointer over the ground to flush them</span>
+        <kbd>drag</kbd><span>orbit</span>
+      </div>
+    </section>
+
+    <aside id="panel" aria-label="Family detail"></aside>
+  </main>
+</div>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { setLod, measure, rnd } from './kit/hm-core.js';
+import {
+  FAUNA_GENERATORS, GLOW_TIERS, rollGlow, applyGlow, makeAgent, stepCreature, spaceOf,
+  PHYSICS_SOURCES, WATER_BY_FAMILY, WATER_CLASS,
+} from './kit/hm-fauna.js';
+import { FAUNA2_GENERATORS } from './kit/hm-fauna2.js';
+import { BIOMES } from './kit/hm-biome.js';
+import { makeFire, stepFires, grassTuft, pebble, twig, fireUniforms } from './kit/hm-world.js';
+
+/* -------------------------------------------------------------- registry
+ * Every family is BUILT. There is no declared-but-unbuilt column here: the
+ * asset catalogue needed one because it was projecting toward 100k, and this
+ * set is small enough to finish. If a row is in the rail, it runs. */
+const ALL = [...FAUNA_GENERATORS, ...FAUNA2_GENERATORS]
+  .map((g) => ({ ...g, space: spaceOf(g.axes) }));
+
+const DOMAINS = [
+  { key: 'fauna-ground', label: 'Ground vertebrates', note: 'Quadrupeds and ground birds. Four-beat gaits solved from footfall phase, not two sine waves.' },
+  { key: 'fauna-small', label: 'Arthropods', note: 'Six and eight legs. Alternating tripod and metachronal wave \u2014 the real gaits, which is why they never look unstable.' },
+  { key: 'fauna-air', label: 'Fliers', note: 'Wingbeat is the one thing here driven by a clock rather than by distance travelled, because air is not a footprint. The bank is derived from turn rate.' },
+  { key: 'fauna-water', label: 'Water and margins', note: 'Undulation mode: the body follows the head\u2019s own past path, so a swimming thing tracks around obstacles instead of shimmying through them.' },
+  { key: 'fauna-lit', label: 'Lit \u2014 the shimmer', note: 'Firefly swarms and marsh lights. Both are declared vfx rows in the region kits (marsh_light_drifter, bell_dust_pulse) that had no asset. Lit by nature, not by the rarity roll.' },
+];
+
+const TARGET = 5000;
+const uniqueBuilt = ALL.reduce((n, g) => n + g.space, 0);
+const FINISHES = GLOW_TIERS.length * BIOMES.length; // glow x biome, reported apart
+const singles = ALL.filter((g) => g.space < 2);
+if (singles.length) console.warn('FAIL \u2014 families with <2 unique:', singles.map((g) => g.id));
+console.info('[fauna] ' + ALL.length + ' families, ' + uniqueBuilt.toLocaleString() +
+  ' unique built (target ' + TARGET.toLocaleString() + ')');
+document.getElementById('lFam').textContent = ALL.length;
+document.getElementById('lUniq').textContent = uniqueBuilt.toLocaleString();
+document.getElementById('lPct').textContent = Math.round((uniqueBuilt / TARGET) * 100) + '%';
+document.getElementById('lDress').textContent = (uniqueBuilt * FINISHES).toLocaleString();
+
+/* Rarity check. The odds in GLOW_TIERS are a declaration; this samples the
+ * generator so the panel can print declared against observed instead of asking
+ * anyone to trust the table. 200k rolls costs a few milliseconds once. */
+const RARITY_SAMPLE = 200000;
+const observed = Object.fromEntries(GLOW_TIERS.map((t) => [t.id, 0]));
+for (let i = 0; i < RARITY_SAMPLE; i++) observed[rollGlow(i * 2654435761 + 7)['id']]++;
+
+/* ------------------------------------------------------------------ scene */
+const canvas = document.getElementById('gl');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.6));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.3;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#0b1113');
+scene.fog = new THREE.Fog('#0b1113', 20, 88);
+const camera = new THREE.PerspectiveCamera(42, 2, 0.02, 300);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.maxPolarAngle = Math.PI * 0.495;
+
+/* Dusk. The one hour where a lit creature is visible and the ground is not
+   black \u2014 which is the only lighting in which this catalogue makes its point. */
+scene.add(new THREE.HemisphereLight(0x8fa6ae, 0x453a2e, 1.15));
+const key = new THREE.DirectionalLight(0xbccdd2, 2.0);
+key.position.set(-9, 8, 6);
+key.castShadow = true;
+key.shadow.mapSize.set(1024, 1024);
+key.shadow.camera.left = -14; key.shadow.camera.right = 14;
+key.shadow.camera.top = 14; key.shadow.camera.bottom = -14;
+key.shadow.bias = -0.0006;
+scene.add(key);
+const fill = new THREE.DirectionalLight(0xb0793f, 0.45);
+fill.position.set(7, 2.4, -6);
+scene.add(fill);
+
+const groundMat = new THREE.MeshStandardMaterial({ color: new THREE.Color('#39413e'), roughness: 0.96, metalness: 0 });
+groundMat.name = 'pen-ground';
+const ground = new THREE.Mesh(new THREE.CircleGeometry(40, 64), groundMat);
+ground.rotation.x = -Math.PI / 2;
+ground.receiveShadow = true;
+scene.add(ground);
+
+/* ------------------------------------------------------------------ water
+ * Water is a VOLUME, not a plane. The first pass drew a flat translucent disc
+ * at y=0.012 and called it a pond: fish rode on the mud at bed level plus hip
+ * height, and any fish that wandered past its home radius kept going up the
+ * bank, because nothing in the world knew water had an edge.
+ *
+ * Now the bed is a curved basin, and `profile()` below is the ONE shape
+ * function both the rules and the mesh read, so what constrains the animals and
+ * what you see cannot drift apart. depthAt() is what every rule reads, and the
+ * bed is also the GROUND, so a crab walks on it and a wading deer stands in it
+ * without either being a special case.
+ */
+const WATER = { on: false, x: 0, z: 0, R: 4.6, depth: 0.9, surfaceY: 0 };
+
+/* SQUARED, not a plain paraboloid, and the reason is measured. A plain
+   (1 - u²) bowl has its STEEPEST slope exactly at the rim — 2D/R, which for a
+   metre-deep pool is a 40° bank — and the rim is precisely where the depth
+   bands put every walking animal, because that is where the water is shallow
+   enough for them to be allowed. A hare standing on that bank cannot reach
+   across it: 93.6 mm of IK residual against 0.0 on the flat, and a vermin 44.6.
+   Squaring puts zero slope at the rim and keeps the depth in the middle, so the
+   margin is walkable and the swimmers still have a column. */
+const profile = (u) => { const t = 1 - u * u; return t * t; };
+function depthAt(x, z) {
+  if (!WATER.on) return 0;
+  const u = Math.hypot(x - WATER.x, z - WATER.z) / WATER.R;
+  return u >= 1 ? 0 : WATER.depth * profile(u);
+}
+const groundAt = (x, z) => -depthAt(x, z);
+const WATER_VIEW = { depthAt, surfaceY: WATER.surfaceY };
+
+const poolMat = new THREE.MeshStandardMaterial({
+  color: new THREE.Color('#12292d'), roughness: 0.22, metalness: 0.08,
+  transparent: true, opacity: 0.58, side: THREE.DoubleSide,
+});
+poolMat.name = 'still-water';
+const pool = new THREE.Mesh(new THREE.CircleGeometry(4.6, 48), poolMat);
+pool.rotation.x = -Math.PI / 2;
+pool.visible = false;
+scene.add(pool);
+
+const bedMat = new THREE.MeshStandardMaterial({
+  color: new THREE.Color('#232a28'), roughness: 0.98, metalness: 0, side: THREE.DoubleSide,
+});
+bedMat.name = 'pool-bed';
+const bed = new THREE.Mesh(new THREE.BufferGeometry(), bedMat);
+bed.visible = false;
+bed.receiveShadow = true;
+scene.add(bed);
+
+/* The basin, as a real surface rather than a scaled disc, driven by the same
+   profile() depthAt() reports — so the visible bed IS the constraint surface.
+   Double-sided because the winding of a hand-built fan is not worth reasoning
+   about for an opaque mud bowl. */
+function basinGeom(R, D, seg = 48, rings = 11) {
+  const pos = [0, -D, 0], idx = [];
+  for (let ri = 1; ri <= rings; ri++) {
+    const rr = (ri / rings) * R;
+    const y = -D * profile(rr / R);
+    for (let si = 0; si < seg; si++) {
+      const a = (si / seg) * Math.PI * 2;
+      pos.push(Math.cos(a) * rr, y, Math.sin(a) * rr);
+    }
+  }
+  for (let si = 0; si < seg; si++) idx.push(0, 1 + si, 1 + ((si + 1) % seg));
+  for (let ri = 1; ri < rings; ri++) {
+    const a0 = 1 + (ri - 1) * seg, b0 = 1 + ri * seg;
+    for (let si = 0; si < seg; si++) {
+      const s1 = (si + 1) % seg;
+      idx.push(a0 + si, b0 + si, b0 + s1, a0 + si, b0 + s1, a0 + s1);
+    }
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  g.setIndex(idx);
+  g.computeVertexNormals();
+  return g;
+}
+
+// The dry ground becomes a ring when there is a pool, so the basin is visible
+// through the hole instead of being hidden under a flat plane.
+function setGroundGeom() {
+  ground.geometry.dispose();
+  if (WATER.on) {
+    ground.geometry = new THREE.RingGeometry(WATER.R, 40, 64, 1);
+    ground.position.set(WATER.x, 0, WATER.z);
+  } else {
+    ground.geometry = new THREE.CircleGeometry(40, 64);
+    ground.position.set(0, 0, 0);
+  }
+}
+
+const stageRoot = new THREE.Group();
+scene.add(stageRoot);
+const fires = [];
+let creatures = [];
+
+/* Loop fault tolerance, and why it is not a swallowed error.
+ *
+ * three.js re-registers its animation frame AFTER the callback returns, so a
+ * single throw anywhere in the loop body does not drop one frame — it ends the
+ * loop for the rest of the session. Nothing repaints, no stat updates, and the
+ * page still answers clicks, so from the outside it looks like every reading
+ * froze at an em-dash for no reason. That is a silent fatal, and it is the worst
+ * failure shape a diagnostic tool can have.
+ *
+ * So each stage of the loop is guarded individually and the failures are
+ * COUNTED and SHOWN in the panel, with the first message kept and logged. One
+ * bad creature can no longer take the scene down with it, and the number that
+ * says so is on screen rather than in a console nobody has open. */
+let stepFails = 0, firstFail = null;
+function noteFail(e) {
+  stepFails++;
+  if (!firstFail) {
+    firstFail = (e && e.message) || String(e);
+    console.error('creature loop step failed:', e);
+  }
+}
+
+/* -------------------------------------------------------------- clutter
+ * One prototype per layer, its meshes baked and instanced. A grass tuft is 24
+ * triangles, which is the only reason a floor of them is affordable. */
+function protoParts(fn) {
+  const g = fn();
+  g.updateMatrixWorld(true);
+  const out = [];
+  g.traverse((m) => {
+    if (!m.isMesh) return;
+    out.push({ geometry: m.geometry.clone().applyMatrix4(m.matrixWorld), material: m.material });
+  });
+  return out;
+}
+/* Clutter is deliberately held below the animals. Real grass stands taller
+   than a hare's back, and authored at true scale it hides the subject in every
+   frame — so the tufts are scaled down here rather than the animals scaled up.
+   That is a viewer choice and it is stated: the creature dimensions are real,
+   the ground dressing in this tool is not. */
+const CLUTTER = [
+  { parts: protoParts(grassTuft), n: 520, s: [0.32, 0.78] },
+  { parts: protoParts(pebble), n: 240, s: [0.4, 1.0] },
+  { parts: protoParts(twig), n: 130, s: [0.45, 1.05] },
+];
+const clutterRoot = new THREE.Group();
+clutterRoot.name = 'clutter';
+stageRoot.add(clutterRoot);
+function layClutter(radius, seed) {
+  clutterRoot.clear();
+  const m4 = new THREE.Matrix4(), e = new THREE.Euler(), q = new THREE.Quaternion(), v = new THREE.Vector3(), sc = new THREE.Vector3();
+  CLUTTER.forEach((L, li) => {
+    const rand = rnd(0x51a + seed + li * 7919);
+    // Density is per unit area, not per pen: a spider's pen is one metre across
+    // and nine hundred grass tufts in it would be a hedge.
+    const N = Math.max(3, Math.round(L.n * Math.pow(radius / 13, 2)));
+    const mats = [];
+    const poolR = WATER.on ? WATER.R + 0.15 : -1;
+    for (let i = 0; i < N; i++) {
+      const a = rand() * Math.PI * 2, r = Math.sqrt(rand()) * radius;
+      const x = Math.cos(a) * r, z = Math.sin(a) * r;
+      if (poolR > 0 && Math.hypot(x - WATER.x, z - WATER.z) < poolR) continue;
+      const s = L.s[0] + rand() * (L.s[1] - L.s[0]);
+      e.set(0, rand() * Math.PI * 2, 0);
+      mats.push(m4.clone().compose(v.set(x, 0, z), q.setFromEuler(e), sc.set(s, s, s)));
+    }
+    L.parts.forEach((p, pi) => {
+      const im = new THREE.InstancedMesh(p.geometry, p.material, mats.length);
+      im.name = 'clutter-' + li + '-' + pi;
+      im.receiveShadow = true;
+      for (let i = 0; i < mats.length; i++) im.setMatrixAt(i, mats[i]);
+      im.instanceMatrix.needsUpdate = true;
+      clutterRoot.add(im);
+    });
+  });
+}
+
+/* ------------------------------------------------------------ biome retint
+ * The object finish system in hm-biome.js applies a geometry overlay as well
+ * as a retint, and that overlay is WRONG on an animal: icicles hanging off a
+ * hare is not a rime hare, it is a bug. So creatures take the biome's retint
+ * only, and the wear tiers \u2014 which work by detaching parts to the floor \u2014
+ * are not offered at all. Condition is an axis inside each generator instead,
+ * where it belongs. */
+const tintCache = new Map();
+function retint(obj, biome) {
+  if (!biome || biome.tintAmount === 0) return;
+  obj.traverse((n) => {
+    if (!n.isMesh || !n.material || n.material.isPointsMaterial) return;
+    const k = (n.material.name || 'm') + '|' + biome.id;
+    let m = tintCache.get(k);
+    if (!m) {
+      m = n.material.clone();
+      m.name = (n.material.name || 'm') + '-' + biome.id;
+      if (m.color) m.color.lerp(new THREE.Color(biome.tint), biome.tintAmount * 0.8);
+      if (m.roughness !== undefined) m.roughness = Math.min(0.99, m.roughness + biome.roughShift * 0.5);
+      tintCache.set(k, m);
+    }
+    n.material = m;
+  });
+}
+
+/* ------------------------------------------------------------ light budget
+ * WORLD_ASSET_BUDGETS.dynamicLightsVisible is 18 for a whole region. Braziers
+ * are practicals and take theirs first; glowing creatures get what is left.
+ * Anything refused still glows \u2014 it just does not light its surroundings, and
+ * the panel says how many were refused rather than quietly dropping them. */
+const LIGHT_CAP = 18;
+let lightsUsed = 0, lightsWanted = 0;
+
+function spawn(gen, variant, home, opts = {}) {
+  let o;
+  try { o = gen.build(variant); } catch (e) { console.error('build failed', gen.id, variant, e); return null; }
+  const c = o.userData.creature;
+  retint(o, opts.biome);
+
+  const tier = c.glowSelf ? null : (opts.forceGlow || rollGlow((variant + 1) * 2654435761 + (opts.seed || 0)));
+  let want = null;
+  if (tier) want = applyGlow(o, tier, variant + 1);
+  if (c.wantsLight) want = { wantsLight: true, intensity: c.lightIntensity, color: c.hue };
+  if (want && want.wantsLight) {
+    lightsWanted++;
+    if (lightsUsed < LIGHT_CAP) {
+      lightsUsed++;
+      const L = new THREE.PointLight(new THREE.Color(want.color), want.intensity * 1.6, 5.5, 2);
+      L.name = 'glow-light';
+      L.position.y = Math.max(c.hipHeight, 0.1);
+      o.add(L);
+      c.light = L;
+    } else c.lightRefused = true;
+  }
+
+  o.traverse((m) => {
+    if (!m.isMesh) return;
+    m.castShadow = !m.userData.noCast;
+    m.receiveShadow = !m.userData.noShadow;
+  });
+  c.agent = makeAgent(c, (variant + 1) * 7919 + (opts.seed || 0), home);
+  c.variant = variant;
+  c.tris = measure(o).tris;
+  stageRoot.add(o);
+  creatures.push(o);
+  return o;
+}
+
+function clearScene() {
+  for (const o of creatures) stageRoot.remove(o);
+  creatures = [];
+  fires.length = 0;
+  stepFails = 0; firstFail = null;
+  for (const ch of [...stageRoot.children]) if (ch !== clutterRoot) stageRoot.remove(ch);
+  lightsUsed = 0; lightsWanted = 0;
+}
+
+/* Braziers stand on the ground, and the ground now has a hole in it. Seat each
+   light on whatever surface is actually under it, and if a pool has been placed
+   over its spot, push it clear rather than leaving it standing in a pond with
+   its flame hovering unsupported. */
+function seatLights(lightVecs) {
+  fires.forEach((f, i) => {
+    const p = f.group.position;
+    if (WATER.on) {
+      const dx = p.x - WATER.x, dz = p.z - WATER.z;
+      const d = Math.hypot(dx, dz);
+      const keep = WATER.R + 0.45;
+      if (d < keep) {
+        if (d > 1e-3) { p.x = WATER.x + (dx / d) * keep; p.z = WATER.z + (dz / d) * keep; }
+        else { p.x = WATER.x + keep; p.z = WATER.z; }
+      }
+    }
+    p.y = groundAt(p.x, p.z);
+    /* addBraziers returns COPIES of the flame positions, not references, and
+       ctx.lights is fed from that array every frame — so moving a brazier here
+       without syncing left the moths steering at a light that was no longer
+       there. The stored y is the flame's height above its own ground. */
+    const v = lightVecs && lightVecs[i];
+    if (v) { v.y += p.y - 0; v.x = p.x; v.z = p.z; }
+  });
+}
+
+/** Braziers. They are here for a reason beyond light: `lantern_moth_sparse`
+ *  says moths gather at them, and the engine's flutter mode steers toward the
+ *  nearest light. Without a light in the scene that behaviour is unfalsifiable. */
+function addBraziers(spots) {
+  const out = [];
+  spots.forEach(([x, z, s], i) => {
+    const f = makeFire(s, 0x300 + i);
+    f.group.position.set(x, 0, z);
+    stageRoot.add(f.group);
+    // stepFires() reads `phase` and `baseIntensity`, which makeFire() does not
+    // return. Pushing the raw result left both undefined, so the flicker term
+    // came out NaN and one NaN PointLight intensity poisons the accumulated
+    // irradiance for every standard material in the scene — the whole set goes
+    // black while emissive and additive geometry survives. Same shape as the
+    // placement in Hearthmere Living World.html, which had it right.
+    fires.push({ ...f, phase: i * 2.1, baseIntensity: f.light.intensity });
+    lightsUsed++;
+    out.push(new THREE.Vector3(x, 0.7 * s, z));
+  });
+  return out;
+}
+
+/** A lamp with no body: the light a brazier would give, without a metre of
+ *  ironwork looming over a beetle. Still counts against the light budget,
+ *  because the budget is about lights, not about geometry. */
+function addLamps(spots) {
+  const out = [];
+  spots.forEach(([x, z, h], i) => {
+    const L = new THREE.PointLight(new THREE.Color('#bd6135'), 0.55, Math.max(h * 6, 1.5), 2);
+    L.name = 'lamp-' + i;
+    L.position.set(x, h, z);
+    stageRoot.add(L);
+    lightsUsed++;
+    out.push(new THREE.Vector3(x, h, z));
+  });
+  return out;
+}
+
+/* ------------------------------------------------------------------ scenes */
+let mode = 'pen';
+let biome = BIOMES[0];
+let forceGlow = null;
+let current = ALL[0];
+let page = 0;
+let paused = false;
+let lights = [];
+
+/* Pen radius per family, in metres of real animal.
+ *
+ * This table exists because the first pass framed every pen at eleven metres
+ * and a hare is three hundred millimetres long: ten of them came out as five
+ * pixels each, which is not a review tool. A catalogue of small things has to
+ * be framed by the thing, so the pen scales to the species and the camera is
+ * framed on the actual bounding box of what was spawned. Fliers get more room
+ * than their body needs because the point of a flier is the path. */
+const PEN = {
+  'fauna.hare': 2.4, 'fauna.deer': 7, 'fauna.vermin': 1.5, 'fauna.ground-bird': 2.4,
+  'fauna.frog': 1.2, 'fauna.serpent': 2.8, 'fauna.beetle': 0.7, 'fauna.spider': 0.55,
+  'fauna.crab': 0.9, 'fauna.moth': 3, 'fauna.bat': 4.5, 'fauna.flyer': 11,
+  'fauna.fish': 2.6, 'fauna.glowfly': 6, 'fauna.wisp': 4,
+};
+/* A crab is a MARGIN animal, not an obligate swimmer. Listing it as aquatic put
+   its pen in 'in' mode — a pool centred on the whole enclosure, which submerged
+   every crab under an unlit water plane where none of them could be seen, and
+   swallowed the braziers with it. Intertidal is the truthful classification and
+   it happens to be the one that renders. */
+const AQUATIC = new Set(['fauna.fish']);
+const MARGIN = new Set(['fauna.frog', 'fauna.serpent', 'fauna.wisp', 'fauna.crab']);
+let penSubmerged = false;
+
+function setPool(mode2, penR, depthOverride) {
+  if (mode2 === 'none') {
+    WATER.on = false;
+    pool.visible = false;
+    bed.visible = false;
+    setGroundGeom();
+    return;
+  }
+  const R = mode2 === 'in' ? penR * 0.95 : penR * 0.5;
+  WATER.on = true;
+  WATER.R = R;
+  WATER.x = mode2 === 'in' ? 0 : penR * 0.55;
+  WATER.z = mode2 === 'in' ? 0 : -penR * 0.3;
+  /* Depth is per purpose, not one number. A margin pool exists to give waders
+     and amphibians a waterline, so it is shallow; an aquatic pen is a swimming
+     basin and needs a column an obligate swimmer can hold a depth in. Getting
+     this wrong is what made every wader spend its life being pushed out of a
+     pool that was too deep for it to legally stand in. */
+  WATER.depth = depthOverride != null ? depthOverride
+    : mode2 === 'in' ? Math.min(0.95, Math.max(0.25, R * 0.42))
+      : 0.16;
+  pool.geometry.dispose();
+  pool.geometry = new THREE.CircleGeometry(R, 48);
+  pool.position.set(WATER.x, WATER.surfaceY + 0.004, WATER.z);
+  pool.visible = true;
+  bed.geometry.dispose();
+  bed.geometry = basinGeom(R, WATER.depth);
+  bed.position.set(WATER.x, WATER.surfaceY, WATER.z);
+  bed.visible = true;
+  setGroundGeom();
+}
+
+function buildPen() {
+  clearScene();
+  const penR = PEN[current.id] || 3;
+  penSubmerged = AQUATIC.has(current.id);
+  setPool(penSubmerged ? 'in' : MARGIN.has(current.id) ? 'edge' : 'none', penR);
+  layClutter(penR * 2.2, 1);
+  // A brazier is a metre tall. In a beetle's pen it would be scenery on the
+  // scale of a cathedral, so below two metres the light stays and the geometry
+  // goes — the flutter behaviour still has something to steer toward.
+  lights = penR >= 2
+    ? addBraziers([[-penR * 0.85, -penR * 0.6, Math.min(penR * 0.14, 1)],
+      [penR * 0.8, penR * 0.55, Math.min(penR * 0.11, 0.8)]])
+    : addLamps([[-penR * 0.9, -penR * 0.6, 0.35], [penR * 0.85, penR * 0.5, 0.3]]);
+  seatLights(lights);
+  setLod(1);
+  const n = current.budgetClass === 'standard' ? 6 : 10;
+  const start = (page * n) % current.space;
+  for (let i = 0; i < n; i++) {
+    const variant = (start + i) % current.space;
+    const a = (i / n) * Math.PI * 2 + 0.3;
+    const inWater = penSubmerged || (MARGIN.has(current.id) && i % 2 === 0);
+    const home = inWater && WATER.on
+      ? { x: WATER.x + Math.cos(a) * penR * 0.22, z: WATER.z + Math.sin(a) * penR * 0.22, radius: penR * 0.3 }
+      : { x: Math.cos(a) * penR * 0.55, z: Math.sin(a) * penR * 0.55, radius: penR * 0.42 };
+    spawn(current, variant, home, { biome, forceGlow, seed: page * 977 });
+  }
+  setLod(0);
+  shadowFor(penR);
+  frameOnCreatures(penR);
+  renderPanel({ start, n, penR });
+}
+
+/* The glade: every family at once, glow rolled honestly per spawn. This is the
+ * actual deliverable \u2014 a family grid proves the geometry, a mixed scene proves
+ * they cohabit without turning into a zoo exhibit. */
+const GLADE_MIX = [
+  ['fauna.hare', 4], ['fauna.vermin', 3], ['fauna.deer', 2], ['fauna.ground-bird', 3],
+  ['fauna.beetle', 3], ['fauna.spider', 2], ['fauna.frog', 2], ['fauna.serpent', 1],
+  ['fauna.fish', 2], ['fauna.crab', 1], ['fauna.moth', 4], ['fauna.bat', 2],
+  ['fauna.flyer', 2], ['fauna.glowfly', 2], ['fauna.wisp', 2],
+];
+function buildGlade() {
+  clearScene();
+  penSubmerged = false;
+  // A real pond: deep in the middle for the fish, shallow at the rim for
+  // everything that only wants its feet wet. The paraboloid gives both.
+  setPool('edge', 11, 0.9);
+  layClutter(15, 2);
+  lights = addBraziers([[-7, -3, 1], [4.5, 6.5, 0.8], [-2, 8, 0.7]]);
+  seatLights(lights);
+  setLod(1);
+  const rand = rnd(0x91ad3);
+  let seed = 41;
+  GLADE_MIX.forEach(([id, count]) => {
+    const gen = ALL.find((g) => g.id === id);
+    for (let i = 0; i < count; i++) {
+      const variant = Math.floor(rand() * gen.space);
+      const water = id === 'fauna.fish';
+      const nearWater = ['fauna.frog', 'fauna.wisp', 'fauna.crab'].includes(id);
+      let home;
+      if (water) {
+        const a = rand() * Math.PI * 2, r = rand() * WATER.R * 0.38;
+        home = { x: WATER.x + Math.cos(a) * r, z: WATER.z + Math.sin(a) * r, radius: WATER.R * 0.3 };
+      } else if (nearWater) {
+        const a = rand() * Math.PI * 2, r = WATER.R * 0.82 + rand() * 1.8;
+        home = { x: WATER.x + Math.cos(a) * r, z: WATER.z + Math.sin(a) * r, radius: 2.6 };
+      } else {
+        /* Land families must not START in the pond. layClutter already rejected
+           this footprint and the creature loop did not, so every animal that
+           happened to land inside it spent its life being shoved out by the
+           medium clamp — 534 clamps in four and a half seconds, a third of the
+           scene standing still. Re-roll rather than clamp. */
+        let x = 0, z = 0;
+        for (let t = 0; t < 30; t++) {
+          const aa = rand() * Math.PI * 2, rr = 2 + rand() * 11;
+          x = Math.cos(aa) * rr; z = Math.sin(aa) * rr;
+          if (Math.hypot(x - WATER.x, z - WATER.z) > WATER.R + 1.2) break;
+        }
+        home = { x, z, radius: 5 };
+      }
+      spawn(gen, variant, home, { biome, forceGlow, seed: seed += 977 });
+    }
+  });
+  setLod(0);
+  shadowFor(15);
+  frame(13, 0.34);
+  renderPanel({ glade: true });
+}
+
+/** Shadow camera sized to the scene. A ±14 m orthographic box over a beetle pen
+ *  spends its whole 1024² map on empty ground and the animal gets no shadow at
+ *  all — the reason a small creature can look pasted on. */
+function shadowFor(radius) {
+  const r = Math.max(radius * 1.3, 0.6);
+  key.shadow.camera.left = -r; key.shadow.camera.right = r;
+  key.shadow.camera.top = r; key.shadow.camera.bottom = -r;
+  key.shadow.camera.near = 0.02;
+  key.shadow.camera.far = r * 6 + 10;
+  key.shadow.bias = -0.0004 * Math.max(radius / 6, 0.25);
+  key.position.set(-radius * 1.1, radius * 1.5 + 1.2, radius * 0.8);
+  key.shadow.camera.updateProjectionMatrix();
+}
+
+function frame(radius, pitch) {
+  const dist = radius / Math.tan((camera.fov * Math.PI) / 360) * 0.62;
+  const p = pitch ?? 0.42;
+  camera.position.set(dist * 0.55, dist * p, dist * 0.72);
+  controls.target.set(0, radius * 0.06, 0);
+  camera.near = Math.max(dist / 900, 0.005);
+  camera.far = dist * 40;
+  camera.updateProjectionMatrix();
+  controls.update();
+}
+
+/** Frame on what was actually spawned, not on the pen. Padded so the animals
+ *  have somewhere to walk to without leaving the shot. */
+function frameOnCreatures(penR) {
+  const bb = new THREE.Box3();
+  for (const o of creatures) bb.expandByObject(o);
+  if (bb.isEmpty()) return frame(penR);
+  const sph = bb.getBoundingSphere(new THREE.Sphere());
+  const radius = Math.max(sph.radius * 1.5, penR * 0.85);
+  const dist = radius / Math.tan((camera.fov * Math.PI) / 360) * 0.95;
+  camera.position.set(
+    sph.center.x + dist * 0.5, sph.center.y + dist * 0.4, sph.center.z + dist * 0.76);
+  controls.target.copy(sph.center);
+  camera.near = Math.max(dist / 900, 0.004);
+  camera.far = dist * 40;
+  camera.updateProjectionMatrix();
+  controls.update();
+}
+
+function rebuild() { (mode === 'pen' ? buildPen : buildGlade)(); }
+
+/* -------------------------------------------------------------------- panel */
+let stats = { tris: 0, calls: 0, fps: 0, residual: 0, skate: 0, gaits: {}, particles: 0 };
+function renderPanel(ctxInfo) {
+  const el = document.getElementById('panel');
+  const g = current;
+  const seen = Object.fromEntries(GLOW_TIERS.map((t) => [t.id, 0]));
+  for (const o of creatures) {
+    const t = o.userData.creature.glow;
+    if (t) seen[t.id]++;
+    else if (o.userData.creature.glowSelf) seen.lit = (seen.lit || 0) + 1;
+  }
+  const rarityRows = GLOW_TIERS.slice(1).map((t) => {
+    const obs = observed[t.id];
+    const oneIn = obs ? Math.round(RARITY_SAMPLE / obs).toLocaleString() : '\u2014 none in ' + (RARITY_SAMPLE / 1000) + 'k';
+    return '<tr><td><span class="swatch" style="background:' + t.color + '"></span>' + t.name + '</td>' +
+      '<td>1 in ' + t.one_in.toLocaleString() + '</td><td class="' + (obs ? 'ok' : 'warn') + '">' +
+      (obs ? '1 in ' + oneIn : oneIn) + '</td></tr>';
+  }).join('');
+
+  el.innerHTML =
+    '<div class="card"><p class="micro">' + (ctxInfo.glade ? 'The glade' : 'This family') + '</p><table><tbody>' +
+    (ctxInfo.glade
+      ? '<tr><td>Creatures placed</td><td class="big">' + creatures.length + '</td></tr>' +
+        '<tr><td>Families present</td><td>' + GLADE_MIX.length + '</td></tr>'
+      : '<tr><td>Unique objects</td><td class="big">' + g.space.toLocaleString() + '</td></tr>' +
+        '<tr><td>Showing</td><td>' + (ctxInfo.start + 1) + '\u2013' + (ctxInfo.start + ctxInfo.n) + '</td></tr>') +
+    '<tr><td>Triangles, live</td><td class="num" id="sTris">\u2014</td></tr>' +
+    '<tr><td>Draw calls</td><td class="num" id="sCalls">\u2014</td></tr>' +
+    '<tr><td>Frames per second</td><td class="num" id="sFps">\u2014</td></tr>' +
+    '</tbody></table></div>' +
+
+    '<div class="card"><p class="micro">Measured, this frame</p><table><tbody>' +
+    '<tr><td>Gait</td><td id="sGait">\u2014</td></tr>' +
+    '<tr><td>Froude, fastest</td><td class="num" id="sFr">\u2014</td></tr>' +
+    '<tr><td>Stride, fastest</td><td class="num" id="sHz">\u2014</td></tr>' +
+    '<tr><td>IK residual, worst</td><td class="num" id="sRes">\u2014</td></tr>' +
+    '<tr><td>Foot skate, worst</td><td class="num" id="sSkate">\u2014</td></tr>' +
+    '<tr><td>Medium occupied</td><td id="sMed">\u2014</td></tr>' +
+    '<tr><td>Out of medium</td><td class="num" id="sOut">\u2014</td></tr>' +
+    '<tr><td>Shore clamps</td><td class="num" id="sClamp">\u2014</td></tr>' +
+    '<tr><td>Surface clearance, min</td><td class="num" id="sClear">\u2014</td></tr>' +
+    '<tr><td>Tail beat, fastest</td><td class="num" id="sBeat">\u2014</td></tr>' +
+    '<tr><td>Step failures</td><td class="num" id="sFail">\u2014</td></tr>' +
+    '</tbody></table>' +
+    '<p class="sys">Skate is the distance a planted foot moved through the world in one frame. It is not zero by assertion: planted feet hold a world position and the target is converted back to body space every frame, so what is left is the turn-rate limit doing its job. A body-parameterised foot cycle reads ten to fifty times this.</p></div>' +
+
+    '<div class="card"><p class="micro">Water rules</p><table><tbody>' +
+    Object.keys(WATER_CLASS).map((k) => {
+      const w = WATER_CLASS[k];
+      const fams = Object.keys(WATER_BY_FAMILY).filter((f) => WATER_BY_FAMILY[f] === k).length;
+      const band = w.ignores ? 'exempt'
+        : w.minD > 0 ? 'needs ' + w.minD + '\u00d7 body radius, may never leave'
+          : w.maxD === Infinity ? 'any depth' : 'to ' + w.maxD + '\u00d7 hip height';
+      return '<tr><td>' + k + ' <span style="opacity:.5">\u00d7' + fams + '</span></td><td>' + band + '</td></tr>';
+    }).join('') +
+    '</tbody></table>' +
+    '<p class="sys">Out of medium and shore clamps are the honest pair. Steering should keep every animal inside its band; the clamp is the backstop that returns it to the last position where it was legitimately in band. A rising clamp count means the steering is failing, so both numbers are shown rather than the one that always reads zero. <strong style="color:var(--gold)">A fish cannot leave water because its minimum depth is greater than zero</strong> \u2014 there is no separate no-exit flag doing the work.</p></div>' +
+
+    '<div class="card"><p class="micro">Derived physics \u00b7 ' + PHYSICS_SOURCES.length + ' laws</p>' +
+    PHYSICS_SOURCES.map((p) =>
+      '<p class="sys" style="margin:0 0 12px"><strong style="color:var(--bone)">' + p.law + '</strong><br>' +
+      p.used + '<br><span style="opacity:.62">' + p.src + '</span></p>').join('') +
+    '<p class="sys">Every number a creature moves by is either measured from the built geometry or derived from one of these. Nothing on this list was tuned to look right.</p></div>' +
+
+    (g.axes && !ctxInfo.glade ? '<div class="card"><p class="micro">Declared axes</p><table><tbody>' +
+      Object.keys(g.axes).map((k) => '<tr><td>' + k + '</td><td>' + g.axes[k] + '</td></tr>').join('') +
+      '</tbody></table><p class="sys">An axis counts only if it changes silhouette or material. Seed jitter gives infinite micro-variation on top and is deliberately not counted. <strong style="color:var(--bone-dim);font-weight:500">Glow is not an axis</strong> \u2014 it is a finish rolled at spawn, so it is reported below and never added to the headline.</p></div>' : '') +
+
+    '<div class="card"><p class="micro">Rarity \u2014 declared against observed</p>' +
+    '<table><tbody><tr><td>Tier</td><td>Declared</td><td>Observed</td></tr>' + rarityRows + '</tbody></table>' +
+    '<p class="sys">Observed is ' + RARITY_SAMPLE.toLocaleString() + ' rolls of the live generator, sampled at load. Hearthlight at one in thirty-two thousand will usually show none \u2014 that is the correct result for a sample this size, not a broken roll. Use the tier buttons above to force one into the scene.</p>' +
+    '<table style="margin-top:10px"><tbody>' +
+    '<tr><td>In this scene</td><td>' + (creatures.length - (seen.mundane || 0) - (seen.lit || 0)) + ' glowing of ' + creatures.length + '</td></tr>' +
+    '<tr><td>Lit by nature</td><td>' + (seen.lit || 0) + '</td></tr>' +
+    '<tr><td>Lights granted</td><td class="' + (lightsWanted > LIGHT_CAP - fires.length ? 'warn' : 'ok') + '">' +
+      Math.max(0, lightsUsed - fires.length) + ' of ' + lightsWanted + ' wanted</td></tr>' +
+    '<tr><td>Light budget</td><td>' + lightsUsed + ' of ' + LIGHT_CAP + '</td></tr>' +
+    '<tr><td>Particles</td><td class="num" id="sParts">\u2014</td></tr>' +
+    '</tbody></table></div>' +
+
+    '<div class="card"><p class="micro">' + DOMAINS.find((d) => d.key === g.domain).label + '</p>' +
+    '<p class="sys">' + DOMAINS.find((d) => d.key === g.domain).note + '</p></div>' +
+
+    '<div class="card"><p class="micro">Finish &middot; ' + biome.name + '</p><p class="body">' + biome.blurb + '</p>' +
+    '<p class="sys">Creatures take the biome <em>retint</em> only. The object finish system also lays a geometry overlay \u2014 icicles on every upward face \u2014 and that is wrong on an animal, so it is not applied. The wear tiers are not offered either: they work by detaching parts to the floor, which on a living thing is gore rather than weathering. Condition lives inside each generator as an axis instead.</p></div>' +
+
+    '<div class="card"><p class="micro">What a catalogue entry is</p><p class="sys">Not a mesh on disk. A creature is addressed as <code style="color:var(--gold);font:11px ui-monospace,Menlo,monospace">(familyId, variant, biome, glowTier)</code> and rebuilt deterministically \u2014 the same seed gives the same animal, so a rare one does not vanish on reload and a screenshot of one can be reproduced.</p>' +
+    '<p class="sys" style="margin-top:10px;color:var(--ember)">Known gap: a rigged creature costs one draw call per animated part. Production needs a skinned mesh with a bone hierarchy, which this procedural pipeline does not emit. The draw-call figure above is the honest cost of the prototype, not of the shipped asset.</p></div>';
+}
+
+/* --------------------------------------------------------------------- rail */
+const rail = document.getElementById('rail');
+DOMAINS.forEach((d) => {
+  const rows = ALL.filter((g) => g.domain === d.key);
+  const head = document.createElement('div');
+  head.className = 'ghead';
+  head.innerHTML = '<p class="micro">' + d.label + ' &middot; ' + rows.length + ' families &middot; ' +
+    rows.reduce((n, g) => n + g.space, 0).toLocaleString() + ' unique</p><p class="gn">' + d.note + '</p>';
+  rail.append(head);
+  rows.forEach((g) => {
+    const b = document.createElement('button');
+    b.className = 'item';
+    b.type = 'button';
+    b.dataset.id = g.id;
+    b.setAttribute('aria-selected', 'false');
+    b.innerHTML = '<span><span class="nm">' + g.name + '</span><span class="sub">' +
+      g.budgetClass + ' &middot; ' + Object.keys(g.axes).length + ' axes</span></span>' +
+      '<span class="sp">' + g.space.toLocaleString() + '</span>';
+    b.addEventListener('click', () => select(g.id));
+    rail.append(b);
+  });
+});
+
+function select(id) {
+  current = ALL.find((g) => g.id === id);
+  page = 0;
+  mode = 'pen';
+  syncSeg(modeSeg, ['pen', 'glade'], mode);
+  rail.querySelectorAll('.item').forEach((el) => el.setAttribute('aria-selected', String(el.dataset.id === id)));
+  document.getElementById('gName').textContent = current.name;
+  document.getElementById('gId').textContent = current.id;
+  rebuild();
+}
+
+/* ----------------------------------------------------------------- controls */
+function seg(host, items, active, onPick) {
+  items.forEach((it) => {
+    const el = document.createElement('button');
+    el.textContent = it.label;
+    el.dataset.v = it.v;
+    el.setAttribute('aria-pressed', String(it.v === active));
+    el.addEventListener('click', () => onPick(it.v));
+    host.append(el);
+  });
+}
+function syncSeg(host, values, active) {
+  host.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.v === active)));
+}
+const modeSeg = document.getElementById('modeSeg');
+seg(modeSeg, [{ v: 'pen', label: 'Family pen' }, { v: 'glade', label: 'The glade' }], mode, (v) => {
+  mode = v;
+  syncSeg(modeSeg, ['pen', 'glade'], v);
+  document.getElementById('gName').textContent = v === 'glade' ? 'Dusk glade' : current.name;
+  document.getElementById('gId').textContent = v === 'glade' ? 'every family, glow rolled at spawn' : current.id;
+  rebuild();
+});
+const biomeSeg = document.getElementById('biomeSeg');
+seg(biomeSeg, BIOMES.map((b) => ({ v: b.id, label: b.name })), biome.id, (v) => {
+  biome = BIOMES.find((b) => b.id === v);
+  syncSeg(biomeSeg, null, v);
+  rebuild();
+});
+const glowSeg = document.getElementById('glowSeg');
+seg(glowSeg, [{ v: 'roll', label: 'Roll' }, ...GLOW_TIERS.slice(1).map((t) => ({ v: t.id, label: t.name.split('-')[0] }))],
+  'roll', (v) => {
+    forceGlow = v === 'roll' ? null : GLOW_TIERS.find((t) => t.id === v);
+    syncSeg(glowSeg, null, v);
+    rebuild();
+  });
+document.getElementById('pgPrev').addEventListener('click', () => { page = Math.max(0, page - 1); rebuild(); });
+document.getElementById('pgNext').addEventListener('click', () => { page++; rebuild(); });
+const pauseBtn = document.getElementById('pause');
+pauseBtn.addEventListener('click', () => {
+  paused = !paused;
+  pauseBtn.textContent = paused ? 'Resume' : 'Pause';
+  pauseBtn.setAttribute('aria-pressed', String(paused));
+});
+
+/* The pointer is a walker. Everything in the scene has a flush radius, so
+   moving it through the grass scatters the ground animals and pulls nothing
+   toward it \u2014 which is the correct asymmetry for prey. */
+const raycaster = new THREE.Raycaster();
+const ndc = new THREE.Vector2();
+let threat = null;
+canvas.addEventListener('pointermove', (e) => {
+  const r = canvas.getBoundingClientRect();
+  ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+  raycaster.setFromCamera(ndc, camera);
+  const hit = raycaster.intersectObject(ground, false);
+  threat = hit.length ? hit[0].point : null;
+});
+canvas.addEventListener('pointerleave', () => { threat = null; });
+
+/* ----------------------------------------------------------------- the loop */
+const ctx = {
+  groundAt,
+  // Null rather than an empty pond when there is no water: no water in the
+  // world means there are no medium rules to enforce, which is different from
+  // a world that is entirely dry land.
+  get water() { return WATER.on ? WATER_VIEW : null; },
+  lights: [], threat: null, roostY: 2.6,
+};
+let last = performance.now(), frames = 0, fpsT = last, fps = 0, tick = 0;
+
+function resize() {
+  const r = canvas.getBoundingClientRect();
+  renderer.setSize(r.width, r.height, false);
+  camera.aspect = r.width / Math.max(r.height, 1);
+  camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize);
+
+function updateStats() {
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  let res = 0, skate = 0, fr = 0, hz = 0, parts = 0, beat = 0;
+  let inW = 0, onL = 0, inAir = 0, outOf = 0, clamps = 0, clear = Infinity;
+  const gaits = {};
+  for (const o of creatures) {
+    const c = o.userData.creature;
+    if (!c) continue;
+    res = Math.max(res, c.residual || 0);
+    skate = Math.max(skate, c.skate || 0);
+    if ((c.froude || 0) > fr) { fr = c.froude; hz = c.cycleHz || 0; }
+    parts += c.particles || 0;
+    gaits[c.gait || 'stand'] = (gaits[c.gait || 'stand'] || 0) + 1;
+    if (c.band && c.band.ignores) inAir++;
+    else if (c.medium === 'water') inW++;
+    else onL++;
+    if (c.outOfMedium) outOf++;
+    clamps += c.shoreClamps || 0;
+    if ((c.beatHz || 0) > beat) beat = c.beatHz;
+    if (c.surfaceClearance != null && c.surfaceClearance < clear) clear = c.surfaceClearance;
+  }
+  set('sTris', renderer.info.render.triangles.toLocaleString());
+  set('sCalls', renderer.info.render.calls.toLocaleString());
+  set('sFps', fps.toFixed(0));
+  set('sGait', Object.entries(gaits).sort((a, b) => b[1] - a[1]).slice(0, 3)
+    .map(([k, v]) => k + ' \u00d7' + v).join(' \u00b7 '));
+  set('sFr', fr.toFixed(2));
+  set('sHz', hz > 0 ? hz.toFixed(2) + ' Hz' : 'still');
+  set('sRes', (res * 1000).toFixed(2) + ' mm');
+  set('sSkate', (skate * 1000).toFixed(2) + ' mm');
+  set('sMed', [inW ? 'water \u00d7' + inW : '', onL ? 'land \u00d7' + onL : '', inAir ? 'air \u00d7' + inAir : '']
+    .filter(Boolean).join(' \u00b7 ') || '\u2014');
+  set('sOut', String(outOf));
+  set('sClamp', String(clamps));
+  set('sClear', clear === Infinity ? 'no swimmers' : (clear * 1000).toFixed(1) + ' mm');
+  set('sBeat', beat > 0 ? beat.toFixed(2) + ' Hz' : '\u2014');
+  set('sFail', stepFails ? stepFails + ' \u00b7 ' + firstFail : '0');
+  const fEl = document.getElementById('sFail');
+  if (fEl) fEl.style.color = stepFails ? 'var(--ember)' : '';
+  const outEl = document.getElementById('sOut');
+  if (outEl) outEl.style.color = outOf > 0 ? 'var(--ember)' : '';
+  const clEl = document.getElementById('sClear');
+  if (clEl) clEl.style.color = clear !== Infinity && clear < 0 ? 'var(--ember)' : '';
+  set('sParts', parts.toLocaleString() + ' of 2,400');
+}
+
+renderer.setAnimationLoop(() => {
+  const now = performance.now();
+  const dt = Math.min((now - last) / 1000, 0.05);
+  last = now;
+  if (!paused) {
+    ctx.threat = threat;
+    ctx.lights = lights;
+    fireUniforms.uTime.value = now / 1000;
+    try { stepFires(fires, now / 1000); } catch (e) { noteFail(e); }
+    for (const o of creatures) {
+      try { stepCreature(o, dt, ctx); } catch (e) { noteFail(e); }
+    }
+  }
+  try { controls.update(); } catch (e) { noteFail(e); }
+  try { renderer.render(scene, camera); } catch (e) { noteFail(e); }
+  frames++;
+  if (now - fpsT > 500) { fps = (frames * 1000) / (now - fpsT); frames = 0; fpsT = now; }
+  if (++tick % 20 === 0) updateStats();
+});
+
+resize();
+select('fauna.hare');
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+{
+  "$comment": [
+    "Amendment patch for packages/content/manifests/hearthmere.assets.json.",
+    "Produced by the Hearthmere environment kit pass, Claude Design, 2026-08-25.",
+    "Apply with a JSON-merge over the matching asset ids; nothing here changes",
+    "an id, a targetSlug, or a provenance record.",
+    "",
+    "Two classes of amendment, kept separate on purpose:",
+    "  A. materialSlots  — the asset's own declared purpose is unachievable at",
+    "                      the declared slot count. Two rows.",
+    "  B. lodTriangles   — the structure rows were budgeted for a graybox. The",
+    "                      values below are WORLD_ASSET_BUDGETS.propTriangles,",
+    "                      which is the ceiling the built geometry was authored",
+    "                      against. Seven rows.",
+    "",
+    "Every proposed number was measured, not estimated: the built LOD chain is",
+    "rebuilt at reduced parameters and counted, and no row exceeds the value",
+    "proposed for it here."
+  ],
+
+  "schemaVersion": 1,
+  "patchId": "hearthmere.assets.amendments.2026-08-25",
+  "target": "packages/content/manifests/hearthmere.assets.json",
+
+  "materialSlotAmendments": [
+    {
+      "id": "hm.prop.banked-brazier",
+      "path": "materials.slots",
+      "from": 2,
+      "to": 3,
+      "reason": "REGION_ASSET_KITS.hearthmere.lighting.practicals is \"banked_braziers\". A declared practical light source cannot emit without an emissive material slot; at two slots the brazier is a cold bowl and the region loses its only warm practical.",
+      "thirdSlot": "banked-ember — emissive #bd6135 over base #5a2a17, intensity 1.6"
+    },
+    {
+      "id": "hm.prop.rain-barrel-iron",
+      "path": "materials.slots",
+      "from": 2,
+      "to": 3,
+      "reason": "The region is held at wetness 0.82 and the asset is named for catching rain. With two slots the barrel has a dry interior, which reads as a bug rather than as a barrel.",
+      "thirdSlot": "still-water — #12292d, roughness 0.18, metalness 0.10"
+    }
+  ],
+
+  "lodTriangleAmendments": {
+    "$comment": "budgetClass hero = WORLD_ASSET_BUDGETS.propTriangles.hero (48000); standard = 12000. LOD1/LOD2 proposed at the same 0.36 / 0.12 ratios the prop rows already use.",
+    "rows": [
+      { "id": "hm.structure.hold-house-small",    "budgetClass": "standard", "lodTriangles": [12000, 4400, 1500] },
+      { "id": "hm.structure.hold-house-corner",   "budgetClass": "standard", "lodTriangles": [12000, 4400, 1500] },
+      { "id": "hm.structure.palisade-repaired",   "budgetClass": "standard", "lodTriangles": [12000, 4400, 1500] },
+      { "id": "hm.structure.bell-tower-timber",   "budgetClass": "hero",     "lodTriangles": [48000, 17000, 5800] },
+      { "id": "hm.structure.spring-channel-arch", "budgetClass": "hero",     "lodTriangles": [48000, 17000, 5800] },
+      { "id": "hm.structure.vigil-shrine-old",    "budgetClass": "hero",     "lodTriangles": [48000, 17000, 5800] },
+      { "id": "hm.structure.gatehouse-patchwork", "budgetClass": "hero",     "lodTriangles": [48000, 17000, 5800] }
+    ]
+  },
+
+  "generatorAmendments": {
+    "$comment": "The graybox generators have been superseded by real procedural builders. Delivery is unchanged — sable-reach.prototype-assets.json already declares runtime-procedural-threejs.",
+    "rows": [
+      { "idPrefix": "hm.structure.", "generatorId": { "from": "structure.graybox", "to": "structure.procedural.v1" } },
+      { "idPrefix": "hm.prop.",      "generatorId": { "from": "prop.graybox",      "to": "prop.procedural.v1" } },
+      { "idPrefix": "hm.foliage.",   "generatorId": { "from": "foliage.instanced", "to": "foliage.procedural.v1" },
+        "note": "Still instanced at runtime — the change names the geometry generator, not the placement strategy." }
+    ],
+    "sourceModules": [
+      "apps/client/src/world/hearthmere/hm-core.js",
+      "apps/client/src/world/hearthmere/hm-flora.js",
+      "apps/client/src/world/hearthmere/hm-props.js",
+      "apps/client/src/world/hearthmere/hm-structures.js",
+      "apps/client/src/world/hearthmere/hm-textures.js",
+      "apps/client/src/world/hearthmere/hm-world.js"
+    ]
+  },
+
+  "proposedNewRows": {
+    "$comment": "Not amendments — three assets the authored fiction already requires and no manifest carries. Each is flagged 'proposed' in every surface that shows it.",
+    "rows": [
+      {
+        "id": "gm.foliage.blackpine-mature",
+        "name": "Blackpine, mature",
+        "category": "foliage",
+        "targetSlug": "blackpine-mature",
+        "budgetClass": "hero",
+        "region": "graven_march",
+        "pipelineStatus": "prototype_geometry",
+        "runtime": { "delivery": "procedural", "generatorId": "foliage.procedural.v1",
+                     "parameters": { "form": "conifer", "heightRange": [8.0, 11.0], "wind": 0.3 } },
+        "geometry": { "lodTriangles": [7000, 2600, 900] },
+        "materials": { "slots": 3 },
+        "justification": "worldAssets.js graven_march kit lists foliage \"blackpine_mature\", and world.js GATHER_NODES declares node_blackpine_01 \"Harvestable Black Pine\" at woodcutting 3. No asset row exists in any manifest. Carries its woodcutting face as geometry so a gatherable tree is legible before the prompt appears."
+      },
+      {
+        "id": "hm.artifact.clay-name-tablet",
+        "name": "Clay name tablet",
+        "category": "prop",
+        "targetSlug": "clay-name-tablet",
+        "budgetClass": "hero",
+        "pipelineStatus": "prototype_geometry",
+        "runtime": { "delivery": "procedural", "generatorId": "prop.inspect.v1",
+                     "parameters": { "shape": "inspect-slab", "size": [0.16, 0.24, 0.03] } },
+        "geometry": { "lodTriangles": [2800, 1100, 380] },
+        "materials": { "slots": 3 },
+        "justification": "The manifest carries hm.surface.clay-tablets as a SURFACE. world.js and the project README make the tablet the region's central object — \"its people burn names into clay tablets so the dead cannot be forgotten by the ash\" — and quest and codex surfaces need one that can be picked up. A surface cannot be held."
+      },
+      {
+        "id": "hm.artifact.bell-clapper-mace",
+        "name": "Bell-clapper mace",
+        "category": "prop",
+        "targetSlug": "bell-clapper-mace",
+        "budgetClass": "hero",
+        "pipelineStatus": "prototype_geometry",
+        "runtime": { "delivery": "procedural", "generatorId": "weapon.inspect.v1",
+                     "parameters": { "shape": "hafted-mace", "size": [0.17, 1.02, 0.17] } },
+        "geometry": { "lodTriangles": [4200, 1600, 560] },
+        "materials": { "slots": 4 },
+        "justification": "world.js describes Torren Vale, Bell-Warden and Hearthmere's combat trainer, as \"a broad veteran who carries the clapper of a ruined bell as a mace.\" He is a placed NPC with a named weapon and no weapon asset in any manifest."
+      }
+    ]
+  },
+
+  "textureAmendment": {
+    "$comment": "materials.maxTextureDimension is declared on every row and was unused, which is why the first pass read flat at close range. The six hm.surface.* rows now have real generators; their declared wetness has no PBR channel, so it is folded into a derived roughness map by one stated formula.",
+    "wetnessFold": "effectiveRoughness = roughness * (1 - wetness * 0.3)",
+    "generatedAt": 512,
+    "rows": [
+      { "id": "hm.surface.slate-cobbles-wet",   "generator": "surface.procedural.slateCobbles" },
+      { "id": "hm.surface.slate-steps-chipped", "generator": "surface.procedural.slateCobbles" },
+      { "id": "hm.surface.spring-limestone",    "generator": "surface.procedural.limestone" },
+      { "id": "hm.surface.peat-mud-tracks",     "generator": "surface.procedural.limestone" },
+      { "id": "hm.surface.oak-planks-dark",     "generator": "surface.procedural.oakPlanks" },
+      { "id": "hm.surface.clay-tablets",        "generator": "surface.procedural.firedClay" }
+    ],
+    "exportCaveat": "Textures survive the GLB export (glTF embeds them). They do NOT survive OBJ, which carries per-material colour only. That is a format limit, not a gap in the asset."
+  },
+
+  "notApplied": {
+    "$comment": "Deliberately NOT amended, so the reader knows these were considered.",
+    "propTriangleUplift": "The ten hm.prop.* rows were left at their declared lodTriangles (6200 / 4800 / 3200 / 5400 / 1800 / 4400 / 1200 / 3900 / 4200 / 2200) rather than raised to the global 12000 standard ceiling. Every prop is under its own declared number, and raising fifteen rows to the global ceiling is a content-budget decision for a human, not a side effect of an art pass.",
+    "vfxRows": "The five hm.vfx.* rows are unbuilt. The living-world scene implements brazier fire and rain against the declared activeParticles cap of 2400, but spring_steam_low, bell_dust_pulse and lantern_moth_sparse have no generator yet."
+  }
+}

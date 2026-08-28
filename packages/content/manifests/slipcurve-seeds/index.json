@@ -1,0 +1,123 @@
+{
+  "authorization": {
+    "commercialUse": true,
+    "compiledRedistribution": true,
+    "editableDerivativeRedistribution": true,
+    "id": "owner-authorized-cross-project-sitelib"
+  },
+  "captureWorkspaceHead": "ff8481ee54400e82662c140f2e03af7ee840ec49",
+  "chromium": {
+    "playwright": "1.62.1",
+    "revision": "1234",
+    "version": "151.0.7922.34"
+  },
+  "coordinateContract": {
+    "mapping": "(x,y,z)->(x,z,y)",
+    "quantizationMetres": 0.001,
+    "runtime": "Sable Reach metres, Y-up",
+    "source": "Slipcurve metres, Z-up"
+  },
+  "counts": {
+    "classifications": {
+      "accepted_seed": 214,
+      "quarantined": 768,
+      "rejected": 105
+    },
+    "historicalAcceptedVocabulary": 982,
+    "historicalReferences": 134,
+    "historicalRejectedVocabulary": 105,
+    "records": 1087,
+    "representativeGlbs": 24
+  },
+  "inputHashes": {
+    "engine/mc-extents.js": "7c457884214f9d0575ac7213dbbb36c5df42f6fad9c1499b0b60a6738b4bde5d",
+    "engine/sitelib/README.md": "727e5a748bb93eb1bde0657d3492d40860be888bb078f9e2330ddc9390490581",
+    "engine/sitelib/cityfam3.js": "432e15e0848404e939930a659ab49ba3096bcf0f7fa1c50cbdaa29828e746e92",
+    "engine/sitelib/core3.js": "07eb4235078ebf84e3a2e787dfee980072d7e826c1585651a06c1c5d361b75c4",
+    "engine/sitelib/dimensions.js": "ee035699cc104fe7221fe7036618a8896af66f05e32c4ad9f7c29fc025687268",
+    "engine/sitelib/engine.js": "f0d1958cb4d63bf9fcfd95242ebd7dbb0f5568983d446f0732b7153cdea49f5e",
+    "engine/sitelib/masterformat.js": "db3dab0cda360c8dcf8673f543eafff85bc81200e363e375b9e86b4d0dba9abc",
+    "engine/sitelib/worlds3.js": "ab822bc991c0f58946c69f76cb3f5510eec1b2b28d4e599ab9717657a23bb831",
+    "export/isometric/_cut.json": "3d851fcce9030c11991052fd0ef5c9aadc1d94ec0ca7ce677e0f1ae145bfa4c5",
+    "export/isometric/_export.py": "5606a1f44096c0044387fe3be1c2b08d5d760b0f0d764587061cd0f59eab84e6",
+    "export/isometric/_harness.html": "d624a292e1a05dcb1b1264f8d2be4adbfd7a87b57d16e52ad910558bce93771c",
+    "export/isometric/manifest.json": "d8678076e87b357a03399e3f22f4a47101e90ea18b00b895c7a2791d1a50ac2b"
+  },
+  "inputSetHash": "d548364f380eb93c8e6da106e035d46c80300b68d0f4f2d341d2dddbb929137a",
+  "instrumentationVersion": "slipcurve-model-capture-v1.0.0",
+  "maturity": "prototype_geometry",
+  "productionEligible": false,
+  "referenceCrosswalkPath": "references.json",
+  "representativeSeedIndexPath": "../../../../assets/3d/seeds/slipcurve/index.json",
+  "schema": "SlipcurveSeedCatalogIndexV1",
+  "shards": [
+    {
+      "count": 100,
+      "path": "catalog-0000-0099.json",
+      "sha256": "f44bb32e680b2264b269db108362dc4cac9b2f444fee4ec00c8639f6e8bb0cec",
+      "start": 0
+    },
+    {
+      "count": 100,
+      "path": "catalog-0100-0199.json",
+      "sha256": "6cc513ccb357d61890d37de85206fb1a02cdc27f95518d0a4909aecc2a365861",
+      "start": 100
+    },
+    {
+      "count": 100,
+      "path": "catalog-0200-0299.json",
+      "sha256": "3dc09bde6f861a40d257d158ba8efe590ea6d6f181d6125b66de323d80975f76",
+      "start": 200
+    },
+    {
+      "count": 100,
+      "path": "catalog-0300-0399.json",
+      "sha256": "c71d9c23fd41fc4e40d4b1070a500e24fe863919d10ab46eb7ceb151f90ba86b",
+      "start": 300
+    },
+    {
+      "count": 100,
+      "path": "catalog-0400-0499.json",
+      "sha256": "43cf2e30c00fe30f1fb0f375b1a506e0e6220612ca628dfad10b6418ba000371",
+      "start": 400
+    },
+    {
+      "count": 100,
+      "path": "catalog-0500-0599.json",
+      "sha256": "38f446816457c0a79a8e9e1d1f4d6a64b4e6c44b7d82014d83b293125b041027",
+      "start": 500
+    },
+    {
+      "count": 100,
+      "path": "catalog-0600-0699.json",
+      "sha256": "4159b144284e0ac8e49aed8f1f4be32559464696ff467c83cee450bbe998dc7c",
+      "start": 600
+    },
+    {
+      "count": 100,
+      "path": "catalog-0700-0799.json",
+      "sha256": "696cefda17a9bd16560d400e362375d60d0c3423d8529dedbc4e256d2684cca7",
+      "start": 700
+    },
+    {
+      "count": 100,
+      "path": "catalog-0800-0899.json",
+      "sha256": "b61c91cf0afe1c1066a031fa73833036a472f54c7714d78f1f405a0d9111ed53",
+      "start": 800
+    },
+    {
+      "count": 100,
+      "path": "catalog-0900-0999.json",
+      "sha256": "489e6b7191798dac4d5845856176c8c68866acf7474c2a1d02c62d683ed6875e",
+      "start": 900
+    },
+    {
+      "count": 87,
+      "path": "catalog-1000-1086.json",
+      "sha256": "d095a5f449fc5e3d9419e1d60b79f52fca093af1c0c9991cb93edfd9edefab12",
+      "start": 1000
+    }
+  ],
+  "sourceContentCommit": "c9a104395e1578c429842c7e02c1a8ba20a5e324",
+  "sourceIdentity": "slipcurve-sitelib"
+}

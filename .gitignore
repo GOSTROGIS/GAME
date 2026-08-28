@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.test-dist/
+.bestiary-test-dist/
+.bridge-test-dist/
+.env
+.env.*
+!.env.example
+tests/*.png
+/test-results/
+.adversarial-review/
+*.log
+tools/worldgen/.venv/
+tools/worldgen/.tmp/
+tools/worldgen/__pycache__/

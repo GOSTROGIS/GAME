@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "sourceMap": false,
+    "rootDir": ".",
+    "outDir": ".test-dist",
+    "tsBuildInfoFile": ".test-dist/.tsbuildinfo",
+    "types": ["node"],
+    "typeRoots": ["../../packages/shared/node_modules/@types"]
+  },
+  "include": [
+    "src/atlas/**/*.ts",
+    "src/showcase/**/*.ts",
+    "src/turn/**/*.ts",
+    "src/world/PrototypeCreatureFactory.ts",
+    "test/showcases.test.ts",
+    "test/turn-ui.test.ts"
+  ]
+}

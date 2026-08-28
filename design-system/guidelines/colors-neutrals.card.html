@@ -1,0 +1,27 @@
+<!-- @dsCard group="Colors" viewport="700x160" subtitle="All reading copy — never pure white" name="Neutrals" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+  .cap{color:#797f7a;font:9px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="grid2"><div><div style="height:52px;background:var(--bone);border:1px solid var(--line)"></div>
+<p style="margin:7px 0 2px;font:500 11px var(--display);letter-spacing:.05em">--bone</p>
+<p style="margin:0;color:var(--muted);font:10px ui-monospace,Menlo,monospace">#d8d0bd</p>
+<p style="margin:3px 0 0;color:#797f7a;font:10px var(--sans)">Default text</p></div><div><div style="height:52px;background:var(--muted);border:1px solid var(--line)"></div>
+<p style="margin:7px 0 2px;font:500 11px var(--display);letter-spacing:.05em">--muted</p>
+<p style="margin:0;color:var(--muted);font:10px ui-monospace,Menlo,monospace">#8e928b</p>
+<p style="margin:3px 0 0;color:#797f7a;font:10px var(--sans)">Secondary, captions</p></div></div>
+</body>
+</html>

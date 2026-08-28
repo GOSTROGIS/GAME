@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "licenses": [
+    {
+      "id": "project-original",
+      "name": "Hearthmere project-original content",
+      "spdx": null,
+      "redistributableWithProject": true,
+      "commercialUse": true,
+      "attributionRequired": false,
+      "notice": "Original fictional designs authored for this project. No Jagex, RuneScape, FromSoftware, or Dark Souls assets are included."
+    },
+    {
+      "id": "cc0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "spdx": "CC0-1.0",
+      "redistributableWithProject": true,
+      "commercialUse": true,
+      "attributionRequired": false,
+      "notice": "Reserved for approved neutral scans, noise sources, utility meshes, and ambience. No current Hearthmere asset uses this source."
+    },
+    {
+      "id": "owner-authorized-cross-project-sitelib",
+      "name": "Owner-authorized Slipcurve site-library reuse",
+      "spdx": null,
+      "redistributableWithProject": true,
+      "commercialUse": true,
+      "attributionRequired": false,
+      "notice": "The repository owner authorized commercial reuse, editing, redistribution, reskinning, and repurposing of the owner-authored Slipcurve site-library sources and derivatives in Sable Reach. This permission does not extend to third-party specifications, protected owner-local corpora, fonts, or unrelated Slipcurve material."
+    }
+  ],
+  "sources": [
+    {
+      "id": "source.hm.architecture.original",
+      "originType": "project_original",
+      "title": "Hearthmere modular architecture kit",
+      "creator": "Hearthmere content team",
+      "sourceUri": "project://hearthmere/architecture",
+      "retrievedAt": null,
+      "createdAt": "2026-08-23",
+      "licenseId": "project-original",
+      "contentHash": null,
+      "modifications": "Procedural graybox recipes and production targets authored from the project's original Hearthmere visual language."
+    },
+    {
+      "id": "source.hm.materials.original",
+      "originType": "project_original",
+      "title": "Hearthmere wet material families",
+      "creator": "Hearthmere content team",
+      "sourceUri": "project://hearthmere/materials",
+      "retrievedAt": null,
+      "createdAt": "2026-08-23",
+      "licenseId": "project-original",
+      "contentHash": null,
+      "modifications": "Original PBR channel and wetness requirements; no third-party textures are bundled."
+    },
+    {
+      "id": "source.hm.props.original",
+      "originType": "project_original",
+      "title": "Hearthmere narrative props and foliage",
+      "creator": "Hearthmere content team",
+      "sourceUri": "project://hearthmere/props-foliage-decals",
+      "retrievedAt": null,
+      "createdAt": "2026-08-23",
+      "licenseId": "project-original",
+      "contentHash": null,
+      "modifications": "Original silhouettes, placement vocabulary, and procedural prototype recipes."
+    },
+    {
+      "id": "source.hm.characters.original",
+      "originType": "project_original",
+      "title": "Hearthmere characters and modular appearance",
+      "creator": "Hearthmere content team",
+      "sourceUri": "project://hearthmere/characters",
+      "retrievedAt": null,
+      "createdAt": "2026-08-23",
+      "licenseId": "project-original",
+      "contentHash": null,
+      "modifications": "Original gaunt plague-worn silhouettes and appearance-module contracts."
+    },
+    {
+      "id": "source.hm.enemies.original",
+      "originType": "project_original",
+      "title": "Hearthmere Ash Husk and Ledger Crawler",
+      "creator": "Hearthmere content team",
+      "sourceUri": "project://hearthmere/enemies",
+      "retrievedAt": null,
+      "createdAt": "2026-08-23",
+      "licenseId": "project-original",
+      "contentHash": null,
+      "modifications": "Original enemy bodies, combat silhouettes, and animation targets."
+    },
+    {
+      "id": "source.hm.atmosphere.original",
+      "originType": "project_original",
+      "title": "Hearthmere atmosphere and sound direction",
+      "creator": "Hearthmere content team",
+      "sourceUri": "project://hearthmere/atmosphere-audio",
+      "retrievedAt": null,
+      "createdAt": "2026-08-23",
+      "licenseId": "project-original",
+      "contentHash": null,
+      "modifications": "Original VFX recipes and silent/procedural audio placeholders; production recordings are not claimed."
+    },
+    {
+      "id": "source.slipcurve.sitelib.generator-snapshot",
+      "originType": "owner_cross_project",
+      "title": "Slipcurve procedural site-library generator snapshot",
+      "creator": "Repository owner",
+      "sourceUri": "https://github.com/Ostrowidzki1989/slipcurve/tree/c9a104395e1578c429842c7e02c1a8ba20a5e324/engine/sitelib",
+      "retrievedAt": "2026-08-23",
+      "createdAt": "2026-08-23",
+      "licenseId": "owner-authorized-cross-project-sitelib",
+      "contentHash": "d548364f380eb93c8e6da106e035d46c80300b68d0f4f2d341d2dddbb929137a",
+      "modifications": "Read-only model-space capture, Y-up coordinate normalization, fail-closed classification, topology deduplication, brand and cultural-form exclusion, and substantial original dark-fantasy reconstruction. The hash identifies the aggregate pinned input set; the bridge lock records every individual input hash, including the census manifest."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "assets.sable-reach.ecology-proofs.v1",
+  "classification": "procedural_prototype_assets",
+  "generator": {
+    "id": "prototypeCreatureFactory.v1",
+    "sourcePath": "apps/client/src/world/PrototypeCreatureFactory.ts",
+    "sourceSha256": "80a1b17800e47dcefa92f8f3e0ca14e1fa2caa2156839e60b9111bcbe0d57469",
+    "licenseId": "project-original",
+    "creator": "Hearthmere project",
+    "delivery": "runtime-procedural-threejs"
+  },
+  "locationGenerator": {
+    "id": "ecologyProofLocationFactory.v1",
+    "sourcePath": "apps/client/src/showcase/EcologyProofArena.ts",
+    "sourceSha256": "ba04026e9633e5265763e11c53971d5dc995d56f03270101cb14547c1c855627",
+    "licenseId": "project-original",
+    "creator": "Hearthmere project",
+    "delivery": "runtime-procedural-threejs"
+  },
+  "budgets": {
+    "maximumTrianglesPerPrototype": 24000,
+    "maximumMeshesPerPrototype": 18,
+    "maximumMaterialSlotsPerPrototype": 8,
+    "productionAssetEquivalent": false
+  },
+  "assets": [
+    { "id": "prototype_creature.ashbound", "familyId": "ashbound" },
+    { "id": "prototype_creature.cairn_beasts", "familyId": "cairn_beasts" },
+    { "id": "prototype_creature.march_deserters", "familyId": "march_deserters" },
+    { "id": "prototype_creature.drowned_parish", "familyId": "drowned_parish" },
+    { "id": "prototype_creature.reed_coven", "familyId": "reed_coven" },
+    { "id": "prototype_creature.kilnforged", "familyId": "kilnforged" },
+    { "id": "prototype_creature.glasswood", "familyId": "glasswood" },
+    { "id": "prototype_creature.hush_order", "familyId": "hush_order" },
+    { "id": "prototype_creature.echo_choir", "familyId": "echo_choir" },
+    { "id": "prototype_creature.ossuary_vermin", "familyId": "ossuary_vermin" },
+    { "id": "prototype_creature.bell_revenants", "familyId": "bell_revenants" },
+    { "id": "prototype_creature.salt_waste", "familyId": "salt_waste" },
+    { "id": "prototype_creature.veil_coast", "familyId": "veil_coast" },
+    { "id": "prototype_creature.shuttered_ward", "familyId": "shuttered_ward" },
+    { "id": "prototype_creature.charnel_measures", "familyId": "charnel_measures" },
+    { "id": "prototype_creature.black_sluice", "familyId": "black_sluice" },
+    { "id": "prototype_creature.last_pest_cart", "familyId": "last_pest_cart" },
+    { "id": "prototype_creature.breath_tithe", "familyId": "breath_tithe" },
+    { "id": "prototype_creature.white_ague", "familyId": "white_ague" },
+    { "id": "prototype_creature.pallid_root_communion", "familyId": "pallid_root_communion" },
+    { "id": "prototype_creature.anchored_quarantine", "familyId": "anchored_quarantine" }
+  ],
+  "locationAssets": [
+    { "id": "prototype_location.hearthmere", "siteId": "site.hearthmere" },
+    { "id": "prototype_location.gloamharbor", "siteId": "site.gloamharbor" },
+    { "id": "prototype_location.warden-reed", "siteId": "site.warden-reed" },
+    { "id": "prototype_location.cairnmarket", "siteId": "site.cairnmarket" },
+    { "id": "prototype_location.hollow-abbey", "siteId": "site.hollow-abbey" },
+    { "id": "prototype_location.salt-watch", "siteId": "site.salt-watch" },
+    { "id": "prototype_location.ember-gate", "siteId": "site.ember-gate" }
+  ],
+  "maturity": {
+    "prototypeAsset": true,
+    "productionAsset": false,
+    "playtested": false
+  }
+}

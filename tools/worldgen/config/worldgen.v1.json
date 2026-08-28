@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "seed": 2718281828,
+  "extent": [0, 0, 16384, 12288],
+  "grid": { "columns": 2048, "rows": 1536, "cellSizeMeters": 8, "noData": -9999 },
+  "macroGrid": { "columns": 32, "rows": 24, "cellSizeMeters": 512 },
+  "hearthmere": { "siteId": "site.hearthmere", "origin": [6400, 8320, 184], "localSizeMeters": [96, 96], "localEastAxis": "+x", "localSouthAxis": "+z" },
+  "territories": [
+    { "id": "territory.veil-coast", "name": "Veil Coast", "code": "V", "substrate": "marine_alluvium", "polygon": [[0,0],[3072,0],[3072,12288],[0,12288]] },
+    { "id": "territory.dunmire", "name": "Dunmire", "code": "D", "substrate": "peat", "polygon": [[3072,0],[10240,0],[10240,5632],[3072,5632]] },
+    { "id": "territory.graven-march", "name": "Graven March", "code": "G", "substrate": "slate", "polygon": [[3072,5632],[10240,5632],[10240,12288],[3072,12288]] },
+    { "id": "territory.hollow-abbey", "name": "Hollow Abbey", "code": "H", "substrate": "karst_limestone", "polygon": [[10240,0],[16384,0],[16384,3328],[10240,3328]] },
+    { "id": "territory.mirror-salt-waste", "name": "Mirror-Salt Waste", "code": "M", "substrate": "salt_clay", "polygon": [[10240,3328],[16384,3328],[16384,7168],[10240,7168]] },
+    { "id": "territory.cinderward", "name": "Cinderward", "code": "C", "substrate": "volcanic_ironstone", "polygon": [[10240,7168],[16384,7168],[16384,12288],[10240,12288]] }
+  ],
+  "sites": [
+    { "id": "site.hearthmere", "name": "Hearthmere", "kind": "settlement", "territoryId": "territory.graven-march", "coordinate": [6400,8320,184], "waterSource": "Hearth Spring", "access": "Bellwater Road", "subsistence": "terrace gardens and spring fish", "industry": "bell bronze and hospice craft", "burialPractice": "names fired into clay before cremation", "governance": "the three-vigil council" },
+    { "id": "site.gloamharbor", "name": "Gloamharbor", "kind": "settlement", "territoryId": "territory.veil-coast", "coordinate": [1536,7168,18], "waterSource": "veil cisterns", "access": "Tide Causeway", "subsistence": "eel weirs and kelp frames", "industry": "salt rope and black-coral salvage", "burialPractice": "weighted sailcloth sea burial", "governance": "harbor bell compact" },
+    { "id": "site.warden-reed", "name": "Warden Reed", "kind": "settlement", "territoryId": "territory.dunmire", "coordinate": [4864,4352,68], "waterSource": "raised rain cisterns", "access": "Reedward Causeway", "subsistence": "reed grain and mudfish", "industry": "peat, wicker, and lamp oil", "burialPractice": "reed cages above flood mark", "governance": "wardens chosen by causeway section" },
+    { "id": "site.cairnmarket", "name": "Cairnmarket", "kind": "settlement", "territoryId": "territory.graven-march", "coordinate": [8192,10240,212], "waterSource": "crown snowmelt tanks", "access": "Crown Road", "subsistence": "goats and black rye", "industry": "slate, grave lichen, and pack animals", "burialPractice": "family cairns opened once each winter", "governance": "market oath circle" },
+    { "id": "site.hollow-abbey", "name": "Hollow Abbey", "kind": "ruin", "territoryId": "territory.hollow-abbey", "coordinate": [11776,2048,96], "waterSource": "karst bell wells", "access": "Processional Steps", "subsistence": "abandoned cloister plots", "industry": "former vellum and funerary music", "burialPractice": "ossuary drawers keyed by interval", "governance": "the absent chapter" },
+    { "id": "site.salt-watch", "name": "Salt Watch", "kind": "settlement", "territoryId": "territory.mirror-salt-waste", "coordinate": [13824,5120,74], "waterSource": "covered brine stills", "access": "False Horizon Track", "subsistence": "lichen cakes and caravan stores", "industry": "mirror salt and gypsum", "burialPractice": "east-facing salt sheaths", "governance": "rotating compass keeper" },
+    { "id": "site.ember-gate", "name": "Ember Gate", "kind": "settlement", "territoryId": "territory.cinderward", "coordinate": [13312,9472,286], "waterSource": "condensate galleries", "access": "Iron Spine Road", "subsistence": "fungus vaults and imported grain", "industry": "ironstone and kiln glass", "burialPractice": "sealed slag niches", "governance": "furnace allotment court" },
+    { "id": "site.sluice-chapel", "name": "Sluice Chapel", "kind": "ruin", "territoryId": "territory.dunmire", "coordinate": [4608,2560,12] },
+    { "id": "site.pale-measure", "name": "Pale Measure", "kind": "ruin", "territoryId": "territory.hollow-abbey", "coordinate": [11776,1536,126] },
+    { "id": "site.anchor-field", "name": "Anchor Field", "kind": "ruin", "territoryId": "territory.veil-coast", "coordinate": [2304,4608,7] },
+    { "id": "site.smothered-kiln", "name": "Smothered Kiln", "kind": "ruin", "territoryId": "territory.cinderward", "coordinate": [14848,8192,244] },
+    { "id": "site.white-meridian", "name": "White Meridian", "kind": "ruin", "territoryId": "territory.mirror-salt-waste", "coordinate": [15360,4352,62] }
+  ],
+  "roads": [
+    { "id": "route.bellwater-road", "name": "Bellwater Road", "class": "road", "surface": "slate", "nodes": ["site.gloamharbor","site.hearthmere","site.cairnmarket"], "historicalReason": "The bell-founders kept a high winter line above the Dunmire floods." },
+    { "id": "route.reedward-causeway", "name": "Reedward Causeway", "class": "causeway", "surface": "oak_and_reed", "nodes": ["site.gloamharbor","site.warden-reed","site.hearthmere"], "historicalReason": "Quarantine carts required an all-season crossing over the lower mire." },
+    { "id": "route.processional-steps", "name": "Processional Steps", "class": "trail", "surface": "limestone", "nodes": ["site.warden-reed","site.hollow-abbey","site.salt-watch"], "historicalReason": "Pilgrims followed dry karst shelves rather than the shorter flooded floor." },
+    { "id": "route.iron-spine-road", "name": "Iron Spine Road", "class": "road", "surface": "ironstone", "nodes": ["site.hearthmere","site.ember-gate","site.salt-watch"], "historicalReason": "Ore trains accepted steeper grades to avoid ash-glass valleys." },
+    { "id": "route.false-horizon-track", "name": "False Horizon Track", "class": "trail", "surface": "salt_clay", "nodes": ["site.salt-watch","site.white-meridian","site.ember-gate"], "historicalReason": "Compass posts intentionally arc around the preserved playa." }
+  ],
+  "hydrology": {
+    "declaredOutlets": [
+      { "id": "outlet.veil-estuary", "kind": "coast", "coordinate": [0,2560], "boundarySide": "west", "captureRadiusMeters": 4096 },
+      { "id": "outlet.bellwater", "kind": "coast", "coordinate": [0,8704], "boundarySide": "west", "captureRadiusMeters": 4096 },
+      { "id": "outlet.south-karst", "kind": "boundary", "coordinate": [9216,0], "boundarySide": "south", "captureRadiusMeters": 1800 },
+      { "id": "outlet.south-abbey", "kind": "boundary", "coordinate": [11780,0], "boundarySide": "south", "captureRadiusMeters": 1800 },
+      { "id": "outlet.north-graven", "kind": "boundary", "coordinate": [9652,12288], "boundarySide": "north", "captureRadiusMeters": 1024 },
+      { "id": "outlet.north-cinder", "kind": "boundary", "coordinate": [12908,12288], "boundarySide": "north", "captureRadiusMeters": 1024 },
+      { "id": "outlet.east-karst", "kind": "boundary", "coordinate": [16384,2044], "boundarySide": "east", "captureRadiusMeters": 1024 },
+      { "id": "outlet.east-cinder", "kind": "boundary", "coordinate": [16384,8188], "boundarySide": "east", "captureRadiusMeters": 1024 },
+      { "id": "outlet.mirror-salt-playa", "kind": "closed_basin", "coordinate": [13632,3328], "preservationRadiusMeters": 1080 },
+      { "id": "outlet.dunmire-ward-pond", "kind": "pond", "coordinate": [5504,3072], "preservationRadiusMeters": 248 },
+      { "id": "outlet.dunmire-vestry-pond", "kind": "pond", "coordinate": [6656,4224], "preservationRadiusMeters": 192 }
+    ],
+    "namedStreams": [
+      { "id": "stream.reedward", "name": "Reedward", "terminalId": "outlet.veil-estuary", "coordinates": [[4096,6912],[0,2560]] },
+      { "id": "stream.bellwater", "name": "Bellwater", "terminalId": "outlet.bellwater", "coordinates": [[9472,10880],[8192,10240],[6912,9216],[6400,8320],[5120,8448],[3328,8576],[1536,8704],[0,8704]] },
+      { "id": "stream.abbey-sink", "name": "Abbey Sink", "terminalId": "outlet.south-karst", "coordinates": [[10796,4972],[9216,0]] },
+      { "id": "stream.white-run", "name": "White Run", "terminalId": "outlet.mirror-salt-playa", "coordinates": [[15364,6596],[14848,5632],[14336,4608],[13632,3328]] }
+    ]
+  },
+  "habitats": [
+    { "id": "habitat.coastal-intertidal", "territoryIds": ["territory.veil-coast"], "substrates": ["marine_alluvium"], "elevationMeters": [-12,80], "slopeDegrees": [0,18], "moisture": [0.2,1], "corruption": [0.15,1] },
+    { "id": "habitat.drowned-mire", "territoryIds": ["territory.dunmire"], "substrates": ["peat"], "elevationMeters": [-4,90], "slopeDegrees": [0,12], "moisture": [0.35,1], "corruption": [0.2,1] },
+    { "id": "habitat.graven-upland", "territoryIds": ["territory.graven-march"], "substrates": ["slate"], "elevationMeters": [70,420], "slopeDegrees": [0,38], "moisture": [0.12,0.75], "corruption": [0.12,1] },
+    { "id": "habitat.karst-crypt", "territoryIds": ["territory.hollow-abbey"], "substrates": ["karst_limestone"], "elevationMeters": [20,360], "slopeDegrees": [0,42], "moisture": [0.1,0.9], "corruption": [0.4,1] },
+    { "id": "habitat.mirror-playa", "territoryIds": ["territory.mirror-salt-waste"], "substrates": ["salt_clay"], "elevationMeters": [30,260], "slopeDegrees": [0,16], "moisture": [0,0.7], "corruption": [0.45,1] },
+    { "id": "habitat.cinder-ridge", "territoryIds": ["territory.cinderward"], "substrates": ["volcanic_ironstone"], "elevationMeters": [100,700], "slopeDegrees": [0,48], "moisture": [0.05,0.6], "corruption": [0.15,1] },
+    { "id": "habitat.quarantine-road", "territoryIds": ["territory.veil-coast","territory.dunmire","territory.graven-march"], "substrates": ["road","causeway"], "elevationMeters": [-4,420], "slopeDegrees": [0,24], "moisture": [0.1,1], "corruption": [0.35,1] }
+  ],
+  "proofCells": [
+    { "id": "proof.hearthmere", "siteId": "site.hearthmere", "macroCell": [12,16] },
+    { "id": "proof.veil-coast", "siteId": "site.gloamharbor", "macroCell": [3,14] },
+    { "id": "proof.dunmire", "siteId": "site.warden-reed", "macroCell": [9,8] },
+    { "id": "proof.graven-march", "siteId": "site.cairnmarket", "macroCell": [16,20] },
+    { "id": "proof.hollow-abbey", "siteId": "site.hollow-abbey", "macroCell": [23,4] },
+    { "id": "proof.mirror-salt-waste", "siteId": "site.salt-watch", "macroCell": [27,10] },
+      { "id": "proof.cinderward", "siteId": "site.ember-gate", "macroCell": [26,18] }
+  ],
+  "familyShowcases": [
+    ["ashbound","proof.hearthmere"],["cairn_beasts","proof.graven-march"],["march_deserters","proof.graven-march"],
+    ["drowned_parish","proof.dunmire"],["reed_coven","proof.dunmire"],["kilnforged","proof.cinderward"],
+    ["glasswood","proof.cinderward"],["hush_order","proof.hollow-abbey"],["echo_choir","proof.hollow-abbey"],
+    ["ossuary_vermin","proof.hollow-abbey"],["bell_revenants","proof.hearthmere"],["salt_waste","proof.mirror-salt-waste"],
+    ["veil_coast","proof.veil-coast"],["shuttered_ward","proof.dunmire"],["charnel_measures","proof.graven-march"],
+    ["black_sluice","proof.dunmire"],["last_pest_cart","proof.dunmire"],["breath_tithe","proof.cinderward"],
+    ["white_ague","proof.mirror-salt-waste"],["pallid_root_communion","proof.graven-march"],["anchored_quarantine","proof.veil-coast"]
+  ]
+}

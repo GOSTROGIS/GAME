@@ -1,0 +1,69 @@
+/* SPACE AND ANCHORS
+   The interface is anchored, not flowed. A new overlay should reuse an
+   anchor below rather than invent a position. */
+
+:root {
+  --space-1: 4px;
+  --space-2: 6px;
+  --space-3: 8px;
+  --space-4: 10px;
+  --space-5: 12px;
+  --space-6: 14px;
+  --space-7: 18px;
+  --space-8: 20px;
+  --space-9: 24px;
+  --space-10: 28px;
+  --space-11: 34px;
+  --space-12: 44px;
+  --space-13: 68px;
+
+  /* Accessibility floor — every interactive control */
+  --touch-min: 44px;
+
+  /* Shell */
+  --shell-min-w: 920px;
+  --shell-min-h: 620px;
+
+  /* HUD anchors */
+  --hud-gutter: 24px;
+  --hud-top: 22px;
+  --hud-col-side: 315px;
+  --hud-col-target: 285px;
+  --nav-w: 62px;
+  --nav-item-h: 56px;
+  --nav-top: 124px;
+  --tracker-w: 288px;
+  --tracker-top: 120px;
+  --panel-left: 98px;
+  --panel-top: 120px;
+  --panel-bottom: 115px;
+  --panel-w: min(700px, calc(100vw - 460px));
+  --panel-min-w: 500px;
+  --panel-header-h: 74px;
+  --action-slot-w: 76px;
+  --action-slot-h: 61px;
+  --bottom-hud-offset: 17px;
+
+  /* Modal */
+  --modal-inset: 4vh 5vw;
+  --modal-max-w: 1500px;
+  --modal-header-h: 90px;
+  --modal-footer-h: 78px;
+  --modal-stage-w: minmax(330px, 38%);
+
+  /* Dialogue */
+  --dialogue-w: min(920px, 80vw);
+  --dialogue-min-h: 190px;
+  --dialogue-bottom: 40px;
+  --speaker-mark: 100px;
+
+  /* Cards */
+  --player-card-h: 78px;
+  --player-rune: 54px;
+  --meter-h: 7px;
+  --meter-h-health: 10px;
+  --option-card-min-h: 104px;
+  --node-min-h: 176px;
+  --world-card-h: 230px;
+  --breakpoint-narrow: 1100px;
+}

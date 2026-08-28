@@ -1,0 +1,78 @@
+/* COLOUR
+   Group A is byte-identical to the :root block in the game's styles.css.
+   Never change a Group A value here without the same commit changing it there.
+   Group B tokenizes literals that were previously inline in styles.css.
+   Group C is semantic aliasing — prefer these in new work. */
+
+:root {
+  /* ---- A. Canonical (already tokens in the game) ---- */
+  --ink: #080b0d;
+  --ink-2: #101619;
+  --slate: #1a2427;
+  --bone: #d8d0bd;
+  --muted: #8e928b;
+  --gold: #b99552;
+  --gold-bright: #e4c77e;
+  --ember: #bd6135;
+  --blood: #6e2525;
+  --moss: #52665c;
+  --focus: #658e9e;
+  --line: rgba(216, 208, 189, 0.18);
+  --panel: rgba(10, 14, 16, 0.9);
+
+  /* ---- B. Newly tokenized (were inline literals) ---- */
+  --shell: #0a0e10;              /* #game-shell ground, one step off --ink */
+  --world-3d-bg: #071012;        /* WebGL clear colour */
+  --bone-bright: #e1dbca;        /* title h1 — brighter than --bone */
+  --bone-dim: #b7b6ad;           /* title deck */
+  --line-soft: rgba(216, 208, 189, 0.1);   /* interior dividers */
+  --line-faint: rgba(216, 208, 189, 0.08); /* locked-lore rule */
+
+  --health-from: #682a2b;
+  --health-to: #aa4b3f;
+  --stamina-from: #3d6151;
+  --stamina-to: #6d8b68;
+  --focus-from: #365a6c;
+  --focus-to: #6e9aad;
+  --enemy: #863a35;              /* flat, no gradient — reads as other */
+
+  --gold-btn-from: #c09d5d;
+  --gold-btn-to: #836632;
+  --gold-btn-edge: #ddc27c;
+  --gold-btn-ink: #111;          /* the only dark-on-light pairing */
+
+  --death: #a65c51;
+  --rune-edge: #755f37;
+  --step-dot: #303638;
+  --node-edge: #5c5342;
+  --node-edge-learned: #8b7345;
+  --mastery-edge: #695839;
+  --target-label: #9d6d5f;
+  --scroll-thumb: #4d4434;
+  --kbd-bg: #0b0e10;
+  --kbd-edge: #4b4640;
+
+  /* ---- C. Semantic aliases ---- */
+  --surface-page: var(--ink);
+  --surface-shell: var(--shell);
+  --surface-inset: var(--ink-2);
+  --surface-panel: var(--panel);
+
+  --text-body: var(--bone);
+  --text-muted: var(--muted);
+  --text-label: var(--gold);
+  --text-display: var(--bone-bright);
+
+  --border-hairline: var(--line);
+  --border-interior: var(--line-soft);
+  --border-accent: var(--gold);
+
+  --accent: var(--gold);
+  --accent-hover: var(--gold-bright);
+  --state-focus-ring: var(--gold-bright);
+
+  --harm: var(--blood);
+  --hazard: var(--ember);
+  --growth: var(--moss);
+  --mind: var(--focus);
+}

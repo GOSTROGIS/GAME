@@ -1,0 +1,47 @@
+{
+  "schema": "SlipcurveSourceLockV1",
+  "sourceIdentity": "slipcurve-sitelib",
+  "authorization": {
+    "id": "owner-authorized-cross-project-sitelib",
+    "commercialUse": true,
+    "compiledRedistribution": true,
+    "editableDerivativeRedistribution": true
+  },
+  "sourceContentCommit": "c9a104395e1578c429842c7e02c1a8ba20a5e324",
+  "captureWorkspaceHead": "ff8481ee54400e82662c140f2e03af7ee840ec49",
+  "instrumentationVersion": "slipcurve-model-capture-v1.0.0",
+  "chromium": {
+    "playwright": "1.62.1",
+    "revision": "1234",
+    "version": "151.0.7922.34"
+  },
+  "inputs": {
+    "engine/sitelib/README.md": "727e5a748bb93eb1bde0657d3492d40860be888bb078f9e2330ddc9390490581",
+    "engine/sitelib/engine.js": "f0d1958cb4d63bf9fcfd95242ebd7dbb0f5568983d446f0732b7153cdea49f5e",
+    "engine/sitelib/core3.js": "07eb4235078ebf84e3a2e787dfee980072d7e826c1585651a06c1c5d361b75c4",
+    "engine/sitelib/cityfam3.js": "432e15e0848404e939930a659ab49ba3096bcf0f7fa1c50cbdaa29828e746e92",
+    "engine/sitelib/worlds3.js": "ab822bc991c0f58946c69f76cb3f5510eec1b2b28d4e599ab9717657a23bb831",
+    "engine/sitelib/masterformat.js": "db3dab0cda360c8dcf8673f543eafff85bc81200e363e375b9e86b4d0dba9abc",
+    "engine/sitelib/dimensions.js": "ee035699cc104fe7221fe7036618a8896af66f05e32c4ad9f7c29fc025687268",
+    "engine/mc-extents.js": "7c457884214f9d0575ac7213dbbb36c5df42f6fad9c1499b0b60a6738b4bde5d",
+    "export/isometric/_export.py": "5606a1f44096c0044387fe3be1c2b08d5d760b0f0d764587061cd0f59eab84e6",
+    "export/isometric/_harness.html": "d624a292e1a05dcb1b1264f8d2be4adbfd7a87b57d16e52ad910558bce93771c",
+    "export/isometric/_cut.json": "3d851fcce9030c11991052fd0ef5c9aadc1d94ec0ca7ce677e0f1ae145bfa4c5",
+    "export/isometric/manifest.json": "d8678076e87b357a03399e3f22f4a47101e90ea18b00b895c7a2791d1a50ac2b"
+  },
+  "scriptLoadOrder": [
+    "engine/sitelib/engine.js",
+    "engine/sitelib/core3.js",
+    "engine/sitelib/cityfam3.js",
+    "engine/sitelib/worlds3.js",
+    "engine/sitelib/masterformat.js",
+    "engine/sitelib/dimensions.js",
+    "engine/mc-extents.js"
+  ],
+  "historicalCrosswalk": {
+    "distinctGeneratorRepresentatives": 1087,
+    "acceptedVocabularyExports": 982,
+    "rejectedVocabularyCandidates": 105,
+    "phaseRotationViewSceneReferences": 134
+  }
+}

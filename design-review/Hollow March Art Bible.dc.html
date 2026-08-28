@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./tokens/colors.css">
+<link rel="stylesheet" href="./tokens/typography.css">
+<link rel="stylesheet" href="./tokens/spacing.css">
+<link rel="stylesheet" href="./tokens/effects.css">
+<style>
+  html, body { margin:0; padding:0; background:var(--ink); color:var(--bone); -webkit-font-smoothing:antialiased; }
+  body { font-family: var(--sans); }
+  * { box-sizing: border-box; }
+  a { color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(185,149,82,.35); }
+  a:hover { color:var(--gold-bright); border-bottom-color:var(--gold-bright); }
+</style>
+</helmet>
+
+<div style="position:relative;background:#080b0d;min-height:100vh">
+
+<div aria-hidden="true" style="position:fixed;inset:var(--grain-inset);z-index:7;pointer-events:none;opacity:var(--grain-opacity);background-image:var(--grain-url);animation:grain var(--grain-step) steps(2) infinite"></div>
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:8;pointer-events:none;box-shadow:var(--vignette)"></div>
+
+<header style="position:relative;z-index:2;padding:84px clamp(28px,5vw,96px) 0;max-width:1720px;margin:0 auto">
+  <p style="margin:0 0 10px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">Sable Reach &middot; Art Bible &middot; concept art is law</p>
+  <h1 style="margin:0;max-width:1080px;color:var(--bone-bright);font:500 clamp(40px,5vw,76px)/.92 var(--display);letter-spacing:var(--track-title);text-shadow:var(--shadow-text)">The art is the law, <span style="color:var(--gold-bright);font-weight:400">the render answers to it</span></h1>
+  <p style="margin:26px 0 0;max-width:760px;color:var(--bone-dim);font:italic 20px/1.45 var(--serif)">Concept art is the authority and the prompt that produced it outranks even that. Where art exists it is shown; where it does not, the gap is named and the prompt needed to close it sits on the page. No render appears here that cannot be checked against something approved.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:32px">
+    <sc-for list="{{ headerTags }}" as="h" hint-placeholder-count="4">
+      <span style="padding:7px 12px;color:var(--bone);background:var(--ghost-bg);border:1px solid var(--line);font:var(--type-micro);letter-spacing:var(--track-micro);text-transform:uppercase">{{ h }}</span>
+    </sc-for>
+  </div>
+</header>
+
+<section style="position:relative;z-index:2;max-width:1720px;margin:0 auto;padding:56px clamp(28px,5vw,96px) 0">
+  <div style="padding:30px 32px;background:linear-gradient(135deg,rgba(110,37,37,.16),rgba(8,12,14,.88));border:1px solid rgba(110,37,37,.5);box-shadow:inset 3px 0 var(--blood)">
+    <p style="margin:0 0 10px;color:#c2857c;font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Manifest law &middot; binding on every render in this project</p>
+    <h2 style="margin:0 0 16px;color:var(--bone);font:400 30px var(--display)">No guessing. Follow the concept art or it is a critical failure.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
+      <sc-for list="{{ authority }}" as="a" hint-placeholder-count="3">
+        <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--line-soft);border-left:3px solid {{ a.edge }}">
+          <p style="margin:0 0 6px;color:{{ a.tone }};font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">Rank {{ a.rank }} &middot; {{ a.bindingLabel }}</p>
+          <h3 style="margin:0 0 7px;color:var(--bone);font:500 15px var(--display)">{{ a.name }}</h3>
+          <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">{{ a.note }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <p style="max-width:900px;margin:20px 0 0;color:#a7aaa4;font:16px/1.6 var(--serif)">The prompt outranks the art because the prompt is what was approved, and it is the one artefact a non-visual process can read in full. The art outranks all prose. Anything not traceable to a prompt line or a visible art feature does not get rendered &mdash; the compliant response to missing authority is a refusal that says so, never a plausible invention.</p>
+    <p style="max-width:900px;margin:14px 0 0;color:#8e928b;font:13px/1.6 var(--sans)">Source: <code style="color:#b7b6ad;font:12px ui-monospace,SFMono-Regular,Menlo,monospace">prompts/family-plates-batch-01.md</code> &mdash; ten approved canonical masters, transcribed into <code style="color:#b7b6ad;font:12px ui-monospace,SFMono-Regular,Menlo,monospace">kit/hm-art-law.js</code> with each generation-call id retained.</p>
+  </div>
+</section>
+
+<section style="position:relative;z-index:2;max-width:1720px;margin:0 auto;padding:48px clamp(28px,5vw,96px) 0">
+  <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:20px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">00</span>
+      <div>
+        <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">Readable authority</p>
+        <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">The art I can actually open</h2>
+      </div>
+    </div>
+    <p style="margin:0;color:var(--muted);font:11px var(--sans);letter-spacing:.06em;text-transform:uppercase">{{ observedStat }}</p>
+  </div>
+  <sc-if value="{{ showOps }}" hint-placeholder-val="{{ true }}">
+  <div style="margin:0 0 30px;padding:26px 30px;background:linear-gradient(135deg,rgba(82,102,92,.16),rgba(8,12,14,.9));border:1px solid rgba(82,102,92,.5);box-shadow:inset 3px 0 var(--moss)">
+    <p style="margin:0 0 9px;color:#8aa596;font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Closed &middot; 27 August 2026 &middot; the block that gated rank-2 verification</p>
+    <h3 style="margin:0 0 12px;color:var(--bone);font:400 25px var(--display)">The art is in the project now, so every render can be checked against it</h3>
+    <p style="max-width:940px;margin:0 0 18px;color:#a7aaa4;font:16px/1.6 var(--serif)">Forty-six plates were vendored out of the Drive export into <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">assets/characters/</code> and <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">assets/enemies/</code>, bytes unmodified &mdash; no resize, no recompression, no crop and no grade, because a graded master is a corrupted master. Every row in the register now carries a <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">local</code> path, so this page is same-origin, survives going offline, and its authority is readable by automated review for the first time. The three things the copy still cannot claim are below, each stated rather than absorbed.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
+      <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--line-soft);border-left:3px solid var(--ember)">
+        <p style="margin:0 0 6px;color:#d4855f;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">Unreviewed</p>
+        <h4 style="margin:0 0 7px;color:var(--bone);font:500 15px var(--display)">Two plates came from staging</h4>
+        <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Maela Voss and Bera Claymother have cutouts, found in <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px">generated-images/</code> rather than an approved folder. Vendored so they are visible, flagged <em>unreviewed</em> so nothing treats them as rank 2 until a reviewer says so.</p>
+      </div>
+      <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--line-soft);border-left:3px solid var(--blood)">
+        <p style="margin:0 0 6px;color:#c98d78;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">No authority</p>
+        <h4 style="margin:0 0 7px;color:var(--bone);font:500 15px var(--display)">A family nobody registered</h4>
+        <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Anchored Quarantine &mdash; buoy-corpse and hawser-hand, master and cutout each. Absent from the register, absent from the ten approved masters, and absent from batch 01. Art with no prompt behind it cannot be judged.</p>
+      </div>
+      <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--line-soft);border-left:3px solid var(--focus)">
+        <p style="margin:0 0 6px;color:#7ba6b6;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">Owed</p>
+        <h4 style="margin:0 0 7px;color:var(--bone);font:500 15px var(--display)">No provenance sidecars</h4>
+        <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Each vendored file still needs source, licence, hash, byte size and maturity recorded before the strict-production gate will accept it. Until then these are <em>prototype</em> assets sitting in the repo, not production ones.</p>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <p style="max-width:920px;margin:0 0 26px;color:#a7aaa4;font:17px/1.6 var(--serif)">{{ readableLede }} Everything below is transcribed from looking at them &mdash; layers, props, palette, lighting &mdash; and recorded in <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">kit/hm-art-observed.js</code> so the observation outlives whoever made it. The eighteen named-cast plates are vendored as of 27 August and can now be read the same way; that pass has not been made yet, so the cards below still carry the register’s word rather than an observation.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px">
+    <sc-for list="{{ observed }}" as="o" hint-placeholder-count="3">
+      <article style="background:var(--glass-bg);border:1px solid var(--line);box-shadow:var(--shadow-panel)">
+        <div style="position:relative;height:420px;border-bottom:1px solid var(--line-soft);background:linear-gradient(180deg,#0d1416,#06090a)">
+          <img src="{{ o.file }}" alt="{{ o.alt }}" loading="lazy" decoding="async" style="position:absolute;inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);object-fit:contain;object-position:center bottom;filter:var(--grade-atlas)">
+          <i style="position:absolute;left:10px;top:10px;padding:3px 6px;color:{{ o.tone }};background:rgba(0,0,0,.6);border:1px solid {{ o.edge }};font:var(--type-nano);font-style:normal;letter-spacing:.08em;text-transform:uppercase">{{ o.badge }}</i>
+        </div>
+        <div style="padding:18px 20px 20px">
+          <h3 style="margin:0 0 4px;color:var(--bone-bright);font:500 19px var(--display)">{{ o.name }}</h3>
+          <p style="margin:0 0 12px;color:var(--muted);font:var(--type-body-sm)">{{ o.id }}</p>
+          <dl style="display:grid;grid-template-columns:72px 1fr;gap:6px 14px;margin:0;padding-top:12px;border-top:1px solid var(--line-soft)">
+            <dt style="color:#797f7a;font:var(--type-micro);letter-spacing:var(--track-nano);text-transform:uppercase;padding-top:3px">Build</dt>
+            <dd style="margin:0;color:#bec0b8;font:var(--type-body)">{{ o.build }}</dd>
+            <dt style="color:#797f7a;font:var(--type-micro);letter-spacing:var(--track-nano);text-transform:uppercase;padding-top:3px">Face</dt>
+            <dd style="margin:0;color:#a7aaa4;font:var(--type-body)">{{ o.face }}</dd>
+            <dt style="color:#797f7a;font:var(--type-micro);letter-spacing:var(--track-nano);text-transform:uppercase;padding-top:3px">Props</dt>
+            <dd style="margin:0;color:#bec0b8;font:var(--type-body)">{{ o.propLine }}</dd>
+            <dt style="color:#797f7a;font:var(--type-micro);letter-spacing:var(--track-nano);text-transform:uppercase;padding-top:3px">Light</dt>
+            <dd style="margin:0;color:#a7aaa4;font:var(--type-body)">{{ o.lighting }}</dd>
+          </dl>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+
+  <p style="margin:40px 0 14px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Environment keyframes &mdash; moved here from the Theme Reference so the art lives in one place</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:12px">
+    <sc-for list="{{ keyframes }}" as="k" hint-placeholder-count="4">
+      <div style="position:relative;overflow:hidden;border:1px solid var(--line);background:var(--ink)">
+        <img src="{{ k.file }}" alt="{{ k.alt }}" loading="lazy" decoding="async" style="display:block;width:100%;height:240px;object-fit:cover;opacity:.78">
+        <div style="position:absolute;inset:auto 0 0;padding:44px 18px 15px;background:linear-gradient(transparent,rgba(4,7,8,.96))">
+          <span style="color:var(--gold);font:var(--type-nano);letter-spacing:var(--track-micro)">{{ k.band }}</span>
+          <h3 style="margin:4px 0 3px;color:var(--bone);font:500 18px var(--display)">{{ k.name }}</h3>
+          <p style="margin:0;color:#a8ada7;font:var(--type-body-xs)">{{ k.note }}</p>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section style="position:relative;z-index:2;max-width:1720px;margin:0 auto;padding:56px clamp(28px,5vw,96px) 0">
+  <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:20px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">00b</span>
+      <div>
+        <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">Rank 1 &middot; the ten approved masters</p>
+        <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">Every family, and why each render is refused</h2>
+      </div>
+    </div>
+    <p style="margin:0;color:var(--muted);font:11px var(--sans);letter-spacing:.06em;text-transform:uppercase">{{ familyStat }}</p>
+  </div>
+  <p style="max-width:920px;margin:0 0 26px;color:#a7aaa4;font:17px/1.6 var(--serif)">Each family's prompt makes one anatomical impossibility load-bearing &mdash; a torso that is an archive of clay drawers, a rotating dry-stone cairn, a single closed-loop prayer cord, a detached mouth with no body behind it. That violation <em>is</em> the family's identity, so it is the first thing any render is judged on. None of the ten can be built on a humanoid chassis, so all ten are refused rather than approximated.</p>
+  <div style="display:grid;gap:8px">
+    <sc-for list="{{ lawFamilies }}" as="f" hint-placeholder-count="10">
+      <article style="display:grid;grid-template-columns:200px 1fr 150px;gap:20px;align-items:start;padding:20px 22px;background:var(--glass-bg);border:1px solid var(--line);border-left:3px solid var(--blood)">
+        <div>
+          <h3 style="margin:0 0 5px;color:var(--bone-bright);font:500 16px var(--display)">{{ f.name }}</h3>
+          <p style="margin:0 0 6px;color:var(--muted);font:var(--type-body-xs)">{{ f.chassis }}</p>
+          <code style="color:#797f7a;font:10px ui-monospace,SFMono-Regular,Menlo,monospace">{{ f.promptCall }}</code>
+        </div>
+        <div>
+          <p style="margin:0 0 8px;color:#bec0b8;font:var(--type-body)"><em style="color:var(--gold)">Violation.</em> {{ f.violation }}</p>
+          <p style="margin:0;color:#8e928b;font:var(--type-body-xs)">{{ f.paletteLine }}</p>
+        </div>
+        <div>
+          <i style="display:inline-block;padding:4px 7px;color:#c98d78;background:rgba(110,37,37,.18);border:1px solid rgba(110,37,37,.55);font:var(--type-nano);font-style:normal;letter-spacing:.08em;text-transform:uppercase">{{ f.verdict }}</i>
+          <p style="margin:8px 0 0;color:#8e928b;font:var(--type-body-xs)">{{ f.reason }}</p>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<div style="position:relative;z-index:2;max-width:1720px;margin:0 auto;padding:0 clamp(28px,5vw,96px) 140px">
+
+
+
+
+
+<section style="padding:64px 0 0">
+  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:22px">
+    <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">03</span>
+    <div>
+      <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">The rule</p>
+      <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">Every subject, and which gap it is sitting in</h2>
+    </div>
+  </div>
+  <p style="max-width:900px;margin:0 0 24px;color:#a7aaa4;font:17px/1.6 var(--serif)">Every subject on this page carries two columns: the concept art, and what the register knows about the subject. No render appears in either &mdash; the rig kit is humanoid-only and nothing here has authority to check a render against, so putting one on the page would be the exact failure the law names. Where no concept art exists the column is not quietly dropped &mdash; it is drawn as an ember-marked gap, because a page that hides its own holes is how eighteen finished plates went unnoticed in a Drive folder while the audit said zero characters had portraits.</p>
+  <p style="max-width:900px;margin:0 0 26px;color:#a7aaa4;font:17px/1.6 var(--serif)">Concept art is graded as reference &mdash; <code style="color:var(--bone-dim);font:13px ui-monospace,SFMono-Regular,Menlo,monospace">sepia(.18) saturate(.7) contrast(1.18)</code>, the atlas-still grade &mdash; and it is applied to every plate on this page. Nothing is shown raw; the character grade stays reserved for rendered output, so the day a render appears beside a plate the two are told apart without a label.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:12px">
+    <sc-for list="{{ coverageTiles }}" as="v" hint-placeholder-count="5">
+      <div style="padding:18px 20px;background:var(--glass-bg);border:1px solid var(--line);border-top:2px solid {{ v.edge }}">
+        <p style="margin:0 0 10px;color:var(--gold);font:var(--type-micro);letter-spacing:var(--track-micro);text-transform:uppercase">{{ v.label }}</p>
+        <p style="margin:0 0 5px;color:var(--gold-bright);font:30px var(--display)">{{ v.value }}</p>
+        <p style="margin:0;color:var(--muted);font:12px/1.4 var(--sans)">{{ v.note }}</p>
+      </div>
+    </sc-for>
+  </div>
+  <div style="display:grid;gap:8px">
+    <sc-for list="{{ artSets }}" as="s" hint-placeholder-count="6">
+      <article style="display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:14px 20px;background:var(--codex-bg);border:1px solid var(--line);border-left:3px solid {{ s.edge }}">
+        <div>
+          <h3 style="margin:0 0 4px;color:var(--bone);font:500 14px var(--display)">{{ s.name }}</h3>
+          <p style="margin:0;color:var(--muted);font:13px var(--serif)">{{ s.detail }}</p>
+        </div>
+        <span style="color:{{ s.tone }};font:500 13px var(--sans);font-variant-numeric:tabular-nums;white-space:nowrap">{{ s.count }}</span>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<section style="padding:64px 0 0">
+  <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:20px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">04</span>
+      <div>
+        <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">The cast</p>
+        <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">{{ shownLabel }}</h2>
+      </div>
+    </div>
+    <p style="margin:0;color:var(--muted);font:11px var(--sans);letter-spacing:.06em;text-transform:uppercase">{{ statLine }}</p>
+  </div>
+
+  
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px">
+    <sc-for list="{{ factionChips }}" as="f" hint-placeholder-count="8">
+      <button type="button" onClick="{{ f.pick }}" style="padding:7px 12px;min-height:var(--touch-min);color:{{ f.fg }};background:{{ f.bg }};border:1px solid {{ f.edge }};font:var(--type-micro);letter-spacing:var(--track-nano);text-transform:uppercase;cursor:pointer;transition:.2s ease" style-hover="color:var(--gold-bright);border-color:var(--gold-bright)">{{ f.label }}</button>
+    </sc-for>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:20px;padding:12px 16px;background:var(--inset-bg);border:1px solid var(--line-soft)">
+    <button type="button" onClick="{{ pagePrev }}" style="min-height:var(--touch-min);padding:0 18px;color:var(--bone);background:var(--ghost-bg);border:1px solid var(--line);font:var(--type-button);letter-spacing:var(--track-button);text-transform:uppercase;cursor:pointer;opacity:{{ prevDim }};transition:var(--ease-ui)" style-hover="color:var(--gold-bright);border-color:var(--gold)">Previous</button>
+    <button type="button" onClick="{{ pageNext }}" style="min-height:var(--touch-min);padding:0 18px;color:var(--bone);background:var(--ghost-bg);border:1px solid var(--line);font:var(--type-button);letter-spacing:var(--track-button);text-transform:uppercase;cursor:pointer;opacity:{{ nextDim }};transition:var(--ease-ui)" style-hover="color:var(--gold-bright);border-color:var(--gold)">Next</button>
+    <p style="margin:0 0 0 8px;color:var(--bone);font:var(--type-body-sm);font-variant-numeric:tabular-nums">{{ pageLabel }}</p>
+    <p style="margin:0 0 0 auto;color:var(--muted);font:var(--type-body-xs)">{{ pageNote }}</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(740px,1fr));gap:12px">
+    <sc-for list="{{ cards }}" as="c" hint-placeholder-count="6">
+      <article style="display:grid;grid-template-columns:300px 1fr;background:var(--glass-bg);border:1px solid var(--line);box-shadow:var(--shadow-panel)">
+
+        <div style="position:relative;min-height:420px;border-right:1px solid var(--line-soft);background:radial-gradient(ellipse at 50% 46%,rgba(101,142,158,.13),transparent 64%),linear-gradient(180deg,#0c1315,#070a0b)">
+          <sc-if value="{{ c.hasArt }}" hint-placeholder-val="{{ false }}">
+            <img src="{{ c.artSrc }}" alt="{{ c.artAlt }}" data-art="{{ c.id }}" loading="lazy" decoding="async" onError="{{ c.onArtError }}" referrerpolicy="no-referrer" style="position:absolute;inset:8px 8px 28px;width:calc(100% - 16px);height:calc(100% - 36px);object-fit:contain;object-position:center bottom;filter:var(--grade-atlas)">
+          </sc-if>
+          <sc-if value="{{ c.noArt }}" hint-placeholder-val="{{ true }}">
+            <div style="position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:13px;padding:22px;text-align:center">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="var(--ember)" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" style="display:block;flex:0 0 auto">
+                <path d="M6 3 H18 V21 H6 Z M9 7 H15 M9 11 H15 M9 15 H13"></path>
+              </svg>
+              <i style="padding:3px 6px;color:#d4855f;background:rgba(189,97,53,.14);border:1px solid rgba(189,97,53,.4);font:var(--type-nano);font-style:normal;letter-spacing:.08em;text-transform:uppercase">{{ c.gapTitle }}</i>
+              <p style="margin:0;color:var(--muted);font:var(--type-body-xs)">{{ c.artNote }}</p>
+            </div>
+          </sc-if>
+          <p style="position:absolute;left:12px;right:12px;bottom:8px;margin:0;padding-top:7px;border-top:1px solid var(--line-soft);color:#7ba6b6;font:var(--type-micro);letter-spacing:var(--track-nano);text-transform:uppercase">{{ c.artLabel }}</p>
+        </div>
+
+        <div style="padding:20px 22px 16px;display:flex;flex-direction:column;gap:0">
+          <header style="display:flex;justify-content:space-between;gap:10px;color:var(--gold);font-size:8px;font-family:var(--display);text-transform:uppercase;letter-spacing:.07em">
+            <span>{{ c.role }}</span>
+            <span style="color:{{ c.accent }}">{{ c.factionName }}</span>
+          </header>
+          <h3 style="margin:7px 0 5px;color:var(--bone-bright);font:500 21px var(--display);letter-spacing:var(--track-name)">{{ c.name }}</h3>
+          <em style="display:block;margin-bottom:7px;color:#a7a096;font:italic 14px var(--serif)">{{ c.voice }}</em>
+          <p style="margin:0 0 9px;color:#9fa59f;font:var(--type-body-sm)">{{ c.id }}</p>
+
+          <dl style="display:grid;grid-template-columns:74px 1fr;gap:6px 14px;margin:8px 0 0;padding-top:10px;border-top:1px solid var(--line-soft)">
+            <dt style="color:#797f7a;font:var(--type-micro);letter-spacing:var(--track-nano);text-transform:uppercase;padding-top:3px">Mark</dt>
+            <dd style="margin:0;color:#bec0b8;font:var(--type-body)">{{ c.mark }}</dd>
+            <dt style="color:#797f7a;font:var(--type-micro);letter-spacing:var(--track-nano);text-transform:uppercase;padding-top:3px">Garment</dt>
+            <dd style="margin:0;color:#a7aaa4;font:var(--type-body)">{{ c.garment }}</dd>
+            <dt style="color:#797f7a;font:var(--type-micro);letter-spacing:var(--track-nano);text-transform:uppercase;padding-top:3px">Signature</dt>
+            <dd style="margin:0;color:#bec0b8;font:var(--type-body)">{{ c.signature }}</dd>
+          </dl>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:6px;margin-top:16px">
+            <div style="padding:9px 11px;background:var(--inset-bg);border:1px solid var(--line-soft)">
+              <p style="margin:0 0 4px;color:#797f7a;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">Bearing</p>
+              <p style="margin:0;color:var(--bone);font:12px var(--display)">{{ c.bearing }}</p>
+            </div>
+            <div style="padding:9px 11px;background:var(--inset-bg);border:1px solid var(--line-soft)">
+              <p style="margin:0 0 4px;color:#797f7a;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">Height</p>
+              <p style="margin:0;color:var(--bone);font:12px var(--sans);font-variant-numeric:tabular-nums">{{ c.heightLabel }}</p>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:auto;padding-top:14px">
+            <i style="padding:3px 5px;color:{{ c.lawFg }};background:{{ c.lawBg }};border:1px solid {{ c.lawEdge }};font:var(--type-nano);font-style:normal;letter-spacing:.08em;text-transform:uppercase">{{ c.lawStatus }}</i>
+            <i style="padding:3px 5px;color:{{ c.promptFg }};background:{{ c.promptBg }};border:1px solid {{ c.promptEdge }};font:var(--type-nano);font-style:normal;letter-spacing:.08em;text-transform:uppercase">{{ c.promptStatus }}</i>
+            <i style="padding:3px 5px;color:{{ c.tierFg }};background:{{ c.tierBg }};border:1px solid {{ c.tierEdge }};font:var(--type-nano);font-style:normal;letter-spacing:.08em;text-transform:uppercase">{{ c.tierLabel }}</i>
+            <i style="padding:3px 5px;color:{{ c.clipFg }};background:{{ c.clipBg }};border:1px solid {{ c.clipEdge }};font:var(--type-nano);font-style:normal;letter-spacing:.08em;text-transform:uppercase">{{ c.clipTier }}</i>
+            
+            
+            
+          </div>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<section style="padding:72px 0 0">
+  <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:20px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">04b</span>
+      <div>
+        <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">Rank 1 &middot; authored this pass &middot; hand to ChatGPT</p>
+        <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">Seven prompts, so the art can exist at all</h2>
+      </div>
+    </div>
+    <p style="margin:0;color:var(--muted);font:11px var(--sans);letter-spacing:.06em;text-transform:uppercase">{{ promptStat }}</p>
+  </div>
+  <p style="max-width:920px;margin:0 0 12px;color:#a7aaa4;font:17px/1.6 var(--serif)">Batch 01 covered bestiary families only, so every named character had <em>no rank-1 authority whatsoever</em> &mdash; nothing approved, nothing to conform to. Authoring the prompt is the one part of this I can do without seeing anything: the prompt is design intent in words, and writing it is what rank 1 <em>is</em>. Each follows batch-01 form exactly, repeats the common-law presentation rules verbatim, and carries one load-bearing detail the render is judged on first.</p>
+  <p style="max-width:920px;margin:0 0 24px;color:var(--muted);font:13px/1.6 var(--sans)">One deliberate departure, stated so it is not mistaken for drift: these are living people, so no anatomical impossibility is requested. The load-bearing detail is instead evidence of a life &mdash; a hip that failed and was never set, a rope scar across both palms, a shoulder an inch higher than the other. The four readable origin plates set that precedent: ordinary anatomy carrying {{ burdenLine }}.</p>
+  <div style="display:grid;gap:10px">
+    <sc-for list="{{ prompts }}" as="p" hint-placeholder-count="7">
+      <article style="background:var(--glass-bg);border:1px solid var(--line);border-left:3px solid var(--moss)">
+        <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;padding:16px 20px;border-bottom:1px solid var(--line-soft)">
+          <div>
+            <h3 style="margin:0 0 3px;color:var(--bone-bright);font:500 18px var(--display)">{{ p.name }}</h3>
+            <p style="margin:0;color:var(--muted);font:var(--type-body-xs)">{{ p.role }} &middot; {{ p.faction }}</p>
+          </div>
+          <i style="padding:3px 6px;color:#8aa596;background:rgba(82,102,92,.16);border:1px solid rgba(82,102,92,.45);font:var(--type-nano);font-style:normal;letter-spacing:.08em;text-transform:uppercase">{{ p.useCase }}</i>
+        </div>
+        <p style="margin:0;padding:14px 20px;color:#bec0b8;font:var(--type-body);border-bottom:1px solid var(--line-soft)"><em style="color:var(--gold)">Load-bearing.</em> {{ p.detail }}</p>
+        <pre style="margin:0;padding:16px 20px;max-height:280px;overflow:auto;color:#c6c9c2;background:rgba(2,4,5,.66);font:11px/1.62 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap">{{ p.text }}</pre>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<section style="padding:72px 0 0">
+  <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:20px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">04c</span>
+      <div>
+        <p style="margin:0 0 8px;color:#c2857c;font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">Recovered after a deletion that should not have happened</p>
+        <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">Ten roles, twenty-one families, seven hidden conflicts</h2>
+      </div>
+    </div>
+    <p style="margin:0;color:var(--muted);font:11px var(--sans);letter-spacing:.06em;text-transform:uppercase">{{ recoveryStat }}</p>
+  </div>
+  <div style="margin:0 0 26px;padding:22px 26px;background:linear-gradient(135deg,rgba(110,37,37,.14),rgba(8,12,14,.88));border:1px solid rgba(110,37,37,.46);box-shadow:inset 3px 0 var(--blood)">
+    <p style="max-width:940px;margin:0;color:#a7aaa4;font:16px/1.6 var(--serif)">I deleted <code style="color:#c98d78;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">Hollow March Character Audit.dc.html</code> as &ldquo;superseded by the Art Bible&rdquo;. It was not superseded &mdash; this page had no equivalent of its encounter-role, ecological-family or faction sections, and a project-wide search afterwards returned nothing for content that had been there an hour before. The canonical half is re-read from <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">bestiary.data.js</code> and <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">characters.js</code> at <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">main</code>, so it is exact rather than remembered. The authored movement prose was not in the repo; {{ proseLine }} survived in a search transcript and is carried verbatim. The rest is left <strong style="color:#c98d78">blank rather than rewritten</strong> &mdash; inventing a replacement for lost authored text is the same failure the law forbids for art.</p>
+  </div>
+
+  <p style="margin:0 0 12px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">The seven factions and what each one is hiding</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:10px;margin-bottom:34px">
+    <sc-for list="{{ factions }}" as="f" hint-placeholder-count="7">
+      <article style="padding:18px 20px;background:var(--glass-bg);border:1px solid var(--line);border-left:3px solid var(--gold)">
+        <h3 style="margin:0 0 8px;color:var(--bone-bright);font:500 16px var(--display)">{{ f.name }}</h3>
+        <p style="margin:0 0 10px;color:#a7aaa4;font:italic 14px var(--serif)">{{ f.ethos }}</p>
+        <dl style="display:grid;grid-template-columns:56px 1fr;gap:5px 12px;margin:0;padding-top:10px;border-top:1px solid var(--line-soft)">
+          <dt style="color:#797f7a;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase;padding-top:3px">Public</dt>
+          <dd style="margin:0;color:#a7aaa4;font:var(--type-body-xs)">{{ f.publicGoal }}</dd>
+          <dt style="color:#c2857c;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase;padding-top:3px">Hidden</dt>
+          <dd style="margin:0;color:#c9bfae;font:var(--type-body-xs)">{{ f.hiddenConflict }}</dd>
+        </dl>
+      </article>
+    </sc-for>
+  </div>
+
+  <p style="margin:0 0 12px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Ten encounter roles &middot; repo-exact purpose, authored turn economy where it survived</p>
+  <div style="display:grid;gap:6px;margin-bottom:34px">
+    <sc-for list="{{ roles }}" as="r" hint-placeholder-count="10">
+      <article style="display:grid;grid-template-columns:130px 1fr 96px;gap:16px;align-items:start;padding:14px 18px;background:var(--glass-bg);border:1px solid var(--line-soft)">
+        <h3 style="margin:0;color:var(--bone);font:500 14px var(--display)">{{ r.label }}</h3>
+        <div>
+          <p style="margin:0 0 5px;color:#bec0b8;font:var(--type-body)">{{ r.purpose }}</p>
+          <p style="margin:0;color:#8e928b;font:var(--type-body-xs)">{{ r.turn }}</p>
+        </div>
+        <i style="justify-self:start;padding:3px 5px;color:{{ r.tone }};background:{{ r.bg }};border:1px solid {{ r.edge }};font:var(--type-nano);font-style:normal;letter-spacing:.08em;text-transform:uppercase">{{ r.state }}</i>
+      </article>
+    </sc-for>
+  </div>
+
+  <p style="margin:0 0 12px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Twenty-one ecological families &middot; every field repo-exact</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px">
+    <sc-for list="{{ families }}" as="f" hint-placeholder-count="21">
+      <article style="padding:16px 18px;background:var(--glass-bg);border:1px solid var(--line-soft);border-left:3px solid {{ f.edge }}">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
+          <h3 style="margin:0 0 6px;color:var(--bone-bright);font:500 15px var(--display)">{{ f.name }}</h3>
+          <span style="color:#797f7a;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">{{ f.regionLine }}</span>
+        </div>
+        <p style="margin:0 0 8px;color:#a7aaa4;font:var(--type-body-xs)">{{ f.ecology }}</p>
+        <p style="margin:0 0 8px;color:#8e928b;font:var(--type-body-xs)">{{ f.silhouetteLine }}</p>
+        <p style="margin:0;color:#797f7a;font:var(--type-nano);letter-spacing:.04em;text-transform:uppercase">{{ f.tagLine }}</p>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<section style="padding:72px 0 0">
+  <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:20px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">05</span>
+      <div>
+        <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">The bestiary</p>
+        <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">{{ beastHeading }}</h2>
+      </div>
+    </div>
+    <p style="margin:0;color:var(--muted);font:11px var(--sans);letter-spacing:.06em;text-transform:uppercase">{{ beastStat }}</p>
+  </div>
+  <p style="max-width:900px;margin:0 0 26px;color:#a7aaa4;font:17px/1.6 var(--serif)">The rule cuts both ways. Above, the named cast has a register entry and mostly no art, so the art column is drawn as a gap. Here the opposite: finished concept plates for every beast below and no chassis that could carry one. Each family&rsquo;s prompt makes a different impossibility load-bearing, so the blocker is named per family from the law rather than blamed on quadrupeds in general &mdash; and scaling a person to fit is how a bestiary ends up looking like people in costumes.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(216px,1fr));gap:10px">
+    <sc-for list="{{ beasts }}" as="b" hint-placeholder-count="8">
+      <article style="background:var(--glass-bg);border:1px solid var(--line)">
+        <div style="position:relative;height:246px;border-bottom:1px solid var(--line-soft);background:radial-gradient(ellipse at 50% 46%,rgba(101,142,158,.14),transparent 64%),linear-gradient(180deg,#0c1315,#070a0b)">
+          <img src="{{ b.artSrc }}" alt="{{ b.artAlt }}" data-art="{{ b.id }}" loading="lazy" decoding="async" onError="{{ b.onArtError }}" referrerpolicy="no-referrer" style="position:absolute;inset:6px 0 22px;width:100%;height:calc(100% - 28px);object-fit:contain;filter:var(--grade-atlas)">
+          <p style="position:absolute;left:10px;right:10px;bottom:6px;margin:0;color:#7ba6b6;font:var(--type-micro);letter-spacing:var(--track-nano);text-transform:uppercase">{{ b.artLabel }}</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:9px;padding:10px 12px;border-bottom:1px solid var(--line-soft);background:var(--inset-bg)">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="var(--ember)" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" style="display:block;flex:0 0 auto"><path d="M12 4 A7 7 0 0 1 19 11 V15 H5 V11 A7 7 0 0 1 12 4 Z M9 11 V12 M15 11 V12 M9 18 H15"></path></svg>
+          <p style="margin:0;color:#d4855f;font:var(--type-micro);letter-spacing:var(--track-micro);text-transform:uppercase">{{ b.chassisLine }}</p>
+        </div>
+        <div style="padding:13px 14px 15px">
+          <p style="margin:0 0 4px;color:var(--gold);font:var(--type-micro);letter-spacing:var(--track-micro);text-transform:uppercase">{{ b.id }}</p>
+          <h3 style="margin:0 0 7px;color:var(--bone-bright);font:500 16px var(--display)">{{ b.name }}</h3>
+          <p style="margin:0;color:var(--muted);font:13px/1.4 var(--serif)">{{ b.family }}</p>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<section style="padding:72px 0 0">
+  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:22px">
+    <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">06</span>
+    <div>
+      <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">Still open</p>
+      <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">What this does not solve</h2>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:10px">
+    <sc-for list="{{ openItems }}" as="o" hint-placeholder-count="4">
+      <article style="padding:20px 22px;background:var(--glass-bg);border:1px solid var(--line);border-left:3px solid {{ o.edge }}">
+        <p style="margin:0 0 9px;color:{{ o.tone }};font:var(--type-micro);letter-spacing:var(--track-micro);text-transform:uppercase">{{ o.owner }}</p>
+        <h3 style="margin:0 0 8px;color:var(--bone);font:500 15px var(--display)">{{ o.title }}</h3>
+        <p style="margin:0 0 11px;color:#9fa59f;font:14px/1.5 var(--serif)">{{ o.detail }}</p>
+        <code style="color:var(--muted);font:11px ui-monospace,SFMono-Regular,Menlo,monospace">{{ o.target }}</code>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<footer style="margin-top:88px;padding-top:32px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px">
+  <p style="margin:0;color:var(--muted);font:italic 15px var(--serif)">{{ footNote }}</p>
+  <p style="margin:0;color:rgba(220,215,200,.48);font:10px var(--sans);letter-spacing:.12em;text-transform:uppercase">Sable Reach &middot; art bible v2 &middot; prototype</p>
+</footer>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1720, &quot;height&quot;: 1100 },
+  &quot;perPage&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;default&quot;: 6,
+    &quot;min&quot;: 2,
+    &quot;max&quot;: 12,
+    &quot;step&quot;: 1,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;The cast&quot;
+  },
+  &quot;gapsOnly&quot;: {
+    &quot;editor&quot;: &quot;boolean&quot;,
+    &quot;default&quot;: false,
+    &quot;tsType&quot;: &quot;boolean&quot;,
+    &quot;section&quot;: &quot;The cast&quot;
+  },
+  &quot;showOps&quot;: {
+    &quot;editor&quot;: &quot;boolean&quot;,
+    &quot;default&quot;: true,
+    &quot;tsType&quot;: &quot;boolean&quot;,
+    &quot;section&quot;: &quot;The cast&quot;
+  }
+}">
+const FACTION_ORDER = ['ember_ledger', 'bell_wardens', 'reed_sisters', 'cinder_compact', 'exact_word', 'unwritten_roads', 'grave_tithe'];
+
+/* A transparent pixel. An empty src resolves against the page URL and fires a
+   404 while the stream is still filling holes, so every image hole falls back
+   here instead. */
+const BLANK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+
+const TIER_LABEL = { placed: 'Placed in world', lead: 'Faction lead', remainder: 'Authored, unplaced' };
+
+/* Tones lifted verbatim from components/labels/StatusPill.jsx so a pill on
+   this page and a pill anywhere else in the game are the same object.
+   `valid` = it exists in the world. `default` = authored, waiting. */
+const PILL = {
+  default: { fg: '#d3bc7c', bg: 'rgba(185,149,82,.12)', edge: 'rgba(185,149,82,.3)' },
+  prototype: { fg: '#d4855f', bg: 'rgba(189,97,53,.14)', edge: 'rgba(189,97,53,.4)' },
+  valid: { fg: '#8aa596', bg: 'rgba(82,102,92,.16)', edge: 'rgba(82,102,92,.45)' },
+};
+const TIER_PILL = { placed: 'valid', lead: 'valid', remainder: 'default' };
+
+class Component extends DCLogic {
+  state = {
+    ready: false, err: null,
+    faction: 'all',
+    page: 0,
+    beastShown: 999,
+    artTries: {},
+    tally: null,
+  };
+
+  componentDidMount() {
+    this.boot();
+  }
+
+  componentWillUnmount() {
+    this._dead = true;
+    if (this._artTimer) clearInterval(this._artTimer);
+  }
+
+  async boot() {
+    try {
+      const [cast, art, law, obs, prompts, bestiary] = await Promise.all([
+        import('./kit/hm-actor-cast.js?v=9'),
+        import('./kit/hm-concept-art.js?v=8'),
+        import('./kit/hm-art-law.js?v=1'),
+        import('./kit/hm-art-observed.js?v=3'),
+        import('./kit/hm-cast-prompts.js?v=1'),
+        import('./kit/hm-bestiary-data.js?v=1'),
+      ]);
+      if (this._dead) return;
+      this.CAST = cast.CAST;
+      this.FACTION_META = cast.FACTION_META;
+      this.VOICES = cast.VOICES;
+      this.voiceTally = cast.voiceTally;
+      this.artFor = art.artFor;
+      this.coverage = art.coverage;
+      this.ART = art.CONCEPT_ART;
+      this.LAW = law;
+      this.OBS = obs;
+      this.PROMPTS = prompts;
+      this.BEST = bestiary;
+      /* No renderer. This page shows concept art and the prompts that govern
+         it; the 3D rig is not presented here, so booting a WebGL context,
+         building skeletons and baking stills would all be work for pixels
+         nobody sees. The rig kit stays in kit/ for a page that can conform to
+         real art. */
+      this.hall = null;
+      this.setState({ ready: true, tally: cast.castTally() });
+      /* No render loop at boot. It starts when a card is focused and stops
+         when focus clears. artWatch runs on its own slow timer instead of
+         riding the animation frame, so concept-art retries keep working on a
+         page with nothing animating. */
+      this._artTimer = setInterval(() => this.artWatch(), 2500);
+    } catch (e) {
+      this.setState({ err: String(e && e.message ? e.message : e) });
+    }
+  }
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  /* Drive drops thumbnails under burst load — a six-image probe returned two
+     and timed out four, and the four were not permission failures. So a
+     failed plate is retried at a fresh URL up to three times, spaced out,
+     and only then reported as refused. The card never shows a broken image
+     and never claims art is missing when it is merely throttled. */
+  artRetry(id) {
+    const n = (this.state.artTries[id] || 0) + 1;
+    if (n > 3) return;
+    const delay = 600 * n + Math.random() * 400;
+    setTimeout(() => {
+      if (this._dead) return;
+      this.setState((s) => ({ artTries: { ...s.artTries, [id]: n } }));
+    }, delay);
+  }
+
+  /* Watchdog. The failure that actually happened was not an error event: the
+     requests hung, so `onError` never fired and the pane would have sat blank
+     for as long as the page was open. A blank pane is the one outcome the
+     concept-art rule cannot tolerate, because it looks like art that is
+     missing rather than art that failed to arrive. So every art image is
+     timed, and one that has neither loaded nor errored inside the budget is
+     treated as a failure and pushed onto the same retry ladder. */
+  artWatch() {
+    const now = performance.now();
+    const vh = innerHeight;
+    this._artSeen = this._artSeen || new Map();
+    for (const img of document.querySelectorAll('img[data-art]')) {
+      const id = img.getAttribute('data-art');
+      const key = id + '@' + (img.currentSrc || img.src);
+
+      // Only watch images the browser has actually been asked to fetch. A
+      // lazy image far below the fold is legitimately incomplete with no
+      // request in flight, and counting those as hangs is exactly the bug
+      // that burned every retry before a single card had scrolled into view.
+      const r = img.getBoundingClientRect();
+      const near = r.bottom > -1200 && r.top < vh + 1200;
+      if (!near) { this._artSeen.delete(key); continue; }
+
+      if (img.complete && img.naturalWidth > 1) { this._artSeen.delete(key); continue; }
+      const first = this._artSeen.get(key);
+      if (first == null) { this._artSeen.set(key, now); continue; }
+      if (now - first > 10000) {
+        this._artSeen.delete(key);
+        this.artRetry(id);
+      }
+    }
+  }
+
+  /* The bestiary rows are derived from the concept-art register rather than
+     re-typed here, so a beast cannot appear in this list without art and
+     cannot be silently dropped when art is added. Family labels come from the
+     register's own `set` field for the same reason. */
+  /** How many enemy forms carry art in the register, counted not typed. */
+  beastTotal() {
+    if (!this.ART) return 0;
+    return Object.entries(this.ART)
+      .filter(([id, r]) => id.startsWith('enemy.') && (r.master || r.cutout || r.local)).length;
+  }
+
+  beastRows() {
+    if (!this.ART) return [];
+    /* Memoised. renderVals() asked for this twice (once for the rows, once
+       for the count), and each pass walked all of CONCEPT_ART calling
+       artFor() per row — inside a document that re-rendered twice a second. */
+    const key = JSON.stringify(this.state.artTries);
+    if (this._beastKey === key && this._beastRows) return this._beastRows;
+    this._beastKey = key;
+    const FAMILY = {
+      'ashbound-individual-concept-masters': 'Ashbound · Hearthmere and the Graven March',
+      'cairn-beasts-individual-concept-masters': 'Cairn Beasts · the barrow roads',
+      'march-deserters-individual-concept-masters': 'March Deserters · what the armistice left',
+      'anchored-quarantine-individual-forms-2026-08-26': 'Anchored Quarantine · unregistered until 27 August',
+    };
+    const title = (id) => id.replace(/^enemy\./, '').split('-')
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    /* Which chassis each family actually needs, read from the law instead of
+       assumed. Five of the ten are not quadrupeds at all, and this strip used
+       to tell every beast on the page that it needed a quadruped rig. */
+    const SET_LAW = {
+      'ashbound-individual-concept-masters': 'ashbound',
+      'cairn-beasts-individual-concept-masters': 'cairn_beasts',
+      'march-deserters-individual-concept-masters': 'march_deserters',
+    };
+    const LAW_BY_ID = {};
+    for (const f of (this.LAW ? this.LAW.familyList() : [])) LAW_BY_ID[f.id] = f;
+    const out = [];
+    /* Every beast at once. The eight-at-a-time cap existed because Drive
+       dropped thumbnails under burst load; the plates are project files now,
+       so the reason is gone and hiding two thirds of the bestiary behind a
+       button is just a page that will not show you its own contents. */
+    const limit = this.state.beastShown || 999;
+    for (const [id, row] of Object.entries(this.ART)) {
+      if (!id.startsWith('enemy.') || !(row.master || row.cutout || row.local)) continue;
+      if (out.length >= limit) break;   // see beastMore(): Drive drops bursts
+      const tries = this.state.artTries[id] || 0;
+      const art = this.artFor(id, 480, tries);
+      const lawRow = LAW_BY_ID[SET_LAW[row.set]];
+      out.push({
+        id, name: title(id),
+        family: FAMILY[row.set] || row.set || 'Unfiled',
+        chassisLine: lawRow
+          ? `Needs a ${lawRow.chassis} chassis`
+          : 'Chassis not specified by any approved prompt',
+        artSrc: art.src || BLANK,
+        artAlt: `${title(id)}, ${art.kind}`,
+        hasArt: art.has,
+        artLabel: tries >= 3 ? 'Concept master · Drive refused'
+          : `${art.kind}${tries ? ` · retry ${tries}` : ''}`,
+        onArtError: () => this.artRetry(id),
+      });
+    }
+    this._beastRows = out;
+    return out;
+  }
+
+  
+
+  
+
+  renderVals() {
+    const S = this.state;
+    const beastRows = this.beastRows();
+    const cast = this.CAST || [];
+    const hasArt = (id) => !!(this.artFor && this.artFor(id, 480, 0).has);
+    const gapsOnly = this.props.gapsOnly ?? false;
+    const byFaction = cast.filter((c) => S.faction === 'all' || c.faction === S.faction);
+    /* `gapsOnly` narrows the list to subjects carrying no rank-2 art at all,
+       which is the working queue for the next generation batch. */
+    const all = gapsOnly ? byFaction.filter((c) => !hasArt(c.id)) : byFaction;
+    /* Six cards at a time by default. Forty-two cards meant forty-two lazy
+       Drive fetches racing each other, and Drive drops thumbnails under
+       exactly that kind of burst — measured earlier in this project: an
+       eighteen-image page left every request hanging. Raising `perPage` past
+       eight is how you reproduce it. */
+    const PAGE = Math.max(2, Math.min(12, Math.round(this.props.perPage ?? 6)));
+    const pages = Math.max(1, Math.ceil(all.length / PAGE));
+    const page = Math.min(S.page, pages - 1);
+    const shown = all.slice(page * PAGE, page * PAGE + PAGE);
+    const cov = this.coverage ? this.coverage(cast.map((c) => c.id)) : null;
+
+    const cards = shown.map((c) => {
+      const fm = (this.FACTION_META || {})[c.faction] || {};
+      const hasPrompt = !!(this.PROMPTS && this.PROMPTS.CAST_PROMPTS[c.id]);
+      const tries = S.artTries[c.id] || 0;
+      const art = this.artFor ? this.artFor(c.id, 480, tries) : { has: false, kind: 'none' };
+      const dead = tries >= 3;
+      return {
+        id: c.id,
+        name: c.name,
+        hasArt: art.has && !dead,
+        noArt: !art.has || dead,
+        artSrc: art.src || BLANK,
+        artAlt: `${c.name}, ${art.kind}`,
+        artNote: dead
+          ? 'Registered, but Drive would not serve it after three attempts. Vendoring into assets/ is the fix.'
+          : (art.has ? art.note : 'Not drawn yet. The register carries an explicit null so the coverage count cannot skip it.'),
+        onArtError: () => this.artRetry(c.id),
+        artLabel: dead
+          ? 'Concept art · Drive refused'
+          : art.has
+            ? (art.vendored ? `${art.kind} · vendored` : `${art.kind} · Drive${tries ? ` · retry ${tries}` : ''}`)
+            : 'Concept art · not drawn',
+        role: c.role,
+        factionName: fm.name || c.faction,
+        accent: c.accent,
+        mark: c.mark,
+        garment: c.garment,
+        signature: c.signature,
+        bearing: c.bearing.charAt(0).toUpperCase() + c.bearing.slice(1),
+        heightLabel: `${c.height.toFixed(2)} m`,
+        tierLabel: TIER_LABEL[c.tier] || c.tier,
+        tierFg: PILL[TIER_PILL[c.tier] || 'default'].fg,
+        tierBg: PILL[TIER_PILL[c.tier] || 'default'].bg,
+        tierEdge: PILL[TIER_PILL[c.tier] || 'default'].edge,
+        voice: (this.VOICES && this.VOICES[c.id]) || '',
+        /* The law's verdict on this render, not my opinion of it. Rank 1 is
+           absent for the named cast and rank 2 is unreadable, so no card here
+           may claim conformance. */
+        /* Two different gaps, two different prompts. A character with a plate
+           needs it VENDORED so it can be verified; a character with none needs
+           it GENERATED from a rank-1 prompt. Saying "no concept art" for both
+           hid which action each one needs. */
+        gapTitle: hasPrompt ? 'Prompt written, no art' : 'No prompt, no art',
+        promptStatus: hasPrompt ? 'Rank 1 written' : 'Rank 1 missing',
+        promptFg: hasPrompt ? '#8aa596' : '#d4855f',
+        promptBg: hasPrompt ? 'rgba(82,102,92,.16)' : 'rgba(189,97,53,.14)',
+        promptEdge: hasPrompt ? 'rgba(82,102,92,.45)' : 'rgba(189,97,53,.4)',
+        lawStatus: !art.has ? 'No rank 2' : (art.set === 'generated-images-unreviewed' ? 'Rank 2 unreviewed' : 'Rank 2 readable'),
+        lawFg: !art.has ? '#c98d78' : (art.set === 'generated-images-unreviewed' ? PILL.prototype.fg : PILL.valid.fg),
+        lawBg: !art.has ? 'rgba(110,37,37,.18)' : (art.set === 'generated-images-unreviewed' ? PILL.prototype.bg : PILL.valid.bg),
+        lawEdge: !art.has ? 'rgba(110,37,37,.55)' : (art.set === 'generated-images-unreviewed' ? PILL.prototype.edge : PILL.valid.edge),
+        clipTier: c.clipTier === 'authored' ? 'Authored clip' : 'Occupational base',
+        clipFg: PILL[c.clipTier === 'authored' ? 'valid' : 'prototype'].fg,
+        clipBg: PILL[c.clipTier === 'authored' ? 'valid' : 'prototype'].bg,
+        clipEdge: PILL[c.clipTier === 'authored' ? 'valid' : 'prototype'].edge,
+      };
+    });
+
+    const chipStyle = (on) => on
+      ? { fg: 'var(--gold-bright)', bg: 'var(--selected-bg)', edge: 'var(--gold)' }
+      : { fg: '#c2bba9', bg: 'var(--ghost-bg)', edge: 'var(--line)' };
+
+    const factionChips = [{ id: 'all', label: `All 42` }].concat(
+      FACTION_ORDER.map((f) => ({ id: f, label: ((this.FACTION_META || {})[f] || {}).name || f }))
+    ).map((f) => ({
+      label: f.label,
+      ...chipStyle(S.faction === f.id),
+      pick: () => this.setState({ faction: f.id }),
+    }));
+
+    const t = S.tally || {};
+    const statLine = S.err
+      ? `Failed to load — ${S.err}`
+      : S.ready
+        ? `${cast.length} named · ${cov ? cov.withArt : 0} with art · ${this.PROMPTS ? this.PROMPTS.promptCoverage(cast.map((c) => c.id)).written : 0} with a rank-1 prompt`
+        : 'Reading the register…';
+
+    /* ---- the law, surfaced. Every one of these is read from the law module
+       rather than restated here, so the page cannot drift from the file that
+       encodes the approved prompts. */
+    const L = this.LAW, O = this.OBS, B = this.BEST;
+    const AUTH_TONE = [
+      { edge: 'var(--blood)', tone: '#c98d78' },
+      { edge: 'var(--gold)', tone: 'var(--gold-bright)' },
+      { edge: 'var(--focus)', tone: '#7ba6b6' },
+    ];
+    const authority = (L ? L.AUTHORITY : []).map((a, i) => ({
+      rank: a.rank, name: a.name, note: a.note,
+      bindingLabel: a.binding ? 'binding' : 'subordinate',
+      edge: AUTH_TONE[i] ? AUTH_TONE[i].edge : 'var(--line)',
+      tone: AUTH_TONE[i] ? AUTH_TONE[i].tone : 'var(--muted)',
+    }));
+
+    const lawFamilies = (L ? L.familyList() : []).map((f) => ({
+      name: f.name,
+      chassis: `Needs a ${f.chassis} chassis`,
+      promptCall: f.promptCall,
+      violation: f.violation,
+      paletteLine: `Palette — ${f.palette.join(', ')}.`,
+      verdict: f.conformance.verdict,
+      reason: f.conformance.reason || '',
+    }));
+
+    const OBS_LABEL = {
+      'origin.gloamfarer': 'Gloamfarer',
+      'origin.bell-warden': 'Bell-Warden',
+      'origin.mire-physicker': 'Mire-Physicker',
+      'origin.oathless-scion': 'Oathless Scion',
+    };
+    const NUMWORD = ['no', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight'];
+    const observed = Object.entries(O ? O.OBSERVED : {}).map(([id, o]) => {
+      const offStandard = /WHITE|not the near-black/i.test(o.backdrop);
+      return {
+        id, file: o.file,
+        name: OBS_LABEL[id] || id,
+        alt: `${OBS_LABEL[id] || id} concept plate, readable local file`,
+        build: o.build, face: o.face, lighting: o.lighting,
+        propLine: `${o.props.length} authored hard props; ${o.layers.length} garment layers.`,
+        badge: offStandard ? 'Backdrop off-standard' : 'Readable · rank 2',
+        tone: offStandard ? '#d4855f' : '#8aa596',
+        edge: offStandard ? 'rgba(189,97,53,.55)' : 'rgba(82,102,92,.55)',
+      };
+    });
+
+    const keyframes = [
+      { file: './assets/world/hearthmere-hold.png', name: 'Hearthmere Hold', band: 'LEVELS 1–6 · SOCIAL HUB',
+        alt: 'Hearthmere Hold environment keyframe',
+        note: 'First shrine, combat instruction, the Ember Ledger. Nine 32×32m chunks and the first WebGL2 graybox.' },
+      { file: './assets/world/dunmire-causeway.png', name: 'Dunmire Causeway', band: 'LEVELS 5–14 · GATHERING',
+        alt: 'Dunmire Causeway environment keyframe',
+        note: 'The drowned parish. Ranged pressure and the moral side story. Moss is this region’s hue.' },
+      { file: './assets/world/cinderward-foundry.png', name: 'Cinderward', band: 'LEVELS 8–18 · FIRST BOSS',
+        alt: 'Cinderward Foundry environment keyframe',
+        note: 'Mining and smithing route, furnace hazards, the gate key. Ember earns its place here and nowhere else.' },
+      { file: './assets/world/hollow-abbey-nave.png', name: 'Hollow Abbey', band: 'LEVELS 14–24 · FINAL BOSS',
+        alt: 'Hollow Abbey nave environment keyframe',
+        note: 'Counter-fighters, layered objectives, the memory choice. The march ends where the names are kept.' },
+    ];
+
+    /* Set-level counts are measured off the register, never typed. A typed
+       count on this page has already been wrong once. */
+    const setTally = {};
+    for (const r of Object.values(this.ART || {})) {
+      if (!r.set) continue;
+      const t = setTally[r.set] || (setTally[r.set] = { total: 0, cutout: 0 });
+      if (r.master || r.cutout || r.local) t.total++;
+      if (r.cutout) t.cutout++;
+    }
+    const setCount = (k) => {
+      const t = setTally[k] || { total: 0, cutout: 0 };
+      return `${t.total} plates \u00b7 ${t.cutout} cut out`;
+    };
+    const DARK = ['ember_ledger', 'bell_wardens', 'reed_sisters', 'cinder_compact'];
+    const darkCast = cast.filter((c) => DARK.indexOf(c.faction) >= 0);
+    const driveOnly = Object.values(this.ART || {}).filter((r) => (r.master || r.cutout) && !r.local).length;
+    const vendoredCount = Object.values(this.ART || {}).filter((r) => r.local).length;
+
+    return {
+      cards,
+      factionChips,
+      statLine,
+      authority,
+      lawFamilies,
+      observed,
+      keyframes,
+      /* Derived, never typed. A hardcoded count that disagrees with the data
+         is the exact failure this page legislates against — it shipped once
+         already, as "Four character plates" beside a measured "3". */
+      readableLede: `${NUMWORD[observed.length] || observed.length} character plates and ${NUMWORD[keyframes.length] || keyframes.length} environment keyframes are vendored as project files, so they are same-origin and readable.`,
+
+      /* ---- rank-1 prompts authored this pass */
+      prompts: (this.PROMPTS ? this.PROMPTS.promptList() : []).map((p) => ({
+        name: p.name, role: p.role, faction: p.faction,
+        useCase: p.useCase, detail: p.detail, text: p.text,
+      })),
+      promptStat: this.PROMPTS
+        ? `${this.PROMPTS.promptCoverage(cast.map((c) => c.id)).written} of ${cast.length} written · ${this.PROMPTS.promptCoverage(cast.map((c) => c.id)).missing} still without`
+        : '—',
+      burdenLine: O && O.artBurden
+        ? `${O.artBurden().propAvg} authored props and ${O.artBurden().layerAvg} garment layers each`
+        : 'authored props and layered garments',
+
+      /* ---- recovered from repo source, now vendored locally */
+      factions: B ? B.FACTIONS : [],
+      roles: (B ? B.ENCOUNTER_ROLES : []).map((r) => ({
+        label: r.label, purpose: r.purpose,
+        turn: r.turn || 'Turn-economy prose was authored in the deleted page and did not survive. Left blank rather than rewritten.',
+        state: r.lost ? 'Prose lost' : 'Recovered',
+        tone: r.lost ? '#c98d78' : '#8aa596',
+        bg: r.lost ? 'rgba(110,37,37,.18)' : 'rgba(82,102,92,.16)',
+        edge: r.lost ? 'rgba(110,37,37,.5)' : 'rgba(82,102,92,.45)',
+      })),
+      families: (B ? B.ENEMY_FAMILIES : []).map((f) => ({
+        name: f.name, ecology: f.ecology,
+        regionLine: f.frontier ? 'frontier' : f.regions.length + (f.regions.length === 1 ? ' region' : ' regions'),
+        silhouetteLine: `${f.shape}, ${f.posture} — ${f.features.join(', ').replace(/_/g, ' ')}.`,
+        tagLine: `resists ${f.resists.join(' / ')} · weak ${f.weak.join(' / ')}`,
+        edge: f.frontier ? 'var(--focus)' : 'var(--moss)',
+      })),
+      recoveryStat: B ? `${B.recoveryTally().families} families · ${B.recoveryTally().roles} roles · ${B.recoveryTally().factions} factions` : '—',
+      proseLine: B ? `${B.recoveryTally().authoredProseRecovered}` : 'some',
+
+      pageNote: `${PAGE} at a time — forty-two Drive fetches racing each other is how this page failed to load the first time.`,
+      pageLabel: `${page * PAGE + 1}–${Math.min(all.length, page * PAGE + PAGE)} of ${all.length}`,
+      pagePrev: () => this.setState({ page: Math.max(0, page - 1) }),
+      pageNext: () => this.setState({ page: Math.min(pages - 1, page + 1) }),
+      prevDim: page === 0 ? 0.35 : 1,
+      nextDim: page >= pages - 1 ? 0.35 : 1,
+      familyStat: L ? `${lawFamilies.length} approved masters · ${lawFamilies.filter((f) => f.verdict === 'REFUSED').length} refused` : '—',
+      observedStat: O ? `${O.readableCount()} read in full · ${cov ? cov.vendored : 0} vendored, not yet read` : '—',
+      shownLabel: (S.faction === 'all' ? 'All forty-two, by faction' : (((this.FACTION_META || {})[S.faction] || {}).name || 'Cast')) + (gapsOnly ? ' \u2014 art gaps only' : ''),
+      showOps: this.props.showOps ?? true,
+      footNote: S.ready
+        ? `Every count on this page is derived from the register at render time, never typed \u2014 including the ones that are bad news.`
+        : 'Reading the register\u2026',
+
+      headerTags: [
+        'Concept art is the authority',
+        'Refusal is a valid outcome',
+        'Counts derived, never typed',
+        'Gaps drawn, never hidden',
+      ],
+
+      coverageTiles: cov ? [
+        { label: 'Cast covered', value: `${cov.withArt}/${cov.total}`, note: `${cov.ratio}% of the named cast has concept art`, edge: 'var(--moss)' },
+        { label: 'Cutouts', value: String(cov.cutout), note: 'Background removed — the silhouette can be compared directly', edge: 'var(--focus)' },
+        { label: 'Masters only', value: String(cov.master - cov.cutout), note: 'Staged plate with its backdrop, no cutout yet', edge: 'var(--gold)' },
+        { label: 'No art', value: String(cov.none), note: 'Drawn as an ember gap on the card, never hidden', edge: 'var(--ember)' },
+        { label: 'Voice lines', value: `${(this.voiceTally ? this.voiceTally().have : 0)}/${cov.total}`, note: 'Required by the codex card\u2019s own prompt file', edge: 'var(--moss)' },
+        { label: 'Vendored', value: String(cov.vendored), note: `Same-origin project files. The other ${cov.total - cov.vendored} have no art in any folder`, edge: 'var(--moss)' },
+      ] : [],
+
+      beasts: beastRows,
+      /* "art complete" was an assertion. Now measured: how many of these
+         forms actually carry a master or cutout in the register. */
+      /* Total is counted from the register; the strip shows a slice of it.
+         Both numbers are derived, so the label cannot claim more than the DOM
+         is holding. */
+      beastHeading: `${this.beastTotal()} beasts with art and no body yet`,
+      beastStat: `${beastRows.length} of ${this.beastTotal()} shown · vendored · 0 rigs`,
+
+      artSets: [
+        { name: 'grave-tithe-concept-masters + cutouts', edge: 'var(--moss)', tone: '#7d9689', count: setCount('grave-tithe-concept-masters'),
+          detail: 'Sera Dusk, Mott Vane, Ilse Crow, Garran Low, Netta Aster, Orris Pale. Complete, mastered and cut out.' },
+        { name: 'unwritten-roads-concept-masters + cutouts', edge: 'var(--moss)', tone: '#7d9689', count: setCount('unwritten-roads-concept-masters'),
+          detail: 'Vellin the Unwritten, Kora Path, Marn Upland, Iri North, Rin Waymark, Elo Veer. Complete, mastered and cut out.' },
+        { name: 'exact-word-finals', edge: 'var(--gold)', tone: 'var(--gold-bright)', count: setCount('exact-word-finals'),
+          detail: 'All six mastered; only Nhal, Moira Quiet and Seln Clause are cut out. Three cutouts outstanding.' },
+        { name: 'ashbound-individual-concept-masters', edge: 'var(--moss)', tone: '#7d9689', count: setCount('ashbound-individual-concept-masters'),
+          detail: 'Includes ash-husk, the exact entry the content gap analysis uses as its worked example. It has art, and the audit that said otherwise was reading the repository rather than the Drive.' },
+        { name: 'cairn-beasts-individual-concept-masters', edge: 'var(--moss)', tone: '#7d9689', count: setCount('cairn-beasts-individual-concept-masters'),
+          detail: 'Cairn Hound, Antlered Cairn, Stonejaw Vixen, Lichen-Back, Warm Cairn Ram, Graveheat Matron, Cairn Maggot, Flint-Pelt, Oathstone Boar, Barrow Listener. Registered ready for the beast pass.' },
+        { name: 'march-deserters-individual-concept-masters', edge: 'var(--ember)', tone: '#d98f5f', count: setCount('march-deserters-individual-concept-masters'),
+          detail: 'Armistice Giant, Command Leech, Trench Waif, Receipt Soldier. Fewer than the family implies; the rest of the deserters are unmastered.' },
+        { name: 'Ember Ledger · Bell Wardens · Reed Sisters · Cinder Compact', edge: 'var(--blood)', tone: '#c98d78', count: `${darkCast.filter((c) => hasArt(c.id)).length} of ${darkCast.length}`,
+          detail: 'Twenty-two of the twenty-four still have nothing, and the two that do &mdash; Maela Voss and Bera Claymother &mdash; came out of the staging folder unreviewed. Torren Vale, placed in the world and carrying as much authored writing as anyone, has no plate at all.' },
+      ],
+
+      openItems: [
+        { owner: 'Claude Code', edge: 'var(--ember)', tone: '#d98f5f',
+          title: 'Vendored, and still without provenance',
+          detail: `${vendoredCount} plates are project files now, copied byte-for-byte, and not one of them has a sidecar recording source, licence, sha256, byte size and maturity. tools/assets/validate.mjs would reject the set and would be right to. Until that pass lands these are prototype assets living in the repo, not production ones, and the maturity vocabulary says so out loud.`,
+          target: 'assets/**/*.provenance.json \u2190 tools/assets/validate.mjs' },
+        { owner: 'Claude Code', edge: 'var(--ember)', tone: '#d98f5f',
+          title: 'Still no skinned meshes',
+          detail: 'Each rig in the kit is roughly forty separately-transformed parts, so it is roughly forty draw calls. Fine for a catalogue viewer, wrong for a town square. The bone hierarchy this rig implies is exactly what a skinning pass would consume; that pass does not exist yet \u2014 which, together with the missing chassis, is why no render appears on this page.',
+          target: 'tools/assets/skinning + apps/client/src/world/actors/' },
+        { owner: 'Codex', edge: 'var(--blood)', tone: '#c98d78',
+          title: 'Thirty-five signature clips unauthored',
+          detail: 'Seven leads have a signature and a work clip nobody else has. The remaining thirty-five carry an authored bearing, mark and garment but share eleven occupational bases. Each card declares which, so the gap is visible rather than implied.',
+          target: 'kit/hm-actor-cast.js \u2192 signatureClip' },
+        { owner: 'open', edge: 'var(--focus)', tone: '#7ba6b6',
+          title: 'Faction count is still seven',
+          detail: 'You asked to grow to roughly twenty factions with regional cells and splinters. This pass builds bodies for the seven that exist in the repository rather than inventing thirteen and dressing them at the same time. The wardrobe table is the extension point.',
+          target: 'kit/hm-actor-cast.js \u2192 WARDROBE' },
+        { owner: 'open', edge: 'var(--focus)', tone: '#7ba6b6',
+          title: 'No weapons, packs or held props',
+          detail: 'Hands grip correctly and there is nothing in them. Every clip that implies an object \u2014 tongs, hammer, ledger board, bell rope, reed pole, map case \u2014 currently poses around an absence. Props hang off the wrist group and want the item pass to define them.',
+          target: 'kit/hm-actor.js \u2192 rig.props' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

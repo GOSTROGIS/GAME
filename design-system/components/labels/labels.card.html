@@ -1,0 +1,58 @@
+<!-- @dsCard group="Components" viewport="700x200" name="Labels & markers" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_fallback.js"></script>
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+  .cap{color:#797f7a;font:9px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/plain" id="demo-src">
+const { Eyebrow, FieldLabel, MicroMeta, StatusPill, LockedLore, Kbd } = window.HollowMarch;
+
+function Demo(){
+  return (
+    <div style={{display:'grid',gap:12}}>
+      <div><Eyebrow>Ember Ledger</Eyebrow><MicroMeta>Levels 5&ndash;14 &middot; Gathering</MicroMeta></div>
+      <FieldLabel style={{margin:0}}>Chosen Origin</FieldLabel>
+      <div className="row">
+        <StatusPill>Authored</StatusPill>
+        <StatusPill tone="valid">Habitat valid</StatusPill>
+        <StatusPill tone="prototype">Prototype</StatusPill>
+        <Kbd>E</Kbd><Kbd>Esc</Kbd>
+      </div>
+      <LockedLore>Codex reveal 2 of 4 locked</LockedLore>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+<script>
+/* Babel's type="text/babel" auto-runner does not execute in every host, so the
+   demo source above is transformed and run explicitly. */
+window.HollowMarchReady.then(function () {
+  try {
+    var src = document.getElementById("demo-src").textContent;
+    var out = Babel.transform(src, { presets: [["react", { runtime: "classic" }]] }).code;
+    new Function("React", "ReactDOM", out)(React, ReactDOM);
+  } catch (err) {
+    console.error("[card] " + err.message);
+    document.getElementById("root").textContent = "Card failed: " + err.message;
+  }
+});
+</script>
+</body>
+</html>

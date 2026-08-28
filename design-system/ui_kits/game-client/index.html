@@ -1,0 +1,54 @@
+<!-- @dsCard group="Game client" viewport="1440x900" subtitle="Title, creator, HUD, panels, dialogue and defeat" -->
+<!-- @startingPoint section="Screens" subtitle="Full game-client click-through" viewport="1440x900" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Hollow March — game client</title>
+<link rel="stylesheet" href="../../styles.css">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_fallback.js"></script>
+<style>
+  html, body { margin:0; height:100%; overflow:hidden; background:var(--ink); color:var(--bone); font-family:var(--sans); }
+  * { box-sizing:border-box; }
+  button:focus-visible, input:focus-visible, select:focus-visible { outline:2px solid var(--state-focus-ring); outline-offset:3px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+/* Screens are loaded explicitly rather than via type="text/babel" src, which
+   does not reliably execute in every host. Order matters: App.jsx consumes the
+   three screens, so it goes last. */
+(function () {
+  var FILES = ["./TitleScreen.jsx", "./CreatorScreen.jsx", "./WorldHud.jsx", "./App.jsx"];
+
+  window.HollowMarchReady
+    .then(function () {
+      return Promise.all(FILES.map(function (f) {
+        return fetch(f).then(function (r) {
+          if (!r.ok) throw new Error(r.status + " " + f);
+          return r.text();
+        });
+      }));
+    })
+    .then(function (sources) {
+      sources.forEach(function (src, i) {
+        try {
+          var out = Babel.transform(src, { presets: [["react", { runtime: "classic" }]] }).code;
+          new Function("React", "ReactDOM", out)(React, ReactDOM);
+        } catch (err) {
+          console.error("[kit] " + FILES[i] + ": " + err.message);
+        }
+      });
+    })
+    .catch(function (err) {
+      console.error("[kit] load failed: " + err.message);
+    });
+})();
+</script>
+</body>
+</html>

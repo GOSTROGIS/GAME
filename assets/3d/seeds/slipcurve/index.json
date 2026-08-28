@@ -1,0 +1,199 @@
+{
+  "assets": [
+    {
+      "bytes": 1288,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.atm.0205.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.atm.0205",
+      "sha256": "d9c9a4a411403fe994edc62343b8482b539d2d697a7b3b5d2322fb28e443e791"
+    },
+    {
+      "bytes": 1696,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.bench-0.0194.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.bench-0.0194",
+      "sha256": "134523db12590631bad4363e9a05698a96df7e8841be62d137d7227e1e8055e1"
+    },
+    {
+      "bytes": 3104,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.bollard-0.0197.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.bollard-0.0197",
+      "sha256": "300042417db5a728f283a7de48597b9e94330d8dfd95923738cc37aea4bd7668"
+    },
+    {
+      "bytes": 5236,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.box-truck-blue.0186.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.box-truck-blue.0186",
+      "sha256": "cdfc27bd3e51797fb826660cf05241de4826a14e35d68422ac8933f152d92d2d"
+    },
+    {
+      "bytes": 3624,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.bridge-span-0.0224.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.bridge-span-0.0224",
+      "sha256": "42246b4e0db0734e1f536b4b2951e916a81250b099a4b06ea64260fc94556948"
+    },
+    {
+      "bytes": 2184,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.bus-shelter-0.0209.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.bus-shelter-0.0209",
+      "sha256": "483b3844f6d9eebb6eb4d46fb046b81980bb5de94ad3ac508a0a04d952957508"
+    },
+    {
+      "bytes": 4280,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.bush-0.0216.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.bush-0.0216",
+      "sha256": "bc83417c5c3f07a4f5613ca4bd58a5362bfef3837186cc3bea347314a2c26a53"
+    },
+    {
+      "bytes": 4084,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.city-bus-blue.0184.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.city-bus-blue.0184",
+      "sha256": "be8562d6c5d87620e728bcbb8ff4248a89993cd361a762aff3132498292434ad"
+    },
+    {
+      "bytes": 1172,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.crosswalk.0221.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.crosswalk.0221",
+      "sha256": "9941151591c5fd82c81480d74bfe12c8fd331388d67ac1b4573b8b677bad0314"
+    },
+    {
+      "bytes": 4512,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.fire-hydrant-0.0196.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.fire-hydrant-0.0196",
+      "sha256": "807b8bf4ac34a5affa94a853f6b7a4ac76e82d190943753f9dbf30c7c6e786d0"
+    },
+    {
+      "bytes": 3624,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.gate-0.0235.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.gate-0.0235",
+      "sha256": "34ce11852432fc9099a9e6cb36ea2c722e6f8f1f7180fe80100bfa7631f740db"
+    },
+    {
+      "bytes": 1536,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.kiosk-0.0203.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.kiosk-0.0203",
+      "sha256": "4b4e3ed960e572acc3fc451893eff504077659d411e2bb0e82ca380954a2feea"
+    },
+    {
+      "bytes": 4280,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.litter-bin-0.0195.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.litter-bin-0.0195",
+      "sha256": "796e8d2dbec6f921deba5f2fc44433bdc228c02350b232828ed86e98fa257c73"
+    },
+    {
+      "bytes": 2160,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.mailbox-0.0212.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.mailbox-0.0212",
+      "sha256": "bcb2000ff10c3ba8ff35fe4fc1c927bbf905b9cfeceb1e99622eee074bce7f85"
+    },
+    {
+      "bytes": 2232,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.parking-meter.0199.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.parking-meter.0199",
+      "sha256": "9582b4942aa3a0d0dd3675bec6ea7e14d1158e8c19f1d7725dc60888cfe1d648"
+    },
+    {
+      "bytes": 1300,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.phone-box-0.0206.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.phone-box-0.0206",
+      "sha256": "f897d0c1959b82025931ecec1addcc7295ed76c83de61091758f518e4b65a3db"
+    },
+    {
+      "bytes": 3344,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.post-box-0.0198.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.post-box-0.0198",
+      "sha256": "3dd8e029944ada9516b9d02d410b9d13d6f86c52da4aeae4fc1fcce4397102f5"
+    },
+    {
+      "bytes": 3384,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.rail-fence-0.0234.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.rail-fence-0.0234",
+      "sha256": "11a9938a4eed7d844256bea2d3963c26dfd3b48203ee1cdf7655e7dd216dd696"
+    },
+    {
+      "bytes": 3816,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.sedan-blue.0181.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.sedan-blue.0181",
+      "sha256": "cef5af9cfec70b8f01fcaa94c35771a378fd0bb0c9c19e9e4ffe4c95beb7ece4"
+    },
+    {
+      "bytes": 2180,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.stairs-0.0225.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.stairs-0.0225",
+      "sha256": "a13c286898ac34ba79457b8412ce7cdfd8ce6c49034437f84307ad89062176e9"
+    },
+    {
+      "bytes": 2176,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.substation-0.0230.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.substation-0.0230",
+      "sha256": "cbc4afa890247670f53460926fc5c232b4080fb39956bd74de859ee479273891"
+    },
+    {
+      "bytes": 4060,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.taxi-blue.0182.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.taxi-blue.0182",
+      "sha256": "2f9d626412e11bf3cab85e84ded9482924a6db5f604f6fe0f9f75211aa90e489"
+    },
+    {
+      "bytes": 8144,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.tower-8-storey-sandstone-grid-clear.0178.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.tower-8-storey-sandstone-grid-clear.0178",
+      "sha256": "12a39137ed4be89c91fc2c2612ea55d03e9e2b499c6e46786a0ffa8b0dac4aa8"
+    },
+    {
+      "bytes": 1292,
+      "maturity": "prototype_geometry",
+      "path": "slipcurve-seed.city.vending-machine-0.0204.glb",
+      "productionEligible": false,
+      "recordId": "slipcurve-seed.city.vending-machine-0.0204",
+      "sha256": "f530e87fea4eb07d891881d086661956fa774cfa886d2cc2f301051f0234cd89"
+    }
+  ],
+  "count": 24,
+  "schema": "SlipcurveRepresentativeSeedIndexV1",
+  "sourceIdentity": "slipcurve-sitelib"
+}

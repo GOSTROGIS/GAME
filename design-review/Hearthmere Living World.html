@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hearthmere — Living World</title>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+    "three/addons/exporters/OBJExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js",
+    "three/addons/exporters/GLTFExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js",
+    "three/addons/postprocessing/EffectComposer.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/EffectComposer.js",
+    "three/addons/postprocessing/RenderPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/RenderPass.js",
+    "three/addons/postprocessing/UnrealBloomPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/UnrealBloomPass.js",
+    "three/addons/postprocessing/OutputPass.js": "https://unpkg.com/three@0.184.0/examples/jsm/postprocessing/OutputPass.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js": "sha384-nbwtoZENJD3Vq+ACK0CuGQdPMuDWHkamC2KJD70EV5nfg6jQjfppKOea07YJN+N3",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js": "sha384-VofkvpG6HERhFCYbsUOHeNXBCqID2nfqkQqnVzE1jc/oPcz+qJ13ADdXH08hE+cQ"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #080b0d; --bone: #d8d0bd; --bone-bright: #e1dbca; --bone-dim: #b7b6ad;
+    --muted: #8e928b; --gold: #b99552; --gold-bright: #e4c77e;
+    --ember: #bd6135; --moss: #52665c;
+    --line: rgba(216,208,189,.18); --line-soft: rgba(216,208,189,.1);
+    --glass: linear-gradient(140deg, rgba(20,27,29,.91), rgba(7,10,12,.9));
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; background: var(--ink); color: var(--bone); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(185,149,82,.35); }
+  a:hover { color: var(--gold-bright); border-bottom-color: var(--gold-bright); }
+  canvas { display: block; }
+
+  #grain { position: fixed; inset: -50%; z-index: 8; pointer-events: none; opacity: .07;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    animation: grain .28s steps(2,end) infinite; }
+  #vig { position: fixed; inset: 0; z-index: 7; pointer-events: none; box-shadow: inset 0 0 200px 40px rgba(0,0,0,.8); }
+  @keyframes grain { 0%{transform:translate(0)} 25%{transform:translate(2%,-1%)} 50%{transform:translate(-1%,2%)} 75%{transform:translate(1%,1%)} }
+  @media (prefers-reduced-motion: reduce) { #grain { animation: none; } }
+
+  .eyebrow { margin: 0; color: var(--gold); font: 500 10px/1.3 Cinzel, Georgia, serif; letter-spacing: .28em; text-transform: uppercase; }
+  .micro { margin: 0; color: var(--muted); font: 500 8px/1.3 Cinzel, Georgia, serif; letter-spacing: .18em; text-transform: uppercase; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  #hud { position: fixed; inset: 0; z-index: 6; pointer-events: none; }
+  #hud > * { pointer-events: auto; }
+
+  #title { position: absolute; top: 20px; left: 24px; max-width: 380px; }
+  #title h1 { margin: 8px 0 0; color: var(--bone-bright); font: 500 30px/1 Cinzel, Georgia, serif; letter-spacing: -.02em; }
+  #title h1 em { color: var(--gold-bright); font-style: normal; font-weight: 400; }
+  #title p.v { margin: 12px 0 0; color: var(--bone-dim); font: italic 15px/1.5 'IM Fell English', Georgia, serif; }
+
+  #census { position: absolute; top: 20px; right: 24px; width: 264px; padding: 16px 18px; background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(12px); }
+  #census table { width: 100%; border-collapse: collapse; }
+  #census td { padding: 5px 0; border-top: 1px solid var(--line-soft); font: 400 12px Inter, system-ui, sans-serif; text-align: right; color: var(--bone-dim); font-variant-numeric: tabular-nums; }
+  #census td:first-child { text-align: left; color: var(--muted); font-size: 10px; letter-spacing: .07em; text-transform: uppercase; }
+  #census tr:first-child td { border-top: 0; }
+  td.ok { color: #7f9b8c; } td.warn { color: var(--ember); } td.big { color: var(--gold-bright); font-size: 15px; }
+  #bar { height: 5px; margin-top: 12px; background: #0a0d0e; border: 1px solid rgba(255,255,255,.07); }
+  #barFill { height: 100%; width: 0; background: linear-gradient(90deg, #6d5a33, var(--gold-bright)); transition: width .3s ease; }
+
+  #panel { position: absolute; bottom: 20px; left: 24px; width: 300px; padding: 16px 18px; background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(12px); }
+  .row { margin-top: 14px; }
+  .row:first-child { margin-top: 0; }
+  .row label { display: flex; justify-content: space-between; align-items: baseline; }
+  .row label span.v { color: var(--gold-bright); font: 500 12px Inter, system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 22px; margin: 4px 0 0; background: transparent; cursor: pointer; }
+  input[type=range]::-webkit-slider-runnable-track { height: 3px; background: #2a3134; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 13px; height: 13px; margin-top: -5px; border-radius: 0; background: var(--gold); border: 1px solid var(--gold-bright); }
+  input[type=range]::-moz-range-track { height: 3px; background: #2a3134; }
+  input[type=range]::-moz-range-thumb { width: 13px; height: 13px; background: var(--gold); border: 1px solid var(--gold-bright); border-radius: 0; }
+  input[type=range]:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+  .seg { display: flex; margin-top: 6px; }
+  .seg button { flex: 1; appearance: none; padding: 8px 4px; min-height: 34px; background: rgba(5,8,9,.55); border: 1px solid var(--line); border-right-width: 0; color: var(--muted); font: 500 8px Cinzel, Georgia, serif; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+  .seg button:last-child { border-right-width: 1px; }
+  .seg button:hover { color: var(--gold-bright); }
+  .seg button[aria-pressed="true"] { color: var(--gold-bright); background: rgba(185,149,82,.13); border-color: var(--gold); }
+  .seg button:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+
+  #note { position: absolute; bottom: 22px; right: 24px; max-width: 380px; text-align: right; }
+  #note p { margin: 0; color: var(--muted); font: 400 11px/1.6 Inter, system-ui, sans-serif; letter-spacing: .02em; }
+  #note p.f { margin-bottom: 7px; color: var(--bone-dim); font: italic 14px/1.45 'IM Fell English', Georgia, serif; }
+
+  #boot { position: fixed; inset: 0; z-index: 20; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px; background: var(--ink); }
+  #boot p { margin: 0; }
+  @media (max-width: 1100px) { #note, #title p.v { display: none; } }
+</style>
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div id="grain"></div>
+<div id="vig"></div>
+
+<div id="hud">
+  <div id="title">
+    <p class="eyebrow">Sable Reach &middot; The Veyl of the Last Bell</p>
+    <h1>Hearthmere, <em>alive</em></h1>
+    <p class="v">Terrain, tile legend and landmark positions are read from <code style="font:12px ui-monospace,Menlo,monospace;color:var(--gold)">src/data/world.js</code> &mdash; this is the Sable Reach as the repo already defines it.</p>
+  </div>
+
+  <div id="census">
+    <p class="micro">Census</p>
+    <table><tbody>
+      <tr><td>Objects placed</td><td class="big num" id="cObjects">&mdash;</td></tr>
+      <tr><td>Target</td><td class="num">100,000</td></tr>
+      <tr><td>Draw calls</td><td class="num" id="cCalls">&mdash;</td></tr>
+      <tr><td>Triangles</td><td class="num" id="cTris">&mdash;</td></tr>
+      <tr><td>Frame</td><td class="num" id="cFps">&mdash;</td></tr>
+      <tr><td>Particles &middot; cap 2400</td><td class="num" id="cParts">&mdash;</td></tr>
+      <tr><td>Lights &middot; cap 18</td><td class="num" id="cLights">&mdash;</td></tr>
+      <tr><td>Density</td><td class="num" id="cDens">&mdash;</td></tr>
+      <tr><td>Ambient creatures</td><td class="num" id="cFauna">&mdash;</td></tr>
+      <tr><td>&mdash; lit variants</td><td class="num" id="cFaunaLit">&mdash;</td></tr>
+      <tr><td>Season</td><td class="num" id="cSeason">&mdash;</td></tr>
+      <tr><td>Local time</td><td class="num" id="cClock">&mdash;</td></tr>
+      <tr><td>Sun &middot; daylight</td><td class="num" id="cSun">&mdash;</td></tr>
+      <tr><td>Air temp</td><td class="num" id="cTemp">&mdash;</td></tr>
+      <tr><td>Canopy &middot; ice</td><td class="num" id="cLeaf">&mdash;</td></tr>
+    </tbody></table>
+    <div id="bar"><div id="barFill"></div></div>
+  </div>
+
+  <div id="panel">
+    <div class="row">
+      <label for="dens"><span class="micro">Scatter density</span><span class="v" id="densV">1.00&times;</span></label>
+      <input type="range" id="dens" min="0.15" max="5" step="0.05" value="1">
+    </div>
+    <div class="row">
+      <label for="wind"><span class="micro">Wind</span><span class="v" id="windV">1.00</span></label>
+      <input type="range" id="wind" min="0" max="2.4" step="0.05" value="1">
+    </div>
+    <div class="row">
+      <label for="gust"><span class="micro">Gust front</span><span class="v" id="gustV">0.55</span></label>
+      <input type="range" id="gust" min="0" max="1.5" step="0.05" value="0.55">
+    </div>
+    <div class="row">
+      <p class="micro">Viewpoint</p>
+      <div class="seg" role="group" aria-label="Viewpoint">
+        <button id="vHold" aria-pressed="true">The hold</button>
+        <button id="vBell" aria-pressed="false">Bell tower</button>
+        <button id="vMire" aria-pressed="false">The mire</button>
+        <button id="vWide" aria-pressed="false">Whole reach</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="note">
+    <p class="f">The bells are rung to keep the names, not the hours.</p>
+    <p>Wind, fire and water run entirely in the vertex and fragment shaders &mdash; swaying costs the CPU nothing. But the Reach at 4&thinsp;m per tile is only 128&times;96&thinsp;m, so 100,000 objects is 8&thinsp;per&thinsp;m&sup2;: ground-clutter density, not prop density. Back to the <a href="./Hearthmere Environment Kit.html">asset kit</a>.</p>
+  </div>
+</div>
+
+<div id="boot"><p class="eyebrow">Building the Reach</p><p class="micro" id="bootStep">merging assets</p></div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { MAT, setLod, applyTextures, rnd } from './kit/hm-core.js';
+import { blackpineMature, blackpineSapling, ridgeHeather, coldReedClump, steamMoss } from './kit/hm-flora.js';
+import { bankedBrazier, ropeBellSmall, travelerBench, rainBarrelIron, herbDryingFrame, clayNameRack } from './kit/hm-props.js';
+import { holdHouseSmall, holdHouseCorner, bellTowerTimber, palisadeRepaired, springChannelArch, vigilShrineOld, gatehousePatchwork } from './kit/hm-structures.js';
+import { FAUNA_GENERATORS, makeAgent, stepCreature, rollGlow, applyGlow, spaceOf } from './kit/hm-fauna.js';
+import { FAUNA2_GENERATORS } from './kit/hm-fauna2.js';
+import {
+  mergeByMaterial, geoTris, windUniforms, windify, waterUniforms,
+  fireUniforms, pebble, twig, grassTuft, rubbleChunk,
+} from './kit/hm-world.js';
+/* The elemental layer. Fire, water, weather and veil come from the VFX kit
+ * rather than from hm-world.js's first-pass makeFire/flowWater, and they are
+ * rendered through a bloom pass so an emissive can run past white. The two
+ * superseded functions are still exported by hm-world.js because the Elemental
+ * VFX Lab runs them side by side with these as the "before". */
+import { VFX_ENV, waterSurface } from './kit/hm-vfx.js';
+import { bonfire, BONFIRE_AXES } from './kit/hm-vfx-fire.js';
+import { cascade, CASCADE_AXES } from './kit/hm-vfx-water.js';
+import { rainfall, groundmist, RAINFALL_AXES, GROUNDMIST_AXES } from './kit/hm-vfx-weather.js';
+import { marshLight, MARSHLIGHT_AXES } from './kit/hm-vfx-veil.js';
+import { climateState, applyClimate, seasonalFoliage } from './kit/hm-vfx-climate.js';
+import { indexOfAxes } from './kit/hm-vfx-index.js';
+
+const boot = (s) => { document.getElementById('bootStep').textContent = s; };
+
+/* The Sable Reach, transcribed from src/data/world.js MAP_ROWS.
+ *
+ * Kept in the source's own four-segments-of-eight form rather than
+ * hand-concatenated into 32-character strings. Concatenating by eye silently
+ * shifts a whole row of the world sideways, and the first version of this
+ * file did exactly that to three rows. The assertion below is the guard:
+ * every segment must be 8 characters and every row 32, or the page refuses
+ * to build rather than quietly rendering the wrong world. */
+const MAP_SEGMENTS = [
+  ['########', '########', '########', '########'],
+  ['#^^^^^^^', '^^^TTTTT', 'TTTTT^^^', '^^^^^^^#'],
+  ['#^^^....', '..^^TTTT', 'TT...^^^', '^^^....#'],
+  ['#^^..TTT', '...^^TTT', 'T.....^^', '^^.....#'],
+  ['#..HHHH.', '.===....', 'T..^^...', '....TT.#'],
+  ['#..HHHH=', '====....', '...^^...', '...TTT.#'],
+  ['#..HHHH.', ',.==.,,,', ',..^^..=', '===TTT.#'],
+  ['#...S...', ',,.==,,,', ',,,,...=', '..=TT..#'],
+  ['#TT...,,', ',,,.B~~~', '~~~~...=', '..=....#'],
+  ['#TT..,,,', ',,,=B~~~', '~~~~,,.=', '..=....#'],
+  ['#....,,,', ',,,=B~~~', '~~~~,,.=', '..=..F.#'],
+  ['#...,,,,', ',,,.B~~~', '~~~~,,.=', '..===..#'],
+  ['#..,,,,,', ',,,..~~~', '~~..,,,=', '....=..#'],
+  ['#..,,,..', '.===.~~~', '~~..,,,,', '.rrrGrr#'],
+  ['#..,,..=', '==.=B~~~', '~~..,,,,', '.rrrrrr#'],
+  ['#.....==', '...=B~~~', '~~..,,..', '.rrMrrr#'],
+  ['#TT..==.', '...=B~~~', '~~..,...', '.rrrrrr#'],
+  ['#TT.==..', '...==...', '....,TTT', '.rrSrrr#'],
+  ['#...=...', '....===.', '....TTTT', '.rrrrrr#'],
+  ['#..==...', 'TT....==', '==..TTTT', '..rrrr.#'],
+  ['#..=...T', 'TTTT....', '.==..TTT', '..rrrr.#'],
+  ['#..=====', '=...TTT.', '..==....', '...S...#'],
+  ['#.......', '..TTTT..', '...=====', '=====..#'],
+  ['########', '########', '########', '########'],
+];
+MAP_SEGMENTS.forEach((seg, i) => {
+  if (seg.length !== 4) throw new Error('MAP row ' + i + ' has ' + seg.length + ' segments, expected 4');
+  seg.forEach((t, j) => {
+    if (t.length !== 8) throw new Error('MAP row ' + i + ' segment ' + j + ' is ' + t.length + ' chars, expected 8');
+  });
+});
+if (MAP_SEGMENTS.length !== 24) throw new Error('MAP has ' + MAP_SEGMENTS.length + ' rows, expected 24');
+const MAP_ROWS = MAP_SEGMENTS.map((seg) => seg.join(''));
+const S = 4;                    // metres per tile
+const W = 32, H = 24;
+const TILE_H = { '#': 5.5, '^': 2.4, T: 0.35, '.': 0, '=': -0.06, ',': -0.22, '~': -1.05, B: 0.15, H: 0.1, r: 0.05, S: 0.05, F: 0.1, G: 2.2, M: 0.1 };
+const at = (x, z) => (MAP_ROWS[z] && MAP_ROWS[z][x]) || '#';
+const wx = (x) => (x - W / 2 + 0.5) * S;
+const wz = (z) => (z - H / 2 + 0.5) * S;
+
+/* ------------------------------------------------------------- renderer */
+const canvas = document.getElementById('gl');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance', preserveDrawingBuffer: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.36;
+// The composer runs several passes per frame and info.render resets on each
+// one, so the census would otherwise report the final fullscreen quad: one
+// draw call, zero triangles. Accumulate across the whole frame instead.
+renderer.info.autoReset = false;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#0b1113');
+// Fog is most of why a world reads as deep rather than as a diorama — but at
+// 0.0125 a 150 m vista is 97% fogged out, so it is tuned to the widest shot.
+scene.fog = new THREE.FogExp2(0x0e1518, 0.0072);
+
+const camera = new THREE.PerspectiveCamera(52, 2, 0.4, 900);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.07;
+controls.maxPolarAngle = Math.PI * 0.495;
+
+/* Lighting: the region's declared recipe — cold_overcast key,
+   warm_spring_bounce fill, contrast 0.62. */
+const hemi = new THREE.HemisphereLight(0x8fa5ac, 0x2b2318, 1.02);
+scene.add(hemi);
+const key = new THREE.DirectionalLight(0xc4d1d4, 2.15);
+key.position.set(48, 66, 34);
+key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048);
+key.shadow.camera.left = -70; key.shadow.camera.right = 70;
+key.shadow.camera.top = 70; key.shadow.camera.bottom = -70;
+key.shadow.camera.far = 220;
+key.shadow.bias = -0.0006;
+scene.add(key);
+const fill = new THREE.DirectionalLight(0xc9793c, 0.5);
+fill.position.set(-40, 12, -30);
+scene.add(fill);
+
+/* Post: one bloom pass. The Reach is near-black by design, so the elemental
+   layer carries the whole contrast budget of the frame — and an emissive only
+   reads as LIGHT rather than as a bright colour if something downstream lets
+   it bleed. Threshold sits just above white so the palette itself never
+   blooms: only the hot core of a fire, a spark, a wisp or a bolt does. */
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloom = new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), 0.5, 0.55, 0.98);
+composer.addPass(bloom);
+composer.addPass(new OutputPass());
+
+applyTextures(true);
+
+/* ------------------------------------------------------------- terrain */
+boot('raising terrain');
+const noise = rnd(0x7e44a1);
+const nfield = new Float32Array((W + 1) * (H + 1));
+for (let i = 0; i < nfield.length; i++) nfield[i] = noise();
+
+const SUB = 3;
+const terrain = new THREE.PlaneGeometry(W * S, H * S, W * SUB, H * SUB);
+terrain.rotateX(-Math.PI / 2);
+{
+  const p = terrain.attributes.position;
+  const colors = new Float32Array(p.count * 3);
+  const cAsh = new THREE.Color('#2a2b27'), cRoad = new THREE.Color('#3a3a35');
+  const cMire = new THREE.Color('#2b2f27'), cRidge = new THREE.Color('#3a4143');
+  const cWater = new THREE.Color('#101d20'), cRuin = new THREE.Color('#41433f');
+  const c = new THREE.Color();
+  for (let i = 0; i < p.count; i++) {
+    const tx = Math.min(W - 1, Math.max(0, Math.floor((p.getX(i) + (W * S) / 2) / S)));
+    const tz = Math.min(H - 1, Math.max(0, Math.floor((p.getZ(i) + (H * S) / 2) / S)));
+    const t = at(tx, tz);
+    // Average the four neighbouring tiles so tile edges are slopes, not steps.
+    let h = 0, n = 0;
+    for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) {
+      const v = TILE_H[at(tx + dx, tz + dz)];
+      if (v !== undefined) { h += v; n++; }
+    }
+    h = n ? h / n : 0;
+    h += (nfield[tz * (W + 1) + tx] - 0.5) * 0.4;
+    p.setY(i, h);
+    if (t === '~') c.copy(cWater);
+    else if (t === '^' || t === '#') c.copy(cRidge);
+    else if (t === ',') c.copy(cMire);
+    else if (t === '=' || t === 'B') c.copy(cRoad);
+    else if (t === 'r' || t === 'H' || t === 'G') c.copy(cRuin);
+    else c.copy(cAsh);
+    const shade = 0.82 + nfield[tz * (W + 1) + tx] * 0.36;
+    colors[i * 3] = c.r * shade; colors[i * 3 + 1] = c.g * shade; colors[i * 3 + 2] = c.b * shade;
+  }
+  terrain.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+  terrain.computeVertexNormals();
+}
+const ground = new THREE.Mesh(terrain, new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.86, metalness: 0.02 }));
+ground.name = 'terrain';
+ground.receiveShadow = true;
+scene.add(ground);
+
+/** Sample terrain height the same way the mesh did, so scatter sits on it. */
+function heightAt(tx, tz) {
+  let h = 0, n = 0;
+  for (let dx = -1; dx <= 1; dx++) for (let dz = -1; dz <= 1; dz++) {
+    const v = TILE_H[at(tx + dx, tz + dz)];
+    if (v !== undefined) { h += v; n++; }
+  }
+  return (n ? h / n : 0) + (nfield[tz * (W + 1) + tx] - 0.5) * 0.4;
+}
+
+/* --------------------------------------------------------------- water */
+boot('running the water');
+/* Both surfaces come from the VFX kit now. The change that matters is not the
+ * shader count — it is that the crest term scales with actual surface motion,
+ * so the blackwater BREATHES and the spring RUNS instead of both carrying the
+ * same wave banding at different colours. Geometry is rotated rather than the
+ * mesh, because the shader reads world xz off the geometry. */
+const water = waterSurface({
+  w: 9 * S, h: 6 * S, segs: 40,
+  flow: [0.34, 0.09], amp: 0.055, scale: 0.9,
+  deep: 'blackwater', shallow: 'deepWater',
+  glow: 0.5, glowColor: 'focus', foam: 0.14, spec: 0.6, caustic: 0.16,
+  opacity: 0.97, edge: 0.34, name: 'blackwater',
+});
+water.position.set(wx(15.5), -0.62, wz(11.5));
+scene.add(water);
+// The warm spring, running fast down its channel out of the hold.
+const spring = waterSurface({
+  w: 7 * S, h: 1.5, segs: 44,
+  flow: [0.95, 0], amp: 0.03, scale: 2.6,
+  deep: 'deepWater', shallow: 'springWater',
+  glow: 0.62, glowColor: 'focus', foam: 0.42, spec: 1.0, caustic: 0.5,
+  opacity: 0.9, edge: 0.3, name: 'spring-channel',
+});
+spring.position.set(wx(8.5), 0.18, wz(6.5));
+scene.add(spring);
+
+/* The spring leaving the hold, as a set-piece: where the channel meets the
+ * drop to the blackwater there is now an actual fall, with ledges, churn and
+ * spray. This is the one landmark the elemental layer is built to sell. */
+const springFall = cascade(indexOfAxes(
+  { drop: 1, width: 1, volume: 2, ledges: 1, plunge: 2, spray: 2, basin: 0 }, CASCADE_AXES),
+  { scale: 1.15, light: false });
+springFall.group.position.set(wx(12.2), 0.1, wz(8.4));
+springFall.group.rotation.y = -0.62;
+scene.add(springFall.group);
+
+/* ---------------------------------------------------- structure placement
+ * Every structure is merged to one geometry per material BEFORE placement,
+ * and repeated types are instanced. This is the whole difference between a
+ * world that runs and one that does not: unmerged, the seven structures
+ * alone cost about 7,900 draw calls, because a coursed rubble wall is a
+ * thousand individual stones. Merged and instanced they cost about forty. */
+boot('placing structures');
+setLod(0);
+
+const protoCache = new Map();
+function typeParts(fn, lod) {
+  const key = fn.name + '|' + lod;
+  if (!protoCache.has(key)) {
+    setLod(lod);
+    let built;
+    try { built = fn(); } finally { setLod(0); }
+    protoCache.set(key, mergeByMaterial(built));
+  }
+  return protoCache.get(key);
+}
+
+/** Place N copies of one type as instanced meshes — one per material. */
+function placeType(fn, placements, opts = {}) {
+  const parts = typeParts(fn, opts.lod || 0);
+  const mats = placements.map(([tx, tz, ry, ox, oz]) => {
+    const p = new THREE.Vector3(wx(tx) + (ox || 0), heightAt(tx, tz), wz(tz) + (oz || 0));
+    const qq = new THREE.Quaternion().setFromEuler(new THREE.Euler(0, ry || 0, 0));
+    return new THREE.Matrix4().compose(p, qq, new THREE.Vector3(1, 1, 1));
+  });
+  parts.forEach((part, pi) => {
+    const im = new THREE.InstancedMesh(part.geometry, part.material, mats.length);
+    im.name = (fn.name || 'structure') + '-' + (part.material.name || pi);
+    im.castShadow = true;
+    im.receiveShadow = true;
+    for (let i = 0; i < mats.length; i++) im.setMatrixAt(i, mats[i]);
+    im.instanceMatrix.needsUpdate = true;
+    scene.add(im);
+  });
+  return placements.length;
+}
+
+let structureCount = 0;
+structureCount += placeType(bellTowerTimber, [[7, 5, 0.2]]);
+// Placements are checked against the tile legend: the gatehouse wants ash
+// ground beside the square, not the pine stand at (6,3); the third house
+// wants an H tile. Both were wrong before the map transcription was fixed.
+structureCount += placeType(gatehousePatchwork, [[7, 7, 0]]);
+structureCount += placeType(vigilShrineOld, [[4, 7, -0.3]]);
+structureCount += placeType(springChannelArch, [[9, 6, Math.PI / 2]]);
+structureCount += placeType(holdHouseSmall, [[3, 4, 0], [5, 5, 0.15], [4, 6, 1.6]]);
+structureCount += placeType(holdHouseCorner, [[3, 6, -0.1], [5, 4, Math.PI]]);
+structureCount += placeType(palisadeRepaired, [[2, 3, 0], [6, 7, Math.PI / 2], [2, 7, 0], [1, 5, Math.PI / 2]]);
+
+/* ----------------------------------------------------------------- fires
+ * Braziers with real fire. Each carries one dynamic light, so the count is
+ * held under the declared dynamicLightsVisible ceiling of 18. */
+boot('lighting the braziers');
+const fires = [];
+const FIRE_SPOTS = [[7, 5], [4, 7], [3, 5], [6, 4], [8, 7]];
+structureCount += placeType(bankedBrazier, FIRE_SPOTS.map(([tx, tz]) => [tx, tz, 0, 1.6, 1.6]));
+/* One real fire per brazier, from the VFX kit. Each is a different declared
+ * variant rather than the same fire five times with a different seed — the
+ * fuel, mass and vigour axes all differ, so the hold's fires do not read as
+ * copies. Each still carries exactly one dynamic light, holding the declared
+ * dynamicLightsVisible ceiling of 18. */
+const FIRE_VARIANTS = [
+  { fuel: 0, mass: 1, vigour: 1, tongues: 1, plume: 1, base: 1, spit: 0 },
+  { fuel: 1, mass: 2, vigour: 2, tongues: 2, plume: 2, base: 1, spit: 1 },
+  { fuel: 2, mass: 1, vigour: 0, tongues: 0, plume: 1, base: 2, spit: 0 },
+  { fuel: 0, mass: 2, vigour: 1, tongues: 2, plume: 0, base: 0, spit: 1 },
+  { fuel: 1, mass: 1, vigour: 2, tongues: 1, plume: 2, base: 1, spit: 0 },
+];
+FIRE_SPOTS.forEach(([tx, tz], i) => {
+  const f = bonfire(indexOfAxes(FIRE_VARIANTS[i], BONFIRE_AXES), { scale: 0.85, lightScale: 0.7 });
+  f.group.position.set(wx(tx) + 1.6, heightAt(tx, tz) + 1.0, wz(tz) + 1.6);
+  scene.add(f.group);
+  fires.push(f);
+});
+
+/* Dressing props around the hold, so the settlement reads as inhabited. */
+structureCount += placeType(ropeBellSmall, [[7, 6, 0.3, 1.2, -0.8]]);
+structureCount += placeType(travelerBench, [[6, 6, 0.4, 0.6, 1.1], [4, 4, 1.9, -1.0, 0.7]]);
+structureCount += placeType(rainBarrelIron, [[3, 5, 0, 1.4, -1.3], [5, 6, 0, -1.1, 1.2]]);
+structureCount += placeType(herbDryingFrame, [[5, 7, 1.2, 0.4, -0.6]]);
+structureCount += placeType(clayNameRack, [[4, 5, 2.4, 1.1, 0.9]]);
+
+/* ------------------------------------------------------- scatter layers
+ * Each layer is one prototype, merged to one geometry per material, then
+ * instanced. `per` is instances per matching tile at density 1.0.
+ *
+ * The clutter tier (grass, pebbles, twigs) is what makes six figures
+ * arithmetically possible: a grass tuft is 24 triangles, so 60,000 of them
+ * is 1.4M triangles. At foliage cost the same count would be 40M. */
+boot('scattering the world');
+const LAYERS = [
+  { name: 'blackpine-mature', build: blackpineMature, lod: 2, tiles: 'T', per: 1.1, scale: [0.85, 1.35], flex: 9.4, amp: 0.055, sink: 0.2, foliage: 'evergreen' },
+  { name: 'blackpine-sapling', build: blackpineSapling, lod: 2, tiles: 'T.', per: 0.55, scale: [0.7, 1.3], flex: 4.2, amp: 0.1, sink: 0.1, foliage: 'evergreen' },
+  { name: 'ridge-heather', build: ridgeHeather, lod: 2, tiles: '^.', per: 3.4, scale: [0.7, 1.5], flex: 0.7, amp: 0.13, sink: 0.04, foliage: 'deciduous' },
+  { name: 'cold-reed-clump', build: coldReedClump, lod: 2, tiles: ',', per: 5.5, scale: [0.7, 1.6], flex: 1.6, amp: 0.2, sink: 0.06, foliage: 'deciduous' },
+  { name: 'steam-moss', build: steamMoss, lod: 2, tiles: '=B', per: 1.6, scale: [0.8, 1.6], flex: 0, amp: 0, sink: 0.02, foliage: 'evergreen' },
+  { name: 'grass-tuft', build: grassTuft, lod: 0, tiles: '.,^', per: 34, scale: [0.6, 1.8], flex: 0.3, amp: 0.16, sink: 0.03, foliage: 'deciduous' },
+  { name: 'pebble', build: pebble, lod: 0, tiles: '.^=B,r', per: 11, scale: [0.5, 2.1], flex: 0, amp: 0, sink: 0.02 },
+  { name: 'twig', build: twig, lod: 0, tiles: '.T,', per: 4.2, scale: [0.6, 1.7], flex: 0, amp: 0, sink: 0.01 },
+  { name: 'rubble-chunk', build: rubbleChunk, lod: 0, tiles: 'r^', per: 11, scale: [0.5, 2.3], flex: 0, amp: 0, sink: 0.02 },
+];
+
+// Merge every prototype once. Windy layers get a windified material clone, and
+// anything declared as foliage also gets the seasonal hook — both are
+// onBeforeCompile clones, and they compose because each adds its own uniforms
+// and its own program cache key.
+const protos = LAYERS.map((L) => {
+  const parts = typeParts(L.build, L.lod).map((p) => {
+    let mat = p.material;
+    if (L.foliage) mat = seasonalFoliage(mat, { evergreen: L.foliage === 'evergreen', name: L.name });
+    if (L.amp > 0) mat = windify(mat, L.flex, L.amp, L.name);
+    return { geometry: p.geometry, material: mat, tris: geoTris(p.geometry) };
+  });
+  return { ...L, parts, tris: parts.reduce((n, p) => n + p.tris, 0) };
+});
+
+// Candidate tiles per layer, precomputed so the density slider is cheap.
+protos.forEach((L) => {
+  L.cells = [];
+  for (let z = 1; z < H - 1; z++) for (let x = 1; x < W - 1; x++) {
+    if (L.tiles.includes(at(x, z))) L.cells.push([x, z]);
+  }
+});
+
+const scatterRoot = new THREE.Group();
+scatterRoot.name = 'scatter';
+scene.add(scatterRoot);
+
+let placed = 0, scatterTris = 0;
+const m4 = new THREE.Matrix4(), q = new THREE.Quaternion(), e = new THREE.Euler(), v = new THREE.Vector3(), sc = new THREE.Vector3();
+
+function rebuildScatter(density) {
+  scatterRoot.clear();
+  placed = 0;
+  scatterTris = 0;
+  protos.forEach((L, li) => {
+    const rand = rnd(0x1000 + li * 7919);
+    const mats = [];
+    L.cells.forEach(([tx, tz]) => {
+      let n = L.per * density;
+      // Fractional counts resolve stochastically, so density scales smoothly
+      // instead of snapping between whole objects per tile.
+      let k = Math.floor(n);
+      if (rand() < n - k) k++;
+      for (let i = 0; i < k; i++) {
+        const px = wx(tx) + (rand() - 0.5) * S * 0.94;
+        const pz = wz(tz) + (rand() - 0.5) * S * 0.94;
+        const s = L.scale[0] + rand() * (L.scale[1] - L.scale[0]);
+        e.set((rand() - 0.5) * 0.09, rand() * Math.PI * 2, (rand() - 0.5) * 0.09);
+        q.setFromEuler(e);
+        v.set(px, heightAt(tx, tz) - L.sink * s, pz);
+        sc.set(s, s * (0.85 + rand() * 0.35), s);
+        mats.push(new THREE.Matrix4().compose(v, q, sc));
+      }
+    });
+    if (!mats.length) return;
+    L.parts.forEach((p, pi) => {
+      const im = new THREE.InstancedMesh(p.geometry, p.material, mats.length);
+      im.name = L.name + '-' + pi;
+      // Only the trees cast: six thousand reeds in the shadow map costs more
+      // than the shadows are worth.
+      im.castShadow = L.tris > 420;
+      im.receiveShadow = false;
+      im.frustumCulled = true;
+      for (let i = 0; i < mats.length; i++) im.setMatrixAt(i, mats[i]);
+      im.instanceMatrix.needsUpdate = true;
+      scatterRoot.add(im);
+      scatterTris += p.tris * mats.length;
+    });
+    placed += mats.length;
+  });
+}
+rebuildScatter(1);
+
+/* ------------------------------------------------------------ ambient fauna
+ * The region kit for Hearthmere declares `lantern_moth_sparse` as a vfx row and
+ * `mire_bird_nest` as foliage, and neither had an asset. This is that layer:
+ * animals with a gait, placed by habitat rather than sprinkled, and each one
+ * rolling for a glow tier on spawn at the declared rarity.
+ *
+ * Habitat is the tile character from MAP_ROWS, so placement follows the world's
+ * own legend instead of a scatter mask: '~' is blackwater, 'T' is tree cover,
+ * '.' ',' '=' are open ground and road. A wader belongs on the water margin and
+ * a hare does not, and the map already knows which is which. */
+boot('waking the ambient life');
+const FAUNA_ALL = new Map([...FAUNA_GENERATORS, ...FAUNA2_GENERATORS].map((g) => [g.id, g]));
+const FAUNA_MIX = [
+  ['fauna.hare', 8, 'T.,'], ['fauna.vermin', 7, '.,=BHrSFM'], ['fauna.deer', 3, 'T'],
+  ['fauna.ground-bird', 6, '.,=T'], ['fauna.beetle', 6, 'T.,'], ['fauna.spider', 3, 'T.'],
+  ['fauna.moth', 7, '.,=T'], ['fauna.flyer', 2, '.,=T'], ['fauna.bat', 3, '.,='],
+  ['fauna.frog', 4, '~'], ['fauna.fish', 3, '~'], ['fauna.serpent', 2, 'T,'],
+  ['fauna.glowfly', 4, 'T~,'], ['fauna.wisp', 3, '~'],
+];
+const faunaRoot = new THREE.Group();
+faunaRoot.name = 'ambient-fauna';
+scene.add(faunaRoot);
+const fauna = [];
+// Braziers already hold five of the eighteen dynamic lights and the scene rig
+// holds three. Glowing creatures get what is left, and the rest glow without
+// lighting anything — refused, not silently dropped.
+const FAUNA_LIGHT_SPARE = 18 - (3 + fires.length);
+let faunaLights = 0, faunaLit = 0, faunaParticles = 0;
+/* Ground sampling is BILINEAR, not nearest-vertex. The rounded lookup this
+ * replaces snapped every creature to the nearest terrain vertex, so an animal
+ * crossing a slope stepped in four-metre jumps rather than walking up it — and
+ * a nearest-vertex height field has a gradient of zero almost everywhere,
+ * which the new medium steering needs in order to see a shoreline coming. */
+const hClamp = (v, m) => Math.max(0, Math.min(m, v));
+const groundAtWorld = (x, z) => {
+  const fx = x / S + W / 2 - 0.5, fz = z / S + H / 2 - 0.5;
+  const x0 = Math.floor(fx), z0 = Math.floor(fz);
+  const tx = fx - x0, tz = fz - z0;
+  const h00 = heightAt(hClamp(x0, W - 1), hClamp(z0, H - 1));
+  const h10 = heightAt(hClamp(x0 + 1, W - 1), hClamp(z0, H - 1));
+  const h01 = heightAt(hClamp(x0, W - 1), hClamp(z0 + 1, H - 1));
+  const h11 = heightAt(hClamp(x0 + 1, W - 1), hClamp(z0 + 1, H - 1));
+  return (h00 * (1 - tx) + h10 * tx) * (1 - tz) + (h01 * (1 - tx) + h11 * tx) * tz;
+};
+
+/* Water for the medium rules. This is a LEVEL FILL rather than a tile test:
+ * anywhere the terrain sits below the blackwater plane is water, which is what
+ * water actually does and which happens to be exactly the '~' tiles, since they
+ * are the only ones cut below -0.62. Doing it by height instead of by tile
+ * character also makes depth continuous, so the shoreline has a gradient the
+ * fish can steer along instead of a four-metre cliff it can only be clamped
+ * against. */
+const WATER_Y = -0.62;
+const faunaWater = {
+  surfaceY: WATER_Y,
+  depthAt: (x, z) => Math.max(0, WATER_Y - groundAtWorld(x, z)),
+};
+
+setLod(1);
+const frand = rnd(0xfa17a);
+FAUNA_MIX.forEach(([id, count, tiles], fi) => {
+  const gen = FAUNA_ALL.get(id);
+  if (!gen) return;
+  const space = spaceOf(gen.axes);
+  const cand = [];
+  for (let tz = 1; tz < H - 1; tz++) {
+    for (let tx = 1; tx < W - 1; tx++) if (tiles.includes(at(tx, tz))) cand.push([tx, tz]);
+  }
+  if (!cand.length) return;
+  for (let i = 0; i < count; i++) {
+    const [tx, tz] = cand[Math.floor(frand() * cand.length)];
+    const variant = Math.floor(frand() * space);
+    let o;
+    try { o = gen.build(variant); } catch (e) { console.error('fauna build failed', id, variant, e); continue; }
+    const c = o.userData.creature;
+    const tier = c.glowSelf ? null : rollGlow(variant * 2654435761 + fi * 7919 + i * 131);
+    let want = tier ? applyGlow(o, tier, variant + 1) : null;
+    if (c.wantsLight) want = { wantsLight: true, intensity: c.lightIntensity, color: c.hue };
+    if (want && want.wantsLight) {
+      if (faunaLights < FAUNA_LIGHT_SPARE) {
+        faunaLights++;
+        const L = new THREE.PointLight(new THREE.Color(want.color), want.intensity * 1.7, 6.5, 2);
+        L.name = 'creature-glow';
+        L.position.y = Math.max(c.hipHeight, 0.15);
+        o.add(L);
+      } else c.lightRefused = true;
+    }
+    if (c.glowSelf || (tier && tier.id !== 'mundane')) faunaLit++;
+    faunaParticles += c.particles || 0;
+    // Only the animals big enough to read cast into the shadow map. A beetle
+    // costs the same shadow pass as a hart and contributes nothing.
+    o.traverse((m) => {
+      if (!m.isMesh) return;
+      m.castShadow = !m.userData.noCast && c.bodyLen > 0.2;
+      m.receiveShadow = !m.userData.noShadow;
+    });
+    c.agent = makeAgent(c, variant * 7919 + i * 131 + fi * 17, {
+      x: wx(tx), z: wz(tz), radius: 2.5 + frand() * 5.5,
+    });
+    faunaRoot.add(o);
+    fauna.push(o);
+  }
+});
+setLod(0);
+const faunaCtx = {
+  groundAt: groundAtWorld,
+  water: faunaWater,
+  lights: fires.map((f) => f.group.position),
+  threat: null,
+  roostY: 3.6,
+};
+let lastFaunaT = 0;
+
+/* ------------------------------------------------------------------ rain
+ * The camera-following rain, now from the VFX kit: GPU-stepped streaks with a
+ * wind-coupled slant, wet-ground impact rings and splash. The rings are the
+ * cheap half and the convincing half — one quad carries a thousand impacts,
+ * which is why the ground finally reads as wet rather than merely dark.
+ * Counted against the same 2400 activeParticles ceiling as the embers. */
+const weather = rainfall(indexOfAxes(
+  { rate: 1, slant: 1, drop: 1, ground: 1, sheet: 1, splash: 1, gust: 1 }, RAINFALL_AXES),
+  { extent: 34, height: 26 });
+scene.add(weather.group);
+
+/* Ground mist over the mire, and marsh lights in it. The mire is the one part
+ * of the Reach with no practical light at all, so without these it is a flat
+ * dark quarter of the map. */
+const mist = groundmist(indexOfAxes(
+  { depth: 1, density: 1, drift: 1, banding: 1, extent: 1, lift: 1, roll: 1 }, GROUNDMIST_AXES),
+  {});
+mist.group.position.set(wx(16), 0, wz(12));
+scene.add(mist.group);
+
+const wisps = marshLight(indexOfAxes(
+  { count: 2, path: 1, pulse: 1, halo: 1, tail: 1, height: 1, pair: 0 }, MARSHLIGHT_AXES),
+  { scale: 1.3, extent: 16, light: false });
+wisps.group.position.set(wx(17), -0.4, wz(13));
+scene.add(wisps.group);
+
+const elemental = [springFall, weather, mist, wisps, ...fires];
+
+/* ------------------------------------------------------------- the sky
+ * Dynamic days and the four seasons, off the real solar model. The Reach sits
+ * at 58°N, which is what gives it six-hour midwinter days and a sun that never
+ * climbs past 8° — the region's declared cold_overcast mood is a CONSEQUENCE
+ * of its latitude here rather than a colour choice.
+ *
+ * A full day runs in three minutes so the arc is watchable; the year advances
+ * a day every two seconds, so a minute of watching covers a season. */
+const clock = { day: 296, hour: 16.4, latitude: 58, dayPerSec: 0.5, yearPerSec: 0.5 };
+let climate = climateState({ day: clock.day, hour: clock.hour, latitude: clock.latitude, biome: 'ash' });
+applyClimate(climate, { key, hemi, fill, scene, renderer });
+const cSeason = document.getElementById('cSeason');
+const cClock = document.getElementById('cClock');
+const cSun = document.getElementById('cSun');
+const cTemp = document.getElementById('cTemp');
+const cLeaf = document.getElementById('cLeaf');
+function stepSky(dt) {
+  clock.hour += dt * clock.dayPerSec;
+  if (clock.hour >= 24) { clock.hour -= 24; clock.day = (clock.day % 365) + 1; }
+  clock.day += dt * clock.yearPerSec;
+  if (clock.day > 365) clock.day -= 365;
+  climate = climateState({
+    day: clock.day, hour: clock.hour, latitude: clock.latitude, biome: 'ash',
+    // The Reach is a wet, overcast region by declaration; the sun is rarely
+    // unfiltered even at noon.
+    overcast: 0.35,
+  });
+  applyClimate(climate, { key, hemi, fill, scene, renderer });
+  // Shadows have to follow the sun or a moving key light reads as a bug.
+  key.position.copy(climate.sun.dir).multiplyScalar(90);
+  const h = Math.floor(climate.hour), m = Math.round((climate.hour - h) * 60);
+  cSeason.textContent = climate.season.name + ' · d' + Math.round(climate.season.day);
+  cClock.textContent = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0');
+  cSun.textContent = climate.sun.altitude.toFixed(0) + '° · '
+    + (climate.dayHours < 0.1 ? 'polar night' : climate.dayHours.toFixed(1) + ' h');
+  cTemp.textContent = climate.temperature.toFixed(1) + ' °C';
+  cTemp.className = 'num ' + (climate.temperature < 0 ? 'warn' : 'ok');
+  cLeaf.textContent = climate.canopy + ' · ' + Math.round(climate.freeze * 100) + '% ice';
+}
+
+/* ------------------------------------------------------------- viewpoints */
+const VIEWS = {
+  vHold: [[wx(13), 15, wz(13)], [wx(5.5), 3, wz(5.5)]],
+  vBell: [[wx(12), 11, wz(3)], [wx(7), 9, wz(5)]],
+  vMire: [[wx(9), 8, wz(16)], [wx(16), 0, wz(11)]],
+  vWide: [[wx(8), 46, wz(30)], [wx(13), 0, wz(12)]],
+};
+function goTo(id) {
+  const [p, t] = VIEWS[id];
+  camera.position.set(p[0], p[1], p[2]);
+  controls.target.set(t[0], t[1], t[2]);
+  controls.update();
+  Object.keys(VIEWS).forEach((k) => document.getElementById(k).setAttribute('aria-pressed', String(k === id)));
+}
+Object.keys(VIEWS).forEach((k) => document.getElementById(k).addEventListener('click', () => goTo(k)));
+goTo('vHold');
+
+/* --------------------------------------------------------------- controls */
+const densEl = document.getElementById('dens');
+const windEl = document.getElementById('wind');
+const gustEl = document.getElementById('gust');
+let density = 1;
+densEl.addEventListener('input', () => {
+  density = +densEl.value;
+  document.getElementById('densV').textContent = density.toFixed(2) + '\u00d7';
+  rebuildScatter(density);
+});
+windEl.addEventListener('input', () => {
+  windUniforms.uWind.value = +windEl.value;
+  document.getElementById('windV').textContent = (+windEl.value).toFixed(2);
+});
+gustEl.addEventListener('input', () => {
+  windUniforms.uGust.value = +gustEl.value;
+  document.getElementById('gustV').textContent = (+gustEl.value).toFixed(2);
+});
+windUniforms.uWind.value = 1;
+windUniforms.uGust.value = 0.55;
+
+/* ----------------------------------------------------------------- census */
+const cObjects = document.getElementById('cObjects'), cCalls = document.getElementById('cCalls');
+const cTris = document.getElementById('cTris'), cFps = document.getElementById('cFps');
+const cParts = document.getElementById('cParts'), cLights = document.getElementById('cLights');
+const cDens = document.getElementById('cDens'), barFill = document.getElementById('barFill');
+// Measured off the built effects rather than restated from the constants that
+// produced them, so the census is a reading and not a claim.
+const particles = elemental.reduce((n, f) => n + (f.particles || 0), 0) + faunaParticles;
+const lights = 3 + elemental.reduce((n, f) => n + (f.lights || 0), 0) + faunaLights;
+cParts.textContent = particles.toLocaleString();
+cParts.className = 'num ' + (particles <= 2400 ? 'ok' : 'warn');
+cLights.textContent = lights;
+cLights.className = 'num ' + (lights <= 18 ? 'ok' : 'warn');
+document.getElementById('cFauna').textContent = fauna.length;
+document.getElementById('cFaunaLit').textContent = faunaLit + (faunaLit ? ' · ' + faunaLights + ' lit up' : '');
+
+let frames = 0, fpsT = performance.now(), fps = 0;
+function updateCensus() {
+  const total = placed + structureCount + fauna.length;
+  cObjects.textContent = total.toLocaleString();
+  if (renderer.info.render.calls) {
+    cCalls.textContent = renderer.info.render.calls.toLocaleString();
+    cTris.textContent = (renderer.info.render.triangles / 1e6).toFixed(2) + 'M';
+  }
+  cFps.textContent = fps ? fps.toFixed(0) + ' fps' : '\u2014';
+  cFps.className = 'num ' + (fps >= 45 ? 'ok' : fps >= 26 ? '' : 'warn');
+  const perM2 = total / (W * S * H * S);
+  cDens.textContent = perM2.toFixed(2) + ' /m\u00b2';
+  barFill.style.width = Math.min(100, (total / 100000) * 100) + '%';
+}
+
+/* -------------------------------------------------------------- main loop */
+const t0 = performance.now();
+function resize() {
+  const w = innerWidth, h = innerHeight;
+  renderer.setSize(w, h, false);
+  composer.setSize(w, h);
+  bloom.resolution.set(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize);
+resize();
+
+let censusTick = 0;
+let skyT = 0, lastSkyT = 0;
+let timeWarp = 0;   // seconds of extra scene time, for stepping by hand
+const vfxCtx = { camera };
+function frame() {
+  const t = (performance.now() - t0) / 1000 + timeWarp;
+  renderer.info.reset();
+  windUniforms.uTime.value = t;
+  waterUniforms.uTime.value = t;
+  fireUniforms.uTime.value = t;
+  // One clock for the whole elemental layer, and the wind it leans on is the
+  // same uniform the scatter sways to — so airborne debris, swaying trees and
+  // a leaning flame are one wind rather than three that happen to agree.
+  VFX_ENV.uTime.value = t;
+  VFX_ENV.uWind.value = windUniforms.uWind.value;
+  VFX_ENV.uGust.value = windUniforms.uGust.value;
+  // The sky at 4 Hz. A sun that moves over minutes does not need 60 Hz, and
+  // climateState allocates a handful of Colors per call — every frame would be
+  // pointless GC churn for a value that has not visibly changed. The delta is
+  // derived from the scene clock rather than a per-frame dt, because this loop
+  // only ever had an absolute t.
+  const skyDt = Math.min(t - lastSkyT, 0.5);
+  lastSkyT = t;
+  skyT += skyDt;
+  if (skyT > 0.25) { stepSky(skyT); skyT = 0; }
+  for (const fx of elemental) if (fx.update) fx.update(t, vfxCtx);
+
+  // Ambient life. Every gait is driven by ground speed, so a paused tab cannot
+  // leave anything paddling on the spot.
+  const fdt = Math.min(t - (lastFaunaT || t), 0.05);
+  lastFaunaT = t;
+  for (const o of fauna) stepCreature(o, fdt, faunaCtx);
+
+  controls.update();
+  composer.render();
+
+  frames++;
+  const now = performance.now();
+  if (now - fpsT > 500) { fps = (frames * 1000) / (now - fpsT); frames = 0; fpsT = now; }
+  if (++censusTick % 15 === 0) updateCensus();
+}
+renderer.setAnimationLoop(frame);
+
+/* Dev handle. The same reasoning as the lab's: a world you cannot interrogate
+   from the console is a world you cannot debug. `settle` advances scene time by
+   hand and renders, which is the only way to inspect a time-driven sky when
+   requestAnimationFrame is paused (a background tab, or a headless capture). */
+window.__world = {
+  THREE, scene, camera, controls, renderer, composer, clock, elemental,
+  climate: () => climate, stepSky,
+  settle: (seconds = 1, steps = 8) => {
+    for (let i = 0; i < steps; i++) { timeWarp += seconds / steps; frame(); }
+    updateCensus();
+    return climate;
+  },
+};
+
+updateCensus();
+// Also on a timer, so the census is never stale in a throttled or
+// backgrounded context where requestAnimationFrame is paused.
+setInterval(updateCensus, 500);
+document.getElementById('boot').remove();
+</script>
+</body>
+</html>

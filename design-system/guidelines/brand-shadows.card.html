@@ -1,0 +1,25 @@
+<!-- @dsCard group="Brand" viewport="700x170" subtitle="Depth by translucency, not by lifting cards" name="Shadows" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+  .cap{color:#797f7a;font:9px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="grid3" style="gap:12px">
+<div style="padding:14px;background:var(--glass-bg);border:1px solid var(--line);box-shadow:var(--shadow-panel)"><p class="cap" style="margin:0">--shadow-panel</p></div>
+<div style="padding:14px;background:var(--modal-bg);border:1px solid rgba(216,208,189,.22);box-shadow:var(--shadow-modal)"><p class="cap" style="margin:0">--shadow-modal</p></div>
+<div style="padding:14px;background:var(--dialogue-bg);border:1px solid var(--line);box-shadow:var(--shadow-dialogue)"><p class="cap" style="margin:0">--shadow-dialogue</p></div></div>
+<p style="margin:14px 0 0;color:var(--muted);font:12px/1.5 var(--serif)">Every one pairs a soft outer shadow with a 1px inner highlight. Cards in a grid get no shadow at all.</p>
+</body>
+</html>

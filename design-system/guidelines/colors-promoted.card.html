@@ -1,0 +1,27 @@
+<!-- @dsCard group="Colors" viewport="700x180" subtitle="Were inline hex in styles.css — now tokens" name="Promoted literals" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+  .cap{color:#797f7a;font:9px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+</style>
+</head>
+<body>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px">
+<div><div style="height:44px;background:var(--gold-btn-bg);border:1px solid var(--gold-btn-edge)"></div><p style="margin:6px 0 0;font:9px var(--sans);color:#797f7a">--gold-btn-*</p></div>
+<div><div style="height:44px;background:var(--shell);border:1px solid var(--line)"></div><p style="margin:6px 0 0;font:9px var(--sans);color:#797f7a">--shell</p></div>
+<div><div style="height:44px;background:var(--bone-bright)"></div><p style="margin:6px 0 0;font:9px var(--sans);color:#797f7a">--bone-bright</p></div>
+<div><div style="height:44px;background:var(--death)"></div><p style="margin:6px 0 0;font:9px var(--sans);color:#797f7a">--death</p></div>
+<div><div style="height:44px;background:var(--enemy)"></div><p style="margin:6px 0 0;font:9px var(--sans);color:#797f7a">--enemy</p></div></div>
+<p style="margin:14px 0 0;color:var(--muted);font:12px/1.5 var(--serif)">Change one of these here and in the game's stylesheet in the same commit.</p>
+</body>
+</html>

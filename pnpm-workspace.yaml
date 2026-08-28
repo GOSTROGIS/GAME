@@ -1,0 +1,9 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+allowBuilds:
+  # Vite requires esbuild's platform binary. Keep the allow-list explicit so
+  # future transitive packages cannot acquire install-script execution.
+  esbuild: true
+  # Optional native acceleration only; Colyseus works with msgpackr's JS path.
+  msgpackr-extract: false

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "id": "atlas.sable-reach.source.v1",
+  "name": "Sable Reach modeled atlas source",
+  "classification": "fictional_modeled_not_measured",
+  "authority": "project-authored synthetic geography",
+  "coordinateReferenceSystem": {
+    "id": "veyl_local_grid_v1",
+    "name": "Veyl Local Engineering Grid v1",
+    "authorityCode": null,
+    "type": "engineering",
+    "horizontalUnits": "meters",
+    "verticalUnits": "meters",
+    "axisOrder": ["easting", "northing", "elevation"],
+    "origin": { "easting": 0, "northing": 0, "elevation": 0 },
+    "wktPath": "tools/worldgen/crs/veyl_local_grid_v1.wkt",
+    "wktSha256": "81bc7ef00c0f7ec3e2fee5e07bf68548ebeb1aa875eedf6577fc08622b71393b"
+  },
+  "extent": {
+    "minimumEasting": 0,
+    "minimumNorthing": 0,
+    "maximumEasting": 16384,
+    "maximumNorthing": 12288,
+    "widthMeters": 16384,
+    "heightMeters": 12288
+  },
+  "terrainGrid": {
+    "surfaceDefinition": "fictional bare-earth digital terrain model excluding buildings and vegetation",
+    "columns": 2048,
+    "rows": 1536,
+    "cellSizeMeters": 8,
+    "sampleLocation": "cell_center",
+    "registration": "upper_left",
+    "rowDirection": "north_to_south",
+    "dataType": "float32",
+    "noData": -9999,
+    "verticalDatum": "fictional local mean-water reference",
+    "verticalAccuracy": null,
+    "accuracyStatement": "Modeled terrain has no surveyed accuracy and is suitable only for game-world design.",
+    "deterministicSeed": 2718281828
+  },
+  "macroCellGrid": {
+    "typeName": "AtlasMacroCell",
+    "columns": 32,
+    "rows": 24,
+    "cellSizeMeters": 512,
+    "idPattern": "atlas.cell.r{row:02}.c{column:02}",
+    "count": 768,
+    "legacyTileRelationship": "none"
+  },
+  "generation": {
+    "algorithmId": "sable_reach_terrain_conditioned_worldgen_v2",
+    "implementationPath": "tools/worldgen/generate.py",
+    "configurationPath": "tools/worldgen/config/worldgen.v1.json",
+    "rawTerrainPolicy": "Preserve the authored terrain surface for terrain description and derivatives.",
+    "conditionedTerrainPolicy": "Apply Whitebox least-cost breaching with a 128-cell search, 50-meter maximum breach cost, minimal-distance paths, a 0.0001-meter flat increment, and fill only the remaining sinks. Restore the three declared natural depressions from the raw DTM and cut monotonic internal drains to their declared pour cells using a 0.0002-meter minimum descent per cell. Never use the conditioned copy for terrain portrayal.",
+    "edgePolicy": "Derivatives use one-cell edge replication. Every boundary terminal must match an explicitly declared outlet on the same boundary side within its stated capture radius; coastal outlets are restricted to the west Veil Coast edge.",
+    "hydrology": {
+      "basinAndStreamRouting": "D8 steepest descent",
+      "d8Encoding": { "east": 1, "southeast": 2, "south": 4, "southwest": 8, "west": 16, "northwest": 32, "north": 64, "northeast": 128, "terminal": 0 },
+      "streamThresholdCells": 4000,
+      "streamMinimumContributingAreaSquareMeters": 256000,
+      "wetnessRouting": "multiple-flow-direction slope-weighted accumulation",
+      "wetnessFormula": "normalized ln(1 + MFD contributing area) / (tan(slope radians) + 0.001)",
+      "preservedDepressions": [
+        { "id": "hydro.depression.mirror-salt-playa", "kind": "closed_basin", "center": [13632, 3328], "radiusMeters": 1080, "terminal": [13632, 3328] },
+        { "id": "hydro.depression.dunmire-ward-pond", "kind": "pond", "center": [5504, 3072], "radiusMeters": 248, "terminal": [5504, 3072] },
+        { "id": "hydro.depression.dunmire-vestry-pond", "kind": "pond", "center": [6656, 4224], "radiusMeters": 192, "terminal": [6656, 4224] }
+      ]
+    },
+    "terrainDerivatives": [
+      { "id": "dtm_raw", "algorithm": "authored analytic constraints plus seeded spectral noise", "units": "meters", "source": null },
+      { "id": "dtm_conditioned", "algorithm": "least-cost breach and residual fill of dtm_raw with declared natural depressions restored", "units": "meters", "source": "dtm_raw" },
+      { "id": "slope_degrees", "algorithm": "Horn-compatible centered gradient", "units": "degrees", "source": "dtm_raw" },
+      { "id": "aspect_degrees", "algorithm": "clockwise azimuth from north; flat cells are -1", "units": "degrees", "source": "dtm_raw" },
+      { "id": "curvature_laplacian", "algorithm": "five-point Laplacian", "units": "inverse_meters", "source": "dtm_raw" },
+      { "id": "tpi_3x3", "algorithm": "center minus eight-neighbor mean", "units": "meters", "source": "dtm_raw" },
+      { "id": "ruggedness_tri", "algorithm": "Riley root-sum-square eight-neighbor difference", "units": "meters", "source": "dtm_raw" },
+      { "id": "d8_flow_direction", "algorithm": "steepest downslope receiver among eight in-bounds neighbors on dtm_conditioned", "units": "d8_code", "source": "dtm_conditioned" },
+      { "id": "d8_flow_accumulation", "algorithm": "upstream cell count including self", "units": "cells", "source": "d8_flow_direction" },
+      { "id": "d8_watershed", "algorithm": "terminal-outlet label propagation", "units": "basin_id", "source": "d8_flow_direction" },
+      { "id": "stream_mask", "algorithm": "D8 accumulation threshold", "units": "boolean", "source": "d8_flow_accumulation" },
+      { "id": "mfd_wetness", "algorithm": "32-meter slope-weighted multiple-flow accumulation expanded to 8-meter alignment and converted to a normalized wetness proxy", "units": "normalized_0_1", "source": "dtm_conditioned" },
+      { "id": "hillshade_multidirectional", "algorithm": "mean of 225, 270, 315 and 360 degree illumination at 45 degree altitude", "units": "normalized_0_1", "source": "dtm_raw" },
+      { "id": "land_cover", "algorithm": "territory substrate and modeled surface classification aligned to 512-meter macro cells", "units": "categorical_code", "source": "territory_polygons" },
+      { "id": "traversal_cost", "algorithm": "slope, MFD wetness, land-cover and crossing impedance aligned to 512-meter macro cells", "units": "milli_cost_multiplier", "source": "slope_degrees,mfd_wetness,land_cover,stream_mask" },
+      { "id": "corruption", "algorithm": "modeled wetness/curvature proxy plus authored Mirror-Salt directional baseline aligned to 512-meter macro cells", "units": "normalized_permille", "source": "mfd_wetness,curvature_laplacian" },
+      { "id": "habitat_suitability", "algorithm": "declared territory, substrate, elevation, slope, moisture and corruption predicates aligned to 512-meter macro cells; listed habitat codes have weight 1 and unlisted codes weight 0", "units": "habitat_code_weight_0_or_1", "source": "land_cover,dtm_raw,slope_degrees,mfd_wetness,corruption" }
+    ]
+  },
+  "authoringConstraints": {
+    "ridges": [
+      { "id": "constraint.ridge.cinder-spine", "from": [11392, 12032], "to": [14592, 6656], "prominenceMeters": 185 },
+      { "id": "constraint.ridge.abbey-karst", "from": [7808, 768], "to": [10944, 5248], "prominenceMeters": 92 },
+      { "id": "constraint.ridge.graven-crown", "from": [5120, 11264], "to": [9856, 9344], "prominenceMeters": 74 }
+    ],
+    "valleys": [
+      { "id": "constraint.valley.reedward", "from": [7424, 7680], "to": [0, 2560], "depthMeters": 58 },
+      { "id": "constraint.valley.bellwater", "from": [9472, 10880], "to": [0, 8704], "depthMeters": 44 }
+    ],
+    "coast": { "id": "constraint.coast.veil", "edge": "west", "intertidalWidthMeters": 384, "referenceElevationMeters": 0 },
+    "geologyZones": [
+      { "id": "geology.raised-slate", "substrate": "slate", "territoryIds": ["territory.graven-march"] },
+      { "id": "geology.drowned-peat", "substrate": "peat", "territoryIds": ["territory.dunmire"] },
+      { "id": "geology.cinder-ore", "substrate": "volcanic_ironstone", "territoryIds": ["territory.cinderward"] },
+      { "id": "geology.hollow-limestone", "substrate": "karst_limestone", "territoryIds": ["territory.hollow-abbey"] },
+      { "id": "geology.mirror-evaporite", "substrate": "salt_clay", "territoryIds": ["territory.mirror-salt-waste"] },
+      { "id": "geology.veil-alluvium", "substrate": "marine_alluvium", "territoryIds": ["territory.veil-coast"] }
+    ]
+  },
+  "canonicalOutputs": [
+    { "path": "tools/worldgen/crs/veyl_local_grid_v1.wkt", "format": "WKT", "status": "committed" },
+    { "path": "tools/worldgen/generated/source/sable-reach.gpkg", "format": "GeoPackage", "status": "committed", "requires": ["geopandas", "shapely", "pyproj"] },
+    { "path": "tools/worldgen/generated/source/dtm-raw.tif", "format": "GeoTIFF", "status": "committed", "requires": ["rasterio"] },
+    { "path": "tools/worldgen/generated/source/dtm-conditioned.tif", "format": "GeoTIFF", "status": "committed", "requires": ["rasterio"] },
+    { "path": "tools/worldgen/generated/source/terrain-derivatives.tif", "format": "multiband GeoTIFF", "status": "committed", "requires": ["rasterio"] },
+    { "path": "tools/worldgen/generated/source/hydrology-derivatives.tif", "format": "multiband GeoTIFF", "status": "committed", "requires": ["rasterio"] }
+  ],
+  "runtimeOutputs": [
+    { "path": "packages/content/manifests/sable-reach.atlas-runtime.json", "format": "JSON", "status": "committed" },
+    { "path": "tools/worldgen/generated/runtime/sable-reach.topo.json", "format": "TopoJSON", "status": "committed" },
+    { "path": "tools/worldgen/generated/runtime/hillshade.webp", "format": "WebP", "status": "committed" }
+  ]
+}

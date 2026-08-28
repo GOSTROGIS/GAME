@@ -1,0 +1,69 @@
+<!-- @dsCard group="Components" viewport="700x330" name="Icons" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_fallback.js"></script>
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .grid{display:grid;grid-template-columns:repeat(9,1fr);gap:8px}
+  .cell{display:grid;gap:6px;justify-items:center;padding:10px 4px;background:rgba(0,0,0,.24);border:1px solid var(--line)}
+  .cap{margin:0 0 8px;color:#b99552;font:8px var(--display);letter-spacing:.18em;text-transform:uppercase}
+  small{color:#797f7a;font:7px var(--sans);text-transform:uppercase;letter-spacing:.04em;text-align:center}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/plain" id="demo-src">
+const { Icon, ICON_PATHS } = window.HollowMarch;
+const NAMES = Object.keys(ICON_PATHS);
+const DISC = NAMES.slice(0, 18);
+const ITEM = NAMES.slice(18, 26);
+const NAV  = NAMES.slice(26);
+
+function Row({ label, names }) {
+  return (
+    <div style={{ marginBottom: 16 }}>
+      <p className="cap">{label}</p>
+      <div className="grid">
+        {names.map(n => (
+          <div className="cell" key={n}>
+            <Icon name={n} size={22} stroke="var(--bone)" />
+            <small>{n.replace(/_/g, " ")}</small>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Demo() {
+  return (
+    <div>
+      <Row label="Eighteen disciplines" names={DISC} />
+      <Row label="Item classes" names={ITEM} />
+      <Row label="Navigation and HUD" names={NAV} />
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+<script>
+window.HollowMarchReady.then(function () {
+  try {
+    var src = document.getElementById("demo-src").textContent;
+    var out = Babel.transform(src, { presets: [["react", { runtime: "classic" }]] }).code;
+    new Function("React", "ReactDOM", out)(React, ReactDOM);
+  } catch (err) {
+    console.error("[card] " + err.message);
+    document.getElementById("root").textContent = "Card failed: " + err.message;
+  }
+});
+</script>
+</body>
+</html>

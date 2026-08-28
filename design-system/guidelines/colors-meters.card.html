@@ -1,0 +1,25 @@
+<!-- @dsCard group="Colors" viewport="700x170" subtitle="Health and enemy read differently on purpose" name="Meter fills" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+  .cap{color:#797f7a;font:9px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="grid2" style="gap:14px">
+<div><p class="cap">Health &mdash; 10px, gradient</p><div style="height:10px;background:var(--meter-health)"></div>
+<p class="cap" style="margin:12px 0 6px">Stamina &mdash; under revision</p><div style="height:7px;background:var(--meter-stamina)"></div></div>
+<div><p class="cap">Focus &mdash; 7px, gradient</p><div style="height:7px;background:var(--meter-focus)"></div>
+<p class="cap" style="margin:12px 0 6px">Enemy &mdash; flat, reads as other</p><div style="height:7px;background:var(--meter-enemy)"></div></div></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- @dsCard group="Brand" viewport="700x230" subtitle="Never ship a render ungraded" name="Image grading" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+  .cap{color:#797f7a;font:9px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="grid3" style="gap:10px">
+<div><div style="background:var(--portrait-stage);border:1px solid var(--line)"><img src="../../assets/characters/gloamfarer-v2.png" alt="Graded" style="display:block;width:100%;height:150px;object-fit:contain;object-position:center bottom;filter:var(--grade-character)"></div><p style="margin:7px 0 0;color:#797f7a;font:9px var(--sans)">--grade-character</p></div>
+<div><div style="border:1px solid var(--line)"><img src="../../assets/world/cinderward-foundry.png" alt="Atlas" style="display:block;width:100%;height:150px;object-fit:cover;filter:var(--grade-atlas)"></div><p style="margin:7px 0 0;color:#797f7a;font:9px var(--sans)">--grade-atlas</p></div>
+<div><div style="border:1px solid var(--line);background:var(--ink)"><img src="../../assets/world/hollow-abbey-nave.png" alt="World card" style="display:block;width:100%;height:150px;object-fit:cover;opacity:var(--world-card-opacity)"></div><p style="margin:7px 0 0;color:#797f7a;font:9px var(--sans)">--world-card-opacity .72</p></div></div>
+</body>
+</html>

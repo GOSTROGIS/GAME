@@ -1,0 +1,25 @@
+{
+  "name": "@hollow-march/client",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.config.ts --configLoader runner",
+    "build": "vite build --config vite.config.ts --configLoader runner",
+    "typecheck": "tsc --noEmit",
+    "test:showcase": "tsc -p tsconfig.test.json && node --test .test-dist/test/showcases.test.js",
+    "test:turn": "tsc -p tsconfig.test.json && node --test .test-dist/test/turn-ui.test.js && node test/turn-ui-browser.mjs",
+    "test:bridge": "tsc -p tsconfig.bridge-test.json && node --test .bridge-test-dist/test/bridge-runtime.test.js"
+  },
+  "dependencies": {
+    "@colyseus/sdk": "^0.17.18",
+    "@hearthmere/content": "workspace:*",
+    "@hollow-march/shared": "workspace:*",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.180.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "sable-reach.bridge.authored-v1",
+  "canonicalModule": "@hearthmere/content/bridge-assets",
+  "derivativeCount": 96,
+  "siteAllocation": {
+    "site.hearthmere": 24,
+    "site.gloamharbor": 12,
+    "site.warden-reed": 12,
+    "site.cairnmarket": 12,
+    "site.hollow-abbey": 12,
+    "site.salt-watch": 12,
+    "site.ember-gate": 12
+  },
+  "nonHearthmereRoleAllocation": { "structure": 3, "prop": 5, "foliage": 3, "landmarkTraversal": 1 },
+  "runtimePathPattern": "assets/3d/runtime/bridge/<site-slug>/<asset-slug>.glb",
+  "hashPolicy": "generator-populates-sha256-after-binary-write",
+  "maturity": "prototype_geometry",
+  "strictProductionEligible": false,
+  "sourcePaletteRetained": false,
+  "simpleRecolorsPermitted": false
+}

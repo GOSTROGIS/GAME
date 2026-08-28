@@ -1,0 +1,30 @@
+<!-- @dsCard group="Brand" viewport="700x180" subtitle="Always present, always subtle" name="Grain & vignette" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+
+<style>
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .grid6{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px}
+  .cap{color:#797f7a;font:9px var(--sans);text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="grid3" style="height:140px">
+<div style="position:relative;overflow:hidden;border:1px solid var(--line);background:var(--world-canvas)">
+<div style="position:absolute;inset:-50%;opacity:var(--grain-opacity);background-image:var(--grain-url);animation:grain var(--grain-step) steps(2) infinite"></div>
+<p class="cap" style="position:absolute;left:8px;bottom:6px;margin:0">Grain .08</p></div>
+<div style="position:relative;overflow:hidden;border:1px solid var(--line);background:var(--world-canvas)">
+<div style="position:absolute;inset:0;box-shadow:var(--vignette)"></div>
+<p class="cap" style="position:absolute;left:8px;bottom:6px;margin:0">Vignette</p></div>
+<div style="position:relative;overflow:hidden;border:1px solid var(--line);background-image:url('../../assets/world/hearthmere-hold.png');background-size:cover;background-position:center">
+<div style="position:absolute;inset:16px;background:var(--glass-bg);border:1px solid var(--line);box-shadow:var(--shadow-panel);backdrop-filter:blur(var(--blur-glass))"></div>
+<p class="cap" style="position:absolute;left:8px;bottom:6px;margin:0;z-index:2">Glass over world</p></div></div>
+</body>
+</html>

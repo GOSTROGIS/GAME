@@ -1,0 +1,6 @@
+ENGCRS["Veyl Local Engineering Grid v1",
+  EDATUM["Veyl Reach synthetic datum"],
+  CS[Cartesian,3],
+    AXIS["easting (E)",east,ORDER[1],LENGTHUNIT["metre",1]],
+    AXIS["northing (N)",north,ORDER[2],LENGTHUNIT["metre",1]],
+    AXIS["elevation (H)",up,ORDER[3],LENGTHUNIT["metre",1]]]

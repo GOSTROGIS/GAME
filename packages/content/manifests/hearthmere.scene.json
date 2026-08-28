@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "id": "hearthmere.shard.96m.v1",
+  "name": "Hearthmere Hold",
+  "units": "meters",
+  "coordinateSystem": { "handedness": "right", "up": "+Y", "east": "+X", "south": "+Z", "origin": "northwest-shard-corner" },
+  "bounds": { "min": [0, -8, 0], "max": [96, 32, 96], "playableSize": [96, 96] },
+  "legacyMapping": {
+    "sourceSchema": 3,
+    "sourceCoordinateSystem": "grid-north-west-origin",
+    "metersPerTile": 4,
+    "formula": { "x": "legacy.x * 4", "y": "0", "z": "legacy.y * 4", "yaw": "0" },
+    "inverseFormula": { "x": "world.x / 4", "y": "world.z / 4" }
+  },
+  "camera": { "projection": "perspective", "defaultPitchDegrees": 42, "pitchRangeDegrees": [28, 62], "zoomRangeMeters": [8, 20], "defaultZoomMeters": 14, "freeYaw": true, "collision": true, "occluderFade": true },
+  "qualityTargets": {
+    "high": { "resolution": [1920, 1080], "fps": 60, "maxVisibleDrawCalls": 700, "maxGpuFrameMs": 12, "maxMainThreadFrameMs": 5, "fullDetailRigs": 12, "simplifiedRigs": 24, "shadowCastingPracticals": 4, "maxParticles": 2400, "maxAmbientVoices": 14 },
+    "integrated": { "resolutionScale": 0.75, "fps": 30, "fullDetailRigs": 6, "simplifiedRigs": 12, "shadowCastingPracticals": 2, "particlesScale": 0.45, "crowdDistanceMeters": 34 }
+  },
+  "phaseDefinitions": [
+    { "id": "public", "scope": "shard", "description": "Always-visible shared Hearthmere state." },
+    { "id": "ember-ledger-unrestored", "scope": "character", "description": "Personal presentation before the Ember Ledger is restored." },
+    { "id": "ember-ledger-restored", "scope": "character", "description": "Personal presentation after the Ember Ledger is restored." }
+  ],
+  "phasePolicy": { "alwaysActive": ["public"], "exclusiveGroups": [["ember-ledger-unrestored", "ember-ledger-restored"]], "defaultCharacterPhases": ["ember-ledger-unrestored"] },
+  "acceptanceProfile": {
+    "allowPrototypeGeometry": true,
+    "minimumReferencedAssets": { "surface": 6, "structure": 7, "prop": 10, "foliage": 5, "decal": 6, "character": 4, "enemy": 2, "vfx": 5, "audio": 6 },
+    "requiredSemanticAnchors": ["player.start", "landmark.hearthmere-square", "landmark.old-vigil-shrine", "npc.maela-voss", "npc.torren-vale", "npc.ysra-pell", "enemy.ash-husk", "enemy.ledger-crawler"],
+    "requiredChunkCount": 9,
+    "requiredChunkSizeMeters": 32
+  },
+  "terrain": {
+    "heightRangeMeters": [-1.5, 4.5],
+    "surfacePaletteAssetIds": ["hm.surface.slate-cobbles-wet", "hm.surface.slate-steps-chipped", "hm.surface.spring-limestone", "hm.surface.peat-mud-tracks", "hm.surface.oak-planks-dark", "hm.surface.clay-tablets"],
+    "macroFeatures": [
+      { "id": "feature.hold-rise", "kind": "plateau", "center": [32, 0, 20], "radius": 24, "heightMeters": 1.2 },
+      { "id": "feature.spring-channel", "kind": "channel", "points": [[40, 0.2, 18], [41, 0, 32], [44, -0.5, 58], [49, -1, 92]], "widthMeters": 4.5 },
+      { "id": "feature.outer-approach", "kind": "road", "points": [[20, 0, 32], [23, -0.2, 52], [33, -0.4, 72], [48, -0.6, 96]], "widthMeters": 6 },
+      { "id": "feature.encounter-lane-west", "kind": "combat-lane", "points": [[16, 0, 28], [20, -0.1, 32], [18, -0.2, 48]], "widthMeters": 9 }
+    ]
+  },
+  "environment": {
+    "fog": { "color": "#829492", "nearMeters": 22, "farMeters": 92, "heightFalloff": 0.16 },
+    "rain": { "direction": [-0.18, -1, 0.1], "speedMetersPerSecond": 17, "densityHigh": 1, "densityIntegrated": 0.42 },
+    "globalLights": [
+      { "id": "light.overcast-key", "type": "directional", "color": "#b7c4c1", "intensity": 1.25, "castShadow": false, "transform": { "position": [-24, 34, -18], "rotation": [-0.8, -0.5, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+      { "id": "light.sky-fill", "type": "hemisphere", "color": "#718888", "groundColor": "#171817", "intensity": 0.62, "castShadow": false, "transform": { "position": [48, 24, 48], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] }
+    ]
+  },
+  "chunks": [
+    {
+      "id": "hm.chunk.00", "grid": [0, 0], "bounds": { "min": [0, -8, 0], "max": [32, 32, 32] }, "streamingPriority": "hub",
+      "surfaceLayers": [
+        { "assetId": "hm.surface.slate-cobbles-wet", "weight": 0.46, "phaseIds": ["public"] },
+        { "assetId": "hm.surface.peat-mud-tracks", "weight": 0.24, "phaseIds": ["public"] },
+        { "assetId": "hm.surface.slate-steps-chipped", "weight": 0.18, "phaseIds": ["public"] },
+        { "assetId": "hm.surface.spring-limestone", "weight": 0.12, "phaseIds": ["public"] }
+      ],
+      "instances": [
+        { "id": "instance.shrine-old", "assetId": "hm.structure.vigil-shrine-old", "type": "structure", "status": "prototype_geometry", "transform": { "position": [16, 0, 28], "rotation": [0, 0.1, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.house-small-west", "assetId": "hm.structure.hold-house-small", "type": "structure", "status": "prototype_geometry", "transform": { "position": [7, 0.6, 9], "rotation": [0, 1.57, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.house-corner-square", "assetId": "hm.structure.hold-house-corner", "type": "structure", "status": "prototype_geometry", "transform": { "position": [25, 0.8, 7], "rotation": [0, 3.14, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.ledger-desk", "assetId": "hm.prop.ember-ledger-desk", "type": "prop", "status": "prototype_geometry", "transform": { "position": [29, 1, 18], "rotation": [0, 2.9, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.clay-rack-unrestored", "assetId": "hm.prop.clay-name-rack", "type": "prop", "status": "prototype_geometry", "transform": { "position": [27.5, 1, 15], "rotation": [0, 1.57, 0], "scale": [0.86, 0.86, 0.86] }, "phaseIds": ["ember-ledger-unrestored"] },
+        { "id": "instance.clay-rack-restored", "assetId": "hm.prop.clay-name-rack", "type": "prop", "status": "prototype_geometry", "transform": { "position": [27.5, 1, 15], "rotation": [0, 1.57, 0], "scale": [1, 1, 1] }, "phaseIds": ["ember-ledger-restored"] },
+        { "id": "instance.brazier-shrine", "assetId": "hm.prop.banked-brazier", "type": "prop", "status": "prototype_geometry", "transform": { "position": [16, 0.1, 26], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.rain-barrel-west", "assetId": "hm.prop.rain-barrel-iron", "type": "prop", "status": "prototype_geometry", "transform": { "position": [10, 0.7, 11], "rotation": [0, 0.2, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.market-awning", "assetId": "hm.prop.market-awning-patch", "type": "prop", "status": "prototype_geometry", "transform": { "position": [23, 0.8, 21], "rotation": [0, 0.1, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.traveler-bench", "assetId": "hm.prop.traveler-bench", "type": "prop", "status": "prototype_geometry", "transform": { "position": [20, 0.4, 24], "rotation": [0, 2.4, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.herb-frame", "assetId": "hm.prop.herb-drying-frame", "type": "prop", "status": "prototype_geometry", "transform": { "position": [22, 0.5, 29], "rotation": [0, 3.14, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.spring-cup", "assetId": "hm.prop.spring-cup-stone", "type": "prop", "status": "prototype_geometry", "transform": { "position": [29, 0.5, 28], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.ysra-pell", "assetId": "hm.character.ysra-pell", "type": "character", "status": "prototype_geometry", "transform": { "position": [20, 0, 28], "rotation": [0, 2.3, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.blackpine-west", "assetId": "hm.foliage.blackpine-sapling", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [4, 0, 21], "rotation": [0, 0.5, 0], "scale": [1.2, 1.2, 1.2] }, "phaseIds": ["public"] },
+        { "id": "instance.steam-moss-shrine", "assetId": "hm.foliage.steam-moss", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [15, 0.1, 30], "rotation": [0, 0, 0], "scale": [2, 1, 2] }, "phaseIds": ["public"] },
+        { "id": "instance.decal-boots-square", "assetId": "hm.decal.boot-mud-cluster", "type": "decal", "status": "prototype_geometry", "transform": { "position": [26, 0.04, 22], "rotation": [-1.57, 0, 0.3], "scale": [2.2, 2.2, 2.2] }, "phaseIds": ["public"] },
+        { "id": "instance.decal-chalk-shrine", "assetId": "hm.decal.chalk-ward-broken", "type": "decal", "status": "prototype_geometry", "transform": { "position": [16, 0.05, 29], "rotation": [-1.57, 0, 0], "scale": [3, 3, 3] }, "phaseIds": ["public"] },
+        { "id": "instance.decal-old-blood", "assetId": "hm.decal.old-blood-wash", "type": "decal", "status": "prototype_geometry", "transform": { "position": [13, 0.04, 23], "rotation": [-1.57, 0, 0.2], "scale": [1.6, 1.6, 1.6] }, "phaseIds": ["public"] }
+      ],
+      "colliders": [
+        { "id": "collider.house-small-west", "instanceId": "instance.house-small-west", "shape": "box", "center": [7, 4.35, 9], "size": [7, 7.5, 9], "layer": "static-world", "walkable": false, "phaseIds": ["public"] },
+        { "id": "collider.house-corner-square", "instanceId": "instance.house-corner-square", "shape": "box", "center": [25, 4.8, 7], "size": [11, 8, 8], "layer": "static-world", "walkable": false, "phaseIds": ["public"] },
+        { "id": "collider.shrine-old", "instanceId": "instance.shrine-old", "shape": "cylinder", "center": [16, 2, 28], "radius": 2.2, "height": 4, "layer": "static-world", "walkable": false, "phaseIds": ["public"] }
+      ],
+      "occluders": [
+        { "id": "occluder.house-small-west", "instanceId": "instance.house-small-west", "shape": "box", "center": [7, 5.5, 9], "size": [8, 4, 10], "fadeMode": "dither", "phaseIds": ["public"] },
+        { "id": "occluder.house-corner-square", "instanceId": "instance.house-corner-square", "shape": "box", "center": [25, 6, 7], "size": [12, 4, 9], "fadeMode": "dither", "phaseIds": ["public"] }
+      ],
+      "navigation": {
+        "cells": [{ "id": "nav.hm.00", "polygon": [[0, 0, 0], [32, 0, 0], [32, 0, 32], [0, 0, 32]], "cost": 1, "blockedByColliderIds": ["collider.house-small-west", "collider.house-corner-square", "collider.shrine-old"], "phaseIds": ["public"] }],
+        "links": [
+          { "id": "navlink.00-10", "from": "nav.hm.00", "to": "nav.hm.10", "bidirectional": true, "cost": 1, "portal": [[32, 0, 12], [32, 0, 24]], "phaseIds": ["public"] },
+          { "id": "navlink.00-01", "from": "nav.hm.00", "to": "nav.hm.01", "bidirectional": true, "cost": 1, "portal": [[12, 0, 32], [28, 0, 32]], "phaseIds": ["public"] }
+        ]
+      },
+      "lights": [
+        { "id": "light.shrine-flame", "type": "point", "color": "#d49451", "intensity": 5.2, "rangeMeters": 14, "castShadow": true, "shadowPriority": 1, "transform": { "position": [16, 2.4, 28], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "light.market-lantern", "type": "point", "color": "#c58242", "intensity": 2.2, "rangeMeters": 9, "castShadow": false, "transform": { "position": [23, 3.1, 21], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] }
+      ],
+      "volumes": [{ "id": "volume.hm00.rain-shelter", "kind": "weather-exclusion", "shape": "box", "center": [23, 2, 21], "size": [5, 4, 3], "phaseIds": ["public"] }],
+      "vfxZones": [
+        { "id": "vfxzone.shrine-embers", "assetId": "hm.vfx.brazier-ember-fall", "shape": "sphere", "center": [16, 2.2, 28], "radius": 2.5, "phaseIds": ["public"] },
+        { "id": "vfxzone.lantern-moths", "assetId": "hm.vfx.lantern-moth-sparse", "shape": "sphere", "center": [23, 2.5, 21], "radius": 5, "phaseIds": ["public"] }
+      ],
+      "audioZones": [
+        { "id": "audiozone.brazier-shrine", "assetId": "hm.audio.braziers-low", "shape": "sphere", "center": [16, 1, 28], "radius": 8, "gain": 0.7, "phaseIds": ["public"] },
+        { "id": "audiozone.hub-murmur-west", "assetId": "hm.audio.hub-murmur", "shape": "box", "center": [23, 2, 20], "size": [18, 6, 18], "gain": 0.48, "phaseIds": ["public"] }
+      ],
+      "interactionAnchors": [
+        { "id": "landmark.hearthmere-square", "kind": "landmark", "legacySource": { "id": "hearthmere_square", "position": [7, 5] }, "transform": { "position": [28, 0, 20], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "radiusMeters": 5, "phaseIds": ["public"] },
+        { "id": "landmark.old-vigil-shrine", "kind": "wayshrine", "legacySource": { "id": "old_vigil_shrine", "position": [4, 7] }, "instanceId": "instance.shrine-old", "transform": { "position": [16, 0, 28], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "radiusMeters": 3, "phaseIds": ["public"] },
+        { "id": "npc.ysra-pell", "kind": "npc", "legacySource": { "id": "ysra_pell", "position": [5, 7] }, "instanceId": "instance.ysra-pell", "assetId": "hm.character.ysra-pell", "transform": { "position": [20, 0, 28], "rotation": [0, 2.3, 0], "scale": [1, 1, 1] }, "radiusMeters": 2.4, "phaseIds": ["public"] }
+      ],
+      "spawnAnchors": [
+        { "id": "player.start", "kind": "player", "legacySource": { "id": "startingPosition", "position": [7, 4] }, "assetId": "hm.character.gloamfarer", "transform": { "position": [28, 0, 16], "rotation": [0, 2.35, 0], "scale": [1, 1, 1] }, "radiusMeters": 1, "phaseIds": ["public"] }
+      ]
+    },
+    {
+      "id": "hm.chunk.10", "grid": [1, 0], "bounds": { "min": [32, -8, 0], "max": [64, 32, 32] }, "streamingPriority": "hub",
+      "surfaceLayers": [{ "assetId": "hm.surface.slate-cobbles-wet", "weight": 0.5, "phaseIds": ["public"] }, { "assetId": "hm.surface.spring-limestone", "weight": 0.3, "phaseIds": ["public"] }, { "assetId": "hm.surface.oak-planks-dark", "weight": 0.2, "phaseIds": ["public"] }],
+      "instances": [
+        { "id": "instance.bell-tower", "assetId": "hm.structure.bell-tower-timber", "type": "structure", "status": "prototype_geometry", "transform": { "position": [47, 1.1, 9], "rotation": [0, 0.15, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.spring-arch", "assetId": "hm.structure.spring-channel-arch", "type": "structure", "status": "prototype_geometry", "transform": { "position": [42, 0, 27], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.house-small-east", "assetId": "hm.structure.hold-house-small", "type": "structure", "status": "prototype_geometry", "transform": { "position": [59, 0.8, 22], "rotation": [0, -1.57, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.rope-bell", "assetId": "hm.prop.rope-bell-small", "type": "prop", "status": "prototype_geometry", "transform": { "position": [43, 1, 16], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.guard-rest", "assetId": "hm.prop.guard-weapon-rest", "type": "prop", "status": "prototype_geometry", "transform": { "position": [38, 0.8, 23], "rotation": [0, 2.7, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.brazier-gate-road", "assetId": "hm.prop.banked-brazier", "type": "prop", "status": "prototype_geometry", "transform": { "position": [39, 0.3, 18], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.maela-voss", "assetId": "hm.character.maela-voss", "type": "character", "status": "prototype_geometry", "transform": { "position": [32, 0, 16], "rotation": [0, 1.9, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.torren-vale", "assetId": "hm.character.torren-vale", "type": "character", "status": "prototype_geometry", "transform": { "position": [36, 0, 20], "rotation": [0, 2.8, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.ridge-heather", "assetId": "hm.foliage.ridge-heather", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [55, 0.6, 28], "rotation": [0, 0.5, 0], "scale": [2.2, 1.4, 2.2] }, "phaseIds": ["public"] },
+        { "id": "instance.wall-lichen", "assetId": "hm.foliage.wall-lichen-gray", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [59, 3, 18], "rotation": [0, -1.57, 0], "scale": [2, 2, 2] }, "phaseIds": ["public"] },
+        { "id": "instance.decal-soot-tower", "assetId": "hm.decal.brazier-soot-fan", "type": "decal", "status": "prototype_geometry", "transform": { "position": [46, 2, 6], "rotation": [0, 0, 0], "scale": [2.4, 2.4, 2.4] }, "phaseIds": ["public"] },
+        { "id": "instance.decal-rain-wall", "assetId": "hm.decal.rain-streak-wall", "type": "decal", "status": "prototype_geometry", "transform": { "position": [58.5, 3, 22], "rotation": [0, -1.57, 0], "scale": [2, 2, 2] }, "phaseIds": ["public"] },
+        { "id": "instance.decal-mended-arch", "assetId": "hm.decal.mended-stone-seam", "type": "decal", "status": "prototype_geometry", "transform": { "position": [42, 1, 24.2], "rotation": [0, 0, 0], "scale": [1.8, 1.8, 1.8] }, "phaseIds": ["public"] }
+      ],
+      "colliders": [
+        { "id": "collider.bell-tower", "instanceId": "instance.bell-tower", "shape": "box", "center": [47, 8, 9], "size": [8, 14, 8], "layer": "static-world", "walkable": false, "phaseIds": ["public"] },
+        { "id": "collider.spring-arch", "instanceId": "instance.spring-arch", "shape": "box", "center": [42, 1.5, 27], "size": [10, 3, 2], "layer": "static-world", "walkable": false, "phaseIds": ["public"] },
+        { "id": "collider.house-small-east", "instanceId": "instance.house-small-east", "shape": "box", "center": [59, 4.5, 22], "size": [7, 7.5, 9], "layer": "static-world", "walkable": false, "phaseIds": ["public"] }
+      ],
+      "occluders": [
+        { "id": "occluder.bell-tower", "instanceId": "instance.bell-tower", "shape": "box", "center": [47, 12, 9], "size": [9, 9, 9], "fadeMode": "dither", "phaseIds": ["public"] },
+        { "id": "occluder.house-small-east", "instanceId": "instance.house-small-east", "shape": "box", "center": [59, 5.6, 22], "size": [8, 4, 10], "fadeMode": "dither", "phaseIds": ["public"] }
+      ],
+      "navigation": {
+        "cells": [{ "id": "nav.hm.10", "polygon": [[32, 0, 0], [64, 0, 0], [64, 0, 32], [32, 0, 32]], "cost": 1, "blockedByColliderIds": ["collider.bell-tower", "collider.spring-arch", "collider.house-small-east"], "phaseIds": ["public"] }],
+        "links": [
+          { "id": "navlink.10-20", "from": "nav.hm.10", "to": "nav.hm.20", "bidirectional": true, "cost": 1, "portal": [[64, 0, 14], [64, 0, 16]], "phaseIds": ["public"] },
+          { "id": "navlink.10-11", "from": "nav.hm.10", "to": "nav.hm.11", "bidirectional": true, "cost": 1, "portal": [[36, 0, 32], [52, 0, 32]], "phaseIds": ["public"] }
+        ]
+      },
+      "lights": [
+        { "id": "light.tower-lantern", "type": "point", "color": "#c18b46", "intensity": 4.2, "rangeMeters": 13, "castShadow": true, "shadowPriority": 2, "transform": { "position": [47, 10, 9], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "light.road-brazier", "type": "point", "color": "#d17b3d", "intensity": 3.8, "rangeMeters": 11, "castShadow": true, "shadowPriority": 3, "transform": { "position": [39, 1.8, 18], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] }
+      ],
+      "volumes": [{ "id": "volume.spring-steam", "kind": "fog-local", "shape": "box", "center": [42, 1.2, 27], "size": [12, 3, 8], "density": 0.7, "phaseIds": ["public"] }],
+      "vfxZones": [
+        { "id": "vfxzone.spring-steam", "assetId": "hm.vfx.spring-steam-low", "shape": "box", "center": [42, 1, 27], "size": [12, 3, 8], "phaseIds": ["public"] },
+        { "id": "vfxzone.roof-rain", "assetId": "hm.vfx.roof-rain-sheet", "shape": "box", "center": [59, 7, 22], "size": [10, 4, 10], "phaseIds": ["public"] },
+        { "id": "vfxzone.bell-dust", "assetId": "hm.vfx.bell-dust-pulse", "shape": "sphere", "center": [47, 13, 9], "radius": 6, "phaseIds": ["public"] }
+      ],
+      "audioZones": [
+        { "id": "audiozone.rain-roof-east", "assetId": "hm.audio.rain-roof", "shape": "box", "center": [52, 5, 16], "size": [24, 10, 24], "gain": 0.75, "phaseIds": ["public"] },
+        { "id": "audiozone.spring-water", "assetId": "hm.audio.spring-water", "shape": "sphere", "center": [42, 0, 27], "radius": 14, "gain": 0.82, "phaseIds": ["public"] },
+        { "id": "audiozone.timber-creak", "assetId": "hm.audio.timber-creak", "shape": "sphere", "center": [47, 8, 9], "radius": 15, "gain": 0.65, "phaseIds": ["public"] },
+        { "id": "audiozone.bell", "assetId": "hm.audio.bell-false-double", "shape": "sphere", "center": [47, 13, 9], "radius": 50, "gain": 1, "phaseIds": ["public"] }
+      ],
+      "interactionAnchors": [
+        { "id": "npc.maela-voss", "kind": "npc", "legacySource": { "id": "maela_voss", "position": [8, 4] }, "instanceId": "instance.maela-voss", "assetId": "hm.character.maela-voss", "transform": { "position": [32, 0, 16], "rotation": [0, 1.9, 0], "scale": [1, 1, 1] }, "radiusMeters": 2.4, "phaseIds": ["public"] },
+        { "id": "npc.torren-vale", "kind": "npc", "legacySource": { "id": "torren_vale", "position": [9, 5] }, "instanceId": "instance.torren-vale", "assetId": "hm.character.torren-vale", "transform": { "position": [36, 0, 20], "rotation": [0, 2.8, 0], "scale": [1, 1, 1] }, "radiusMeters": 2.5, "phaseIds": ["public"] },
+        { "id": "interaction.rope-bell", "kind": "public-interactable", "instanceId": "instance.rope-bell", "transform": { "position": [43, 1, 16], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "radiusMeters": 2, "phaseIds": ["public"] }
+      ],
+      "spawnAnchors": []
+    },
+    {
+      "id": "hm.chunk.20", "grid": [2, 0], "bounds": { "min": [64, -8, 0], "max": [96, 32, 32] }, "streamingPriority": "near",
+      "surfaceLayers": [{ "assetId": "hm.surface.peat-mud-tracks", "weight": 0.55, "phaseIds": ["public"] }, { "assetId": "hm.surface.slate-cobbles-wet", "weight": 0.3, "phaseIds": ["public"] }, { "assetId": "hm.surface.oak-planks-dark", "weight": 0.15, "phaseIds": ["public"] }],
+      "instances": [
+        { "id": "instance.gatehouse", "assetId": "hm.structure.gatehouse-patchwork", "type": "structure", "status": "prototype_geometry", "transform": { "position": [81, 0.2, 19], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.palisade-north", "assetId": "hm.structure.palisade-repaired", "type": "structure", "status": "prototype_geometry", "transform": { "position": [72, 0.2, 7], "rotation": [0, 0.12, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.palisade-east", "assetId": "hm.structure.palisade-repaired", "type": "structure", "status": "prototype_geometry", "transform": { "position": [92, 0, 24], "rotation": [0, 1.57, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.brazier-gate-left", "assetId": "hm.prop.banked-brazier", "type": "prop", "status": "prototype_geometry", "transform": { "position": [77, 0.2, 21], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.brazier-gate-right", "assetId": "hm.prop.banked-brazier", "type": "prop", "status": "prototype_geometry", "transform": { "position": [85, 0.2, 21], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.cold-reeds-gate", "assetId": "hm.foliage.cold-reed-clump", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [68, -0.2, 27], "rotation": [0, 0.2, 0], "scale": [2, 1.5, 2] }, "phaseIds": ["public"] }
+      ],
+      "colliders": [
+        { "id": "collider.gatehouse", "instanceId": "instance.gatehouse", "shape": "box", "center": [81, 5, 19], "size": [14, 10, 4], "layer": "static-world", "walkable": false, "phaseIds": ["public"] },
+        { "id": "collider.palisade-north", "instanceId": "instance.palisade-north", "shape": "box", "center": [72, 2.8, 7], "size": [16, 5.5, 1.2], "layer": "static-world", "walkable": false, "phaseIds": ["public"] },
+        { "id": "collider.palisade-east", "instanceId": "instance.palisade-east", "shape": "box", "center": [92, 2.8, 24], "size": [1.2, 5.5, 16], "layer": "static-world", "walkable": false, "phaseIds": ["public"] }
+      ],
+      "occluders": [{ "id": "occluder.gatehouse", "instanceId": "instance.gatehouse", "shape": "box", "center": [81, 7, 19], "size": [15, 6, 7], "fadeMode": "dither", "phaseIds": ["public"] }],
+      "navigation": { "cells": [{ "id": "nav.hm.20", "polygon": [[64, 0, 0], [96, 0, 0], [96, 0, 32], [64, 0, 32]], "cost": 1.1, "blockedByColliderIds": ["collider.gatehouse", "collider.palisade-north", "collider.palisade-east"], "phaseIds": ["public"] }], "links": [{ "id": "navlink.20-21", "from": "nav.hm.20", "to": "nav.hm.21", "bidirectional": true, "cost": 1, "portal": [[70, 0, 32], [88, 0, 32]], "phaseIds": ["public"] }] },
+      "lights": [{ "id": "light.gate-pair", "type": "point", "color": "#d07c3f", "intensity": 4.6, "rangeMeters": 13, "castShadow": true, "shadowPriority": 4, "transform": { "position": [81, 3, 21], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] }],
+      "volumes": [{ "id": "volume.gate-wind", "kind": "wind", "shape": "box", "center": [81, 4, 18], "size": [18, 8, 10], "direction": [-0.4, 0, 0.8], "phaseIds": ["public"] }],
+      "vfxZones": [{ "id": "vfxzone.gate-embers", "assetId": "hm.vfx.brazier-ember-fall", "shape": "box", "center": [81, 2, 21], "size": [12, 4, 4], "phaseIds": ["public"] }],
+      "audioZones": [{ "id": "audiozone.gate-rain", "assetId": "hm.audio.rain-roof", "shape": "box", "center": [81, 5, 19], "size": [18, 10, 10], "gain": 0.7, "phaseIds": ["public"] }],
+      "interactionAnchors": [{ "id": "interaction.gatehouse", "kind": "public-interactable", "instanceId": "instance.gatehouse", "transform": { "position": [81, 0, 22], "rotation": [0, 3.14, 0], "scale": [1, 1, 1] }, "radiusMeters": 3, "phaseIds": ["public"] }],
+      "spawnAnchors": []
+    },
+    {
+      "id": "hm.chunk.01", "grid": [0, 1], "bounds": { "min": [0, -8, 32], "max": [32, 32, 64] }, "streamingPriority": "near",
+      "surfaceLayers": [{ "assetId": "hm.surface.peat-mud-tracks", "weight": 0.62, "phaseIds": ["public"] }, { "assetId": "hm.surface.slate-steps-chipped", "weight": 0.23, "phaseIds": ["public"] }, { "assetId": "hm.surface.slate-cobbles-wet", "weight": 0.15, "phaseIds": ["public"] }],
+      "instances": [
+        { "id": "instance.road-bench-south", "assetId": "hm.prop.traveler-bench", "type": "prop", "status": "prototype_geometry", "transform": { "position": [12, -0.2, 44], "rotation": [0, 1.1, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.blackpine-southwest", "assetId": "hm.foliage.blackpine-sapling", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [7, 0, 54], "rotation": [0, 0.6, 0], "scale": [1.5, 1.5, 1.5] }, "phaseIds": ["public"] },
+        { "id": "instance.heather-southwest", "assetId": "hm.foliage.ridge-heather", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [28, -0.3, 58], "rotation": [0, 0.2, 0], "scale": [2, 1.5, 2] }, "phaseIds": ["public"] }
+      ],
+      "colliders": [],
+      "occluders": [{ "id": "occluder.blackpine-southwest", "instanceId": "instance.blackpine-southwest", "shape": "cylinder", "center": [7, 2.5, 54], "radius": 2.4, "height": 5, "fadeMode": "dither", "phaseIds": ["public"] }],
+      "navigation": { "cells": [{ "id": "nav.hm.01", "polygon": [[0, 0, 32], [32, 0, 32], [32, 0, 64], [0, 0, 64]], "cost": 1.12, "blockedByColliderIds": [], "phaseIds": ["public"] }], "links": [{ "id": "navlink.01-11", "from": "nav.hm.01", "to": "nav.hm.11", "bidirectional": true, "cost": 1, "portal": [[32, 0, 38], [32, 0, 54]], "phaseIds": ["public"] }, { "id": "navlink.01-02", "from": "nav.hm.01", "to": "nav.hm.02", "bidirectional": true, "cost": 1, "portal": [[10, 0, 64], [26, 0, 64]], "phaseIds": ["public"] }] },
+      "lights": [],
+      "volumes": [{ "id": "volume.encounter-west", "kind": "encounter", "shape": "sphere", "center": [22, 0, 38], "radius": 12, "phaseIds": ["public"] }],
+      "vfxZones": [],
+      "audioZones": [{ "id": "audiozone.road-rain-west", "assetId": "hm.audio.rain-roof", "shape": "box", "center": [16, 5, 48], "size": [32, 10, 32], "gain": 0.34, "phaseIds": ["public"] }],
+      "interactionAnchors": [],
+      "spawnAnchors": [
+        { "id": "enemy.ash-husk", "kind": "enemy", "legacySource": { "id": "hearthmere_ash_01", "position": [6, 8] }, "assetId": "hm.enemy.ash-husk", "encounterId": "hearthmere_broken_ledger", "transform": { "position": [24, 0, 32], "rotation": [0, 3.14, 0], "scale": [1, 1, 1] }, "radiusMeters": 3, "respawnSeconds": 45, "phaseIds": ["public"] },
+        { "id": "enemy.ledger-crawler", "kind": "enemy", "legacySource": { "id": "hearthmere_ledger_01", "position": [5, 8] }, "assetId": "hm.enemy.ledger-crawler", "encounterId": "hearthmere_broken_ledger", "transform": { "position": [20, 0, 32], "rotation": [0, 2.7, 0], "scale": [1, 1, 1] }, "radiusMeters": 3, "respawnSeconds": 45, "phaseIds": ["public"] }
+      ]
+    },
+    {
+      "id": "hm.chunk.11", "grid": [1, 1], "bounds": { "min": [32, -8, 32], "max": [64, 32, 64] }, "streamingPriority": "hub",
+      "surfaceLayers": [{ "assetId": "hm.surface.spring-limestone", "weight": 0.44, "phaseIds": ["public"] }, { "assetId": "hm.surface.slate-cobbles-wet", "weight": 0.32, "phaseIds": ["public"] }, { "assetId": "hm.surface.peat-mud-tracks", "weight": 0.24, "phaseIds": ["public"] }],
+      "instances": [
+        { "id": "instance.channel-palisade", "assetId": "hm.structure.palisade-repaired", "type": "structure", "status": "prototype_geometry", "transform": { "position": [59, -0.2, 44], "rotation": [0, 1.57, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] },
+        { "id": "instance.reeds-channel", "assetId": "hm.foliage.cold-reed-clump", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [45, -0.8, 51], "rotation": [0, 0.4, 0], "scale": [2.8, 1.8, 2.8] }, "phaseIds": ["public"] },
+        { "id": "instance.steam-moss-channel", "assetId": "hm.foliage.steam-moss", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [42, -0.5, 44], "rotation": [0, 0, 0], "scale": [3, 1, 3] }, "phaseIds": ["public"] }
+      ],
+      "colliders": [{ "id": "collider.channel-palisade", "instanceId": "instance.channel-palisade", "shape": "box", "center": [59, 2.5, 44], "size": [1.2, 5.5, 16], "layer": "static-world", "walkable": false, "phaseIds": ["public"] }],
+      "occluders": [],
+      "navigation": { "cells": [{ "id": "nav.hm.11", "polygon": [[32, 0, 32], [64, 0, 32], [64, 0, 64], [32, 0, 64]], "cost": 1.08, "blockedByColliderIds": ["collider.channel-palisade"], "phaseIds": ["public"] }], "links": [{ "id": "navlink.11-21", "from": "nav.hm.11", "to": "nav.hm.21", "bidirectional": true, "cost": 1, "portal": [[64, 0, 38], [64, 0, 54]], "phaseIds": ["public"] }, { "id": "navlink.11-12", "from": "nav.hm.11", "to": "nav.hm.12", "bidirectional": true, "cost": 1, "portal": [[38, 0, 64], [56, 0, 64]], "phaseIds": ["public"] }] },
+      "lights": [{ "id": "light.channel-marker", "type": "point", "color": "#b6773f", "intensity": 1.8, "rangeMeters": 8, "castShadow": false, "transform": { "position": [38, 2, 45], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] }],
+      "volumes": [{ "id": "volume.channel-mist", "kind": "fog-local", "shape": "box", "center": [44, 0, 48], "size": [12, 3, 32], "density": 0.62, "phaseIds": ["public"] }],
+      "vfxZones": [{ "id": "vfxzone.channel-steam", "assetId": "hm.vfx.spring-steam-low", "shape": "box", "center": [44, 0, 48], "size": [10, 3, 28], "phaseIds": ["public"] }],
+      "audioZones": [{ "id": "audiozone.channel-water", "assetId": "hm.audio.spring-water", "shape": "box", "center": [44, 0, 48], "size": [14, 6, 32], "gain": 0.68, "phaseIds": ["public"] }],
+      "interactionAnchors": [{ "id": "interaction.spring-channel", "kind": "public-interactable", "transform": { "position": [44, 0, 44], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "radiusMeters": 2, "phaseIds": ["public"] }],
+      "spawnAnchors": []
+    },
+    {
+      "id": "hm.chunk.21", "grid": [2, 1], "bounds": { "min": [64, -8, 32], "max": [96, 32, 64] }, "streamingPriority": "near",
+      "surfaceLayers": [{ "assetId": "hm.surface.peat-mud-tracks", "weight": 0.7, "phaseIds": ["public"] }, { "assetId": "hm.surface.slate-steps-chipped", "weight": 0.3, "phaseIds": ["public"] }],
+      "instances": [{ "id": "instance.palisade-mid-east", "assetId": "hm.structure.palisade-repaired", "type": "structure", "status": "prototype_geometry", "transform": { "position": [90, -0.4, 44], "rotation": [0, 1.57, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] }, { "id": "instance.blackpine-mid-east", "assetId": "hm.foliage.blackpine-sapling", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [72, -0.4, 53], "rotation": [0, 0.2, 0], "scale": [1.7, 1.7, 1.7] }, "phaseIds": ["public"] }],
+      "colliders": [{ "id": "collider.palisade-mid-east", "instanceId": "instance.palisade-mid-east", "shape": "box", "center": [90, 2.3, 44], "size": [1.2, 5.5, 16], "layer": "static-world", "walkable": false, "phaseIds": ["public"] }],
+      "occluders": [{ "id": "occluder.blackpine-mid-east", "instanceId": "instance.blackpine-mid-east", "shape": "cylinder", "center": [72, 2.4, 53], "radius": 2.8, "height": 6, "fadeMode": "dither", "phaseIds": ["public"] }],
+      "navigation": { "cells": [{ "id": "nav.hm.21", "polygon": [[64, 0, 32], [96, 0, 32], [96, 0, 64], [64, 0, 64]], "cost": 1.16, "blockedByColliderIds": ["collider.palisade-mid-east"], "phaseIds": ["public"] }], "links": [{ "id": "navlink.21-22", "from": "nav.hm.21", "to": "nav.hm.22", "bidirectional": true, "cost": 1, "portal": [[70, 0, 64], [88, 0, 64]], "phaseIds": ["public"] }] },
+      "lights": [], "volumes": [{ "id": "volume.east-rain", "kind": "weather", "shape": "box", "center": [80, 6, 48], "size": [32, 12, 32], "phaseIds": ["public"] }], "vfxZones": [],
+      "audioZones": [{ "id": "audiozone.east-rain", "assetId": "hm.audio.rain-roof", "shape": "box", "center": [80, 5, 48], "size": [32, 10, 32], "gain": 0.28, "phaseIds": ["public"] }],
+      "interactionAnchors": [], "spawnAnchors": []
+    },
+    {
+      "id": "hm.chunk.02", "grid": [0, 2], "bounds": { "min": [0, -8, 64], "max": [32, 32, 96] }, "streamingPriority": "far",
+      "surfaceLayers": [{ "assetId": "hm.surface.peat-mud-tracks", "weight": 0.75, "phaseIds": ["public"] }, { "assetId": "hm.surface.slate-steps-chipped", "weight": 0.25, "phaseIds": ["public"] }],
+      "instances": [{ "id": "instance.blackpine-far-west", "assetId": "hm.foliage.blackpine-sapling", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [11, -0.8, 77], "rotation": [0, 0.8, 0], "scale": [2, 2, 2] }, "phaseIds": ["public"] }, { "id": "instance.heather-far-west", "assetId": "hm.foliage.ridge-heather", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [26, -0.7, 88], "rotation": [0, 0.3, 0], "scale": [2.4, 1.5, 2.4] }, "phaseIds": ["public"] }],
+      "colliders": [],
+      "occluders": [{ "id": "occluder.blackpine-far-west", "instanceId": "instance.blackpine-far-west", "shape": "cylinder", "center": [11, 2, 77], "radius": 3, "height": 7, "fadeMode": "dither", "phaseIds": ["public"] }],
+      "navigation": { "cells": [{ "id": "nav.hm.02", "polygon": [[0, 0, 64], [32, 0, 64], [32, 0, 96], [0, 0, 96]], "cost": 1.2, "blockedByColliderIds": [], "phaseIds": ["public"] }], "links": [{ "id": "navlink.02-12", "from": "nav.hm.02", "to": "nav.hm.12", "bidirectional": true, "cost": 1, "portal": [[32, 0, 70], [32, 0, 88]], "phaseIds": ["public"] }] },
+      "lights": [], "volumes": [{ "id": "volume.west-fog", "kind": "fog-local", "shape": "box", "center": [16, 1, 80], "size": [32, 5, 32], "density": 0.52, "phaseIds": ["public"] }], "vfxZones": [],
+      "audioZones": [{ "id": "audiozone.west-murmur", "assetId": "hm.audio.hub-murmur", "shape": "box", "center": [16, 4, 80], "size": [32, 8, 32], "gain": 0.12, "phaseIds": ["public"] }], "interactionAnchors": [], "spawnAnchors": []
+    },
+    {
+      "id": "hm.chunk.12", "grid": [1, 2], "bounds": { "min": [32, -8, 64], "max": [64, 32, 96] }, "streamingPriority": "near",
+      "surfaceLayers": [{ "assetId": "hm.surface.peat-mud-tracks", "weight": 0.58, "phaseIds": ["public"] }, { "assetId": "hm.surface.spring-limestone", "weight": 0.27, "phaseIds": ["public"] }, { "assetId": "hm.surface.slate-cobbles-wet", "weight": 0.15, "phaseIds": ["public"] }],
+      "instances": [{ "id": "instance.reeds-south-channel", "assetId": "hm.foliage.cold-reed-clump", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [48, -1, 79], "rotation": [0, 0.1, 0], "scale": [3, 2, 3] }, "phaseIds": ["public"] }, { "id": "instance.lichen-culvert", "assetId": "hm.foliage.wall-lichen-gray", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [43, -0.2, 70], "rotation": [0, 0, 0], "scale": [2.5, 2, 2.5] }, "phaseIds": ["public"] }],
+      "colliders": [], "occluders": [],
+      "navigation": { "cells": [{ "id": "nav.hm.12", "polygon": [[32, 0, 64], [64, 0, 64], [64, 0, 96], [32, 0, 96]], "cost": 1.12, "blockedByColliderIds": [], "phaseIds": ["public"] }], "links": [{ "id": "navlink.12-22", "from": "nav.hm.12", "to": "nav.hm.22", "bidirectional": true, "cost": 1, "portal": [[64, 0, 70], [64, 0, 88]], "phaseIds": ["public"] }] },
+      "lights": [{ "id": "light.south-guide", "type": "point", "color": "#b77c48", "intensity": 1.4, "rangeMeters": 7, "castShadow": false, "transform": { "position": [48, 2, 72], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "phaseIds": ["public"] }],
+      "volumes": [{ "id": "volume.south-channel-mist", "kind": "fog-local", "shape": "box", "center": [48, 0, 80], "size": [14, 4, 32], "density": 0.72, "phaseIds": ["public"] }],
+      "vfxZones": [{ "id": "vfxzone.south-channel-steam", "assetId": "hm.vfx.spring-steam-low", "shape": "box", "center": [48, 0, 80], "size": [12, 3, 32], "phaseIds": ["public"] }],
+      "audioZones": [{ "id": "audiozone.south-channel", "assetId": "hm.audio.spring-water", "shape": "box", "center": [48, 0, 80], "size": [14, 6, 32], "gain": 0.55, "phaseIds": ["public"] }],
+      "interactionAnchors": [{ "id": "interaction.outer-spring", "kind": "public-interactable", "transform": { "position": [48, -0.6, 80], "rotation": [0, 0, 0], "scale": [1, 1, 1] }, "radiusMeters": 2, "phaseIds": ["public"] }], "spawnAnchors": []
+    },
+    {
+      "id": "hm.chunk.22", "grid": [2, 2], "bounds": { "min": [64, -8, 64], "max": [96, 32, 96] }, "streamingPriority": "far",
+      "surfaceLayers": [{ "assetId": "hm.surface.peat-mud-tracks", "weight": 0.82, "phaseIds": ["public"] }, { "assetId": "hm.surface.slate-steps-chipped", "weight": 0.18, "phaseIds": ["public"] }],
+      "instances": [{ "id": "instance.blackpine-far-east", "assetId": "hm.foliage.blackpine-sapling", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [78, -0.5, 77], "rotation": [0, 0.4, 0], "scale": [2.1, 2.1, 2.1] }, "phaseIds": ["public"] }, { "id": "instance.heather-far-east", "assetId": "hm.foliage.ridge-heather", "type": "foliage", "status": "prototype_geometry", "transform": { "position": [88, -0.8, 90], "rotation": [0, 1, 0], "scale": [2.6, 1.6, 2.6] }, "phaseIds": ["public"] }],
+      "colliders": [],
+      "occluders": [{ "id": "occluder.blackpine-far-east", "instanceId": "instance.blackpine-far-east", "shape": "cylinder", "center": [78, 2.5, 77], "radius": 3, "height": 7, "fadeMode": "dither", "phaseIds": ["public"] }],
+      "navigation": { "cells": [{ "id": "nav.hm.22", "polygon": [[64, 0, 64], [96, 0, 64], [96, 0, 96], [64, 0, 96]], "cost": 1.22, "blockedByColliderIds": [], "phaseIds": ["public"] }], "links": [] },
+      "lights": [], "volumes": [{ "id": "volume.far-east-fog", "kind": "fog-local", "shape": "box", "center": [80, 1, 80], "size": [32, 5, 32], "density": 0.56, "phaseIds": ["public"] }], "vfxZones": [],
+      "audioZones": [{ "id": "audiozone.far-east-rain", "assetId": "hm.audio.rain-roof", "shape": "box", "center": [80, 5, 80], "size": [32, 10, 32], "gain": 0.22, "phaseIds": ["public"] }], "interactionAnchors": [], "spawnAnchors": []
+    }
+  ]
+}

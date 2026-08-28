@@ -1,0 +1,91 @@
+<!-- @dsCard group="Components" viewport="1100x1040" name="Turn encounter" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_fallback.js"></script>
+<style>
+  html,body{margin:0;background:var(--world-canvas);color:var(--bone);font-family:var(--sans)}
+  body{padding:18px}
+  .layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:12px}
+  .planner{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px;background:var(--glass-bg);border:1px solid var(--line)}
+  .beat{min-height:92px;padding:10px;background:rgba(0,0,0,.24);border:1px solid var(--line)}
+  .beat b{display:block;margin-bottom:6px;color:var(--gold);font:var(--type-micro);letter-spacing:.1em;text-transform:uppercase}
+  .beat span{font:var(--type-body-sm)}
+  .state-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .state-demo{display:grid;gap:7px;padding:10px;background:rgba(0,0,0,.2);border:1px solid var(--line-soft)}
+  .state-demo>strong{color:var(--gold);font:var(--type-micro);letter-spacing:.1em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/plain" id="demo-src">
+const { TurnPhaseBar, ResourcePips, IntentQueue, IntentTelegraph, PartyReadiness, ResolutionLog } = window.HollowMarch;
+
+const intents = [{
+  id:'intent.ash-lunge', actor:'Ash Husk', action:'Cinder Lunge', target:'Maela',
+  band:'Fast', damage:'Moderate damage', statusIcons:[{id:'scorch',glyph:'△',label:'Scorch'}],
+  cue:'Draws its shoulders beneath the ash-cloth', interrupt:'Stagger before the fast band'
+}];
+const members = [
+  {id:'maela',name:'Maela',leader:true,ready:true,connected:true},
+  {id:'torren',name:'Torren',ready:false,connected:true},
+  {id:'ysra',name:'Ysra',ready:false,connected:false,graceSeconds:42},
+  {id:'watcher',name:'Roadside witness',spectator:true,connected:true}
+];
+const events = [
+  {cursor:18,band:'Movement',text:'Maela moved 3.2 meters to the spring wall.'},
+  {cursor:19,band:'Fast',text:'Ash Husk began Cinder Lunge.'},
+  {cursor:20,band:'Standard',text:'Plan invalid: target left the declared area.'},
+  {cursor:21,band:'Heavy',text:'Torren interrupted the Ash Husk before impact.'}
+];
+
+function Demo(){
+  return <div style={{display:'grid',gap:12}}>
+    <TurnPhaseBar phase="planning" round={3} detail="1 of 3 ready"/>
+    <div className="layout">
+      <div style={{display:'grid',gap:10}}>
+        <div className="planner">
+          <div className="beat"><b>Beat one · 1 AP</b><span>Move 3.2m to spring wall</span></div>
+          <div className="beat"><b>Beat two · 1 AP</b><span>Light attack · Ash Husk</span></div>
+          <ResourcePips label="Action points" value={2} max={2}/>
+          <ResourcePips label="Reaction" value={1} max={1} reserved={1}/>
+        </div>
+        <IntentTelegraph {...intents[0]} selected/>
+        <ResolutionLog events={events} liveSummary="Fast band began."/>
+      </div>
+      <div style={{display:'grid',gap:10,alignContent:'start'}}>
+        <IntentQueue intents={intents} selectedId="intent.ash-lunge"/>
+        <PartyReadiness members={members}/>
+      </div>
+    </div>
+    <div className="state-grid" aria-label="Turn encounter reference states">
+      <section className="state-demo" data-demo-state="planning"><strong>Planning</strong><TurnPhaseBar phase="planning" round={3} detail="Plans remain editable"/></section>
+      <section className="state-demo" data-demo-state="ready"><strong>Ready</strong><TurnPhaseBar phase="locked" round={3} detail="All participants ready"/></section>
+      <section className="state-demo" data-demo-state="resolving"><strong>Resolving</strong><TurnPhaseBar phase="resolving" round={3} detail="Fast band"/></section>
+      <section className="state-demo" data-demo-state="terminal"><strong>Terminal outcomes</strong><TurnPhaseBar phase="victory" round={3} detail="Rewards settling"/><TurnPhaseBar phase="defeat" round={3} detail="No rewards"/><TurnPhaseBar phase="aborted" round={3} detail="Enemy lease restored"/></section>
+      <section className="state-demo" data-demo-state="reconnecting"><strong>Reconnect</strong><PartyReadiness viewerMode="reconnecting" reconnectSeconds={42} members={[{id:'ysra',name:'Ysra',connectionState:'reconnecting',graceSeconds:42}]}/></section>
+      <section className="state-demo" data-demo-state="spectator"><strong>Spectator</strong><PartyReadiness viewerMode="spectator" members={[{id:'maela',name:'Maela',ready:true},{id:'watcher',name:'Roadside witness',spectator:true}]}/></section>
+    </div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+<script>
+window.HollowMarchReady.then(function () {
+  try {
+    var src = document.getElementById("demo-src").textContent;
+    var out = Babel.transform(src, { presets: [["react", { runtime: "classic" }]] }).code;
+    new Function("React", "ReactDOM", out)(React, ReactDOM);
+  } catch (err) {
+    console.error("[card] " + err.message);
+    document.getElementById("root").textContent = "Card failed: " + err.message;
+  }
+});
+</script>
+</body>
+</html>

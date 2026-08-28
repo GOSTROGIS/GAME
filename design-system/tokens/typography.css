@@ -1,0 +1,50 @@
+/* TYPE
+   Three families, three jobs, no crossover.
+   Cinzel  — interface voice. Uppercase and tracked when small.
+   IM Fell — the world's voice. Description, dialogue, lore.
+   Inter   — machine voice. Keys, counts, telemetry.
+   There is deliberately NO monospace token. */
+
+:root {
+  --display: Cinzel, Georgia, serif;
+  --serif: "IM Fell English", Georgia, serif;
+  --sans: Inter, system-ui, sans-serif;
+
+  /* Composite font shorthands, transcribed from styles.css */
+  --type-title: 500 clamp(58px, 7.2vw, 112px) / 0.84 var(--display);
+  --type-death: 400 54px var(--display);
+  --type-h2-modal: 400 27px var(--display);
+  --type-h2-panel: 400 24px var(--display);
+  --type-h3-location: 500 20px var(--display);
+  --type-h3-world: 500 18px var(--display);
+  --type-h3-card: 500 13px var(--display);
+  --type-h3-node: 500 12px var(--display);
+  --type-eyebrow: 500 11px / 1.3 var(--display);
+  --type-button: 600 11px var(--display);
+  --type-field-label: 500 10px var(--display);
+  --type-micro: 8px var(--display);
+  --type-nano: 7px var(--display);
+
+  --type-deck: italic 21px var(--serif);
+  --type-dialogue: 17px / 1.45 var(--serif);
+  --type-intro: 17px / 1.55 var(--serif);
+  --type-field: 19px var(--serif);
+  --type-caption: italic 15px var(--serif);
+  --type-body: 14px / 1.35 var(--serif);
+  --type-body-sm: 13px / 1.4 var(--serif);
+  --type-body-xs: 11px / 1.35 var(--serif);
+
+  --type-kbd: 10px var(--sans);
+  --type-meta: 9px var(--sans);
+  --type-meta-sm: 8px var(--sans);
+
+  /* Tracking */
+  --track-title: -0.05em;
+  --track-eyebrow: 0.28em;
+  --track-label: 0.22em;
+  --track-micro: 0.2em;
+  --track-nano: 0.15em;
+  --track-button: 0.12em;
+  --track-name: 0.05em;
+  --track-card: 0.04em;
+}
