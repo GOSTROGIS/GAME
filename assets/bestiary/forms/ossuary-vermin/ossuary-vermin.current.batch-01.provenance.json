@@ -1,0 +1,328 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-ossuary-vermin-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.borrowed_spine",
+      "subjectId": "borrowed_spine",
+      "familyId": "ossuary_vermin",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ossuary-vermin/borrowed-spine-v1.png",
+      "sha256": "002ecabcd804505ae2dadaed4d0b04a27fc87c45421a259c9c9d9285ab0a2bb6",
+      "bytes": 1917283,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "002ecabcd804505ae2dadaed4d0b04a27fc87c45421a259c9c9d9285ab0a2bb6"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.crypt_assembler",
+      "subjectId": "crypt_assembler",
+      "familyId": "ossuary_vermin",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ossuary-vermin/crypt-assembler-v1.png",
+      "sha256": "cf57e4a383c777dc1755024168a39357ee1d131aadb55fd754086197eabf321e",
+      "bytes": 2378353,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "cf57e4a383c777dc1755024168a39357ee1d131aadb55fd754086197eabf321e"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.finger_mice",
+      "subjectId": "finger_mice",
+      "familyId": "ossuary_vermin",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ossuary-vermin/finger-mice-v1.png",
+      "sha256": "3117f83635c126f59ea7fac06e3c96d1b1e9ad37678d168d454f14ca6e52c6d3",
+      "bytes": 1817253,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "3117f83635c126f59ea7fac06e3c96d1b1e9ad37678d168d454f14ca6e52c6d3"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.heel_crab",
+      "subjectId": "heel_crab",
+      "familyId": "ossuary_vermin",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ossuary-vermin/heel-crab-v1.png",
+      "sha256": "7c4e4b1bc818ad6c3385c1289f8b0919a2d39eb2437a65dd607f43c4662eec76",
+      "bytes": 1944460,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "7c4e4b1bc818ad6c3385c1289f8b0919a2d39eb2437a65dd607f43c4662eec76"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.marrow_factor",
+      "subjectId": "marrow_factor",
+      "familyId": "ossuary_vermin",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ossuary-vermin/marrow-factor-v1.png",
+      "sha256": "129491dcd6fbc23aba349f76e1bc47dea2cca6701c662424e0a74033834a4262",
+      "bytes": 2044056,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "129491dcd6fbc23aba349f76e1bc47dea2cca6701c662424e0a74033834a4262"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.pelvis_paladin",
+      "subjectId": "pelvis_paladin",
+      "familyId": "ossuary_vermin",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ossuary-vermin/pelvis-paladin-v1.png",
+      "sha256": "72d3e048f3ddcbcc1c3a1db9c1522dd84ce0b25cba17e3b65e017219241e428d",
+      "bytes": 2301168,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "72d3e048f3ddcbcc1c3a1db9c1522dd84ce0b25cba17e3b65e017219241e428d"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.reliquary_millipede",
+      "subjectId": "reliquary_millipede",
+      "familyId": "ossuary_vermin",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ossuary-vermin/reliquary-millipede-v1.png",
+      "sha256": "c58dad082ac744efbd617f795e1083c3ea84e3fd759d55c2bb4ae4d82ea7ef97",
+      "bytes": 1531643,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "c58dad082ac744efbd617f795e1083c3ea84e3fd759d55c2bb4ae4d82ea7ef97"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.ribcage_screecher",
+      "subjectId": "ribcage_screecher",
+      "familyId": "ossuary_vermin",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ossuary-vermin/ribcage-screecher-v1.png",
+      "sha256": "f86c43d11facac7d81bc25ef992242c72301a2c0573da4fa5e58d763921a95ed",
+      "bytes": 1891642,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "f86c43d11facac7d81bc25ef992242c72301a2c0573da4fa5e58d763921a95ed"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.the_borrowed_saint",
+      "subjectId": "the_borrowed_saint",
+      "familyId": "ossuary_vermin",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ossuary-vermin/the-borrowed-saint-v1.png",
+      "sha256": "aaa7d6ede8c20f95af4fedb476138363b3ca8de7c9864a251b413b5dfc21a8ec",
+      "bytes": 2098671,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "aaa7d6ede8c20f95af4fedb476138363b3ca8de7c9864a251b413b5dfc21a8ec"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.tooth_rook",
+      "subjectId": "tooth_rook",
+      "familyId": "ossuary_vermin",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ossuary-vermin/tooth-rook-v1.png",
+      "sha256": "dd7f50d320cc9b9c9f0156c7054661939db537e230355b96b4be282fd8c3f660",
+      "bytes": 1849337,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "dd7f50d320cc9b9c9f0156c7054661939db537e230355b96b4be282fd8c3f660"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

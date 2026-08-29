@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "familyId": "salt_waste",
+  "batchId": "salt-waste-pilgrims-batch-02",
+  "revisionWave": 4,
+  "status": "immutable-before-generation",
+  "policy": "Earlier candidate bytes and revision packets remain immutable; every correction uses a new filename.",
+  "revisions": {
+    "eastward-witness-concept-master-v4": {
+      "source": "eastward-witness-concept-master-v3.png",
+      "reason": "The attached sliver and empty hands passed, but the right-third relief still read as a one-eyed profile without two separately complete countable ears.",
+      "append": "Preserve exactly one body, one oval mirror-salt head, the completely blank uninterrupted viewer-left two-thirds, both empty hands, exactly one attached thin abstract mirage sliver, family materials, lighting, scale and full framing. Remove the profile face. Inside only the viewer-right third, emboss SIX separate shallow anatomical relief pieces in one narrow near-frontal column, each with black mirror gaps between it and every neighbor: at the upper center place exactly TWO small complete open eyes side-by-side with two pupils; below them place exactly ONE complete narrow nose; below that exactly ONE complete closed mouth; along the far-right edge place exactly TWO separate complete ear shells stacked vertically, one beside the eye pair and one beside the mouth. Both ears must show full outer helix and inner bowl and must not hide behind the head edge. These six pieces are the only facial features and do not join into an ordinary profile. Keep all six wholly inside the right third and leave the left two-thirds perfectly blank. No carried mirror, shield, second face, extra eye, extra ear, detached sliver, floor, text or transparency."
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "veil-coast-kin-masters-batch-02-revision-v2",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast_kin",
+  "basePacketSha256": "eb01b55a4988fa15bd14d64e5fa2c925ef7232672fe35216473ad7889a4ac125",
+  "referencePolicy": "Use only the inspected canonical Veil-Coast family plate as visual reference. Preserve the frozen base packet's global direction and all canonical fields. These revisions constrain only the recorded v1 blockers and add no canon.",
+  "assets": [
+    {
+      "id": "admiral_of_the_inland_tide",
+      "sourceCandidate": "admiral-of-the-inland-tide-concept-master-v1.png",
+      "outputFile": "admiral-of-the-inland-tide-concept-master-v2.png",
+      "reason": "The v1 adds a literal wooden ship hull/deck and a floor-like stone base, both forbidden.",
+      "revisionDirection": "Regenerate one Admiral of the Inland Tide from the family plate as a single boss organism fused into a broad ship-shaped current made only of dense blackwater. Do not depict wood, planks, hull, boat, mast, rail, deck, sail, crew or ordinary ship hardware. The current itself forms the admiral's load-bearing lower anatomy and one raised current edge that can be boarded. Beneath but clearly detached from it, suspend one compact broken-stone evidence strip with generous black clearance on every side; one unmistakable keel-shaped ripple cuts through that strip. The strip is not a base, floor, island or terrain. Show one committed forward turning arc that cannot turn sharply. Keep current prow/stern, admiral, raised edge, stone strip and keel ripple fully inside a landscape frame. No naval insignia, ocean, shoreline, arena, floor, contact shadow, text or scene."
+    },
+    {
+      "id": "pearl_lamprey",
+      "sourceCandidate": "pearl-lamprey-concept-master-v1.png",
+      "outputFile": "pearl-lamprey-concept-master-v2.png",
+      "reason": "The v1 pearl/mouth pass, but it adds ordinary fish fins, crops the membrane, and omits a clear radial reflection drain.",
+      "revisionDirection": "Regenerate one elongated horizontal Pearl Lamprey from the family plate with no ordinary fish fins, pectoral fins, dorsal fin, tail fin, limbs or humanoid face. Keep a complete circular ring mouth around exactly one large central pearl; inside the pearl retain one tiny receding dark-water tide crescent and retreat line. Pass the limbless body through exactly one impossibly thin floating wet membrane visibly narrower than its diameter. Make the membrane a complete irregular translucent sheet fully inside the frame with generous clearance, not a fin and not attached along the body. Across that membrane only, show restrained reflection drainage lines converging radially to the one bright mouth pearl. Keep both body ends, every tooth, pearl, whole membrane and lines inside a landscape frame. No water plane, puddle scene, ground, oyster shell, extra lamprey, aura, text or crop."
+    },
+    {
+      "id": "brackish_mimic",
+      "sourceCandidate": "brackish-mimic-concept-master-v1.png",
+      "outputFile": "brackish-mimic-concept-master-v2.png",
+      "reason": "The v1 skin display passes, but its true-position shadow is a floor/contact shadow and the opposite directional relationship is ambiguous.",
+      "revisionDirection": "Regenerate one Brackish Mimic from the family plate in a back-revealing three-quarter retreat. Preserve one continuous impossible shoreline perspective inside the actual deep-blue back skin, with one clearly moving tide line travelling toward viewer-right. From both webbed feet, attach one flat near-black true-position shadow ribbon that trails unmistakably toward viewer-left, the exact opposite direction. Lift the entire ribbon visibly away from the body and suspend it in empty air with black clearance beneath and around it; it is subject-bound evidence, never a cast floor shadow or ground contact. Keep the full body, skin shoreline, moving tide line, feet and complete opposite shadow ribbon framed. No held shield, second coast, ocean scene, gull, floor, map, text, extra figure or crop."
+    }
+  ]
+}

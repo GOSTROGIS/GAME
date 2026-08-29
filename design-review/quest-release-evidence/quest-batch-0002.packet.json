@@ -1,0 +1,1033 @@
+{
+  "schemaVersion": 1,
+  "kind": "quest-batch-packet",
+  "batchId": "quest-batch-0002",
+  "questIds": [
+    "side_the_dead_vote_no",
+    "aftermath_house_outlived_tenants",
+    "aftermath_census_of_absences",
+    "aftermath_purity_blooms_at_dusk",
+    "aftermath_cart_accepts_office",
+    "aftermath_village_arrives_before_dead",
+    "aftermath_every_door_mothers_voice",
+    "aftermath_roof_made_of_weather",
+    "aftermath_child_older_than_road",
+    "aftermath_three_hands_one_lever",
+    "aftermath_maintenance_window_miracle",
+    "aftermath_person_engine_must_outlive"
+  ],
+  "sourceReviewPayloads": [
+    {
+      "id": "founding-thirteen-canonical-slice",
+      "serialization": "UTF-8 JSON.stringify(EXPANSION_QUESTS.slice(0,13))",
+      "byteLength": 30407,
+      "sha256": "294adc639131b87370cd2462885b6e23544e3efdf4dc9cd44d86ebbca7be89ce"
+    },
+    {
+      "id": "wave-02-revision-2",
+      "serialization": "immutable reviewed Wave 02 revision-2 payload",
+      "sha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a"
+    }
+  ],
+  "canonicalQuests": [
+    {
+      "schemaVersion": 2,
+      "portfolioId": "settlement",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "public_origin_truth",
+          "mode": "all-values",
+          "values": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "dead_settlement_claims",
+          "values": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ]
+        }
+      ],
+      "id": "side_the_dead_vote_no",
+      "chainId": "remaining_hands",
+      "order": 3,
+      "type": "side",
+      "title": "The Dead Vote No",
+      "giverId": "king_ash_without_country",
+      "supportingCharacterIds": [
+        "eri_cinderglass_descendant_in_dispute"
+      ],
+      "stateDomain": "authority",
+      "premise": "Three destroyed settlements refuse both Synod restoration and demonic preservation, but their ash testimonies contradict the King who speaks for them.",
+      "primaryMechanicId": "verify_posthumous_civic_consent",
+      "dilemmaId": "honor_dead_refusal_or_help_living_descendants",
+      "locationId": "countryless_assize",
+      "consequenceId": "dead_settlement_claims",
+      "objectives": [
+        {
+          "type": "ash_testimony",
+          "target": "three_extinct_councils",
+          "required": 3
+        },
+        {
+          "type": "cross_examination",
+          "target": "king_plural_voice"
+        },
+        {
+          "type": "seal_choice",
+          "target": "countryless_ash_seal"
+        }
+      ],
+      "outcomes": [
+        "cosmic_claims_refused",
+        "descendants_override_dead",
+        "king_loses_speaking_authority"
+      ],
+      "rewardItemIds": [
+        "countryless_ash_seal"
+      ],
+      "loreReveal": "Even extinction does not resolve who may consent for a place, and remembrance can become another form of occupation.",
+      "dialogueThesis": "The dead deserve protection from being useful to us.",
+      "authorshipProof": {
+        "setpiece": "Three extinct councils speak through incompatible ash deposits while living descendants physically contest the chair left for each settlement.",
+        "failureTransformation": "Disturbing an ash testimony erases one dead vote but strengthens the descendant claim that replaces it.",
+        "dialogueConstraint": "Eri distinguishes inheritance, custody, and consent in every reply and never permits the word ancestor to settle all three.",
+        "persistentWorldChange": "Cosmic claims are refused, descendants override the dead, or King Ash loses authority to speak for destroyed places.",
+        "forbiddenSubstitution": "Cannot be a ghost-vote mystery because the central conflict is jurisdiction between extinct polities and living claimants."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "world_state_reaction",
+      "creatureIds": [
+        "deed_eater_wren"
+      ],
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "hearthmere_restored_tenancy",
+          "values": [
+            "present_use_appealable_deed",
+            "inherited_title_with_tenant_terms",
+            "house_public_shelter_person"
+          ]
+        }
+      ],
+      "id": "aftermath_house_outlived_tenants",
+      "chainId": "noon_wound_ward",
+      "order": 1,
+      "type": "regional",
+      "title": "The House That Outlived Its Tenants",
+      "giverId": "enoch_last_lamplighter",
+      "supportingCharacterIds": [
+        "mara_quoin_counter_deed"
+      ],
+      "stateDomain": "authority",
+      "premise": "A noon-touched house remembers its obsolete legal purpose as shelter for a vanished bloodline and moves the present family one room closer to the street every midnight.",
+      "primaryMechanicId": "renegotiate_architecture_by_occupancy",
+      "dilemmaId": "inherited_title_present_use_or_building_personhood",
+      "locationId": "hearthmere_folded_townhouse",
+      "consequenceId": "hearthmere_restored_tenancy",
+      "objectives": [
+        {
+          "type": "domestic_evidence_placement",
+          "target": "genuinely_used_household_objects",
+          "rule": "Decorative placement strengthens the dead deed; lived routines strengthen present tenancy."
+        },
+        {
+          "type": "hinge_testimony_sequence",
+          "target": "incompatible_doorframes",
+          "required": 5
+        },
+        {
+          "type": "architectural_personhood_ruling",
+          "target": "household_and_house_claims"
+        }
+      ],
+      "outcomes": [
+        "present_use_appealable_deed",
+        "inherited_title_with_tenant_terms",
+        "house_public_shelter_person"
+      ],
+      "rewardItemIds": [
+        "counter_deed_hinge"
+      ],
+      "loreReveal": "Synod restoration reconstructs obsolete law because architecture once served as both civic record and institutional actor.",
+      "dialogueThesis": "Shelter becomes property only after somebody decides which use of a room counts as testimony.",
+      "authorshipProof": {
+        "setpiece": "A complete townhouse folds room by room around a family eating dinner, exposing centuries of incompatible doorframes without becoming a combat dungeon.",
+        "failureTransformation": "A misplaced object permanently assigns its room to a prior generation, leaving the present occupant to negotiate from outside the wall.",
+        "dialogueConstraint": "Mara never says own; she distinguishes who repaired, slept in, fled, inherited, and was admitted.",
+        "persistentWorldChange": "Present tenants gain an appealable deed, Mara inherits with enforceable tenant terms, or the house becomes a public shelter-person able to refuse both families.",
+        "forbiddenSubstitution": "Cannot become a haunted-house eviction story because domestic routine is admissible evidence and the building itself exercises civic authority."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "settlement",
+      "creatureIds": [
+        "shadow_census_moth"
+      ],
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "hearthmere_absence_citizenship",
+          "values": [
+            "shadows_gain_separate_seats",
+            "shadows_are_protected_dependants",
+            "mobile_absence_district_created"
+          ]
+        }
+      ],
+      "id": "aftermath_census_of_absences",
+      "chainId": "noon_wound_ward",
+      "order": 2,
+      "type": "regional",
+      "title": "A Census of Absences",
+      "giverId": "enoch_last_lamplighter",
+      "supportingCharacterIds": [
+        "kessa_pale_absence_clerk"
+      ],
+      "stateDomain": "admission",
+      "premise": "Missing shadows gather into a second census queue whose representation, ration obligation, and address depend jointly on the noon wound and Nullstreet's prior civic status.",
+      "primaryMechanicId": "enumerate_people_and_separated_absences",
+      "dilemmaId": "shadow_citizen_injury_dependant_or_property",
+      "locationId": "hearthmere_double_census",
+      "consequenceId": "hearthmere_absence_citizenship",
+      "objectives": [
+        {
+          "type": "silhouette_source_attribution",
+          "target": "mobile_unowned_shadows",
+          "required": 7
+        },
+        {
+          "type": "dual_queue_reconciliation",
+          "target": "bodies_and_absences",
+          "rule": "A match grants representation and creates a ration obligation without presuming ownership."
+        },
+        {
+          "type": "absence_status_enactment",
+          "target": "negative_roll"
+        }
+      ],
+      "outcomes": [
+        "shadows_gain_separate_seats",
+        "shadows_are_protected_dependants",
+        "mobile_absence_district_created"
+      ],
+      "rewardItemIds": [
+        "negative_roll"
+      ],
+      "loreReveal": "The League's founding population count assumed fixed noon and cannot represent a separated part of a person without turning it into a budget claim.",
+      "dialogueThesis": "Counting an absence can rescue it from erasure and still make it administratively captive.",
+      "authorshipProof": {
+        "setpiece": "Two census lines circle one shuttered lamp, bodies on one side and unowned silhouettes on the other, while the visible totals change with every movement of light.",
+        "failureTransformation": "A false match fuses the shadow to the named resident until an appeal quest, while an uncounted shadow joins a permanent extra-civic swarm.",
+        "dialogueConstraint": "Kessa answers identity questions only by adding or subtracting someone from the total she can physically point to.",
+        "persistentWorldChange": "Separated shadows gain civic seats, become protected dependants, or constitute a mobile absence district outside the census.",
+        "forbiddenSubstitution": "Cannot be a collect-the-ghosts activity because each attribution changes representation, food allocation, and the legal status of both body and shadow."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "relic_creature_ecology",
+      "creatureIds": [
+        "lumen_tithe_burr"
+      ],
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        },
+        {
+          "key": "vael_definition_of_care",
+          "mode": "all-values",
+          "values": [
+            "grief_retained_function_restored",
+            "grief_removed_spouse_erased",
+            "memory_shared_with_vael"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "ecology",
+          "key": "hearthmere_purity_ecology",
+          "values": [
+            "resident_cultivator_liability",
+            "public_seed_licensing",
+            "sterile_last_generation"
+          ]
+        }
+      ],
+      "id": "aftermath_purity_blooms_at_dusk",
+      "chainId": "noon_wound_ward",
+      "order": 3,
+      "type": "regional",
+      "title": "Purity Blooms at Dusk",
+      "giverId": "canoness_vael_kindly_knife",
+      "supportingCharacterIds": [
+        "roen_fitch_dusk_gardener"
+      ],
+      "stateDomain": "ecology",
+      "premise": "Noon-touched tissue becomes a beneficial white-gold civic crop whose seed repairs each new host while making its named cultivator liable for every place the strain reaches.",
+      "primaryMechanicId": "constitute_liability_for_propagating_restoration",
+      "dilemmaId": "resident_ownership_public_license_or_sterile_repair",
+      "locationId": "hearthmere_breath_and_gutter_seedfront",
+      "consequenceId": "hearthmere_purity_ecology",
+      "objectives": [
+        {
+          "type": "cultivation_warrant_authorship",
+          "target": "breaths_gutters_and_shared_walls",
+          "required": 6
+        },
+        {
+          "type": "seed_corridor_custody_transfer",
+          "target": "lumen_tithe_burr",
+          "rule": "The prior and next custodians must share the live propagation corridor."
+        },
+        {
+          "type": "reproductive_liability_constitution",
+          "target": "ward_strain"
+        }
+      ],
+      "outcomes": [
+        "resident_cultivator_liability",
+        "public_seed_licensing",
+        "sterile_last_generation"
+      ],
+      "rewardItemIds": [
+        "dusk_graft_shears"
+      ],
+      "loreReveal": "Purity marks were colonial seeds engineered to make restored environments reproduce Synod law, and the first Synod gardeners were also debt collectors.",
+      "dialogueThesis": "A cure that reproduces is also a polity deciding who inherits its costs.",
+      "authorshipProof": {
+        "setpiece": "One white-gold seed front passes through a ward's connected breaths and masonry while every hooked burr turns toward the person who would become liable for its next host.",
+        "failureTransformation": "An unwarranted seed roots in a named threshold, makes that household the legal originator of the strain, and gives it standing to refuse later pruning.",
+        "dialogueConstraint": "Roen never asks whether the bloom is healthy; he asks who may reproduce it, who answers for it, and who was denied a warrant.",
+        "persistentWorldChange": "Marked cultivators own and answer for the strain, a public court licenses every seed corridor, or the beneficial crop becomes sterile after its current generation.",
+        "forbiddenSubstitution": "Cannot become a cure-or-pruning quest because its mechanical output is a reproductive property-and-liability constitution for an invasive law."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "settlement",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        },
+        {
+          "key": "hearthmere_absence_citizenship",
+          "mode": "all-values",
+          "values": [
+            "shadows_gain_separate_seats",
+            "shadows_are_protected_dependants",
+            "mobile_absence_district_created"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "hearthmere_tool_precedent",
+          "values": [
+            "exposure_controls_standing",
+            "least_represented_controls_precedent",
+            "appealable_cart_discretion"
+          ]
+        }
+      ],
+      "id": "aftermath_cart_accepts_office",
+      "chainId": "noon_wound_ward",
+      "order": 4,
+      "type": "regional",
+      "title": "The Cart Accepts Office",
+      "giverId": "enoch_last_lamplighter",
+      "supportingCharacterIds": [
+        "hobb_marr_shade_driver"
+      ],
+      "stateDomain": "authority",
+      "premise": "Hearthmere elects its retired shade cart as a nonhuman civic office, and the silent tool must rank conflicting petitions by accepting physical evidence onto one turning axle.",
+      "primaryMechanicId": "author_precedent_on_a_rotating_docket",
+      "dilemmaId": "exposure_history_minority_claim_or_emergency_discretion",
+      "locationId": "stationary_cart_assize",
+      "consequenceId": "hearthmere_tool_precedent",
+      "objectives": [
+        {
+          "type": "weighted_exhibit_attachment",
+          "target": "numbered_cart_spokes",
+          "required": 8
+        },
+        {
+          "type": "single_rotation_precedent",
+          "target": "shade_cart_axle",
+          "rule": "Removing an exhibit after rotation counts as destruction of testimony."
+        },
+        {
+          "type": "nonhuman_office_charter",
+          "target": "wheel_of_refusal"
+        }
+      ],
+      "outcomes": [
+        "exposure_controls_standing",
+        "least_represented_controls_precedent",
+        "appealable_cart_discretion"
+      ],
+      "rewardItemIds": [
+        "wheel_of_refusal"
+      ],
+      "loreReveal": "The first League offices were tools granted authority after human officeholders died, and some tools' lawful refusals were later hidden.",
+      "dialogueThesis": "A public tool becomes an office when its refusal creates obligations rather than inconvenience.",
+      "authorshipProof": {
+        "setpiece": "The cart hangs motionless above the assize while doors, shadows, tax seals, and ruined bricks orbit as weighted evidence around its single axle.",
+        "failureTransformation": "An unbalanced wheel makes the heaviest exhibit a permanent presumption that all later claimants must disprove.",
+        "dialogueConstraint": "Hobb accepts no abstract fairness claim; every proposal must name the person who waits longer.",
+        "persistentWorldChange": "Exposure history controls standing, the least represented class authors first precedent, or the cart becomes an appealable emergency judge required to publish refusals.",
+        "forbiddenSubstitution": "Cannot be a route-planning or escort activity because the stationary wheel physically authors evidentiary law."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "world_state_reaction",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "nacre_nonsequential_kinship",
+          "values": [
+            "kinship_separated_from_authority",
+            "released_claim_ancestral_leadership",
+            "village_treated_as_foreign_polity"
+          ]
+        }
+      ],
+      "id": "aftermath_village_arrives_before_dead",
+      "chainId": "village_outside_mother",
+      "order": 1,
+      "type": "character",
+      "title": "The Village Arrives Before Its Dead",
+      "giverId": "mother_nacre_open_rib",
+      "supportingCharacterIds": [
+        "tima_vale_twice_born"
+      ],
+      "stateDomain": "authority",
+      "premise": "Sanctuary villagers and their outside descendants enter one kinship hearing while grave markers move backward toward living claimants under the village's established release, consensual, or captive status.",
+      "primaryMechanicId": "reconcile_nonsequential_kinship",
+      "dilemmaId": "ancestral_authority_child_custody_or_neither",
+      "locationId": "three_age_family_hearing",
+      "consequenceId": "nacre_nonsequential_kinship",
+      "objectives": [
+        {
+          "type": "age_reversing_heirloom_transfer",
+          "target": "ancestor_descendant_table",
+          "required": 4
+        },
+        {
+          "type": "kinship_authority_separation",
+          "target": "custody_affection_and_command",
+          "rule": "Each relationship must travel by a different transfer path."
+        },
+        {
+          "type": "premature_grave_appeal",
+          "target": "living_claimants"
+        }
+      ],
+      "outcomes": [
+        "kinship_separated_from_authority",
+        "released_claim_ancestral_leadership",
+        "village_treated_as_foreign_polity"
+      ],
+      "rewardItemIds": [
+        "untimely_heirloom"
+      ],
+      "loreReveal": "Nacre's sanctuary suspended biological time but not legal inheritance, enabling centuries of decisions made in absent people's names.",
+      "dialogueThesis": "Descent can make a child older than a government without making that child its ruler.",
+      "authorshipProof": {
+        "setpiece": "A family meal spans three incompatible ages while graves arrive at the table before the living people named on them have died.",
+        "failureTransformation": "A mistaken heirloom transfer prematurely completes one grave and removes its living claimant from that family line without killing them.",
+        "dialogueConstraint": "Tima distinguishes older than me, born after me, and responsible for me; she never uses elder as a shortcut.",
+        "persistentWorldChange": "Kinship is separated from authority, released ancestors claim leadership, or descendants recognize the sanctuary village as a foreign polity.",
+        "forbiddenSubstitution": "Cannot become a time-travel reunion because no timeline changes; age, descent, custody, and responsibility conflict entirely in the present."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "faction_schism",
+      "creatureIds": [
+        "threshold_lamb"
+      ],
+      "stateReads": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        },
+        {
+          "key": "nacre_nonsequential_kinship",
+          "mode": "all-values",
+          "values": [
+            "kinship_separated_from_authority",
+            "released_claim_ancestral_leadership",
+            "village_treated_as_foreign_polity"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "nacre_exit_rights",
+          "values": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ]
+        }
+      ],
+      "id": "aftermath_every_door_mothers_voice",
+      "chainId": "village_outside_mother",
+      "order": 2,
+      "type": "character",
+      "title": "Every Door Has Mother's Voice",
+      "giverId": "mother_nacre_open_rib",
+      "supportingCharacterIds": [
+        "parn_exit_law"
+      ],
+      "stateDomain": "admission",
+      "premise": "The village's settled political status does not decide whether Mother's summons inside each bodily door can be revoked when lethal outside weather makes coercive protection genuinely useful.",
+      "primaryMechanicId": "stress_test_consent_under_summons",
+      "dilemmaId": "revocable_exit_under_protector_controlled_risk",
+      "locationId": "hundred_rib_door_passage",
+      "consequenceId": "nacre_exit_rights",
+      "objectives": [
+        {
+          "type": "escalating_exit_reason_staging",
+          "target": "resident_body_doors",
+          "required": 5
+        },
+        {
+          "type": "revocation_clause_embodiment",
+          "target": "outward_hinges",
+          "rule": "Every promise must retain an executable withdrawal procedure during danger."
+        },
+        {
+          "type": "maternal_override_judgment",
+          "target": "one_real_emergency_passage"
+        }
+      ],
+      "outcomes": [
+        "summons_individually_revocable",
+        "civic_override_of_mother",
+        "unconditional_protection_named_captivity"
+      ],
+      "rewardItemIds": [
+        "revocation_latch"
+      ],
+      "loreReveal": "Charnel sanctuary contracts arose after bodies became architecture; their oldest word for consent means a door able to shame its wall.",
+      "dialogueThesis": "Consent is decorative if the protector controls the danger, timing, and body through which refusal must pass.",
+      "authorshipProof": {
+        "setpiece": "Hundreds of body-doors open outward at once while one maternal voice travels through their hinges and the outside weather becomes genuinely lethal.",
+        "failureTransformation": "A recalled resident returns with one revocation clause physically removed from their door, narrowing every later stress test.",
+        "dialogueConstraint": "Parn accepts no promise stated without its revocation procedure.",
+        "persistentWorldChange": "Summons become individually revocable, a civic board can override Mother, or residents choose unconditional protection and explicitly name it captivity.",
+        "forbiddenSubstitution": "Cannot be a jailbreak because the exit exists, the danger is real, and the captor actively wants a consent rule she does not know how to obey."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "regional",
+      "creatureIds": [
+        "eave_lung"
+      ],
+      "stateReads": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        },
+        {
+          "key": "nacre_exit_rights",
+          "mode": "all-values",
+          "values": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "nacre_weather_custody",
+          "values": [
+            "village_private_storm_rationed",
+            "farms_hold_weather_priority",
+            "watershed_council_governs_roof"
+          ]
+        }
+      ],
+      "id": "aftermath_roof_made_of_weather",
+      "chainId": "village_outside_mother",
+      "order": 3,
+      "type": "regional",
+      "title": "A Roof Made of Weather",
+      "giverId": "mother_nacre_open_rib",
+      "supportingCharacterIds": [
+        "orra_rain_in_ribs"
+      ],
+      "stateDomain": "infrastructure",
+      "premise": "The sanctuary's protected climate becomes load-bearing anatomy and steals rain from named farms, whether it now shelters an outside settlement, scheduled excursions, or a still-captive interior.",
+      "primaryMechanicId": "redistribute_weather_as_structure",
+      "dilemmaId": "private_climate_public_rain_or_watershed_rule",
+      "locationId": "migrating_storm_roof",
+      "consequenceId": "nacre_weather_custody",
+      "objectives": [
+        {
+          "type": "pressure_path_reallocation",
+          "target": "living_eaves_fields_and_streets",
+          "required": 6
+        },
+        {
+          "type": "named_drought_accounting",
+          "target": "every_sealed_leak",
+          "rule": "No leak may close until the farm losing its cloud is named."
+        },
+        {
+          "type": "emergent_lung_bargain",
+          "target": "misallocated_rain_current"
+        }
+      ],
+      "outcomes": [
+        "village_private_storm_rationed",
+        "farms_hold_weather_priority",
+        "watershed_council_governs_roof"
+      ],
+      "rewardItemIds": [
+        "borrowed_eave"
+      ],
+      "loreReveal": "Some Charnel bodies enclosed pieces of climate when the long dark broke ordinary weather, making shelter and watershed one anatomy.",
+      "dialogueThesis": "A safe roof is not private when its dry interior is built from somebody else's drought.",
+      "authorshipProof": {
+        "setpiece": "A roofless village hangs beneath one migrating storm whose ribs become rafters only where somebody accepts the drought below.",
+        "failureTransformation": "A pressure mistake births an Eave Lung that permanently owns one rain current and must be bargained with in later play.",
+        "dialogueConstraint": "Orra never describes weather as natural; she names who is under it and who paid for it.",
+        "persistentWorldChange": "The village keeps a rationed private storm, farms gain priority over shelter, or a watershed council governs the living roof.",
+        "forbiddenSubstitution": "Cannot become ordinary water allocation because weather is load-bearing anatomy and mechanical failure creates a sovereign negotiable organism."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "character_guest_follower",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        },
+        {
+          "key": "nacre_exit_rights",
+          "mode": "all-values",
+          "values": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ]
+        },
+        {
+          "key": "nacre_weather_custody",
+          "mode": "all-values",
+          "values": [
+            "village_private_storm_rationed",
+            "farms_hold_weather_priority",
+            "watershed_council_governs_roof"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "nacre_external_route",
+          "values": [
+            "ancestral_road_restored",
+            "road_forgetting_upheld",
+            "present_obligation_route_constituted"
+          ]
+        }
+      ],
+      "id": "aftermath_child_older_than_road",
+      "chainId": "village_outside_mother",
+      "order": 4,
+      "type": "regional",
+      "title": "The Child Older Than the Road",
+      "giverId": "enoch_last_lamplighter",
+      "supportingCharacterIds": [
+        "pell_nacreyear_road_witness"
+      ],
+      "stateDomain": "obligation",
+      "premise": "The Unwritten Roads deny that the sanctuary ever had an outside route, but Pell's body carries social turns older than the landscape that could reconnect freedom, formalize passage, or breach captivity.",
+      "primaryMechanicId": "walk_a_route_stored_in_social_memory",
+      "dilemmaId": "restore_ancestral_reach_preserve_forgetting_or_new_obligation",
+      "locationId": "pell_unfolded_black_heath",
+      "consequenceId": "nacre_external_route",
+      "objectives": [
+        {
+          "type": "relationship_direction_recitation",
+          "target": "historical_turns",
+          "required": 7
+        },
+        {
+          "type": "obligation_gated_traversal",
+          "target": "approaching_unwritten_roads",
+          "rule": "Each segment appears only when two travelers accurately state what they owed at that turn."
+        },
+        {
+          "type": "road_personhood_constitution",
+          "target": "forgotten_sanctuary_route"
+        }
+      ],
+      "outcomes": [
+        "ancestral_road_restored",
+        "road_forgetting_upheld",
+        "present_obligation_route_constituted"
+      ],
+      "rewardItemIds": [
+        "roadless_birthday"
+      ],
+      "loreReveal": "Unwritten Roads forget locations deliberately when accurate memory would make escape impossible.",
+      "dialogueThesis": "A road may owe fugitives its forgetting more than descendants its return.",
+      "authorshipProof": {
+        "setpiece": "Pell unfolds into a human-scale sequence of bends across empty black heath while roads approach, recognize one turn, and recoil from the next.",
+        "failureTransformation": "A false obligation creates a permanent valid spur claimed by someone excluded from the original village.",
+        "dialogueConstraint": "Pell never uses compass directions; he navigates by promises kept, broken, and inherited.",
+        "persistentWorldChange": "The ancestral road returns, its chosen forgetting is upheld, or a new route is constituted entirely from present obligations.",
+        "forbiddenSubstitution": "Cannot be a map-fragment hunt because the road is a moral witness and traversal depends on relationship truth rather than recovered geometry."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "profession_systemic",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "all-values",
+          "values": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "dawn_control_identity",
+          "values": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ]
+        }
+      ],
+      "id": "aftermath_three_hands_one_lever",
+      "chainId": "mortality_in_dawn_engine",
+      "order": 1,
+      "type": "faction",
+      "title": "Three Hands on One Lever",
+      "giverId": "tor_vannic_defector_of_dawn",
+      "supportingCharacterIds": [
+        "gannet_triune_veto_clerk"
+      ],
+      "stateDomain": "authority",
+      "premise": "The ratified shutdown architecture works exactly as designed but cannot determine whether its authority follows a named operator, a continuing institution, or the people now carrying the greatest risk.",
+      "primaryMechanicId": "adjudicate_control_identity_after_change",
+      "dilemmaId": "named_operator_continuing_office_or_exposed_population",
+      "locationId": "triune_dawn_control_chambers",
+      "consequenceId": "dawn_control_identity",
+      "objectives": [
+        {
+          "type": "continuity_claim_authentication",
+          "target": "person_office_and_exposed_claimant",
+          "required": 3
+        },
+        {
+          "type": "real_emergency_control_trial",
+          "target": "existing_shutdown_architecture",
+          "rule": "Every pull preserves the selected architecture while changing what evidence it recognizes next time."
+        },
+        {
+          "type": "coauthored_error_adjudication",
+          "target": "mistaken_claimant_record"
+        }
+      ],
+      "outcomes": [
+        "authority_tracks_named_operator",
+        "authority_tracks_continuing_institution",
+        "authority_tracks_exposure_to_harm"
+      ],
+      "rewardItemIds": [
+        "divided_handle"
+      ],
+      "loreReveal": "Divine machinery never solved political identity; it fossilized whichever proof of continuity its last operators supplied.",
+      "dialogueThesis": "Control can remain unchanged while the identity authorized to exercise it becomes a new political choice.",
+      "authorshipProof": {
+        "setpiece": "One impossible handle passes through three civic chambers while a mortal hand, an office glove, and a heat-scarred communal prosthesis pull from mutually valid positions.",
+        "failureTransformation": "A wrongly authenticated pull records the mistaken claimant as co-author of the next control act, forcing later emergencies to include or publicly overrule them.",
+        "dialogueConstraint": "Gannet refuses continuity as a noun; every claimant must name what persists, what changed, and who bears harm while records catch up.",
+        "persistentWorldChange": "Control identity follows named operators, continuing institutions, or present exposure to harm without redesigning the existing shutdown architecture.",
+        "forbiddenSubstitution": "Cannot reselect centralized, distributed, or absent shutdown because those architectures are immutable input; only the authorized actor's continuity is adjudicated."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "profession_systemic",
+      "creatureIds": [
+        "veto_gasket_choir"
+      ],
+      "stateReads": [
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "all-values",
+          "values": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ]
+        },
+        {
+          "key": "dawn_control_identity",
+          "mode": "all-values",
+          "values": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "dawn_maintenance_constitution",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        }
+      ],
+      "id": "aftermath_maintenance_window_miracle",
+      "chainId": "mortality_in_dawn_engine",
+      "order": 2,
+      "type": "faction",
+      "title": "Maintenance Window for a Miracle",
+      "giverId": "tor_vannic_defector_of_dawn",
+      "supportingCharacterIds": [
+        "meret_spall_night_engineer"
+      ],
+      "stateDomain": "infrastructure",
+      "premise": "A cracked light law needs seven one-minute intervals of local absence, with authorization and bypass form composed from the selected shutdown architecture and recognized control identity.",
+      "primaryMechanicId": "schedule_darkness_across_dependencies",
+      "dilemmaId": "maintenance_priority_and_stoppable_miracle",
+      "locationId": "seven_ring_dawn_service_array",
+      "consequenceId": "dawn_maintenance_constitution",
+      "objectives": [
+        {
+          "type": "seven_interval_dependency_schedule",
+          "target": "crops_workers_wards_and_ceasefire",
+          "required": 7
+        },
+        {
+          "type": "darkness_authority_escrow",
+          "target": "each_off_and_on_act",
+          "rule": "No dependency survives all seven intervals and none may remain continuously powered."
+        },
+        {
+          "type": "service_promise_reconciliation",
+          "target": "shifted_tolerance_windows"
+        }
+      ],
+      "outcomes": [
+        "public_rotating_maintenance",
+        "permanent_noon_hidden_worker_deaths",
+        "charnel_maintained_dark_interval"
+      ],
+      "rewardItemIds": [
+        "service_dark"
+      ],
+      "loreReveal": "Synod miracles were engineered with maintenance liturgies and declared eternal only after mortal technicians used stoppages to bargain.",
+      "dialogueThesis": "A benefit that cannot pause for inspection is an authority claim disguised as reliability.",
+      "authorshipProof": {
+        "setpiece": "Seven rings of artificial noon extinguish one by one while crops, altered workers, defensive wards, and a Charnel ceasefire unfold only in their assigned darkness.",
+        "failureTransformation": "Overexposure changes which later minute a dependency can tolerate and forces a new public promise instead of killing it or resetting the schedule.",
+        "dialogueConstraint": "Meret will not use emergency for any consequence known before the schedule was approved.",
+        "persistentWorldChange": "The engine adopts public rotating maintenance, permanent noon concealing worker deaths, or a Charnel-maintained dark interval.",
+        "forbiddenSubstitution": "Cannot become a timed-defense encounter because darkness is a scheduled public resource whose known dependencies renegotiate after every minute."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "character_guest_follower",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "value-precondition",
+          "values": [
+            "player_holds_off_switch"
+          ]
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "dawn_mortal_succession",
+          "values": [
+            "three_person_succession",
+            "jorem_has_enforceable_resignation",
+            "mortal_office_left_vacant"
+          ]
+        }
+      ],
+      "id": "aftermath_person_engine_must_outlive",
+      "chainId": "mortality_in_dawn_engine",
+      "order": 3,
+      "type": "character",
+      "title": "The Person the Engine Must Outlive",
+      "giverId": "tor_vannic_defector_of_dawn",
+      "supportingCharacterIds": [
+        "jorem_mortality_bearer"
+      ],
+      "stateDomain": "obligation",
+      "premise": "Only when the player holds the mortal off-switch, Jorem is asked to bear that office and every faction targets or protects his continued life while he insists on the enforceable right to resign.",
+      "primaryMechanicId": "transfer_mortal_dependency_without_ownership",
+      "dilemmaId": "human_key_distributed_identity_or_vacant_mortal_office",
+      "locationId": "three_succession_chambers",
+      "consequenceId": "dawn_mortal_succession",
+      "objectives": [
+        {
+          "type": "identity_fragment_allocation",
+          "target": "pulse_name_and_shadow",
+          "required": 3
+        },
+        {
+          "type": "successor_refusal_demonstration",
+          "target": "candidate_chambers",
+          "rule": "No candidate may receive biometric, legal, and remembered identity together."
+        },
+        {
+          "type": "resignation_path_execution",
+          "target": "jorem_mortal_office"
+        }
+      ],
+      "outcomes": [
+        "three_person_succession",
+        "jorem_has_enforceable_resignation",
+        "mortal_office_left_vacant"
+      ],
+      "rewardItemIds": [
+        "succession_fuse"
+      ],
+      "loreReveal": "Mortality was added to divine machinery not as weakness, but as an officeholder's right to end, resign, and be replaced.",
+      "dialogueThesis": "A person kept alive as infrastructure is already imprisoned even when everyone calls the prison protection.",
+      "authorshipProof": {
+        "setpiece": "Jorem's shadow, pulse, and sworn name occupy three succession chambers while his living body walks freely between them.",
+        "failureTransformation": "A rejected candidate retains the identity fragment already carried and becomes a partial unauthorized shutdown path.",
+        "dialogueConstraint": "Jorem rejects every appeal to duty that does not include a lawful way for him to quit.",
+        "persistentWorldChange": "The mortal office gains a three-person succession, remains with Jorem under enforceable resignation, or is left vacant and the engine becomes harder to stop.",
+        "forbiddenSubstitution": "Cannot become an escort-the-key-person quest because bodily safety without resignation is the failure and identity itself is divided among successors."
+      }
+    }
+  ]
+}

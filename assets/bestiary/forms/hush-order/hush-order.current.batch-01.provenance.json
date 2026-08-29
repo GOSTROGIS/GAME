@@ -1,0 +1,328 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-hush-order-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.abbot_of_exact_words",
+      "subjectId": "abbot_of_exact_words",
+      "familyId": "hush_order",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/hush-order/abbot-of-exact-words-v1.png",
+      "sha256": "00dd978967fbe8db26c675f6af26ae7cd562b7daae687f949abf8a3fa9883567",
+      "bytes": 1389363,
+      "dimensions": {
+        "width": 1024,
+        "height": 1535
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "00dd978967fbe8db26c675f6af26ae7cd562b7daae687f949abf8a3fa9883567"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.comma_blade",
+      "subjectId": "comma_blade",
+      "familyId": "hush_order",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/hush-order/comma-blade-v1.png",
+      "sha256": "62d9960d8368bfa01d63c21bd323e9cc2a9269283941673775c19b0aca4143c4",
+      "bytes": 1187625,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "62d9960d8368bfa01d63c21bd323e9cc2a9269283941673775c19b0aca4143c4"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.dust_novice",
+      "subjectId": "dust_novice",
+      "familyId": "hush_order",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/hush-order/dust-novice-v1.png",
+      "sha256": "9068a6ec8110ac788104739f11fd764c2d645048d736ee59a7117fb304de61e9",
+      "bytes": 1662169,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "9068a6ec8110ac788104739f11fd764c2d645048d736ee59a7117fb304de61e9"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.exact_word_adept",
+      "subjectId": "exact_word_adept",
+      "familyId": "hush_order",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/hush-order/exact-word-adept-v1.png",
+      "sha256": "7c48fb5757116d03b8933fe2796c6e28f233b072a633a62d7074b57fcec39b29",
+      "bytes": 1694271,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "7c48fb5757116d03b8933fe2796c6e28f233b072a633a62d7074b57fcec39b29"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.hush_monk",
+      "subjectId": "hush_monk",
+      "familyId": "hush_order",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/hush-order/hush-monk-v1.png",
+      "sha256": "a2a6071d07b2dc56e6b0ef7a8b13f765ccfe04050b81678b1e9900cdbec8cd72",
+      "bytes": 1646660,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a2a6071d07b2dc56e6b0ef7a8b13f765ccfe04050b81678b1e9900cdbec8cd72"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.inkless_lector",
+      "subjectId": "inkless_lector",
+      "familyId": "hush_order",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/hush-order/inkless-lector-v1.png",
+      "sha256": "cc8f74ebb31ee06834e44deda41a52eaf557a78561dbb9ba05752a79fea8cf22",
+      "bytes": 1288827,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "cc8f74ebb31ee06834e44deda41a52eaf557a78561dbb9ba05752a79fea8cf22"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.mute_porter",
+      "subjectId": "mute_porter",
+      "familyId": "hush_order",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/hush-order/mute-porter-v1.png",
+      "sha256": "4647d20a9cce4009aea6eaf3416db4688b56d6fd871a46b010caf5b6f0a1b37c",
+      "bytes": 1218354,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "4647d20a9cce4009aea6eaf3416db4688b56d6fd871a46b010caf5b6f0a1b37c"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.pause_inquisitor",
+      "subjectId": "pause_inquisitor",
+      "familyId": "hush_order",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/hush-order/pause-inquisitor-v1.png",
+      "sha256": "df91ff831130b8689790ccffdcf191f58e6535b2a91bfdb41e80819b00feb9c1",
+      "bytes": 1012957,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "df91ff831130b8689790ccffdcf191f58e6535b2a91bfdb41e80819b00feb9c1"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.prior_cord",
+      "subjectId": "prior_cord",
+      "familyId": "hush_order",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/hush-order/prior-cord-v1.png",
+      "sha256": "82735bd882920f384b7325aa3c8a372bdce2e934264040c7cbc68df6985a0788",
+      "bytes": 783442,
+      "dimensions": {
+        "width": 1023,
+        "height": 1537
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "82735bd882920f384b7325aa3c8a372bdce2e934264040c7cbc68df6985a0788"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.vow_sweeper",
+      "subjectId": "vow_sweeper",
+      "familyId": "hush_order",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/hush-order/vow-sweeper-v1.png",
+      "sha256": "4798d65530872dc006fdd5c0b9a4bf5654cfc7dfac37af9d7b8622b72af9cf29",
+      "bytes": 1112224,
+      "dimensions": {
+        "width": 1023,
+        "height": 1537
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "4798d65530872dc006fdd5c0b9a4bf5654cfc7dfac37af9d7b8622b72af9cf29"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

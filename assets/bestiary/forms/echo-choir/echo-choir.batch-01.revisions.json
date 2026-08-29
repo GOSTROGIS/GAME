@@ -1,0 +1,17 @@
+{
+  "schema": "SableReachConceptPromptRevisionPacketV1",
+  "batchId": "echo-choir-masters-batch-01",
+  "status": "frozen-before-generation",
+  "revisions": [
+    {
+      "id": "urn_whisper",
+      "version": 2,
+      "supersedesAttempt": "urn-whisper-concept-master-v1.png",
+      "blockers": [
+        "The first attempt depicted five pressure crescents rather than exactly four present note fronts.",
+        "The missing-note interval was not uniquely readable as the absent fourth position between the third and final present front."
+      ],
+      "prompt": "Use Image 1 only as the inspected Echo Choir family style/material reference and generate a new Urn Whisper master from scratch; do not reproduce an earlier failed candidate. Highly polished stylized 3D dark-fantasy MMORPG production concept on a flat near-black neutral opaque studio backdrop, cold raking light, ungraded, no floor or ground. One cracked burial urn is the only solid central anchor. Exactly one bodyless bronze-lipped mouth with a shallow violet-black chamber circles the urn; no face, head, throat, body, portal, or additional mouth. STRICT COUNT: depict exactly FOUR and only four thin incomplete bronze-violet pressure crescents in the entire image. Place present crescent 1 upper-left of the urn, present crescent 2 left-middle, present crescent 3 lower-left, then leave a very large completely empty black missing-note interval at lower-center, then place present crescent 4 lower-right as the fifth-position sound after that gap. No other rings, arcs, halos, loops, echoes, or crescent-shaped ornaments anywhere. Each of the four crescents is separate with large black clearance and a sparse cracked-ceramic or memory-bronze fragment attached. The wide empty interval after the third crescent and before the final crescent must be unmistakable. No numbers, labels, staff lines, note glyphs, letters, symbols, text, logo, watermark, scenery, tunnel, crop, or extra figure. One isolated complete assembly, three-quarter view, centered with generous clearance, portrait 1024 by 1536."
+    }
+  ]
+}

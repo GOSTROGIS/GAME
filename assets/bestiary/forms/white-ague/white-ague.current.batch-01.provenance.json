@@ -1,0 +1,200 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-white-ague-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.destination_without_land",
+      "subjectId": "destination_without_land",
+      "familyId": "white_ague",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/white-ague/destination-without-land-v3.png",
+      "sha256": "9f9245042a35f8d11930aaad429938b6982914d38f5ec85fdf7606b1811117bc",
+      "bytes": 1422055,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "9f9245042a35f8d11930aaad429938b6982914d38f5ec85fdf7606b1811117bc"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.direction_eater",
+      "subjectId": "direction_eater",
+      "familyId": "white_ague",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/white-ague/direction-eater-v1.png",
+      "sha256": "60de65b23a7959b4577db21f1e2838ffebc7c624be85903dc9f6244a4c3fa2db",
+      "bytes": 2109444,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "60de65b23a7959b4577db21f1e2838ffebc7c624be85903dc9f6244a4c3fa2db"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.eastmost_penitent",
+      "subjectId": "eastmost_penitent",
+      "familyId": "white_ague",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/white-ague/eastmost-penitent-v3.png",
+      "sha256": "77b74ff5c0cc16c885cd8eb26273c01eb8ddae404fc029ae47add88750a4e867",
+      "bytes": 1001690,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "77b74ff5c0cc16c885cd8eb26273c01eb8ddae404fc029ae47add88750a4e867"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.horizon_kneeler",
+      "subjectId": "horizon_kneeler",
+      "familyId": "white_ague",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/white-ague/horizon-kneeler-v2.png",
+      "sha256": "90094f49d5c56ff788727804997b72783bc608656d34f26bb1b09e2e66037c25",
+      "bytes": 1786963,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "90094f49d5c56ff788727804997b72783bc608656d34f26bb1b09e2e66037c25"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.meridian_widow",
+      "subjectId": "meridian_widow",
+      "familyId": "white_ague",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/white-ague/meridian-widow-v3.png",
+      "sha256": "00cb099d7a40b4156a569f4736b2bd9610783e45ab68f6ec5223b8e3cc88b19b",
+      "bytes": 1511934,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "00cb099d7a40b4156a569f4736b2bd9610783e45ab68f6ec5223b8e3cc88b19b"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.salt_compass",
+      "subjectId": "salt_compass",
+      "familyId": "white_ague",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/white-ague/salt-compass-v1.png",
+      "sha256": "a3007656c82e456afab49945af7ed400adee9066de7cecfc87ef14f14ad4a152",
+      "bytes": 1060489,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a3007656c82e456afab49945af7ed400adee9066de7cecfc87ef14f14ad4a152"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

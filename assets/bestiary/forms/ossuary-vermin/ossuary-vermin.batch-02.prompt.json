@@ -1,0 +1,135 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "ossuary-vermin-masters-batch-02",
+  "status": "immutable-before-generation",
+  "familyId": "ossuary_vermin",
+  "formsInCanonicalOrder": [
+    "the_borrowed_saint",
+    "tooth_rook",
+    "heel_crab",
+    "marrow_factor",
+    "pelvis_paladin"
+  ],
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/ossuary-vermin-plate.png"
+  ],
+  "plateInspection": {
+    "status": "inspected-full-resolution-before-generation",
+    "sha256": "c422037c0c780bbbc193898d8e67200296ea7c27b1cd5d9a896a89e49bdb974b",
+    "dimensions": { "width": 1536, "height": 1024 },
+    "bytes": 2012543,
+    "observedVisualLanguage": "Near-black neutral studio presentation; low scrambling composite silhouette; porous age-darkened borrowed bone; cracked tooth enamel; living mold-green ligament lashings; skulls and incompatible small bones used as mechanical load-bearing joints; central negative space; cold side light; restrained material density; no magical glow. These observations constrain family style only."
+  },
+  "referencePolicy": "The inspected Ossuary Vermin plate controls family palette, porous bone/enamel/mold/ligament materials, communal assembly logic, low scrambling silhouette language, finish, and cold studio lighting. Its exact representative nine-skull wheel and eighteen-limb count are not universal anatomy: each canonical form below replaces that representative chassis with its explicitly authored body plan and exact cue. Each master generation receives only this local plate as its visual reference.",
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical individual bestiary production concept master for later 3D design. Create exactly one complete original Ossuary Vermin subject in a polished stylized 3D dark-fantasy MMORPG production style, three-quarter view, centered with generous silhouette clearance. Family identity is an intelligent communal organism assembled from borrowed skeletal fragments rather than an ordinary skeleton: porous old bone, cracked tooth-white enamel, dusty mold green, crypt black, dry fibrous ligament brown, and sparse matte chitin; incompatible bones are mechanically load-bearing, joined by living mold-green ligament threads. Form-specific anatomy and counts below are mandatory and override the family plate's representative wheel body. Flat near-black neutral opaque studio backdrop; cold raking light from one side; ungraded neutral measurement-friendly presentation. No environment, abbey, crypt room, floor, ground plane, pedestal, contact or cast floor shadow, unrelated extra creature or person, narrative scene, caption, UI, readable writing, labels with language, letters, numerals, runes, real religious marks, logo, watermark, franchise resemblance, ordinary humanoid skeleton, generic skeleton spider, skull pile as the whole design, generic centipede, necromancer summon, cute swarm, gore, exposed entrails, bright magic, aura, glossy plastic, baked checkerboard, transparency, or crop. Canonical reflected evidence, motion trails, tags, loose-remain cues, and action previews must stay subordinate, subject-bound, and visibly non-solid or mechanically attached.",
+  "assets": [
+    {
+      "id": "the_borrowed_saint",
+      "name": "The Borrowed Saint",
+      "rank": "boss",
+      "role": "juggernaut",
+      "heightMeters": 3.63,
+      "orientation": "portrait-2:3",
+      "masterFile": "borrowed-saint-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/ossuary-vermin/the-borrowed-saint-v1.png",
+      "canonical": {
+        "anatomy": "Every neglected relic in the ossuary has joined into a towering saint no doctrine recognizes. The violation closes into a usable limb when relic labels glow while the corresponding borrowed limbs kneel.",
+        "locomotion": "It cannot turn during a committed advance and brakes by striking the terrain; the permission cue is relic labels glow while the corresponding borrowed limbs kneel.",
+        "sound": "Gnawed relic produces slow impacts whose interval shortens without their volume changing; False Miracle commits on the first radiance/strike/curse sound after the gap.",
+        "purpose": "Small scavengers assemble borrowed skeletons into increasingly ambitious communal bodies; every neglected relic has joined this towering composite saint no doctrine recognizes.",
+        "origin": "Every neglected relic in the ossuary has joined into a towering saint no doctrine recognizes.",
+        "mechanic": "False Miracle",
+        "cue": "Relic labels glow while the corresponding borrowed limbs kneel.",
+        "counterplay": "Read the labels and break the contradictory relic to collapse the miracle."
+      },
+      "masterDirection": "Show exactly one towering Borrowed Saint: a mature narrow but massive communal silhouette assembled from incompatible unlabeled reliquary fragments, borrowed skull joints, pelvis hoops, rib arches, finger-bone struts, and lower-jaw braces, held by mold-green ligaments with no conventional torso or ordinary complete skeleton. Build exactly EIGHT separately countable major borrowed limb modules around the one body. Every module carries exactly one small attached ivory relic tag, eight tags total. Each tag is blank and identified only by a unique outer-edge profile that physically matches one receiving notch on its own limb; no internal mark, text, letter, numeral, rune, icon, heraldry, or real religious symbol. Seven tagged limbs are visibly folding into a shared kneeling load path. Exactly one contradictory relic is a broad pelvis hoop installed on a narrow arm module: its tag edge profile visibly cannot fit that module's notch, and it remains uniquely exposed at chest height with restrained cold ivory luminosity while the other seven tags are dim. Make the contradictory relic directly breakable and structurally load-bearing. Keep all eight limbs/tags, the seven kneeling modules, unique mismatch, head, and full towering silhouette inside frame. No altar, halo, congregation, worshipper, floor, readable label, real religious mark, glow aura, scene, or extra figure."
+    },
+    {
+      "id": "tooth_rook",
+      "name": "Tooth Rook",
+      "rank": "regular",
+      "role": "ambusher",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "masterFile": "tooth-rook-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/ossuary-vermin/tooth-rook-v1.png",
+      "canonical": {
+        "anatomy": "A black carrion bird is assembled entirely from interlocking human teeth.",
+        "locomotion": "It hops on molars and flies only after stealing a complete bite pattern.",
+        "sound": "Enamel chatters in alternating upper and lower rows.",
+        "purpose": "It sorts teeth by former diet for the communal ossuary.",
+        "origin": "Grave crows swallowed prayer teeth until their skeletons were replaced from within.",
+        "mechanic": "Borrow Bite",
+        "cue": "Its breast teeth arrange into the player's jaw pattern.",
+        "counterplay": "Guard without attacking until the false bite collapses."
+      },
+      "masterDirection": "Show one complete black carrion-bird silhouette assembled ENTIRELY from hundreds of interlocking human teeth and sparse mold-green ligament; there are no feathers, skin, flesh, ordinary bird bones, skull, beak keratin, or separate skeleton. Individual incisors create sharp wing vanes, overlapping molars build the body mass, and each of exactly TWO complete hopping feet terminates in one large load-bearing molar. In the breast only, arrange a clearly separate false bite pattern as exactly TWO opposed U-shaped tooth rows, one upper and one lower, facing each other around a thin black gap; the pattern is anatomical dental geometry, not a symbol, face, mouth portal, or detached jaw. Hold the rook at the instant the two rows have fully aligned but have not closed, with wing teeth still folded for the pre-flight cue. Keep both wings, tail, breast pattern, two molar feet, and full silhouette visible. No ordinary crow feathers, actual human face, extra bird, ground, perch, floor, text, rune, glow, gore, scene, or logo."
+    },
+    {
+      "id": "heel_crab",
+      "name": "Heel Crab",
+      "rank": "regular",
+      "role": "hunter",
+      "heightMeters": 1.65,
+      "orientation": "landscape-3:2",
+      "masterFile": "heel-crab-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/ossuary-vermin/heel-crab-v1.png",
+      "canonical": {
+        "anatomy": "Two heel bones form a shell over dozens of toe-joint legs.",
+        "locomotion": "It follows footsteps backward toward their oldest visible print.",
+        "sound": "Tiny ankle cracks travel against the direction of movement.",
+        "purpose": "It erases tracks leading toward ossuary nests.",
+        "origin": "Pilgrim feet discarded at a relic door assembled themselves to continue walking away.",
+        "mechanic": "Oldest Step",
+        "cue": "The earliest nearby footprint fills with white dust.",
+        "counterplay": "Create a new crossing trail so its backward route tangles."
+      },
+      "masterDirection": "Show one complete low Heel Crab with EXACTLY TWO enormous age-darkened human heel bones opposed and interlocked into one closed protective shell. Beneath that shell, show at least TWENTY-FOUR separately countable tiny articulated toe-joint legs, no ordinary crab legs, claws, long bones, flesh, or central torso. The toe legs are moving backward in a synchronized reverse wave. From one rear ligament, attach one thin subject-bound pale dust route containing exactly THREE flat human footprint impressions receding backward in age order; the farthest and earliest print is uniquely filled solid with tooth-white dust while the two nearer prints remain outline-only. Cross that attached route with one short new decoy route of exactly TWO smaller outline-only footprints at a diagonal, making the backward route visibly tangle without creating a floor or landscape. Both routes float as thin non-solid mechanic evidence in black space and end inside frame. Keep both heel bones, 24-plus legs, all five prints, and shell clearance readable. No third heel, ordinary crab, ground plane, sand, hallway, detached human foot, text, glow, scene, or extra creature."
+    },
+    {
+      "id": "marrow_factor",
+      "name": "Marrow Factor",
+      "rank": "specialist",
+      "role": "swarm",
+      "heightMeters": 1.9,
+      "orientation": "landscape-3:2",
+      "masterFile": "marrow-factor-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/ossuary-vermin/marrow-factor-v1.png",
+      "canonical": {
+        "anatomy": "An abacus spine carries beads of living marrow between borrowed skulls.",
+        "locomotion": "It advances one vertebra for every bone broken nearby.",
+        "sound": "Wet beads click while skulls recite changing inventories.",
+        "purpose": "It allocates scarce marrow to growing communal bodies.",
+        "origin": "An ossuary accountant valued bones by weight until the inventory began valuing him.",
+        "mechanic": "Bone Dividend",
+        "cue": "Marrow beads slide toward the side with the most loose remains.",
+        "counterplay": "Kick remains across the balance or strike the empty side of the spine."
+      },
+      "masterDirection": "Show one complete horizontal Marrow Factor with NO torso: exactly TWO mismatched borrowed skulls form the left and right end frames of one long articulated abacus spine. Between the two skulls, exactly FIVE parallel thin rib-bone abacus rods cross the open spinal frame. Each rod carries exactly THREE wet living marrow beads, FIFTEEN beads total. Shift all fifteen beads distinctly toward the viewer-left skull, leaving the viewer-right third of every rod empty and directly strikeable. Attach exactly FIVE loose bone fragments on short mold-green ligament tethers beside the weighted viewer-left side, making that side visibly contain the most loose remains; no fragments touch a floor. Pose the whole spine one vertebra into an advance, with a single intervertebral gap open near the empty right side. Both skull mouths are moving at different inventory-recitation stages but carry no readable labels or words. Keep two skulls, five rods, fifteen beads, five loose fragments, empty side and full spine inside frame. No third skull, ordinary body, detached pile, scales, numerals, ledger, text, floor, blood, glow, scene, or extra creature."
+    },
+    {
+      "id": "pelvis_paladin",
+      "name": "Pelvis Paladin",
+      "rank": "elite",
+      "role": "duelist",
+      "heightMeters": 2.15,
+      "orientation": "landscape-3:2",
+      "masterFile": "pelvis-paladin-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/ossuary-vermin/pelvis-paladin-v1.png",
+      "canonical": {
+        "anatomy": "Nested pelvises form a shielded knight around a needle-thin central tail.",
+        "locomotion": "It rolls between defensive stances like interlocked hoops.",
+        "sound": "Hip sockets boom with the cadence of shield impacts.",
+        "purpose": "It guards bone-sorting colonies during seasonal migrations.",
+        "origin": "A reliquary colony misunderstood an illuminated knight and built one from the broadest bones.",
+        "mechanic": "Girdle Bastion",
+        "cue": "Outer pelvises rotate until every socket faces outward.",
+        "counterplay": "Attack through two aligned sockets when the rolling stance changes."
+      },
+      "masterDirection": "Show one complete Pelvis Paladin as a low rolling shield-knight body made from exactly SEVEN separately countable age-darkened human pelvises nested concentrically as interlocked armored hoops around pure black central space. There is no conventional torso, head, humanoid limbs, flesh, plate armor, weapon or separate shield. Every outer hip socket rotates outward. At the current stance change, exactly TWO socket openings—one viewer-left and one viewer-right—align cleanly through all seven nested pelvis layers as two complete black counterplay tunnels; all other sockets remain visibly misaligned and blocked by deeper bone. From the central black space project exactly ONE needle-thin segmented bone tail, fully visible and mechanically centered, curving behind the rolling hoops as counterbalance. Use sparse finger-bone braces and mold-green ligaments only where needed to hold the seven hoops. Keep all seven pelvises countable, both aligned tunnels, complete tail and full rolling silhouette inside frame. No eighth pelvis, ordinary knight, heraldry, text, floor, contact shadow, glow, scene, or extra creature."
+    }
+  ],
+  "cutoutDirection": "Cutouts are outside this assignment. After a master later receives two independent non-generator passes, edit only that exact accepted master to remove the studio background while preserving canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact cues and RGB identity. Output genuine RGBA; no checkerboard, matte, halo, post-processing, floor, text, logo, or watermark."
+}

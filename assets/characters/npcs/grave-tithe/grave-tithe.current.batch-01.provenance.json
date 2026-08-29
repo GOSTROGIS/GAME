@@ -1,0 +1,392 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-grave-tithe-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "transparent_cutout.garran_low",
+      "subjectId": "garran_low",
+      "factionId": "grave_tithe",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/grave-tithe/garran-low-v1-cutout.png",
+      "sha256": "5ed242f6356eaf9ce9e401462cef6b43e022a93c13e0d78b3bbeff4a50091295",
+      "bytes": 1512782,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "5ed242f6356eaf9ce9e401462cef6b43e022a93c13e0d78b3bbeff4a50091295"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/grave-tithe/garran-low-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.garran_low",
+      "subjectId": "garran_low",
+      "factionId": "grave_tithe",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/grave-tithe/garran-low-v1.png",
+      "sha256": "f3bad063fdaf0d071557e267577d5d08e63a2ab79dbb5264e6e09fefb3d9bbd8",
+      "bytes": 2090041,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "f3bad063fdaf0d071557e267577d5d08e63a2ab79dbb5264e6e09fefb3d9bbd8"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.ilse_crow",
+      "subjectId": "ilse_crow",
+      "factionId": "grave_tithe",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/grave-tithe/ilse-crow-v1-cutout.png",
+      "sha256": "17ab43bf5079436f7d78da7ca31428cd8a7092f99f2cac8f61ad78122fd0385e",
+      "bytes": 1501308,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "17ab43bf5079436f7d78da7ca31428cd8a7092f99f2cac8f61ad78122fd0385e"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/grave-tithe/ilse-crow-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.ilse_crow",
+      "subjectId": "ilse_crow",
+      "factionId": "grave_tithe",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/grave-tithe/ilse-crow-v1.png",
+      "sha256": "3ca8183cc73e1c82d0effcc37ef80252e28dceaf206483a5c638f5aa812be374",
+      "bytes": 1867328,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "3ca8183cc73e1c82d0effcc37ef80252e28dceaf206483a5c638f5aa812be374"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.mott_vane",
+      "subjectId": "mott_vane",
+      "factionId": "grave_tithe",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/grave-tithe/mott-vane-v1-cutout.png",
+      "sha256": "78b5e26a84c3b3191a4cf722c04add5745c33f4626f7b00ab491e651fd75b9be",
+      "bytes": 1625585,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "78b5e26a84c3b3191a4cf722c04add5745c33f4626f7b00ab491e651fd75b9be"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/grave-tithe/mott-vane-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.mott_vane",
+      "subjectId": "mott_vane",
+      "factionId": "grave_tithe",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/grave-tithe/mott-vane-v1.png",
+      "sha256": "f606f88d1605be7db09d8ec988af427718ff4af38a8d49b36272db0968a7e254",
+      "bytes": 1735626,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "f606f88d1605be7db09d8ec988af427718ff4af38a8d49b36272db0968a7e254"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.netta_aster",
+      "subjectId": "netta_aster",
+      "factionId": "grave_tithe",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/grave-tithe/netta-aster-v1-cutout.png",
+      "sha256": "9be8409bc155df3823a36e901af54eb65489a2ca56ff3c75ffa90ceba66900d6",
+      "bytes": 1545769,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "9be8409bc155df3823a36e901af54eb65489a2ca56ff3c75ffa90ceba66900d6"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/grave-tithe/netta-aster-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.netta_aster",
+      "subjectId": "netta_aster",
+      "factionId": "grave_tithe",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/grave-tithe/netta-aster-v1.png",
+      "sha256": "c009cbb50dde9ad9867727908bf7a03a312cf1779b9e46a861d7b6dbf500d897",
+      "bytes": 2053943,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "c009cbb50dde9ad9867727908bf7a03a312cf1779b9e46a861d7b6dbf500d897"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.orris_pale",
+      "subjectId": "orris_pale",
+      "factionId": "grave_tithe",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/grave-tithe/orris-pale-v1-cutout.png",
+      "sha256": "d98af250d8ef3c0058298875ce3c316a7d14a3d8fa033b5966d8985424e43e00",
+      "bytes": 1635553,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "d98af250d8ef3c0058298875ce3c316a7d14a3d8fa033b5966d8985424e43e00"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/grave-tithe/orris-pale-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.orris_pale",
+      "subjectId": "orris_pale",
+      "factionId": "grave_tithe",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/grave-tithe/orris-pale-v1.png",
+      "sha256": "796d32c39a0098a9da25c0c4b17291040fc29c2aac526e5de0977023e3fda56e",
+      "bytes": 2084137,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "796d32c39a0098a9da25c0c4b17291040fc29c2aac526e5de0977023e3fda56e"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.sera_dusk",
+      "subjectId": "sera_dusk",
+      "factionId": "grave_tithe",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/grave-tithe/sera-dusk-v1-cutout.png",
+      "sha256": "58855fae038aa319a3eea6c612a93a325b256dc0dbc895771b528218cb29cb8f",
+      "bytes": 1784493,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "58855fae038aa319a3eea6c612a93a325b256dc0dbc895771b528218cb29cb8f"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/grave-tithe/sera-dusk-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.sera_dusk",
+      "subjectId": "sera_dusk",
+      "factionId": "grave_tithe",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/grave-tithe/sera-dusk-v1.png",
+      "sha256": "1105c2365afef821b895757c04c0b869ae6076e6c6fac72e65d40124940219ee",
+      "bytes": 1917885,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "1105c2365afef821b895757c04c0b869ae6076e6c6fac72e65d40124940219ee"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

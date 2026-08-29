@@ -1,6 +1,6 @@
 # Cinder Compact Named NPCs — Batch 01 Prompts
 
-Generated on 2026-08-26 with the OpenAI built-in image-generation tool. Existing Sable Reach art established only the near-black studio presentation, mature grounded proportions, restrained industrial materials, subdued palette, and level of finish. All identities, faces, poses, garments, tools, and silhouettes are original to this batch.
+Generated on 2026-08-26 with a built-in image-generation tool. Existing Sable Reach art established only the near-black studio presentation, mature grounded proportions, restrained industrial materials, subdued palette, and level of finish. All identities, faces, poses, garments, tools, and silhouettes are original to this batch.
 
 ## Orik Senn
 

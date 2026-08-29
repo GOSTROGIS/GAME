@@ -1,0 +1,328 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-bell-revenants-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.bell_without_tower",
+      "subjectId": "bell_without_tower",
+      "familyId": "bell_revenants",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/bell-revenants/bell-without-tower-v1.png",
+      "sha256": "212714c7cdf36ea84eac11eca9c458f274b97b64cf721ce76e8ad05a1df37d4c",
+      "bytes": 1830186,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "212714c7cdf36ea84eac11eca9c458f274b97b64cf721ce76e8ad05a1df37d4c"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.clapper_squire",
+      "subjectId": "clapper_squire",
+      "familyId": "bell_revenants",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/bell-revenants/clapper-squire-v1.png",
+      "sha256": "4ea885e87198860c3de4e82ca4c2ebb0ec0f397678f32764311d9a1fc1a014d5",
+      "bytes": 2075257,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "4ea885e87198860c3de4e82ca4c2ebb0ec0f397678f32764311d9a1fc1a014d5"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.cracked_acolyte",
+      "subjectId": "cracked_acolyte",
+      "familyId": "bell_revenants",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/bell-revenants/cracked-acolyte-v2.png",
+      "sha256": "60e943d1d55a7094dd31714cb7a55b88ed94c6ea2b5cb281176956d125f79ea7",
+      "bytes": 1993909,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "60e943d1d55a7094dd31714cb7a55b88ed94c6ea2b5cb281176956d125f79ea7"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.dusk_toll_collector",
+      "subjectId": "dusk_toll_collector",
+      "familyId": "bell_revenants",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/bell-revenants/dusk-toll-collector-v2.png",
+      "sha256": "5a2e4b73f69177c5ad1c46476e556215dcb744f6da1bc15fd07ae0a37267b4d9",
+      "bytes": 1830336,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "5a2e4b73f69177c5ad1c46476e556215dcb744f6da1bc15fd07ae0a37267b4d9"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.echo_sutler",
+      "subjectId": "echo_sutler",
+      "familyId": "bell_revenants",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/bell-revenants/echo-sutler-v1.png",
+      "sha256": "7efcdb02f54ab1a9cd1ad9c94e1d6166b8ec91d80f3173f102d856d9fd9945d3",
+      "bytes": 2069312,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "7efcdb02f54ab1a9cd1ad9c94e1d6166b8ec91d80f3173f102d856d9fd9945d3"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.memory_carillonneur",
+      "subjectId": "memory_carillonneur",
+      "familyId": "bell_revenants",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/bell-revenants/memory-carillonneur-v2.png",
+      "sha256": "4b44d6c03c38e6f6ed0bf5e006a7f022f992f29be3578611ef8be6b808717555",
+      "bytes": 1705291,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "4b44d6c03c38e6f6ed0bf5e006a7f022f992f29be3578611ef8be6b808717555"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.rope_larva",
+      "subjectId": "rope_larva",
+      "familyId": "bell_revenants",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/bell-revenants/rope-larva-v3.png",
+      "sha256": "559626214daf340e94fcd6e49fd8ec619315a13f2942a24a63bceefbfb6c7ffe",
+      "bytes": 1459670,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "559626214daf340e94fcd6e49fd8ec619315a13f2942a24a63bceefbfb6c7ffe"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.ropewalker",
+      "subjectId": "ropewalker",
+      "familyId": "bell_revenants",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/bell-revenants/ropewalker-v2.png",
+      "sha256": "21250c6df64dc2882574bcbefdbc5fb94dc2937b3a37175ab89837d897b5ae26",
+      "bytes": 804717,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "21250c6df64dc2882574bcbefdbc5fb94dc2937b3a37175ab89837d897b5ae26"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.verdigris_ringer",
+      "subjectId": "verdigris_ringer",
+      "familyId": "bell_revenants",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/bell-revenants/verdigris-ringer-v2.png",
+      "sha256": "cc80cfcf63a3431f2a9daeeb5b28f771650f6c784e08c38a7b248b1402e51308",
+      "bytes": 1200431,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "cc80cfcf63a3431f2a9daeeb5b28f771650f6c784e08c38a7b248b1402e51308"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.vesper_engine",
+      "subjectId": "vesper_engine",
+      "familyId": "bell_revenants",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/bell-revenants/vesper-engine-v2.png",
+      "sha256": "98f4ff5ea4fc7e3bbb8b8f78a5a45e6910d68eba1252130e2b4ca8342c3c7c1d",
+      "bytes": 1260281,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "98f4ff5ea4fc7e3bbb8b8f78a5a45e6910d68eba1252130e2b4ca8342c3c7c1d"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

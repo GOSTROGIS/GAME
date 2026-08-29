@@ -1,0 +1,20 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v15",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "95d8eb84dc26f6f9cb6fd23a65ef9d0e7955daa3c5fac990755b504cad3bc892",
+  "policy": "Technical correction after independent-review disagreement. Preserve the accepted single organism, one corridor, exact two-cue count, cue attachments, material, lighting and framing. Rotate only the distant cue's free-end direction; no generator may approve its own output.",
+  "assets": [
+    {
+      "id": "corridor_maw",
+      "reference": "corridor-maw-concept-master-v4.png",
+      "referenceSha256": "e6dc81e98819e300da5b8265ca8905bb96abc766fd2a28ae8e3cf53af45ad97d",
+      "outputFile": "corridor-maw-concept-master-v5.png",
+      "reason": "Root review passed v4, but independent macro review found both attached cue ribbons' free ends extend up-left. The final v4 direction requires opposite axes: the near cue up-left and the distant exit cue down-right. Disagreement mandates revision.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Repose only the small distant-exit ribbon inside the corridor opening; preserve the entire organism, corridor, near cue and all other pixels as closely as possible.",
+      "revisionDirection": "Faithfully preserve exactly one complete Corridor Maw organism, its living freestanding frame, exactly one deep contained corridor, near entrance and visibly distant exit, closed exit tooth ridges, all nacre anatomy, the large near-frame cue at upper-left, lighting, near-black opaque background, portrait scale and full clearance. Change ONLY the small dark ribbon cue attached to the DISTANT exit's viewer-right rim inside the pale far opening. Keep its base physically fused to that exact distant viewer-right rim. Rotate and repose only its free tapered end so it extends unmistakably diagonally DOWN-RIGHT from the attachment, with a clear descending rightward axis and no curl back up-left. The large near cue remains completely unchanged, attached to the near viewer-left frame and extending UP-LEFT. The two attached cues must therefore form clearly opposite axes: near = up-left; distant = down-right. Preserve exactly two cues total. Do not move, resize, relight or redesign the corridor, exit, near cue or frame; do not add, remove, merge or duplicate any cue. No occupant, limb, extra opening, room, floor, scene, text, logo, watermark, transparency or crop. Opaque RGB master, portrait 1024x1536."
+    }
+  ]
+}

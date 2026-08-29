@@ -1,0 +1,105 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "glasswood-batch-02",
+  "status": "immutable-before-generation",
+  "familyId": "glasswood",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/glasswood-brood-plate.png"
+  ],
+  "commonDirection": "Use the inspected Glasswood Brood family plate only as authoritative family palette, materials, finish, silhouette language, and lighting reference. Create the distinct canonical form below; do not copy the plate representative's complete anatomy unless the form requires it. Family law: fauna cut and remade by iron trees whose sap cools into razor glass; angular, counterbalanced and physically load-bearing rather than a normal animal or generic crystal creature. Palette: obsidian black, muted oil-slick rainbow, sap gold, ironwood brown, bruised translucent violet. Materials: chipped volcanic glass, restrained oily iridescence, fibrous black wood, viscous amber sap, taut root filament. Cold raking studio light with minimal refraction and restrained internal sap-gold glow. Render exactly one complete polished stylized 3D dark-fantasy MMORPG production concept in three-quarter view with every extremity and mechanic cue visible and generous clearance. Flat near-black neutral opaque backdrop; no environment, floor, ground plane, pedestal, cast floor shadow, extra figure, text, readable symbols, runes, logo, watermark, franchise resemblance, normal animal shorthand, generic bright crystal animal, insectoid-monster shorthand unless canonically an insect, heroic mount, bright rainbow crystal, glossy plastic, cute proportions, gore, exposed entrails, checkerboard, or transparency.",
+  "assets": [
+    {
+      "id": "widow_in_the_glass",
+      "name": "Widow in the Glass",
+      "rank": "boss",
+      "orientation": "landscape",
+      "masterFile": "widow-in-the-glass-v1.png",
+      "canonical": {
+        "anatomy": "A colossal spider visible only in reflections; the body in front of you is merely the wound it makes in light. The missing anatomy briefly outlines itself when all mirrored surfaces briefly show the spider in a different position.",
+        "locomotion": "It translates only across unobserved seams and becomes rigid under direct witness; the permission cue is all mirrored surfaces briefly show the spider in a different position.",
+        "sound": "Glasswood shard produces a near sound copied at a far distance, followed by silence at both sources; Reflection Exchange commits after the gap.",
+        "purpose": "A colossal spider visible only in reflections; the body in front is merely the wound it makes in light.",
+        "origin": "A colossal spider visible only in reflections; the body in front of you is merely the wound it makes in light.",
+        "mechanic": "Reflection Exchange",
+        "cue": "All mirrored surfaces briefly show the spider in a different position.",
+        "counterplay": "Face the reflection missing a shadow; break that surface to force the true body out."
+      },
+      "formDirection": "Show one colossal spider-subject as a rigid spider-shaped black wound cut out of cold light, never a directly modeled ordinary spider body. Around that one wound, integrate several attached floating chipped sap-mirror planes, each showing the same flat spider reflection in a visibly different position. Exactly one mirror is cracked, uniquely shows the reflection with no shadow, and is physically reachable as the break target. Reflections are flat optical evidence, not extra creatures. Keep exactly eight implied legs countable through the wound and reflections. No room, forest, floor, web environment, human, gore, or modeled duplicate spiders."
+    },
+    {
+      "id": "prism_larva",
+      "name": "Prism Larva",
+      "rank": "regular",
+      "orientation": "landscape",
+      "masterFile": "prism-larva-v1.png",
+      "canonical": {
+        "anatomy": "A translucent grub contains seven differently moving shadows.",
+        "locomotion": "It crawls toward whichever color is least present nearby.",
+        "sound": "Its shell emits a separate glass tone for each shadow.",
+        "purpose": "It sorts mineral light for iron-tree roots.",
+        "origin": "Sap pooled through a shattered chapel prism and hatched when all colors separated.",
+        "mechanic": "Missing Color",
+        "cue": "Six shell bands brighten while one remains dark.",
+        "counterplay": "Present the missing color to halt it, then strike the dark band."
+      },
+      "formDirection": "Show one low translucent glasswood grub with EXACTLY SEVEN internal differently posed shadow forms, all contained within its one continuous shell. Divide the shell into exactly seven countable bands: exactly six emit restrained distinct mineral colors while one single band remains completely dark and visibly strikeable. The grub turns and crawls toward the missing-color side. No duplicate larva, bright rainbow aura, human shadows, labels, color wheel, terrain, or scene."
+    },
+    {
+      "id": "splinter_doe",
+      "name": "Splinter Doe",
+      "rank": "regular",
+      "orientation": "landscape",
+      "masterFile": "splinter-doe-v1.png",
+      "canonical": {
+        "anatomy": "Its hide is absent; floating wooden splinters preserve the outline of a doe.",
+        "locomotion": "It leaps only where its scattered outline overlaps iron-tree shadows.",
+        "sound": "Splinters hum like a bow drawn across empty strings.",
+        "purpose": "It prunes glasswood seedlings by passing through them.",
+        "origin": "A doe escaped a sap flood but left every solid part behind.",
+        "mechanic": "Outline Scatter",
+        "cue": "The splinters widen around a distant tree shadow.",
+        "counterplay": "Step between outline and shadow to force a painful reassembly."
+      },
+      "formDirection": "Show one doe-shaped absence with no hide, flesh, ordinary body, or normal antlers: many floating fibrous black-wood splinters alone preserve one complete leaping doe outline. The splinters visibly widen toward one narrow attached iron-tree shadow ribbon at the far side, with a clear intervenable gap between outline and ribbon; the ribbon is subject-bound, not a floor shadow or tree. Keep all four leg outlines countable. No forest, real tree, ground, duplicate doe, filled wooden statue, or scene."
+    },
+    {
+      "id": "reflection_finch",
+      "name": "Reflection Finch",
+      "rank": "specialist",
+      "orientation": "landscape",
+      "masterFile": "reflection-finch-v1.png",
+      "canonical": {
+        "anatomy": "The bird exists as a reflection on both sides of a single flying glass feather.",
+        "locomotion": "It flies along reflected sightlines and turns only at bright edges.",
+        "sound": "Wingbeats are heard from the viewer's mirrored side.",
+        "purpose": "It carries visual memories between sap-mirrors.",
+        "origin": "A finch struck an iron branch and continued flying inside the shard that killed it.",
+        "mechanic": "Edge Migration",
+        "cue": "A bright line travels around every nearby reflective surface.",
+        "counterplay": "Dull one edge to collapse its route and expose the central feather."
+      },
+      "formDirection": "Show exactly one physical flying glass feather as the central and only solid body. A flat finch reflection appears on BOTH faces of that single feather, aligned as one impossible bird, with no separate bird volume. One restrained bright line travels around the feather's reflective perimeter except for one clearly dulled matte edge that collapses the route and exposes the feather. No extra feathers, modeled bird, flock, mirror room, branch, landscape, or scene."
+    },
+    {
+      "id": "cathedral_stag",
+      "name": "Cathedral Stag",
+      "rank": "elite",
+      "orientation": "landscape",
+      "masterFile": "cathedral-stag-v1.png",
+      "canonical": {
+        "anatomy": "Window-like organs hang between antlers arranged as a ruined nave.",
+        "locomotion": "It processes through colored light and refuses bare shadow.",
+        "sound": "Hooves ring as if on distant flagstones, never local soil.",
+        "purpose": "It directs glasswood growth into vast vaulted groves.",
+        "origin": "Iron trees copied an abbey window from the blood of a stag beneath it.",
+        "mechanic": "Rose Procession",
+        "cue": "Colored panes align into a moving aisle beneath its antlers.",
+        "counterplay": "Break the darkest pane and stand in the colorless gap."
+      },
+      "formDirection": "Show one large angular stag-form remade by glasswood, not a normal deer: its antlers form the load-bearing ribs and broken vault of a ruined nave, and window-like organs hang only between those antlers. A restrained sequence of colored panes aligns as one moving aisle beneath the antler vault; exactly one pane is darkest and visibly cracked, leaving one clear colorless gap large enough to read as the safe counterplay. Keep all four hooves complete and visible. No actual church building, floor aisle, real religious symbols, rider, forest, bright rainbow aura, or scene."
+    }
+  ],
+  "cutoutDirection": "After a master receives two independent non-generator passes, edit that exact accepted master only to remove its studio background. Preserve canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact-count cues, and RGB identity. Output genuine RGBA with alpha 0 outside, alpha 255 in subject interiors, partial alpha only on true antialiased fine edges; no painted checkerboard, floor, shadow, matte, halo, text, logo, or watermark."
+}

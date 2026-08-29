@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "kind": "semantic-collision-report",
+  "batchId": "quest-batch-0002",
+  "packetSha256": "dd741db6b08fe4daae8b7cc8aaf59464cfa6da8ce88fcdbea2ab1f114c528d39",
+  "verdict": "PASS",
+  "corpusQuestCount": 25,
+  "machineChecks": {
+    "canonicalNarrativeValidator": "PASS",
+    "maxPairwiseShingleSimilarity": {
+      "score": 0.003355704697986577,
+      "left": "aftermath_cart_accepts_office",
+      "right": "main_the_engine_with_an_off_switch"
+    },
+    "note": "Shingle similarity is warning evidence only; the listed non-author semantic attestations control admission."
+  },
+  "reviewerAttestations": [
+    {
+      "reviewerRole": "remaining-hands-owner-narrative-review",
+      "reviewedPayloadSha256": "294adc639131b87370cd2462885b6e23544e3efdf4dc9cd44d86ebbca7be89ce",
+      "questIds": [
+        "side_the_dead_vote_no"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "charnel-owner-narrative-review",
+      "reviewedPayloadSha256": "294adc639131b87370cd2462885b6e23544e3efdf4dc9cd44d86ebbca7be89ce",
+      "questIds": [
+        "side_the_dead_vote_no"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave-02-state-reachability-reviewer",
+      "reviewedPayloadSha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a",
+      "questIds": [
+        "aftermath_house_outlived_tenants",
+        "aftermath_census_of_absences",
+        "aftermath_purity_blooms_at_dusk",
+        "aftermath_cart_accepts_office",
+        "aftermath_village_arrives_before_dead",
+        "aftermath_every_door_mothers_voice",
+        "aftermath_roof_made_of_weather",
+        "aftermath_child_older_than_road",
+        "aftermath_three_hands_one_lever",
+        "aftermath_maintenance_window_miracle",
+        "aftermath_person_engine_must_outlive"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave-02-semantic-collision-reviewer",
+      "reviewedPayloadSha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a",
+      "questIds": [
+        "aftermath_house_outlived_tenants",
+        "aftermath_census_of_absences",
+        "aftermath_purity_blooms_at_dusk",
+        "aftermath_cart_accepts_office",
+        "aftermath_village_arrives_before_dead",
+        "aftermath_every_door_mothers_voice",
+        "aftermath_roof_made_of_weather",
+        "aftermath_child_older_than_road",
+        "aftermath_three_hands_one_lever",
+        "aftermath_maintenance_window_miracle",
+        "aftermath_person_engine_must_outlive"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    }
+  ],
+  "quests": [
+    {
+      "id": "side_the_dead_vote_no",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Ash testimony adjudicates jurisdiction between extinct polities and living descendants, where erasing a dead vote strengthens a present claim rather than solving a ghost mystery.",
+      "canonicalForbiddenSubstitution": "Cannot be a ghost-vote mystery because the central conflict is jurisdiction between extinct polities and living claimants."
+    },
+    {
+      "id": "aftermath_house_outlived_tenants",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot become a haunted-house eviction story because domestic routine is admissible evidence and the building itself exercises civic authority.",
+      "canonicalForbiddenSubstitution": "Cannot become a haunted-house eviction story because domestic routine is admissible evidence and the building itself exercises civic authority."
+    },
+    {
+      "id": "aftermath_census_of_absences",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot be a collect-the-ghosts activity because each attribution changes representation, food allocation, and the legal status of both body and shadow.",
+      "canonicalForbiddenSubstitution": "Cannot be a collect-the-ghosts activity because each attribution changes representation, food allocation, and the legal status of both body and shadow."
+    },
+    {
+      "id": "aftermath_purity_blooms_at_dusk",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot become a cure-or-pruning quest because its mechanical output is a reproductive property-and-liability constitution for an invasive law.",
+      "canonicalForbiddenSubstitution": "Cannot become a cure-or-pruning quest because its mechanical output is a reproductive property-and-liability constitution for an invasive law."
+    },
+    {
+      "id": "aftermath_cart_accepts_office",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot be a route-planning or escort activity because the stationary wheel physically authors evidentiary law.",
+      "canonicalForbiddenSubstitution": "Cannot be a route-planning or escort activity because the stationary wheel physically authors evidentiary law."
+    },
+    {
+      "id": "aftermath_village_arrives_before_dead",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot become a time-travel reunion because no timeline changes; age, descent, custody, and responsibility conflict entirely in the present.",
+      "canonicalForbiddenSubstitution": "Cannot become a time-travel reunion because no timeline changes; age, descent, custody, and responsibility conflict entirely in the present."
+    },
+    {
+      "id": "aftermath_every_door_mothers_voice",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot be a jailbreak because the exit exists, the danger is real, and the captor actively wants a consent rule she does not know how to obey.",
+      "canonicalForbiddenSubstitution": "Cannot be a jailbreak because the exit exists, the danger is real, and the captor actively wants a consent rule she does not know how to obey."
+    },
+    {
+      "id": "aftermath_roof_made_of_weather",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot become ordinary water allocation because weather is load-bearing anatomy and mechanical failure creates a sovereign negotiable organism.",
+      "canonicalForbiddenSubstitution": "Cannot become ordinary water allocation because weather is load-bearing anatomy and mechanical failure creates a sovereign negotiable organism."
+    },
+    {
+      "id": "aftermath_child_older_than_road",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot be a map-fragment hunt because the road is a moral witness and traversal depends on relationship truth rather than recovered geometry.",
+      "canonicalForbiddenSubstitution": "Cannot be a map-fragment hunt because the road is a moral witness and traversal depends on relationship truth rather than recovered geometry."
+    },
+    {
+      "id": "aftermath_three_hands_one_lever",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot reselect centralized, distributed, or absent shutdown because those architectures are immutable input; only the authorized actor's continuity is adjudicated.",
+      "canonicalForbiddenSubstitution": "Cannot reselect centralized, distributed, or absent shutdown because those architectures are immutable input; only the authorized actor's continuity is adjudicated."
+    },
+    {
+      "id": "aftermath_maintenance_window_miracle",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot become a timed-defense encounter because darkness is a scheduled public resource whose known dependencies renegotiate after every minute.",
+      "canonicalForbiddenSubstitution": "Cannot become a timed-defense encounter because darkness is a scheduled public resource whose known dependencies renegotiate after every minute."
+    },
+    {
+      "id": "aftermath_person_engine_must_outlive",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot become an escort-the-key-person quest because bodily safety without resignation is the failure and identity itself is divided among successors.",
+      "canonicalForbiddenSubstitution": "Cannot become an escort-the-key-person quest because bodily safety without resignation is the failure and identity itself is divided among successors."
+    }
+  ]
+}

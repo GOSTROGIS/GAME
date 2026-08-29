@@ -20,15 +20,15 @@
    response to missing authority is to REFUSE TO RENDER and say why, never to
    invent something plausible and let it pass as canon.
 
-   Source of the prompts below: Drive `prompts/family-plates-batch-01.md`
+   Source of the prompts below: repository file `prompts/family-plates-batch-01.md`
    ("Family Plates Batch 01 — Exact Image Prompts"), read 2026-08-26. Ten
    approved canonical concept masters. Fields are transcribed from those
    prompt strings, condensed for machine use, never paraphrased into new
-   intent. `promptCall` is the generation call id recorded in that file, so
-   any line here can be traced back to the exact submitted prompt.
+   intent. External generation identifiers are intentionally redacted from
+   the published repository; `promptCall` remains null for API compatibility.
 
    WHAT THIS FILE IS NOT: it is not a description of the named cast. The
-   batch-01 prompts cover BESTIARY FAMILIES only. No prompt exists in Drive
+   batch-01 prompts cover BESTIARY FAMILIES only. No prompt exists in the published repository
    for any of the forty-two named characters, which has a hard consequence
    recorded in `NAMED_CAST_STATUS` at the bottom of this file.
    ========================================================================= */
@@ -88,7 +88,7 @@ export const GRADING_RULE = {
 export const FAMILY_LAW = {
   ashbound: {
     name: 'Ashbound',
-    promptCall: 'call_nIgtNVLVAaxYFQ2Pt3fXba2w',
+    promptCall: null,
     useCase: 'stylized-concept',
     chassis: 'humanoid-collapsed',
     subject: 'A hideous undead occult-ecology creature animated by names incompletely burned from clay ledgers. Human-derived body in a collapsed posture whose anatomy has already surrendered while its address remains standing.',
@@ -106,7 +106,7 @@ export const FAMILY_LAW = {
 
   cairn_beasts: {
     name: 'Cairn Beasts',
-    promptCall: 'call_3DCkzchVv1431C8jGd8UjVSp',
+    promptCall: null,
     useCase: 'stylized-concept',
     chassis: 'quadruped-low',
     subject: 'A terrifying low quadrupedal grave-heat scavenger that nests in warm cairns and carries grave lichen through black-pine uplands.',
@@ -126,7 +126,7 @@ export const FAMILY_LAW = {
 
   march_deserters: {
     name: 'March Deserters',
-    promptCall: 'call_tsmk6ScuQHgGgAMN4G0FHUMj',
+    promptCall: null,
     useCase: 'precise-object-edit',
     chassis: 'humanoid-segmented-suspended',
     subject: 'An impossible undead MILITARY ecology, not an ordinary armored humanoid. Sealed featureless helm, blank split standard.',
@@ -147,7 +147,7 @@ export const FAMILY_LAW = {
 
   drowned_parish: {
     name: 'Drowned Parish',
-    promptCall: 'call_L3NcHEm8i3Dd9D43p0MrGFli',
+    promptCall: null,
     useCase: 'stylized-concept',
     chassis: 'humanoid-processional',
     subject: 'A member of a drowned congregation still repeating fragments of its final service. Human-derived but waterlogged, with a bowed processional posture.',
@@ -167,7 +167,7 @@ export const FAMILY_LAW = {
 
   reed_coven: {
     name: 'Reed Coven',
-    promptCall: 'call_nT0Nqp15J7zMJmskI6oGcD9Y',
+    promptCall: null,
     useCase: 'stylized-concept',
     chassis: 'humanoid-stilted-caged',
     subject: 'A mire-worker who bargained with the drowned parish and is becoming part of its wetland rites. Crooked humanoid silhouette, clearly a supernatural ritual ecology rather than a generic witch.',
@@ -187,7 +187,7 @@ export const FAMILY_LAW = {
 
   kilnforged: {
     name: 'Kilnforged',
-    promptCall: 'call_8pJvOCIcTUx0WkyNX6yvJl8X',
+    promptCall: null,
     useCase: 'stylized-concept',
     chassis: 'humanoid-bottom-heavy-industrial',
     subject: 'A foundry worker fused into the furnace system they were ordered to seal. Weighted armored silhouette, MUCH BROADER AT THE LOWER TORSO THAN THE SHOULDERS.',
@@ -207,7 +207,7 @@ export const FAMILY_LAW = {
 
   glasswood_brood: {
     name: 'Glasswood Brood',
-    promptCall: 'call_I01tyal8BNLwWNgLRdLDYnxP',
+    promptCall: null,
     useCase: 'stylized-concept',
     chassis: 'hexapod-angular',
     subject: 'Fauna cut and remade by iron trees whose sap cools into razor glass. A tall angular SIX-LEGGED browsing beast, neither deer nor insect, with a narrow counterbalanced torso and BROKEN BACKWARD KNEES.',
@@ -227,7 +227,7 @@ export const FAMILY_LAW = {
 
   hush_order: {
     name: 'Hush Order',
-    promptCall: 'call_ZMLgkyB03Utfk32EMmXyU5V9',
+    promptCall: null,
     useCase: 'precise-object-edit',
     chassis: 'humanoid-cord-skeleton',
     subject: 'A creature whose skeleton is ONE — and only one — uninterrupted CLOSED-LOOP PRAYER CORD. Composed opposing-foot stance, quiet ritual mood.',
@@ -247,7 +247,7 @@ export const FAMILY_LAW = {
 
   echo_choir: {
     name: 'Echo Choir',
-    promptCall: 'call_c9WTemM5npiP7DUboc9h3ZDJ',
+    promptCall: null,
     useCase: 'precise-object-edit',
     chassis: 'bodyless-acoustic',
     subject: 'A BODYLESS open mouth. It must not read as a portal, tunnel, coiled disc or solid shell.',
@@ -268,7 +268,7 @@ export const FAMILY_LAW = {
 
   ossuary_vermin: {
     name: 'Ossuary Vermin',
-    promptCall: 'call_4fTql3rHjFCV17dMm01wOkYp',
+    promptCall: null,
     useCase: 'stylized-concept',
     chassis: 'composite-wheel',
     subject: 'Small scavengers that assemble borrowed skeletons into an ambitious communal body. A low scrambling composite organism with NO CENTRAL TORSO.',
@@ -340,7 +340,7 @@ export function conformance(subjectId) {
    Recorded here because it is the single largest consequence of the law.
 
    The forty-two named characters have NO prompt in batch 01 — that file
-   covers bestiary families only. Eighteen of them have concept art in Drive.
+   covers bestiary families only. Eighteen of them have concept art in the supplied project archive.
    But the art is served cross-origin from Google's CDN, which taints a
    canvas and blocks the capture path, so this process cannot read a single
    pixel of it and cannot verify a render against it.
@@ -368,17 +368,16 @@ export const NAMED_CAST_STATUS = {
   renderStatus: 'UNVERIFIED — authored from prose (rank 3) with no readable authority to check against.',
   clears: [
     'Write character prompts into prompts/, matching batch 01 in form. Restores rank 1.',
-    'Vendor the 18 plates into assets/characters/. Restores rank 2 verification and removes the Drive dependency.',
+    'Vendor the 18 plates into assets/characters/. Restores rank 2 verification and removes the remote dependency.',
   ],
 };
 
 export const LAW_SOURCE = {
   file: 'prompts/family-plates-batch-01.md',
   title: 'Family Plates Batch 01 — Exact Image Prompts',
-  driveId: '1xCRXop9F0ZeR120x42x179e_2UTv1_xi',
   readOn: '2026-08-26',
   families: Object.keys(FAMILY_LAW).length,
-  recovery: { file: 'family-plates-batch-01-recovery.md', driveId: '12ZDiXdCl2rKd73Sdl60btNAauQ6TMbXy', read: false },
+  recovery: { file: 'family-plates-batch-01-recovery.md', read: false },
 };
 
 export function familyList() {

@@ -1,0 +1,20 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v12",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "dc0dcb840e392880440f76b538d60677023b2832d238bfcc929752cd1fe70a1e",
+  "policy": "Technical correction of one independently identified final-rank reversal. Preserve the exact 11-closed-plus-1-open topology, body, roots, first ten closed size ranks, material, lighting and framing; no generator may approve its own output.",
+  "assets": [
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v11-rejected.png",
+      "referenceSha256": "e8b4b5be7bb60b398d0bc0a5925b55624459c17485128750486a5e1e19f41ad1",
+      "outputFile": "throat-orchard-concept-master-v12.png",
+      "reason": "Independent review confirms exact count and a clean increase through ten closed cuffs, but the eleventh medium lower-right closed cuff interposed between the huge upper-right cuff and open ring creates one final decrease.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact-count identity anchor. Reposition and enlarge only the interposed lower-right closed endpoint so it becomes the unique largest final rank; preserve all other pixels as closely as possible.",
+      "revisionDirection": "Faithfully preserve exactly one body, every root, exactly TWELVE total attached cuffs, exactly ELEVEN closed and exactly ONE open lower-right ring, the first ten closed cuffs and their already monotonic lower-left-through-upper-right size increase, all closed seams, the open ring, materials, lighting, near-black opaque background and full landscape framing. Identify the ELEVENTH CLOSED cuff: the medium bud on a thin near-horizontal stalk at lower-right, directly BETWEEN the current huge upper-right closed cuff and the open lower-right ring. Change ONLY this eleventh cuff and its existing stalk. Curve that same stalk inward so the final bud's center sits approximately three-quarters across the canvas and slightly below the upper-right giant, with generous black separation from the open ring and at least 120 pixels of canvas-edge clearance. Enlarge that final bud until its measurable bud height and width are each at least 115% of the current huge upper-right tenth cuff, making the eleventh the unmistakable unique largest endpoint. Its central glottal seam remains fully shut. Keep the current huge upper-right cuff unchanged as rank ten and keep every prior cuff unchanged. Do not add, remove, merge, duplicate, open or close any cuff. The sole open ring remains unchanged, shallow, empty and contrary-facing. No tree, branch, stem, pod, fruit, head, extra throat, second opening, mouth behind the ring, floor, scene, notation, text, logo, watermark, transparency or crop. Opaque RGB master, landscape 1536x1024."
+    }
+  ]
+}

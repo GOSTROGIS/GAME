@@ -1,0 +1,328 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-echo-choir-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.breathless_note",
+      "subjectId": "breathless_note",
+      "familyId": "echo_choir",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/echo-choir/breathless-note-v2.png",
+      "sha256": "51d7d31f21db394cec12db03841cba9a4e8fa0bfd81536ea603a9d6dcd336280",
+      "bytes": 1805537,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "51d7d31f21db394cec12db03841cba9a4e8fa0bfd81536ea603a9d6dcd336280"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.cantor_oss",
+      "subjectId": "cantor_oss",
+      "familyId": "echo_choir",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/echo-choir/cantor-oss-v1.png",
+      "sha256": "a8fffc91566e42e3dab9a5d43c52f40ae1bc709c42b6d355d332c4eb2719e3fa",
+      "bytes": 2190619,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a8fffc91566e42e3dab9a5d43c52f40ae1bc709c42b6d355d332c4eb2719e3fa"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.choirmaster_without_lungs",
+      "subjectId": "choirmaster_without_lungs",
+      "familyId": "echo_choir",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/echo-choir/choirmaster-without-lungs-v1.png",
+      "sha256": "f3435e5248f5c947e26a8bcfb64a3255f2ac2ffd8fd4eac7da27badbeb0c15b2",
+      "bytes": 1636309,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "f3435e5248f5c947e26a8bcfb64a3255f2ac2ffd8fd4eac7da27badbeb0c15b2"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.interval_thief",
+      "subjectId": "interval_thief",
+      "familyId": "echo_choir",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/echo-choir/interval-thief-v1.png",
+      "sha256": "9f58f1f217eb1d7d73f30156bd7e394d2d64c593d8eaa944d131b7fa98c341c5",
+      "bytes": 1782422,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "9f58f1f217eb1d7d73f30156bd7e394d2d64c593d8eaa944d131b7fa98c341c5"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.nave_resonator",
+      "subjectId": "nave_resonator",
+      "familyId": "echo_choir",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/echo-choir/nave-resonator-v1.png",
+      "sha256": "2aa6ac3b4f9627e33ed37f70076c869a4b9adfa1e32d94670643a34d1578a003",
+      "bytes": 2062647,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "2aa6ac3b4f9627e33ed37f70076c869a4b9adfa1e32d94670643a34d1578a003"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.resonance_beadle",
+      "subjectId": "resonance_beadle",
+      "familyId": "echo_choir",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/echo-choir/resonance-beadle-v1.png",
+      "sha256": "374beaa63e9f635b119096745cdb1166a253bf69d36acfa2a5a4cbfc9bab316f",
+      "bytes": 1902749,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "374beaa63e9f635b119096745cdb1166a253bf69d36acfa2a5a4cbfc9bab316f"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.stone_soprano",
+      "subjectId": "stone_soprano",
+      "familyId": "echo_choir",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/echo-choir/stone-soprano-v1.png",
+      "sha256": "d7da41d0ebed89a2290623d8fe5f7b7db96c6520047f394fdb4ace5371e9114e",
+      "bytes": 2099697,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "d7da41d0ebed89a2290623d8fe5f7b7db96c6520047f394fdb4ace5371e9114e"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.urn_moth",
+      "subjectId": "urn_moth",
+      "familyId": "echo_choir",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/echo-choir/urn-moth-v2.png",
+      "sha256": "53463719724bf60ce1b155e6a72e24b1821521f4cbed1148433b0f73af359f27",
+      "bytes": 2007757,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "53463719724bf60ce1b155e6a72e24b1821521f4cbed1148433b0f73af359f27"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.urn_whisper",
+      "subjectId": "urn_whisper",
+      "familyId": "echo_choir",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/echo-choir/urn-whisper-v2.png",
+      "sha256": "6ae259ee9a8fa3eb46b879ea7d92f6bb12674e83b4ccff1e0c4e8b7d365c1788",
+      "bytes": 1746913,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "6ae259ee9a8fa3eb46b879ea7d92f6bb12674e83b4ccff1e0c4e8b7d365c1788"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.wall_canticle",
+      "subjectId": "wall_canticle",
+      "familyId": "echo_choir",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/echo-choir/wall-canticle-v1.png",
+      "sha256": "dc513c2c3e8414f4fddc4195949fc5028bb0322767090fdbce5a7b8308bbb6af",
+      "bytes": 1994528,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "dc513c2c3e8414f4fddc4195949fc5028bb0322767090fdbce5a7b8308bbb6af"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

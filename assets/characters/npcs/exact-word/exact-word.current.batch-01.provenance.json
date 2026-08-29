@@ -1,0 +1,359 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-exact-word-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "transparent_cutout.aven_tongueless",
+      "subjectId": "aven_tongueless",
+      "factionId": "exact_word",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/exact-word/aven-tongueless-v1-cutout.png",
+      "sha256": "cded07cd373cd20c188aaa884564c050aba54083787531f031c4536d4e3ef521",
+      "bytes": 1778924,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "1291da866b15af3a4f61436e2a2a62ced4cac8cacf44d6a1b376166e1b882a4d",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "cded07cd373cd20c188aaa884564c050aba54083787531f031c4536d4e3ef521"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/exact-word/aven-tongueless-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.aven_tongueless",
+      "subjectId": "aven_tongueless",
+      "factionId": "exact_word",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/exact-word/aven-tongueless-v1.png",
+      "sha256": "105e4c01e21301ab526778bdd5b3d2ea21b8acf1e89e0d6fd1509878cd836369",
+      "bytes": 2140919,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "105e4c01e21301ab526778bdd5b3d2ea21b8acf1e89e0d6fd1509878cd836369"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.brother_iven",
+      "subjectId": "brother_iven",
+      "factionId": "exact_word",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/exact-word/brother-iven-v1-cutout.png",
+      "sha256": "a67600a351bae12b1a44b4a5ffe73b08e16fd069ebf8f03faa7b346f6c50c66d",
+      "bytes": 2051663,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "1291da866b15af3a4f61436e2a2a62ced4cac8cacf44d6a1b376166e1b882a4d",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a67600a351bae12b1a44b4a5ffe73b08e16fd069ebf8f03faa7b346f6c50c66d"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/exact-word/brother-iven-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.brother_iven",
+      "subjectId": "brother_iven",
+      "factionId": "exact_word",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/exact-word/brother-iven-v1.png",
+      "sha256": "004097c0ef36c82cadf6a56c2f5e77d868e0e87258446839f0a6e2c40f2f5a70",
+      "bytes": 2233827,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "004097c0ef36c82cadf6a56c2f5e77d868e0e87258446839f0a6e2c40f2f5a70"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.moira_quiet",
+      "subjectId": "moira_quiet",
+      "factionId": "exact_word",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/exact-word/moira-quiet-v1-cutout.png",
+      "sha256": "088933b5b31f2e27894db714fecfe7c7a465cf7af6cb2b8c744b6f071fde2e15",
+      "bytes": 1609740,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "088933b5b31f2e27894db714fecfe7c7a465cf7af6cb2b8c744b6f071fde2e15"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/exact-word/moira-quiet-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.moira_quiet",
+      "subjectId": "moira_quiet",
+      "factionId": "exact_word",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/exact-word/moira-quiet-v1.png",
+      "sha256": "5f5c7225048877896aae3ded583ef2ecaf1e59cd9b771448f0dc9baeb72433b0",
+      "bytes": 2094169,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "5f5c7225048877896aae3ded583ef2ecaf1e59cd9b771448f0dc9baeb72433b0"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.gatewarden_nhal",
+      "subjectId": "gatewarden_nhal",
+      "factionId": "exact_word",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/exact-word/nhal-without-shadow-v1-cutout.png",
+      "sha256": "2662b627ca7ed879978f12301b66913dd4c298ac747243f35e80e52794625dde",
+      "bytes": 1916168,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "2662b627ca7ed879978f12301b66913dd4c298ac747243f35e80e52794625dde"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/exact-word/nhal-without-shadow-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.gatewarden_nhal",
+      "subjectId": "gatewarden_nhal",
+      "factionId": "exact_word",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/exact-word/nhal-without-shadow-v1.png",
+      "sha256": "1ffd628343a714bd77a5c0e7d28b94ed521ece0d94e88296e93e91edda1435d5",
+      "bytes": 2131648,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "1ffd628343a714bd77a5c0e7d28b94ed521ece0d94e88296e93e91edda1435d5"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.seln_clause",
+      "subjectId": "seln_clause",
+      "factionId": "exact_word",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/exact-word/seln-clause-v1-cutout.png",
+      "sha256": "b5b2e7f30058c8c02065b5df8dc72f8e182cae0b2a5b6cd721f2fe0f5c62648d",
+      "bytes": 1582440,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "b5b2e7f30058c8c02065b5df8dc72f8e182cae0b2a5b6cd721f2fe0f5c62648d"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/exact-word/seln-clause-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.seln_clause",
+      "subjectId": "seln_clause",
+      "factionId": "exact_word",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/exact-word/seln-clause-v1.png",
+      "sha256": "4bc0f60dfcc85eb71552288dad7e7fe54518faacd6ff3841bdbd39a95fef0069",
+      "bytes": 2011395,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "4bc0f60dfcc85eb71552288dad7e7fe54518faacd6ff3841bdbd39a95fef0069"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.teth_varo",
+      "subjectId": "teth_varo",
+      "factionId": "exact_word",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/exact-word/teth-varo-v1.png",
+      "sha256": "9bd3394e1de9819e01e743330b6ea9ca2c692741cc0fadae1e18178ac056b462",
+      "bytes": 1861682,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "9bd3394e1de9819e01e743330b6ea9ca2c692741cc0fadae1e18178ac056b462"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

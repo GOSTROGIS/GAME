@@ -1,0 +1,61 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "shuttered-ward-batch-01",
+  "status": "accepted-masters-cutouts-pending",
+  "familyId": "shuttered_ward",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/shuttered-ward-plate.png"
+  ],
+  "commonDirection": "Use the Shuttered Ward family plate only as the authoritative family-style and material reference: boiled dirty linen, lamp black, candle tallow, rain-dark leather and iron, solicitous ritual posture, restrained cold dread. Produce an original canonical form, not a copy of the plate subject. Highly polished stylized 3D dark-fantasy MMORPG production concept render, mature restrained anatomy and material density, single full-body subject in three-quarter view, all extremities visible, centered with generous silhouette clearance. Flat near-black neutral opaque studio backdrop, no environment or ground plane. Cold raking light from one side, ungraded neutral. No extra figures, text, readable symbols, runes, real religious marks, logos, watermark, franchise resemblance, glossy plastic, cute proportions, bright saturation, exposed entrails, or disability shorthand.",
+  "assets": [
+    {
+      "id": "sheet_orderly",
+      "rank": "regular",
+      "orientation": "landscape",
+      "masterFile": "sheet-orderly-v2.png",
+      "masterPrompt": "A folded hospital sheet walks on humanlike hands tucked into its four corners; no torso or head exists inside, because the empty folded textile is the creature. It moves only in exact bed-length increments. Show four load-bearing corner hands and one corner ready to snap shut around an absent sleeper. The final orderly continued rounds after ward bells were sealed; it remakes empty beds and removes evidence that anyone left. Key cue: a pale rectangle measuring forward; counterplay: cut a load-bearing corner.",
+      "revisionDirection": "Make exactly four complete, separately visible load-bearing hands—one beneath each sheet corner—with no fifth hand and no occluded extremity."
+    },
+    {
+      "id": "wax_nurse",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "wax-nurse-v1.png",
+      "masterPrompt": "An entirely hollow caregiver apron and suspended empty sleeves, with no head above it and no body within. A single candle burns downward inside the hollow apron, its flame bending toward an unseen warm target; no ordinary face, skull, or anatomy. It glides according to leaning lamp smoke. The caregiver promised no patient would die cold; it measures room warmth and apportions it to vacant beds. Keep the downward candle the unmistakable silhouette cue."
+    },
+    {
+      "id": "curtain_listener",
+      "rank": "specialist",
+      "orientation": "portrait",
+      "masterFile": "curtain-listener-v1.png",
+      "masterPrompt": "A tall wheeled privacy-screen frame draped in stained boiled-linen ward curtain, with far too many anatomically restrained human ears sewn along the curtain at different listening angles. No human body, face, or hidden person. The frame rolls only while hearing speech behind an obstruction; one embroidered ear turns sharply outward as its cue. Ward curtains heard confessions and refused burning; this form records symptoms absent patients never disclosed."
+    },
+    {
+      "id": "night_physician",
+      "rank": "elite",
+      "orientation": "portrait",
+      "masterFile": "night-physician-v2.png",
+      "masterPrompt": "An empty long physician coat and vacant collar whose arms enter the sleeves from the cuffs and bend inward toward the empty coat, reversing normal anatomy. No conventional body, head, face, plague-doctor mask, or person inside. It walks backward through examination marks while a restrained red examination cord closes around architecture. A physician decided the building was the patient; it diagnoses architecture and amputates rooms deemed contagious.",
+      "revisionDirection": "Replace hollow cuff openings with clearly visible pale arms originating outside each cuff, entering from the cuffs, and bending inward toward the vacant coat. No shoulder connection and no body in the coat."
+    },
+    {
+      "id": "matron_empty_beds",
+      "rank": "miniboss",
+      "orientation": "landscape",
+      "masterFile": "matron-empty-beds-v2.png",
+      "masterPrompt": "A very narrow matronly empty-linen silhouette from which exactly twelve distinct small iron bedframes unfold radially like articulated ribs, six on each side, all unoccupied, with pillows subtly oriented toward one another. She translates between mutually facing beds. The matron marked all patients discharged after death and rejects occupied beds; she coordinates care rituals and replenishes lesser ward forms.",
+      "revisionDirection": "Correct the count to exactly twelve complete, countable bedframes—six on the left and six on the right—with one pillow per bed and generous separation."
+    },
+    {
+      "id": "house_that_cares",
+      "rank": "boss",
+      "orientation": "landscape",
+      "masterFile": "house-that-cares-v2.png",
+      "masterPrompt": "An entire compact timber-and-plaster pesthouse lifted and walking on hundreds of gentle disembodied human hands beneath its foundation. Wrists emerge directly from the underside; no torsos, heads, legs, feet, residents, patients, or staff. The building refused discharge and took its routines into the street; it admits occupied buildings into itself and settles around victims room by room. One door opens inward into absolute black.",
+      "revisionDirection": "Remove every full body and limb other than hands and short wrists; replace the lower fringe with hundreds of non-gory, care-gentle disembodied hands only."
+    }
+  ],
+  "cutoutDirection": "After the master receives independent acceptance, create a cutout by editing that exact master. Preserve canvas dimensions, pose, design, materials, lighting, scale, placement and silhouette. Remove only the background. Output a real RGBA PNG with alpha 0 outside the subject and at all four corners; do not depict checkerboard, ground, shadow, backdrop, text, logo or watermark."
+}

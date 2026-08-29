@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-02",
+  "policy": "The frozen packet remains authoritative. V20 is rejected for hollowing the detached tag instead of its attached receiver. This retry returns to v19 and uses canvas-position disambiguation to edit only the receiver hole at the module root.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-02/prompt-packet.json",
+    "sha256": "16ffd058dbfd73609fed27836f475873696282f6eb29e4acd2dc2c9793d9d2bc"
+  },
+  "revisions": {
+    "borrowed-saint-v21": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/borrowed-saint-concept-master-v19.png",
+      "sourceSha256": "f512327f93a336b593c1dfceb7593818625b649da33b3ad273b902e5c553ce28",
+      "reason": "The only remaining v19 blocker is the hourglass-waisted attached receiver at the third viewer-right module; its detached chamfered tag is already correct and must remain filled blank ivory.",
+      "prompt": "PIXEL-POSITIONED ONE-HOLE EDIT on this exact 1024x1536 Borrowed Saint v19. There are two separate nearby objects on the third viewer-right row. DO NOT EDIT the detached blank ivory chamfered tag at approximately x=865, y=960; it must remain fully filled ivory with four clipped corners. EDIT ONLY the black open receiver attached inside the jaw-module root at approximately x=730, y=960, immediately LEFT of that tag. Replace only this attached receiver's hourglass-waisted black interior with a clean tall chamfered-rectangle opening: two long straight vertical sides with NO waist, short flat top and bottom, and four large diagonal clipped corners, exactly eight edges. Keep the surrounding bone rim integrated into the module. Black backdrop remains visible through this attached opening. Freeze every other pixel: detached tag face and perimeter, bottom hourglass pair, upper side-notch pair, all viewer-left pairs, pelvis mismatch, eight modules/tags, seven jaw loads, materials, lighting, canvas and framing. No hollow tag, no detached open frame, extra hole, plaque, icon, limb, text, floor, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    }
+  }
+}

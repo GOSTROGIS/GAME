@@ -1,0 +1,25 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "veil-coast-kin-masters-batch-01-revision-v3",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast_kin",
+  "basePacketSha256": "eb97a1a39e7554f1e351d3d9a1e2c23eebd25316ea57b0e7049bd0b00297dc2e",
+  "previousRevisionSha256": "8518d8d95211b779fc60c4f8c579c48be1a7a03d858c5b8ad1d0dc929e41f2e6",
+  "referencePolicy": "Use only the inspected canonical Veil-Coast family plate as visual reference. Preserve the frozen base packet's global direction and all canonical fields. These constraints address only v2 preflight blockers and add no canon.",
+  "assets": [
+    {
+      "id": "lantern_gilled_raider",
+      "sourceCandidate": "lantern-gilled-raider-concept-master-v2.png",
+      "outputFile": "lantern-gilled-raider-concept-master-v3.png",
+      "reason": "The v2 contains fish-like protrusions in each aperture, violating the bodyless pressure-notch constraint.",
+      "revisionDirection": "Regenerate the canonical Lantern-Gilled Raider with integrated pulsing gill lanterns. Around the lower silhouette place exactly three flat absolute-black aperture tokens suspended in empty air. Each aperture is a fully closed thin oval with no rim highlight and nothing emerging from it. On the inward edge of each oval, cut exactly one small shallow triangular pressure dent into the black contour; the dent is only negative geometry, not a tooth, head, fin, limb, eye, mouth or creature. Keep one thin incomplete vacated-position contour beside the body. No floor, puddle, summoned form, oval outline glow, extra figure or crop."
+    },
+    {
+      "id": "undertow_harpooner",
+      "sourceCandidate": "undertow-harpooner-concept-master-v2.png",
+      "outputFile": "undertow-harpooner-concept-master-v3.png",
+      "reason": "The v2 current is correctly abstract but cropped at the top and viewer-right edges.",
+      "revisionDirection": "Regenerate the canonical Undertow Harpooner with exactly one off-axis harpoon and one continuous line reaching one exposed anchor knot in a smooth abstract shipless current ribbon. Make the current a compact S-shaped blackwater band entirely behind the upper body, no wider than the subject's full arm span, with at least five percent empty black clearance above, right, left and behind every water tip. The ribbon has no anatomy, shell nodes, lanterns or creature silhouette. Keep the complete full-body subject, both feet, harpoon tip, whole line, knot and every part of the current inside the portrait frame. No floor, contact shadow, boat, wave scene or crop."
+    }
+  ]
+}

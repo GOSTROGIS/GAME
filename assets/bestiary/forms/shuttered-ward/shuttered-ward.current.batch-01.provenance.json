@@ -1,0 +1,296 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-shuttered-ward-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.curtain_listener",
+      "subjectId": "curtain_listener",
+      "familyId": "shuttered_ward",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/shuttered-ward/curtain-listener-v1.png",
+      "sha256": "bd72c14c193b78d9ad17f9d1be31e8da6e4d930951646e42c308d9659e7c1f43",
+      "bytes": 2026211,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "bd72c14c193b78d9ad17f9d1be31e8da6e4d930951646e42c308d9659e7c1f43"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.house_that_cares",
+      "subjectId": "house_that_cares",
+      "familyId": "shuttered_ward",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/shuttered-ward/house-that-cares-v2.png",
+      "sha256": "d212f80b6f01475e413e53ad2d3713025f4e827a0b7f801148094462f8ee0a8b",
+      "bytes": 1760570,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "d212f80b6f01475e413e53ad2d3713025f4e827a0b7f801148094462f8ee0a8b"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.matron_empty_beds",
+      "subjectId": "matron_empty_beds",
+      "familyId": "shuttered_ward",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/shuttered-ward/matron-empty-beds-v2.png",
+      "sha256": "711e6bb676f6d3a4d36e00a6aeb18f9920114dbae73a7ad85faf7e9b5c6d3530",
+      "bytes": 2269382,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "711e6bb676f6d3a4d36e00a6aeb18f9920114dbae73a7ad85faf7e9b5c6d3530"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.matron_empty_beds",
+      "subjectId": "matron_empty_beds",
+      "familyId": "shuttered_ward",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/shuttered-ward/matron-empty-beds-v3.png",
+      "sha256": "5869e0edea9095164c9ddce59624655b9daf4af4afed8ac9815ee1de754d691f",
+      "bytes": 2314681,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "5869e0edea9095164c9ddce59624655b9daf4af4afed8ac9815ee1de754d691f"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.night_physician",
+      "subjectId": "night_physician",
+      "familyId": "shuttered_ward",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/shuttered-ward/night-physician-v2.png",
+      "sha256": "a7403fd1ff5f18a117538d3e27f724b94da2197b2a4951b7c25f5f2f58b916d3",
+      "bytes": 1890595,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a7403fd1ff5f18a117538d3e27f724b94da2197b2a4951b7c25f5f2f58b916d3"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.night_physician",
+      "subjectId": "night_physician",
+      "familyId": "shuttered_ward",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/shuttered-ward/night-physician-v3.png",
+      "sha256": "f32aab072e61b65f93adebf4226fe1e69f5cebb61db7d899afb53fa7c7f9cc57",
+      "bytes": 1465936,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "f32aab072e61b65f93adebf4226fe1e69f5cebb61db7d899afb53fa7c7f9cc57"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.sheet_orderly",
+      "subjectId": "sheet_orderly",
+      "familyId": "shuttered_ward",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/shuttered-ward/sheet-orderly-v2.png",
+      "sha256": "3b5d5f0d0689715db7182993969ea7a37aa1965f885e625711213aac70766c86",
+      "bytes": 1462590,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "3b5d5f0d0689715db7182993969ea7a37aa1965f885e625711213aac70766c86"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.wax_nurse",
+      "subjectId": "wax_nurse",
+      "familyId": "shuttered_ward",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/shuttered-ward/wax-nurse-v1.png",
+      "sha256": "1aadf0a3b5203883b8c8ac5fa8d21e6b839b60558427e52f8a428d729f148fa7",
+      "bytes": 1721282,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "1aadf0a3b5203883b8c8ac5fa8d21e6b839b60558427e52f8a428d729f148fa7"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.wax_nurse",
+      "subjectId": "wax_nurse",
+      "familyId": "shuttered_ward",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/shuttered-ward/wax-nurse-v3.png",
+      "sha256": "5b52b79792858f72e8c7c9c4c02b8e772a4a4c024cadfe39cc2257c88e502ebb",
+      "bytes": 1825209,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "5b52b79792858f72e8c7c9c4c02b8e772a4a4c024cadfe39cc2257c88e502ebb"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

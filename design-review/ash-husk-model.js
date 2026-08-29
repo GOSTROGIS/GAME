@@ -28,7 +28,7 @@
    heights and prints the difference in millimetres.
 
    THE STANDING CONFLICT, restated. The family prompt (rank 1,
-   call_nIgtNVLVAaxYFQ2Pt3fXba2w, FAMILY_LAW.ashbound) requires a torso that
+   external generation identifier redacted, FAMILY_LAW.ashbound) requires a torso that
    is "a narrow vertical archive of cracked clay address drawers". This
    subject's own plate (rank 2) shows an ordinary robed torso carrying ONE
    blank clay tablet. The model follows the plate and REFUSES against the
@@ -54,7 +54,7 @@ export const SUBJECT = {
   family: 'Ashbound',
   rank: 2,
   plate: PLATE.file,
-  promptCall: 'call_nIgtNVLVAaxYFQ2Pt3fXba2w',
+  promptCall: null,
   targetHeightMeters: PLATE.scale.height,
 };
 

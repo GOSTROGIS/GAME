@@ -1,0 +1,184 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-remaining-hands-expansion-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "promptPackets": [
+    {
+      "path": "assets/characters/npcs/remaining-hands/remaining-hands-expansion.batch-01.prompt.json",
+      "sha256": "0d7dd12a6ae060ed64519429deca9fe1c1297b0c37c27acc3db9fcfbffcbc593"
+    },
+    {
+      "path": "assets/characters/npcs/remaining-hands/remaining-hands-expansion.batch-01.revisions-v2.json",
+      "sha256": "396cc1c523965aeb6b6f5dd9c63a6c067489a001bf1ea7a1926f4b364e8c623e"
+    },
+    {
+      "path": "assets/characters/npcs/remaining-hands/remaining-hands-expansion.batch-01.revisions-v3.json",
+      "sha256": "e7aba975284bf6480aae6c9e20223e19ada00bd3b32d837f986090fae05efee3"
+    }
+  ],
+  "records": [
+    {
+      "id": "concept_master.enoch_last_lamplighter",
+      "subjectId": "enoch_last_lamplighter",
+      "familyId": "remaining_hands",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/enoch-last-lamplighter-v1.png",
+      "sha256": "45572e07f55896c259f1b1185e66c39227399f19c7c627398c595b510459cb1e",
+      "bytes": 1723413,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "51235a29d7b0ca6d94e5d199f6ded64b5423b6eb982ae9a2c75dd0d02b94c400",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "generate",
+        "outputSha256": "45572e07f55896c259f1b1185e66c39227399f19c7c627398c595b510459cb1e"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.sister_calve_unlit_hospice",
+      "subjectId": "sister_calve_unlit_hospice",
+      "familyId": "remaining_hands",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/sister-calve-unlit-hospice-v1.png",
+      "sha256": "fcd9f552c08716e6cd3322c81bfb9098264ac95d34c9f9d89f964211e45c0fc9",
+      "bytes": 2145602,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "ea3a2757a4da90adc372af02f4d9f421c49e381ad9a85986ae2d4a863e7ddca5",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "fcd9f552c08716e6cd3322c81bfb9098264ac95d34c9f9d89f964211e45c0fc9"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.tor_vannic_defector_of_dawn",
+      "subjectId": "tor_vannic_defector_of_dawn",
+      "familyId": "remaining_hands",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/tor-vannic-defector-of-dawn-v1.png",
+      "sha256": "a10fc2c3f402049437163eb6ce71713523f13d0f366da0973341eedf2b1d4da0",
+      "bytes": 1756888,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cc76e0f9b63942235f35e7880b9aa19b62c3223693bcc44cebd9ff022dbdfd66",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "generate",
+        "outputSha256": "a10fc2c3f402049437163eb6ce71713523f13d0f366da0973341eedf2b1d4da0"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.king_ash_without_country",
+      "subjectId": "king_ash_without_country",
+      "familyId": "remaining_hands",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/king-ash-without-country-v1.png",
+      "sha256": "73396a77c4e01c009dc3e6155967fc36049f9a8e086a927fe121a65c8e19be05",
+      "bytes": 2006043,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "28efa27778fa41bd25761a506f47b9a32a9a120a6fca09acd0819828b3f9c26c",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "generate",
+        "outputSha256": "73396a77c4e01c009dc3e6155967fc36049f9a8e086a927fe121a65c8e19be05"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.nima_sorn_keeper_of_one_shadow",
+      "subjectId": "nima_sorn_keeper_of_one_shadow",
+      "familyId": "remaining_hands",
+      "rank": "support",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/nima-sorn-keeper-of-one-shadow-v1.png",
+      "sha256": "db9056d7dba31776eb0e9d2e22588f73af0472610b7cb3635eb3e823d8ea1366",
+      "bytes": 1791218,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "ce2d58b8f858e89f28ea6e269e762f7db273f1d2d3f16e832effa43fa7650bce",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "db9056d7dba31776eb0e9d2e22588f73af0472610b7cb3635eb3e823d8ea1366"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.oren_lusk_last_calendarer",
+      "subjectId": "oren_lusk_last_calendarer",
+      "familyId": "remaining_hands",
+      "rank": "support",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/oren-lusk-last-calendarer-v1.png",
+      "sha256": "2b9d9acd89f9a2781d3ca099ca097fa601098b59ca6cbd3b31a2b991988715e8",
+      "bytes": 2062400,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "20dca322cb8a0eb5e9a0776d1a42c3034c30006e837652d35646cb85284f0144",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "generate",
+        "outputSha256": "2b9d9acd89f9a2781d3ca099ca097fa601098b59ca6cbd3b31a2b991988715e8"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

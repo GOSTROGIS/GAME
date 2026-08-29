@@ -1,0 +1,17 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-01-revision-v6",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "aaa954173a043e9b10637fcd18b2c058425612869d3abfbafe83aff3dc2aa4bb",
+  "previousRevisionSha256": "c6701951553bd5c7a1f791c3c11d07b1f387dd980a43b88f8c3b52e8c560e8ee",
+  "assets": [
+    {
+      "id": "wound_scribe_keth",
+      "reference": "wound-scribe-keth-concept-master-v4-rejected.png",
+      "outputFile": "wound-scribe-keth-concept-master-v5.png",
+      "reason": "The edit removed figures but retained centered radial rosettes and a spiral, still violating the non-pictorial and non-symbolic relief gate.",
+      "revisionDirection": "Faithfully preserve Keth v4's entire low asymmetric scar-tissue body, blind front, every support joint and black quill, exactly FOUR separate differently oriented hinged scar flaps, landscape canvas, lighting, backdrop and full framing. Erase all raised content inside all four flaps back to smooth blank tissue first. Then place on each flap one shallow deformation field composed only of several short, roughly parallel, irregular broken tissue ridges traveling from one edge toward another. On each flap the ridges must share no convergence point, form no closed curve, contain no spiral or radial pattern, and stop at unequal lengths; change the overall travel direction from flap to flap. These are physical compression wakes, not images. No raised element may resemble or combine into a face, head, body, animal, plant, shell, sun, starburst, flower, eye, crowd, landscape, object, letter, number, punctuation, rune, icon, glyph or pictogram. No central emblem on any flap. Keep all relief low and tissue-colored. Add nothing else. No book, insect, blood, floor or crop."
+    }
+  ]
+}

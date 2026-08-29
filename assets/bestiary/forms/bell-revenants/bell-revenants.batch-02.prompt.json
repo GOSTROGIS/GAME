@@ -1,0 +1,105 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "bell-revenants-batch-02",
+  "status": "immutable-before-generation",
+  "familyId": "bell_revenants",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/bell-revenants-plate.png"
+  ],
+  "commonDirection": "Use the inspected Bell Revenants family plate only as authoritative family palette, materials, finish, silhouette language, and lighting reference. Create the distinct canonical form below; do not copy the plate representative's complete anatomy unless that form requires it. Family law: consecrated bells remember their ringers so fiercely that memory takes up arms. Palette: aged memory bronze, cold verdigris, restrained ember gold, rain black. Materials: load-bearing cast bronze, green oxidation, weather-black rope, hollow bell cavities, suspended clappers, and sparse memory-shadow only where canon requires it. Silhouette language: ceremonial armored frames interrupted by resonant cavities and rope-limb logic; mechanically plausible and suitable for later 3D measurement. Render exactly one complete polished stylized 3D dark-fantasy MMORPG production concept in three-quarter view with every extremity and mechanic cue visible and generous clearance. Flat near-black neutral opaque backdrop; cold raking studio light; ungraded. No environment, floor, ground plane, pedestal, contact or cast floor shadow, extra figure, narrative scene, text, readable symbols, runes, logo, watermark, franchise resemblance, real religious marks, ordinary living human shorthand, gore, exposed entrails, cute proportions, glossy plastic, baked checkerboard, or transparency.",
+  "assets": [
+    {
+      "id": "bell_without_tower",
+      "name": "The Bell Without a Tower",
+      "rank": "boss",
+      "orientation": "portrait",
+      "masterFile": "bell-without-tower-v1.png",
+      "canonical": {
+        "anatomy": "A great bell walks on the remembered arms of every ringer crushed when its tower fell.",
+        "locomotion": "It cannot turn during a committed advance and brakes by striking the terrain.",
+        "sound": "Memory bronze produces slow impacts whose interval shortens without their volume changing.",
+        "purpose": null,
+        "origin": "A great bell walks on the remembered arms of every ringer crushed when its tower fell.",
+        "mechanic": "Falling Tower",
+        "cue": "A tower-shaped shadow rises upward from the bell.",
+        "counterplay": "Stand inside the shadow's doorway, the only space the memory never crushed."
+      },
+      "formDirection": "Show exactly one colossal free-standing great bell as the central body, with no tower. It walks on many remembered bronze-and-rope human arms arranged as load-bearing radial limbs beneath the bell; keep at least eight complete arms visible but treat them as one collective anatomy, never a crowd of bodies. From behind the bell, one flat rain-black tower-shaped memory shadow rises vertically upward in empty backdrop space. Cut exactly one clear doorway-shaped safe void through the lower center of that shadow. The shadow is not a solid tower or environment. Expose several widening cracks in the bell shell as climbable openings, but no gore, crushed people, ground impact, building, floor, or scene."
+    },
+    {
+      "id": "rope_larva",
+      "name": "Rope Larva",
+      "rank": "regular",
+      "orientation": "landscape",
+      "masterFile": "rope-larva-v1.png",
+      "canonical": {
+        "anatomy": "A knot of wet bell rope contains a small clapper-shaped skeleton.",
+        "locomotion": "It inches upward along sounds as if they were hanging cords.",
+        "sound": "Fibers creak above the listener regardless of its location.",
+        "purpose": "It gathers loose ringing memories for larger revenants.",
+        "origin": "Frayed tower ropes were buried while still remembering the hands that pulled them.",
+        "mechanic": "Climb the Toll",
+        "cue": "A vertical ripple rises from the last ringing impact.",
+        "counterplay": "Move beneath the ripple and cut the larva when it reaches the false ceiling."
+      },
+      "formDirection": "Show one low larval knot made entirely from wet weather-black bell rope. Inside its open central knot, suspend exactly one small fully visible clapper-shaped bronze skeleton; no flesh, ordinary insect body, or extra skeleton. The rope body arches upward along one thin vertical resonant ripple attached to its back, as if climbing sound. Terminate that ripple in empty space with no ceiling or beam; keep one exposed rope neck at the ripple's upper reach as the cut point. No ground impact, burial soil, cocoon scene, extra larva, text, floor, or environment."
+    },
+    {
+      "id": "cracked_acolyte",
+      "name": "Cracked Acolyte",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "cracked-acolyte-v1.png",
+      "canonical": {
+        "anatomy": "A bell crack continues down through its body as a luminous missing seam.",
+        "locomotion": "It advances in two halves that meet only at each toll.",
+        "sound": "Left and right footfalls arrive from opposite sides of the listener.",
+        "purpose": "It searches settlements for bronze able to mend its remembered bell.",
+        "origin": "An acolyte held a cracked handbell to his chest when the tower answered too loudly.",
+        "mechanic": "Seam Toll",
+        "cue": "Both halves lean away while the central crack brightens.",
+        "counterplay": "Pass through the seam before the toll reunites the halves."
+      },
+      "formDirection": "Show one acolyte-shaped ceremonial bell frame divided into exactly two complete left/right bronze halves by one continuous luminous empty crack from crown through chest, pelvis, and between the feet. Both halves lean visibly away from the bright central seam and connect only at two tiny resonant bridge points poised to meet on the next toll. The gap must be wide enough to read as traversable, with no flesh or gore. Integrate one small cracked handbell into the chest origin cue without creating a third body. No settlement, ordinary robe, religious symbol, extra split, floor, or environment."
+    },
+    {
+      "id": "echo_sutler",
+      "name": "Echo Sutler",
+      "rank": "specialist",
+      "orientation": "portrait",
+      "masterFile": "echo-sutler-v1.png",
+      "canonical": {
+        "anatomy": "Small trade bells hang from shelves growing through a hollow torso.",
+        "locomotion": "It steps only when an unseen customer places a memory on a shelf.",
+        "sound": "Coins ring in currencies removed from every ledger.",
+        "purpose": "It exchanges warm memories among revenants that can no longer make their own.",
+        "origin": "A camp seller accepted a bell's remembered payment after every soldier had died.",
+        "mechanic": "Memory Price",
+        "cue": "One shelf displays a scene taken from the current location.",
+        "counterplay": "Break the empty price bell, not the displayed memory."
+      },
+      "formDirection": "Show one hollow ceremonial trader-frame with several horizontal bronze shelves physically passing through and supporting the open torso. Hang multiple small plain trade bells from the shelves. Make exactly one bell unmistakably empty and clapperless—the breakable price bell—while all others contain simple clappers. On exactly one shelf, display one flat restrained ember-gold memory reflection as an abstract slice of the subject's own current studio silhouette, not an external location or narrative scene. Keep shelves load-bearing and every bell visible. No coins with marks, currency text, shop, camp, customer, merchandise pile, floor, or environment."
+    },
+    {
+      "id": "vesper_engine",
+      "name": "Vesper Engine",
+      "rank": "elite",
+      "orientation": "landscape",
+      "masterFile": "vesper-engine-v1.png",
+      "canonical": {
+        "anatomy": "Three nested torsos rotate like a carillon around an absent central ringer.",
+        "locomotion": "It turns through triangular routes whose corners are marked by delayed tolls.",
+        "sound": "Three evening bells sound at incompatible distances.",
+        "purpose": "It synchronizes revenant migrations across the Reach.",
+        "origin": "Three villages rang dusk at once during a storm and their ringers met inside the sound.",
+        "mechanic": "Triune Vesper",
+        "cue": "Three tower shadows mark the next route corners.",
+        "counterplay": "Silence one corner to collapse the triangle into a punishable line."
+      },
+      "formDirection": "Show exactly THREE separate nested ceremonial bronze torso frames rotating concentrically like one carillon around one clearly empty ringer-shaped central void. Keep all three torsos fully countable, mechanically connected by bearings and weather-black ropes, and do not add a fourth torso or visible person. Around the one engine, attach exactly three flat rain-black tower-shaped shadow markers in empty space, positioned as the three corners of a clear triangular route; join them only with three very thin resonant lines. One corner shadow may be partially muted/dissolving as the counterplay cue. Shadows are subject-bound optical markers, not solid buildings or a landscape. No actual village, towers, storm, floor route, text, or scene."
+    }
+  ],
+  "cutoutDirection": "After a master receives two independent non-generator passes, edit that exact accepted master only to remove its studio background. Preserve canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact-count cues, and RGB identity. Output genuine RGBA with alpha 0 outside, alpha 255 in subject interiors, partial alpha only on true antialiased fine edges; no painted checkerboard, floor, shadow, matte, halo, text, logo, or watermark."
+}

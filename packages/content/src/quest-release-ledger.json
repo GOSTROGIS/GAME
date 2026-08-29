@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "sable-reach-5000",
+  "targetAcceptedQuests": 5000,
+  "standardBatchSize": 12,
+  "finalBatchSize": 8,
+  "expectedBatchCount": 417,
+  "minimumStatefulContinuations": 2000,
+  "portfolioTargets": {
+    "main_cosmic": 120,
+    "faction_schism": 480,
+    "character_guest_follower": 900,
+    "regional": 1200,
+    "settlement": 1000,
+    "profession_systemic": 600,
+    "world_state_reaction": 400,
+    "relic_creature_ecology": 300
+  },
+  "acceptedBatches": [
+    {
+      "id": "quest-batch-0001",
+      "status": "accepted",
+      "packetPath": "design-review/quest-release-evidence/quest-batch-0001.packet.json",
+      "packetSha256": "b909ef132d790bd854f04754874d5593cc18f3d382ee4c4cbd4bd72bc1219b87",
+      "collisionReportPath": "design-review/quest-release-evidence/quest-batch-0001.collision.json",
+      "collisionReportSha256": "9e4dc0af3a86822e381e4d9b04d596f68b1a920cf9ca0ebcd2474486b99946de",
+      "stateReportPath": "design-review/quest-release-evidence/quest-batch-0001.state.json",
+      "stateReportSha256": "0a8c4705dacf9183b7c4362ff20756ac4904654b15974f6ade7c2263bccffe21",
+      "quests": [
+        {"id":"main_noon_came_bleeding","portfolio":"main_cosmic","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"main_the_saint_cast_two_shadows","portfolio":"main_cosmic","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"main_the_bell_that_forgot_you","portfolio":"main_cosmic","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"main_the_door_in_mothers_rib","portfolio":"main_cosmic","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"main_parliament_of_one_mouth","portfolio":"main_cosmic","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"main_archive_of_open_wounds","portfolio":"main_cosmic","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"main_mercy_has_a_mouth","portfolio":"main_cosmic","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"main_the_engine_with_an_off_switch","portfolio":"main_cosmic","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"main_a_sun_small_enough","portfolio":"main_cosmic","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"side_the_disease_called_grief","portfolio":"character_guest_follower","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"side_seven_lamps_for_six_streets","portfolio":"settlement","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"side_the_hospice_grows_a_heart","portfolio":"profession_systemic","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]}
+      ]
+    },
+    {
+      "id": "quest-batch-0002",
+      "status": "accepted",
+      "packetPath": "design-review/quest-release-evidence/quest-batch-0002.packet.json",
+      "packetSha256": "dd741db6b08fe4daae8b7cc8aaf59464cfa6da8ce88fcdbea2ab1f114c528d39",
+      "collisionReportPath": "design-review/quest-release-evidence/quest-batch-0002.collision.json",
+      "collisionReportSha256": "6323903a3e46a13804167e2e4f65f9f5380e6485571b97be8cede92af09efff3",
+      "stateReportPath": "design-review/quest-release-evidence/quest-batch-0002.state.json",
+      "stateReportSha256": "571735f0ec684aa9d6219d2f7c08c50af44e8139d47c50ef66d02a72531bf588",
+      "quests": [
+        {"id":"side_the_dead_vote_no","portfolio":"settlement","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"]},
+        {"id":"aftermath_house_outlived_tenants","portfolio":"world_state_reaction","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+        {"id":"aftermath_census_of_absences","portfolio":"settlement","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+        {"id":"aftermath_purity_blooms_at_dusk","portfolio":"relic_creature_ecology","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+        {"id":"aftermath_cart_accepts_office","portfolio":"settlement","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+        {"id":"aftermath_village_arrives_before_dead","portfolio":"world_state_reaction","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+        {"id":"aftermath_every_door_mothers_voice","portfolio":"faction_schism","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+        {"id":"aftermath_roof_made_of_weather","portfolio":"regional","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+        {"id":"aftermath_child_older_than_road","portfolio":"character_guest_follower","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+        {"id":"aftermath_three_hands_one_lever","portfolio":"profession_systemic","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+        {"id":"aftermath_maintenance_window_miracle","portfolio":"profession_systemic","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+        {"id":"aftermath_person_engine_must_outlive","portfolio":"character_guest_follower","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]}
+      ]
+    }
+  ],
+  "inReviewBatches": [
+    {
+      "id": "quest-batch-0003",
+      "status": "open_for_wave_03",
+      "quests": [
+        { "id": "aftermath_cost_that_learned_to_vote" }
+      ]
+    }
+  ]
+}

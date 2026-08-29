@@ -1,0 +1,179 @@
+{
+  "schema": "SableReachExpansionConceptPromptPacketV1",
+  "batchId": "lucent-synod-expansion-batch-02",
+  "status": "immutable-before-generation",
+  "familyId": "lucent_procession",
+  "formsInCanonicalOrder": [
+    "noon_bailiff",
+    "unbroken_note_engine",
+    "reliquary_of_the_last_breath",
+    "gold_shutter_penitent"
+  ],
+  "sources": [
+    {
+      "path": "packages/content/src/narrative.data.js",
+      "sha256": "b8dfd71815898ab6146975c9bdf91d6eb1c62742e0f0007b4b7791eaf3f59415"
+    },
+    {
+      "path": "design-review/kit/hm-art-law.js",
+      "sha256": "26e5a03220657c67b520c7ba163644e3848ed7f622f2b2beb3ab4b12a97ed0ff"
+    }
+  ],
+  "familyReferenceInspection": {
+    "status": "all-relevant-local-family-references-inspected-full-resolution-before-generation",
+    "directPlate": null,
+    "reasonNoPlate": "No direct Lucent Synod or Lucent Procession family plate exists in the repository. Current narrative canon and global art law remain semantic authority; selected batch-01 Lucent masters constrain shared family finish only and cannot add anatomy or mechanics.",
+    "observedVisualLanguage": "White-gold and ivory cathedral shells; restrained sunless-gold structure; deep black glass, flat shadow and negative-space cavities; mechanically load-bearing reliquary construction; narrow mature proportions or exact non-humanoid chassis; serenely finished outer faces with scorched inward faces; confined dawn behind glass rather than external aura; incomplete or asymmetrical structural cues isolated on a neutral black studio field.",
+    "references": [
+      {
+        "path": "work/concept-art-production/lucent-synod-expansion/batch-01/arch-lumen-seraphel-orr-concept-master-v1.png",
+        "sha256": "734211d497574ad74bc2e3cb4c09ecd4bb2d2133b5bed383b26018a4b2c18c96",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "white-gold officer shell, veil, black-glass confinement and scorched inward construction only"
+      },
+      {
+        "path": "work/concept-art-production/lucent-synod-expansion/batch-01/canoness-vael-kindly-knife-concept-master-v2.png",
+        "sha256": "82968872a1f807d516f3c456ad1b02711385d8a26e89648d57279ed153326ee4",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "ivory-gold articulated armor, black seams and mechanical devotional silhouette only"
+      },
+      {
+        "path": "work/concept-art-production/lucent-synod-expansion/batch-01/deacon-halix-bell-of-noon-concept-master-v1.png",
+        "sha256": "54d4827ce79859b6e27d1523c0ea9fca9c66316335516b14438ab272009b25f3",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "bronze-white Lucent acoustic machinery, hovering isolation and confined noon light only"
+      },
+      {
+        "path": "work/concept-art-production/lucent-synod-expansion/batch-01/saint-vespera-second-shadow-concept-master-v3.png",
+        "sha256": "8a6ced889dcc05396904aac859f502c3e8ef134fa145a350e768deb0f2a58381",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "one physically attached flat prophetic shadow and white-gold veil language only"
+      },
+      {
+        "path": "work/concept-art-production/lucent-synod-expansion/batch-01/apse-seraph-concept-master-v1.png",
+        "sha256": "6c4e9758c0b9fcf416a6860d2439c43d5b5b6ab2bd7d9322aa635c8dd97ada06",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "non-humanoid white-gold architectural anatomy and measurable black vacancies only"
+      },
+      {
+        "path": "work/concept-art-production/lucent-synod-expansion/batch-01/misericord-of-borrowed-pain-concept-master-v1.png",
+        "sha256": "ba7ae9663cc5586d9bd331ea30bf918862cdd4ee66d57d792bb0bfbe6cbf16a1",
+        "dimensions": { "width": 1122, "height": 1402 },
+        "scope": "hollow medical-reliquary construction, empty cradle surfaces and restrained internal dawn only"
+      }
+    ]
+  },
+  "referencePolicy": "Each call receives only the explicitly listed local Lucent family reference images. They are construction-and-finish references, never edit targets, pose templates or permission to copy form-specific anatomy. The canonical record below overrides every visual reference.",
+  "promptCompilation": "For each asset, the exact generation prompt is inputRole followed by two newline characters, commonDirection, two newline characters, and masterDirection. None of those fields may change after its first call; any correction requires a separate immutable revision packet and a versioned candidate.",
+  "inputRole": "Use case: stylized-concept. The supplied local images are already-inspected family construction and finish references only. Create a new canonical subject; do not edit, combine, trace or copy their pose or form-specific anatomy.",
+  "commonDirection": "Asset type: canonical individual expansion-creature production concept master for later 3D design. Render exactly one complete original Lucent Procession subject in polished stylized 3D dark-fantasy MMORPG production quality. Obey only the selected subject's canonical record. Shared family language is serene white-gold or bronze-white cathedral construction, sunless-gold load-bearing hardware, deep black glass or negative space, restrained dawn confined behind material, and inward-facing surfaces scorched while outward-facing surfaces remain immaculate. Do not add a veil, wing, halo, humanoid limb, bell, seat, arch, shadow, or other family motif unless that subject's canon requires it. Keep all exact counts and mechanic evidence independently readable and physically integrated or minimally subject-bound. Three-quarter production view, centered, complete silhouette with generous clearance. Portrait 1024 by 1536 composition. Flat near-black neutral opaque studio backdrop; cold raking studio light; ungraded measurement-friendly presentation. No environment, settlement, court, church, hospital, battlefield, road, floor, ground plane, terrain, pedestal, contact or cast floor shadow, unrelated extra creature or person, narrative scene, caption, UI, text, letter, numeral, rune, music notation, readable legal or religious symbol, real religious mark, logo, watermark, franchise resemblance, generic angel, ordinary knight, bright aura, glossy plastic, gore, exposed entrails, baked checkerboard, transparency, or crop.",
+  "assets": [
+    {
+      "id": "noon_bailiff",
+      "name": "Noon Bailiff",
+      "kind": "expansion_creature",
+      "familyId": "lucent_procession",
+      "rank": "regular",
+      "combatRole": "hunter",
+      "orientation": "portrait-2:3",
+      "masterFile": "noon-bailiff-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/lucent-procession/noon-bailiff-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES[noon_bailiff].pipeline.conceptMaster",
+      "referenceFiles": [
+        "work/concept-art-production/lucent-synod-expansion/batch-01/arch-lumen-seraphel-orr-concept-master-v1.png",
+        "work/concept-art-production/lucent-synod-expansion/batch-01/saint-vespera-second-shadow-concept-master-v3.png"
+      ],
+      "canonical": {
+        "anatomy": "A faceless bronze officer balanced on one vertical gavel-limb, with a second body made only from its confiscated shadow.",
+        "ecology": "It serves warrants against actions the restored law predicts a person will eventually commit.",
+        "origin": "A mortal court asked daylight to reveal perfect evidence; the answer arrived after the courthouse had no defendants left.",
+        "mechanic": "prospective_arrest",
+        "cue": "The flat shadow completes the player's next animation before the solid Bailiff moves.",
+        "counterplay": "Begin one action and cancel into a different facing during the silent verdict gap.",
+        "narrativeUse": "Forces settlements to decide whether preventing certain harm justifies punishment before choice.",
+        "visualBrief": "Narrow bronze-white herald, one gavel leg, one attached prophetic shadow, mouthless judicial veil, no weapon or written warrant."
+      },
+      "masterDirection": "Show exactly one complete narrow bronze-white Noon Bailiff as the only solid body. Its face is fully sealed by one mouthless featureless judicial veil: no eyes, mouth, face, text, insignia or ordinary judge costume. The human-derived upper chassis has empty hands and immaculate outward armor with scorched inward seams, but its entire lower load path converges into EXACTLY ONE central vertical gavel-limb. That single leg ends in one transverse gavel-head foot that is integral anatomy and remains fully visible; there is no second leg, second foot, held weapon or separate gavel. Attach EXACTLY ONE prophetic second body made only from one flat near-black confiscated-shadow silhouette, physically fused to the gavel-limb by a short broad shadow isthmus with no hidden endpoint. The shadow is human-derived and performs one complete prop-free turn-and-reaching arrest gesture half an action ahead while the solid Bailiff remains at the prior neutral phase and different facing; this is one mechanic preview, not a companion or duplicate. Keep the solid officer, one gavel-limb, entire attached shadow, both facings and all extremities floating in black clearance. No player, defendant, warrant, paper, scales, courtroom, floor, rope, cast floor shadow, second shadow, extra limb, weapon, text, symbol, glow aura, or scene."
+    },
+    {
+      "id": "unbroken_note_engine",
+      "name": "Engine of the Unbroken Note",
+      "kind": "expansion_creature",
+      "familyId": "lucent_procession",
+      "rank": "miniboss",
+      "combatRole": "artillery",
+      "orientation": "portrait-2:3",
+      "masterFile": "unbroken-note-engine-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/lucent-procession/unbroken-note-engine-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES[unbroken_note_engine].pipeline.conceptMaster",
+      "referenceFiles": [
+        "work/concept-art-production/lucent-synod-expansion/batch-01/deacon-halix-bell-of-noon-concept-master-v1.png"
+      ],
+      "canonical": {
+        "anatomy": "A hovering organ of thirteen pale pipes arranged around one black silent pipe that is physically unable to sound.",
+        "ecology": "It stabilizes failing natural law by holding one note until local change becomes impossible.",
+        "origin": "Deacon Halix commissioned a choir that could never forget its pitch; the first performance also prevented its listeners from aging, healing, or leaving.",
+        "mechanic": "fixed_state_amen",
+        "cue": "Twelve sounding pipes frost while the single black pipe remains warm and silent.",
+        "counterplay": "Route an environmental sound through the black pipe to introduce a lawful rest into the note.",
+        "narrativeUse": "May freeze a dying village safely forever or release it into accumulated centuries at once.",
+        "visualBrief": "Angelic organ-engine, exactly thirteen countable pipes with one black silent exception, restrained light, no floating notation or choir scene."
+      },
+      "masterDirection": "Show exactly one complete hovering organ-engine with EXACTLY THIRTEEN and only thirteen separately countable load-bearing pipes total. EXACTLY TWELVE pipes are pale bronze-white sounding pipes arranged around the one exception; each of those twelve has a restrained visible frost rim and connects to one shared scorched black-glass pressure manifold. EXACTLY ONE pipe is matte black, warm, entirely free of frost, and silent. Place that one black pipe off-center but fully exposed as the unique counterplay route: its bore remains open from end to end, yet it is visibly disconnected from the engine's own pressure manifold so it cannot sound by itself and could receive an outside sound. No fourteenth pipe, hidden pipe, decorative mini-pipe, mouth, face, humanoid torso, choir or notation. Use white-gold structural braces and confined dawn only inside the twelve active pressure seams. Float the entire engine with black clearance around every pipe mouth and below all machinery. No keyboard, musical score, notes, staff lines, performer, church organ room, village, ice floor, sound rings, text, numeral, aura, or scene."
+    },
+    {
+      "id": "reliquary_of_the_last_breath",
+      "name": "Reliquary of the Last Breath",
+      "kind": "expansion_creature",
+      "familyId": "lucent_procession",
+      "rank": "elite",
+      "combatRole": "summoner",
+      "orientation": "portrait-2:3",
+      "masterFile": "reliquary-of-the-last-breath-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/lucent-procession/reliquary-of-the-last-breath-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES[reliquary_of_the_last_breath].pipeline.conceptMaster",
+      "referenceFiles": [
+        "work/concept-art-production/lucent-synod-expansion/batch-01/misericord-of-borrowed-pain-concept-master-v1.png"
+      ],
+      "canonical": {
+        "anatomy": "A wingless floating chest whose ribs are rows of sealed glass breath-vials surrounding one intentionally empty cradle.",
+        "ecology": "It collects final breaths and rebuilds useful dead as idealized versions stripped of inconvenient loyalties.",
+        "origin": "A plague hospice donated its last exhalations to the promised dawn and discovered the contract did not define who would breathe them next.",
+        "mechanic": "idealized_return",
+        "cue": "One empty cradle-vial clouds while all occupied vials clear.",
+        "counterplay": "Break only the empty vial, causing the attempted resurrection to return the target's refused memory instead of its body.",
+        "narrativeUse": "Provides resurrection that can save a beloved character while editing why they mattered.",
+        "visualBrief": "Beautiful white-gold reliquary chest, many sealed vials, one conspicuous empty cradle, no corpse, spirit, labels, or readable scripture."
+      },
+      "masterDirection": "Show exactly one complete wingless floating Reliquary of the Last Breath with no humanoid body, limbs or occupant. Its white-gold chest shell opens into one rib-like cage built from many separately traceable rows of sealed clear glass breath-vials; do not impose or imply an exact total beyond many, and add no labels or marks. Every occupied vial remains optically clear and sealed, containing only one restrained nonfigurative pale breath meniscus or condensation bead—never a face, spirit, person, organ or picture. At the structural center place EXACTLY ONE conspicuous intentionally empty cradle-vial, larger only enough to read as the unique cradle. That empty vial is currently clouding from within while every occupied vial stays clear. Keep the cloud entirely inside its glass, make the empty cradle directly exposed and breakable, and preserve black clearance behind it. Confine dawn to tiny black-glass joints and scorch inward shell faces. The whole chest floats with its full lid, ribs, vial ends and lower shell inside frame. No wing, corpse, resurrected body, ghost, bed, medical room, scripture, label, text, number, second empty cradle, broken glass, floor, aura, or scene."
+    },
+    {
+      "id": "gold_shutter_penitent",
+      "name": "Gold-Shutter Penitent",
+      "kind": "expansion_creature",
+      "familyId": "lucent_procession",
+      "rank": "regular",
+      "combatRole": "bruiser",
+      "orientation": "portrait-2:3",
+      "masterFile": "gold-shutter-penitent-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/lucent-procession/gold-shutter-penitent-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES[gold_shutter_penitent].pipeline.conceptMaster",
+      "referenceFiles": [
+        "work/concept-art-production/lucent-synod-expansion/batch-01/canoness-vael-kindly-knife-concept-master-v2.png",
+        "work/concept-art-production/lucent-synod-expansion/batch-01/arch-lumen-seraphel-orr-concept-master-v1.png"
+      ],
+      "canonical": {
+        "anatomy": "A kneeling armored body whose torso is a stack of counterweighted shutters around a dangerous slice of real sunrise.",
+        "ecology": "It walks ahead of processions, testing which local adaptations survive measured exposure.",
+        "origin": "Volunteers once wore the shutters to ration holy light; the devices continued their pilgrimage after the volunteers were purified away.",
+        "mechanic": "absolution_exposure",
+        "cue": "The lowest counterweight rises while exactly one torso shutter begins to open.",
+        "counterplay": "Strike the rising weight from the dark side to close the shutter without touching the dawn slice.",
+        "narrativeUse": "Can cure shadow mutations or erase the people whose lives depend on them.",
+        "visualBrief": "Ominous kneeling angelic armor with stacked mechanical shutters, one narrow sunrise seam, readable weights, no occupant or blazing aura."
+      },
+      "masterDirection": "Show exactly one complete hollow Gold-Shutter Penitent in a committed kneeling pose. It is an immaculate ivory-and-sunless-gold armored body with no occupant, flesh, face or visible person; black emptiness remains inside every articulated joint. Its torso is entirely replaced by a vertical stack of several separately traceable counterweighted mechanical shutters around one confined dangerous slice of real sunrise. EXACTLY ONE torso shutter—the lowest active shutter—has only begun to open, producing exactly one narrow sunrise seam; every other shutter remains fully closed and blocks all other light. Show the linked LOWEST counterweight visibly rising above its bottom stop at the cue moment, directly exposed on the subject's dark side and mechanically connected to that single opening shutter. Other counterweights remain down and subordinate. Keep the dawn slice inside the seam with no external beam or aura. Preserve two kneeling lower limbs, the full empty armor, shutter hinges, weight linkage, dark-side strike route and black clearance around every extremity. No occupant, volunteer, extra open shutter, second light seam, wing, weapon, sun disk, procession, floor, prayer pose, text, cross, blaze, cast shadow, or scene."
+    }
+  ],
+  "cutoutDirection": "Cutouts are outside this assignment. After a master later receives two independent non-generator passes, edit only that exact accepted master to remove the studio background while preserving canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact cues and RGB identity. Output genuine RGBA with no checkerboard, matte, halo, post-processing, floor, text, logo or watermark."
+}

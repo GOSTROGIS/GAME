@@ -1,0 +1,783 @@
+{
+  "schemaVersion": 1,
+  "kind": "state-reachability-report",
+  "batchId": "quest-batch-0002",
+  "packetSha256": "dd741db6b08fe4daae8b7cc8aaf59464cfa6da8ce88fcdbea2ab1f114c528d39",
+  "verdict": "PASS",
+  "quests": [
+    {
+      "id": "side_the_dead_vote_no",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "public_origin_truth",
+          "mode": "all-values",
+          "values": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "dead_settlement_claims",
+          "values": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "public_origin_truth",
+          "mode": "all-values",
+          "writerQuestId": "main_archive_of_open_wounds",
+          "writerValues": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ],
+          "admittedValues": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "aftermath_house_outlived_tenants",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "hearthmere_restored_tenancy",
+          "values": [
+            "present_use_appealable_deed",
+            "inherited_title_with_tenant_terms",
+            "house_public_shelter_person"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "writerQuestId": "main_noon_came_bleeding",
+          "writerValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "admittedValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "aftermath_census_of_absences",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "hearthmere_absence_citizenship",
+          "values": [
+            "shadows_gain_separate_seats",
+            "shadows_are_protected_dependants",
+            "mobile_absence_district_created"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "writerQuestId": "main_noon_came_bleeding",
+          "writerValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "admittedValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "writerQuestId": "side_seven_lamps_for_six_streets",
+          "writerValues": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ],
+          "admittedValues": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "aftermath_purity_blooms_at_dusk",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        },
+        {
+          "key": "vael_definition_of_care",
+          "mode": "all-values",
+          "values": [
+            "grief_retained_function_restored",
+            "grief_removed_spouse_erased",
+            "memory_shared_with_vael"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "ecology",
+          "key": "hearthmere_purity_ecology",
+          "values": [
+            "resident_cultivator_liability",
+            "public_seed_licensing",
+            "sterile_last_generation"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "writerQuestId": "main_noon_came_bleeding",
+          "writerValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "admittedValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "vael_definition_of_care",
+          "mode": "all-values",
+          "writerQuestId": "side_the_disease_called_grief",
+          "writerValues": [
+            "grief_retained_function_restored",
+            "grief_removed_spouse_erased",
+            "memory_shared_with_vael"
+          ],
+          "admittedValues": [
+            "grief_retained_function_restored",
+            "grief_removed_spouse_erased",
+            "memory_shared_with_vael"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "aftermath_cart_accepts_office",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        },
+        {
+          "key": "hearthmere_absence_citizenship",
+          "mode": "all-values",
+          "values": [
+            "shadows_gain_separate_seats",
+            "shadows_are_protected_dependants",
+            "mobile_absence_district_created"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "hearthmere_tool_precedent",
+          "values": [
+            "exposure_controls_standing",
+            "least_represented_controls_precedent",
+            "appealable_cart_discretion"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "writerQuestId": "main_noon_came_bleeding",
+          "writerValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "admittedValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "writerQuestId": "side_seven_lamps_for_six_streets",
+          "writerValues": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ],
+          "admittedValues": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "hearthmere_absence_citizenship",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_census_of_absences",
+          "writerValues": [
+            "shadows_gain_separate_seats",
+            "shadows_are_protected_dependants",
+            "mobile_absence_district_created"
+          ],
+          "admittedValues": [
+            "shadows_gain_separate_seats",
+            "shadows_are_protected_dependants",
+            "mobile_absence_district_created"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "aftermath_village_arrives_before_dead",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "nacre_nonsequential_kinship",
+          "values": [
+            "kinship_separated_from_authority",
+            "released_claim_ancestral_leadership",
+            "village_treated_as_foreign_polity"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "writerQuestId": "main_the_door_in_mothers_rib",
+          "writerValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "admittedValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "aftermath_every_door_mothers_voice",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        },
+        {
+          "key": "nacre_nonsequential_kinship",
+          "mode": "all-values",
+          "values": [
+            "kinship_separated_from_authority",
+            "released_claim_ancestral_leadership",
+            "village_treated_as_foreign_polity"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "nacre_exit_rights",
+          "values": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "writerQuestId": "main_the_door_in_mothers_rib",
+          "writerValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "admittedValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "nacre_nonsequential_kinship",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_village_arrives_before_dead",
+          "writerValues": [
+            "kinship_separated_from_authority",
+            "released_claim_ancestral_leadership",
+            "village_treated_as_foreign_polity"
+          ],
+          "admittedValues": [
+            "kinship_separated_from_authority",
+            "released_claim_ancestral_leadership",
+            "village_treated_as_foreign_polity"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "aftermath_roof_made_of_weather",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        },
+        {
+          "key": "nacre_exit_rights",
+          "mode": "all-values",
+          "values": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "nacre_weather_custody",
+          "values": [
+            "village_private_storm_rationed",
+            "farms_hold_weather_priority",
+            "watershed_council_governs_roof"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "writerQuestId": "main_the_door_in_mothers_rib",
+          "writerValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "admittedValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "nacre_exit_rights",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_every_door_mothers_voice",
+          "writerValues": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ],
+          "admittedValues": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "aftermath_child_older_than_road",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        },
+        {
+          "key": "nacre_exit_rights",
+          "mode": "all-values",
+          "values": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ]
+        },
+        {
+          "key": "nacre_weather_custody",
+          "mode": "all-values",
+          "values": [
+            "village_private_storm_rationed",
+            "farms_hold_weather_priority",
+            "watershed_council_governs_roof"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "nacre_external_route",
+          "values": [
+            "ancestral_road_restored",
+            "road_forgetting_upheld",
+            "present_obligation_route_constituted"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "writerQuestId": "main_the_door_in_mothers_rib",
+          "writerValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "admittedValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "nacre_exit_rights",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_every_door_mothers_voice",
+          "writerValues": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ],
+          "admittedValues": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "nacre_weather_custody",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_roof_made_of_weather",
+          "writerValues": [
+            "village_private_storm_rationed",
+            "farms_hold_weather_priority",
+            "watershed_council_governs_roof"
+          ],
+          "admittedValues": [
+            "village_private_storm_rationed",
+            "farms_hold_weather_priority",
+            "watershed_council_governs_roof"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "aftermath_three_hands_one_lever",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "all-values",
+          "values": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "dawn_control_identity",
+          "values": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "all-values",
+          "writerQuestId": "main_the_engine_with_an_off_switch",
+          "writerValues": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ],
+          "admittedValues": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "aftermath_maintenance_window_miracle",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "all-values",
+          "values": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ]
+        },
+        {
+          "key": "dawn_control_identity",
+          "mode": "all-values",
+          "values": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "dawn_maintenance_constitution",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "all-values",
+          "writerQuestId": "main_the_engine_with_an_off_switch",
+          "writerValues": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ],
+          "admittedValues": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "dawn_control_identity",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_three_hands_one_lever",
+          "writerValues": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ],
+          "admittedValues": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "aftermath_person_engine_must_outlive",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "value-precondition",
+          "values": [
+            "player_holds_off_switch"
+          ]
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "dawn_mortal_succession",
+          "values": [
+            "three_person_succession",
+            "jorem_has_enforceable_resignation",
+            "mortal_office_left_vacant"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "value-precondition",
+          "writerQuestId": "main_the_engine_with_an_off_switch",
+          "writerValues": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ],
+          "admittedValues": [
+            "player_holds_off_switch"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_maintenance_window_miracle",
+          "writerValues": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ],
+          "admittedValues": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-ashbound-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.ash_husk",
+      "subjectId": "ash_husk",
+      "familyId": "ashbound",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ashbound/ash-husk-v1.png",
+      "sha256": "f7a45ecfe869092745de40b7288556b4a846a72ce014c9feb80e157e6b7b6175",
+      "bytes": 2044792,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "f7a45ecfe869092745de40b7288556b4a846a72ce014c9feb80e157e6b7b6175"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.ash_tenant",
+      "subjectId": "ash_tenant",
+      "familyId": "ashbound",
+      "rank": "regular",
+      "role": "transparent_cutout",
+      "path": "assets/bestiary/forms/ashbound/ash-tenant-v1-cutout.png",
+      "sha256": "4c670e802ace5155805981cba88bebbdb25bd0b02bcb2e5236ee90d06bf5feed",
+      "bytes": 1785983,
+      "dimensions": {
+        "width": 1024,
+        "height": 1535
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "4c670e802ace5155805981cba88bebbdb25bd0b02bcb2e5236ee90d06bf5feed"
+      },
+      "sourceReferences": [
+        "assets/bestiary/forms/ashbound/ash-tenant-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.ash_tenant",
+      "subjectId": "ash_tenant",
+      "familyId": "ashbound",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ashbound/ash-tenant-v1.png",
+      "sha256": "ccc4e4140841b4bfacc7e680deba592f9db3dfa90cda500e645ddbd79abf9fe5",
+      "bytes": 1662140,
+      "dimensions": {
+        "width": 1024,
+        "height": 1535
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "ccc4e4140841b4bfacc7e680deba592f9db3dfa90cda500e645ddbd79abf9fe5"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.cinder_mourner",
+      "subjectId": "cinder_mourner",
+      "familyId": "ashbound",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ashbound/cinder-mourner-v1.png",
+      "sha256": "bb7687ab0d1352a496974cac99d88ba58b238a1cc416a5aa61e49e990aa5ef8a",
+      "bytes": 1729282,
+      "dimensions": {
+        "width": 1023,
+        "height": 1537
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "bb7687ab0d1352a496974cac99d88ba58b238a1cc416a5aa61e49e990aa5ef8a"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.ledger_crawler",
+      "subjectId": "ledger_crawler",
+      "familyId": "ashbound",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ashbound/ledger-crawler-v1.png",
+      "sha256": "b60057fe8906e7689135ff60f87413a2a2a2efa6d9058eefb68b8ed3bfd8d860",
+      "bytes": 2039075,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "b60057fe8906e7689135ff60f87413a2a2a2efa6d9058eefb68b8ed3bfd8d860"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.pyre_bailiff",
+      "subjectId": "pyre_bailiff",
+      "familyId": "ashbound",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ashbound/pyre-bailiff-v1.png",
+      "sha256": "65fb9b25c9f7518de525bb6cbaf4823311121b58f90e2631344a4ea6895a32eb",
+      "bytes": 1992775,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "65fb9b25c9f7518de525bb6cbaf4823311121b58f90e2631344a4ea6895a32eb"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.redaction_warden",
+      "subjectId": "redaction_warden",
+      "familyId": "ashbound",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ashbound/redaction-warden-v1.png",
+      "sha256": "f1129a280cc24440bd887bf506ab1f95a11827993071c71cfdc6b7fb5cc9a9ef",
+      "bytes": 1960859,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "f1129a280cc24440bd887bf506ab1f95a11827993071c71cfdc6b7fb5cc9a9ef"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.smoke_notary",
+      "subjectId": "smoke_notary",
+      "familyId": "ashbound",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ashbound/smoke-notary-v1.png",
+      "sha256": "328a0319d9c7661497df6c5e7d1c2bc1546344c5ce88ae317c7522faf20d50cc",
+      "bytes": 2010779,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "328a0319d9c7661497df6c5e7d1c2bc1546344c5ce88ae317c7522faf20d50cc"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.tagless_stalker",
+      "subjectId": "tagless_stalker",
+      "familyId": "ashbound",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ashbound/tagless-stalker-v1.png",
+      "sha256": "a40fb4719df18b0e276813bc79e13c15908a9010f83171d160fd469ddd2bb2bc",
+      "bytes": 1675028,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "a40fb4719df18b0e276813bc79e13c15908a9010f83171d160fd469ddd2bb2bc"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.the_unentered",
+      "subjectId": "the_unentered",
+      "familyId": "ashbound",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ashbound/the-unentered-v1.png",
+      "sha256": "1783289a73dae9df2cf6c9486e6585fbcd770aaa979237010fbd6c4547f66f2c",
+      "bytes": 1677575,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "1783289a73dae9df2cf6c9486e6585fbcd770aaa979237010fbd6c4547f66f2c"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.wicket_eater",
+      "subjectId": "wicket_eater",
+      "familyId": "ashbound",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/ashbound/wicket-eater-v1.png",
+      "sha256": "9d08dc62ba4851da58d410326adaae2b683b8ac4c54d9db6d5bbf08a3d560da0",
+      "bytes": 1795108,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "9d08dc62ba4851da58d410326adaae2b683b8ac4c54d9db6d5bbf08a3d560da0"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

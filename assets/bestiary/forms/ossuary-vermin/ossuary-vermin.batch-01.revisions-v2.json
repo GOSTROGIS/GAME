@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-01",
+  "policy": "The frozen prompt packet remains unchanged. These are narrow forward revisions after family-owner full-resolution preflight of the first-pass candidates. Each edit uses only its exact staged v1 source and must preserve every accepted visual relationship not named below.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-01/prompt-packet.json",
+    "sha256": "5cb9e3f21b9d6f731c53bf2f2331b6b645e6ec23822f6bcd18a4d2478fe731ee"
+  },
+  "revisions": {
+    "finger-mice-colony-v2": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-01/finger-mice-colony-concept-master-v1.png",
+      "sourceSha256": "55f592fb0909867e5a33b155e703e72e17a61f83647bce99986d02f78696b8a6",
+      "reason": "The v1 colony contains six finger-shaped organisms and six inward trails. Canon requires exactly five of each.",
+      "prompt": "Surgical exact-count correction of this exact Finger-Mice Colony. Preserve canvas, materials, light, black backdrop, incomplete-fist center, and the five units at upper-left, upper-right, middle-left, middle-right, and lower-right. DELETE ONLY the entire lower-left unit at approximately the seven-o'clock position and delete its complete attached dust trail back to the central gap. Replace the deleted unit and trail with clean near-black backdrop. Final image must contain EXACTLY FIVE separately countable finger-shaped knucklebone organisms and EXACTLY FIVE separate pale inward-curving trails, one attached to each remaining unit. The five trails terminate at the same hollow center but do not merge before it. Keep every remaining unit separate and the fist incomplete. Do not add or duplicate a unit, trail, hand, skull, floor, shadow, text, glow, scene, logo or watermark. Full landscape clearance unchanged."
+    },
+    "ribcage-screecher-v2": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-01/ribcage-screecher-concept-master-v1.png",
+      "sourceSha256": "bd6fe12c8513bc1f123709dd1b0a0c6f7f8ddcb4ac477c3ee6f2ec9f5f4fe6fc",
+      "reason": "The v1 open cage, one nested bird and scraping wing pass owner preflight, but the support legs use ordinary long bones and the warning output is a bead stream rather than a narrow incomplete rib-whistle cone.",
+      "prompt": "Constrained support-limb and cue correction of this exact Ribcage Screecher. Freeze the complete open ribcage, exactly one nested black carrion bird, open beak, exactly one wing scraping laterally across the exposed rib row, opposite folded wing, pose, canvas, materials, light, scale and framing. Replace ONLY the straight ordinary long-bone upper segments of every support leg with short articulated chains made from multiple small human finger bones bound by mold-green ligament; retain the lower-jaw crescent feet as their terminal segments. No ordinary humerus, femur, tibia or complete skeletal limb remains. Delete the current loose bead trail leaving the wing. At the scraped rib edge, create exactly THREE short nested incomplete compressed-tooth-dust arcs that widen narrowly outward as one small sonic cone; each arc has broad black gaps and remains subordinate, ending well inside the right frame. Keep the cage directly strikeable and the rear side clear. No second bird, extra wing, closed torso, additional limb, floor, ground shadow, notation, text, glow, gore, scene, logo or watermark."
+    },
+    "borrowed-spine-v2": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-01/borrowed-spine-concept-master-v1.png",
+      "sourceSha256": "7b4236139f2766db568446fa4d8684668e95e67756fa4f939db343852c6252d8",
+      "reason": "The v1 long single spine and dozens-count pass, but the leading skull has a complete lower mandible and the sequential upper-tooth bite wave is not mechanically legible.",
+      "prompt": "Surgical anatomy and bite-wave correction of this exact Borrowed Spine. Preserve the one continuous serpentine spine, its full curve, tapering tail, all existing 24-plus skull stations, mold-green bindings, canvas, materials, light, scale and framing. DELETE the entire lower mandible from the large leading skull at viewer-left, leaving pure black clearance beneath its fixed upper tooth row. Ensure every other station likewise remains visibly jawless with no detached or attached lower jaw. Make the bite sequence physically legible along the first six skulls from the leader toward the tail without adding symbols: skull one has its upper teeth fully clear of the spine; skull two has a large gap; skull three a smaller gap; skull four just touches; skull five clamps shallowly; skull six clamps tightly. All later skulls stay inward and increasingly closed on the shared spine. Keep at least 24 skulls countable and only one spine. No new skull, mandible, second spine, arrow, number, text, glow, floor, scene, logo or watermark."
+    },
+    "reliquary-millipede-v2": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-01/reliquary-millipede-concept-master-v1.png",
+      "sourceSha256": "774632aa192e3f42a2853d4e028c46654e74fbf9bae5fe713c80b669530c776e",
+      "reason": "The v1 shell, finger-bone legs and lifted middle wave pass owner anatomy preflight, but a horizontal floor/contact shadow is baked beneath both ends and weakens the required isolated studio framing.",
+      "prompt": "Surgical isolation correction of this exact Reliquary Millipede. Preserve the entire continuous gilded bone shell, all finger-bone legs, front-to-back leg-wave stages, high open middle, exposed soft ligament-and-chitin underside, pose, canvas, materials, cold light, scale and framing. Remove ONLY every floor, ground plane, contact shadow, horizontal haze and dark surface band beneath both ends. Float the complete creature slightly upward in empty near-black studio space so pure black clearance is visible below every terminal finger-bone tip, including the lowest front and rear legs; no leg touches an implied baseline. Do not redraw, merge, remove, duplicate or reposition any leg or shell plate except the minimal whole-subject lift required for clearance. No second reliquary, text, symbol, glow, scene, logo or watermark."
+    },
+    "crypt-assembler-v2": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-01/crypt-assembler-concept-master-v1.png",
+      "sourceSha256": "3f19a7d43d65ebeb4e6ea62576c05b1323ed0801ead29fe80806d6a0dc5f032c",
+      "reason": "The v1 one-body sorter and exact four attached baskets pass, but three basket contents are not uniquely classifiable, the four blank tabs repeat one shield shape, and no wrong-pile redirect is explicit.",
+      "prompt": "Surgical basket-content, blank-tab and actuator correction of this exact Crypt Assembler. Freeze the dominant central communal body, exactly four attached baskets and all four ligament rails, pose, canvas, materials, light, scale and framing. Keep the TOP basket as skulls only and replace its blank tab with one plain round-edged disc tab. Replace ONLY the VIEWER-LEFT basket contents with clearly recognizable complete lower-jaw bones only and give it one plain triangular-outline-edge tab. Replace ONLY the VIEWER-RIGHT basket contents with short articulated finger-bone segments only and give it one plain square-edge tab. Replace ONLY the BOTTOM basket contents with a visibly mixed combination of skull fragment, lower jaw, finger bones and incompatible larger bone fragments, and give it one plain trapezoid-edge tab. All four tabs remain completely blank with no internal mark, letter, number, rune, icon, glyph or religious symbol. Add one small existing central lower-jaw scoop actuator visibly holding exactly one finger-bone segment over the mixed bottom basket instead of the correct viewer-right basket, making the wrong-pile counterplay explicit without adding a new limb or creature. Preserve the top skull basket as uniquely largest, frontal and exposed. No fifth basket, fifth tab, written label, detached helper, floor, workroom, glow, scene, logo or watermark."
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-02",
+  "policy": "The frozen packet remains authoritative. V21 passes every contour except a bottom-right hourglass regression. This revision edits only that bottom receiver's black interior; all other geometry is immutable.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-02/prompt-packet.json",
+    "sha256": "16ffd058dbfd73609fed27836f475873696282f6eb29e4acd2dc2c9793d9d2bc"
+  },
+  "revisions": {
+    "borrowed-saint-v22": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/borrowed-saint-concept-master-v21.png",
+      "sourceSha256": "526d17ae3f502d60282cb49ccfa11f83d3565bce445c87739d17b7b1af32e16e",
+      "reason": "The bottom viewer-right receiver regressed to a straight chamfered rectangle while its adjacent tag remains a strongly waisted hourglass. All six other ordinary pairs and the pelvis mismatch pass.",
+      "prompt": "PIXEL-POSITIONED ONE-HOLE EDIT on this exact 1024x1536 Borrowed Saint v21. Target ONLY the black receiver opening attached to the BOTTOM MODULE AT VIEWER-RIGHT, approximately x=720, y=1210, immediately LEFT of the filled blank hourglass tag at approximately x=840, y=1210. Do not edit the tag. Replace ONLY this attached receiver's straight black interior with a strong hourglass opening that exactly copies the tag: broad flat top, both sides curve deeply inward to one narrow central waist, then both sides flare outward to a broad flat bottom. Black backdrop remains visible; surrounding bone rim stays integrated. Freeze every other pixel. Critical regression locks: the chamfered-rectangle receiver one row above at approximately x=720,y=960 stays a straight-sided eight-edge chamfered rectangle with no waist; the side-notch pair, all viewer-left pairs, pelvis narrow-slot mismatch, all eight tags/modules and seven jaw loads remain unchanged. No extra hole, hollow tag, plaque, icon, limb, text, floor, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    }
+  }
+}

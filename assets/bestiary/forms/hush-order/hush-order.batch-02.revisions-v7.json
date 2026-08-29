@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "familyId": "hush_order",
+  "batchId": "hush-order-masters-batch-02",
+  "policy": "The frozen packet remains unchanged. These are constrained forward revisions after coordinator full-resolution review. Dust Novice v3, Pause Inquisitor v6 and Comma-Blade Ascetic v4 are unchanged and awaiting their second independent pass.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/hush-order/batch-02/prompt-packet.json",
+    "sha256": "8e15b4735f602db93ac7c2bd7dbe5c87267e2607a5f8f079367e8a2a36ae27d8"
+  },
+  "revisions": {
+    "abbot-of-exact-words-v5": {
+      "source": "work/concept-art-production/hush-order/batch-02/abbot-of-exact-words-concept-master-v4.png",
+      "sourceSha256": "a60c2f32a106a5552eb3ad4dc0c98ad1850f33e5174b851232ff80ea68f734e9",
+      "reason": "The one-cord topology, one rail, separate blank cadence strip and incomplete token arc pass, but only seven triangular teeth are countable. Canon requires exactly eight.",
+      "prompt": "Surgical exact-count correction of this exact Abbot of Exact Words. Freeze every accepted element and relationship: the complete one-cord branchless topology, serial crown, return knot, hands, feet, low bridge, one continuous ivory tooth-gate rail, separate blank bloodless-gray cadence strip, incomplete blank token arc with one misaligned token, pose, canvas, materials, lighting, scale, placement, silhouette and framing. The tooth-gate currently has exactly SEVEN visible plain triangular teeth. Add exactly ONE additional plain narrow triangular tooth at the largest existing gap in the same row so the final single rail carries exactly EIGHT separately countable teeth. All eight descend from the same rail and remain blank. Do not move, duplicate, merge, hide, widen or remove any existing tooth. Do not alter the sentence strip, tokens, cord, hands, body negative space, pose or lighting. No mark, droplet, letter, rune, number, punctuation, icon, engraving, second row, second rail, body, face, weapon, glow, floor, scene, logo or watermark. Opaque near-black studio; full clearance unchanged."
+    },
+    "mute-porter-v6": {
+      "source": "work/concept-art-production/hush-order/batch-02/mute-porter-concept-master-v5.png",
+      "sourceSha256": "e0d945cc595781dbdce920b39f69a45a4a55e1ed269b2707e40a54e70ad1ca71",
+      "reason": "The one-cord topology and exactly three threshold outlines pass, but both bronze hangers appear to terminate near the hands instead of at shoulder tabs, and the body is frontally static rather than committed to a lateral sidestep.",
+      "prompt": "Constrained anatomy-and-pose correction of this exact Mute Porter. Preserve the one uninterrupted branchless prayer-cord route and every connection: serial hollow crown, compact two-ended return knot, viewer-left shoulder to arm to wrist pass-through to left outer leg and foot, low front bridge, right foot and outer leg to right wrist pass-through to right arm and shoulder. Preserve exactly one open stone doorway facing squarely toward the viewer and exactly THREE nested thin rectangular threshold outlines inside its pure-black opening. Remove only the current two vertical bronze doorway hangers that appear to end behind the hands. Add exactly TWO clearly separate short bronze suspension straps: one begins at a small non-cord linen tab on the viewer-left shoulder and runs diagonally behind and well clear of the empty left hand to the viewer-left top corner of the stone doorway; the other begins at a matching linen tab on the viewer-right shoulder and runs behind and well clear of the empty right hand to the viewer-right top corner. Both straps must have both endpoints visible and must not touch, enter, terminate at, or be held by either hand or any prayer cord. Make the whole one-cord subject execute one committed lateral sidestep toward viewer-right while the doorway remains square to viewer: extend and plant the viewer-right foot farther sideways, lift the viewer-left heel as a trailing recovery foot, and carry the continuous outer cord route cleanly through both moved feet without changing topology, crossing, branching or hiding it. Keep both hands empty, separated from the straps and threaded only at their wrist pass-throughs. Preserve canvas, family materials, cold light, scale and full silhouette clearance. No floor/contact shadow, room, wall, body, face, key, weapon, branch, waist cord, second rope, third hanger, scene, text, logo or watermark. Opaque near-black studio."
+    }
+  }
+}

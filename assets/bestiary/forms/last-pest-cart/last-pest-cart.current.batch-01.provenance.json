@@ -1,0 +1,200 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-last-pest-cart-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.destination_erased",
+      "subjectId": "destination_erased",
+      "familyId": "last_pest_cart",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/last-pest-cart/destination-erased-v1.png",
+      "sha256": "021da3750943ec7f4294585e35591013338e9fded1d794e9ac930ca685c3c6ba",
+      "bytes": 1602575,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "021da3750943ec7f4294585e35591013338e9fded1d794e9ac930ca685c3c6ba"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.empty_caravan",
+      "subjectId": "empty_caravan",
+      "familyId": "last_pest_cart",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/last-pest-cart/empty-caravan-v4.png",
+      "sha256": "f00840a35b212bdea21d09135ee9befddd6894ed2954f63075284149c8ed6cc3",
+      "bytes": 1854360,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "f00840a35b212bdea21d09135ee9befddd6894ed2954f63075284149c8ed6cc3"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.last_outrider",
+      "subjectId": "last_outrider",
+      "familyId": "last_pest_cart",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/last-pest-cart/last-outrider-v1.png",
+      "sha256": "8e8ff4eb4212a3de22d4af8a0b36f6a680a7563688db69cba719a013d0201fe9",
+      "bytes": 941513,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "8e8ff4eb4212a3de22d4af8a0b36f6a680a7563688db69cba719a013d0201fe9"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.route_surgeon",
+      "subjectId": "route_surgeon",
+      "familyId": "last_pest_cart",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/last-pest-cart/route-surgeon-v2.png",
+      "sha256": "0ac22dfb4034e54dd9281e8e226f7780ba7c6f73a00ff71315facdcde6c0ef95",
+      "bytes": 1838996,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "0ac22dfb4034e54dd9281e8e226f7780ba7c6f73a00ff71315facdcde6c0ef95"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.wax_driver",
+      "subjectId": "wax_driver",
+      "familyId": "last_pest_cart",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/last-pest-cart/wax-driver-v2.png",
+      "sha256": "d3d4138105dd2540eaad001eeca163d031161a058b600392fba22e73857d176b",
+      "bytes": 1167346,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "d3d4138105dd2540eaad001eeca163d031161a058b600392fba22e73857d176b"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.wheel_porter",
+      "subjectId": "wheel_porter",
+      "familyId": "last_pest_cart",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/last-pest-cart/wheel-porter-v3.png",
+      "sha256": "cd7f39e3a471c814e2ea32006077938e4afb5f25dad89e6da7b98013f21b7b19",
+      "bytes": 1468108,
+      "dimensions": {
+        "width": 1023,
+        "height": 1537
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "cd7f39e3a471c814e2ea32006077938e4afb5f25dad89e6da7b98013f21b7b19"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

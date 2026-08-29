@@ -1,0 +1,100 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "kilnforged-batch-01",
+  "status": "generation",
+  "familyId": "kilnforged",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/kilnforged-plate.png"
+  ],
+  "commonDirection": "Use the Kilnforged family plate only as authoritative family style and material reference: a foundry worker fused into the furnace system, bottom-heavy weighted armor much broader at the lower torso than the shoulders, three separated furnace chambers with open-air gaps and visible chain tendons, soot-clogged gill vents, a small faceless firebrick kiln-mouth head with hinged iron damper, asymmetrical embedded foundry tools, and heavy cracked refractory-stone feet. Palette: soot iron, restrained furnace orange, black heat scale, dull brick gray, muted oxide red. Materials: pitted forged iron, cracked firebrick, vitrified slag, greasy chain, heat-blued scale, powdery soot. Cold raking studio light opposed by restrained internal chamber heat. Original canonical form, not a copy of the plate subject. Polished stylized 3D dark-fantasy MMORPG production concept, mature material density, one complete subject in three-quarter view, every extremity and mechanic cue visible, centered with generous clearance. Flat near-black neutral opaque studio backdrop; no environment, floor, ground plane, cast floor shadow, extra unrelated figure, text, readable symbols, runes, real religious marks, logo, watermark, franchise resemblance, heroic power armor, steampunk boiler-person shorthand, clean knight, generic lava elemental, oversized shoulders, glossy plastic, cute proportions, bright saturation, gore, or exposed entrails.",
+  "assets": [
+    {
+      "id": "kiln_thrall",
+      "name": "Kiln Thrall",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "kiln-thrall-v1.png",
+      "canonical": {
+        "anatomy": "A foundry laborer riveted inside a cooling suit after the last shift refused to end. The violation closes into a usable limb when molten slag gathers along the lifted tool head.",
+        "locomotion": "It crosses ground in one committed weight transfer, then must reassemble its balance; the permission cue is molten slag gathers along the lifted tool head.",
+        "sound": "Ember iron produces a load-bearing groan, one blunt beat, and a long settling scrape; Slag Hammer commits on the first strike/fire sound after the gap.",
+        "purpose": "Foundry workers and royal guards fused into the furnace systems they were ordered to seal. This form serves the niche expressed by a foundry laborer riveted inside a cooling suit after the last shift refused to end.",
+        "origin": "A foundry laborer riveted inside a cooling suit after the last shift refused to end.",
+        "mechanic": "Slag Hammer",
+        "cue": "Molten slag gathers along the lifted tool head.",
+        "counterplay": "Move to the cool side of the suit and punish the embedded hammer."
+      }
+    },
+    {
+      "id": "chain_stoker",
+      "name": "Chain Stoker",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "chain-stoker-v1.png",
+      "canonical": {
+        "anatomy": "Its furnace chain runs through its spine; every pull feeds a fire no longer connected to it. The violation closes into a usable limb when the spine chain rattles from tail to shoulder.",
+        "locomotion": "It changes lanes after a false retreat and never repeats the same return angle; the permission cue is the spine chain rattles from tail to shoulder.",
+        "sound": "Ember iron produces two retreating clicks answered by a third sound from the return angle; Stoker Whip commits on the first slash/fire sound after the gap.",
+        "purpose": "Foundry workers and royal guards fused into the furnace systems they were ordered to seal. This form serves the niche expressed by its furnace chain runs through its spine; every pull feeds a fire no longer connected to it.",
+        "origin": "Its furnace chain runs through its spine; every pull feeds a fire no longer connected to it.",
+        "mechanic": "Stoker Whip",
+        "cue": "The spine chain rattles from tail to shoulder.",
+        "counterplay": "Close inside the chain's arc or pin it beneath a heavy strike."
+      }
+    },
+    {
+      "id": "quenchless_smith",
+      "name": "Quenchless Smith",
+      "rank": "specialist",
+      "orientation": "portrait",
+      "masterFile": "quenchless-smith-v1.png",
+      "canonical": {
+        "anatomy": "A smith who cannot stop tempering the weapon fused to his arm. The missing anatomy briefly outlines itself when the arm-blade changes from red to white to quiet blue.",
+        "locomotion": "It steps only on the recovery beat of the last action it witnessed; the permission cue is the arm-blade changes from red to white to quiet blue.",
+        "sound": "Ember iron produces the opponent's last rhythm returned with one deliberately missing beat; Temper Cycle commits on the first fire/buff sound after the gap.",
+        "purpose": "Foundry workers and royal guards fused into the furnace systems they were ordered to seal. This form serves the niche expressed by a smith who cannot stop tempering the weapon fused to his arm.",
+        "origin": "A smith who cannot stop tempering the weapon fused to his arm.",
+        "mechanic": "Temper Cycle",
+        "cue": "The arm-blade changes from red to white to quiet blue.",
+        "counterplay": "Attack during red, defend during white, and use fire against the brittle blue phase."
+      }
+    },
+    {
+      "id": "furnace_shield_guard",
+      "name": "Furnace-Shield Guard",
+      "rank": "elite",
+      "orientation": "portrait",
+      "masterFile": "furnace-shield-guard-v1.png",
+      "canonical": {
+        "anatomy": "A royal guard whose shield is a door into the old foundry's shared furnace. The impossible structure becomes clearest when shield latches release one at a time from top to bottom.",
+        "locomotion": "It cannot turn during a committed advance and brakes by striking the terrain; the permission cue is shield latches release one at a time from top to bottom.",
+        "sound": "Ember iron produces slow impacts whose interval shortens without their volume changing; Open Furnace commits on the first fire/area sound after the gap.",
+        "purpose": "Foundry workers and royal guards fused into the furnace systems they were ordered to seal. This form serves the niche expressed by a royal guard whose shield is a door into the old foundry's shared furnace.",
+        "origin": "A royal guard whose shield is a door into the old foundry's shared furnace.",
+        "mechanic": "Open Furnace",
+        "cue": "Shield latches release one at a time from top to bottom.",
+        "counterplay": "Circle behind the hinge or freeze the open door before the blast."
+      }
+    },
+    {
+      "id": "slag_foreman",
+      "name": "Slag Foreman",
+      "rank": "miniboss",
+      "orientation": "portrait",
+      "masterFile": "slag-foreman-v1.png",
+      "canonical": {
+        "anatomy": "He still measures every trespasser for a shift beneath the furnace. The violation closes into a usable limb when molten clock marks appear around the arena floor.",
+        "locomotion": "It advances only while the surrounding escape geometry is changing; the permission cue is molten clock marks appear around the arena floor.",
+        "sound": "Ember iron produces three spaced warnings, a held absence, then one enclosing note; Mandatory Shift commits on the first fire/trap sound after the gap.",
+        "purpose": "Foundry workers and royal guards fused into the furnace systems they were ordered to seal. This form serves the niche expressed by he still measures every trespasser for a shift beneath the furnace.",
+        "origin": "He still measures every trespasser for a shift beneath the furnace.",
+        "mechanic": "Mandatory Shift",
+        "cue": "Molten clock marks appear around the arena floor.",
+        "counterplay": "Stand in the unlit break marker; other positions become slag."
+      }
+    }
+  ],
+  "cutoutDirection": "After a master receives two independent non-generator passes, edit that exact master only to remove its studio background. Preserve canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact-count cues, and RGB identity. Output genuine RGBA: background and four corners alpha 0, opaque subject interiors alpha 255, partial alpha only at true antialiased/fine-fiber edges; no painted transparency pattern, floor, shadow, matte, halo, text, logo, or watermark."
+}

@@ -1,0 +1,173 @@
+{
+  "schema": "SableReachExpansionConceptPromptPacketV1",
+  "batchId": "lucent-synod-expansion-batch-01",
+  "status": "immutable-before-generation",
+  "familyId": "lucent_procession",
+  "subjectsInCanonicalOrder": [
+    "arch_lumen_seraphel_orr",
+    "canoness_vael_kindly_knife",
+    "deacon_halix_bell_of_noon",
+    "saint_vespera_second_shadow",
+    "apse_seraph",
+    "misericord_of_borrowed_pain"
+  ],
+  "authority": {
+    "primary": {
+      "path": "packages/content/src/narrative.data.js",
+      "sha256": "453d0d1841703cd08fd9f486a540038f500c24208e9b1745042aeae023b94abe"
+    },
+    "globalArtLaw": {
+      "path": "design-review/kit/hm-art-law.js",
+      "sha256": "26e5a03220657c67b520c7ba163644e3848ed7f622f2b2beb3ab4b12a97ed0ff"
+    },
+    "canonicalNarrativeSummary": {
+      "path": "design-review/SABLE-REACH-NARRATIVE-BIBLE.md",
+      "sha256": "73ab9b0c0fe46b08d442fad9c2bd799615abd62da8388e5148b39f61610afb8a"
+    }
+  },
+  "referenceAudit": {
+    "status": "inspected-before-generation",
+    "familyPlateFound": false,
+    "searchResult": "No Lucent Synod, lucent_procession, Seraphel, Vael, Halix, Vespera, Apse Seraph, or Misericord raster reference exists in the authoritative repository or concept-art staging surface.",
+    "historicalReference": {
+      "path": "assets/bestiary/bell-revenants-plate.png",
+      "sha256": "8a628bea35d70072746c7b0876dcbbd8964152567f6d87c8448b15b48689679b",
+      "bytes": 1992984,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "usedFor": ["deacon_halix_bell_of_noon"],
+      "policy": "Halix canonically was once a Bell Revenant. This inspected plate may inform only bell-born bronze construction and hollow suspended anatomy. The narrative record overrides it: use Lucent bronze-white materials, a mouthless bell helm, one vertical noon slit, and exactly two tuning-fork wings; do not copy the plate's held bell, limb plan, torso bells, verdigris decay, or exact pose."
+    },
+    "excludedReferences": "Unrelated founding-family plates were inspected or searched but are not generation references; they must not supply Lucent anatomy, props, or palette."
+  },
+  "factionCanon": {
+    "id": "lucent_synod",
+    "iconography": "Tall reliquary bodies, incomplete halos, veiled faces, white-gold cathedral metal, and light confined behind black glass.",
+    "visualLaw": "Serene reliquary bodies, incomplete halos, veiled faces, white-gold cathedral metal, daylight confined behind black glass; beautiful at distance, with every inward-facing surface visibly scorched up close.",
+    "narrativeConstraint": "The Synod must not become generic holy villains. Its beauty, sincere restorative purpose, and internal conflict remain visible alongside the scorched and coercive details."
+  },
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical expansion character or creature production concept master for later 3D design. Render exactly one complete original Lucent Synod or Lucent Procession subject from the canonical record below. Preserve the Lucent family identity: tall serene reliquary silhouette where applicable; incomplete halo geometry; veiled or explicitly faceless anatomy; white-gold or ivory cathedral metal; restrained bronze where canon requires it; daylight confined behind black glass; visually beautiful outer surfaces and scorched inward-facing surfaces. Use polished stylized 3D dark-fantasy MMORPG production quality, mature narrow anatomy, tactile measurable construction, full-body three-quarter view, centered with generous clearance. Flat near-black neutral opaque studio backdrop, cold raking studio light from one side, ungraded neutral presentation. Keep all cue evidence physically subject-bound and subordinate. No environment, cathedral interior, hospital, battlefield, congregation, town, floor, ground plane, pedestal, contact or cast floor shadow, extra solid figure or creature, generic holy-villain caricature, narrative vignette, caption, UI, readable writing, scripture, runes, real religious marks, crosses, logos, watermark, franchise resemblance, disability shorthand, real-world disease taxonomy, gore, exposed entrails, bright aura, uncontrolled radiance, glossy plastic, cute proportions, baked checkerboard, transparency, or crop. Do not invent weapons, regalia, patients, worshippers, demons, birds, or props not stated by canon.",
+  "assets": [
+    {
+      "id": "arch_lumen_seraphel_orr",
+      "name": "Arch-Lumen Seraphel Orr",
+      "kind": "expansion_principal",
+      "factionId": "lucent_synod",
+      "orientation": "portrait-2:3",
+      "masterFile": "arch-lumen-seraphel-orr-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/lucent-synod/arch-lumen-seraphel-orr-v1.png",
+      "canonical": {
+        "epithet": "The Noon That Kneels",
+        "role": "Restoration commander and possible final ally",
+        "desire": "Rebuild a sun small enough to warm the Reach without judging it.",
+        "fear": "That mercy is only cowardice measured on a divine scale.",
+        "contradiction": "He protects altered villages from his own crusade, then quietly marks their children for purification if the full dawn succeeds.",
+        "secret": "The face behind his radiant funerary veil belongs to the first mortal he incinerated by accident.",
+        "visualBrief": "An eight-foot reliquary knight whose incomplete halo resembles a cathedral rose window missing one fatal pane; white-gold armor is beautiful at distance and scorched on every inward-facing surface."
+      },
+      "masterDirection": "Show exactly one eight-foot-proportioned reliquary knight, tall and complete, with no second person or attendant. His face remains fully hidden behind one radiant funerary veil; do not expose, duplicate, or idealize the mortal face behind it. Build one large mechanically plausible incomplete halo behind the head as an abstract cathedral rose-window lattice with exactly one conspicuous fatal pane missing; black backdrop must be visible through that single vacancy, while every other pane position is structurally present. Use white-gold cathedral armor whose outward surfaces are serenely beautiful and whose inward-facing overlaps, joint interiors, and back faces are unmistakably scorched. Confine all restrained daylight behind black-glass armor apertures and the veil rather than forming an aura. Give him a grave non-attacking command posture with both empty hands visible, complete feet, complete halo, and missing pane fully framed. No weapon, shield, banner, child, village, sun disk, throne, readable legal mark, ordinary crown, wings, extra missing pane, cross, or scene."
+    },
+    {
+      "id": "canoness_vael_kindly_knife",
+      "name": "Canoness Vael",
+      "kind": "expansion_principal",
+      "factionId": "lucent_synod",
+      "orientation": "portrait-2:3",
+      "masterFile": "canoness-vael-kindly-knife-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/lucent-synod/canoness-vael-kindly-knife-v1.png",
+      "canonical": {
+        "epithet": "The Kindly Knife",
+        "role": "Healer, inquisitor, and designer of painless erasure",
+        "desire": "End every form of suffering she can identify.",
+        "fear": "Pain that carries meaning she has no right to remove.",
+        "contradiction": "She performs impossible cures, but considers grief, rebellion, and inconvenient identity to be diseases when they obstruct restoration.",
+        "secret": "She preserves each removed memory inside the surgical wings on her back and hears them plead whenever she sleeps.",
+        "visualBrief": "Angelic surgeon in ivory cathedral plate with six narrow scalpel-wings folded like a devotional screen; serene porcelain veil, black seams, restrained dawn beneath the joints."
+      },
+      "masterDirection": "Show exactly one mature angelic surgeon in complete ivory cathedral plate, with one serene featureless porcelain veil and black construction seams. Her back carries EXACTLY SIX separately countable long narrow scalpel-wings, three on each side, folded into one devotional-screen silhouette without becoming feathered wings or handheld knives. Each wing is a load-bearing surgical reliquary whose closed black-glass seam contains the removed memories canon says she preserves; show no faces, people, text, or separate spirits inside them. Restrained dawn is visible only beneath the articulated body joints and wing hinges, never as an aura. Scorch every inward-facing armor and wing surface while keeping the outward ivory-gold finish immaculate. Both empty hands, all six complete wings, both feet, and the full veil must remain visible. No patient, operating table, wound, gore, syringe, medical symbol, handheld scalpel, extra wing, halo unless structurally incomplete and subordinate, or scene."
+    },
+    {
+      "id": "deacon_halix_bell_of_noon",
+      "name": "Deacon Halix",
+      "kind": "expansion_principal",
+      "factionId": "lucent_synod",
+      "orientation": "portrait-2:3",
+      "masterFile": "deacon-halix-bell-of-noon-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/lucent-synod/deacon-halix-bell-of-noon-v1.png",
+      "referenceImage": "assets/bestiary/bell-revenants-plate.png",
+      "canonical": {
+        "epithet": "Bell of Noon",
+        "role": "Herald whose voice temporarily restores natural law",
+        "desire": "Hear one true birdsong under an honest noon.",
+        "fear": "Silence, because it reveals that his proclamations are not answered by a god.",
+        "contradiction": "His miracles repair stone and flesh while stripping local names from everyone who hears the final note.",
+        "secret": "He was once a Bell Revenant and the Synod's light did not cure him; it only taught the memory inside him to preach.",
+        "visualBrief": "A hovering bronze deacon with a vertical noon-slit through the torso, a mouthless bell helm, and two pale wings built from tuning forks rather than feathers."
+      },
+      "masterDirection": "Use the inspected Bell Revenants plate only as a historical material reference for the canonical former-Revenant origin; redesign the subject completely as Lucent Synod. Show exactly one hovering bronze-white deacon with no ground contact. Replace the face with one sealed mouthless bell helm: no mouth, jaw, lips, eyes, readable inscription, or hanging handbell. A single perfectly vertical noon slit passes entirely through the torso from upper chest to lower abdomen, with black-glass margins and one restrained pale line of confined daylight; it is one slit, not a torso full of bells. Build EXACTLY TWO complete pale wings, one per side, solely from large aligned tuning forks rather than feathers. The forks remain countable, structural, unlettered, and attached to the shoulders. Preserve faint scorched evidence on every inward-facing bronze surface while the outer reliquary finish reads restored. Keep the full helm, torso slit, both empty hands, hovering lower body, and two wings framed. No held bell, torso carillon, bird, nest, written name, weapon, floor, extra wing, bright aura, or copied plate pose."
+    },
+    {
+      "id": "saint_vespera_second_shadow",
+      "name": "Saint Vespera",
+      "kind": "expansion_principal",
+      "factionId": "lucent_synod",
+      "orientation": "portrait-2:3",
+      "masterFile": "saint-vespera-second-shadow-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/lucent-synod/saint-vespera-second-shadow-v1.png",
+      "canonical": {
+        "epithet": "Keeper of the Second Shadow",
+        "role": "Synod saint secretly maintaining a channel to the enemy",
+        "desire": "Prove that light and shadow can share one body without one becoming a prison.",
+        "fear": "That compromise is simply possession with better manners.",
+        "contradiction": "She shelters demons from extermination, but binds each refugee into her own shadow where none can leave without her consent.",
+        "secret": "Her ominous second shadow is not a demon; it is the mortal woman whose body the Synod used to construct the saint.",
+        "visualBrief": "A tranquil veiled saint with an asymmetrical black-gold halo and a second articulated shadow standing half a gesture ahead; angelic silhouette made uneasy by too many locked shadow-doors."
+      },
+      "masterDirection": "Show exactly one tranquil mature veiled saint in a complete white-gold reliquary body, with one visibly asymmetrical incomplete black-gold halo. Attach EXACTLY ONE second articulated shadow directly to her body; it is a flat human-derived black silhouette, not a solid duplicate, demon, companion, cast floor shadow, or aura. Pose that single shadow precisely half a gesture ahead of the saint's own calm hand and step, with its attachment route visibly unbroken. Integrate many small CLOSED doorway-shaped recesses into the flat shadow itself, each visibly locked by plain nonalphabetic black-gold latch hardware; no doorway opens and no refugee, room, face, limb, or creature appears inside. Keep the mortal derivation of the second shadow quiet and human-scale, never monstrous. Confine restrained daylight behind black glass on the saint while inward surfaces remain scorched. Frame the full saint, complete halo, full attached shadow, all door recesses, both hands and both feet. No second physical body, demon, key, room interior, floor, church scene, readable mark, cross, or bright aura."
+    },
+    {
+      "id": "apse_seraph",
+      "name": "Apse Seraph",
+      "kind": "expansion_creature",
+      "familyId": "lucent_procession",
+      "rank": "elite",
+      "combatRole": "controller",
+      "orientation": "portrait-2:3",
+      "masterFile": "apse-seraph-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/lucent-procession/apse-seraph-v1.png",
+      "canonical": {
+        "anatomy": "A walking cathedral arch of white-gold vertebrae with a serene veiled face suspended where its missing keystone should be.",
+        "ecology": "It measures ruined settlements for inclusion in the restored world's approved geometry.",
+        "origin": "The Synod taught a collapsed apse to remember the congregation it once enclosed, then removed every worshipper the memory could not classify.",
+        "mechanic": "missing_keystone_judgment",
+        "cue": "Every arch segment locks except one visibly vacant socket above the veil.",
+        "counterplay": "Occupy the missing-keystone line to make the judgment classify the Seraph as its own structural fault.",
+        "narrativeUse": "Can preserve a town's buildings while declaring its current inhabitants geometrically inadmissible.",
+        "visualBrief": "Angelic mobile apse, incomplete halo-arch, white-gold cathedral bone, tranquil black veil, one conspicuous missing upper stone; beautiful, measurable, and faintly predatory."
+      },
+      "masterDirection": "Show exactly one complete walking cathedral arch organism, not a humanoid in architecture and not a building scene. Its entire load-bearing body is one measurable arch made from articulated white-gold vertebral segments; the two descending arch supports terminate as its walking limbs. Suspend one serene fully veiled face inside the upper opening, immediately below EXACTLY ONE conspicuous vacant keystone socket. Black backdrop must be visible cleanly through that one socket. Every other arch segment is present and visibly locked into a rigid judgment posture; no second vacancy, loose stone, text, emblem, or congregation. Confine restrained daylight behind narrow black-glass segment seams, while all inward-facing arch surfaces are scorched. Keep both walking supports, every arch segment, veiled face, missing socket, and the complete subject fully framed. No ordinary torso, arms, worshipper, town, ruined wall, church interior, floor, measurement text, cross, or aura."
+    },
+    {
+      "id": "misericord_of_borrowed_pain",
+      "name": "Misericord of Borrowed Pain",
+      "kind": "expansion_creature",
+      "familyId": "lucent_procession",
+      "rank": "specialist",
+      "combatRole": "support",
+      "orientation": "portrait-2:3",
+      "masterFile": "misericord-of-borrowed-pain-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/lucent-procession/misericord-of-borrowed-pain-v1.png",
+      "canonical": {
+        "anatomy": "Six narrow wings fold into mercy seats around a hollow torso containing no patient, only restrained dawn.",
+        "ecology": "It follows hospitals and battlefields, removing pain faster than consent can be recorded.",
+        "origin": "Canoness Vael built the first from six cathedral seats polished smooth by generations of grieving families.",
+        "mechanic": "painless_transfer",
+        "cue": "One empty wing-seat unfolds toward the nearest unwounded body.",
+        "counterplay": "Accept a deliberate minor wound before the transfer, giving the stored agony no uninjured vessel to enter.",
+        "narrativeUse": "Offers miraculous triage whose hidden cost migrates suffering into bystanders and future patients.",
+        "visualBrief": "Ivory-gold angelic medical reliquary, exactly six seat-wings, hollow center, black seams, no gore and no patient depicted."
+      },
+      "masterDirection": "Show exactly one complete ivory-gold angelic medical reliquary with a fully hollow torso: the central cavity contains no patient, body, face, organ, spirit, or furniture, only one restrained dawn source confined behind black glass deep inside. Around that hollow center attach EXACTLY SIX separately countable long narrow wings whose inner surfaces mechanically fold into empty mercy-seat forms. Keep five seat-wings folded around the torso and unfold exactly one empty seat-wing outward toward unoccupied black space as the painless-transfer cue. The unfolded seat remains attached, empty, and unmistakably one of the six. Scorch every inward-facing seat and cavity surface while the exterior ivory-gold faces remain serene. Use black seams and measurable hinges; no feather anatomy. Keep all six complete seat-wings and the entire hollow center inside frame. No patient, bystander, healer, hospital, battlefield, wound, gore, ordinary chair, extra wing, floor, text, medical symbol, bright aura, or scene."
+    }
+  ],
+  "cutoutDirection": "Cutouts are outside this tranche. After a master receives two independent non-generator passes, edit only that exact accepted master to remove the studio background while preserving canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact counts and RGB identity. Output genuine RGBA; no checkerboard, matte, halo, regrading, post-processing, floor, text, logo, or watermark."
+}

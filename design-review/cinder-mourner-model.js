@@ -41,7 +41,7 @@ export { loadPlate };
 export const SUBJECT = {
   id: 'enemy.cinder-mourner', name: 'Cinder Mourner', family: 'Ashbound', rank: null,
   plate: '../assets/enemies/cinder-mourner-v1.png',
-  promptCall: 'call_nIgtNVLVAaxYFQ2Pt3fXba2w',
+  promptCall: null,
   targetHeightMeters: 1.76,
 };
 
@@ -417,6 +417,6 @@ export const CONFORMANCE = [
   { feature: 'Articulated fingers', state: 'absent', detail: 'Simplified paddle hands. Below what this pass\u2019s viewing distance needs; stated here rather than left for the viewer to discover.' },
   { feature: 'Ember glow', state: 'absent', detail: 'The plate carries none for this individual, unlike enemy.ash-husk\u2019s tablet. Not built, on the same rule that kept the family\u2019s torso-as-archive out of ash-husk: the individual plate governs.' },
   { feature: 'Torso as an archive of cracked clay drawers', state: 'refused',
-    detail: 'Required by the family prompt (rank 1, call_nIgtNVLVAaxYFQ2Pt3fXba2w). Absent from this individual\u2019s own plate (rank 2), same standing conflict recorded on enemy.ash-husk. Not resolved here either.' },
+    detail: 'Required by the family prompt (rank 1; external generation identifier redacted). Absent from this individual\u2019s own plate (rank 2), same standing conflict recorded on enemy.ash-husk. Not resolved here either.' },
   { feature: 'Nested garment layers', state: 'absent', detail: 'One outer robe; nothing on the plate to nest inside it, so there is no layer-clipping audit to run \u2014 an empty pair list rather than an invented one.' },
 ];

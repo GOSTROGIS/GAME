@@ -1,0 +1,105 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "glasswood-batch-01",
+  "status": "immutable-before-generation",
+  "familyId": "glasswood",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/glasswood-brood-plate.png"
+  ],
+  "commonDirection": "Use the inspected Glasswood Brood family plate only as authoritative family palette, materials, finish, silhouette language, and lighting reference. Create the distinct canonical form below; do not copy the plate representative's complete anatomy unless the form requires it. Family law: fauna cut and remade by iron trees whose sap cools into razor glass; angular, counterbalanced and physically load-bearing rather than a normal animal or generic crystal creature. Palette: obsidian black, muted oil-slick rainbow, sap gold, ironwood brown, bruised translucent violet. Materials: chipped volcanic glass, restrained oily iridescence, fibrous black wood, viscous amber sap, taut root filament. Cold raking studio light with minimal refraction and restrained internal sap-gold glow. Render exactly one complete polished stylized 3D dark-fantasy MMORPG production concept in three-quarter view with every extremity and mechanic cue visible and generous clearance. Flat near-black neutral opaque backdrop; no environment, floor, ground plane, pedestal, cast floor shadow, extra figure, text, readable symbols, runes, logo, watermark, franchise resemblance, normal deer/elk/wolf shorthand, generic bright crystal animal, insectoid-monster shorthand unless canonically an insect, heroic mount, bright rainbow crystal, glossy plastic, cute proportions, gore, exposed entrails, checkerboard, or transparency.",
+  "assets": [
+    {
+      "id": "shard_tick",
+      "name": "Shard Tick",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "shard-tick-v1.png",
+      "canonical": {
+        "anatomy": "A hand-sized parasite that drinks molten sap and wears discarded glass as a shell. The violation closes into a usable limb when the shell fills with fast-moving golden bubbles.",
+        "locomotion": "Its bodies move by passing one impulse through the whole colony; the permission cue is the shell fills with fast-moving golden bubbles.",
+        "sound": "Glasswood shard produces many dry contacts resolving into a single synchronized beat; Shell Burst commits on the first slash/area sound after the gap.",
+        "purpose": "Fauna cut and remade by iron trees whose sap cools into razor glass. This form is a hand-sized parasite that drinks molten sap.",
+        "origin": "A hand-sized parasite that drinks molten sap and wears discarded glass as a shell.",
+        "mechanic": "Shell Burst",
+        "cue": "The shell fills with fast-moving golden bubbles.",
+        "counterplay": "Roll away or crush it with strike damage before pressure peaks."
+      },
+      "formDirection": "Show one hand-sized low parasite, not a human-scale monster: a compact black ironwood arthropod remade by glasswood, with a single visibly discarded chipped-glass shell containing many fast-moving sap-gold bubbles under pressure. Make the shell visibly crushable with one clear strike fracture line and pose the small limbs in one synchronized impulse. No swarm duplicates, normal tick anatomy, inflated balloon, scene, terrain, or second creature."
+    },
+    {
+      "id": "glasswood_hart",
+      "name": "Glasswood Hart",
+      "rank": "regular",
+      "orientation": "landscape",
+      "masterFile": "glasswood-hart-v1.png",
+      "canonical": {
+        "anatomy": "Its antlers chime against iron branches, marking paths no human can safely walk. The missing anatomy briefly outlines itself when the antlers divide one dim light into three moving lines.",
+        "locomotion": "It changes lanes after a false retreat and never repeats the same return angle; the permission cue is the antlers divide one dim light into three moving lines.",
+        "sound": "Glasswood shard produces two retreating clicks answered by a third sound from the return angle; Antler Prism commits on the first radiance/slash sound after the gap.",
+        "purpose": "Fauna cut and remade by iron trees whose sap cools into razor glass. This form marks paths no human can safely walk.",
+        "origin": "Its antlers chime against iron branches, marking paths no human can safely walk.",
+        "mechanic": "Antler Prism",
+        "cue": "The antlers divide one dim light into three moving lines.",
+        "counterplay": "Stand in the dark gap, then strike the antler base."
+      },
+      "formDirection": "Show one angular hart-like but explicitly non-normal browsing beast with backward-kneed stilt geometry, chipped obsidian and ironwood anatomy, and asymmetrical backward glass antler fans. Exactly three restrained dim light lines divide from the antlers, leaving one clear dark gap; the antler bases must remain readable and reachable. Missing torso anatomy is briefly bounded by the three lines rather than filled by flesh. No normal deer or elk, forest, path, rider, terrain, or bright rainbow prism."
+    },
+    {
+      "id": "razorwing_moth",
+      "name": "Razorwing Moth",
+      "rank": "specialist",
+      "orientation": "portrait",
+      "masterFile": "razorwing-moth-v1.png",
+      "canonical": {
+        "anatomy": "A soot moth with transparent wings edged in cooling glass. The impossible structure becomes clearest when the wings meet overhead and ring like a goblet.",
+        "locomotion": "It relocates only while its firing anatomy is occluded or recovering; the permission cue is the wings meet overhead and ring like a goblet.",
+        "sound": "Glasswood shard produces a narrowing whistle that stops exactly once before release; Wing-Cast Shards commits on the first slash/projectile sound after the gap.",
+        "purpose": "Fauna cut and remade by iron trees whose sap cools into razor glass. This form casts shards from cooling wing edges.",
+        "origin": "A soot moth with transparent wings edged in cooling glass.",
+        "mechanic": "Wing-Cast Shards",
+        "cue": "The wings meet overhead and ring like a goblet.",
+        "counterplay": "Dodge toward the moth; shards spread wider at distance."
+      },
+      "formDirection": "Show one soot-black moth in a poised firing-recovery state, with transparent membranes and chipped cooling-glass edges. Its two principal wings meet overhead as one unmistakable goblet silhouette while a small fan of just-cast edge shards spreads outward away from the body, leaving the close-in approach lane readable. Keep all wings and legs countable and attached. No duplicate moth, flower, forest, magic aura, or bright rainbow glass."
+    },
+    {
+      "id": "sapmirror_lynx",
+      "name": "Sap-Mirror Lynx",
+      "rank": "elite",
+      "orientation": "landscape",
+      "masterFile": "sapmirror-lynx-v1.png",
+      "canonical": {
+        "anatomy": "Its hide reflects the forest a half-second ahead, showing where prey intends to flee. What should be internal crosses the silhouette whenever your future reflection runs across its mirrored flank.",
+        "locomotion": "It follows the last disturbed trace rather than the target's present body; the permission cue is your future reflection runs across its mirrored flank.",
+        "sound": "Glasswood shard produces one testing sound repeated closer whenever its quarry disturbs the ground; Future Pounce commits on the first slash/delayed sound after the gap.",
+        "purpose": "Fauna cut and remade by iron trees whose sap cools into razor glass. This form hunts through predicted movement.",
+        "origin": "Its hide reflects the forest a half-second ahead, showing where prey intends to flee.",
+        "mechanic": "Future Pounce",
+        "cue": "Your future reflection runs across its mirrored flank.",
+        "counterplay": "Move contrary to the reflection after it commits."
+      },
+      "formDirection": "Show one low angular glasswood lynx-like hunter with an elongated counterbalanced body, black ironwood limbs and a single broad sap-mirror flank. Inside that one mirrored flank, show exactly one thin abstract future prey reflection running in a direction contrary to the lynx's committed pounce; it is a flat reflection, not an extra creature. The future image must cross the body silhouette only through the mirror. No normal cat, forest reflected as scenery, duplicate animal, floor trace, or bright aura."
+    },
+    {
+      "id": "ironroot_auroch",
+      "name": "Ironroot Auroch",
+      "rank": "miniboss",
+      "orientation": "landscape",
+      "masterFile": "ironroot-auroch-v1.png",
+      "canonical": {
+        "anatomy": "Iron roots lace its bones and continue growing whenever it stands still. What should be internal crosses the silhouette whenever roots pull tight behind all four hooves.",
+        "locomotion": "It cannot turn during a committed advance and brakes by striking the terrain; the permission cue is roots pull tight behind all four hooves.",
+        "sound": "Glasswood shard produces slow impacts whose interval shortens without their volume changing; Rooted Stampede commits on the first strike/earth sound after the gap.",
+        "purpose": "Fauna cut and remade by iron trees whose sap cools into razor glass. This form is a committed glasswood juggernaut.",
+        "origin": "Iron roots lace its bones and continue growing whenever it stands still.",
+        "mechanic": "Rooted Stampede",
+        "cue": "Roots pull tight behind all four hooves.",
+        "counterplay": "Bait it across furnace grates; heated roots snap and cause a fall."
+      },
+      "formDirection": "Show one massive angular auroch-like juggernaut, not an ordinary ox: open glasswood flanks reveal black iron roots lacing the load-bearing skeleton. Exactly four complete hooves are visible, and taut iron roots pull backward from all four hooves into the one body, with restrained snapped-heat scoring at the roots as the furnace-grate counterplay material cue but no grate or terrain. Pose it in a straight committed advance that visibly cannot turn. No normal cattle hide, field, ground roots, rider, generic crystal bull, or scene."
+    }
+  ],
+  "cutoutDirection": "After a master receives two independent non-generator passes, edit that exact accepted master only to remove its studio background. Preserve canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact-count cues, and RGB identity. Output genuine RGBA: background and four corners alpha 0, opaque subject interiors alpha 255, partial alpha only at true antialiased fine edges; no painted transparency pattern, floor, shadow, matte, halo, text, logo, or watermark."
+}

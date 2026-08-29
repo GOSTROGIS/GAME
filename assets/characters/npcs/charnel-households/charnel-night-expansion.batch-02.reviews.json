@@ -1,0 +1,96 @@
+{
+  "schema": "SableReachAcceptedConceptHandoffV1",
+  "batchId": "charnel-night-expansion-masters-batch-02",
+  "status": "accepted-after-two-independent-non-generator-reviews",
+  "accepted": [
+    {
+      "id": "ilar_rook_unhoused_shadow",
+      "candidate": "ilar-rook-unhoused-shadow-concept-master-v3.png",
+      "sha256": "ad56fbfb2749dc74d9895f23169dcba13560360d3f2dc7207fcecf105eb1852d",
+      "destination": "assets/characters/npcs/charnel-households/ilar-rook-unhoused-shadow-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-canon-topology", "decision": "PASS", "evidence": "One uniformly near-planar featureless sheet body, exactly one blank sternum seal and exactly one broad same-material doorway fold; complete extremities and no architecture." },
+        { "reviewerRole": "remaining-hands-owner-crossreview", "decision": "PASS", "evidence": "Original-resolution review confirms one planar head/torso, two sheet arms and hands, two sheet legs and feet, one seal and one continuous doorway fold." }
+      ]
+    },
+    {
+      "id": "ilyen_doorborn_outer_age",
+      "candidate": "ilyen-doorborn-outer-age-concept-master-v8.png",
+      "sha256": "07d9a6a5061c5bc0df5a2ecf24e8f57a8585cb571a8cdeb0c112704761ab65dd",
+      "destination": "assets/characters/npcs/charnel-households/ilyen-doorborn-outer-age-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-topology-scale", "decision": "PASS", "evidence": "Door assembly measures about 18.2 percent shoulder-to-waist torso height; one complete rectangle, exactly two outer-right hinge pads and five inner-left scratches." },
+        { "reviewerRole": "remaining-hands-owner-crossreview", "decision": "PASS", "evidence": "Original-pixel macro confirms about 16 to 18 percent torso height, exactly two oval hinge pads, exactly five distinct cuts and empty aperture." }
+      ]
+    },
+    {
+      "id": "throat_orchard",
+      "candidate": "throat-orchard-concept-master-v14.png",
+      "sha256": "cc06b0b9c9710c91341a08400cffde37f5d6aeef09c3687c1372948638bd93eb",
+      "destination": "assets/bestiary/forms/charnel-households/throat-orchard-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-cyclic-topology", "decision": "PASS", "evidence": "Exactly eleven sealed cuffs plus one open ring; cyclic sequence starts at the tiny lower-right closed cuff and increases through the giant upper-right cuff without reversal." },
+        { "reviewerRole": "remaining-hands-owner-crossreview", "decision": "PASS", "evidence": "Original-resolution count is eleven closed plus one open; every neighboring closed cuff increases in both height and width in the required cycle." }
+      ]
+    },
+    {
+      "id": "jointless_advocate",
+      "candidate": "jointless-advocate-concept-master-v2.png",
+      "sha256": "44dbdd2f184fb6903a8804753725aed6ea83e4fadcdc73df2c4b363a28261f97",
+      "destination": "assets/bestiary/forms/charnel-households/jointless-advocate-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-canon-topology", "decision": "PASS", "evidence": "Exactly four continuous ribbon limbs, empty face and one compound dodge crease on only the viewer-right leg; no apparatus or extra appendage." },
+        { "reviewerRole": "remaining-hands-owner-crossreview", "decision": "PASS", "evidence": "Original-resolution review confirms four limbs total, only one creased limb and three smooth limbs, with no halo, fin, chain or panel." }
+      ]
+    },
+    {
+      "id": "mercy_eater",
+      "candidate": "mercy-eater-concept-master-v1.png",
+      "sha256": "80407c122989a02ad18a26fbb2af187ef05c98f67c758bba5a95fed9ea8a08bd",
+      "destination": "assets/bestiary/forms/charnel-households/mercy-eater-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-canon-topology", "decision": "PASS", "evidence": "One harmless blank front, one restrained dorsal mouth and integrated opening hand-ribs; numerous clear feet and no second mouth or gore." },
+        { "reviewerRole": "remaining-hands-owner-crossreview", "decision": "PASS", "evidence": "Original-resolution review confirms one low carrier, one membrane-bound dorsal mouth only, sheath ribs rather than arms and no scene." }
+      ]
+    },
+    {
+      "id": "corridor_maw",
+      "candidate": "corridor-maw-concept-master-v5.png",
+      "sha256": "7ecd116305601b0b3d10330168b3cd18fad3e73c826fadafaa4914f0a472c5d5",
+      "destination": "assets/bestiary/forms/charnel-households/corridor-maw-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-canon-topology", "decision": "PASS", "evidence": "One living frame and one corridor; near cue is fused viewer-left and points up-left, while far cue is fused distant viewer-right and points down-right; exactly two cues." },
+        { "reviewerRole": "remaining-hands-owner-crossreview", "decision": "PASS", "evidence": "Fresh original-resolution and exit-macro review confirms the two attached cue axes oppose and there is no third cue, occupant or extra opening." }
+      ]
+    }
+  ],
+  "supersededOrRejected": [
+    "ilar-rook-unhoused-shadow-concept-master-v1-rejected.png",
+    "ilar-rook-unhoused-shadow-concept-master-v2.png",
+    "ilyen-doorborn-outer-age-concept-master-v1-rejected.png",
+    "ilyen-doorborn-outer-age-concept-master-v2-rejected.png",
+    "ilyen-doorborn-outer-age-concept-master-v3.png",
+    "ilyen-doorborn-outer-age-concept-master-v4-rejected.png",
+    "ilyen-doorborn-outer-age-concept-master-v5-rejected.png",
+    "ilyen-doorborn-outer-age-concept-master-v6-rejected.png",
+    "ilyen-doorborn-outer-age-concept-master-v7.png",
+    "throat-orchard-concept-master-v1-rejected.png",
+    "throat-orchard-concept-master-v2-rejected.png",
+    "throat-orchard-concept-master-v3.png",
+    "throat-orchard-concept-master-v4-rejected.png",
+    "throat-orchard-concept-master-v5-rejected.png",
+    "throat-orchard-concept-master-v6-rejected.png",
+    "throat-orchard-concept-master-v7-rejected.png",
+    "throat-orchard-concept-master-v8-rejected.png",
+    "throat-orchard-concept-master-v9-rejected.png",
+    "throat-orchard-concept-master-v10-rejected.png",
+    "throat-orchard-concept-master-v11-rejected.png",
+    "throat-orchard-concept-master-v12-rejected.png",
+    "throat-orchard-concept-master-v13-rejected.png",
+    "jointless-advocate-concept-master-v1.png",
+    "corridor-maw-concept-master-v1-rejected.png",
+    "corridor-maw-concept-master-v2-rejected.png",
+    "corridor-maw-concept-master-v3-rejected.png",
+    "corridor-maw-concept-master-v4.png"
+  ]
+}

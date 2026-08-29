@@ -54,7 +54,7 @@
       </sc-for>
     </div>
     <p style="max-width:900px;margin:20px 0 0;color:#a7aaa4;font:16px/1.6 var(--serif)">The prompt outranks the art because the prompt is what was approved, and it is the one artefact a non-visual process can read in full. The art outranks all prose. Anything not traceable to a prompt line or a visible art feature does not get rendered &mdash; the compliant response to missing authority is a refusal that says so, never a plausible invention.</p>
-    <p style="max-width:900px;margin:14px 0 0;color:#8e928b;font:13px/1.6 var(--sans)">Source: <code style="color:#b7b6ad;font:12px ui-monospace,SFMono-Regular,Menlo,monospace">prompts/family-plates-batch-01.md</code> &mdash; ten approved canonical masters, transcribed into <code style="color:#b7b6ad;font:12px ui-monospace,SFMono-Regular,Menlo,monospace">kit/hm-art-law.js</code> with each generation-call id retained.</p>
+    <p style="max-width:900px;margin:14px 0 0;color:#8e928b;font:13px/1.6 var(--sans)">Authority: ten approved canonical masters, transcribed into <code style="color:#b7b6ad;font:12px ui-monospace,SFMono-Regular,Menlo,monospace">kit/hm-art-law.js</code> under canonical family ids.</p>
   </div>
 </section>
 
@@ -73,7 +73,7 @@
   <div style="margin:0 0 30px;padding:26px 30px;background:linear-gradient(135deg,rgba(82,102,92,.16),rgba(8,12,14,.9));border:1px solid rgba(82,102,92,.5);box-shadow:inset 3px 0 var(--moss)">
     <p style="margin:0 0 9px;color:#8aa596;font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Closed &middot; 27 August 2026 &middot; the block that gated rank-2 verification</p>
     <h3 style="margin:0 0 12px;color:var(--bone);font:400 25px var(--display)">The art is in the project now, so every render can be checked against it</h3>
-    <p style="max-width:940px;margin:0 0 18px;color:#a7aaa4;font:16px/1.6 var(--serif)">Forty-six plates were vendored out of the Drive export into <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">assets/characters/</code> and <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">assets/enemies/</code>, bytes unmodified &mdash; no resize, no recompression, no crop and no grade, because a graded master is a corrupted master. Every row in the register now carries a <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">local</code> path, so this page is same-origin, survives going offline, and its authority is readable by automated review for the first time. The three things the copy still cannot claim are below, each stated rather than absorbed.</p>
+    <p style="max-width:940px;margin:0 0 18px;color:#a7aaa4;font:16px/1.6 var(--serif)">Accepted art is indexed under <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">assets/characters/</code> and <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">assets/bestiary/</code>. The adapter resolves repository paths only, so this page is same-origin, survives going offline, and exposes missing or broken assets as explicit gaps. Masters remain ungraded: no resize, recompression, crop, or baked presentation grade is introduced here.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
       <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--line-soft);border-left:3px solid var(--ember)">
         <p style="margin:0 0 6px;color:#d4855f;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">Unreviewed</p>
@@ -154,7 +154,7 @@
         <div>
           <h3 style="margin:0 0 5px;color:var(--bone-bright);font:500 16px var(--display)">{{ f.name }}</h3>
           <p style="margin:0 0 6px;color:var(--muted);font:var(--type-body-xs)">{{ f.chassis }}</p>
-          <code style="color:#797f7a;font:10px ui-monospace,SFMono-Regular,Menlo,monospace">{{ f.promptCall }}</code>
+          <code style="color:#797f7a;font:10px ui-monospace,SFMono-Regular,Menlo,monospace">{{ f.promptAuthority }}</code>
         </div>
         <div>
           <p style="margin:0 0 8px;color:#bec0b8;font:var(--type-body)"><em style="color:var(--gold)">Violation.</em> {{ f.violation }}</p>
@@ -183,7 +183,7 @@
       <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">Every subject, and which gap it is sitting in</h2>
     </div>
   </div>
-  <p style="max-width:900px;margin:0 0 24px;color:#a7aaa4;font:17px/1.6 var(--serif)">Every subject on this page carries two columns: the concept art, and what the register knows about the subject. No render appears in either &mdash; the rig kit is humanoid-only and nothing here has authority to check a render against, so putting one on the page would be the exact failure the law names. Where no concept art exists the column is not quietly dropped &mdash; it is drawn as an ember-marked gap, because a page that hides its own holes is how eighteen finished plates went unnoticed in a Drive folder while the audit said zero characters had portraits.</p>
+  <p style="max-width:900px;margin:0 0 24px;color:#a7aaa4;font:17px/1.6 var(--serif)">Every subject on this page carries two columns: the concept art, and what the canonical index knows about the subject. No render appears in either &mdash; the rig kit is humanoid-only and nothing here has authority to check a render against, so putting one on the page would be the exact failure the law names. Where no concept art exists the column is not quietly dropped; it is drawn as an ember-marked gap.</p>
   <p style="max-width:900px;margin:0 0 26px;color:#a7aaa4;font:17px/1.6 var(--serif)">Concept art is graded as reference &mdash; <code style="color:var(--bone-dim);font:13px ui-monospace,SFMono-Regular,Menlo,monospace">sepia(.18) saturate(.7) contrast(1.18)</code>, the atlas-still grade &mdash; and it is applied to every plate on this page. Nothing is shown raw; the character grade stays reserved for rendered output, so the day a render appears beside a plate the two are told apart without a label.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:12px">
     <sc-for list="{{ coverageTiles }}" as="v" hint-placeholder-count="5">
@@ -508,14 +508,13 @@ class Component extends DCLogic {
 
   componentWillUnmount() {
     this._dead = true;
-    if (this._artTimer) clearInterval(this._artTimer);
   }
 
   async boot() {
     try {
       const [cast, art, law, obs, prompts, bestiary] = await Promise.all([
         import('./kit/hm-actor-cast.js?v=9'),
-        import('./kit/hm-concept-art.js?v=8'),
+        import('./kit/hm-concept-art.js?v=9'),
         import('./kit/hm-art-law.js?v=1'),
         import('./kit/hm-art-observed.js?v=3'),
         import('./kit/hm-cast-prompts.js?v=1'),
@@ -540,11 +539,8 @@ class Component extends DCLogic {
          real art. */
       this.hall = null;
       this.setState({ ready: true, tally: cast.castTally() });
-      /* No render loop at boot. It starts when a card is focused and stops
-         when focus clears. artWatch runs on its own slow timer instead of
-         riding the animation frame, so concept-art retries keep working on a
-         page with nothing animating. */
-      this._artTimer = setInterval(() => this.artWatch(), 2500);
+      /* Indexed art is same-origin. There is no remote retry loop: a load
+         failure is a broken repository reference and is reported as such. */
     } catch (e) {
       this.setState({ err: String(e && e.message ? e.message : e) });
     }
@@ -565,52 +561,12 @@ class Component extends DCLogic {
 
   
 
-  /* Drive drops thumbnails under burst load — a six-image probe returned two
-     and timed out four, and the four were not permission failures. So a
-     failed plate is retried at a fresh URL up to three times, spaced out,
-     and only then reported as refused. The card never shows a broken image
-     and never claims art is missing when it is merely throttled. */
+  /* Record a same-origin load failure. The adapter intentionally returns the
+     same repository URL for every attempt, so retrying cannot repair a
+     missing file or invalid LFS payload. */
   artRetry(id) {
-    const n = (this.state.artTries[id] || 0) + 1;
-    if (n > 3) return;
-    const delay = 600 * n + Math.random() * 400;
-    setTimeout(() => {
-      if (this._dead) return;
-      this.setState((s) => ({ artTries: { ...s.artTries, [id]: n } }));
-    }, delay);
-  }
-
-  /* Watchdog. The failure that actually happened was not an error event: the
-     requests hung, so `onError` never fired and the pane would have sat blank
-     for as long as the page was open. A blank pane is the one outcome the
-     concept-art rule cannot tolerate, because it looks like art that is
-     missing rather than art that failed to arrive. So every art image is
-     timed, and one that has neither loaded nor errored inside the budget is
-     treated as a failure and pushed onto the same retry ladder. */
-  artWatch() {
-    const now = performance.now();
-    const vh = innerHeight;
-    this._artSeen = this._artSeen || new Map();
-    for (const img of document.querySelectorAll('img[data-art]')) {
-      const id = img.getAttribute('data-art');
-      const key = id + '@' + (img.currentSrc || img.src);
-
-      // Only watch images the browser has actually been asked to fetch. A
-      // lazy image far below the fold is legitimately incomplete with no
-      // request in flight, and counting those as hangs is exactly the bug
-      // that burned every retry before a single card had scrolled into view.
-      const r = img.getBoundingClientRect();
-      const near = r.bottom > -1200 && r.top < vh + 1200;
-      if (!near) { this._artSeen.delete(key); continue; }
-
-      if (img.complete && img.naturalWidth > 1) { this._artSeen.delete(key); continue; }
-      const first = this._artSeen.get(key);
-      if (first == null) { this._artSeen.set(key, now); continue; }
-      if (now - first > 10000) {
-        this._artSeen.delete(key);
-        this.artRetry(id);
-      }
-    }
+    if (this.state.artTries[id]) return;
+    this.setState((state) => ({ artTries: { ...state.artTries, [id]: 1 } }));
   }
 
   /* The bestiary rows are derived from the concept-art register rather than
@@ -621,7 +577,7 @@ class Component extends DCLogic {
   beastTotal() {
     if (!this.ART) return 0;
     return Object.entries(this.ART)
-      .filter(([id, r]) => id.startsWith('enemy.') && (r.master || r.cutout || r.local)).length;
+      .filter(([id, r]) => id.startsWith('enemy.') && (r.masterPath || r.cutoutPath)).length;
   }
 
   beastRows() {
@@ -632,36 +588,21 @@ class Component extends DCLogic {
     const key = JSON.stringify(this.state.artTries);
     if (this._beastKey === key && this._beastRows) return this._beastRows;
     this._beastKey = key;
-    const FAMILY = {
-      'ashbound-individual-concept-masters': 'Ashbound · Hearthmere and the Graven March',
-      'cairn-beasts-individual-concept-masters': 'Cairn Beasts · the barrow roads',
-      'march-deserters-individual-concept-masters': 'March Deserters · what the armistice left',
-      'anchored-quarantine-individual-forms-2026-08-26': 'Anchored Quarantine · unregistered until 27 August',
-    };
+    const FAMILY = Object.fromEntries((this.BEST?.ENEMY_FAMILIES || []).map((row) => [row.id, row.name]));
     const title = (id) => id.replace(/^enemy\./, '').split('-')
       .map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     /* Which chassis each family actually needs, read from the law instead of
        assumed. Five of the ten are not quadrupeds at all, and this strip used
        to tell every beast on the page that it needed a quadruped rig. */
-    const SET_LAW = {
-      'ashbound-individual-concept-masters': 'ashbound',
-      'cairn-beasts-individual-concept-masters': 'cairn_beasts',
-      'march-deserters-individual-concept-masters': 'march_deserters',
-    };
     const LAW_BY_ID = {};
     for (const f of (this.LAW ? this.LAW.familyList() : [])) LAW_BY_ID[f.id] = f;
     const out = [];
-    /* Every beast at once. The eight-at-a-time cap existed because Drive
-       dropped thumbnails under burst load; the plates are project files now,
-       so the reason is gone and hiding two thirds of the bestiary behind a
-       button is just a page that will not show you its own contents. */
-    const limit = this.state.beastShown || 999;
     for (const [id, row] of Object.entries(this.ART)) {
-      if (!id.startsWith('enemy.') || !(row.master || row.cutout || row.local)) continue;
-      if (out.length >= limit) break;   // see beastMore(): Drive drops bursts
+      if (!id.startsWith('enemy.') || !(row.masterPath || row.cutoutPath)) continue;
       const tries = this.state.artTries[id] || 0;
       const art = this.artFor(id, 480, tries);
-      const lawRow = LAW_BY_ID[SET_LAW[row.set]];
+      const lawId = row.set === 'glasswood' ? 'glasswood_brood' : row.set;
+      const lawRow = LAW_BY_ID[lawId];
       out.push({
         id, name: title(id),
         family: FAMILY[row.set] || row.set || 'Unfiled',
@@ -671,8 +612,7 @@ class Component extends DCLogic {
         artSrc: art.src || BLANK,
         artAlt: `${title(id)}, ${art.kind}`,
         hasArt: art.has,
-        artLabel: tries >= 3 ? 'Concept master · Drive refused'
-          : `${art.kind}${tries ? ` · retry ${tries}` : ''}`,
+        artLabel: tries ? 'Indexed art · local file unavailable' : `${art.kind} · repository`,
         onArtError: () => this.artRetry(id),
       });
     }
@@ -694,11 +634,8 @@ class Component extends DCLogic {
     /* `gapsOnly` narrows the list to subjects carrying no rank-2 art at all,
        which is the working queue for the next generation batch. */
     const all = gapsOnly ? byFaction.filter((c) => !hasArt(c.id)) : byFaction;
-    /* Six cards at a time by default. Forty-two cards meant forty-two lazy
-       Drive fetches racing each other, and Drive drops thumbnails under
-       exactly that kind of burst — measured earlier in this project: an
-       eighteen-image page left every request hanging. Raising `perPage` past
-       eight is how you reproduce it. */
+    /* Six cards at a time keeps the review surface readable; asset delivery
+       is same-origin and does not determine the page size. */
     const PAGE = Math.max(2, Math.min(12, Math.round(this.props.perPage ?? 6)));
     const pages = Math.max(1, Math.ceil(all.length / PAGE));
     const page = Math.min(S.page, pages - 1);
@@ -710,7 +647,7 @@ class Component extends DCLogic {
       const hasPrompt = !!(this.PROMPTS && this.PROMPTS.CAST_PROMPTS[c.id]);
       const tries = S.artTries[c.id] || 0;
       const art = this.artFor ? this.artFor(c.id, 480, tries) : { has: false, kind: 'none' };
-      const dead = tries >= 3;
+      const dead = tries > 0;
       return {
         id: c.id,
         name: c.name,
@@ -719,13 +656,13 @@ class Component extends DCLogic {
         artSrc: art.src || BLANK,
         artAlt: `${c.name}, ${art.kind}`,
         artNote: dead
-          ? 'Registered, but Drive would not serve it after three attempts. Vendoring into assets/ is the fix.'
+          ? 'The indexed repository path failed to load. Repair the asset or its art-index path.'
           : (art.has ? art.note : 'Not drawn yet. The register carries an explicit null so the coverage count cannot skip it.'),
         onArtError: () => this.artRetry(c.id),
         artLabel: dead
-          ? 'Concept art · Drive refused'
+          ? 'Concept art · local file unavailable'
           : art.has
-            ? (art.vendored ? `${art.kind} · vendored` : `${art.kind} · Drive${tries ? ` · retry ${tries}` : ''}`)
+            ? `${art.kind} · repository`
             : 'Concept art · not drawn',
         role: c.role,
         factionName: fm.name || c.faction,
@@ -801,7 +738,7 @@ class Component extends DCLogic {
     const lawFamilies = (L ? L.familyList() : []).map((f) => ({
       name: f.name,
       chassis: `Needs a ${f.chassis} chassis`,
-      promptCall: f.promptCall,
+      promptAuthority: `hm-art-law:${f.id}`,
       violation: f.violation,
       paletteLine: `Palette — ${f.palette.join(', ')}.`,
       verdict: f.conformance.verdict,
@@ -859,7 +796,6 @@ class Component extends DCLogic {
     };
     const DARK = ['ember_ledger', 'bell_wardens', 'reed_sisters', 'cinder_compact'];
     const darkCast = cast.filter((c) => DARK.indexOf(c.faction) >= 0);
-    const driveOnly = Object.values(this.ART || {}).filter((r) => (r.master || r.cutout) && !r.local).length;
     const vendoredCount = Object.values(this.ART || {}).filter((r) => r.local).length;
 
     return {
@@ -907,7 +843,7 @@ class Component extends DCLogic {
       recoveryStat: B ? `${B.recoveryTally().families} families · ${B.recoveryTally().roles} roles · ${B.recoveryTally().factions} factions` : '—',
       proseLine: B ? `${B.recoveryTally().authoredProseRecovered}` : 'some',
 
-      pageNote: `${PAGE} at a time — forty-two Drive fetches racing each other is how this page failed to load the first time.`,
+      pageNote: `${PAGE} at a time for a readable review cadence; all art resolves from repository paths.`,
       pageLabel: `${page * PAGE + 1}–${Math.min(all.length, page * PAGE + PAGE)} of ${all.length}`,
       pagePrev: () => this.setState({ page: Math.max(0, page - 1) }),
       pageNext: () => this.setState({ page: Math.min(pages - 1, page + 1) }),
@@ -932,7 +868,7 @@ class Component extends DCLogic {
         { label: 'Cast covered', value: `${cov.withArt}/${cov.total}`, note: `${cov.ratio}% of the named cast has concept art`, edge: 'var(--moss)' },
         { label: 'Cutouts', value: String(cov.cutout), note: 'Background removed — the silhouette can be compared directly', edge: 'var(--focus)' },
         { label: 'Masters only', value: String(cov.master - cov.cutout), note: 'Staged plate with its backdrop, no cutout yet', edge: 'var(--gold)' },
-        { label: 'No art', value: String(cov.none), note: 'Drawn as an ember gap on the card, never hidden', edge: 'var(--ember)' },
+        { label: 'No art', value: String(cov.total - cov.withArt), note: 'Includes unregistered subjects; drawn as an ember gap, never hidden', edge: 'var(--ember)' },
         { label: 'Voice lines', value: `${(this.voiceTally ? this.voiceTally().have : 0)}/${cov.total}`, note: 'Required by the codex card\u2019s own prompt file', edge: 'var(--moss)' },
         { label: 'Vendored', value: String(cov.vendored), note: `Same-origin project files. The other ${cov.total - cov.vendored} have no art in any folder`, edge: 'var(--moss)' },
       ] : [],
@@ -947,18 +883,18 @@ class Component extends DCLogic {
       beastStat: `${beastRows.length} of ${this.beastTotal()} shown · vendored · 0 rigs`,
 
       artSets: [
-        { name: 'grave-tithe-concept-masters + cutouts', edge: 'var(--moss)', tone: '#7d9689', count: setCount('grave-tithe-concept-masters'),
-          detail: 'Sera Dusk, Mott Vane, Ilse Crow, Garran Low, Netta Aster, Orris Pale. Complete, mastered and cut out.' },
-        { name: 'unwritten-roads-concept-masters + cutouts', edge: 'var(--moss)', tone: '#7d9689', count: setCount('unwritten-roads-concept-masters'),
-          detail: 'Vellin the Unwritten, Kora Path, Marn Upland, Iri North, Rin Waymark, Elo Veer. Complete, mastered and cut out.' },
-        { name: 'exact-word-finals', edge: 'var(--gold)', tone: 'var(--gold-bright)', count: setCount('exact-word-finals'),
-          detail: 'All six mastered; only Nhal, Moira Quiet and Seln Clause are cut out. Three cutouts outstanding.' },
-        { name: 'ashbound-individual-concept-masters', edge: 'var(--moss)', tone: '#7d9689', count: setCount('ashbound-individual-concept-masters'),
-          detail: 'Includes ash-husk, the exact entry the content gap analysis uses as its worked example. It has art, and the audit that said otherwise was reading the repository rather than the Drive.' },
-        { name: 'cairn-beasts-individual-concept-masters', edge: 'var(--moss)', tone: '#7d9689', count: setCount('cairn-beasts-individual-concept-masters'),
-          detail: 'Cairn Hound, Antlered Cairn, Stonejaw Vixen, Lichen-Back, Warm Cairn Ram, Graveheat Matron, Cairn Maggot, Flint-Pelt, Oathstone Boar, Barrow Listener. Registered ready for the beast pass.' },
-        { name: 'march-deserters-individual-concept-masters', edge: 'var(--ember)', tone: '#d98f5f', count: setCount('march-deserters-individual-concept-masters'),
-          detail: 'Armistice Giant, Command Leech, Trench Waif, Receipt Soldier. Fewer than the family implies; the rest of the deserters are unmastered.' },
+        { name: 'Grave Tithe', edge: 'var(--moss)', tone: '#7d9689', count: setCount('grave_tithe'),
+          detail: 'Named-character coverage is measured from the canonical faction id.' },
+        { name: 'Unwritten Roads', edge: 'var(--moss)', tone: '#7d9689', count: setCount('unwritten_roads'),
+          detail: 'Named-character coverage is measured from the canonical faction id.' },
+        { name: 'Custodians of the Exact Word', edge: 'var(--gold)', tone: 'var(--gold-bright)', count: setCount('exact_word'),
+          detail: 'Masters and cutouts are counted independently from indexed repository paths.' },
+        { name: 'Ashbound forms', edge: 'var(--moss)', tone: '#7d9689', count: setCount('ashbound'),
+          detail: 'Includes all Ashbound individual-form rows currently present in the art index.' },
+        { name: 'Cairn Beasts forms', edge: 'var(--moss)', tone: '#7d9689', count: setCount('cairn_beasts'),
+          detail: 'Includes all Cairn Beasts individual-form rows currently present in the art index.' },
+        { name: 'March Deserters forms', edge: 'var(--ember)', tone: '#d98f5f', count: setCount('march_deserters'),
+          detail: 'Includes all March Deserters individual-form rows currently present in the art index.' },
         { name: 'Ember Ledger · Bell Wardens · Reed Sisters · Cinder Compact', edge: 'var(--blood)', tone: '#c98d78', count: `${darkCast.filter((c) => hasArt(c.id)).length} of ${darkCast.length}`,
           detail: 'Twenty-two of the twenty-four still have nothing, and the two that do &mdash; Maela Voss and Bera Claymother &mdash; came out of the staging folder unreviewed. Torren Vale, placed in the world and carrying as much authored writing as anyone, has no plate at all.' },
       ],

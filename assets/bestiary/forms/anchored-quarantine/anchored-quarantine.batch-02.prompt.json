@@ -1,0 +1,105 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "anchored-quarantine-masters-batch-01",
+  "status": "generation",
+  "familyId": "anchored_quarantine",
+  "authority": "GAME canonical data",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/anchored-quarantine-plate.png"
+  ],
+  "immutableRecoveredPairs": [
+    {
+      "id": "hawser_hand",
+      "conceptMaster": "assets/bestiary/forms/anchored-quarantine/hawser-hand-v1.png",
+      "transparentCutout": "assets/bestiary/forms/anchored-quarantine/hawser-hand-v1-cutout.png"
+    },
+    {
+      "id": "buoy_corpse",
+      "conceptMaster": "assets/bestiary/forms/anchored-quarantine/buoy-corpse-v1.png",
+      "transparentCutout": "assets/bestiary/forms/anchored-quarantine/buoy-corpse-v1-cutout.png"
+    }
+  ],
+  "familyDirection": "The Anchored Quarantine is the impossible afterlife of a plague fleet refused harbor: anchor shadows tow drowned crews inland. Use the family plate only as the authoritative family-style and material reference. Preserve a dragged nautical silhouette, deep wet iron, tar-black rope, corroded chain, tide-green verdigris, salt scale, restrained signal-red stitching or paint, cage-like rigging, anchor-shadow negative space and signal-bone articulation. Create the canonical form described below rather than copying the plate subject.",
+  "commonDirection": "Highly polished stylized 3D dark-fantasy MMORPG production concept render for original IP. One complete standalone subject in three-quarter view, centered with generous silhouette clearance and every anatomical extremity visible. Mature narrow anatomy, restrained material density and tactile weathered surfaces. Flat near-black neutral opaque studio backdrop, no environment, horizon, terrain, water scene or ground plane. Cold raking studio light from one side, ungraded neutral presentation. Horror comes from impossible nautical articulation, absence and ritual repetition; gore is secondary. No extra unrelated figures or creatures, text, readable symbols, runes, real religious marks, logos, watermark, franchise resemblance, glossy plastic, cute or chibi proportions, bright saturation, exposed entrails, real-world disease taxonomy or disability-as-hostility shorthand.",
+  "assets": [
+    {
+      "id": "signal_mate",
+      "name": "Signal Mate",
+      "rank": "specialist",
+      "orientation": "portrait",
+      "masterFile": "signal-mate-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/anchored-quarantine/signal-mate-v1.png",
+      "canonical": {
+        "anatomy": "Flag bones unfold from the shoulders and signal through the body instead of air.",
+        "locomotion": "It changes direction only when its own shadow acknowledges a flag.",
+        "sound": "Rigging taps coded refusals against invisible masts.",
+        "purpose": "It coordinates separated crew forms beyond sight of the coast.",
+        "origin": "The fleet's signal mate continued denial flags after fog erased both ships and harbor.",
+        "mechanic": "Shadow Semaphore",
+        "cue": "Two bone flags form a bright angular code.",
+        "counterplay": "Stand on the responding shadow or interrupt one flag angle."
+      },
+      "masterPrompt": "Use the Anchored Quarantine family plate only for family silhouette and material language: deep wet iron, tar rope, corroded chain, tide-green verdigris, restrained signal-red stitching, cage rigging and dragged nautical posture. Create an original Signal Mate, not the plate subject. Its narrow drowned nautical humanoid body is a semaphore mechanism: exactly two large articulated flag-bone structures unfold from opposite shoulders, pass their signal physically through an open cage-like torso, and lock into a bright angular code made from cold bone edge-light and restrained signal red, without letters or readable symbols. The body turns only after one hard-edged shadow echo attached behind and below the figure acknowledges the angle; keep that responding shadow a mechanic-bound negative shape, not a second figure or ground plane. Rigging lines tap against implied absent masts but terminate on the subject. Show refusal, fog-erased fleet history and long-distance coordination through worn maritime fittings, empty negative space and repeated signal joints, not through text. Highly polished stylized 3D dark-fantasy MMORPG production concept, mature restrained anatomy and tactile materials, single full-body subject in three-quarter view, all extremities and both complete bone flags visible, centered with generous clearance. 1024 by 1536 portrait. Flat near-black neutral opaque studio backdrop, no environment or ground plane. Cold raking light from one side, ungraded neutral. No extra figures, text, readable code, runes, real religious marks, logo, watermark, franchise resemblance, glossy plastic, cute proportions, bright saturation, gore, real-world disease taxonomy or disability shorthand."
+    },
+    {
+      "id": "quarantine_bosun",
+      "name": "Quarantine Bosun",
+      "rank": "elite",
+      "orientation": "portrait",
+      "masterFile": "quarantine-bosun-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/anchored-quarantine/quarantine-bosun-v1.png",
+      "canonical": {
+        "anatomy": "A capstan rotates through its abdomen with drowned arms serving as bars.",
+        "locomotion": "It circles an unseen anchor point and shortens the radius each turn.",
+        "sound": "A work chant loses one sailor's voice per rotation.",
+        "purpose": "It winches stranded quarantine shadows toward navigable wet ground.",
+        "origin": "A bosun ordered the crew to raise anchor after every living hand had left the deck.",
+        "mechanic": "Human Capstan",
+        "cue": "The drowned arm-bars lock and a dark radius appears.",
+        "counterplay": "Move inside the capstan circle and break the arm whose voice is missing."
+      },
+      "masterPrompt": "Use the Anchored Quarantine family plate only for family silhouette and material language: deep wet iron, tar rope, corroded chain, tide-green verdigris, restrained signal-red stitching, cage rigging and dragged nautical posture. Create an original Quarantine Bosun, not the plate subject. A heavy drowned bosun is built around an open abdominal capstan: the capstan drum rotates physically through a broad negative-space gap in the abdomen and a restrained radial set of unmistakably human drowned arms serve as its bars. The locked arm-bars define one hard dark circular tow radius around the standalone body; it is an abstract mechanic cue, never a floor or environment. Exactly one arm-bar is visibly unresponsive to the repeated work-chant rhythm while the others share restrained signal-red rope bindings, making the missing-voice counterplay readable without gore or text. Pose the body dragged into a tightening circular step around an unseen anchor point; wet rope and chain lead back into the capstan and stop within frame. Highly polished stylized 3D dark-fantasy MMORPG production concept, mature restrained anatomy and tactile materials, single full-body subject in three-quarter view, every limb, arm-bar and tow line visible, centered with generous clearance. 1024 by 1536 portrait. Flat near-black neutral opaque studio backdrop, no environment or ground plane. Cold raking light from one side, ungraded neutral. No extra figures, text, readable symbols, runes, real religious marks, logo, watermark, franchise resemblance, glossy plastic, cute proportions, bright saturation, exposed entrails, real-world disease taxonomy or disability shorthand."
+    },
+    {
+      "id": "captain_under_keel",
+      "name": "Captain Under the Keel",
+      "rank": "miniboss",
+      "orientation": "portrait",
+      "masterFile": "captain-under-keel-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/anchored-quarantine/captain-under-keel-v1.png",
+      "canonical": {
+        "anatomy": "An inverted captain walks beneath a spectral keel pressed through the shoulders.",
+        "locomotion": "It follows the underside of terrain as though the land were a ship.",
+        "sound": "Orders resonate upward through stone before the mouth moves.",
+        "purpose": "It charts inland hull routes and disciplines crew that surface above them.",
+        "origin": "The captain chose to go down beneath a ship already forbidden from sinking in harbor records.",
+        "mechanic": "Land Hull",
+        "cue": "A keel line appears below the floor and banks into a turn.",
+        "counterplay": "Cross above the keel during its bank, then strike the inverted command shadow."
+      },
+      "masterPrompt": "Use the Anchored Quarantine family plate only for family silhouette and material language: deep wet iron, tar rope, corroded chain, tide-green verdigris, restrained signal-red stitching, cage rigging and dragged nautical posture. Create an original Captain Under the Keel, not the plate subject. The captain's complete drowned nautical humanoid anatomy is unmistakably inverted, head downward and boots above, walking along an impossible underside. One long spectral ship keel is pressed physically through both shoulders and banks into a clear turn; it is a single continuous keel line, not a boat, environment or ground plane. The inverted command shadow remains attached as a hard anchor-dark negative echo under the turning body so the strike point reads without becoming another figure. Orders traveling upward through stone are suggested by restrained vibration in the keel and signal bones before the still mouth moves, without text or visible terrain. Highly polished stylized 3D dark-fantasy MMORPG production concept, mature restrained anatomy and tactile materials, single full-body subject in three-quarter view, all inverted extremities and the entire banked keel visible, centered with generous clearance. 1024 by 1536 portrait. Flat near-black neutral opaque studio backdrop, no environment or ground plane. Cold raking light from one side, ungraded neutral. No extra figures, text, readable symbols, runes, real religious marks, logo, watermark, franchise resemblance, glossy plastic, cute proportions, bright saturation, exposed entrails, real-world disease taxonomy or disability shorthand."
+    },
+    {
+      "id": "fleet_one_shadow",
+      "name": "The Fleet in One Shadow",
+      "rank": "boss",
+      "orientation": "landscape",
+      "masterFile": "fleet-in-one-shadow-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/anchored-quarantine/fleet-in-one-shadow-v1.png",
+      "canonical": {
+        "anatomy": "Dozens of absent ships overlap as one vast anchor-shaped darkness full of walking crews.",
+        "locomotion": "It sails inland across connected shadows and beaches on direct light.",
+        "sound": "Fog bells answer one another from beneath roads and fields.",
+        "purpose": "It seeks a harbor large enough to admit every quarantined vessel at once.",
+        "origin": "The refused fleet lashed anchor shadows together when no coastline would accept its dead.",
+        "mechanic": "Shadow Armada",
+        "cue": "Masts rise as negative space from every connected dark surface.",
+        "counterplay": "Create a continuous light break, then board and sever the flagship anchor line."
+      },
+      "masterPrompt": "Use the Anchored Quarantine family plate only for family silhouette and material language: deep wet iron, tar rope, corroded chain, tide-green verdigris, restrained signal-red stitching, cage rigging and dragged nautical posture. Create an original Fleet in One Shadow, not the plate subject and not a fleet scene. The single creature is a vast anchor-shaped darkness made from dozens of overlapping absent ship silhouettes; hulls, masts and rigging exist as layered negative spaces inside one continuous anchor-shadow body, and many tiny walking crew silhouettes move within those absences as anatomy rather than extra figures. Connected shadow plates visibly lash the refused vessels into one organism. One continuous cold direct-light break beaches the shadow mass and exposes exactly one prominent flagship anchor line, physically boardable and severable, with restrained signal-red binding. Fog-bell forms answer at separated points inside the mass, and masts rise as negative-space cutouts, with no land, road, field, sea or harbor scene. Highly polished stylized 3D dark-fantasy MMORPG production concept, mature restrained material density and tactile edges, single complete anchor-shadow subject in three-quarter presentation, every anchor fluke, connected shadow plate, mast absence and the complete flagship line visible, centered with generous clearance. 1536 by 1024 landscape. Flat near-black neutral opaque studio backdrop, no environment or ground plane. Cold raking light from one side, ungraded neutral. No extra unrelated figures, text, readable symbols, runes, real religious marks, logo, watermark, franchise resemblance, glossy plastic, cute proportions, bright saturation, exposed entrails, real-world disease taxonomy or disability shorthand."
+    }
+  ],
+  "reviewPolicy": "The generator cannot approve its own work. Each master requires two independent non-generator reviews for exact canon, family silhouette and materials, framing, opaque raster and forbidden-content compliance before any canonical integration."
+}

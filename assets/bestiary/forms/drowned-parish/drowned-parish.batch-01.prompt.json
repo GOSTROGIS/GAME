@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "packetStatus": "immutable-before-generation",
+  "familyId": "drowned_parish",
+  "familyName": "Drowned Parish",
+  "authority": {
+    "canonicalData": "GAME-repo-lfs-skip/packages/content/src/bestiary.data.js",
+    "artLaw": "GAME-repo-lfs-skip/design-review/kit/hm-art-law.js",
+    "familyPlate": "GAME-repo-lfs-skip/assets/bestiary/drowned-parish-plate.png"
+  },
+  "compilation": {
+    "master": "commonMaster + two LF characters + forms[id].master",
+    "cutout": "commonCutout",
+    "referencePolicy": "Master generation receives the family plate as Image 1. Cutout editing receives only its accepted master as Image 1."
+  },
+  "batches": [
+    {
+      "id": "drowned-parish-a",
+      "forms": [
+        "mirebound",
+        "vestry_drifter",
+        "drowned_deacon",
+        "font_bearer",
+        "sexton_below"
+      ]
+    },
+    {
+      "id": "drowned-parish-b",
+      "forms": [
+        "parish_that_walks",
+        "aisle_floater",
+        "hymn_eel",
+        "tide_sacristan",
+        "drowned_nave"
+      ]
+    }
+  ],
+  "commonMaster": "Use case: stylized-concept\nAsset type: canonical individual bestiary production concept master.\nInput image: Image 1 is the Drowned Parish family style, anatomy, material, palette, and lighting reference only. Create a new distinct canonical form; do not merely copy the plate pose.\nPrimary request: Render one isolated Drowned Parish subject as a polished stylized 3D dark-fantasy MMORPG production concept for original IP. The family is a drowned congregation repeating its final service: human-derived, waterlogged, bowed, and processional. Preserve mature narrow proportions, plausible joints, readable locomotion, tactile restrained materials, and a clean silhouette suitable for later 3D modeling.\nMandatory family violation: the chest is an open flooded nave; ribs lengthen into two parallel rows of tiny warped pew boards; black water visibly flows upward against gravity from the chest into the throat. Mandatory family anatomy: a circular halo woven from dripping living reeds; a smooth eyeless face beneath a thin moving mineral-water film; long saturated heavy robes streaming horizontally as if submerged despite empty air; fingers branching into cold unlit candle-wick tips. Adapt these laws to the form's canonical body plan without losing them.\nComposition: full body, centered, three-quarter view, all extremities and silhouette features visible, generous clearance on every edge, no crop, no scene, no environment, no floor, no ground plane, no pedestal, no extra figures. Use a flat near-black neutral opaque backdrop. The complete canvas must be opaque.\nLighting: cold raking key from one side, with a dim blue-gray reflection cast by the impossible chest water. Keep the render ungraded and measurement-friendly.\nPalette: reed green, estuary silt brown, corpse pale, rain black, and muted cold blue. Materials: saturated heavy cloth, slimy living reeds, warped drowned wood, mineral water film, wet silt, and only the form-specific materials stated below.\nCanon communication: show the form's stated anatomy and telegraph cue clearly in a poised production-design state. Locomotion, horror audio, lifecycle purpose, origin, mechanic, and counterplay inform its silhouette and readiness but must not become a narrative scene.\nForbidden: ordinary drowned zombie, sea pirate, mermaid, generic ghost, clean vestments, real disease taxonomy, disability shorthand, exposed entrails, gore spectacle, glossy plastic, bright saturation, cute or chibi proportions, readable writing, letters, numbers, musical glyphs, runes, logos, watermarks, franchise resemblance, recognizable real-world religious marks, baked checkerboard, border, caption, or UI.",
+  "commonCutout": "Use case: background-extraction\nInput image: Image 1 is the accepted concept master, the edit target, and the sole design authority.\nPrimary request: Change only the background. Extract the exact same complete subject onto genuine transparent RGBA pixels. Preserve the exact canvas dimensions, canvas orientation, subject pixel scale, subject position, framing, three-quarter pose, anatomy, proportions, silhouette, colors, lighting, materials, surface detail, telegraph cue, and every family-specific design feature. Preserve fine reed, wick, water-film, streamed-cloth, and silhouette edges cleanly.\nRemove the entire opaque backdrop plus any floor, ground, pedestal, contact shadow, atmospheric haze, or backdrop glow. Make all four corners fully transparent and keep substantial visible nontransparent subject pixels.\nDo not restyle, redraw, reinterpret, regenerate, re-pose, resize, reframe, rotate, crop, stretch, add, remove, simplify, repair, or redesign any part of the subject. Do not change subject dimensions or silhouette. No checkerboard, matte rectangle, fringe, text, logo, watermark, border, caption, UI, or extra figure. Output a true transparent PNG, not a simulated transparency pattern.",
+  "forms": {
+    "mirebound": {
+      "name": "Mirebound Parishioner",
+      "fileStem": "mirebound-parishioner",
+      "rank": "regular",
+      "role": "bruiser",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "master": "Canonical form: Mirebound Parishioner, regular bruiser, 1.65 meters. Canvas orientation: vertical 2:3 portrait. Anatomy and origin: a drowned worshipper that mistakes every traveler for someone late to the final service; its missing anatomy briefly outlines itself when it taps a childhood knock against the causeway. Locomotion: one committed weight transfer, then it reassembles its balance; the childhood knock is the permission cue. Horror audio: a drowned, load-bearing groan, one blunt beat, then a long settling scrape; Pew-Grip commits only after the gap. Lifecycle purpose: part of the drowned congregation repeating the service whenever blackwater falls. Mechanic: Pew-Grip, a grapple and water threat. Telegraph cue: it taps the childhood knock. Counterplay: answer the rhythm with guard taps or sever the gripping reeds. Show one bowed processional body at the instant the knock briefly outlines the canonically missing anatomy, with gripping reeds readable but no victim, road, or separate prop."
+    },
+    "vestry_drifter": {
+      "name": "Vestry Drifter",
+      "fileStem": "vestry-drifter",
+      "rank": "regular",
+      "role": "skirmisher",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "master": "Canonical form: Vestry Drifter, regular skirmisher, 1.65 meters. Canvas orientation: vertical 2:3 portrait. Anatomy and origin: trapped air fills its robes and carries the corpse just above the waterline; the family violation closes into a usable limb when a V-shaped wake accelerates with no visible body above it. Locomotion: it changes lanes after a false retreat and never repeats its return angle. Horror audio: two retreating clicks are answered by a third click from the return angle. Lifecycle purpose: part of the drowned congregation repeating the service whenever blackwater falls. Mechanic: Wake Cut, water and slash. Telegraph cue: a V-shaped wake accelerates with no visible body above it. Counterplay: step onto high stone so the drifter beaches in recovery. Show the air-buoyed streamed robes and the body poised out of a false retreat, with a restrained impossible V-shaped wake/pressure trace isolated around the lower silhouette; no water surface, terrain, or scene."
+    },
+    "drowned_deacon": {
+      "name": "Drowned Deacon",
+      "fileStem": "drowned-deacon",
+      "rank": "specialist",
+      "role": "support",
+      "heightMeters": 1.9,
+      "orientation": "portrait-2:3",
+      "master": "Canonical form: Drowned Deacon, specialist support, 1.9 meters. Canvas orientation: vertical 2:3 portrait. Anatomy and origin: its sermon survives as bubbles rising from lungs occupied by small silver fish, and no joint explains its motion. Locomotion: it exchanges places with the nearest allied ritual position. Horror audio: a call-and-response whose answering voice comes from an ally. Lifecycle purpose: part of the drowned congregation repeating the service whenever blackwater falls. Mechanic: Submerged Benediction, water and healing. Telegraph cue: the silver fish gather in its reed halo facing nearby parishioners. Counterplay: scatter the fish with fire or interrupt with lightning. Show the bubbles rising from the fish-occupied lung/chest region and the small silver fish gathered directionally within the halo; the fish are anatomical occupants/telegraph particles, not extra character subjects, and no ally or scene is present."
+    },
+    "font_bearer": {
+      "name": "Sunken Font-Bearer",
+      "fileStem": "sunken-font-bearer",
+      "rank": "elite",
+      "role": "juggernaut",
+      "heightMeters": 2.15,
+      "orientation": "portrait-2:3",
+      "master": "Canonical form: Sunken Font-Bearer, elite juggernaut, 2.15 meters. Canvas orientation: vertical 2:3 portrait. Anatomy and origin: a stone baptismal font has grown around its shoulders and is filled with water that reflects clear sky. Locomotion: it cannot turn during its committed advance and brakes only by striking terrain. Horror audio: slow impacts whose interval shortens without any volume change. Lifecycle purpose: part of the drowned congregation repeating the service whenever blackwater falls. Mechanic: False-Sky Deluge, water and frost. Telegraph cue: clouds race across the carried water. Counterplay: attack below the rim or crack the font with a strike. Show the shoulder-grown stone font as integral anatomy, its contained water displaying fast cloud reflections as the poised telegraph; keep the lower rim and vulnerable underside readable, with no landscape, terrain, real-world symbol, or scene."
+    },
+    "sexton_below": {
+      "name": "The Sexton Below",
+      "fileStem": "the-sexton-below",
+      "rank": "miniboss",
+      "role": "controller",
+      "heightMeters": 2.56,
+      "orientation": "portrait-2:3",
+      "master": "Canonical form: The Sexton Below, miniboss controller, 2.56 meters. Canvas orientation: vertical 2:3 portrait. Anatomy and origin: the drowned-cemetery sexton kept digging after the cemetery drowned and now opens graves beneath the causeway; internal crosses silhouette when a rectangle of dry dust appears impossibly on the wet road. Locomotion: it advances only while escape geometry changes. Horror audio: three warnings, a held absence, then one enclosing note. Lifecycle purpose: part of the drowned congregation repeating the service whenever blackwater falls. Mechanic: Grave Underfoot, water and trap. Telegraph cue: the impossible dry-dust rectangle. Counterplay: leave the grave outline before skeletal hands close. Show the huge bowed sexton and its internal cross silhouettes as abstract fictional grave-marker bar forms, not recognizable real-world religious symbols. Express the cue only as a restrained isolated rectangular dry-dust/negative-space geometry adjacent to the lower silhouette, with closing skeletal-hand contours contained as the subject's own projected trap anatomy; no road, cemetery, separate skeleton, victim, floor, or environment."
+    },
+    "parish_that_walks": {
+      "name": "The Parish That Walks",
+      "fileStem": "the-parish-that-walks",
+      "rank": "boss",
+      "role": "juggernaut",
+      "heightMeters": 3.63,
+      "orientation": "portrait-2:3",
+      "master": "Canonical form: The Parish That Walks, boss juggernaut, 3.63 meters. Canvas orientation: vertical 2:3 portrait. Anatomy and origin: the congregation locks arms around a drowned chapel bell and rises as one many-legged body. This is one fused composite entity, one subject and one silhouette; its component congregation anatomy is inseparable, never separate background figures. Locomotion: it cannot turn during its committed advance and brakes only against terrain. Horror audio: slow impacts accelerate without changing volume. Lifecycle purpose: the drowned congregation repeats its final service whenever blackwater falls. Mechanic: Procession Tide, water, strike, and summon. Telegraph cue: dozens of fused feet take the same processional step beneath an implied surface. Counterplay: exposed handbells reverse the order. Show the drowned chapel bell as the core around which arms interlock, the unified many-legged processional step clearly readable, and exposed handbells integrated as counterplay anatomy. No actual water plane, terrain, chapel scene, or detached parishioner."
+    },
+    "aisle_floater": {
+      "name": "Aisle Floater",
+      "fileStem": "aisle-floater",
+      "rank": "regular",
+      "role": "bruiser",
+      "heightMeters": 1.65,
+      "orientation": "landscape-3:2",
+      "master": "Canonical form: Aisle Floater, regular bruiser, 1.65 meters. Canvas orientation: horizontal 3:2 landscape because the body is held flat. Anatomy: pew boards pass through its ribs and hold it flat above water. Locomotion: it drifts only along invisible church aisles despite the current. Horror audio: water taps underneath it like restrained applause. Origin: a late worshipper clung to a pew until both became part of the nave. Lifecycle purpose: it clears reeds from submerged routes. Mechanic: Invisible Aisle, strike and physical. Telegraph cue: parallel ripples define a narrow route. Counterplay: step outside the ripple aisle and attack the exposed board ends. Show one horizontally floating body with pew boards visibly passing through the rib/nave structure, vulnerable board ends exposed, and two restrained parallel ripple bands isolated around the silhouette; no water plane, aisle architecture, route environment, or scene."
+    },
+    "hymn_eel": {
+      "name": "Hymn Eel",
+      "fileStem": "hymn-eel",
+      "rank": "regular",
+      "role": "artillery",
+      "heightMeters": 1.65,
+      "orientation": "landscape-3:2",
+      "master": "Canonical form: Hymn Eel, regular artillery, 1.65 meters. Canvas orientation: horizontal 3:2 landscape for the elongated swimming body. Anatomy: rows of tiny human teeth form musical notation down its translucent flank; depict the teeth as an abstract cadence-like arrangement with no readable score, note glyph, letter, number, or symbol. Translate the mandatory flooded-nave chest, pew-ribs, reed halo, water-film face, streamed robe material, and wick-tip anatomy coherently into its single elongated human-derived eel silhouette. Locomotion: it swims through held notes as though they are streams. Horror audio: one low vowel bends pitch while it circles. Origin: the silver fish from choir lungs learned one elongated body. Lifecycle purpose: it consumes unfinished hymns. Mechanic: Sustain Current, projectile and curse. Telegraph cue: a visible note stretches from its mouth across water; render this only as an abstract continuous cold pressure/vibration ribbon, never a musical glyph. Counterplay: a bell strike or crossing at the rest mark interrupts it. Show the translucent flank, tiny tooth cadence, and the continuous mouth-emitted pressure ribbon clearly, isolated with no water plane, bell, notation, target, or scene."
+    },
+    "tide_sacristan": {
+      "name": "Tide Sacristan",
+      "fileStem": "tide-sacristan",
+      "rank": "specialist",
+      "role": "support",
+      "heightMeters": 1.9,
+      "orientation": "portrait-2:3",
+      "master": "Canonical form: Tide Sacristan, specialist support, 1.9 meters. Canvas orientation: vertical 2:3 portrait. Anatomy and origin: it refused to extinguish the chapel lights during the flood; its arms branch into candelabra fingers burning with cold water. Form-specific canon overrides the family's normally unlit wick tips only for these restrained cold-water flame forms. Locomotion: it walks backward wherever reflected flame leads. Horror audio: wet candlewicks whisper names in liturgical order, but include no written names or readable marks. Lifecycle purpose: it relights drowned shrines and calls the parish. Mechanic: Cold Vigil, hex and summon. Telegraph cue: blue cold-water flames ignite from little finger to thumb. Counterplay: extinguish the middle flame. Show the backward-stepping posture and branching candelabra hands, with the sequential little-finger-to-thumb ignition readable and the middle flame visually identifiable; no shrine, reflected floor, summoned ally, real-world religious mark, or scene."
+    },
+    "drowned_nave": {
+      "name": "Drowned Nave",
+      "fileStem": "drowned-nave",
+      "rank": "elite",
+      "role": "juggernaut",
+      "heightMeters": 2.15,
+      "orientation": "portrait-2:3",
+      "master": "Canonical form: Drowned Nave, elite juggernaut, 2.15 meters. Canvas orientation: vertical 2:3 portrait. Anatomy and origin: the chapel remembered carrying people after its foundations failed; a chapel roof arches shoulder-to-shoulder over a congregation-shaped void. Treat the void as integral negative-space anatomy, not an extra crowd. Locomotion: it plants buttress limbs and vaults one architectural bay at a time. Horror audio: rain falls inside it even under clear sky. Lifecycle purpose: it shelters lesser parish forms. Mechanic: Processional Bay, strike and area. Telegraph cue: the next floor bay darkens beneath the moving roof shadow. Counterplay: stand between bay lines, then strike the planted buttress. Show one architectural humanoid entity with roof-arch shoulders, the congregation-shaped void, planted buttress limbs, internal rain, and one restrained dark projected bay/shadow geometry adjacent to the lower silhouette; no chapel environment, floor, sheltered creatures, real-world religious marks, or scene."
+    }
+  }
+}

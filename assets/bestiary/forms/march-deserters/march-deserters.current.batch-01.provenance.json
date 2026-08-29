@@ -1,0 +1,464 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-march-deserters-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "transparent_cutout.armistice_giant",
+      "subjectId": "armistice_giant",
+      "familyId": "march_deserters",
+      "rank": "elite",
+      "role": "transparent_cutout",
+      "path": "assets/bestiary/forms/march-deserters/armistice-giant-v1-cutout.png",
+      "sha256": "0bbacdeb03b3c572d5c1020e1d8517268e9776fb77df8589373fb3260815474c",
+      "bytes": 1741337,
+      "dimensions": {
+        "width": 1023,
+        "height": 1537
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "0bbacdeb03b3c572d5c1020e1d8517268e9776fb77df8589373fb3260815474c"
+      },
+      "sourceReferences": [
+        "assets/bestiary/forms/march-deserters/armistice-giant-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.armistice_giant",
+      "subjectId": "armistice_giant",
+      "familyId": "march_deserters",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/march-deserters/armistice-giant-v1.png",
+      "sha256": "3d71103df5e943a13a5b57ce7fc9c8f74e89696edb9f74d9bc1c41aed5f25112",
+      "bytes": 1886369,
+      "dimensions": {
+        "width": 1023,
+        "height": 1537
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "3d71103df5e943a13a5b57ce7fc9c8f74e89696edb9f74d9bc1c41aed5f25112"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.bannerless_scout",
+      "subjectId": "bannerless_scout",
+      "familyId": "march_deserters",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/march-deserters/bannerless-scout-v4.png",
+      "sha256": "9496a7d38e3e142a3b01c9fffeda44f80997b23b5233729912ffce7fadce24fb",
+      "bytes": 1175538,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "9496a7d38e3e142a3b01c9fffeda44f80997b23b5233729912ffce7fadce24fb"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.captain_ninth_blank",
+      "subjectId": "captain_ninth_blank",
+      "familyId": "march_deserters",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/march-deserters/captain-ninth-blank-v7.png",
+      "sha256": "b3a11883e93d404f643bebd37e3b147fe1b4c62a9b017339c88a7b325913cb5b",
+      "bytes": 1582432,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "b3a11883e93d404f643bebd37e3b147fe1b4c62a9b017339c88a7b325913cb5b"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.command_leech",
+      "subjectId": "command_leech",
+      "familyId": "march_deserters",
+      "rank": "specialist",
+      "role": "transparent_cutout",
+      "path": "assets/bestiary/forms/march-deserters/command-leech-v1-cutout.png",
+      "sha256": "0f791c91bb9d93a50df75e4d55c76753bb202a229ee353f7e18aad3335d385c7",
+      "bytes": 2337280,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "0f791c91bb9d93a50df75e4d55c76753bb202a229ee353f7e18aad3335d385c7"
+      },
+      "sourceReferences": [
+        "assets/bestiary/forms/march-deserters/command-leech-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.command_leech",
+      "subjectId": "command_leech",
+      "familyId": "march_deserters",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/march-deserters/command-leech-v1.png",
+      "sha256": "0c54e32f16cb53eda846d053334fa10d2ea6c044dbd0c8b1460acbff9b1ce3cc",
+      "bytes": 2020742,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "0c54e32f16cb53eda846d053334fa10d2ea6c044dbd0c8b1460acbff9b1ce3cc"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.marshal_vesk_unreported",
+      "subjectId": "marshal_vesk_unreported",
+      "familyId": "march_deserters",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/march-deserters/marshal-vesk-unreported-v4.png",
+      "sha256": "e2d0730f7dc7e7fe8445e70f00534028eef4798806cd25f96d749dfa97244465",
+      "bytes": 1730603,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "e2d0730f7dc7e7fe8445e70f00534028eef4798806cd25f96d749dfa97244465"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.orderless_pikeman",
+      "subjectId": "orderless_pikeman",
+      "familyId": "march_deserters",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/march-deserters/orderless-pikeman-v6.png",
+      "sha256": "8000d142faf27fe2dc6491aef678610533fc0e8d32c16af811edb07825397d99",
+      "bytes": 1157105,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "8000d142faf27fe2dc6491aef678610533fc0e8d32c16af811edb07825397d99"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.receipt_soldier",
+      "subjectId": "receipt_soldier",
+      "familyId": "march_deserters",
+      "rank": "regular",
+      "role": "transparent_cutout",
+      "path": "assets/bestiary/forms/march-deserters/receipt-soldier-v1-cutout.png",
+      "sha256": "2738ba2be2d140363fd87e04406bb2b1feceef96e5159b437a8779c4aa871b27",
+      "bytes": 1744161,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "2738ba2be2d140363fd87e04406bb2b1feceef96e5159b437a8779c4aa871b27"
+      },
+      "sourceReferences": [
+        "assets/bestiary/forms/march-deserters/receipt-soldier-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.receipt_soldier",
+      "subjectId": "receipt_soldier",
+      "familyId": "march_deserters",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/march-deserters/receipt-soldier-v1.png",
+      "sha256": "c3a74e6fded66a80e84e1225f22ae012ffa46518b45a38b600400aec1195a175",
+      "bytes": 2325888,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "c3a74e6fded66a80e84e1225f22ae012ffa46518b45a38b600400aec1195a175"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.sealed_sapper",
+      "subjectId": "sealed_sapper",
+      "familyId": "march_deserters",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/march-deserters/sealed-sapper-v7.png",
+      "sha256": "2796d684ea7aa7e37a7e5bde848ee009493b0f70b5a271c4c5c34ea37303afaa",
+      "bytes": 1637947,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "2796d684ea7aa7e37a7e5bde848ee009493b0f70b5a271c4c5c34ea37303afaa"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.trench_waif",
+      "subjectId": "trench_waif",
+      "familyId": "march_deserters",
+      "rank": "regular",
+      "role": "transparent_cutout",
+      "path": "assets/bestiary/forms/march-deserters/trench-waif-v1-cutout.png",
+      "sha256": "622de20a0e28680d7c0699054333f1d96994e814e1fb04d19b48edfd5ca980d1",
+      "bytes": 1881947,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "622de20a0e28680d7c0699054333f1d96994e814e1fb04d19b48edfd5ca980d1"
+      },
+      "sourceReferences": [
+        "assets/bestiary/forms/march-deserters/trench-waif-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.trench_waif",
+      "subjectId": "trench_waif",
+      "familyId": "march_deserters",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/march-deserters/trench-waif-v1.png",
+      "sha256": "c2aa494e0816a926f487153300e470c881b0f06456afc4ae2c11912b6a03e16a",
+      "bytes": 2134804,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "c2aa494e0816a926f487153300e470c881b0f06456afc4ae2c11912b6a03e16a"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.wax_seal_archer",
+      "subjectId": "wax_seal_archer",
+      "familyId": "march_deserters",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/march-deserters/wax-seal-archer-v5.png",
+      "sha256": "f4eca8e8928aa6a22611eb1a3b9f718bc785be3e195b7419212156ee73034c21",
+      "bytes": 2044519,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "f4eca8e8928aa6a22611eb1a3b9f718bc785be3e195b7419212156ee73034c21"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

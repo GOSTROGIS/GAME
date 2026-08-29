@@ -1,0 +1,19 @@
+{
+  "schema": "SableReachExpansionConceptPromptRevisionV1",
+  "batchId": "remaining-hands-expansion-batch-01-revision-v2",
+  "familyId": "remaining_hands",
+  "status": "immutable-before-generation",
+  "basePacketSha256": "0d7dd12a6ae060ed64519429deca9fe1c1297b0c37c27acc3db9fcfbffcbc593",
+  "policy": "Preserve all conforming identity, family, anatomy, framing, material and count features. Correct only the generator-identified canonical defect. Earlier candidate bytes remain immutable; every correction uses a new versioned filename and remains subject to two independent non-generator reviews.",
+  "promptCompilation": "For each revision, the exact built-in edit prompt is inputRole followed by two newline characters followed by revisionDirection.",
+  "revisions": [
+    {
+      "id": "sister_calve_unlit_hospice",
+      "source": "candidates/sister-calve-unlit-hospice-concept-master-v1-rejected.png",
+      "outputFile": "candidates/sister-calve-unlit-hospice-concept-master-v2.png",
+      "reason": "The sunless-gold splint is countable and separate, but its outer panels are embossed as overlapping feathers, violating the requirement that the closed medical brace contain no wing or feathers.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and identity anchor. Change only the surface construction of the single gold wing splint; preserve every other conforming feature.",
+      "revisionDirection": "Faithfully preserve Sister Calve's exact mature mortal identity, compassionate exhausted face, ordinary human anatomy, pose, layered weathered gray hospice cloth, repaired leather, compact field-care harness, two clear hands, black-nacre rib brace, complete boots, neutral near-black opaque studio backdrop, cold raking light, scale, placement and full-body framing. Change only the EXACTLY ONE sealed sunless-gold wing splint in her viewer-left hand. Replace every feather-shaped or overlapping vane surface with one smooth closed folded medical shell made from plain articulated gold plates, two restrained hinges and simple leather closure straps. It may retain the overall long folded immobilization silhouette, but it contains and depicts no wing, feather, occupant, bone or severed part. Keep the single black-nacre rib brace in her other hand completely unchanged and clearly separate. No second splint, second brace, patient, weapon, trophy, implant, body growth, blood, label, religious mark, floor, scene, text, logo, watermark, transparency or crop."
+    }
+  ]
+}

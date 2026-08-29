@@ -1,0 +1,213 @@
+{
+  "schema": "SableReachExpansionConceptPromptPacketV1",
+  "batchId": "remaining-hands-expansion-batch-01",
+  "status": "immutable-before-generation",
+  "familyId": "remaining_hands",
+  "formsInCanonicalOrder": [
+    "enoch_last_lamplighter",
+    "sister_calve_unlit_hospice",
+    "tor_vannic_defector_of_dawn",
+    "king_ash_without_country",
+    "nima_sorn_keeper_of_one_shadow",
+    "oren_lusk_last_calendarer"
+  ],
+  "sources": [
+    {
+      "path": "packages/content/src/narrative.data.js",
+      "sha256": "e6f38a5ab500e86355c387404a1f9908da869a05396fdd7086df619b20cbc1d6"
+    },
+    {
+      "path": "design-review/kit/hm-art-law.js",
+      "sha256": "26e5a03220657c67b520c7ba163644e3848ed7f622f2b2beb3ab4b12a97ed0ff"
+    }
+  ],
+  "familyReferenceInspection": {
+    "status": "all-relevant-local-style-references-inspected-full-resolution-before-generation",
+    "directPlate": null,
+    "reasonNoPlate": "No direct League of Remaining Hands family plate exists in the repository. Current narrative canon and global art law are semantic authority; accepted founding mortal masters constrain presentation finish only and cannot add identity, anatomy, props, counts or mechanics.",
+    "observedVisualLanguage": "Mature mortal proportions; weathered civic workwear; layered charcoal, rain-black and earth-gray cloth; restrained aged leather and brass; visibly repaired practical tools; tactile wear without glamour; near-black neutral studio isolation; cold directional light; full-body three-quarter production framing.",
+    "references": [
+      {
+        "path": "assets/characters/npcs/ember-ledger/maela-voss-v1.png",
+        "sha256": "70a284ddd835c59f6dc0dce7a9f06285d5fe9b7f7f42029b75d35b0c972a1121",
+        "dimensions": { "width": 887, "height": 1774 },
+        "scope": "mature mortal anatomy, repaired civic outerwear, restrained leather and metal density only"
+      },
+      {
+        "path": "assets/characters/npcs/reed-sisters/ysra-pell-v1.png",
+        "sha256": "ba3668ae3e530bf0e8cbaae2ec147d3d6a931cecb16da3a3005f7aa545b26c87",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "practical field-care cloth, mature mortal silhouette and compact carried tools only"
+      },
+      {
+        "path": "assets/characters/npcs/cinder-compact/orik-senn-v1.png",
+        "sha256": "b1e93012610b5c17aab30103bd94fe404f207a963859988357571cf2aadc313d",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "mortal engineer workwear, scorched metal and clear tool-harness construction only"
+      },
+      {
+        "path": "assets/characters/npcs/exact-word/nhal-without-shadow-v1.png",
+        "sha256": "1ffd628343a714bd77a5c0e7d28b94ed521ece0d94e88296e93e91edda1435d5",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "restrained black negative space, aged civic metal and isolated silhouette only; never identity, armor or anatomy"
+      },
+      {
+        "path": "assets/characters/npcs/unwritten-roads/vellin-the-unwritten-v1.png",
+        "sha256": "d4e47a5aaae1d0bb2fa5cfa290aa5b276c1e1d2b36da498520e0989886b5440b",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "weathered road-worker layering, practical brass instruments and readable full-body prop clearance only"
+      }
+    ]
+  },
+  "referencePolicy": "Each call receives only the explicitly listed already-inspected local references. They are finish-and-material references, never edit targets, pose templates or permission to copy a face, costume, anatomy or prop. The selected canonical record and exact masterDirection override every reference.",
+  "promptCompilation": "For each asset, the exact generation prompt is inputRole followed by two newline characters, commonDirection, two newline characters, and masterDirection. These fields are frozen before the first call; any correction requires a separate immutable revision packet and versioned candidate.",
+  "inputRole": "Use case: stylized-concept. The supplied local images are already-inspected production-finish references only. Create one new original canonical named character; do not edit, combine, trace or copy their face, pose, costume or form-specific props.",
+  "commonDirection": "Asset type: canonical individual named-character production concept master for later 3D design. Render exactly one complete original League of Remaining Hands subject in polished stylized 3D dark-fantasy MMORPG production quality. Obey only the selected character's canonical record. Shared League language is mature wholly mortal anatomy unless the record explicitly states otherwise; repaired civic workwear; rain-dark cloth, aged leather, ash-gray layers, restrained brass and practical tools; evidence of maintenance and survival rather than aristocratic glamour. Any supernatural evidence must be confined to the exact canonical object, shadow or eye and must not transform the mortal body. Three-quarter production view, centered, complete full-body silhouette with generous clearance. Portrait 1024 by 1536 composition. Flat near-black neutral opaque studio backdrop; cold raking studio light; ungraded measurement-friendly presentation. No environment, settlement, street, hospice, workshop, court, throne room, road, floor, ground plane, terrain, pedestal, contact or cast floor shadow, unrelated extra creature or person, narrative scene, caption, UI, readable text, letter, numeral, rune, calendar notation, map, real religious mark, logo, watermark, franchise resemblance, photobashed real person, glossy plastic, bright aura, cute proportions, gore, exposed entrails, baked checkerboard, transparency, or crop.",
+  "assets": [
+    {
+      "id": "enoch_last_lamplighter",
+      "name": "Enoch Vale",
+      "epithet": "The Last Lamplighter",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "enoch-last-lamplighter-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/enoch-last-lamplighter-v1.png",
+      "pipelinePath": "EXPANSION_PRINCIPALS[enoch_last_lamplighter].pipeline.conceptMaster",
+      "referenceFiles": [
+        "assets/characters/npcs/ember-ledger/maela-voss-v1.png",
+        "assets/characters/npcs/unwritten-roads/vellin-the-unwritten-v1.png"
+      ],
+      "canonical": {
+        "role": "Mortal organizer of roads between cosmic front lines",
+        "desire": "Keep one ordinary evening routine alive long enough to outlast prophecy.",
+        "fear": "Becoming important enough that strangers die for his decisions.",
+        "contradiction": "He refuses cosmic sacrifice in public while maintaining a private list of settlements he would abandon first.",
+        "secret": "His plain oil lamp contains a captive Synod intelligence that advises him with perfect, merciless forecasts.",
+        "visualBrief": "Weathered civic lamplighter carrying a ladder-staff and shuttered black lantern; entirely mortal silhouette, except six thin angelic fingers occasionally press against the lamp glass from within."
+      },
+      "masterDirection": "Show exactly one complete weathered mortal civic lamplighter, Enoch Vale, with an entirely ordinary human-derived body: one head, two arms, two hands, two legs and two feet. Dress him in repaired rain-dark municipal workwear with practical straps and restrained aged brass fittings, never priestly, royal or armored. He carries EXACTLY ONE long ladder-staff as a maintenance tool and EXACTLY ONE plain shuttered black oil lantern, both complete and separately readable. The lantern is the only supernatural object. Behind its closed glass, show EXACTLY SIX and only six long thin pale angelic fingers pressing outward from within; the fingers belong to no visible hand, body, face or angel, never breach the glass, and remain countable through the shutters. Keep the lantern black, compact and otherwise plain, with no halo or external aura. Both of Enoch's own mortal hands remain anatomically clear while holding or securing the two tools. Full boots, staff tip, lantern handle and every finger stay inside frame with black clearance. No second lamp, flame creature, angel body, wing, halo, prophecy page, settlement list, readable mark, street, floor or scene."
+    },
+    {
+      "id": "sister_calve_unlit_hospice",
+      "name": "Sister Calve",
+      "epithet": "Mistress of the Unlit Hospice",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "sister-calve-unlit-hospice-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/sister-calve-unlit-hospice-v1.png",
+      "pipelinePath": "EXPANSION_PRINCIPALS[sister_calve_unlit_hospice].pipeline.conceptMaster",
+      "referenceFiles": [
+        "assets/characters/npcs/reed-sisters/ysra-pell-v1.png",
+        "assets/characters/npcs/ember-ledger/maela-voss-v1.png"
+      ],
+      "canonical": {
+        "role": "Physician treating angelic purification and demonic adaptation alike",
+        "desire": "Make care independent from innocence.",
+        "fear": "That triage will train her to mistake efficiency for justice.",
+        "contradiction": "She treats any wounded being, but sells tomorrow's patient order to whichever faction supplies medicine today.",
+        "secret": "Her hospice is slowly becoming a new neutral organism assembled from discarded angel and demon tissue.",
+        "visualBrief": "Mortal field surgeon in layered gray hospice cloth, bearing one sealed gold wing splint and one black-nacre rib brace as tools rather than trophies."
+      },
+      "masterDirection": "Show exactly one complete mortal field surgeon, Sister Calve, with mature human anatomy, a visible compassionate but exhausted face, two ordinary arms and hands, and two fully framed legs and boots. Dress her only in layered weathered gray hospice cloth, practical wraps, repaired leather and a compact field-care harness; no ceremonial habit, halo, winged body or armor silhouette. She bears EXACTLY TWO extraordinary treatment tools: EXACTLY ONE sealed sunless-gold wing splint and EXACTLY ONE black-nacre rib brace. The gold splint is one closed folded medical brace shaped to immobilize a wing but contains no wing, feathers or occupant. The black-nacre brace is one compact curved rib-support appliance, not exposed ribs and not attached as her anatomy. Carry both as clearly separate sanitized tools on her harness or in her hands, never trophies, weapons, implants or body growths. Keep her ordinary hands countable and her care equipment subordinate. No patient, bed, hospital room, angel, demon, severed part, blood, second splint, second brace, medicine label, religious mark, floor or scene."
+    },
+    {
+      "id": "tor_vannic_defector_of_dawn",
+      "name": "Tor Vannic",
+      "epithet": "Defector of Dawn",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "tor-vannic-defector-of-dawn-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/tor-vannic-defector-of-dawn-v1.png",
+      "pipelinePath": "EXPANSION_PRINCIPALS[tor_vannic_defector_of_dawn].pipeline.conceptMaster",
+      "referenceFiles": [
+        "assets/characters/npcs/cinder-compact/orik-senn-v1.png",
+        "assets/characters/npcs/unwritten-roads/vellin-the-unwritten-v1.png"
+      ],
+      "canonical": {
+        "role": "Former Synod engineer who knows how to wound laws of light",
+        "desire": "Build a sunrise with an off switch.",
+        "fear": "That every safeguard is simply a better weapon waiting for an owner.",
+        "contradiction": "He deserted to prevent divine authoritarianism, yet compulsively designs systems only he can control.",
+        "secret": "He sabotaged the first restoration and the resulting dusk killed an entire migration he meant to save.",
+        "visualBrief": "Mortal engineer in scorched ceremonial under-armor with a dismantled halo worn as a tool harness; one eye reflects dawn, the other retains natural darkness."
+      },
+      "masterDirection": "Show exactly one complete mortal engineer, Tor Vannic, with a mature human face and body, two ordinary arms and hands, and two legs and boots. Dress him in scorched ceremonial under-armor visibly repurposed as workwear: narrow, practical, heat-marked and incomplete, never a knight or angel. A dismantled halo is worn physically on his torso and shoulders as one mechanical tool harness made from several separated broken arc components, clamps, shutters and repair fittings; it must not float, glow as a complete ring, sit behind his head or imply wings. His face remains unobscured. EXACTLY ONE eye reflects a confined restrained dawn-gold light; the other eye remains naturally dark with no glow. The eyes must be simultaneously visible and clearly different. Keep all supernatural light inside the single reflecting eye and tiny closed harness seams. Hands are empty or hold only one subordinate plain adjustment tool, with no weapon or plan. Full broken arcs, hands, boots and harness stay inside black clearance. No intact halo, wing, extra eye, visor, sunrise disk, beam, blueprint, readable label, workshop, floor or scene."
+    },
+    {
+      "id": "king_ash_without_country",
+      "name": "The King of Ash Without a Country",
+      "epithet": "Custodian of Unchosen Endings",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "king-ash-without-country-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/king-ash-without-country-v1.png",
+      "pipelinePath": "EXPANSION_PRINCIPALS[king_ash_without_country].pipeline.conceptMaster",
+      "referenceFiles": [
+        "assets/characters/npcs/ember-ledger/maela-voss-v1.png",
+        "assets/characters/npcs/exact-word/nhal-without-shadow-v1.png"
+      ],
+      "canonical": {
+        "role": "Neutral claimant who carries legal endings for destroyed places",
+        "desire": "Give every vanished settlement the right to refuse posthumous use by either cosmic faction.",
+        "fear": "That the dead have become a convenient electorate only he can interpret.",
+        "contradiction": "He protects extinct communities from exploitation while ruling in their names without any living consent.",
+        "secret": "His ash crown contains one surviving citizen from each lost place, awake and unable to agree on his legitimacy.",
+        "visualBrief": "A narrow mortal regent under an oversized floating ash crown composed of many broken civic seals; his plain dark coat is surrounded by empty chair-shaped negative spaces."
+      },
+      "masterDirection": "Show exactly one complete narrow mortal regent, the King of Ash Without a Country, with one visible human face, two ordinary arms and hands, two legs and two feet inside a plain weathered charcoal civic coat. Keep him mortal and physically modest, without armor, throne, scepter or royal glamour. Above but clearly separated from his head floats EXACTLY ONE oversized ash crown assembled only from MANY fractured civic seal fragments and gray ash held in a broken irregular circlet; each seal is blank and nonalphabetic, with no heraldry, face, figure, letter, rune or real crown jewels. Around the coat, form several unmistakable empty chair-shaped NEGATIVE-SPACE CUTS: flat near-black vacant chair silhouettes defined only by thin ash rims and physically tethered to the coat hem or crown by sparse ash threads. They are absences, not solid chairs, furniture, ghosts, people or a court scene. Keep every vacancy separate from the mortal body and fully visible against the backdrop. Full crown, coat, hands, feet and all negative-space chair outlines stay inside generous black clearance. No second person, citizen face, throne, room, country map, flag, text, symbol, floor, ash storm or scene."
+    },
+    {
+      "id": "nima_sorn_keeper_of_one_shadow",
+      "name": "Nima Sorn",
+      "epithet": "Keeper of One Shadow",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "nima-sorn-keeper-of-one-shadow-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/nima-sorn-keeper-of-one-shadow-v1.png",
+      "pipelinePath": "QUEST_SUPPORT_CHARACTERS[nima_sorn_keeper_of_one_shadow].pipeline.conceptMaster",
+      "referenceFiles": [
+        "assets/characters/npcs/cinder-compact/orik-senn-v1.png",
+        "assets/characters/npcs/unwritten-roads/vellin-the-unwritten-v1.png"
+      ],
+      "canonical": {
+        "role": "Hearthmere shade-cart engineer and elected witness for the shadowless",
+        "desire": "Keep the bleeding noon open long enough to rebuild the homes it is repairing.",
+        "fear": "That closing the miracle will prove ruined houses mattered more to her than displaced people.",
+        "contradiction": "She protects neighbors from daylight while secretly feeding the wound measurements that could make it permanent.",
+        "secret": "The single shadow pinned beneath her cart belongs to her missing daughter, and it points toward the Synod procession each noon.",
+        "visualBrief": "A soot-marked mortal engineer under an articulated black shade canopy, with one carefully pinned child-sized shadow and brass daylight gauges built into the cart harness."
+      },
+      "masterDirection": "Show exactly one complete soot-marked mortal engineer, Nima Sorn, in repaired practical road clothes with two ordinary arms and hands and two fully visible legs and boots. She stands in a compact wearable shade-cart harness beneath EXACTLY ONE articulated black fabric canopy that is mechanically supported from the harness and fully contained in the portrait frame; it is equipment, not a wing, halo, tent or environment. Build several small brass daylight gauges directly into the harness, all with blank nonalphabetic faces and no readable scale. Beneath the canopy attach EXACTLY ONE child-sized flat near-black shadow silhouette, carefully pinned at several perimeter points to a compact suspended black cloth panel on the harness. The shadow is a single two-dimensional subject-bound absence, not a child, body, ghost, floor shadow or companion; its simple pointing orientation is readable while remaining featureless. Keep both of Nima's own hands separate and empty or adjusting one plain harness lever. Full canopy spars, pinned shadow, gauges, harness, hands and boots remain inside black clearance. No cart wheels unless structurally necessary and subordinate, no second shadow, child figure, daylight beam, map, street, house, floor or scene."
+    },
+    {
+      "id": "oren_lusk_last_calendarer",
+      "name": "Oren Lusk",
+      "epithet": "The Last Calendarer",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "oren-lusk-last-calendarer-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/oren-lusk-last-calendarer-v1.png",
+      "pipelinePath": "QUEST_SUPPORT_CHARACTERS[oren_lusk_last_calendarer].pipeline.conceptMaster",
+      "referenceFiles": [
+        "assets/characters/npcs/ember-ledger/maela-voss-v1.png",
+        "assets/characters/npcs/unwritten-roads/vellin-the-unwritten-v1.png"
+      ],
+      "canonical": {
+        "role": "Keeper of three stopped village calendars and Halix's last remembered friend",
+        "desire": "Restore seasons before the villages lose the ability to plant children, crops, or funerals in time.",
+        "fear": "Being selected as the relationship whose erasure pays for the final toll.",
+        "contradiction": "He asks the player to spend a bond for thousands of lives, then falsifies the ledger so his own bond appears indispensable.",
+        "secret": "Halix once loved him; the Deacon repeats Oren's name because it is the only one the noon-bell has not yet consumed.",
+        "visualBrief": "An elderly calendar keeper in layered seed-paper robes carrying three unsynchronized wheel calendars, one of which has his own face carefully scraped from every date."
+      },
+      "masterDirection": "Show exactly one complete elderly mortal calendar keeper, Oren Lusk, with a weathered unobscured human face, two ordinary hands, two legs and two feet. Dress him in layered tactile seed-paper robes over practical dark clothing; the paper is fibrous and worn but bears no readable writing, numerals, month names, runes or symbols. He carries EXACTLY THREE and only three complete wheel calendars, each a separate circular mechanical calendar with blank radial date cells and a visibly different unsynchronized pointer position. Keep all three wheels simultaneously countable and fully exposed on a compact chest-and-hip carrying frame, not merged into one clock or halo. On EXACTLY ONE wheel, every blank date cell contains the same deliberately scraped-away oval portrait residue suggesting his own face was removed; show only rough erased recesses and fiber scars, never a repeated visible face or picture. The other two wheels remain intact but blank. Keep both hands anatomically clear and the wheels subordinate to the mortal subject. Full robe hem, boots, all wheel rims and pointer tips stay inside black clearance. No fourth wheel, clock tower, hourglass, bell, floating notation, readable date, portrait, scene, floor or aura."
+    }
+  ],
+  "cutoutDirection": "Cutouts are outside this assignment. After a master later receives two independent non-generator passes, edit only that exact accepted master to remove the studio background while preserving canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact cues and RGB identity. Output genuine RGBA with no checkerboard, matte, halo, post-processing, floor, text, logo or watermark."
+}

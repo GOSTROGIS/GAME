@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "packetStatus": "immutable-before-generation",
+  "familyId": "last_pest_cart",
+  "familyName": "Last Pest Cart",
+  "authority": {
+    "canonicalData": "GAME-repo-lfs-skip/packages/content/src/bestiary.data.js",
+    "artLaw": "GAME-repo-lfs-skip/design-review/kit/hm-art-law.js",
+    "familyPlate": "GAME-repo-lfs-skip/assets/bestiary/last-pest-cart-plate.png"
+  },
+  "compilation": {
+    "master": "commonMaster + two LF characters + forms[id].master",
+    "cutout": "commonCutout",
+    "referencePolicy": "Master generation receives the family plate as Image 1. Cutout editing receives only its independently accepted master as Image 1."
+  },
+  "batches": [
+    {
+      "id": "last-pest-cart-complete",
+      "forms": [
+        "wheel_porter",
+        "wax_driver",
+        "route_surgeon",
+        "last_outrider",
+        "empty_caravan",
+        "destination_erased"
+      ]
+    }
+  ],
+  "commonMaster": "Use case: stylized-concept\nAsset type: canonical individual bestiary production concept master.\nInput image: Image 1 is the approved Last Pest Cart family style, palette, materials, silhouette language, and lighting reference only. Create a new distinct canonical form; do not copy the plate's complete anatomy or pose.\nPrimary request: Render one isolated Last Pest Cart subject as a polished stylized 3D dark-fantasy MMORPG production concept for original IP. This family is a quarantine convoy repeating an evacuation order along roads from which every destination has been erased. Preserve the family shape language of a forward-pulled convoy, wheel joints, and sealed canopies only where coherent with the form's exact anatomy. Use the plate's grounded road-mud, yellow-wax, old-oak, black rainproof covering, quarantine-nail, and restrained aged-metal material language without importing any unrelated object. Keep mature scale, plausible load-bearing construction, readable locomotion, restrained material density, and a clean silhouette suitable for later 3D modeling.\nComposition: show exactly one complete subject, centered, three-quarter view, every extremity, wheel, rein, canopy, shadow-limb, cart, gate, and silhouette feature fully visible with generous clearance on all four edges. No crop, no extra figure, no scene, no environment, no floor, no ground plane, no pedestal. Flat near-black neutral opaque backdrop; complete canvas opaque.\nLighting: cold raking studio key from one side, ungraded neutral and measurement-friendly. Restrained yellow-wax highlights may reflect the key but must not form an aura.\nPalette: road mud, yellow wax, old oak, rain black, and restrained aged iron/brass hardware. Materials: road-caked old oak, cracked quarantine wax, hand-forged nails and wheel fittings, rain-dark sealed canvas or leather where canonically required.\nCanon communication: show the form's exact anatomy and telegraph cue clearly in a poised production-design state. Locomotion, sound, purpose, origin, mechanic, and counterplay inform silhouette and readiness but must not become a narrative scene.\nForbidden: ordinary plague doctor, ordinary wagon, generic mounted knight, generic carriage, spider copy, real-world disease taxonomy, disability shorthand, gore spectacle, exposed entrails, bright magic, glossy plastic, cute or chibi proportions, readable writing, letters, numbers, maps with legible place names, runes, logos, watermark, franchise resemblance, recognizable real-world religious marks, baked checkerboard, border, caption, or UI.",
+  "commonCutout": "Use case: background-extraction\nInput image: Image 1 is the independently accepted concept master, the edit target, and the sole design authority.\nPrimary request: Change only the background. Extract the exact same complete subject onto genuine transparent RGBA pixels. Preserve the exact canvas dimensions, orientation, subject pixel scale, position, framing, three-quarter pose, anatomy, proportions, silhouette, colors, lighting, materials, surface detail, telegraph cue, and every family-specific feature. Preserve fine wheel spokes, reins, canvas, wax drips, map edges, shadow anatomy, cart frames, and gate edges cleanly.\nRemove the entire opaque backdrop plus any floor, ground, pedestal, contact shadow, atmospheric haze, or backdrop glow. Make all four corners fully transparent and keep substantial visible nontransparent subject pixels.\nDo not restyle, redraw, reinterpret, regenerate, re-pose, resize, reframe, rotate, crop, stretch, add, remove, simplify, repair, or redesign any part of the subject. Do not change subject dimensions or silhouette. No checkerboard, matte rectangle, fringe, text, logo, watermark, border, caption, UI, or extra figure. Output a true transparent PNG, not simulated transparency.",
+  "forms": {
+    "wheel_porter": {
+      "name": "Wheel Porter",
+      "fileStem": "wheel-porter",
+      "rank": "regular",
+      "role": "bruiser",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "master": "Canonical form: Wheel Porter, regular bruiser, 1.65 meters. Canvas orientation: vertical 2:3 portrait. Anatomy: one cart wheel turns around its waist while both legs hang above that axle. Locomotion: it rolls along road camber and walks only when the wheel stops. Sound: spokes knock out the count of an abandoned passenger list. Purpose: it repairs convoy ruts with soil taken from roadside graves. Origin: a porter was crushed beneath the last overloaded cart but remained listed as walking beside it. Mechanic: Camber Roll. Telegraph cue: the single waist wheel tilts toward the road's lower edge. Counterplay: stand upslope and attack when the wheel binds against the camber. Show one forward-pulled porter body organized around exactly one load-bearing waist wheel, with both dangling legs visibly above the axle and the wheel poised in a clear tilt. Keep the road-camber idea in the wheel angle only; no road, soil pile, grave, passenger list, text, or environment."
+    },
+    "wax_driver": {
+      "name": "Wax Driver",
+      "fileStem": "wax-driver",
+      "rank": "regular",
+      "role": "artillery",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "master": "Canonical form: Wax Driver, regular artillery, 1.65 meters. Canvas orientation: vertical 2:3 portrait. Anatomy: yellow seal wax completely covers the head and extends into reins held by no hands. Locomotion: it is dragged forward whenever anyone reads a road sign aloud. Sound: a muffled driver calls destinations from beneath solid wax. Purpose: it keeps the convoy moving when its animals and passengers refuse. Origin: the quarantine driver sealed its own face rather than name the town it abandoned. Mechanic: Spoken Destination. Telegraph cue: lettering on the nearest sign glows beneath dripping wax. Counterplay: remain silent or deface one letter before the reins pull taut. Show a handless, forward-dragged driver whose solid wax-covered head becomes two taut reins; there must be no hands holding them. Express the cue with one small blank route-sign plank integrated as a subordinate hanging prop, its unreadable surface glowing faintly under dripped wax. No legible letter, word, destination, animal, passenger, separate cart, road, or scene."
+    },
+    "route_surgeon": {
+      "name": "Route Surgeon",
+      "fileStem": "route-surgeon",
+      "rank": "specialist",
+      "role": "support",
+      "heightMeters": 1.9,
+      "orientation": "portrait-2:3",
+      "master": "Canonical form: Route Surgeon, specialist support, 1.9 meters. Canvas orientation: vertical 2:3 portrait. Anatomy: road maps replace its skin and stitched detours branch from every joint. Locomotion: it cuts across terrain only after drawing a route through a living target. Sound: scissors open and close at successive map junctions. Purpose: it removes roads judged infected from the convoy network. Origin: a quarantine planner began excising villages from maps and eventually treated travelers as geography. Mechanic: Living Detour. Telegraph cue: one red route line crosses the target and exits through two landmarks. Counterplay: break the line with either landmark before the scissors reach the body. Show one map-skinned figure with map sheets constituting the skin, stitched detour branches visibly emerging from every major joint, and functional scissors integrated into its route-cutting anatomy. Express the cue without a victim or environment: one restrained red route line crosses the figure's map-skin and exits through two small abstract unlettered boundary-marker tabs integrated into the silhouette. No readable map text, place names, road scene, landmarks as buildings, target, separate person, or surgical gore."
+    },
+    "last_outrider": {
+      "name": "Last Outrider",
+      "fileStem": "last-outrider",
+      "rank": "elite",
+      "role": "ambusher",
+      "heightMeters": 2.15,
+      "orientation": "landscape-3:2",
+      "master": "Canonical form: Last Outrider, elite ambusher, 2.15 meters. Canvas orientation: horizontal 3:2 landscape for the galloping saddle-and-shadow silhouette. Anatomy: a rider's lower body is a galloping shadow cast by an empty saddle. Locomotion: it circles the convoy at a fixed travel time rather than a fixed distance. Sound: hooves arrive early on steep ground and late in mud. Purpose: it warns the convoy of settlements still capable of refusing entry. Origin: the final scout returned without a horse and found the shadow had delivered the warning first. Mechanic: Isochrone Charge. Telegraph cue: travel-time rings tighten around the target across changing terrain. Counterplay: move onto slow ground so the shadow and saddle desynchronize. Show exactly one empty old saddle and upper outrider structure, with no rider body or horse; its entire lower body must be an impossible galloping cast-shadow anatomy visibly offset beneath the saddle. Show restrained concentric travel-time rings tightening around the subject as isolated telegraph geometry, with saddle and shadow slightly desynchronized. No terrain, convoy, settlement, target, horse, ordinary mounted rider, or scene."
+    },
+    "empty_caravan": {
+      "name": "The Empty Caravan",
+      "fileStem": "empty-caravan",
+      "rank": "miniboss",
+      "role": "hunter",
+      "heightMeters": 2.56,
+      "orientation": "landscape-3:2",
+      "master": "Canonical form: The Empty Caravan, miniboss hunter, 2.56 meters. Canvas orientation: horizontal 3:2 landscape for the six-cart processional body. Anatomy: exactly six covered carts articulate as vertebrae around one hollow processional body. Locomotion: it follows road hierarchy, refusing shortcuts until damaged. Sound: passengers shift beneath canvas that rises over vacant benches. Purpose: it gathers lesser cart forms and restores the lost convoy order. Origin: every passenger departed at a different roadside grave, but the manifest continued counting them aboard. Mechanic: Manifested Passenger. Telegraph cue: one canvas cover bulges while a manifest line writes itself. Counterplay: erase the matching line before opening the bulging cart. Show one fused composite entity and one continuous silhouette, built from exactly six visibly countable covered carts forming a vertebral procession around a central hollow. Exactly one of the six covers bulges over an unmistakably vacant bench; integrate one blank manifest strip with a single fresh nonalphabetic line as the cue. No passenger, separate creature, readable manifest, grave, road, convoy scene, extra cart, or environment."
+    },
+    "destination_erased": {
+      "name": "Destination Erased",
+      "fileStem": "destination-erased",
+      "rank": "boss",
+      "role": "swarm",
+      "heightMeters": 3.63,
+      "orientation": "landscape-3:2",
+      "master": "Canonical form: Destination Erased, boss swarm, 3.63 meters. Canvas orientation: horizontal 3:2 landscape for the many-wheeled city-gate body. Anatomy: one city gate rides atop countless wheels while opening onto blank white road. Locomotion: it brings the end of the road toward itself instead of traveling. Sound: arrival bells ring from every direction but ahead. Purpose: it consumes settlements and adds their streets to the endless evacuation route. Origin: officials removed the refuge from every map after sending the convoy there. Mechanic: Road Without End. Telegraph cue: all route markings extend into the blank gate. Counterplay: build a temporary dead end and force the gate to arrive where no road continues. Show one complete mobile gate entity on a dense but readable multitude of differently sized load-bearing wheels. Within the gate opening, contain one stark blank-white road-shaped negative that terminates nowhere; several abstract unlettered route-marking strips curve toward and disappear into that opening as integral telegraph anatomy. Keep the blank road wholly contained within the gate, not a background environment. No city scene, settlement, map, readable markings, people, extra vehicles, floor, road plane, or environment."
+    }
+  }
+}

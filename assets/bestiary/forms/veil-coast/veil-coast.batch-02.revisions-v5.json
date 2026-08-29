@@ -1,0 +1,17 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "veil-coast-kin-masters-batch-02-revision-v5",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast_kin",
+  "basePacketSha256": "eb01b55a4988fa15bd14d64e5fa2c925ef7232672fe35216473ad7889a4ac125",
+  "previousRevisionSha256": "157141cfb7575b74e4b6cd42c2567f1f13f41576b90fb78f66c78da6d1a9e1c7",
+  "assets": [
+    {
+      "id": "coral_reeve",
+      "reference": "coral-reeve-concept-master-v2.png",
+      "outputFile": "coral-reeve-concept-master-v3.png",
+      "reason": "The v2 isolates one charge and one closed target but contains only six open polyps plus one closed polyp, seven total, and the open states are not progressive.",
+      "revisionDirection": "Faithfully preserve the inspected v2 integrated reef organism, nested amphibious judge, one central cyan charge, palette, materials and framing. Rebuild only the voting ring as EXACTLY EIGHT countable polyps at clock positions 12, 1:30, 3, 4:30, 6, 7:30, 9 and 10:30 around the same charge. The seven at 12 through 9 are matte red with dark interiors and open progressively clockwise: narrow slit, one-quarter, one-third, half, two-thirds, three-quarters, fully open. The eighth at 10:30 is fully closed, pearl-gray, exposed and strikeable. Remove every extra polyp. No other cyan glow, orb or charge. No building, prop, text, floor or crop."
+    }
+  ]
+}

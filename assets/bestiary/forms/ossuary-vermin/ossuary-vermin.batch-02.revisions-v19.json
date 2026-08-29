@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-02",
+  "policy": "The frozen packet remains authoritative. V18 is rejected for changing the second viewer-left shield tag. This retry returns to v17 and edits only the top-left receiver's inner void; all tag perimeters are explicitly immutable.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-02/prompt-packet.json",
+    "sha256": "16ffd058dbfd73609fed27836f475873696282f6eb29e4acd2dc2c9793d9d2bc"
+  },
+  "revisions": {
+    "borrowed-saint-v19": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/borrowed-saint-concept-master-v17.png",
+      "sourceSha256": "df80437be1cb7d1ba660ad01a1252e86fde470fa25c049ccb78727543fb6e0a2",
+      "reason": "V17's top-left receiver needs a smooth elliptical inner opening. V18 achieved that opening but incorrectly converted the separate second viewer-left pointed-shield tag to an oval.",
+      "prompt": "MICRO-EDIT ONLY THE BLACK INTERIOR OF ONE HOLE in this exact Borrowed Saint v17. Target the TOPMOST VIEWER-LEFT receiver root directly beside the TOPMOST smooth oval tag. Leave the surrounding bone collar and topmost oval tag untouched. Replace ONLY the black pixels inside that topmost receiver opening with a perfectly smooth tall ellipse, continuously curved and matching the topmost tag's height:width ratio. DO NOT EDIT ANY OTHER OBJECT. Critical regression lock: the SECOND tag down on viewer-left remains the existing tall POINTED SHIELD with rounded shoulders and one pointed bottom; do not turn it oval. The third viewer-left tag remains trapezoid; the bottom viewer-left tag remains octagon. All four viewer-right tags and all eight tag perimeters remain pixel-identical. Preserve all eight modules, seven jaw loads, pelvis mismatch, every non-target hole, materials, lighting, canvas and framing. No duplicate oval tag, no extra tag/hole, no plaque, icon, text, floor, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    }
+  }
+}

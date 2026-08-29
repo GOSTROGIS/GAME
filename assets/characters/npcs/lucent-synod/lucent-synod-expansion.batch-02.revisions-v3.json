@@ -1,0 +1,21 @@
+{
+  "schema": "SableReachExpansionConceptPromptRevisionV1",
+  "batchId": "lucent-synod-expansion-batch-02-revision-v3",
+  "familyId": "lucent_procession",
+  "status": "immutable-before-generation",
+  "basePacketSha256": "6f50d6ec17ceca3f68b08a7b069a8b9a09410ec3fe76aa966c5890f9675c07ca",
+  "priorRevisionPacketSha256": "19970ed2728f0f532717266c7c5bb5830eda350b6c8bef9ee40d50797688bdbb",
+  "policy": "Preserve every independently accepted identity, pipe count, frost state and family feature. Correct only the silent pipe's capped lower bore. Earlier candidate bytes remain immutable; the correction uses a new versioned filename and only its exact staged source as the edit target.",
+  "promptCompilation": "The exact built-in edit prompt is inputRole followed by two newline characters followed by revisionDirection.",
+  "revisions": [
+    {
+      "id": "unbroken_note_engine",
+      "source": "unbroken-note-engine-concept-master-v2.png",
+      "sourceSha256": "c54d17da364b164f4d3e6175b7d01e68cd7792b3e0f0262c0b4f095b50e7dd59",
+      "outputFile": "unbroken-note-engine-concept-master-v3.png",
+      "reason": "V2 passes the exact total of thirteen pipes, twelve pale frosted mouths, one warm dry black exception and pressure-manifold disconnection, but the black pipe's lower end terminates in a sealed pointed gold cap instead of the required counterplay bore remaining open end-to-end.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only the independently identified lower cap on the black silent pipe; preserve every other visible feature.",
+      "revisionDirection": "Surgical counterplay-bore correction of this exact Engine of the Unbroken Note. Freeze the complete organ chassis, EXACTLY TWELVE pale sounding pipes and their twelve crystalline frost rims, the one warm dry matte-black silent pipe, all gold braces, black pressure manifold, the black pipe's separate placement and disconnection, portrait canvas, materials, lighting, scale and full framing. On the single black pipe, remove ONLY the sealed pointed sunless-gold cap and finial at its LOWER end. Replace that cap with one plain circular open lower rim made from the same matte-black tube with a restrained thin gold outer collar. Angle the new lower rim just enough for near-black clearance and the uninterrupted hollow bore to be visibly traceable through the pipe from the already-open upper mouth to the new open lower mouth. The pipe remains physically disconnected from the engine's own manifold, warm, dry and unable to self-sound, but can visibly receive routed external sound end-to-end. Do not alter either upper mouth, any pale pipe, frost, count, chassis or silhouette beyond the minimal lower-end opening. Final count remains EXACTLY THIRTEEN total pipes: twelve pale frosted plus one black dry. No cap, plug, valve, fourteenth pipe, mini-pipe, notation, text, symbol, floor, aura, scene, logo or watermark."
+    }
+  ]
+}

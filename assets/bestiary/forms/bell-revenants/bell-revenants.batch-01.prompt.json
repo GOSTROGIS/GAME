@@ -1,0 +1,105 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "bell-revenants-batch-01",
+  "status": "immutable-before-generation",
+  "familyId": "bell_revenants",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/bell-revenants-plate.png"
+  ],
+  "commonDirection": "Use the inspected Bell Revenants family plate only as authoritative family palette, materials, finish, silhouette language, and lighting reference. Create the distinct canonical form below; do not copy the plate representative's complete anatomy unless that form requires it. Family law: consecrated bells remember their ringers so fiercely that memory takes up arms. Palette: aged memory bronze, cold verdigris, restrained ember gold, rain black. Materials: load-bearing cast bronze, green oxidation, weather-black rope, hollow bell cavities, suspended clappers, and sparse memory-shadow only where canon requires it. Silhouette language: ceremonial armored frames interrupted by resonant cavities and rope-limb logic; mechanically plausible and suitable for later 3D measurement. Render exactly one complete polished stylized 3D dark-fantasy MMORPG production concept in three-quarter view with every extremity and mechanic cue visible and generous clearance. Flat near-black neutral opaque backdrop; cold raking studio light; ungraded. No environment, floor, ground plane, pedestal, contact or cast floor shadow, extra figure, narrative scene, text, readable symbols, runes, logo, watermark, franchise resemblance, real religious marks, ordinary living human shorthand, gore, exposed entrails, cute proportions, glossy plastic, baked checkerboard, or transparency.",
+  "assets": [
+    {
+      "id": "ropewalker",
+      "name": "Ropewalker Revenant",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "ropewalker-v1.png",
+      "canonical": {
+        "anatomy": "A ringer remembered as callused hands and a length of weather-black rope. No joint explains the motion; instead the rope goes taut above an unseen ceiling beam.",
+        "locomotion": "It changes lanes after a false retreat and never repeats the same return angle.",
+        "sound": "Memory bronze produces two retreating clicks answered by a third sound from the return angle.",
+        "purpose": null,
+        "origin": "A ringer remembered as callused hands and a length of weather-black rope.",
+        "mechanic": "Pendulum Pass",
+        "cue": "The rope goes taut above an unseen ceiling beam.",
+        "counterplay": "Move perpendicular to the swing and cut the rope at its lowest point."
+      },
+      "formDirection": "Show one revenant consisting only of exactly two large callused memory-bronze hands joined into one continuous weather-black bell rope; no head, ordinary torso, legs, or extra hands. The rope forms one long load-bearing pendulum body with its upper segment pulled perfectly taut toward an unseen attachment beyond the subject, while the lower curved segment exposes one clearly lowest cut point. Pose the two hands and rope in a lateral false-retreat swing with one opposing return-angle bend. Integrate one small hollow bell cavity at the rope junction to retain family identity without inventing a body. Keep all rope and both hands fully visible; no actual ceiling beam, room, floor, gallows, victim, or separate ringer."
+    },
+    {
+      "id": "clapper_squire",
+      "name": "Clapper Squire",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "clapper-squire-v1.png",
+      "canonical": {
+        "anatomy": "A young attendant reconstructed around a bell clapper too heavy to carry in life. What should be internal crosses the silhouette whenever the clapper hits silently.",
+        "locomotion": "It crosses ground in one committed weight transfer, then must reassemble its balance.",
+        "sound": "Memory bronze produces a load-bearing groan, one blunt beat, and a long settling scrape.",
+        "purpose": null,
+        "origin": "A young attendant reconstructed around a bell clapper too heavy to carry in life.",
+        "mechanic": "Delayed Toll",
+        "cue": "The clapper hits silently; a pressure ring remains compressed around it.",
+        "counterplay": "Evade the physical hit, pause, then evade the expanding sound."
+      },
+      "formDirection": "Show one small but mature-proportioned ceremonial armored revenant physically reconstructed around exactly one oversized vertical bell clapper that passes through and beyond the open torso silhouette. The clapper is the load-bearing spine and weapon, visibly too heavy for the frame. Around its striking end, hold exactly one compressed translucent bronze pressure ring as a tight subject-bound disc poised to expand after the physical hit. Give the squire exactly two braced legs and two supporting rope-and-bronze arms; no childlike face, cute proportions, separate bell, extra ring, impact scene, floor, or target."
+    },
+    {
+      "id": "verdigris_ringer",
+      "name": "Verdigris Ringer",
+      "rank": "specialist",
+      "orientation": "portrait",
+      "masterFile": "verdigris-ringer-v1.png",
+      "canonical": {
+        "anatomy": "Marsh water has grown green armor across this revenant's bell cavity.",
+        "locomotion": "It advances only while the surrounding escape geometry is changing.",
+        "sound": "Memory bronze produces three spaced warnings, a held absence, then one enclosing note.",
+        "purpose": null,
+        "origin": "Marsh water has grown green armor across this revenant's bell cavity.",
+        "mechanic": "Green Toll",
+        "cue": "Verdigris flakes rise instead of falling.",
+        "counterplay": "Use fire to consume the flakes or interrupt with silence."
+      },
+      "formDirection": "Show one tall ceremonial bell-bodied revenant with one large open chest bell cavity and wet rope limbs. Dense cold-green verdigris armor grows asymmetrically across the cavity rim and one side of the body, while dozens of small oxidation flakes visibly rise upward in a narrow subject-bound stream instead of falling. Keep the flakes sparse enough to preserve measurement and the cavity/clapper fully readable. Pose the body in a constrained forward advance. No marsh, water, poison cloud, falling flakes, extra bell-body, floor, flame, or environment."
+    },
+    {
+      "id": "memory_carillonneur",
+      "name": "Memory Carillonneur",
+      "rank": "elite",
+      "orientation": "portrait",
+      "masterFile": "memory-carillonneur-v1.png",
+      "canonical": {
+        "anatomy": "Six small bells hang inside its open ribs, each containing a different remembered fighting style.",
+        "locomotion": "It steps only on the recovery beat of the last action it witnessed.",
+        "sound": "Memory bronze produces the opponent's last rhythm returned with one deliberately missing beat.",
+        "purpose": null,
+        "origin": "Six small bells hang inside its open ribs, each containing a different remembered fighting style.",
+        "mechanic": "Sixth Style",
+        "cue": "One inner bell swings and projects a weapon-shaped shadow.",
+        "counterplay": "Match defense to the shadow, then strike the swinging bell."
+      },
+      "formDirection": "Show one elite ceremonial frame with an open rib-cage carillon containing EXACTLY SIX small suspended bells, all separated and countable. Give each bell a subtly different clapper/rope stance, but show exactly one selected bell visibly swinging. From only that selected bell project one flat rain-black weapon-shaped memory shadow into empty backdrop space; it is optical evidence, not a solid weapon or extra fighter. Keep the selected bell strikeable and all six bells visible. No seventh bell, actual arsenal, duplicate body, musical notation, stage, floor, or audience."
+    },
+    {
+      "id": "dusk_toll_collector",
+      "name": "Dusk-Toll Collector",
+      "rank": "miniboss",
+      "orientation": "portrait",
+      "masterFile": "dusk-toll-collector-v1.png",
+      "canonical": {
+        "anatomy": "It comes when a settlement rings late and collects one warm memory for every missed beat. The missing anatomy briefly outlines itself when a treasured scene flickers across the inside of its chest bell.",
+        "locomotion": "It follows the last disturbed trace rather than the target's present body.",
+        "sound": "Memory bronze produces one testing sound repeated closer whenever its quarry disturbs the ground.",
+        "purpose": null,
+        "origin": "It comes when a settlement rings late and collects one warm memory for every missed beat.",
+        "mechanic": "Collect Memory",
+        "cue": "A treasured scene flickers across the inside of its chest bell.",
+        "counterplay": "Attack the scene with the damage type linked to that memory's state flag."
+      },
+      "formDirection": "Show one imposing collector with a large open chest bell whose dark inner bronze surface contains exactly one small flat ember-gold memory tableau, intentionally indistinct and nonliteral, with no readable text or identifiable franchise imagery. Around portions of the chest bell, one thin incomplete rain-black outline reveals otherwise missing anatomy, while the solid ceremonial frame follows behind that remembered trace. Keep the internal memory surface directly targetable and the rest of the body cool verdigris/bronze. No settlement, people, floor trail, treasure pile, separate scene panel, multiple memories, or environment."
+    }
+  ],
+  "cutoutDirection": "After a master receives two independent non-generator passes, edit that exact accepted master only to remove its studio background. Preserve canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact-count cues, and RGB identity. Output genuine RGBA with alpha 0 outside, alpha 255 in subject interiors, partial alpha only on true antialiased fine edges; no painted checkerboard, floor, shadow, matte, halo, text, logo, or watermark."
+}

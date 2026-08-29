@@ -1,0 +1,684 @@
+{
+  "schemaVersion": 1,
+  "kind": "state-reachability-report",
+  "batchId": "quest-batch-0001",
+  "packetSha256": "b909ef132d790bd854f04754874d5593cc18f3d382ee4c4cbd4bd72bc1219b87",
+  "verdict": "PASS",
+  "quests": [
+    {
+      "id": "main_noon_came_bleeding",
+      "verdict": "PASS",
+      "stateReads": [],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "first_synod_welcome",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        }
+      ],
+      "readProofs": []
+    },
+    {
+      "id": "main_the_saint_cast_two_shadows",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "vespera_shadow_relation",
+          "values": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "writerQuestId": "main_noon_came_bleeding",
+          "writerValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "admittedValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "main_the_bell_that_forgot_you",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        },
+        {
+          "key": "vespera_shadow_relation",
+          "mode": "all-values",
+          "values": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "memory",
+          "key": "calendar_and_relationship_rewrite",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "writerQuestId": "main_noon_came_bleeding",
+          "writerValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "admittedValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "vespera_shadow_relation",
+          "mode": "all-values",
+          "writerQuestId": "main_the_saint_cast_two_shadows",
+          "writerValues": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ],
+          "admittedValues": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "main_the_door_in_mothers_rib",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "refugee_time_release",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "writerQuestId": "main_the_bell_that_forgot_you",
+          "writerValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "admittedValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "main_parliament_of_one_mouth",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "charnel_diplomatic_status",
+          "values": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "writerQuestId": "main_the_door_in_mothers_rib",
+          "writerValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "admittedValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "main_archive_of_open_wounds",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "values": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "memory",
+          "key": "public_origin_truth",
+          "values": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "writerQuestId": "main_parliament_of_one_mouth",
+          "writerValues": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ],
+          "admittedValues": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "main_mercy_has_a_mouth",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "public_origin_truth",
+          "mode": "all-values",
+          "values": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "maw_trust_appetite_balance",
+          "values": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "public_origin_truth",
+          "mode": "all-values",
+          "writerQuestId": "main_archive_of_open_wounds",
+          "writerValues": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ],
+          "admittedValues": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "main_the_engine_with_an_off_switch",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "maw_trust_appetite_balance",
+          "mode": "all-values",
+          "values": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "dawn_shutdown_architecture",
+          "values": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "maw_trust_appetite_balance",
+          "mode": "all-values",
+          "writerQuestId": "main_mercy_has_a_mouth",
+          "writerValues": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ],
+          "admittedValues": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "main_a_sun_small_enough",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        },
+        {
+          "key": "vespera_shadow_relation",
+          "mode": "all-values",
+          "values": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ]
+        },
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        },
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        },
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "values": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ]
+        },
+        {
+          "key": "public_origin_truth",
+          "mode": "all-values",
+          "values": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ]
+        },
+        {
+          "key": "maw_trust_appetite_balance",
+          "mode": "all-values",
+          "values": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ]
+        },
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "all-values",
+          "values": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "campaign_cosmology_ending",
+          "values": [
+            "mortal_dawn",
+            "synod_full_restoration",
+            "negotiated_dusk",
+            "sun_refused_world_continues_dying"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "writerQuestId": "main_noon_came_bleeding",
+          "writerValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "admittedValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "vespera_shadow_relation",
+          "mode": "all-values",
+          "writerQuestId": "main_the_saint_cast_two_shadows",
+          "writerValues": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ],
+          "admittedValues": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "writerQuestId": "main_the_bell_that_forgot_you",
+          "writerValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "admittedValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "writerQuestId": "main_the_door_in_mothers_rib",
+          "writerValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "admittedValues": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "writerQuestId": "main_parliament_of_one_mouth",
+          "writerValues": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ],
+          "admittedValues": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "public_origin_truth",
+          "mode": "all-values",
+          "writerQuestId": "main_archive_of_open_wounds",
+          "writerValues": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ],
+          "admittedValues": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "maw_trust_appetite_balance",
+          "mode": "all-values",
+          "writerQuestId": "main_mercy_has_a_mouth",
+          "writerValues": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ],
+          "admittedValues": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "all-values",
+          "writerQuestId": "main_the_engine_with_an_off_switch",
+          "writerValues": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ],
+          "admittedValues": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "side_the_disease_called_grief",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "memory",
+          "key": "vael_definition_of_care",
+          "values": [
+            "grief_retained_function_restored",
+            "grief_removed_spouse_erased",
+            "memory_shared_with_vael"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "writerQuestId": "main_noon_came_bleeding",
+          "writerValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "admittedValues": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "side_seven_lamps_for_six_streets",
+      "verdict": "PASS",
+      "stateReads": [],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "hidden_households_status",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        }
+      ],
+      "readProofs": []
+    },
+    {
+      "id": "side_the_hospice_grows_a_heart",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "vael_definition_of_care",
+          "mode": "all-values",
+          "values": [
+            "grief_retained_function_restored",
+            "grief_removed_spouse_erased",
+            "memory_shared_with_vael"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "neutral_medicine_governance",
+          "values": [
+            "heart_made_random",
+            "bias_declared_and_appealable",
+            "heart_destroyed_hospice_manual"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "vael_definition_of_care",
+          "mode": "all-values",
+          "writerQuestId": "side_the_disease_called_grief",
+          "writerValues": [
+            "grief_retained_function_restored",
+            "grief_removed_spouse_erased",
+            "memory_shared_with_vael"
+          ],
+          "admittedValues": [
+            "grief_retained_function_restored",
+            "grief_removed_spouse_erased",
+            "memory_shared_with_vael"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    }
+  ]
+}

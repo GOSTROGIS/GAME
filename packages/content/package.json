@@ -22,6 +22,10 @@
       "types": "./src/bestiary.ts",
       "import": "./dist/bestiary.js"
     },
+    "./narrative": {
+      "types": "./src/narrative.ts",
+      "import": "./dist/narrative.js"
+    },
     "./atlas": {
       "types": "./src/atlas.ts",
       "import": "./dist/atlas.js"

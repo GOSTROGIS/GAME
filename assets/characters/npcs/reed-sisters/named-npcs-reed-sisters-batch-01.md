@@ -1,6 +1,6 @@
 # Reed Sisters Named NPCs — Batch 01 Prompts
 
-Generated on 2026-08-26 with the OpenAI built-in image-generation tool. Existing Sable Reach art was used only to establish rendering quality, narrow mature proportions, restrained materials, subdued faction color, and the near-black studio presentation. Existing identities, faces, poses, garments, tools, and silhouettes were excluded.
+Generated on 2026-08-26 with a built-in image-generation tool. Existing Sable Reach art was used only to establish rendering quality, narrow mature proportions, restrained materials, subdued faction color, and the near-black studio presentation. Existing identities, faces, poses, garments, tools, and silhouettes were excluded.
 
 ## Ysra Pell
 

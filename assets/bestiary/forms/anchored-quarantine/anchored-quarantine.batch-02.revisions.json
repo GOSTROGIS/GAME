@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "policy": "Each revision direction is appended to the frozen compiled master prompt. The original prompt packet is immutable.",
+  "revisions": {
+    "signal-mate-master-v2": {
+      "reason": "The first draft used fabric semaphore wings and did not make the shadow acknowledgement mechanically readable.",
+      "append": "Revision directive for a new clean v2 generation: use exactly two rigid articulated shoulder flag-bone frames with no fabric. Form one bright nonalphabetic angular code using restrained signal-red bars and cold bone edges. Add one hard attached responding shadow echo behind and below that repeats the two-flag angle as the direction-change acknowledgement. Preserve the open cage torso, dragged nautical anatomy, full-body clearance, opaque neutral backdrop and all global exclusions."
+    },
+    "quarantine-bosun-master-v2": {
+      "reason": "The first draft clipped the tow geometry and did not isolate the missing-voice arm or complete tightening radius.",
+      "append": "Revision directive for a new clean v2 generation: keep one open abdominal capstan with drowned human arms as the radial bars. Make exactly one arm-bar visibly slack, pale and unbound while every other locked bar carries restrained signal-red wrist binding. Show one complete dark subject-bound circular tow radius entirely inside frame and a committed tightening circular step. All rope and chain must terminate inside the canvas. Preserve one standalone body, full clearance, opaque neutral backdrop and all global exclusions."
+    },
+    "captain-under-keel-master-v4-edit": {
+      "reason": "Earlier drafts placed the spectral keel along the spine or through the hips rather than through both anatomical shoulders.",
+      "prompt": "Use case: image-editing. Preserve the exact inverted drowned-captain identity, pose, wet black materials, proportions, cold lighting, framing, and Anchored Quarantine family style. Move the entire single translucent tide-green spectral keel down the inverted body so it crosses laterally through both actual anatomical shoulders immediately above the upside-down head where the two arms join the torso. The keel enters one shoulder, passes continuously behind and through the shoulder girdle, and exits the other shoulder as one complete banked hull line. It must not cross the hips, waist, abdomen, thighs or spine. Keep the captain boots-up and head-down. Preserve exactly one attached anchor-dark command-shadow echo down-left of the inverted head and shoulders, refined as a compact captain-shaped shadow silhouette with an open mouth profile, not a skull creature and not a second figure. Remove any old keel arc at hip or waist level. No separate anchor, weapon, floor, ground shadow, scene, ship, text, symbols, logo or watermark. Opaque 1024 by 1536 portrait raster on a near-black neutral studio backdrop; keep the full body, entire shoulder-level keel arc and complete shadow echo inside frame with generous margins."
+    },
+    "fleet-in-one-shadow-master-v5-edit": {
+      "reason": "Independent review found the earlier macro anchor sound but only a handful of solid miniature ships instead of dozens of absent-ship negative spaces.",
+      "prompt": "Use case: image-editing. Preserve the exact 1536 by 1024 canvas, one complete macro anchor silhouette, crown and flukes, central signal-red-bound flagship chain, single continuous white direct-light break, wet iron and rope materials, cold lighting, and neutral black backdrop. Subdivide every oversized internal hull cavity with a thin wet-iron mast rib so the final anchor shows at least 24 independently countable negative-space absent-ship apertures. Every aperture has its own missing crescent hull boundary, at least one missing mast slot, missing rigging slits, and a few tiny internal walking crew-shaped cuts. The apertures show pure near-black backdrop through the anchor and are voids in the one body's substance, never solid miniature ships or a fleet behind it. Do not leave giant undivided cavities and do not change the outer anchor, central chain or light break. No detached ships, scene, sea, land, floor, horizon, text, readable symbols, logo or watermark. Opaque studio concept master with all apertures and silhouette edges fully in frame."
+    }
+  }
+}

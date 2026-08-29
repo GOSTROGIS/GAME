@@ -1,0 +1,200 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-black-sluice-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.culvert_bishop",
+      "subjectId": "culvert_bishop",
+      "familyId": "black_sluice",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/black-sluice/culvert-bishop-v1.png",
+      "sha256": "c74b5e2db87f03e6886daba8cfde82886ddba32d4855393e138ca7dd5b2e93e3",
+      "bytes": 1827901,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "c74b5e2db87f03e6886daba8cfde82886ddba32d4855393e138ca7dd5b2e93e3"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.gutter_double",
+      "subjectId": "gutter_double",
+      "familyId": "black_sluice",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/black-sluice/gutter-double-v3.png",
+      "sha256": "f3fc785b7694c16a57338e2824706672a20c9001b9370b65c19aaaea57028962",
+      "bytes": 1495630,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "f3fc785b7694c16a57338e2824706672a20c9001b9370b65c19aaaea57028962"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.keeper_beneath_grate",
+      "subjectId": "keeper_beneath_grate",
+      "familyId": "black_sluice",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/black-sluice/keeper-beneath-grate-v1.png",
+      "sha256": "30b99ce38152abfdc9c54a9951698734ab66675153af23fa109e2c17652ea185",
+      "bytes": 2029949,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "30b99ce38152abfdc9c54a9951698734ab66675153af23fa109e2c17652ea185"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.puddle_face",
+      "subjectId": "puddle_face",
+      "familyId": "black_sluice",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/black-sluice/puddle-face-v1.png",
+      "sha256": "454ebd514ec89f60cd327b42d6d8423462d48e70b1f1d6dababde521cfd579cb",
+      "bytes": 1314799,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "454ebd514ec89f60cd327b42d6d8423462d48e70b1f1d6dababde521cfd579cb"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.river_remembers_backward",
+      "subjectId": "river_remembers_backward",
+      "familyId": "black_sluice",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/black-sluice/river-remembers-backward-v2.png",
+      "sha256": "00cfdba98c93a8b5e7b014b4e1400f2a21bc39203080914112566f887e891b92",
+      "bytes": 1645388,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "00cfdba98c93a8b5e7b014b4e1400f2a21bc39203080914112566f887e891b92"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.upstream_widow",
+      "subjectId": "upstream_widow",
+      "familyId": "black_sluice",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/black-sluice/upstream-widow-v2.png",
+      "sha256": "2b88293ede54452dd9a386cc3342ccd8eaefba93b1a1d30aa2c41bf2cc95acea",
+      "bytes": 1439532,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "2b88293ede54452dd9a386cc3342ccd8eaefba93b1a1d30aa2c41bf2cc95acea"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Ember Ledger Named NPCs — Batch 01 Prompts
 
-Generated on 2026-08-25 with the OpenAI built-in image-generation tool. Reference images were used only as rendering, proportion, material, palette, and presentation anchors; their identities and designs were explicitly excluded.
+Generated on 2026-08-25 with a built-in image-generation tool. Reference images were used only as rendering, proportion, material, palette, and presentation anchors; their identities and designs were explicitly excluded.
 
 ## Maela Voss
 

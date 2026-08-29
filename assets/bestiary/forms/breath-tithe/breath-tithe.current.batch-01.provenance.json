@@ -1,0 +1,200 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-breath-tithe-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.exhale_rag",
+      "subjectId": "exhale_rag",
+      "familyId": "breath_tithe",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/breath-tithe/exhale-rag-v1.png",
+      "sha256": "3cecb40c9491fc405ba398cac7ad8401d22219ff349001a4a7aba3b74aa2b273",
+      "bytes": 1832193,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "3cecb40c9491fc405ba398cac7ad8401d22219ff349001a4a7aba3b74aa2b273"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.hollow_smelter",
+      "subjectId": "hollow_smelter",
+      "familyId": "breath_tithe",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/breath-tithe/hollow-smelter-v2.png",
+      "sha256": "251db4eb1cecde4ff64fd37815ef29c89c0491675a76037250c061e113106a37",
+      "bytes": 1832496,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "251db4eb1cecde4ff64fd37815ef29c89c0491675a76037250c061e113106a37"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.lung_tax_office",
+      "subjectId": "lung_tax_office",
+      "familyId": "breath_tithe",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/breath-tithe/lung-tax-office-v1.png",
+      "sha256": "0b1eab813f2261ff0baa8a8d62601963fd24b043359e9be5a7c7de988ff4519b",
+      "bytes": 1811649,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "0b1eab813f2261ff0baa8a8d62601963fd24b043359e9be5a7c7de988ff4519b"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.ninth_breath_collector",
+      "subjectId": "ninth_breath_collector",
+      "familyId": "breath_tithe",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/breath-tithe/ninth-breath-collector-v1.png",
+      "sha256": "9be272e4ad0ebe6ba72bbc076928e8c29e90a10ccd4230a64d78f04212ca6504",
+      "bytes": 2295253,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "9be272e4ad0ebe6ba72bbc076928e8c29e90a10ccd4230a64d78f04212ca6504"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.sleeve_crawler",
+      "subjectId": "sleeve_crawler",
+      "familyId": "breath_tithe",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/breath-tithe/sleeve-crawler-v2.png",
+      "sha256": "ec0eb5e7560f96fc05dc62d41f63a045e00d26e2aabcd727969a71b49b256118",
+      "bytes": 1093891,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "ec0eb5e7560f96fc05dc62d41f63a045e00d26e2aabcd727969a71b49b256118"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.voice_assessor",
+      "subjectId": "voice_assessor",
+      "familyId": "breath_tithe",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/breath-tithe/voice-assessor-v2.png",
+      "sha256": "009b1083f45b617aeb215b5e5b12773c3993e02b6fb362fbefe031b8bc19f642",
+      "bytes": 1721781,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "009b1083f45b617aeb215b5e5b12773c3993e02b6fb362fbefe031b8bc19f642"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

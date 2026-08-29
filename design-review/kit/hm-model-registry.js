@@ -1,127 +1,312 @@
 /* =========================================================================
-   hm-model-registry.js — every subject MODEL MAKER can show, in one table
+   hm-model-registry.js — canonical MODEL MAKER subject registry
    -------------------------------------------------------------------------
-   Single source of truth for the selector: derives its list from the same
-   registers the rest of the project already treats as canonical
-   (kit/hm-actor-cast.js for the 42 named characters, kit/hm-concept-art.js
-   for what art actually exists, kit/hm-art-law.js for why a bestiary family
-   can or cannot be rendered yet) rather than re-typing 68 rows by hand and
-   letting them drift from those files.
-
-   Four tiers, and the difference between them is stated on every row rather
-   than only in this header:
-     sculpted     section geometry authored against a measured plate, the
-                  enemy.ash-husk depth of build.
-     generic-rig  built from the shared parametric actor rig (kit/hm-actor.js)
-                  — a real skinned, measured, animated body, but not sculpted
-                  to its own concept plate the way a sculpted subject is.
-     queued       has concept art and an eligible chassis; not built yet.
-     refused      has concept art but no eligible chassis (bestiary families
-                  whose prompt needs a body the pipeline cannot build) or no
-                  rank-1 authority at all (anchored_quarantine) — the manifest
-                  law's own refusal path, surfaced instead of worked around.
+   Bestiary and named-cast identity comes from the game data modules. Art
+   comes only from assets/art-index.json through hm-concept-art.js. The old
+   compatibility arrays remain available, but `bestiary` is the complete
+   178-form collection and is the selector's primary source.
    ========================================================================= */
-import { CAST } from './hm-actor-cast.js';
-import { artFor } from './hm-concept-art.js';
+
+import { BESTIARY, ENEMY_FAMILIES } from '../../packages/content/src/bestiary.data.js';
+import {
+  COSMIC_FACTIONS,
+  EXPANSION_CHARACTERS,
+  EXPANSION_CREATURES,
+  EXPANSION_ITEMS,
+  EXPANSION_QUESTS,
+  NARRATIVE_TARGETS,
+} from '../../packages/content/src/narrative.data.js';
+import { CHARACTERS, FACTIONS } from '../../src/data/characters.js';
+import { artFor, url } from './hm-concept-art.js';
 import { FAMILY_LAW, CHASSIS_STATUS } from './hm-art-law.js';
 
-export const SCULPTED = [
-  { id: 'enemy.ash-husk', name: 'Ash Husk', family: 'Ashbound', module: './ash-husk-model.js', buildFn: 'buildAshHusk', depth: 'Full depth: eleven section generators, 22 spring bones, a 96\u00d772 sculpted face, ten audited layer pairs.' },
-  { id: 'enemy.cinder-mourner', name: 'Cinder Mourner', family: 'Ashbound', module: './cinder-mourner-model.js', buildFn: 'build', depth: 'Lighter depth: one outer garment, paddle hands, void head \u2014 see the file header for what that omits and why.' },
+export const SCULPTED = Object.freeze([
+  { id: 'enemy.ash-husk', name: 'Ash Husk', family: 'Ashbound', module: './ash-husk-model.js', buildFn: 'buildAshHusk', depth: 'Full depth: eleven section generators, 22 spring bones, a 96×72 sculpted face, ten audited layer pairs.' },
+  { id: 'enemy.cinder-mourner', name: 'Cinder Mourner', family: 'Ashbound', module: './cinder-mourner-model.js', buildFn: 'build', depth: 'Lighter depth: one outer garment, paddle hands, void head — see the file header for what that omits and why.' },
   { id: 'enemy.wicket-eater', name: 'Wicket Eater', family: 'Ashbound', module: './wicket-eater-model.js', buildFn: 'build', depth: 'Lighter depth, same tier as cinder-mourner, plus a cape-over-coat layer audit.' },
-  { id: 'enemy.smoke-notary', name: 'Smoke Notary', family: 'Ashbound', module: './smoke-notary-model.js', buildFn: 'build', depth: 'Lighter depth; its own plate defeats most of the silhouette scan (smoke, arm spread) \u2014 stated in file, not hidden.' },
-];
+  { id: 'enemy.smoke-notary', name: 'Smoke Notary', family: 'Ashbound', module: './smoke-notary-model.js', buildFn: 'build', depth: 'Lighter depth; its own plate defeats most of the silhouette scan (smoke, arm spread) — stated in file, not hidden.' },
+]);
 
-/** Enemy id -> FAMILY_LAW key, or null for a family with no rank-1 authority
- *  at all (anchored_quarantine). Hand-kept because it is 26 short rows and
- *  the alternative — parsing kit/hm-concept-art.js's `set` folder-name
- *  strings — is guessing at a mapping that document itself calls unreliable. */
-const ENEMY_FAMILY_OF = {
-  'enemy.ash-tenant': 'ashbound', 'enemy.ledger-crawler': 'ashbound', 'enemy.pyre-bailiff': 'ashbound',
-  'enemy.tagless-stalker': 'ashbound', 'enemy.redaction-warden': 'ashbound', 'enemy.the-unentered': 'ashbound',
-  'enemy.cairn-hound': 'cairn_beasts', 'enemy.antlered-cairn': 'cairn_beasts', 'enemy.stonejaw-vixen': 'cairn_beasts',
-  'enemy.lichen-back': 'cairn_beasts', 'enemy.warm-cairn-ram': 'cairn_beasts', 'enemy.graveheat-matron': 'cairn_beasts',
-  'enemy.cairn-maggot': 'cairn_beasts', 'enemy.flint-pelt': 'cairn_beasts', 'enemy.oathstone-boar': 'cairn_beasts',
-  'enemy.barrow-listener': 'cairn_beasts',
-  'enemy.armistice-giant': 'march_deserters', 'enemy.command-leech': 'march_deserters',
-  'enemy.trench-waif': 'march_deserters', 'enemy.receipt-soldier': 'march_deserters',
-  'enemy.buoy-corpse': null, 'enemy.hawser-hand': null,
-};
+const sculptedById = new Map(SCULPTED.map((row) => [row.id, row]));
+const familyById = new Map(ENEMY_FAMILIES.map((row) => [row.id, row]));
+const factionById = new Map(FACTIONS.map((row) => [row.id, row]));
+const cosmicFactionById = new Map(COSMIC_FACTIONS.map((row) => [row.id, row]));
 
-function titleOf(id) {
-  return id.split('.')[1].split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
+// The canonical content id is `glasswood`; the older prompt-law key includes
+// the family-name suffix. Keep that translation isolated and explicit.
+const lawIdForFamily = (familyId) => familyId === 'glasswood' ? 'glasswood_brood' : familyId;
+const viewId = (prefix, id) => `${prefix}.${String(id).replaceAll('_', '-')}`;
+
+function artForForm(form) {
+  const art = artFor(viewId('enemy', form.id));
+  const familyArt = artFor(viewId('family', form.familyId));
+  return {
+    ...art,
+    src: art.src || familyArt.src,
+    plateSrc: art.plateSrc || familyArt.plateSrc || familyArt.src,
+    hasIndividualArt: Boolean(art.masterPath || art.cutoutPath),
+  };
 }
 
-function queuedBestiary() {
-  const out = [];
-  for (const [id, famId] of Object.entries(ENEMY_FAMILY_OF)) {
-    const art = artFor(id);
-    if (!famId) {
-      out.push({
-        id, kind: 'creature', name: titleOf(id), family: 'Anchored Quarantine', tier: 'refused',
-        plate: art.has ? art.src : null,
-        reason: 'No rank-1 prompt exists for this family in prompts/family-plates-batch-01.md, and no FAMILY_LAW row. kit/hm-concept-art.js records this art as FOUND, not approved. Under the manifest law, absent authority is a refusal, not a guess.',
-      });
-      continue;
-    }
-    const law = FAMILY_LAW[famId];
-    const chassis = CHASSIS_STATUS[law?.chassis];
-    if (famId === 'ashbound') {
-      out.push({
-        id, kind: 'creature', name: titleOf(id), family: law.name, tier: 'queued', plate: art.has ? art.src : null,
-        promptCall: law.promptCall,
-        reason: 'The humanoid-collapsed chassis is proven \u2014 four Ashbound individuals are built on it. This one\u2019s own section geometry has not been authored yet; it is next in line, not blocked.',
-      });
-    } else {
-      out.push({
-        id, kind: 'creature', name: titleOf(id), family: law.name, tier: 'refused', plate: art.has ? art.src : null,
-        promptCall: law.promptCall,
-        reason: `The prompt requires a ${law.chassis} chassis. ${chassis?.blocker || 'No chassis exists yet for this body plan.'}`,
-      });
-    }
-  }
-  return out;
-}
-
-function namedCastList() {
-  return CAST.map((c) => {
-    const art = artFor(c.id);
+function readiness(form, art) {
+  if (sculptedById.has(viewId('enemy', form.id))) {
     return {
-      id: c.id, kind: 'character', name: c.name, role: c.role, faction: c.faction,
-      tier: 'generic-rig', placed: !!c.placed, authoredClip: !!c.authoredClip,
-      plate: art.has ? art.src : null,
+      tier: 'sculpted',
+      reason: 'A subject-specific 3D module exists and is reviewable against its concept reference.',
     };
+  }
+
+  if (!art.hasIndividualArt) {
+    return {
+      tier: 'awaiting-art',
+      reason: 'The family plate is available, but this individual form still lacks an indexed concept master or cutout.',
+    };
+  }
+
+  const law = FAMILY_LAW[lawIdForFamily(form.familyId)];
+  if (!law) {
+    return {
+      tier: 'unassessed',
+      reason: 'Individual art exists, but no family prompt-law row assesses a compatible 3D chassis. Readiness is intentionally unclaimed.',
+    };
+  }
+
+  // Four independently authored Ashbound modules establish that this family
+  // can enter the modelling queue even though the generic chassis table does
+  // not claim to satisfy its anatomy.
+  if (form.familyId === 'ashbound') {
+    return {
+      tier: 'queued',
+      promptAuthority: `hm-art-law:${lawIdForFamily(form.familyId)}`,
+      reason: 'Individual art and prompt authority exist, and the Ashbound modelling approach is proven by subject-specific modules.',
+    };
+  }
+
+  const chassis = CHASSIS_STATUS[law.chassis];
+  if (chassis?.exists) {
+    return {
+      tier: 'queued',
+      promptAuthority: `hm-art-law:${lawIdForFamily(form.familyId)}`,
+      reason: `Individual art and prompt authority exist; the ${law.chassis} chassis is available.`,
+    };
+  }
+
+  return {
+    tier: 'refused',
+    promptAuthority: `hm-art-law:${lawIdForFamily(form.familyId)}`,
+    reason: `The approved prompt requires a ${law.chassis} chassis. ${chassis?.blocker || 'No compatible chassis has been assessed.'}`,
+  };
+}
+
+function bestiaryList() {
+  return BESTIARY.map((form) => {
+    const id = viewId('enemy', form.id);
+    const family = familyById.get(form.familyId);
+    const art = artForForm(form);
+    const status = readiness(form, art);
+    const sculpted = sculptedById.get(id);
+    return Object.freeze({
+      id,
+      contentId: form.id,
+      kind: 'creature',
+      name: form.name,
+      family: family?.name || form.familyId,
+      familyId: form.familyId,
+      rank: form.rank,
+      combatRole: form.combatRole,
+      tier: status.tier,
+      plate: art.src,
+      masterSrc: art.masterSrc,
+      cutoutSrc: art.cutoutSrc,
+      plateSrc: art.plateSrc,
+      hasIndividualArt: art.hasIndividualArt,
+      reason: status.reason,
+      promptAuthority: status.promptAuthority,
+      ...(sculpted || {}),
+    });
   });
 }
 
-const ORIGIN_IDS = ['origin.gloamfarer', 'origin.bell_warden', 'origin.mire_physicker', 'origin.oathless_scion',
-  'origin.grave_tithe_runner', 'origin.cinder_mason', 'origin.starved_seer', 'origin.thorn_poacher'];
+function namedCastList() {
+  return CHARACTERS.map((character) => {
+    const id = viewId('npc', character.id);
+    const art = artFor(id);
+    return Object.freeze({
+      id,
+      contentId: character.id,
+      kind: 'character',
+      name: character.name,
+      role: character.role,
+      faction: factionById.get(character.factionId)?.name || character.factionId,
+      factionId: character.factionId,
+      tier: 'generic-rig',
+      plate: art.src,
+      masterSrc: art.masterSrc,
+      cutoutSrc: art.cutoutSrc,
+    });
+  });
+}
+
+const ORIGIN_IDS = Object.freeze([
+  'gloamfarer',
+  'bell_warden',
+  'mire_physicker',
+  'oathless_scion',
+  'grave_tithe_runner',
+  'cinder_mason',
+  'starved_seer',
+  'thorn_poacher',
+]);
 
 function originsList() {
-  return ORIGIN_IDS.map((id) => {
+  return ORIGIN_IDS.map((contentId) => {
+    const id = viewId('origin', contentId);
     const art = artFor(id);
-    return {
-      id, kind: 'origin', name: id.replace('origin.', '').split('_').map((w) => w[0].toUpperCase() + w.slice(1)).join(' '),
-      tier: 'reference', plate: art.has ? art.src : null,
+    return Object.freeze({
+      id,
+      contentId,
+      kind: 'origin',
+      name: contentId.split('_').map((word) => word[0].toUpperCase() + word.slice(1)).join(' '),
+      tier: 'reference',
+      plate: art.src,
+      masterSrc: art.masterSrc,
+      cutoutSrc: art.cutoutSrc,
       reason: art.has
-        ? 'Playable-origin render, reference only \u2014 origins are not in kit/hm-actor-cast.js, so there is no body spec here to build a model from.'
-        : 'No art vendored for this origin yet (four of eight origins have none \u2014 see GAP-ANALYSIS-CONTENT.md).',
-    };
+        ? 'Playable-origin art is indexed. No subject-specific 3D appearance contract has been approved, so this remains reference-only.'
+        : 'No indexed origin art is available; 3D readiness is not assessed.',
+    });
+  });
+}
+
+function expansionCharacterList() {
+  return EXPANSION_CHARACTERS.map((character) => {
+    const pipeline = character.pipeline;
+    const masterSrc = pipeline.conceptMaster ? url(pipeline.conceptMaster) : null;
+    const cutoutSrc = pipeline.transparentCutout ? url(pipeline.transparentCutout) : null;
+    const hasArt = Boolean(masterSrc || cutoutSrc);
+    const hasStaticModel = ['ready', 'sculpted'].includes(pipeline.staticModelStatus) && Boolean(pipeline.staticModel);
+    const hasAnimatedModel = ['ready', 'animated'].includes(pipeline.animatedModelStatus) && Boolean(pipeline.animatedModel);
+    const tier = hasAnimatedModel ? 'animated-model'
+      : hasStaticModel ? 'static-model'
+        : hasArt ? 'queued'
+          : 'awaiting-art';
+
+    return Object.freeze({
+      id: viewId('expansion', character.id),
+      contentId: character.id,
+      kind: 'expansion-character',
+      name: character.name,
+      epithet: character.epithet,
+      role: character.role,
+      faction: cosmicFactionById.get(character.factionId)?.name || character.factionId,
+      factionId: character.factionId,
+      family: pipeline.family,
+      tier,
+      plate: cutoutSrc || masterSrc,
+      masterSrc,
+      cutoutSrc,
+      staticModel: pipeline.staticModel,
+      animatedModel: pipeline.animatedModel,
+      artStatus: pipeline.artStatus,
+      staticModelStatus: pipeline.staticModelStatus,
+      animatedModelStatus: pipeline.animatedModelStatus,
+      hasIndividualArt: hasArt,
+      contradiction: character.contradiction,
+      visualBrief: character.visualBrief,
+      reason: hasArt
+        ? 'Canonical expansion concept art is linked. Static and animated readiness remain independently assessed.'
+        : 'The lore record and visual brief are canonical, but no accepted concept master is linked yet.',
+    });
+  });
+}
+
+function expansionCreatureList() {
+  return EXPANSION_CREATURES.map((entry) => {
+    const pipeline = entry.pipeline;
+    const masterSrc = pipeline.conceptMaster ? url(pipeline.conceptMaster) : null;
+    const cutoutSrc = pipeline.transparentCutout ? url(pipeline.transparentCutout) : null;
+    const hasArt = Boolean(masterSrc || cutoutSrc);
+    const hasStaticModel = ['ready', 'sculpted'].includes(pipeline.staticModelStatus) && Boolean(pipeline.staticModel);
+    const hasAnimatedModel = ['ready', 'animated'].includes(pipeline.animatedModelStatus) && Boolean(pipeline.animatedModel);
+    const tier = hasAnimatedModel ? 'animated-model'
+      : hasStaticModel ? 'static-model'
+        : hasArt ? 'queued'
+          : 'awaiting-art';
+
+    return Object.freeze({
+      id: viewId('expansion-creature', entry.id),
+      contentId: entry.id,
+      kind: 'expansion-creature',
+      name: entry.name,
+      family: entry.familyId,
+      familyId: entry.familyId,
+      faction: entry.factionAffinityIds.map((id) => cosmicFactionById.get(id)?.name || id).join(' / '),
+      factionAffinityIds: entry.factionAffinityIds,
+      rank: entry.rank,
+      combatRole: entry.combatRole,
+      tier,
+      plate: cutoutSrc || masterSrc,
+      masterSrc,
+      cutoutSrc,
+      staticModel: pipeline.staticModel,
+      animatedModel: pipeline.animatedModel,
+      artStatus: pipeline.artStatus,
+      staticModelStatus: pipeline.staticModelStatus,
+      animatedModelStatus: pipeline.animatedModelStatus,
+      hasIndividualArt: hasArt,
+      mechanic: entry.mechanic,
+      narrativeUse: entry.narrativeUse,
+      visualBrief: entry.visualBrief,
+      reason: hasArt
+        ? 'Canonical expansion concept art is linked. Static and animated readiness remain independently assessed.'
+        : 'This creature has unique anatomy, ecology, mechanic, cue, counterplay, and visual law, but no accepted concept master is linked yet.',
+    });
   });
 }
 
 export function buildRegistry() {
-  const sculpted = SCULPTED.map((s) => ({ ...s, kind: 'creature', tier: 'sculpted', plate: artFor(s.id).src }));
-  return { sculpted, queuedBestiary: queuedBestiary(), namedCast: namedCastList(), origins: originsList() };
+  const bestiary = bestiaryList();
+  const sculpted = bestiary.filter((row) => row.tier === 'sculpted');
+  const queuedBestiary = bestiary.filter((row) => row.tier !== 'sculpted');
+  return Object.freeze({
+    bestiary: Object.freeze(bestiary),
+    sculpted: Object.freeze(sculpted),
+    queuedBestiary: Object.freeze(queuedBestiary),
+    namedCast: Object.freeze(namedCastList()),
+    origins: Object.freeze(originsList()),
+    expansionCharacters: Object.freeze(expansionCharacterList()),
+    expansionCreatures: Object.freeze(expansionCreatureList()),
+  });
 }
 
-export function tally(reg) {
+export function tally(registry) {
+  const countTier = (tier) => registry.bestiary.filter((row) => row.tier === tier).length;
+  const foundingTotal = registry.bestiary.length + registry.namedCast.length + registry.origins.length;
+  const expansionCharacters = registry.expansionCharacters.length;
+  const expansionCreatures = registry.expansionCreatures.length;
+  const expansionRows = [...registry.expansionCharacters, ...registry.expansionCreatures];
   return {
-    sculpted: reg.sculpted.length,
-    namedCast: reg.namedCast.length,
-    queued: reg.queuedBestiary.filter((r) => r.tier === 'queued').length,
-    refused: reg.queuedBestiary.filter((r) => r.tier === 'refused').length,
-    origins: reg.origins.length,
-    total: reg.sculpted.length + reg.namedCast.length + reg.queuedBestiary.length + reg.origins.length,
+    sculpted: countTier('sculpted'),
+    awaitingArt: countTier('awaiting-art'),
+    queued: countTier('queued'),
+    refused: countTier('refused'),
+    unassessed: countTier('unassessed'),
+    namedCast: registry.namedCast.length,
+    genericRig: registry.namedCast.filter((row) => row.tier === 'generic-rig').length,
+    origins: registry.origins.length,
+    expansionCharacters,
+    expansionCreatures,
+    expansionTotal: expansionCharacters + expansionCreatures,
+    expansionItems: EXPANSION_ITEMS.length,
+    expansionQuests: EXPANSION_QUESTS.length,
+    expansionAwaitingArt: expansionRows.filter((row) => row.tier === 'awaiting-art').length,
+    expansionStaticModels: expansionRows.filter((row) => row.tier === 'static-model').length,
+    expansionAnimatedModels: expansionRows.filter((row) => row.tier === 'animated-model').length,
+    foundingTotal,
+    // Compatibility: callers that audited the founding registry continue to
+    // receive 228 here. New surfaces should use `grandTotal`.
+    total: foundingTotal,
+    grandTotal: foundingTotal + expansionCharacters + expansionCreatures,
+    authoredQuestTarget: NARRATIVE_TARGETS.authoredQuestTarget,
   };
 }

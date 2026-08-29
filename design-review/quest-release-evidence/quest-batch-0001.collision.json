@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "kind": "semantic-collision-report",
+  "batchId": "quest-batch-0001",
+  "packetSha256": "b909ef132d790bd854f04754874d5593cc18f3d382ee4c4cbd4bd72bc1219b87",
+  "verdict": "PASS",
+  "corpusQuestCount": 25,
+  "machineChecks": {
+    "canonicalNarrativeValidator": "PASS",
+    "maxPairwiseShingleSimilarity": {
+      "score": 0.0035211267605633804,
+      "left": "main_archive_of_open_wounds",
+      "right": "side_seven_lamps_for_six_streets"
+    },
+    "note": "Shingle similarity is warning evidence only; the listed non-author semantic attestations control admission."
+  },
+  "reviewerAttestations": [
+    {
+      "reviewerRole": "remaining-hands-owner-narrative-review",
+      "reviewedPayloadSha256": "294adc639131b87370cd2462885b6e23544e3efdf4dc9cd44d86ebbca7be89ce",
+      "questIds": [
+        "main_noon_came_bleeding",
+        "main_the_saint_cast_two_shadows",
+        "main_the_bell_that_forgot_you",
+        "main_the_door_in_mothers_rib",
+        "main_parliament_of_one_mouth",
+        "main_archive_of_open_wounds",
+        "main_mercy_has_a_mouth",
+        "main_the_engine_with_an_off_switch",
+        "main_a_sun_small_enough",
+        "side_the_disease_called_grief",
+        "side_seven_lamps_for_six_streets",
+        "side_the_hospice_grows_a_heart",
+        "side_the_dead_vote_no"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "charnel-owner-narrative-review",
+      "reviewedPayloadSha256": "294adc639131b87370cd2462885b6e23544e3efdf4dc9cd44d86ebbca7be89ce",
+      "questIds": [
+        "main_noon_came_bleeding",
+        "main_the_saint_cast_two_shadows",
+        "main_the_bell_that_forgot_you",
+        "main_the_door_in_mothers_rib",
+        "main_parliament_of_one_mouth",
+        "main_archive_of_open_wounds",
+        "main_mercy_has_a_mouth",
+        "main_the_engine_with_an_off_switch",
+        "main_a_sun_small_enough",
+        "side_the_disease_called_grief",
+        "side_seven_lamps_for_six_streets",
+        "side_the_hospice_grows_a_heart",
+        "side_the_dead_vote_no"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    }
+  ],
+  "quests": [
+    {
+      "id": "main_noon_came_bleeding",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Cover-positioning turns a miracle into irreversible civic triage by rewriting named residents and buildings, rather than transporting cargo.",
+      "canonicalForbiddenSubstitution": "Cannot be reskinned as a cargo escort because cover position rewrites named residents and buildings."
+    },
+    {
+      "id": "main_the_saint_cast_two_shadows",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Two authentic continuations are judged through asymmetric timeline testimony, with misattribution creating binding legal identity rather than exposing an impostor.",
+      "canonicalForbiddenSubstitution": "Cannot become an ordinary impostor mystery; both actors are authentic continuations of one coerced sainthood."
+    },
+    {
+      "id": "main_the_bell_that_forgot_you",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Timing physically restores civic time by consuming documented relationships, making each beat a social sacrifice rather than a rhythm puzzle.",
+      "canonicalForbiddenSubstitution": "Cannot be reduced to a rhythm puzzle because each beat trades a documented relationship for physical repair."
+    },
+    {
+      "id": "main_the_door_in_mothers_rib",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Traversal through living anatomy controls evidence in a refugee settlement's binding vote, so protective sanctuary and captivity cannot be separated into jailbreak nouns.",
+      "canonicalForbiddenSubstitution": "Cannot become a prison-break template because the prison is also a protective body and a self-governing settlement."
+    },
+    {
+      "id": "main_parliament_of_one_mouth",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Treaty representation and captivity occupy the same thirteen anatomical voices, making silence, consent, and obligation the mechanic rather than council dialogue.",
+      "canonicalForbiddenSubstitution": "Cannot be reskinned as a council dialogue because representation and captivity share the same thirteen bodies."
+    },
+    {
+      "id": "main_archive_of_open_wounds",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Recovering history requires allocating four present injuries to distinct consenting witnesses, so publication is embodied harm rather than lore collection.",
+      "canonicalForbiddenSubstitution": "Cannot become a collectible-lore quest because reading is an allocation of present harm with named consent."
+    },
+    {
+      "id": "main_mercy_has_a_mouth",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Navigation modifies a negotiating predator-ally's trust and appetite, and failure demands its restraint rather than turning anatomy into a dungeon enemy.",
+      "canonicalForbiddenSubstitution": "Cannot become a dungeon traversal because the dungeon is a negotiating ally whose appetite is altered by navigation."
+    },
+    {
+      "id": "main_the_engine_with_an_off_switch",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Stress tests permanently allocate known failure and shutdown authority, making governance ownership rather than crafting quality the designed output.",
+      "canonicalForbiddenSubstitution": "Cannot be a crafting recipe because governance ownership, not component quality, is the mechanical output."
+    },
+    {
+      "id": "main_a_sun_small_enough",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Eight earned consequence ledgers constitute incompatible cosmological laws and named exceptions, preventing a generic colored-ending choice.",
+      "canonicalForbiddenSubstitution": "Cannot become a colored-ending choice because every available law and exception is earned from persistent prior state."
+    },
+    {
+      "id": "side_the_disease_called_grief",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Surgery separates function, pain, testimony, and erased identity, so curing grief can destroy the only proof that a person existed.",
+      "canonicalForbiddenSubstitution": "Cannot be a cure-or-no-cure dialogue because diagnosis physically separates function, pain, testimony, and identity."
+    },
+    {
+      "id": "side_seven_lamps_for_six_streets",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Seven maintenance acts alter physical geography and civic visibility for named households, making an extinguished lamp a jurisdictional displacement rather than a checklist miss.",
+      "canonicalForbiddenSubstitution": "Cannot be a lamp-lighting checklist because each lamp changes civic visibility, ration entitlement, and physical geography."
+    },
+    {
+      "id": "side_the_hospice_grows_a_heart",
+      "verdict": "PASS",
+      "authorRole": "founding-narrative-author-swarm",
+      "reviewerRoles": [
+        "remaining-hands-owner-narrative-review",
+        "charnel-owner-narrative-review"
+      ],
+      "distinctDramaticWork": "Observed bed reordering trains and exposes an adaptive triage rule whose edits redistribute care, making trusted policy rather than a fetch target the opposition.",
+      "canonicalForbiddenSubstitution": "Cannot become a healer fetch quest because the antagonist is an adaptive priority rule inherited from a trusted caregiver."
+    }
+  ]
+}

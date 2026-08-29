@@ -1,0 +1,38 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-01-revision-v3",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "aaa954173a043e9b10637fcd18b2c058425612869d3abfbafe83aff3dc2aa4bb",
+  "previousRevisionSha256": "5cfaeccd7da3af6acebf813a2cbe90da2dde613e51c91114956cff2840f6b03d",
+  "assets": [
+    {
+      "id": "mother_nacre_open_rib",
+      "reference": "mother-nacre-open-rib-concept-master-v1.png",
+      "outputFile": "mother-nacre-open-rib-concept-master-v2.png",
+      "reason": "Independent review passes Nacre's silhouette, attached arm arches, rib hinges, and single doorway, but the aperture contains a literal walkable corridor/floor and full-size architecture instead of sparse abstract depth.",
+      "revisionDirection": "Faithfully preserve Mother Nacre's exact v1 exterior silhouette, head, every anatomically attached backward-folded load-bearing shelter arm, rib hinges, one tall doorway proportion, black-nacre materials, studio lighting, opaque backdrop, canvas and framing. Replace only the content inside the rib doorway. Remove the reflective walkable path, corridor perspective, floor plane, full-size columns, doors and large windows. The doorway interior must be near-black non-navigable depth containing only sparse tiny abstract pinprick window-depths and a few miniature nonliteral load-bearing structural silhouettes, all too small and discontinuous to become a room, corridor, building, street or scene. Retain restrained cold light deep inside without glow outside the aperture. Add nothing else. No floor/path, perspective corridor, full-size architecture, village scene, people, text, crop or exterior change."
+    },
+    {
+      "id": "prince_thirteen_throats",
+      "reference": "prince-thirteen-throats-concept-master-v2-rejected.png",
+      "outputFile": "prince-thirteen-throats-concept-master-v3.png",
+      "reason": "The unsupported crown is gone and all collars remain distinct, but full-resolution owner recount still finds fourteen throats rather than thirteen.",
+      "revisionDirection": "Faithfully preserve every v2 pixel-level design feature except one explicitly identified throat. The current image contains fourteen throats. Remove the single throat whose circular opening is LOWEST ON THE ENTIRE CANVAS: the bottom-most viewer-right opening attached to the short curved collar crossing in front of the viewer-right forearm/hip. Remove that opening and its whole collar cleanly into black negative space. Do not remove, add, duplicate, merge, resize or relocate any other throat. The final image must contain exactly THIRTEEN complete circular wet throat apertures, each on its own jointed collar. Preserve the headless central absence, no crown, broken voting-circle halo, two arms, two feet, backdrop, lighting and full framing. No new object, face, text, floor or crop."
+    },
+    {
+      "id": "wound_scribe_keth",
+      "reference": "wound-scribe-keth-concept-master-v2-rejected.png",
+      "outputFile": "wound-scribe-keth-concept-master-v3.png",
+      "reason": "The insect anatomy is removed, but the four rectangular layers remain stacked along one common spine and read as an open book placed on the demon rather than reversible injuries grown through it.",
+      "revisionDirection": "Preserve one complete low irregular scar-tissue demon, all black quills, cold light, near-black backdrop, landscape canvas and exactly FOUR tissue bas-reliefs. Rebuild the four page-like wound margins so they cannot read as a book: distribute them at four separate body locations and four different orientations, each as one irregular clean scar flap hinged directly from surrounding living folded tissue. No two flaps may share a spine, stack, align in a sequence, or form rectangular pages. Each of the exactly four flaps must open over its own shallow tissue cavity and contain one non-text bas-relief; preserve clear black gaps between them. Keep the blind folded scar-flap front with no head/face and the asymmetric many-jointed non-insect support structure. No book, shared binding, page stack, insect, paper, text, blood, floor or crop."
+    },
+    {
+      "id": "reverse_rib_bride",
+      "reference": "reverse-rib-bride-concept-master-v2-rejected.png",
+      "outputFile": "reverse-rib-bride-concept-master-v3.png",
+      "reason": "The literal crown/veil are removed and the spouse absence is clearer, but two long ordinary arms still perform the pointing cue and both target cues remain ornate bordered rings.",
+      "revisionDirection": "Faithfully preserve v2's tall black-nacre frame, complete central spouse-shaped empty silhouette, all clasping rib-hands, two legs/feet, material, lighting, canvas and clearance. Remove both long shoulder-connected pointing arms completely; leave no ordinary arms or hand stumps. Remove both ornate oval ring markers completely. Choose exactly two existing clasped rib termini at mid-height, one on each side, and extend only those ribs outward so their terminal hand-clasps release and point in opposite directions. Each of those exactly two pointer-ribs must visibly originate from the same rib lattice as the remaining clasped hands. At each pointing direction place one small flat irregular unbordered matte-black position aperture with only a thin subdued nacre edge sufficient to read against the backdrop; no oval, circle, ring, symbol, glow, floor or tether. All other rib-hands stay clasped around the absence. No ordinary arm, third pointer, ring, bride realism, spouse figure, extra body, text, gore, floor or crop."
+    }
+  ]
+}

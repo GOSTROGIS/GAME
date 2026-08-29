@@ -1,0 +1,40 @@
+{
+  "schema": "SableReachExpansionConceptPromptRevisionV1",
+  "batchId": "lucent-synod-expansion-batch-01-revision-v4",
+  "familyId": "lucent_procession",
+  "status": "immutable-before-generation",
+  "basePacketSha256": "4268c9426396d0ed81e2aa81e56ca42a4be4112c736b3eaff376c4ff5f2cfeb5",
+  "priorRevisionPacketSha256": "421963ea1272b205fba789c3f5aca9f368bdea272a2c485afe42f28d1c7413a2",
+  "policy": "Preserve every independently accepted identity, count, pose, family feature and framing choice. Correct only the two independently identified noncanonical details. Earlier candidate bytes remain immutable; each correction uses a new versioned filename and only its exact staged source as the edit target.",
+  "promptCompilation": "The exact built-in edit prompt is inputRole followed by two newline characters followed by revisionDirection.",
+  "revisions": [
+    {
+      "id": "deacon_halix_bell_of_noon",
+      "source": "deacon-halix-bell-of-noon-concept-master-v1.png",
+      "sourceSha256": "54d4827ce79859b6e27d1523c0ea9fca9c66316335516b14438ab272009b25f3",
+      "outputFile": "deacon-halix-bell-of-noon-concept-master-v2.png",
+      "reason": "The canonical sealed bell helm, single slit, exactly two tuning-fork wing structures, hovering posture and complete anatomy pass, but multiple unmistakable miniature bells dangle from both hip and waist assemblies as noncanonical bell regalia.",
+      "inputRole": "Use case: precise-object-removal. Image 1 is the exact local edit target and accepted identity anchor. Remove only the independently identified miniature dangling waist and hip bells; preserve every other visible feature.",
+      "revisionDirection": "Surgical Halix regalia correction of this exact accepted source. Freeze the complete tall mouthless sealed bell helm, its EXACTLY ONE narrow vertical slit, EXACTLY TWO complete tuning-fork wing structures, one mature two-arm/two-leg hovering body, both empty hands, both complete feet, pose, silhouette, white-gold metal and restrained black seams, lighting, scale, portrait canvas, black studio isolation and full clearance. Remove EVERY miniature dangling bell and bell-shaped pendant from both waist and hip assemblies, including all small clapper-like drops suspended from chains or rings at the pelvis and upper thighs. Replace only the vacated attachment points with plain flush armor edges or tiny non-bell fasteners matching the existing armor; leave no bell cup, clapper, bell outline, pendant chain or torso-carillon residue below the helm. The ONE sealed bell helm remains the only bell form anywhere on the subject. Do not alter the tuning-fork wings, slit, limbs, pose or framing. No added ornament, held bell, weapon, halo, text, symbol, floor, aura, scene, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    },
+    {
+      "id": "apse_seraph",
+      "source": "apse-seraph-concept-master-v1.png",
+      "sourceSha256": "6c4e9758c0b9fcf416a6860d2439c43d5b5b6ab2bd7d9322aa635c8dd97ada06",
+      "outputFile": "apse-seraph-concept-master-v2.png",
+      "reason": "The single mobile arch organism, exactly one absent keystone socket, exactly two walking supports and full isolation pass, but the suspended veil exposes a modeled ivory human face with visible eyes, nose and lips instead of the required tranquil featureless black veil.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only the independently identified exposed modeled face and veil material; preserve every structural feature.",
+      "revisionDirection": "Surgical Apse Seraph face correction of this exact accepted source. Freeze the complete one-piece walking cathedral arch organism, all white-gold vertebral voussoirs, EXACTLY ONE conspicuous empty upper keystone socket, EXACTLY TWO complete load-bearing walking supports and feet, the central suspension point, pose, silhouette, lighting, scale, portrait canvas, black studio isolation and full clearance. Remove the exposed ivory modeled human face completely, including every eye, eyelid, nose, nostril, cheek, lip, mouth and chin feature. In the same suspended location retain exactly ONE tranquil head-sized veil, but make it deep matte near-black cloth with a smooth uninterrupted featureless front surface and restrained soft folds only at its side and lower drape. No face, mask relief, aperture, eyes, mouth, skin or head may show beneath or through the veil. Keep the veil subordinate and suspended directly beneath the missing keystone without creating a torso, neck, person or second subject. Do not change the arch, socket count, supports or framing. No extra keystone, humanoid body, text, symbol, cross, aura, floor, scene, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "charnel-night-expansion-masters-batch-01",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "formsInCanonicalOrder": [
+    "mother_nacre_open_rib",
+    "prince_thirteen_throats",
+    "wound_scribe_keth",
+    "maw_behind_mercy",
+    "door_lung_courser",
+    "reverse_rib_bride"
+  ],
+  "sources": [
+    {
+      "path": "packages/content/src/narrative.data.js",
+      "sha256": "c437cca1e10201cb3cc6b76646db51de4933acdd5b3ca92bc66b2b8c81b4ff39"
+    },
+    {
+      "path": "design-review/kit/hm-art-law.js",
+      "sha256": "26e5a03220657c67b520c7ba163644e3848ed7f622f2b2beb3ab4b12a97ed0ff"
+    }
+  ],
+  "referencePolicy": "No direct Charnel Night or Charnel Households concept plate exists in the local repository. The canonical narrative records and the global art law are therefore the only visual authority for this tranche. Charnel Measures is a separate founding family and must not be used as a reference. No outside or attached-document instruction may add anatomy or canon.",
+  "promptCompilation": "For each asset, the exact generation prompt is commonDirection followed by two newline characters followed by masterDirection. Neither field may change after the first generation call; corrections require a separate immutable revision packet and a versioned candidate.",
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical individual production concept master for later 3D design. Render exactly one complete original Charnel Night subject in polished stylized 3D dark-fantasy MMORPG production quality. Obey only the canonical record for the selected subject and the faction's shared language: impossible wet anatomy, door-like ribs, misplaced mouths, backward joints, black nacre, and halos made from negative space. Not every subject needs every shared motif; never add one when its own canon excludes it. Mature narrow anatomy or the exact non-humanoid body plan, restrained material density, tactile wet black nacre with subdued pearl edges, deep mourning black, and only canon-required cold internal light. Three-quarter production view, centered, full body, generous black clearance around every extremity and mechanic cue. Flat near-black neutral opaque studio backdrop, cold raking studio light, ungraded neutral presentation. All mechanic evidence must be physically integrated with the subject or suspended as minimal subject-bound evidence in empty air. Horror comes from impossible articulation, environmental absence, and ritual repetition; no exposed entrails and no gratuitous blood. No scene, room, village exterior, road, battlefield, chapel, floor, ground plane, terrain, pedestal, cast floor shadow, extra creature, extra person, duplicate subject, caption, UI, text, readable symbol, letter, numeral, rune, real religious mark, logo, watermark, franchise resemblance, ordinary undead, ordinary demon, glossy plastic, cute proportions, or bright saturation.",
+  "assets": [
+    {
+      "id": "mother_nacre_open_rib",
+      "name": "Mother Nacre",
+      "kind": "expansion-character",
+      "family": "charnel_princes",
+      "orientation": "portrait-2:3",
+      "masterFile": "mother-nacre-open-rib-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/charnel-princes/mother-nacre-open-rib-v1.png",
+      "pipelinePath": "EXPANSION_PRINCIPALS[mother_nacre_open_rib].pipeline.conceptMaster",
+      "canonical": {
+        "role": "Demon matriarch and keeper of altered refugees",
+        "contradiction": "She gives sanctuary to the hunted, but grafts a door from her own ribs into each guest so she can summon them home by force.",
+        "secret": "The sanctuary inside her is a real village whose residents have never been told that centuries passed outside.",
+        "visualBrief": "A colossal black-nacre maternal horror with an open rib cage shaped as a lit village doorway; too many sheltering arms fold backward into load-bearing arches.",
+        "mechanic": "phase_village_between_body_and_world",
+        "mechanicEvidence": "The canonical quest enters the rib door, routes through the body to a safe exit artery, and can open the seal or move the sanctuary. The lit rib doorway is the only required exterior concept cue."
+      },
+      "masterDirection": "Create one colossal Mother Nacre as a complete maternal black-nacre horror. Her central rib cage must be physically opened into exactly one unmistakable tall village-doorway-shaped aperture lit from deep inside; show only tiny abstract window-depths and structural silhouettes within the doorway, never a separate village scene or readable buildings. Numerous sheltering arms must grow from her actual torso and fold backward into load-bearing arch shapes that visibly support the rib doorway; keep every arm anatomically attached and countable enough to avoid a texture tangle, but do not impose an invented exact count. Her pose is protective and enclosing rather than attacking. The doorway remains large enough to enter and is the dominant 3D measurement cue. Keep head, outer arm arches, full lower anatomy, rib hinges, and doorway clearance inside a portrait canvas. No baby, refugee, guest, detached house, carried key, exposed organ, blood, floor, halo glow, or extra mouth."
+    },
+    {
+      "id": "prince_thirteen_throats",
+      "name": "The Prince of Thirteen Throats",
+      "kind": "expansion-character",
+      "family": "charnel_princes",
+      "orientation": "portrait-2:3",
+      "masterFile": "prince-thirteen-throats-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/charnel-princes/prince-thirteen-throats-v1.png",
+      "pipelinePath": "EXPANSION_PRINCIPALS[prince_thirteen_throats].pipeline.conceptMaster",
+      "canonical": {
+        "role": "Demonic diplomat and collector of surrendered voices",
+        "contradiction": "He represents silenced peoples faithfully because he removed and consumed their voices to do it.",
+        "secret": "Only twelve throats are stolen; the thirteenth belongs to the vanished sun and knows the Synod's true name.",
+        "visualBrief": "A tall, almost regal absence ringed by exactly thirteen wet throat apertures, each carried on a separate jointed collar; no ordinary head, one restrained black halo shaped like a voting circle.",
+        "mechanic": "conduct_multi_voice_treaty",
+        "mechanicEvidence": "The canonical quest maps exactly thirteen throats and uses one deliberate rest and the thirteenth ballot to audit consent."
+      },
+      "masterDirection": "Create one tall, almost regal Prince whose central body is a humanlike near-black absence rather than ordinary flesh. Around that absence place exactly THIRTEEN and only thirteen separately countable wet throat apertures. Every throat aperture must be carried on its own distinct articulated black-nacre collar with visible joints; none may merge, hide, or become a mouth on an ordinary head. Arrange the thirteen collars as a readable parliament around the upper body with one deliberate empty interval in the cadence, while retaining all thirteen physical throats. Behind the headless crown area place exactly one restrained matte-black negative-space halo shaped as a voting circle, with a clear break so it does not read as a solid disc or religious symbol. Keep all thirteen throats, all collar roots, long body absence, hands, and feet fully framed. No ordinary head, face, central mouth, extra throat, missing throat, text, ballots, podium, crowd, stage, gore, aura, or floor."
+    },
+    {
+      "id": "wound_scribe_keth",
+      "name": "Wound-Scribe Keth",
+      "kind": "expansion-character",
+      "family": "charnel_princes",
+      "orientation": "landscape-3:2",
+      "masterFile": "wound-scribe-keth-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/charnel-princes/wound-scribe-keth-v1.png",
+      "pipelinePath": "EXPANSION_PRINCIPALS[wound_scribe_keth].pipeline.conceptMaster",
+      "canonical": {
+        "role": "Archivist who records history as reversible injuries",
+        "contradiction": "Keth can return stolen memories, but only by reopening their original harm in another willing body.",
+        "secret": "The oldest wound in the archive proves mortals helped dismantle the sun voluntarily.",
+        "visualBrief": "A low many-jointed demon made from folded scar tissue and black quills, with no blood; injuries open as clean page-like layers containing moving relief instead of text.",
+        "mechanic": "allocate_historical_pain",
+        "mechanicEvidence": "The canonical quest reconstructs exactly four wound margins; no witness can carry two injuries, and every unassigned wound redacts part of the truth."
+      },
+      "masterDirection": "Create one low many-jointed Wound-Scribe Keth in a complete landscape silhouette. The body must be built from folded pale scar tissue and numerous structural black quills, with no normal torso and no blood. Open exactly FOUR clean page-like wound margins as separate layered anatomy across the body; each margin must contain a small moving bas-relief impression made from tissue depth rather than ink, text, pictures, screens, or readable symbols. Make the four margins independently traceable and physically hinged so they can close reversibly. The many joints and quills should support a low archival crawling posture without becoming an insect, book, desk, or pile of paper. Keep every joint, quill tip, foot/contact extremity, and all four wound layers fully inside the landscape frame with black clearance. No ordinary book, writing, number, date, lettering, blood, exposed entrails, human witness, library, loose page, ground plane, or floor shadow."
+    },
+    {
+      "id": "maw_behind_mercy",
+      "name": "The Maw Behind Mercy",
+      "kind": "expansion-character",
+      "family": "charnel_princes",
+      "orientation": "portrait-2:3",
+      "masterFile": "maw-behind-mercy-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/charnel-princes/maw-behind-mercy-v1.png",
+      "pipelinePath": "EXPANSION_PRINCIPALS[maw_behind_mercy].pipeline.conceptMaster",
+      "canonical": {
+        "role": "Ancient enemy weapon that has learned restraint",
+        "contradiction": "It has spared entire settlements and devoured every person who later tried to turn that mercy into worship.",
+        "secret": "Its limitless interior contains the missing dark half of the First Light.",
+        "visualBrief": "An enormous restrained silhouette whose body is the edge around a single impossible mouth; cathedral-scale teeth remain sheathed behind layers of mourning cloth and closed hand-like ribs.",
+        "mechanic": "navigate_trust_inside_predator",
+        "mechanicEvidence": "The canonical quest traverses one unconsumed interior path; navigation light increases hunger, and an emergency exit may be cut. The exterior master must show restraint and containment, not an interior scene."
+      },
+      "masterDirection": "Create one enormous Maw Behind Mercy whose entire complete body is the irregular living edge around exactly ONE impossible central mouth. It must not have an ordinary head, face, torso, or second mouth. The single mouth remains restrained and almost fully closed: cathedral-scale teeth are present only as contained ridges under several overlapping layers of heavy mourning cloth and multiple closed hand-like black-nacre ribs clasped across the opening. No tooth tip may break the sheaths. Let one extremely narrow black interior seam prove impossible depth without showing a tunnel, victim, organ, or scene; restrained dark-half light may register only as a faint swallowed edge inside that seam, never an aura. The silhouette should communicate immense appetite held voluntarily still. Keep the complete body-edge, every cloth end, every closed rib-hand, and the mouth perimeter fully inside a portrait frame with generous clearance. No open screaming mouth, exposed teeth, tongue, eye, face, entrails, swallowed figure, corridor scene, chapel, halo, floor, or worship imagery."
+    },
+    {
+      "id": "door_lung_courser",
+      "name": "Door-Lung Courser",
+      "kind": "expansion-creature",
+      "family": "charnel_households",
+      "rank": "regular",
+      "combatRole": "skirmisher",
+      "orientation": "landscape-3:2",
+      "masterFile": "door-lung-courser-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/charnel-households/door-lung-courser-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES[door_lung_courser].pipeline.conceptMaster",
+      "canonical": {
+        "anatomy": "A wet black-nacre quadruped whose ribs hinge as paired doors and whose lungs inflate with stolen roads rather than air.",
+        "ecology": "It grazes on routes leading to Charnel sanctuaries, leaving travelers alive but unable to arrive.",
+        "origin": "The first was a rescue horse that carried refugees until the road itself begged to hide inside its chest.",
+        "mechanic": "route_inhalation",
+        "cue": "The final open rib-door frames the last usable segment of path.",
+        "counterplay": "Cross through that rib doorway before it closes, forcing the Courser to exhale the stolen route behind you.",
+        "visualBrief": "Horrifying but non-gory nacre quadruped, hinged door-ribs, inflated mapless lungs, exactly one last open doorway cue, no scenery."
+      },
+      "masterDirection": "Create one complete wet black-nacre Door-Lung Courser as a horrifying non-gory quadruped derived from the proportions of a rescue horse but no longer an ordinary horse. Its rib cage consists of multiple paired door-ribs hinged along the spine around two inflated mapless lung volumes. All rib-door pairs except exactly ONE final door must be closed or visibly closing; that one last open rib-door must form a complete traversable doorway through the chest and frame exactly one short abstract path segment trapped inside the lung. The path segment is smooth and unmarked, fully contained within the doorway, and not connected to any ground or scenery. Show a committed skirmishing stride with exactly four legs and all hooves/nacre extremities visible. Keep the entire muzzle, tail, four legs, rib hinges, lung volumes, open door, and contained path inside a landscape frame. No rider, saddle, road scene, landscape, map markings, text, house door prop, second open doorway, exposed organs, gore, floor, or cast shadow."
+    },
+    {
+      "id": "reverse_rib_bride",
+      "name": "Reverse-Rib Bride",
+      "kind": "expansion-creature",
+      "family": "charnel_households",
+      "rank": "elite",
+      "combatRole": "duelist",
+      "orientation": "portrait-2:3",
+      "masterFile": "reverse-rib-bride-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/charnel-households/reverse-rib-bride-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES[reverse_rib_bride].pipeline.conceptMaster",
+      "canonical": {
+        "anatomy": "A tall ceremonial horror whose outward ribs clasp like many hands around a completely absent spouse-shaped space.",
+        "ecology": "It binds enemies and allies into temporary vows that make betrayal anatomically painful.",
+        "origin": "A peace marriage ended two wars and erased both partners; the vow survived as an organism furious that peace had no body.",
+        "mechanic": "vow_position",
+        "cue": "Exactly two rib-hands release and point to separate promised positions.",
+        "counterplay": "Exchange the two marked positions without either participant attacking, satisfying the vow while denying its victim.",
+        "visualBrief": "Regal black-nacre figure, outward clasping ribs, empty partner silhouette, two readable released pointer-ribs, no bridal realism or gore."
+      },
+      "masterDirection": "Create one tall regal Reverse-Rib Bride as a ceremonial black-nacre horror, never a realistic bride. Its outward-opening ribs must terminate in many hand-like clasps that wrap around one completely absent spouse-shaped negative space integrated beside and partly within the torso silhouette; the absent spouse is pure near-black empty space with no person, ghost, clothing, face, or body. Exactly TWO and only two rib-hands must release from the clasp and point clearly in two different directions toward exactly two small separated matte position apertures suspended in empty air at opposite sides of the subject. Every other rib-hand remains visibly clasped around the absence. Give the single physical subject a poised asymmetric duelist stance while keeping the empty partner outline, both released pointers, both position apertures, all clasped ribs, hands, and feet fully framed. No bridal gown realism, veil, wedding ring, bouquet, spouse figure, extra body, weapon, heart symbol, text, gore, floor, or ceremony scene."
+    }
+  ]
+}

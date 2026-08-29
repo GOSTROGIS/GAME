@@ -1,0 +1,47 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v5",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "5895e12399f4a671432997cdb97ca810ed7b002f870b0e14271f10bfd536050d",
+  "policy": "Preserve all accepted identity and family features. Correct only independently identified defects. Earlier candidate bytes remain immutable; each correction uses a new versioned filename.",
+  "assets": [
+    {
+      "id": "ilar_rook_unhoused_shadow",
+      "reference": "ilar-rook-unhoused-shadow-concept-master-v2.png",
+      "referenceSha256": "a7f90142ddf49ec4ec30d10639aaf5bcbf330e4ca3702033b13c820a01d4ae8d",
+      "outputFile": "ilar-rook-unhoused-shadow-concept-master-v3.png",
+      "reason": "Independent review passes one body, the blank sternum seal and full framing, but requires the head, torso and limbs to read as one extremely thin planar sheet, and the attached doorway evidence to be a broad fold of that same sheet rather than a hairline frame.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Correct only the independently identified planar-body, featureless-head and broad shadow-fold defects; preserve every other accepted feature.",
+      "revisionDirection": "Faithfully preserve one adult Ilar Rook subject, the exact black-nacre identity, guarded pose, one blank brass sternum seal, cold edge lighting, near-black opaque isolation, canvas scale and full clearance. Rebuild the entire subject as ONE visibly near-two-dimensional black-nacre sheet with a consistently thin measurable edge: one severe flat featureless head plane, one flat torso plane, exactly two planar sheet arms with thin sheet hands, and exactly two planar sheet legs with thin sheet feet. Remove all rounded or tubular skull, neck, arm, wrist, finger, thigh, calf and ankle volumes. The head may have only restrained nonfigurative nacre grain and must have no sockets, eyes, nose, nasal hole, mouth, teeth, cheekbones, ears, jaw cavity, mask seam, face relief, glyph or symbol. From one outer edge of this same sheet, fold exactly ONE broad flat near-black doorway-shaped subject-shadow continuously out and back into the body: its two wide shadow jamb folds and wide upper return are visibly made from the subject's own sheet material, not a wire outline, hairline frame, architecture, portal, prop, or second body. Keep black clearance through the fold and around every extremity. No second fold, halo, floor, architecture scene, text, logo, watermark, transparency, or crop. Opaque RGB master, portrait 1024x1536."
+    },
+    {
+      "id": "jointless_advocate",
+      "reference": "jointless-advocate-concept-master-v1.png",
+      "referenceSha256": "5e515de123d433639b5606f7c4a8b70048540809f62c672d166a4aaab7358ca7",
+      "outputFile": "jointless-advocate-concept-master-v2.png",
+      "reason": "The exact four ribbon limbs, single copied-dodge crease and empty face pass, but the candidate invents a halo ring, side fins, chains and paired rib-wing torso panels absent from canon.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Remove only the independently rejected apparatus while preserving the accepted four-limb topology and one copied-dodge crease.",
+      "revisionDirection": "Faithfully preserve one Jointless Advocate, its precise stance, narrow nacre material, empty featureless face, exactly FOUR boneless continuous ribbon limbs, and the one accepted compound copied-dodge crease on the viewer-right leg. Completely remove the gold halo ring, every side fin, every hanging chain, and both paired rib-like or wing-like torso panels. Replace all removed apparatus with clean near-black clearance and one seamless narrow central nacre body from empty face through torso. The four ribbon limbs must be the ONLY appendages: exactly two smooth ribbon arms and exactly two ribbon legs. Only the viewer-right leg carries one compound folded dodge crease; the other three limbs remain continuously smooth with no joint, knot, branch, panel, blade, fin, wing, rib, chain or crease. Preserve both hands/feet as simple terminal ribbon ends, full opaque framing, cold raking light and neutral near-black backdrop. No halo, extra appendage, prop, floor, contact shadow, text, logo, watermark, transparency, or crop. Opaque RGB master, portrait 1024x1536."
+    },
+    {
+      "id": "ilyen_doorborn_outer_age",
+      "reference": "ilyen-doorborn-outer-age-concept-master-v4-rejected.png",
+      "referenceSha256": "309df6a151bb86bc75dc85675380a616ed4f5d50b255e8d5e46acc235322d8ec",
+      "outputFile": "ilyen-doorborn-outer-age-concept-master-v5.png",
+      "reason": "The fourth candidate preserves Ilyen and the small sternum scale but still lacks an unmistakable complete rectangular living door with a flat lintel, sill, two hinges and readable sparse hand-height notches.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only the small sternum rib-door topology and its hand-height evidence; preserve Ilyen's entire identity, coat, pose and framing.",
+      "revisionDirection": "Faithfully preserve the exact Ilyen identity, dark skin, hair, composed civic posture, intact formal black coat, two empty hands, two legs and feet, lighting, canvas placement and full clearance. Replace only the existing sternum aperture with exactly ONE tiny complete UPRIGHT RECTANGULAR LIVING RIB-DOOR, no more than one fifth torso height and grown through otherwise uninterrupted coat. The door anatomy must have one short FLAT horizontal rib lintel, two straight side rib jambs, one flat rib sill, and exactly TWO separately visible small living hinge folds on one jamb. Keep the door itself open as near-black empty depth; do not add a physical wood/metal leaf, knob, handle, lock or architectural hardware. Cut exactly 4 to 6 plain short uneven horizontal notches into the INNER face of one jamb and the lintel at visibly different hand heights; every notch is separate, sparse and unmarked, with none joining or resembling letters, numerals, words, a ruler, calendar, tally script, glyph or decoration. No oval porthole, arch-only aperture, extra mutation, room, village, second door, floor, text, logo, watermark, transparency, or crop. Opaque RGB master, portrait 1024x1536."
+    },
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v4-rejected.png",
+      "referenceSha256": "faf8fc662d72d0845b5e2366f5686148502f521ee0ec85b9c47da2e9bda5f193",
+      "outputFile": "throat-orchard-concept-master-v5.png",
+      "reason": "The fourth candidate preserves exact counts and non-tree anatomy but the eleven closed cuffs still swell toward the center and shrink again instead of forming one continuous directional inhale sequence around the perimeter.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Correct only the closed-cuff size sequence while preserving body, count, open exception, roots, materials and framing.",
+      "revisionDirection": "Faithfully preserve exactly one low broad non-botanical rooted anatomical body, every complete root, landscape framing, near-black opaque isolation and exactly TWELVE directly attached laryngeal throat cuffs total: exactly ELEVEN closed and exactly ONE open lower-right exception. Rebuild only the eleven closed cuffs into ONE strict clockwise monotonic inhale sequence around the perimeter. Treat the smallest closed cuff immediately CLOCKWISE from the open lower-right exception as step 1. Moving clockwise from that cuff around the entire body, each successive closed cuff must be unmistakably a little taller, wider and more distended than the preceding cuff, with no plateau, reversal, mirrored symmetry or central peak. The eleventh and largest closed cuff must sit immediately before the open exception on its counterclockwise side. All eleven glottal folds remain visibly shut. The single open twelfth cuff remains motionless, contrary-facing and shallow, with no mouth or occupant behind it. Keep all twelve separated and countable, directly rooted into flesh, with no tree, pods, fruit, branch, stem, head, extra throat, floor, scene, notation, text, logo, watermark, transparency, or crop. Opaque RGB master, landscape 1536x1024."
+    }
+  ]
+}

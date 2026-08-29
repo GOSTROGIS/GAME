@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "batchId": "quest-batch-0002",
+  "questIds": [
+    "side_the_dead_vote_no",
+    "aftermath_house_outlived_tenants",
+    "aftermath_census_of_absences",
+    "aftermath_purity_blooms_at_dusk",
+    "aftermath_cart_accepts_office",
+    "aftermath_village_arrives_before_dead",
+    "aftermath_every_door_mothers_voice",
+    "aftermath_roof_made_of_weather",
+    "aftermath_child_older_than_road",
+    "aftermath_three_hands_one_lever",
+    "aftermath_maintenance_window_miracle",
+    "aftermath_person_engine_must_outlive"
+  ],
+  "sourceReviewPayloads": [
+    {
+      "id": "founding-thirteen-canonical-slice",
+      "serialization": "UTF-8 JSON.stringify(EXPANSION_QUESTS.slice(0,13))",
+      "byteLength": 30407,
+      "sha256": "294adc639131b87370cd2462885b6e23544e3efdf4dc9cd44d86ebbca7be89ce"
+    },
+    {
+      "id": "wave-02-revision-2",
+      "serialization": "immutable reviewed Wave 02 revision-2 payload",
+      "sha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a"
+    }
+  ],
+  "reviewerAttestations": [
+    {
+      "reviewerRole": "remaining-hands-owner-narrative-review",
+      "reviewedPayloadSha256": "294adc639131b87370cd2462885b6e23544e3efdf4dc9cd44d86ebbca7be89ce",
+      "questIds": ["side_the_dead_vote_no"],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "charnel-owner-narrative-review",
+      "reviewedPayloadSha256": "294adc639131b87370cd2462885b6e23544e3efdf4dc9cd44d86ebbca7be89ce",
+      "questIds": ["side_the_dead_vote_no"],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave-02-state-reachability-reviewer",
+      "reviewedPayloadSha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a",
+      "questIds": ["aftermath_house_outlived_tenants", "aftermath_census_of_absences", "aftermath_purity_blooms_at_dusk", "aftermath_cart_accepts_office", "aftermath_village_arrives_before_dead", "aftermath_every_door_mothers_voice", "aftermath_roof_made_of_weather", "aftermath_child_older_than_road", "aftermath_three_hands_one_lever", "aftermath_maintenance_window_miracle", "aftermath_person_engine_must_outlive"],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave-02-semantic-collision-reviewer",
+      "reviewedPayloadSha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a",
+      "questIds": ["aftermath_house_outlived_tenants", "aftermath_census_of_absences", "aftermath_purity_blooms_at_dusk", "aftermath_cart_accepts_office", "aftermath_village_arrives_before_dead", "aftermath_every_door_mothers_voice", "aftermath_roof_made_of_weather", "aftermath_child_older_than_road", "aftermath_three_hands_one_lever", "aftermath_maintenance_window_miracle", "aftermath_person_engine_must_outlive"],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    }
+  ],
+  "questReviews": [
+    {"id":"side_the_dead_vote_no","verdict":"PASS","authorRole":"founding-narrative-author-swarm","reviewerRoles":["remaining-hands-owner-narrative-review","charnel-owner-narrative-review"],"distinctDramaticWork":"Ash testimony adjudicates jurisdiction between extinct polities and living descendants, where erasing a dead vote strengthens a present claim rather than solving a ghost mystery."},
+    {"id":"aftermath_house_outlived_tenants","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+    {"id":"aftermath_census_of_absences","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+    {"id":"aftermath_purity_blooms_at_dusk","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+    {"id":"aftermath_cart_accepts_office","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+    {"id":"aftermath_village_arrives_before_dead","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+    {"id":"aftermath_every_door_mothers_voice","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+    {"id":"aftermath_roof_made_of_weather","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+    {"id":"aftermath_child_older_than_road","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+    {"id":"aftermath_three_hands_one_lever","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+    {"id":"aftermath_maintenance_window_miracle","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+    {"id":"aftermath_person_engine_must_outlive","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]}
+  ]
+}

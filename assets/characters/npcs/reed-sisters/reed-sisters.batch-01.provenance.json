@@ -11,122 +11,512 @@
     "productionAssets": false
   },
   "promptSource": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
-  "deliveryEncoding": { "format": "PNG", "bitDepth": 8, "colorType": "indexed", "paletteColorsMaximum": 256, "cutoutAlpha": "tRNS" },
+  "deliveryEncoding": {
+    "format": "PNG",
+    "bitDepth": 8,
+    "colorType": "indexed",
+    "paletteColorsMaximum": 256,
+    "cutoutAlpha": "tRNS"
+  },
   "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
   "records": [
     {
-      "id": "named_character.ysra_pell.master", "characterId": "ysra_pell", "factionId": "reed_sisters", "regionId": "dunmire", "role": "concept_master",
-      "path": "assets/characters/npcs/reed-sisters/ysra-pell-v1.png", "sha256": "ba3668ae3e530bf0e8cbaae2ec147d3d6a931cecb16da3a3005f7aa545b26c87", "bytes": 634325,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Ysra Pell" },
-      "generation": { "sourceImageId": "exec-21dee1d5-09a8-4697-a760-30926ab4d314.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.ysra_pell.master",
+      "characterId": "ysra_pell",
+      "factionId": "reed_sisters",
+      "regionId": "dunmire",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/reed-sisters/ysra-pell-v1.png",
+      "sha256": "ba3668ae3e530bf0e8cbaae2ec147d3d6a931cecb16da3a3005f7aa545b26c87",
+      "bytes": 634325,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Ysra Pell"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "ba3668ae3e530bf0e8cbaae2ec147d3d6a931cecb16da3a3005f7aa545b26c87"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.ysra_pell.cutout", "characterId": "ysra_pell", "factionId": "reed_sisters", "regionId": "dunmire", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/reed-sisters/ysra-pell-v1-cutout.png", "sha256": "48ba11460c949969745c3fd70e30d968009c768886111d64b56998e1b2c49f44", "bytes": 385274,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-34b64f98-14a0-4e61-ba0c-f4a04c066555.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/reed-sisters/ysra-pell-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.692322, "visibleRatio": 0.307678, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.ysra_pell.cutout",
+      "characterId": "ysra_pell",
+      "factionId": "reed_sisters",
+      "regionId": "dunmire",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/reed-sisters/ysra-pell-v1-cutout.png",
+      "sha256": "48ba11460c949969745c3fd70e30d968009c768886111d64b56998e1b2c49f44",
+      "bytes": 385274,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "48ba11460c949969745c3fd70e30d968009c768886111d64b56998e1b2c49f44"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/reed-sisters/ysra-pell-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.692322,
+        "visibleRatio": 0.307678,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.nima_reed.master", "characterId": "nima_reed", "factionId": "reed_sisters", "regionId": "dunmire", "role": "concept_master",
-      "path": "assets/characters/npcs/reed-sisters/nima-reed-v1.png", "sha256": "e5b9beec7e40e66757c864443bc0943ed30a4177af71940f0df5e3800d642158", "bytes": 575289,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Nima Reed" },
-      "generation": { "sourceImageId": "exec-2e56e6e1-0d7e-4610-a659-64aceb15e06f.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.nima_reed.master",
+      "characterId": "nima_reed",
+      "factionId": "reed_sisters",
+      "regionId": "dunmire",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/reed-sisters/nima-reed-v1.png",
+      "sha256": "e5b9beec7e40e66757c864443bc0943ed30a4177af71940f0df5e3800d642158",
+      "bytes": 575289,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Nima Reed"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "e5b9beec7e40e66757c864443bc0943ed30a4177af71940f0df5e3800d642158"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.nima_reed.cutout", "characterId": "nima_reed", "factionId": "reed_sisters", "regionId": "dunmire", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/reed-sisters/nima-reed-v1-cutout.png", "sha256": "6373a3e05ce2f4d46ccb4bd23d2c5750db21235eeea4aab17b2377f9fcd75b8c", "bytes": 341402,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-1f5b4ebb-b29c-4244-a7d7-638799cc8a51.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/reed-sisters/nima-reed-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.708998, "visibleRatio": 0.291002, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.nima_reed.cutout",
+      "characterId": "nima_reed",
+      "factionId": "reed_sisters",
+      "regionId": "dunmire",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/reed-sisters/nima-reed-v1-cutout.png",
+      "sha256": "6373a3e05ce2f4d46ccb4bd23d2c5750db21235eeea4aab17b2377f9fcd75b8c",
+      "bytes": 341402,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "6373a3e05ce2f4d46ccb4bd23d2c5750db21235eeea4aab17b2377f9fcd75b8c"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/reed-sisters/nima-reed-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.708998,
+        "visibleRatio": 0.291002,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.cal_harrow.master", "characterId": "cal_harrow", "factionId": "reed_sisters", "regionId": "dunmire", "role": "concept_master",
-      "path": "assets/characters/npcs/reed-sisters/cal-harrow-v1.png", "sha256": "1d7ce01a6c06d4b81bccdaa0dc4071e09581941d52dd994f9275a5d8e2ddc01d", "bytes": 762143,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Cal Harrow" },
-      "generation": { "sourceImageId": "exec-25858b12-a48c-4f49-bd56-500ec0e08a65.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.cal_harrow.master",
+      "characterId": "cal_harrow",
+      "factionId": "reed_sisters",
+      "regionId": "dunmire",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/reed-sisters/cal-harrow-v1.png",
+      "sha256": "1d7ce01a6c06d4b81bccdaa0dc4071e09581941d52dd994f9275a5d8e2ddc01d",
+      "bytes": 762143,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Cal Harrow"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "1d7ce01a6c06d4b81bccdaa0dc4071e09581941d52dd994f9275a5d8e2ddc01d"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.cal_harrow.cutout", "characterId": "cal_harrow", "factionId": "reed_sisters", "regionId": "dunmire", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/reed-sisters/cal-harrow-v1-cutout.png", "sha256": "0009a64e17bb3e557e01359031a4d5cb958f21d7a7103d70408551468c1458b0", "bytes": 404381,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-8011bbb1-df4a-4926-9dbb-fe67dc94338a.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/reed-sisters/cal-harrow-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.672189, "visibleRatio": 0.327811, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.cal_harrow.cutout",
+      "characterId": "cal_harrow",
+      "factionId": "reed_sisters",
+      "regionId": "dunmire",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/reed-sisters/cal-harrow-v1-cutout.png",
+      "sha256": "0009a64e17bb3e557e01359031a4d5cb958f21d7a7103d70408551468c1458b0",
+      "bytes": 404381,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "0009a64e17bb3e557e01359031a4d5cb958f21d7a7103d70408551468c1458b0"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/reed-sisters/cal-harrow-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.672189,
+        "visibleRatio": 0.327811,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.iva_pell.master", "characterId": "iva_pell", "factionId": "reed_sisters", "regionId": "hearthmere", "role": "concept_master",
-      "path": "assets/characters/npcs/reed-sisters/iva-pell-v1.png", "sha256": "6cb3923be8dc81aa367cda9d0fb3162fc784986c2f813ee5c11e7783986e089e", "bytes": 776033,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Iva Pell" },
-      "generation": { "sourceImageId": "exec-55a5bccf-c9cd-49b7-8119-8589c8505ca6.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.iva_pell.master",
+      "characterId": "iva_pell",
+      "factionId": "reed_sisters",
+      "regionId": "hearthmere",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/reed-sisters/iva-pell-v1.png",
+      "sha256": "6cb3923be8dc81aa367cda9d0fb3162fc784986c2f813ee5c11e7783986e089e",
+      "bytes": 776033,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Iva Pell"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "6cb3923be8dc81aa367cda9d0fb3162fc784986c2f813ee5c11e7783986e089e"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.iva_pell.cutout", "characterId": "iva_pell", "factionId": "reed_sisters", "regionId": "hearthmere", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/reed-sisters/iva-pell-v1-cutout.png", "sha256": "a0538e2854edd9b926f655027076a4c1d59b4a3cf6a2cb4933a48a0d37c8ea18", "bytes": 417421,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-c292e9a8-efc5-4e15-877e-eb86203b3948.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/reed-sisters/iva-pell-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.650778, "visibleRatio": 0.349222, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.iva_pell.cutout",
+      "characterId": "iva_pell",
+      "factionId": "reed_sisters",
+      "regionId": "hearthmere",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/reed-sisters/iva-pell-v1-cutout.png",
+      "sha256": "a0538e2854edd9b926f655027076a4c1d59b4a3cf6a2cb4933a48a0d37c8ea18",
+      "bytes": 417421,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "a0538e2854edd9b926f655027076a4c1d59b4a3cf6a2cb4933a48a0d37c8ea18"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/reed-sisters/iva-pell-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.650778,
+        "visibleRatio": 0.349222,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.tess_fen.master", "characterId": "tess_fen", "factionId": "reed_sisters", "regionId": "dunmire", "role": "concept_master",
-      "path": "assets/characters/npcs/reed-sisters/tess-fen-v1.png", "sha256": "727350257204d3cc76edb5263062deee9879780ff6fa084843a02b8d8b5009f0", "bytes": 621334,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Tess Fen" },
-      "generation": { "sourceImageId": "exec-a336b49e-5dae-4282-be78-514cd01c49ec.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.tess_fen.master",
+      "characterId": "tess_fen",
+      "factionId": "reed_sisters",
+      "regionId": "dunmire",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/reed-sisters/tess-fen-v1.png",
+      "sha256": "727350257204d3cc76edb5263062deee9879780ff6fa084843a02b8d8b5009f0",
+      "bytes": 621334,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Tess Fen"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "727350257204d3cc76edb5263062deee9879780ff6fa084843a02b8d8b5009f0"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.tess_fen.cutout", "characterId": "tess_fen", "factionId": "reed_sisters", "regionId": "dunmire", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/reed-sisters/tess-fen-v1-cutout.png", "sha256": "7bcabfb4497b23aed9ec15de06b1de533e5df655ace22fdac1f3e5c5aa62636e", "bytes": 379419,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-39fba322-5b3f-4fbd-9bcc-14bdbd62f3e5.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/reed-sisters/tess-fen-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.678186, "visibleRatio": 0.321814, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.tess_fen.cutout",
+      "characterId": "tess_fen",
+      "factionId": "reed_sisters",
+      "regionId": "dunmire",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/reed-sisters/tess-fen-v1-cutout.png",
+      "sha256": "7bcabfb4497b23aed9ec15de06b1de533e5df655ace22fdac1f3e5c5aa62636e",
+      "bytes": 379419,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "7bcabfb4497b23aed9ec15de06b1de533e5df655ace22fdac1f3e5c5aa62636e"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/reed-sisters/tess-fen-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.678186,
+        "visibleRatio": 0.321814,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.roan_drel.master", "characterId": "roan_drel", "factionId": "reed_sisters", "regionId": "dunmire", "role": "concept_master",
-      "path": "assets/characters/npcs/reed-sisters/roan-drel-v1.png", "sha256": "696e8d7bd288e6eef9907618f619551ec87a23532900e958884927dcf1a53e2a", "bytes": 700656,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Roan Drel" },
-      "generation": { "sourceImageId": "exec-f7628fbc-e982-46a4-82a3-90879646a1c2.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.roan_drel.master",
+      "characterId": "roan_drel",
+      "factionId": "reed_sisters",
+      "regionId": "dunmire",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/reed-sisters/roan-drel-v1.png",
+      "sha256": "696e8d7bd288e6eef9907618f619551ec87a23532900e958884927dcf1a53e2a",
+      "bytes": 700656,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Roan Drel"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "696e8d7bd288e6eef9907618f619551ec87a23532900e958884927dcf1a53e2a"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.roan_drel.cutout", "characterId": "roan_drel", "factionId": "reed_sisters", "regionId": "dunmire", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/reed-sisters/roan-drel-v1-cutout.png", "sha256": "99478f2d810fcfa313b5d5bf05b27781108fccdae3e86832cf09ecb0ac6e5aaf", "bytes": 382656,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-cd22b4e3-6149-45fd-83b0-0912890a8d8a.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/reed-sisters/roan-drel-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.623725, "visibleRatio": 0.376275, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.roan_drel.cutout",
+      "characterId": "roan_drel",
+      "factionId": "reed_sisters",
+      "regionId": "dunmire",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/reed-sisters/roan-drel-v1-cutout.png",
+      "sha256": "99478f2d810fcfa313b5d5bf05b27781108fccdae3e86832cf09ecb0ac6e5aaf",
+      "bytes": 382656,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/reed-sisters/named-npcs-reed-sisters-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "99478f2d810fcfa313b5d5bf05b27781108fccdae3e86832cf09ecb0ac6e5aaf"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/reed-sisters/roan-drel-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.623725,
+        "visibleRatio": 0.376275,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     }
   ]
 }

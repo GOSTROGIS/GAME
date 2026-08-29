@@ -1,0 +1,20 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v13",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "f098085d2ec24947c5f535b198216813507c2155268f460185b4325e64225404",
+  "policy": "Technical correction of one independently identified cyclic-rank reversal. Preserve exact 11-closed-plus-1-open topology, body, roots, all other cuff ranks, material, lighting and framing. Correct only the lower-right closed cuff so the cycle begins there as canonical bud 1; no generator may approve its own output.",
+  "assets": [
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v12-rejected.png",
+      "referenceSha256": "b1a3ed9ba9cdbe897dda99a6421f008ff9ea01d3c91e5687ddc713d3f0e0db2a",
+      "outputFile": "throat-orchard-concept-master-v13.png",
+      "reason": "The twelfth candidate preserves exact count and the first ten ranks but again leaves the lower-right closed cuff too small to be rank eleven and too large to be rank one. Canon permits the simpler correction: make that cuff the unique smallest first inhale immediately clockwise from the open ring.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact-count identity anchor. Uniformly shrink only the lower-right closed cuff immediately above the open ring so it becomes the unique smallest rank; preserve every other pixel as closely as possible.",
+      "revisionDirection": "Faithfully preserve exactly one body, every root, exactly TWELVE total attached cuffs, exactly ELEVEN closed and exactly ONE open lower-right ring, all ten other closed cuffs and their accepted progressive increase from lower-left through the upper-right giant, all seams, the open ring, materials, lighting, near-black opaque background and full landscape framing. Identify the CLOSED cuff immediately ABOVE the open lower-right ring on a near-horizontal stalk. This cuff is cyclic rank 1, immediately clockwise from the open exception. Change ONLY its closed bud: uniformly shrink the bud around its center until its measurable height and width are each no more than 60% of the far lower-left closed bud at the opposite end of the body, making it unmistakably the unique smallest of all eleven. Keep its existing stalk, attachment, position, orientation and fully shut central seam. Preserve the far lower-left closed bud unchanged as rank 2; from there, each of the other closed buds already grows progressively larger through the arc to the upper-right giant as rank 11 immediately counterclockwise from the open ring. Do not add, remove, merge, move, duplicate, open or close any cuff. The sole open ring remains unchanged, shallow, empty, motionless and contrary-facing. No tree, branch, stem, pod, fruit, head, extra throat, second opening, mouth behind the ring, floor, scene, notation, text, logo, watermark, transparency or crop. Opaque RGB master, landscape 1536x1024."
+    }
+  ]
+}

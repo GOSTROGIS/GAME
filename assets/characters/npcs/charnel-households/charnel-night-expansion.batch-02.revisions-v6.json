@@ -1,0 +1,29 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v6",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "f8d634480979b190d59b0cb1e7500d975485628d171ea3e096f412409a6acd8",
+  "policy": "Preserve accepted identity, count, materials and framing. Correct only the remaining exact-topology defects; all prior bytes remain immutable.",
+  "assets": [
+    {
+      "id": "ilyen_doorborn_outer_age",
+      "reference": "ilyen-doorborn-outer-age-concept-master-v5-rejected.png",
+      "referenceSha256": "da583399fc48dc6c50989e604b1fc509acf407e7bee1ec6152db400d07f80c82",
+      "outputFile": "ilyen-doorborn-outer-age-concept-master-v6.png",
+      "reason": "The fifth candidate reaches the required rectangular scale, but its border is a dense chain of repeated ribs; exactly two living hinges and four-to-six sparse hand-height notches are not separately readable.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only the tiny sternum door border and evidence marks; preserve Ilyen, the rectangular opening, intact coat, pose and full framing.",
+      "revisionDirection": "Faithfully preserve the exact Ilyen identity, dark skin, hair, composed civic posture, intact formal black coat, two empty hands, two complete feet, lighting, placement, and the existing tiny upright rectangular near-black sternum opening at no more than one fifth torso height. Replace the current densely segmented border with exactly FOUR smooth continuous living rib members: one flat horizontal lintel, one straight viewer-left jamb, one straight viewer-right jamb, and one flat horizontal sill. Do not divide those four members into repeated blocks. Put exactly TWO small rounded living hinge folds on the OUTER edge of the viewer-right jamb only, one high and one low; no hinge appears elsewhere. Put exactly FIVE plain short uneven horizontal scratch notches on the INNER edge of the viewer-left jamb only, at five visibly different heights. The five notches must be shallow, separated and countable, not repeated around the frame, and must not resemble writing, a ruler, calendar, glyph, decorative beading, teeth, stitches or a tally system. Keep the aperture open as empty near-black depth; no physical door leaf, hardware, room, second mutation, floor, text, logo, watermark, transparency, or crop. Opaque RGB master, portrait 1024x1536."
+    },
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v5-rejected.png",
+      "referenceSha256": "939f4bafa6dd2c9cdb83f0e2b201b05d16a63fdf326af6ce85b26a17997e6162",
+      "outputFile": "throat-orchard-concept-master-v6.png",
+      "reason": "The fifth candidate keeps exact count and body identity but still creates a central size peak followed by smaller right-side cuffs; one continuous clockwise increase remains unreadable.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Reposition and resize only the twelve attached throat cuffs; preserve the low anatomical body, roots, material, lighting and landscape clearance.",
+      "revisionDirection": "Faithfully preserve one low broad non-botanical rooted anatomical body, every complete root, near-black opaque isolation and exactly TWELVE directly attached laryngeal cuffs total. Place the single OPEN motionless contrary-facing cuff at lower-right around the 4 o'clock position. Arrange the other exactly ELEVEN CLOSED cuffs as one continuous horseshoe perimeter around the body and open exception. Immediately CLOCKWISE below the open cuff place closed cuff 1, the unmistakably smallest. Moving clockwise from there along the lower perimeter toward lower-left, up the left side, across the top, and down the right side, make cuffs 2 through 11 each strictly taller, wider and more distended than the one before it. Closed cuff 11, unmistakably the largest, must sit immediately ABOVE the open exception on its counterclockwise side. This produces one complete increasing circuit from smallest below the open cuff to largest above the same open cuff, with no middle peak, mirrored symmetry, plateau, reversal or shrinkage. All eleven closed glottal folds stay fully shut; only the twelfth is open, shallow and empty. Keep every cuff separated and countable, directly flesh-rooted, and inside the canvas. No tree, branch, stem, pods, fruit, heads, extra throat, mouth behind the open cuff, floor, scene, notation, text, logo, watermark, transparency, or crop. Opaque RGB master, landscape 1536x1024."
+    }
+  ]
+}

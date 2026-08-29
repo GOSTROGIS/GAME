@@ -2,124 +2,521 @@
   "schema": "NamedCharacterBatchProvenanceV1",
   "batchId": "cinder-compact-named-npcs-batch-01",
   "generatedOn": "2026-08-26",
-  "acceptanceScope": { "factionId": "cinder_compact", "namedCharacters": 6, "conceptMasters": 6, "transparentCutouts": 6, "runtimeIntegrated": false, "productionAssets": false },
+  "acceptanceScope": {
+    "factionId": "cinder_compact",
+    "namedCharacters": 6,
+    "conceptMasters": 6,
+    "transparentCutouts": 6,
+    "runtimeIntegrated": false,
+    "productionAssets": false
+  },
   "promptSource": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
-  "deliveryEncoding": { "format": "PNG", "bitDepth": 8, "colorType": "indexed", "paletteColorsMaximum": 256, "cutoutAlpha": "tRNS" },
+  "deliveryEncoding": {
+    "format": "PNG",
+    "bitDepth": 8,
+    "colorType": "indexed",
+    "paletteColorsMaximum": 256,
+    "cutoutAlpha": "tRNS"
+  },
   "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
   "records": [
     {
-      "id": "named_character.orik_senn.master", "characterId": "orik_senn", "factionId": "cinder_compact", "regionId": "cinderward", "role": "concept_master",
-      "path": "assets/characters/npcs/cinder-compact/orik-senn-v1.png", "sha256": "b1e93012610b5c17aab30103bd94fe404f207a963859988357571cf2aadc313d", "bytes": 702526,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Orik Senn" },
-      "generation": { "sourceImageId": "exec-d18e9662-54b1-427e-b7ef-18c2fa311574.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.orik_senn.master",
+      "characterId": "orik_senn",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/cinder-compact/orik-senn-v1.png",
+      "sha256": "b1e93012610b5c17aab30103bd94fe404f207a963859988357571cf2aadc313d",
+      "bytes": 702526,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Orik Senn"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "b1e93012610b5c17aab30103bd94fe404f207a963859988357571cf2aadc313d"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.orik_senn.cutout", "characterId": "orik_senn", "factionId": "cinder_compact", "regionId": "cinderward", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/cinder-compact/orik-senn-v1-cutout.png", "sha256": "be7bc012f2f07890fa89a6e4636cf3057123c05ddc639b863f3902c7175b3d33", "bytes": 347283,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-401f6f90-eb1f-4f2f-a348-5ecfa5ad1a0e.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/cinder-compact/orik-senn-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.688637, "visibleRatio": 0.311363, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.orik_senn.cutout",
+      "characterId": "orik_senn",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/cinder-compact/orik-senn-v1-cutout.png",
+      "sha256": "be7bc012f2f07890fa89a6e4636cf3057123c05ddc639b863f3902c7175b3d33",
+      "bytes": 347283,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "be7bc012f2f07890fa89a6e4636cf3057123c05ddc639b863f3902c7175b3d33"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/cinder-compact/orik-senn-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.688637,
+        "visibleRatio": 0.311363,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.sava_quench.master", "characterId": "sava_quench", "factionId": "cinder_compact", "regionId": "cinderward", "role": "concept_master",
-      "path": "assets/characters/npcs/cinder-compact/sava-quench-v1.png", "sha256": "b3f9118d3f19648c70dc87d6867bcb2a8c57aa1135c21477158f53edc1706ee6", "bytes": 758198,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Sava Quench" },
-      "generation": { "sourceImageId": "exec-be9dcb43-d34b-40ac-b915-29e17372cb3c.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.sava_quench.master",
+      "characterId": "sava_quench",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/cinder-compact/sava-quench-v1.png",
+      "sha256": "b3f9118d3f19648c70dc87d6867bcb2a8c57aa1135c21477158f53edc1706ee6",
+      "bytes": 758198,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Sava Quench"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "b3f9118d3f19648c70dc87d6867bcb2a8c57aa1135c21477158f53edc1706ee6"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.sava_quench.cutout", "characterId": "sava_quench", "factionId": "cinder_compact", "regionId": "cinderward", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/cinder-compact/sava-quench-v1-cutout.png", "sha256": "25b1635524dcce8d80915e1c3011df7cfb241886728fbf2c2a847edb6659a730", "bytes": 441457,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-cfffa892-18ae-4966-9138-e82799b0caf8.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/cinder-compact/sava-quench-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.635564, "visibleRatio": 0.364436, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.sava_quench.cutout",
+      "characterId": "sava_quench",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/cinder-compact/sava-quench-v1-cutout.png",
+      "sha256": "25b1635524dcce8d80915e1c3011df7cfb241886728fbf2c2a847edb6659a730",
+      "bytes": 441457,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "25b1635524dcce8d80915e1c3011df7cfb241886728fbf2c2a847edb6659a730"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/cinder-compact/sava-quench-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.635564,
+        "visibleRatio": 0.364436,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.tarn_widow.master", "characterId": "tarn_widow", "factionId": "cinder_compact", "regionId": "cinderward", "role": "concept_master",
-      "path": "assets/characters/npcs/cinder-compact/tarn-widow-v1.png", "sha256": "cb5277981ffa6fdb70d08d6e4e97ec1042a9e8adfe3c5ae6f1cc0c16d5c98b14", "bytes": 673347,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Tarn Widow" },
-      "generation": { "sourceImageId": "exec-2559dfec-e8bb-4b04-a5f8-d1394d173735.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.tarn_widow.master",
+      "characterId": "tarn_widow",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/cinder-compact/tarn-widow-v1.png",
+      "sha256": "cb5277981ffa6fdb70d08d6e4e97ec1042a9e8adfe3c5ae6f1cc0c16d5c98b14",
+      "bytes": 673347,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Tarn Widow"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "cb5277981ffa6fdb70d08d6e4e97ec1042a9e8adfe3c5ae6f1cc0c16d5c98b14"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.tarn_widow.cutout", "characterId": "tarn_widow", "factionId": "cinder_compact", "regionId": "cinderward", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/cinder-compact/tarn-widow-v1-cutout.png", "sha256": "be5993f975994f8154f33b49f53d90cac2e403b8bfb54f6e0196060b207cab48", "bytes": 403204,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-5be85804-3de9-4cd2-bd6b-8b101ca1f9df.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/cinder-compact/tarn-widow-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.635372, "visibleRatio": 0.364628, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.tarn_widow.cutout",
+      "characterId": "tarn_widow",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/cinder-compact/tarn-widow-v1-cutout.png",
+      "sha256": "be5993f975994f8154f33b49f53d90cac2e403b8bfb54f6e0196060b207cab48",
+      "bytes": 403204,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "be5993f975994f8154f33b49f53d90cac2e403b8bfb54f6e0196060b207cab48"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/cinder-compact/tarn-widow-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.635372,
+        "visibleRatio": 0.364628,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.mera_bolt.master", "characterId": "mera_bolt", "factionId": "cinder_compact", "regionId": "cinderward", "role": "concept_master",
-      "path": "assets/characters/npcs/cinder-compact/mera-bolt-v1.png", "sha256": "bcbca3cfd373db41f2496ebed9582df6d262fb6342116a717f2b31d850c792be", "bytes": 702032,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Mera Bolt" },
-      "generation": { "sourceImageId": "exec-8f5ee760-6c0a-4896-ac98-3e360ca9f26d.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.mera_bolt.master",
+      "characterId": "mera_bolt",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/cinder-compact/mera-bolt-v1.png",
+      "sha256": "bcbca3cfd373db41f2496ebed9582df6d262fb6342116a717f2b31d850c792be",
+      "bytes": 702032,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Mera Bolt"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "bcbca3cfd373db41f2496ebed9582df6d262fb6342116a717f2b31d850c792be"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.mera_bolt.cutout", "characterId": "mera_bolt", "factionId": "cinder_compact", "regionId": "cinderward", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/cinder-compact/mera-bolt-v1-cutout.png", "sha256": "b30a6be4ff3970428ae5dae842d6ee0a50b79f5313a06fb48661a27995643d6b", "bytes": 402410,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-9942164b-6073-43b1-a414-1f58c53740df.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/cinder-compact/mera-bolt-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.641194, "visibleRatio": 0.358806, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.mera_bolt.cutout",
+      "characterId": "mera_bolt",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/cinder-compact/mera-bolt-v1-cutout.png",
+      "sha256": "b30a6be4ff3970428ae5dae842d6ee0a50b79f5313a06fb48661a27995643d6b",
+      "bytes": 402410,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "b30a6be4ff3970428ae5dae842d6ee0a50b79f5313a06fb48661a27995643d6b"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/cinder-compact/mera-bolt-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.641194,
+        "visibleRatio": 0.358806,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.dain_coal.master", "characterId": "dain_coal", "factionId": "cinder_compact", "regionId": "cinderward", "role": "concept_master",
-      "path": "assets/characters/npcs/cinder-compact/dain-coal-v1.png", "sha256": "c7c294a3918afabea4b962c66e1fc8d5b9a615032cd4bcd25a228e3546777161", "bytes": 639330,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Dain Coal" },
-      "generation": { "sourceImageId": "exec-16086503-57b4-4247-a6d4-509b5d719c0d.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.dain_coal.master",
+      "characterId": "dain_coal",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/cinder-compact/dain-coal-v1.png",
+      "sha256": "c7c294a3918afabea4b962c66e1fc8d5b9a615032cd4bcd25a228e3546777161",
+      "bytes": 639330,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Dain Coal"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "c7c294a3918afabea4b962c66e1fc8d5b9a615032cd4bcd25a228e3546777161"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.dain_coal.cutout", "characterId": "dain_coal", "factionId": "cinder_compact", "regionId": "cinderward", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/cinder-compact/dain-coal-v1-cutout.png", "sha256": "16a07de7527c5324404afc77fa012567a43d2ea02d53f6affc1b5c5f33c1ee47", "bytes": 392994,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-07adb9a5-4ff7-463b-ab6a-9a0c3a9e2ddb.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/cinder-compact/dain-coal-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_then_enclosed_and_prop_bounded_pale_low_chroma_pixels_removed_after_visual_QA_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.680838, "visibleRatio": 0.319162, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.dain_coal.cutout",
+      "characterId": "dain_coal",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/cinder-compact/dain-coal-v1-cutout.png",
+      "sha256": "16a07de7527c5324404afc77fa012567a43d2ea02d53f6affc1b5c5f33c1ee47",
+      "bytes": 392994,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "16a07de7527c5324404afc77fa012567a43d2ea02d53f6affc1b5c5f33c1ee47"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/cinder-compact/dain-coal-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_then_enclosed_and_prop_bounded_pale_low_chroma_pixels_removed_after_visual_QA_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.680838,
+        "visibleRatio": 0.319162,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.pritch_glass.master", "characterId": "pritch_glass", "factionId": "cinder_compact", "regionId": "cinderward", "role": "concept_master",
-      "path": "assets/characters/npcs/cinder-compact/pritch-glass-v1.png", "sha256": "62781b59a269c93b56aa35fbf0115791c85083cd2204bcb12e5a6f8c503c734d", "bytes": 668364,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Pritch Glass" },
-      "generation": { "sourceImageId": "exec-972c359e-a8c9-47be-95de-7fb300080971.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.pritch_glass.master",
+      "characterId": "pritch_glass",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/cinder-compact/pritch-glass-v1.png",
+      "sha256": "62781b59a269c93b56aa35fbf0115791c85083cd2204bcb12e5a6f8c503c734d",
+      "bytes": 668364,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Pritch Glass"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "62781b59a269c93b56aa35fbf0115791c85083cd2204bcb12e5a6f8c503c734d"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.pritch_glass.cutout", "characterId": "pritch_glass", "factionId": "cinder_compact", "regionId": "cinderward", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/cinder-compact/pritch-glass-v1-cutout.png", "sha256": "11469ebb63a325f08801cf25cc5d926171f0a6a4890f2fb27069ca8f1362eedb", "bytes": 360978,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-0f0be77a-3755-4017-a156-328be672d47c.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/cinder-compact/pritch-glass-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.668037, "visibleRatio": 0.331963, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.pritch_glass.cutout",
+      "characterId": "pritch_glass",
+      "factionId": "cinder_compact",
+      "regionId": "cinderward",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/cinder-compact/pritch-glass-v1-cutout.png",
+      "sha256": "11469ebb63a325f08801cf25cc5d926171f0a6a4890f2fb27069ca8f1362eedb",
+      "bytes": 360978,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/cinder-compact/named-npcs-cinder-compact-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "11469ebb63a325f08801cf25cc5d926171f0a6a4890f2fb27069ca8f1362eedb"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/cinder-compact/pritch-glass-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_then_large_enclosed_pale_low_chroma_components_removed_after_visual_QA_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.668037,
+        "visibleRatio": 0.331963,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     }
   ]
 }

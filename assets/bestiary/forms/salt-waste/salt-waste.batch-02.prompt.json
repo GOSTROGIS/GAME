@@ -1,0 +1,136 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "salt-waste-pilgrims-batch-02",
+  "status": "immutable-before-generation",
+  "familyId": "salt_waste",
+  "formsInCanonicalOrder": [
+    "saint_of_closed_mirrors",
+    "needle_pilgrim",
+    "compass_slug",
+    "eastward_witness",
+    "latitude_abductor"
+  ],
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/salt-waste-plate.png"
+  ],
+  "plateInspection": {
+    "status": "inspected-full-resolution-before-generation",
+    "sha256": "e5eb0eb20ad72f3b66238a07a09f6ca24be133de82a950259816517c988b203e",
+    "dimensions": { "width": 1024, "height": 1536 },
+    "bytes": 596375,
+    "observedVisualLanguage": "Near-black neutral studio presentation; mature wind-bent layered robe silhouette; pale salt crust and crystalline erosion; oval mirror-blue face surfaces; restrained sunless-gold frames, chain, hinges and seals; cold side light; no environment. These observations constrain family style only."
+  },
+  "referencePolicy": "The inspected Salt-Waste Pilgrims plate controls family palette, materials, finish, robe construction, mirror treatment, silhouette language, and lighting only. It is not permission to copy the representative's carried mirror, lock, exact pose, or complete anatomy unless the form requires them. Each master generation receives only that local plate as its visual reference.",
+  "authorityResolution": "The Compass Slug canon names cardinal letters, while the binding global art law forbids readable writing and symbols. This packet preserves the canonical four-way exchange, unique blank eye, erased trail position, and reversal counterplay using four distinct nonalphabetic cardinal-position notches rather than printing real N/E/S/W letters. No other canon is altered.",
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical individual bestiary production concept master for later 3D design. Create exactly one complete original Salt-Waste Pilgrims subject in a polished stylized 3D dark-fantasy MMORPG production style, three-quarter view, centered with generous clearance. Family identity is mirror salt: salt-white crust and powder, mirror-blue reflective surfaces, restrained sunless-gold framing and hardware, mature wind-bent robe or burrower construction where canon requires it. Every load-bearing element and form-specific mechanic cue must remain mechanically plausible and measurable. Flat near-black neutral opaque studio backdrop; cold raking light from one side; ungraded neutral presentation. No environment, salt flat, horizon scene, floor, ground plane, pedestal, contact or cast floor shadow, extra solid figure or creature, narrative vignette, caption, UI, readable writing, ordinary map, compass graphic, route diagram, runes, real religious marks, logo, watermark, franchise resemblance, real-world disease taxonomy, disability shorthand, gore, exposed entrails, bright magic, aura, glossy plastic, cute proportions, baked checkerboard, transparency, or crop. Canonical reflected evidence, shadow evidence, and mirage evidence must stay flat, subject-bound, subordinate, and visibly non-solid.",
+  "assets": [
+    {
+      "id": "saint_of_closed_mirrors",
+      "name": "Saint of Closed Mirrors",
+      "rank": "boss",
+      "role": "controller",
+      "heightMeters": 3.63,
+      "orientation": "portrait-2:3",
+      "masterFile": "saint-of-closed-mirrors-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/salt-waste/saint-of-closed-mirrors-v1.png",
+      "canonical": {
+        "anatomy": "At the waste's center, thousands of mirrors face inward around something venerated for never appearing. What should be internal crosses the silhouette whenever every mirror opens a hairline gap toward the arena center.",
+        "locomotion": "It advances only while the surrounding escape geometry is changing; the permission cue is every mirror opens a hairline gap toward the arena center.",
+        "sound": "mirror salt produces three spaced warnings, a held absence, then one enclosing note; Inward Revelation commits on the first radiance/curse/area sound after the gap.",
+        "purpose": "A future frontier hook: pilgrims cross the eastern salt waste carrying sealed mirrors toward the Reach. This form serves the niche expressed by at the waste's center, thousands of mirrors face inward around something venerated for never appearing.",
+        "origin": "At the waste's center, thousands of mirrors face inward around something venerated for never appearing.",
+        "mechanic": "Inward Revelation",
+        "cue": "Every mirror opens a hairline gap toward the arena center.",
+        "counterplay": "Rotate three mirrors outward to create an escape path, but never align them."
+      },
+      "masterDirection": "Show exactly one colossal walking reliquary silhouette built from an extremely dense field of hundreds-to-thousands of small individually framed mirror-blue plates, visually reading as thousands, all mechanically facing inward around one completely empty human-scale central negative space. Nothing appears in that center: no saint, body, face, idol, light, creature, or reflection. Every small mirror opens the same narrow hairline gap toward the central absence, and those gaps form the load-bearing internal anatomy crossing the outer silhouette. Attach exactly three accessible outer mirror plates with exposed sunless-gold rotation hinges and handles; place them at three separated, deliberately non-collinear positions so they can be rotated outward to create an escape path but can never read as one aligned beam. All other mirrors remain inward-facing and subordinate. Give the entire mirror mass two complete salt-crusted load-bearing legs without adding a hidden humanoid. No actual shrine, halo, worshipper, recognizable religious symbol, aligned beam, reflected room, landscape, floor, or bright aura."
+    },
+    {
+      "id": "needle_pilgrim",
+      "name": "Needle Pilgrim",
+      "rank": "regular",
+      "role": "support",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "masterFile": "needle-pilgrim-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/salt-waste/needle-pilgrim-v1.png",
+      "canonical": {
+        "anatomy": "A body no wider than a compass needle balances beneath layered robes.",
+        "locomotion": "It falls eastward, catches itself, and calls the sequence walking.",
+        "sound": "Salt grains scrape in a single unchanging direction.",
+        "purpose": "It etches directional grooves that guide other pilgrims deeper into the basin.",
+        "origin": "A guide trusted a broken compass until his body adopted its only remaining bearing.",
+        "mechanic": "Eastward Fall",
+        "cue": "Its needle body tilts while the eastern robe edge lifts.",
+        "counterplay": "Move west through the fall and strike before it rights itself."
+      },
+      "masterDirection": "Show one mature layered pilgrim robe suspended and balanced around exactly one continuous compass-needle-thin mirror-blue body, with no ordinary torso, pelvis, arms, legs, hands, or feet hidden inside. The single needle body must remain visibly the same hair-thin width from pointed upper tip to pointed lower contact tip while the heavy salt-crusted robe layers cantilever around it. Pose the needle tilted in a committed fall toward viewer-right, defined as east only by the motion, while exactly the viewer-right outer robe edge lifts sharply and salt grains scrape in that same one direction as a sparse subject-bound streak. The opposite robe edge hangs lower, leaving a clear westward passage through the fall. The lower needle point is poised to catch and right the body in empty space. No compass rose, letter, map, terrain groove, ground, ordinary pilgrim anatomy, extra needle, face, weapon, or scene."
+    },
+    {
+      "id": "compass_slug",
+      "name": "Compass Slug",
+      "rank": "regular",
+      "role": "juggernaut",
+      "heightMeters": 1.65,
+      "orientation": "landscape-3:2",
+      "masterFile": "compass-slug-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/salt-waste/compass-slug-v1.png",
+      "canonical": {
+        "anatomy": "Four eyestalks end in cardinal letters that constantly exchange places.",
+        "locomotion": "It slides toward the direction it has just lost.",
+        "sound": "A faint surveyor's chain drags beneath its salt trail.",
+        "purpose": "It randomizes old route marks so the false horizon remains uncontested.",
+        "origin": "Survey ink spilled into brine and grew a soft body around the map's compass rose.",
+        "mechanic": "Lost Bearing",
+        "cue": "One cardinal eye goes blank and points behind the target.",
+        "counterplay": "Stand on the erased letter in its trail to reverse the slide."
+      },
+      "masterDirection": "Show one low mature mirror-salt slug in a complete lateral slide with EXACTLY FOUR long eyestalks. At each eyestalk tip, integrate one small sunless-gold framed marker slot. Three slots contain three distinct simple nonalphabetic cardinal-position notches visibly exchanging places through restrained crossing hinge tracks; EXACTLY ONE slot is completely blank and its entire eyestalk bends backward behind the slug as the lost-bearing cue. From the tail, attach one flat salt-trail ribbon suspended as subject anatomy rather than a floor. The ribbon repeats the three nonalphabetic notch positions and has one clearly erased blank socket aligned with the backward blank eye, making the reversal target readable. A small plain surveyor chain remains attached beneath the body and trail without touching terrain. Keep exactly four eyestalks, one blank eye, three marked eyes, one erased trail socket, and the full body visible. No real N/E/S/W letters, readable writing, compass rose, map, ground, ordinary shell, extra slug, bright reflection, or scene."
+    },
+    {
+      "id": "eastward_witness",
+      "name": "Eastward Witness",
+      "rank": "specialist",
+      "role": "ambusher",
+      "heightMeters": 1.9,
+      "orientation": "portrait-2:3",
+      "masterFile": "eastward-witness-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/salt-waste/eastward-witness-v1.png",
+      "canonical": {
+        "anatomy": "Every facial feature has migrated to the right side of an otherwise blank head.",
+        "locomotion": "It circles until all observers stand west of it.",
+        "sound": "Testimony is whispered only into the downwind ear.",
+        "purpose": "It confirms false landmarks by ensuring everyone sees them from one direction.",
+        "origin": "A boundary witness altered his testimony so often that truth retreated to one side of his face.",
+        "mechanic": "Single Aspect",
+        "cue": "Its crowded features turn toward a mirage no one else can see.",
+        "counterplay": "Cross to its eastern side where it cannot maintain a witness."
+      },
+      "masterDirection": "Show one mature narrow wind-bent witness with exactly one smooth oval mirror-salt head. The viewer-left two-thirds of the head must be completely blank, uninterrupted mirror-blue surface. Every human facial feature is supernaturally crowded into the viewer-right third as shallow mirror relief: exactly two eyes, one nose, one closed mouth, and two ears, all complete but laterally compressed without gore, injury, or realism. Turn that crowded feature cluster toward exactly one thin attached mirror-blue mirage sliver at the viewer-right edge of the subject silhouette; the sliver is flat optical evidence, unoccupied and abstract, not scenery or another creature. The torso and feet circle around the feature side while the blank side opens a clear crossing route. Keep one head, one body, all features on the right, the left side entirely blank, and the mirage sliver subordinate. No second face, ordinary facial symmetry, real-world medical shorthand, extra observer, landmark, floor, spoken text, writing, or scene."
+    },
+    {
+      "id": "latitude_abductor",
+      "name": "Latitude Abductor",
+      "rank": "elite",
+      "role": "hunter",
+      "heightMeters": 2.15,
+      "orientation": "landscape-3:2",
+      "masterFile": "latitude-abductor-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/salt-waste/latitude-abductor-v1.png",
+      "canonical": {
+        "anatomy": "Horizontal bands divide its body into sections standing at different distances.",
+        "locomotion": "Each band slides along its own east-west line before reassembling.",
+        "sound": "Survey stakes hammer from north to south through empty air.",
+        "purpose": "It steals travelers from routes that cross the basin at forbidden angles.",
+        "origin": "A royal survey split one prisoner across every latitude it falsely recorded.",
+        "mechanic": "Parallel Seizure",
+        "cue": "White bands extend from its sections across the arena.",
+        "counterplay": "Move north or south between bands, then attack the section that lags."
+      },
+      "masterDirection": "Show exactly one mature robed mirror-salt body divided from head through feet into multiple complete, thick horizontal anatomical bands. Each band occupies a visibly different foreground or background distance while retaining its own portion of the same one body, and each slides only left-right along exactly one perfectly horizontal salt-white extension line attached to that section. Keep wide black vertical gaps between the parallel extensions so north-south movement between bands is unmistakable. Exactly one lower-middle anatomical section visibly lags behind every other section and is uniquely edged by one broken sunless-gold mirror rim as the strike target; no second lagging section. The separated head bands must still compose one sealed mirror face, and the leg bands must reassemble into exactly two complete feet. The extension lines terminate in empty space and are subject-bound, never arena beams or floor marks. No duplicated bodies, decapitation, gore, survey stakes, map, compass letters, ground, environment, or bright aura."
+    }
+  ],
+  "cutoutDirection": "Cutouts are outside this assignment. After a master later receives two independent non-generator passes, edit only that exact accepted master to remove the studio background while preserving canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact cues and RGB identity. Output genuine RGBA; no checkerboard, matte, halo, post-processing, floor, text, logo, or watermark."
+}

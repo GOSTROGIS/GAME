@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-02",
+  "policy": "The frozen canonical packet remains authoritative. V14 has exact body/count topology and four ordinary contour matches. This revision edits one receiver void only: the viewer-right side-notched pair immediately below the pelvis module.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-02/prompt-packet.json",
+    "sha256": "16ffd058dbfd73609fed27836f475873696282f6eb29e4acd2dc2c9793d9d2bc"
+  },
+  "revisions": {
+    "borrowed-saint-v15": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/borrowed-saint-concept-master-v14.png",
+      "sourceSha256": "b83610f0fc94c8fb2f4e6414cb160eb1e304aee9c18bb2a4a8dbb6331f0f6777",
+      "reason": "The receiver directly beside the viewer-right single-side-notched rectangular tag remains a plain rectangular opening instead of copying the tag's unique right-edge notch.",
+      "prompt": "ONE-HOLE SURGICAL EDIT on this exact Borrowed Saint v14. Freeze every pixel and design element except the single black receiver void on the SECOND MODULE DOWN AT VIEWER-RIGHT, immediately below the large pelvis-hoop module and immediately viewer-left of the blank rectangular tag whose right edge contains one deep semicircular bite. Do not touch the tag. Reshape ONLY that one current plain black rectangular void so its perimeter exactly copies the adjacent tag: a tall rectangle with straight top, bottom and left edges, and exactly ONE deep semicircular notch cut inward from the viewer-right edge at mid-height. Black backdrop remains visible through the complete opening; the surrounding bone is the rim. No second notch, no symmetry, no I-shape, no hourglass, no octagon, no plaque or internal mark. Preserve all other seven voids, all eight tags, eight modules, seven folded paths, pelvis mismatch, materials, lighting, canvas and framing unchanged. No extra hole, tag, limb, text, floor, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    }
+  }
+}
