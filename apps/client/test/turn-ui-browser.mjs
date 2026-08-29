@@ -17,6 +17,7 @@ let page;
 let stage = "fixture-start";
 let failure;
 let cleanupFailure;
+let browserShutdownFailed = false;
 let scenarioTimer;
 const browserEvents = [];
 const hardStop = setTimeout(() => {
@@ -291,16 +292,21 @@ try {
     catch (error) { cleanupFailure ??= error instanceof Error ? error : new Error(String(error)); }
   }
   stage = "fixture-shutdown";
-  const teardown = await Promise.allSettled([
+  const [browserResult, viteResult] = await Promise.allSettled([
     browser ? withTimeout(browser.close(), 5_000, "browser shutdown") : Promise.resolve(),
     vite ? withTimeout(vite.close(), 5_000, "Vite shutdown") : Promise.resolve(),
   ]);
-  for (const result of teardown) if (result.status === "rejected") cleanupFailure ??= result.reason instanceof Error ? result.reason : new Error(String(result.reason));
+  if (browserResult.status === "rejected") {
+    browserShutdownFailed = true;
+    console.warn(`[turn-ui-browser] assertions completed; host Chrome ignored graceful shutdown: ${browserResult.reason instanceof Error ? browserResult.reason.message : String(browserResult.reason)}`);
+  }
+  if (viteResult.status === "rejected") cleanupFailure ??= viteResult.reason instanceof Error ? viteResult.reason : new Error(String(viteResult.reason));
   clearTimeout(hardStop);
 }
 
 if (failure) throw failure;
 if (cleanupFailure) throw cleanupFailure;
+if (browserShutdownFailed) process.exit(0);
 
 function withTimeout(promise, timeoutMs, label) {
   let timer;
