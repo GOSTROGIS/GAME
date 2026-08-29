@@ -1,0 +1,65 @@
+{
+  "schema": "SableReachIndependentArtReviewV1",
+  "batchId": "remaining-hands-expansion-batch-02",
+  "candidateManifestSha256": "0cfb3b8db616fa91f99fb6df9e42c6abcb12af3c96e59e338e387620548a0b04",
+  "verdict": "PASS",
+  "generatorMayApproveOwnOutput": false,
+  "reviewers": [
+    {
+      "role": "coordinator-independent-review-wave02-remaining",
+      "verdict": "PASS",
+      "reviewedPayloadSha256": "0cfb3b8db616fa91f99fb6df9e42c6abcb12af3c96e59e338e387620548a0b04",
+      "bytesEdited": 0
+    },
+    {
+      "role": "charnel-owner-crossreview-wave02",
+      "verdict": "PASS",
+      "reviewedPayloadSha256": "0cfb3b8db616fa91f99fb6df9e42c6abcb12af3c96e59e338e387620548a0b04",
+      "bytesEdited": 0
+    }
+  ],
+  "assets": [
+    {
+      "id": "mara_quoin_counter_deed",
+      "path": "assets/characters/npcs/remaining-hands/mara-quoin-counter-deed-v1.png",
+      "sha256": "dccf62567d360f864daf8cd2f323eb1870281ecd06bacafac4d18135c9b503a1",
+      "verdict": "PASS",
+      "evidence": "One complete mortal locksmith; both hinge-jointed hands remain readable; exposed tool clusters are gone and exactly one subordinate closed belt sheath remains."
+    },
+    {
+      "id": "kessa_pale_absence_clerk",
+      "path": "assets/characters/npcs/remaining-hands/kessa-pale-absence-clerk-v1.png",
+      "sha256": "298ecbd7190adbb960aa4834e131ef4b01e4d3b087ebefb87be4408d845d9ce2",
+      "verdict": "PASS",
+      "evidence": "Exactly one roll contains exactly four clean blank areas, each separated and enclosed by irregular dark paper; no writing, second roll, or external body shadow."
+    },
+    {
+      "id": "hobb_marr_shade_driver",
+      "path": "assets/characters/npcs/remaining-hands/hobb-marr-shade-driver-v1.png",
+      "sha256": "b9fc2968269eec7b07b41bda68ba6364c7ba6b9291dd734b03c657f6004e48b3",
+      "verdict": "PASS",
+      "evidence": "Exactly one complete detached wheel has no axle, cart, or vehicle fragment; both ordinary hands and the plausible forward load-bearing posture remain readable."
+    },
+    {
+      "id": "gannet_triune_veto_clerk",
+      "path": "assets/characters/npcs/remaining-hands/gannet-triune-veto-clerk-v1.png",
+      "sha256": "961d865aa6deefb006e8aa8c030e3625e053e38fa7ec3a5724b8e7f29bc32e45",
+      "verdict": "PASS",
+      "evidence": "Exactly three distinct council cords remain unmerged at taut, moderate, and slack tensions; exactly three mismatched lever gloves are two worn plus one visibly empty belt glove."
+    },
+    {
+      "id": "jorem_mortality_bearer",
+      "path": "assets/characters/npcs/remaining-hands/jorem-mortality-bearer-v1.png",
+      "sha256": "20a859c30de5ea562ebb8e005bd64ddbe3f29bf367712f7da979e685c42f0015",
+      "verdict": "PASS",
+      "evidence": "Exactly three removable blank office devices are present: one wrist cuff, one neck collar, and one separately held open-jawed clasp; the mortal body has no independent shadow."
+    },
+    {
+      "id": "della_quorum_unseated_cost",
+      "path": "assets/characters/npcs/remaining-hands/della-quorum-unseated-cost-v1.png",
+      "sha256": "042a185697b53a9457afdadc91e9c1bcea2dab24af941563eab373eb3d63dbdc",
+      "verdict": "PASS",
+      "evidence": "Exactly one conductive line routes along the image-left sleeve and exactly two separated lines route along image-right; all three remain continuous through blank degrading seals without a fourth line."
+    }
+  ]
+}

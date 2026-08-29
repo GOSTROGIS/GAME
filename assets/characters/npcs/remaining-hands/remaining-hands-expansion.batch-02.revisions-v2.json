@@ -1,0 +1,38 @@
+{
+  "schema": "SableReachExpansionConceptPromptRevisionV1",
+  "batchId": "remaining-hands-expansion-batch-02-revision-v2",
+  "familyId": "remaining_hands",
+  "status": "immutable-before-generation",
+  "basePacketSha256": "6c0e6f0ad8c40e88de852a3970e5168c71e612fff850ce2993dba3cbd995b101",
+  "policy": "Preserve all conforming identity, family, anatomy, framing, material, and exact-count features. Correct only the independently identified defect. Rejected candidate bytes remain unpublished and immutable; every correction uses a versioned candidate and two independent non-generator reviews.",
+  "promptCompilation": "For each revision, the exact built-in edit prompt is the original asset role followed by two newlines and the revisionDirection below.",
+  "revisions": [
+    {
+      "id": "mara_quoin_counter_deed",
+      "sourceCandidateSha256": "516d6fb1c6d9536236809c522001b3e8795db3d4c9434decec4b67628aa75de7",
+      "outputPath": "assets/characters/npcs/remaining-hands/mara-quoin-counter-deed-v1.png",
+      "outputSha256": "dccf62567d360f864daf8cd2f323eb1870281ecd06bacafac4d18135c9b503a1",
+      "reason": "Several separate belt tools exceeded the frozen maximum of one compact closed belt tool.",
+      "promptSha256": "184525a81c74e2a4438524c1b81a7f8d3ef9c76feea78d1b5c4be5b93dacaafa",
+      "revisionDirection": "Use case: precise-object-edit. Edit only the supplied Mara Quoin v1 candidate. Preserve her exact identity, face, hair, mortal body, pose, gaze, layered tenant coats, hands, every distinct obsolete door-hinge finger joint, boots, camera, scale, placement, near-black opaque backdrop, cold raking light, materials, colors and all other pixels as closely as possible. Change only her belt and tool pockets. Remove every exposed cluster and every separate locksmith tool except EXACTLY ONE compact plain CLOSED locksmith tool secured inside one shut belt sheath. The one surviving tool must remain visually subordinate, fully enclosed except for a small plain cap, and must not resemble a key, weapon, title, heraldic object or open instrument. Reconstruct plain worn coat, pocket and belt material where removed tools were visible. Do not alter either hand or any hinge joint. No new prop, key ring, readable mark, scenery, transparency, logo or watermark."
+    },
+    {
+      "id": "kessa_pale_absence_clerk",
+      "sourceCandidateSha256": "990c7cbc3678953e0c714630670f30893d552ae4c9c0451ed31ba52a38e3b184",
+      "outputPath": "assets/characters/npcs/remaining-hands/kessa-pale-absence-clerk-v1.png",
+      "outputSha256": "298ecbd7190adbb960aa4834e131ef4b01e4d3b087ebefb87be4408d845d9ce2",
+      "reason": "The roll presented one continuous blank field instead of several separately readable clean excluded areas.",
+      "promptSha256": "2eb79649439b7d7270b3b32a7f74c9c8140a6f01e57307d4f5f7658018563bf7",
+      "revisionDirection": "Use case: precise-object-edit. Edit only the supplied Kessa Pale v1 candidate. Preserve her exact identity, face, hair, mortal body, pose, hands, ink-stained civic clothing, boots, the one roll and its rods, camera, scale, placement, near-black opaque backdrop, absence of any external body shadow, cold raking light, materials, colors and all other pixels as closely as possible. Change only the blank paper surface inside the roll. Replace the one continuous central blank field with EXACTLY FOUR separately readable clean blank excluded areas. Each clean area must be fully surrounded by its own restrained irregular darkened paper border, with darkened paper visibly separating every area from all others so none merge into one field. The four clean areas are unmarked paper only: no writing, line, grid, rectangle, portrait, numeral, icon, seal, figure or recognizable symbol. Keep the roll otherwise blank and keep both hands unchanged. No second roll, external shadow, new prop, scenery, transparency, logo or watermark."
+    },
+    {
+      "id": "della_quorum_unseated_cost",
+      "sourceCandidateSha256": "e5a0dac0d2c16d13496607f353674888f2a1fe2cfa5c9dee036a38451ea5d771",
+      "outputPath": "assets/characters/npcs/remaining-hands/della-quorum-unseated-cost-v1.png",
+      "outputSha256": "042a185697b53a9457afdadc91e9c1bcea2dab24af941563eab373eb3d63dbdc",
+      "reason": "The first candidate made more than three sleeve lines visually plausible.",
+      "promptSha256": "898f540e63e604810421ddbe6527f84da20837c1ae2305045f051ab6531100df",
+      "revisionDirection": "Use case: precise-object-edit. Edit only the supplied Della Quorum candidate. Preserve her exact identity, face, hair, body, pose, hands, ash-gray maintenance suit, boots, camera, scale, placement, cold raking light, near-black opaque backdrop, materials, seals and all untouched pixels as closely as possible. Change only the conductive service-debt routing. Show EXACTLY THREE and only three total conductive lines across both sleeves: EXACTLY ONE single continuous line on the sleeve at image left, and EXACTLY TWO separate continuous parallel lines on the sleeve at image right. Remove every other metallic, gold, brass or conductive-looking sleeve line. Plain cloth seams may remain only if matte charcoal and unmistakably nonconductive. The three authorized lines must each remain visibly separate, unbraided and continuous from upper sleeve to cuff while crossing the existing ratification seals. Keep seals intact-to-cracked-to-crumbled toward the cuffs. Do not add, remove or reposition any seal. No glow, text, symbol, extra prop, transparency, floor, logo or watermark."
+    }
+  ]
+}

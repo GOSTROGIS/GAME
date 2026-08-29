@@ -561,7 +561,10 @@ export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
     alignmentOptions: ["league_of_remaining_hands", "lucent_synod", "charnel_night"],
     visualBrief: "Locksmith in layered tenant coats; a different obsolete door hinge replaces each knuckle, with no heraldic title or weapon.",
     questArcIds: ["aftermath_house_outlived_tenants"],
-    pipeline: artPipeline("remaining_hands"),
+    pipeline: artPipeline("remaining_hands", {
+      conceptMaster: "assets/characters/npcs/remaining-hands/mara-quoin-counter-deed-v1.png",
+      artStatus: "accepted",
+    }),
   },
   {
     id: "kessa_pale_absence_clerk",
@@ -577,7 +580,10 @@ export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
     alignmentOptions: ["league_of_remaining_hands", "charnel_night", "lucent_synod"],
     visualBrief: "Ink-stained census clerk whose body casts no shadow; carries a blank roll that darkens around exclusions.",
     questArcIds: ["aftermath_census_of_absences"],
-    pipeline: artPipeline("remaining_hands"),
+    pipeline: artPipeline("remaining_hands", {
+      conceptMaster: "assets/characters/npcs/remaining-hands/kessa-pale-absence-clerk-v1.png",
+      artStatus: "accepted",
+    }),
   },
   {
     id: "roen_fitch_dusk_gardener",
@@ -609,7 +615,10 @@ export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
     alignmentOptions: ["league_of_remaining_hands", "lucent_synod", "charnel_night"],
     visualBrief: "Municipal driver in patched road leathers, permanently leaning into a wheel that is no longer attached.",
     questArcIds: ["aftermath_cart_accepts_office"],
-    pipeline: artPipeline("remaining_hands"),
+    pipeline: artPipeline("remaining_hands", {
+      conceptMaster: "assets/characters/npcs/remaining-hands/hobb-marr-shade-driver-v1.png",
+      artStatus: "accepted",
+    }),
   },
   {
     id: "tima_vale_twice_born",
@@ -689,7 +698,10 @@ export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
     alignmentOptions: ["league_of_remaining_hands", "lucent_synod", "charnel_night"],
     visualBrief: "Civic clerk with three mismatched lever gloves and three council cords knotted at different tensions.",
     questArcIds: ["aftermath_three_hands_one_lever"],
-    pipeline: artPipeline("remaining_hands"),
+    pipeline: artPipeline("remaining_hands", {
+      conceptMaster: "assets/characters/npcs/remaining-hands/gannet-triune-veto-clerk-v1.png",
+      artStatus: "accepted",
+    }),
   },
   {
     id: "meret_spall_night_engineer",
@@ -721,7 +733,10 @@ export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
     alignmentOptions: ["league_of_remaining_hands", "lucent_synod", "charnel_night"],
     visualBrief: "Plain mortal carrying three detachable office signs: pulse cuff, sworn-name collar, and independent shadow clasp.",
     questArcIds: ["aftermath_person_engine_must_outlive"],
-    pipeline: artPipeline("remaining_hands"),
+    pipeline: artPipeline("remaining_hands", {
+      conceptMaster: "assets/characters/npcs/remaining-hands/jorem-mortality-bearer-v1.png",
+      artStatus: "accepted",
+    }),
   },
   {
     id: "della_quorum_unseated_cost",
@@ -737,7 +752,10 @@ export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
     alignmentOptions: ["league_of_remaining_hands", "lucent_synod", "charnel_night"],
     visualBrief: "Ash-suited maintenance recorder with three conductive service-debt lines crossing ratification seals that expire along her sleeves.",
     questArcIds: ["aftermath_cost_that_learned_to_vote"],
-    pipeline: artPipeline("remaining_hands"),
+    pipeline: artPipeline("remaining_hands", {
+      conceptMaster: "assets/characters/npcs/remaining-hands/della-quorum-unseated-cost-v1.png",
+      artStatus: "accepted",
+    }),
   },
   {
     "id": "tesse_amble_shadow_midwife",

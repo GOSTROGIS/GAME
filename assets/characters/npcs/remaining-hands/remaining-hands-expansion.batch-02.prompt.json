@@ -1,0 +1,248 @@
+{
+  "schema": "SableReachExpansionConceptPromptPacketV1",
+  "batchId": "wave02-remaining-expansion-batch-01",
+  "status": "immutable-before-generation",
+  "familyId": "remaining_hands",
+  "formsInCanonicalOrder": [
+    "mara_quoin_counter_deed",
+    "kessa_pale_absence_clerk",
+    "hobb_marr_shade_driver",
+    "gannet_triune_veto_clerk",
+    "jorem_mortality_bearer",
+    "della_quorum_unseated_cost"
+  ],
+  "sources": [
+    {
+      "path": "packages/content/src/narrative.data.js",
+      "sha256": "fae6409804aa035e39bd665aa5d9dfc59150c5003bacb043669fbb2e0b71f873"
+    },
+    {
+      "path": "design-review/SABLE-REACH-QUEST-WAVE-02.md",
+      "sha256": "1458c6a85a33bef3b554a8302a203c509bea045f6314db1c4d83b645a230755b"
+    },
+    {
+      "path": "design-review/kit/hm-art-law.js",
+      "sha256": "26e5a03220657c67b520c7ba163644e3848ed7f622f2b2beb3ab4b12a97ed0ff"
+    }
+  ],
+  "familyReferenceInspection": {
+    "status": "accepted-remaining-lucent-and-charnel-local-masters-inspected-before-generation",
+    "directPlate": null,
+    "reasonNoPlate": "No League of Remaining Hands family plate exists. Canonical narrative records and global art law govern identity and content. Accepted masters constrain production finish, material restraint and faction contrast only; they cannot add anatomy, props, counts, symbols or story facts.",
+    "observedRemainingLanguage": "Mature mortal proportions; repaired civic and trade workwear; layered charcoal, rain-black and ash-gray cloth; restrained aged leather and brass; practical equipment made legible for 3D reconstruction; tactile wear without glamour; isolated full-body production framing.",
+    "observedFactionBoundaries": "Lucent masters reserve immaculate ivory-gold cathedral geometry, halos and coercive radiance. Charnel masters reserve black-nacre anatomy, impossible apertures and body-horror silhouettes. This batch must remain materially mortal and civic except for each record's exact hinge, shadow or office-device exception.",
+    "references": [
+      {
+        "path": "assets/characters/npcs/remaining-hands/enoch-last-lamplighter-v1.png",
+        "sha256": "45572e07f55896c259f1b1185e66c39227399f19c7c627398c595b510459cb1e",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "accepted Remaining Hands civic workwear, restrained tools and full-body framing"
+      },
+      {
+        "path": "assets/characters/npcs/remaining-hands/sister-calve-unlit-hospice-v1.png",
+        "sha256": "fcd9f552c08716e6cd3322c81bfb9098264ac95d34c9f9d89f964211e45c0fc9",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "accepted Remaining Hands layered gray cloth and compact civic tool density"
+      },
+      {
+        "path": "assets/characters/npcs/remaining-hands/tor-vannic-defector-of-dawn-v1.png",
+        "sha256": "a10fc2c3f402049437163eb6ce71713523f13d0f366da0973341eedf2b1d4da0",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "accepted Remaining Hands repaired engineer silhouette and confined supernatural exception"
+      },
+      {
+        "path": "assets/characters/npcs/remaining-hands/king-ash-without-country-v1.png",
+        "sha256": "73396a77c4e01c009dc3e6155967fc36049f9a8e086a927fe121a65c8e19be05",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "accepted Remaining Hands dark civic tailoring and isolated negative-space evidence"
+      },
+      {
+        "path": "assets/characters/npcs/remaining-hands/nima-sorn-keeper-of-one-shadow-v1.png",
+        "sha256": "db9056d7dba31776eb0e9d2e22588f73af0472610b7cb3635eb3e823d8ea1366",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "accepted Remaining Hands municipal harness construction and readable shadow exception"
+      },
+      {
+        "path": "assets/characters/npcs/remaining-hands/oren-lusk-last-calendarer-v1.png",
+        "sha256": "2b9d9acd89f9a2781d3ca099ca097fa601098b59ca6cbd3b31a2b991988715e8",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "accepted Remaining Hands aged paper, worn brass and countable civic apparatus"
+      },
+      {
+        "path": "assets/characters/npcs/lucent-synod/arch-lumen-seraphel-orr-v1.png",
+        "sha256": "734211d497574ad74bc2e3cb4c09ecd4bb2d2133b5bed383b26018a4b2c18c96",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "contrast boundary only: do not borrow ivory-gold cathedral geometry or halo language"
+      },
+      {
+        "path": "assets/characters/npcs/lucent-synod/canoness-vael-kindly-knife-v2.png",
+        "sha256": "82968872a1f807d516f3c456ad1b02711385d8a26e89648d57279ed153326ee4",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "contrast boundary only: do not borrow immaculate armor, blade modules or veiled saint silhouette"
+      },
+      {
+        "path": "assets/characters/npcs/lucent-synod/deacon-halix-bell-of-noon-v2.png",
+        "sha256": "3b7091626930f5485fbbe1012716ecbd04ece652d1532ae8e828bfa7ea4b7a33",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "contrast boundary only: do not borrow bell armor, radiance or angelic mechanical wings"
+      },
+      {
+        "path": "assets/characters/npcs/lucent-synod/saint-vespera-second-shadow-v3.png",
+        "sha256": "8a6ced889dcc05396904aac859f502c3e8ef134fa145a350e768deb0f2a58381",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "contrast boundary only: no saintly halo, cathedral vestment or coercive shadow-door motif"
+      },
+      {
+        "path": "assets/characters/npcs/charnel-princes/mother-nacre-open-rib-v1.png",
+        "sha256": "1c79c2d6ed46a06d61b078e1f0119c2e48c94eb72a21516fc50488a2804707ca",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "contrast boundary only: no black-nacre shell anatomy, extra limbs or sanctuary aperture"
+      },
+      {
+        "path": "assets/characters/npcs/charnel-princes/prince-thirteen-throats-v1.png",
+        "sha256": "666167e20725e8aa044971cb59cb9fd9f7f0ccbe40ff40e2d87dc83b0c959010",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "contrast boundary only: no throat arrays, nacre mantle or impossible prince anatomy"
+      },
+      {
+        "path": "assets/characters/npcs/charnel-households/ilar-rook-unhoused-shadow-v1.png",
+        "sha256": "ad56fbfb2749dc74d9895f23169dcba13560360d3f2dc7207fcecf105eb1852d",
+        "dimensions": { "width": 1024, "height": 1536 },
+        "scope": "contrast boundary only: Kessa's missing cast shadow must not become Ilar's free-standing nonhuman shadow body"
+      }
+    ]
+  },
+  "referencePolicy": "References were inspected by the coordinator for style calibration and faction-boundary review. Because every output is a brand-new subject, no local image is submitted as an edit target or generation input. The selected canonical record and exact masterDirection govern every visible feature.",
+  "promptCompilation": "For each asset, the exact generation prompt is inputRole followed by two newline characters, commonDirection, two newline characters, and masterDirection. These fields are frozen before the first generation call. Any correction requires a separate immutable revision packet and a versioned candidate filename.",
+  "inputRole": "Use case: stylized-concept. Create one new original canonical named character. The accepted local masters were inspected only to calibrate production finish and faction boundaries; do not copy any existing face, pose, costume, anatomy or form-specific prop.",
+  "commonDirection": "Asset type: canonical individual named-character production concept master for later 3D design. Render exactly one complete original League of Remaining Hands subject in polished stylized 3D dark-fantasy MMORPG production quality. Obey only the selected character's canonical record. Shared League language is mature wholly mortal anatomy unless the selected record explicitly names one exception; repaired civic workwear; rain-dark cloth, aged leather, ash-gray layers, restrained brass and practical apparatus; evidence of maintenance, responsibility and survival rather than aristocratic glamour. Keep Lucent ivory-gold cathedral armor, halos, wings and radiance out of this faction. Keep Charnel black-nacre anatomy, extra limbs, bodily apertures and gore out unless the selected record explicitly requires a non-gory exception. Three-quarter production view, centered, complete full-body silhouette with generous clearance. Portrait 1024 by 1536 composition. Flat near-black neutral opaque studio backdrop; cold raking studio light; ungraded measurement-friendly presentation. No environment, settlement, street, office, archive, workshop, court, carriage, engine room, floor, ground plane, terrain, pedestal, contact or cast floor shadow, unrelated extra creature or person, narrative scene, caption, UI, readable text, letter, numeral, rune, heraldry, real religious mark, logo, watermark, franchise resemblance, photobashed real person, glossy plastic, bright aura, cute proportions, gore, exposed entrails, baked checkerboard, transparency, or crop.",
+  "assets": [
+    {
+      "id": "mara_quoin_counter_deed",
+      "name": "Mara Quoin",
+      "epithet": "Counter-Deed Locksmith",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "mara-quoin-counter-deed-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/mara-quoin-counter-deed-v1.png",
+      "pipelinePath": "QUEST_SUPPORT_CHARACTERS[mara_quoin_counter_deed].pipeline.conceptMaster",
+      "referenceFiles": [],
+      "canonical": {
+        "role": "Municipal locksmith and unrecognized heir to a noon-restored house",
+        "desire": "Protect the present tenants without turning her inheritance into their eviction notice.",
+        "fear": "That accepting her own history will give the dead deed more authority than the family now living there.",
+        "contradiction": "She treats daily use as the only honest title while hiding the forged deed that once made the tenants' use legally possible.",
+        "secret": "Mara falsified the deed that saved the current family and is the previous household's unrecognized daughter.",
+        "visualBrief": "Locksmith in layered tenant coats; a different obsolete door hinge replaces each knuckle, with no heraldic title or weapon."
+      },
+      "masterDirection": "Show exactly one complete mature mortal municipal locksmith, Mara Quoin, with one unobscured human face, two arms, two hands, two legs and two boots. Dress her in several visibly separate layered tenant coats: repaired, differently aged rain-dark civic garments with practical locksmith pockets and restrained old brass, never a uniform, title garment, priestly robe, armor or aristocratic coat. Both hands must be fully visible. Every visible finger knuckle and joint on both hands is replaced by its own small functional OBSOLETE DOOR HINGE; no two hinge replacements share the same leaf shape, pin, wear pattern or period construction. The hinges articulate her otherwise human fingers and do not become claws, keys, doors, extra digits or Charnel anatomy. Keep the hinge array readable and subordinate to her mortal silhouette. Her hands hold no weapon, deed, title, key-shaped weapon or heraldic object; at most one compact plain locksmith tool remains closed on the belt. Full coat layers, every hand joint and both boots stay inside black clearance. No house, doorway, tenant, deed page, readable mark, key ring, halo, wing, nacre, floor or scene."
+    },
+    {
+      "id": "kessa_pale_absence_clerk",
+      "name": "Kessa Pale",
+      "epithet": "Clerk of the Absent Queue",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "kessa-pale-absence-clerk-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/kessa-pale-absence-clerk-v1.png",
+      "pipelinePath": "QUEST_SUPPORT_CHARACTERS[kessa_pale_absence_clerk].pipeline.conceptMaster",
+      "referenceFiles": [],
+      "canonical": {
+        "role": "Census clerk whose separated shadow has different standing than her body",
+        "desire": "Give absences representation without pretending each belongs to the nearest visible person.",
+        "fear": "Discovering that her erased shadow held politics and loyalties she would now oppose.",
+        "contradiction": "She demands auditable population totals while having counted erased shadows as dependants to divert food into an unregistered street.",
+        "secret": "Kessa used the historic-erasure ledger to feed Nullstreet and cannot prove which recorded dependant was once her own shadow.",
+        "visualBrief": "Ink-stained census clerk whose body casts no shadow; carries a blank roll that darkens around exclusions."
+      },
+      "masterDirection": "Show exactly one complete mature mortal census clerk, Kessa Pale, with ordinary human anatomy, one unobscured face, two arms and hands, two legs and two boots. Dress her in repaired ink-stained civic clerk layers, practical rather than academic, priestly or ceremonial. Her fingertips, cuffs and a few workwear seams carry old matte ink stains. She carries EXACTLY ONE partly unfurled blank census roll made from tactile pale paper. The roll contains no writing, lines, grid, portrait, numeral, icon or seal. Instead, the paper itself darkens in restrained irregular ink-like borders around several completely clean blank excluded areas, making absence legible without forming any symbol or text. Her body casts NO external shadow at all: no silhouette behind her, no contact shadow below her, no independent shadow figure and no dark double, while normal cold raking form-shading remains on her body and clothes. Both hands and the entire roll stay visible and countable. Full roll ends, coat hem and boots remain inside black clearance. No desk, queue, street, ledger stack, moth, second roll, halo, nacre body, floor or scene."
+    },
+    {
+      "id": "hobb_marr_shade_driver",
+      "name": "Hobb Marr",
+      "epithet": "Driver of the Stationary Office",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "hobb-marr-shade-driver-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/hobb-marr-shade-driver-v1.png",
+      "pipelinePath": "QUEST_SUPPORT_CHARACTERS[hobb_marr_shade_driver].pipeline.conceptMaster",
+      "referenceFiles": [],
+      "canonical": {
+        "role": "Shade-cart driver elected by neighborhoods his route never served",
+        "desire": "Have shade recognized as a public service without becoming its sole human veto.",
+        "fear": "That every precedent will turn one driver's private guilt into permanent civic law.",
+        "contradiction": "He demands that policy name who waits longer, but schedules his estranged son's street only while the boy sleeps.",
+        "secret": "Hobb has preserved an unofficial stop for his son while denying that personal routes belong on the public docket.",
+        "visualBrief": "Municipal driver in patched road leathers, permanently leaning into a wheel that is no longer attached."
+      },
+      "masterDirection": "Show exactly one complete mature mortal municipal driver, Hobb Marr, with one human head, two ordinary arms and hands, two legs and two boots. Dress him in patched rain-dark road leathers and repaired municipal driving layers, practical, worn and unmarked, with no armor, priestly trim or heraldry. His entire posture is permanently committed forward into EXACTLY ONE complete detached driving wheel: torso angled, shoulders and both hands bearing ordinary working pressure against the rim, legs braced behind him. The wheel is plainly no longer attached to anything: no axle, column, cart, carriage, dashboard, hub connection, road or vehicle fragment. It remains a single weathered civic wheel fully visible in open black space, supported only by Hobb's continuing lean, never floating with magic or emitting light. His anatomy stays mortal and plausible under the impossible sustained posture. Keep wheel rim, both hands, coat tails and both boots fully inside black clearance. No second wheel, shade canopy, reins, animal, passenger, route map, schedule, son, halo, nacre, floor or scene."
+    },
+    {
+      "id": "gannet_triune_veto_clerk",
+      "name": "Gannet Triune",
+      "epithet": "Clerk of Three Continuities",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "gannet-triune-veto-clerk-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/gannet-triune-veto-clerk-v1.png",
+      "pipelinePath": "QUEST_SUPPORT_CHARACTERS[gannet_triune_veto_clerk].pipeline.conceptMaster",
+      "referenceFiles": [],
+      "canonical": {
+        "role": "Survivor of a town whose three councils must agree before opening a well",
+        "desire": "Preserve distributed veto without letting disagreement become fatal paralysis.",
+        "fear": "That an authority will manufacture emergencies merely to bypass consent.",
+        "contradiction": "He requires every continuity claim to survive three councils, but forged unanimity during a famine and saved his town.",
+        "secret": "Gannet authored all three famine votes in different hands and still does not know whether the act was legitimate.",
+        "visualBrief": "Civic clerk with three mismatched lever gloves and three council cords knotted at different tensions."
+      },
+      "masterDirection": "Show exactly one complete mature mortal civic clerk, Gannet Triune, with one unobscured human face, exactly two ordinary arms and hands, two legs and two boots. Dress him in repaired layered civic work clothes with restrained aged leather and brass, no armor, robe, heraldry or council insignia. Show EXACTLY THREE and only three visibly mismatched practical LEVER GLOVES: one worn on his left hand, one worn on his right hand, and one empty third glove clipped separately to his belt with its vacant opening clearly visible. Each glove has a different lever-gripping construction and wear history, but no weapon, claw or extra hand. Show EXACTLY THREE and only three separate council cords routed across his upper body. Every cord is blank and non-symbolic, and each is tied in one visibly distinct knot under a clearly different physical tension: one taut straight cord, one moderately tensioned cord and one slack hanging cord. The three cords never braid or merge. Both worn gloves, empty third glove, all three knots and all three tension states must be simultaneously countable. Full cords, coat hem and boots stay inside black clearance. No third arm, well, council chamber, vote page, pen, readable mark, lever machine, halo, nacre, floor or scene."
+    },
+    {
+      "id": "jorem_mortality_bearer",
+      "name": "Jorem Mortality-Bearer",
+      "epithet": "The Person Allowed to Resign",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "jorem-mortality-bearer-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/jorem-mortality-bearer-v1.png",
+      "pipelinePath": "QUEST_SUPPORT_CHARACTERS[jorem_mortality_bearer].pipeline.conceptMaster",
+      "referenceFiles": [],
+      "canonical": {
+        "role": "Fallible person selected to carry a mortal shutdown office",
+        "desire": "Create succession before anyone turns his vulnerability into heroism.",
+        "fear": "That keeping the dawn engine stoppable will make his continued life compulsory.",
+        "contradiction": "He volunteered to make divine control mortal, then withheld that the engine cannot distinguish his death from a free resignation.",
+        "secret": "Jorem can vacate the office by resigning, but every faction has described that freedom as a catastrophic fault.",
+        "visualBrief": "Plain mortal carrying three detachable office signs: pulse cuff, sworn-name collar, and independent shadow clasp."
+      },
+      "masterDirection": "Show exactly one complete plain mature mortal, Jorem Mortality-Bearer, with an ordinary unobscured human face and body, two arms and hands, two legs and two boots. Dress him in unadorned repaired charcoal civic clothes with no armor, rank, hero styling, priestly geometry or supernatural anatomy. He carries EXACTLY THREE and only three detachable office signs as plain functional devices, not written signboards: EXACTLY ONE pulse cuff closed around one wrist with an obvious mechanical release; EXACTLY ONE sworn-name collar closed around his neck with a different obvious release; and EXACTLY ONE independent shadow clasp carried separately at his belt or in one open hand, with its jaws and release visible. Every device is blank, nonalphabetic and physically removable. They must not merge, glow, form an execution apparatus or imply permanent bodily installation. Show no actual independent shadow body or cast shadow; the clasp alone is the third sign. Keep Jorem visually ordinary and vulnerable rather than saintly or heroic. Both hands, all three releases, coat hem and both boots stay inside black clearance. No fourth device, crown, halo, wing, engine, lever, successor, legal page, readable name, floor or scene."
+    },
+    {
+      "id": "della_quorum_unseated_cost",
+      "name": "Della Quorum",
+      "epithet": "Recorder of the Unseated Cost",
+      "kind": "expansion_named_character",
+      "familyId": "remaining_hands",
+      "orientation": "portrait-2:3",
+      "masterFile": "della-quorum-unseated-cost-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/della-quorum-unseated-cost-v1.png",
+      "pipelinePath": "QUEST_SUPPORT_CHARACTERS[della_quorum_unseated_cost].pipeline.conceptMaster",
+      "referenceFiles": [],
+      "canonical": {
+        "role": "Recorder of the maintenance ratification and author of its standing rules",
+        "desire": "Keep durable operating benefits appealable without making every future entrant able to dissolve all law.",
+        "fear": "That correcting inherited exclusion will make long-lived public systems impossible to govern.",
+        "contradiction": "She demands every omitted constituency be identified while hiding the clause that classified unborn and unrecognized lives as inputs rather than constituents.",
+        "secret": "Della drafted the standing rule that enabled the new claimant's exclusion and later disguised it as an engineering definition.",
+        "visualBrief": "Ash-suited maintenance recorder with three conductive service-debt lines crossing ratification seals that expire along her sleeves."
+      },
+      "masterDirection": "Show exactly one complete mature mortal maintenance recorder, Della Quorum, with one unobscured human face, two ordinary arms and hands, two legs and two boots. Dress her in an ash-gray repaired maintenance suit built from practical cloth, leather reinforcements and restrained aged metal, never a formal judge's robe, saintly vestment, armor or laboratory uniform. Across both sleeves route EXACTLY THREE and only three distinct thin conductive service-debt lines in total, each visibly separate from shoulder to cuff and made from restrained darkened metal filament. The three lines cross several blank ratification seals fixed along the sleeves. Every seal is nonalphabetic and bears no icon or heraldry. The seals visibly EXPIRE along the sleeves through material condition alone: intact near the upper arms, then progressively cracked, faded and crumbled toward the cuffs, without forming a timeline, numbering or readable notation. All three conductive lines remain continuous and countable as they pass over or through the degrading seals; they never braid, merge, glow or enter her flesh. Both hands remain ordinary and empty. Full sleeve routes, every seal stage, suit hem and boots stay inside black clearance. No fourth line, ballot, chair, council, clipboard, readable expiration date, halo, nacre, floor or scene."
+    }
+  ],
+  "cutoutDirection": "Cutouts are outside this assignment. After a master later receives two independent non-generator passes, edit only that exact accepted master to remove the studio background while preserving canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact cues and RGB identity. Output genuine RGBA with no checkerboard, matte, halo, post-processing, floor, text, logo or watermark."
+}
