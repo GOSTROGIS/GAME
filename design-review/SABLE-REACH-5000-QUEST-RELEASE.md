@@ -107,3 +107,5 @@ The 5,000 target is complete only when all of the following pass over the comple
 - the full lore, privacy, raster, LFS, registry, and browser gates pass from a clean clone.
 
 Until those checks pass, the production target remains active and interim counts are progress, not completion.
+
+Current checkpoint: 37 canonical authored quests exist; 36 are release-attested across three closed batches, and one is queued in open batch 0004. MODEL MAKER exposes 49 expansion characters, 33 expansion creatures, and two autonomous companion contracts without claiming static or animated readiness.

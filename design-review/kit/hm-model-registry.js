@@ -9,6 +9,7 @@
 
 import { BESTIARY, ENEMY_FAMILIES } from '../../packages/content/src/bestiary.data.js';
 import {
+  COMPANION_QUEST_CONTRACTS,
   COSMIC_FACTIONS,
   EXPANSION_CHARACTERS,
   EXPANSION_CREATURES,
@@ -276,6 +277,7 @@ export function buildRegistry() {
     origins: Object.freeze(originsList()),
     expansionCharacters: Object.freeze(expansionCharacterList()),
     expansionCreatures: Object.freeze(expansionCreatureList()),
+    companionContracts: Object.freeze([...COMPANION_QUEST_CONTRACTS]),
   });
 }
 
@@ -299,6 +301,7 @@ export function tally(registry) {
     expansionTotal: expansionCharacters + expansionCreatures,
     expansionItems: EXPANSION_ITEMS.length,
     expansionQuests: EXPANSION_QUESTS.length,
+    companionContracts: registry.companionContracts.length,
     expansionAwaitingArt: expansionRows.filter((row) => row.tier === 'awaiting-art').length,
     expansionStaticModels: expansionRows.filter((row) => row.tier === 'static-model').length,
     expansionAnimatedModels: expansionRows.filter((row) => row.tier === 'animated-model').length,

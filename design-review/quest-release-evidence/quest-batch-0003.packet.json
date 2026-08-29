@@ -1,0 +1,1096 @@
+{
+  "schemaVersion": 1,
+  "kind": "quest-batch-packet",
+  "batchId": "quest-batch-0003",
+  "questIds": [
+    "aftermath_cost_that_learned_to_vote",
+    "reaction_orchard_casts_legal_shadow",
+    "reaction_rain_owes_door_answer",
+    "reaction_machine_widowed_minute",
+    "faction_heresy_gentle_horizon",
+    "faction_hunger_asked_taxed",
+    "character_saint_cannot_inherit_body",
+    "character_thirteen_pilgrims_one_feet",
+    "regional_cairns_keep_winter",
+    "regional_flood_learned_last_name",
+    "settlement_street_must_burn_once",
+    "profession_bell_paid_in_silence"
+  ],
+  "sourceReviewPayloads": [
+    {
+      "id": "wave-02-revision-2",
+      "serialization": "immutable reviewed Wave 02 revision-2 payload",
+      "sha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a"
+    },
+    {
+      "id": "wave-03-v2-markdown",
+      "path": "design-review/SABLE-REACH-QUEST-WAVE-03-v2.md",
+      "serialization": "exact immutable reviewed UTF-8 source bytes",
+      "byteLength": 19182,
+      "sha256": "b48792836ca06130e701efbd38e189aeb0e7ceba30009c122d77ff98d3300844"
+    },
+    {
+      "id": "wave-03-v2-machine-annex",
+      "path": "design-review/SABLE-REACH-QUEST-WAVE-03-v2.machine.json",
+      "serialization": "exact immutable reviewed UTF-8 machine-annex bytes",
+      "byteLength": 105234,
+      "sha256": "d369e3634448af588d8f1b3e2f59f9570ab6c032a74a3654c5be89a772ff6622"
+    }
+  ],
+  "canonicalQuests": [
+    {
+      "schemaVersion": 2,
+      "portfolioId": "world_state_reaction",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "dawn_control_identity",
+          "mode": "all-values",
+          "values": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ]
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "dawn_inherited_maintenance_cost",
+          "values": [
+            "maintenance_cost_individually_appealable",
+            "institutional_cost_expires_and_revotes",
+            "benefit_and_cost_return_to_engine"
+          ]
+        }
+      ],
+      "id": "aftermath_cost_that_learned_to_vote",
+      "chainId": "mortality_in_dawn_engine",
+      "order": 4,
+      "type": "world",
+      "title": "The Cost That Learned to Vote",
+      "giverId": "tor_vannic_defector_of_dawn",
+      "supportingCharacterIds": [
+        "della_quorum_unseated_cost"
+      ],
+      "stateDomain": "obligation",
+      "premise": "The ratified maintenance regime produces a living claimant that did not exist, was hidden, or lacked recognized species standing when its continuing operating cost was assigned.",
+      "primaryMechanicId": "appeal_an_inherited_operating_cost",
+      "dilemmaId": "durable_law_nonconsenting_claimant_or_returned_benefit",
+      "locationId": "maintenance_fracture_ratification_floor",
+      "consequenceId": "dawn_inherited_maintenance_cost",
+      "objectives": [
+        {
+          "type": "historic_standing_reconstruction",
+          "target": "maintenance_ratification"
+        },
+        {
+          "type": "benefit_cost_path_transfer",
+          "target": "infrastructure_office_claimant_and_engine",
+          "required": 4
+        },
+        {
+          "type": "future_constituency_seating",
+          "target": "living_operating_input",
+          "rule": "Each transfer preserves the purchased benefit while changing who may appeal its next cycle."
+        }
+      ],
+      "outcomes": [
+        "maintenance_cost_individually_appealable",
+        "institutional_cost_expires_and_revotes",
+        "benefit_and_cost_return_to_engine"
+      ],
+      "rewardItemIds": [
+        "appealable_crack"
+      ],
+      "loreReveal": "The League's strongest consent law binds institutions rather than descendants or future species, and later councils inverted it to finance unnamed claimants' operating costs.",
+      "dialogueThesis": "A future person may owe their existence to a law without owing that law obedience.",
+      "authorshipProof": {
+        "setpiece": "A visible maintenance fracture travels from one lit engine ring through expired ballot seals into a new claimant's body while the benefit fades everywhere the crack leaves.",
+        "failureTransformation": "Invalidating a signer transfers that signer's next-cycle cost to the office that excluded the claimant, creating public debt with a living creditor.",
+        "dialogueConstraint": "Della will not say the maintenance law was ratified until every present, hidden, and future constituency denied standing is identified.",
+        "persistentWorldChange": "The operating cost becomes individually appealable, institutional responsibility expires into a new vote, or both benefit and cost return to the engine.",
+        "forbiddenSubstitution": "Cannot become a corrupt-election investigation because the benefit remains active, the new political claimant owes its existence to the cost, and standing determines who keeps the system alive."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "reaction_orchard_casts_legal_shadow",
+      "chainId": "hearthmere_after_noon",
+      "order": 1,
+      "type": "world",
+      "portfolioId": "world_state_reaction",
+      "title": "The Orchard Casts a Legal Shadow",
+      "giverId": "canoness_vael_kindly_knife",
+      "supportingCharacterIds": [
+        "tesse_amble_shadow_midwife"
+      ],
+      "creatureIds": [
+        "tenancy_aureole"
+      ],
+      "stateDomain": "admission",
+      "stateReads": [
+        {
+          "key": "hearthmere_absence_citizenship",
+          "mode": "all-values",
+          "values": [
+            "shadows_gain_separate_seats",
+            "shadows_are_protected_dependants",
+            "mobile_absence_district_created"
+          ]
+        },
+        {
+          "key": "hearthmere_purity_ecology",
+          "mode": "all-values",
+          "values": [
+            "resident_cultivator_liability",
+            "public_seed_licensing",
+            "sterile_last_generation"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "hearthmere_shadow_seed_descent",
+          "values": [
+            "shadow_children_are_separate_lineage",
+            "embodied_guardians_hold_appealable_parenthood",
+            "future_shadow_births_prohibited_child_survives"
+          ]
+        }
+      ],
+      "premise": "Accepted shadow citizenship and luminous-graft liability collide when Hearthmere's first separated shadow-child buds from a wall and must form five organs under a jurisdiction that moves at every contraction.",
+      "primaryMechanicId": "deliver_anatomy_across_moving_jurisdiction",
+      "dilemmaId": "birthright_without_body_parenthood_without_ownership",
+      "locationId": "hearthmere_orchard_of_second_births",
+      "consequenceId": "hearthmere_shadow_seed_descent",
+      "objectives": [
+        {
+          "type": "claimant_interview",
+          "target": "wall_body_and_district_claimants",
+          "required": 3
+        },
+        {
+          "type": "organ_jurisdiction_map",
+          "target": "five_forming_shadow_organs",
+          "required": 5,
+          "rule": "Assign every organ to a reachable jurisdiction before labor closes that route."
+        },
+        {
+          "type": "contraction_transfer",
+          "target": "alternating_noon_thresholds",
+          "required": 5,
+          "rule": "Apply the active citizenship and propagation rule; no contraction can reset."
+        },
+        {
+          "type": "compulsory_name_interruption",
+          "target": "tenancy_aureole"
+        },
+        {
+          "type": "birthright_enactment",
+          "target": "hearthmere_shadow_seed_descent"
+        }
+      ],
+      "outcomes": [
+        "shadow_children_are_separate_lineage",
+        "embodied_guardians_hold_appealable_parenthood",
+        "future_shadow_births_prohibited_child_survives"
+      ],
+      "rewardItemIds": [
+        "lease_of_alternating_noon"
+      ],
+      "loreReveal": "Lucent genealogies tracked the shadow that survived compulsory noon rather than blood, making family law an archive of erasure survivors.",
+      "dialogueThesis": "A birth certificate can name a guardian and still conceal which body was made to pay for the child.",
+      "authorshipProof": {
+        "setpiece": "A newborn silhouette hangs from a white-gold genealogical tree while five legal thresholds rotate around its forming organs.",
+        "failureTransformation": "An invalid assignment grows the organ in Tesse's twin-shadow, permanently costing Tesse the matching sense and creating an involuntary co-parent.",
+        "dialogueConstraint": "During labor, owner, mother, citizen, and seed are inadmissible unless the speaker points to the body or institution paying the word's cost.",
+        "persistentWorldChange": "Hearthmere gains a separate shadow lineage, appealable embodied guardianship, or one living child under a ban on future shadow births.",
+        "forbiddenSubstitution": "Counting absences or assigning seed liability cannot substitute; play delivers anatomy while jurisdiction changes inside an irreversible labor sequence."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "reaction_rain_owes_door_answer",
+      "chainId": "village_outside_mother",
+      "order": 5,
+      "type": "world",
+      "portfolioId": "world_state_reaction",
+      "title": "Rain Owes the Door an Answer",
+      "giverId": "mother_nacre_open_rib",
+      "supportingCharacterIds": [
+        "bessa_vein_weather_bailiff"
+      ],
+      "creatureIds": [
+        "weather_edict_widow"
+      ],
+      "stateDomain": "authority",
+      "stateReads": [
+        {
+          "key": "nacre_exit_rights",
+          "mode": "all-values",
+          "values": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ]
+        },
+        {
+          "key": "nacre_weather_custody",
+          "mode": "all-values",
+          "values": [
+            "village_private_storm_rationed",
+            "farms_hold_weather_priority",
+            "watershed_council_governs_roof"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "nacre_forecast_authority",
+          "values": [
+            "residents_hold_personal_forecast_appeal",
+            "watershed_jury_rotates_weather_precedent",
+            "official_forecasts_lose_coercive_force"
+          ]
+        }
+      ],
+      "premise": "Mother Nacre's living roof now makes the least-contested official forecast occur, converting accepted exit rights and weather custody into competing authority over a future that has not happened.",
+      "primaryMechanicId": "litigate_forecasts_before_weather_occurs",
+      "dilemmaId": "public_predictability_without_commanding_climate",
+      "locationId": "nacre_open_sky_appeal_field",
+      "consequenceId": "nacre_forecast_authority",
+      "objectives": [
+        {
+          "type": "forecast_provenance_trace",
+          "target": "three_conflicting_weather_claims",
+          "required": 3
+        },
+        {
+          "type": "live_observation_staging",
+          "target": "five_exterior_exposure_towers",
+          "required": 5,
+          "rule": "Each observation must be materially possible and contradict a different operative clause."
+        },
+        {
+          "type": "standing_assignment",
+          "target": "exit_right_and_weather_custodian_pair"
+        },
+        {
+          "type": "precedent_seal_interruption",
+          "target": "weather_edict_widow",
+          "rule": "Interrupt by proving an unrepresented observation, never by routing weather elsewhere."
+        },
+        {
+          "type": "forecast_constitution",
+          "target": "nacre_forecast_authority"
+        }
+      ],
+      "outcomes": [
+        "residents_hold_personal_forecast_appeal",
+        "watershed_jury_rotates_weather_precedent",
+        "official_forecasts_lose_coercive_force"
+      ],
+      "rewardItemIds": [
+        "barometer_of_unhappened_rain"
+      ],
+      "loreReveal": "Charnel roofs first forecast swallowed storms so evacuees could choose whether to flee; later custodians discovered a forecast became cheaper when the roof enforced it.",
+      "dialogueThesis": "Prediction becomes coercion when authority can punish the sky for disagreeing.",
+      "authorshipProof": {
+        "setpiece": "Five open-air observation towers lean beneath mutually exclusive skies while a black-nacre widow stitches the least-contested forecast into the clouds.",
+        "failureTransformation": "A falsely certified forecast becomes a recurring dated weather event over one exterior landmark, binding future planting and travel without moving any room or body.",
+        "dialogueConstraint": "Bessa accepts a weather claim only after its author names the observation that could prove it wrong and the person with standing to present that observation.",
+        "persistentWorldChange": "Forecast appeal becomes personal, rotates through a watershed jury, or loses all coercive force at the cost of public predictability.",
+        "forbiddenSubstitution": "No body carries weather, no door routes pressure, no burden is redirected, and no interior relocates; the verb is adversarial testing of future public knowledge."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "reaction_machine_widowed_minute",
+      "chainId": "mortality_in_dawn_engine",
+      "order": 5,
+      "type": "world",
+      "portfolioId": "world_state_reaction",
+      "title": "The Machine's Widowed Minute",
+      "giverId": "tor_vannic_defector_of_dawn",
+      "supportingCharacterIds": [
+        "nell_orrery_minute_widow"
+      ],
+      "creatureIds": [
+        "arrear_seraph"
+      ],
+      "stateDomain": "infrastructure",
+      "stateReads": [
+        {
+          "key": "dawn_control_identity",
+          "mode": "all-values",
+          "values": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ]
+        },
+        {
+          "key": "dawn_inherited_maintenance_cost",
+          "mode": "all-values",
+          "values": [
+            "maintenance_cost_individually_appealable",
+            "institutional_cost_expires_and_revotes",
+            "benefit_and_cost_return_to_engine"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "dawn_time_debt_custody",
+          "values": [
+            "missing_minute_completed_wear_becomes_public",
+            "unelapsed_district_recognized_and_sealed",
+            "time_debt_rotates_across_beneficiaries"
+          ]
+        }
+      ],
+      "premise": "Every dawn-engine shutdown displaced the same mortal minute beneath Cinderward, where technicians have lived generations between two ticks and now dispute who may end their entire history.",
+      "primaryMechanicId": "spend_elapsed_time_as_testimony",
+      "dilemmaId": "finish_stolen_time_preserve_enclave_or_distribute_aging",
+      "locationId": "unelapsed_minute_beneath_cinderward",
+      "consequenceId": "dawn_time_debt_custody",
+      "objectives": [
+        {
+          "type": "control_proof_selection",
+          "target": "first_unelapsed_second"
+        },
+        {
+          "type": "stopped_history_crossing",
+          "target": "four_shutdown_neighborhoods",
+          "required": 4
+        },
+        {
+          "type": "cost_clock_matching",
+          "target": "inherited_cost_forms_and_clock_organs",
+          "required": 3
+        },
+        {
+          "type": "acknowledged_wear_countermeasure",
+          "target": "arrear_seraph"
+        },
+        {
+          "type": "final_second_disposition",
+          "target": "dawn_time_debt_custody"
+        }
+      ],
+      "outcomes": [
+        "missing_minute_completed_wear_becomes_public",
+        "unelapsed_district_recognized_and_sealed",
+        "time_debt_rotates_across_beneficiaries"
+      ],
+      "rewardItemIds": [
+        "minute_that_can_sue"
+      ],
+      "loreReveal": "The Synod made miracles appear continuous by displacing interruption into mortal service spaces and defining technicians' lived time as forgettable.",
+      "dialogueThesis": "An omitted minute can contain a civilization even when the clock calls it nothing.",
+      "authorshipProof": {
+        "setpiece": "A twelve-winged seraph walks backward across one stopped second while generations live beneath its feet and Cinderward rusts above.",
+        "failureTransformation": "Wrong proof still advances the second but ages its witness into real district memories, creating a new future claimant rather than a retry.",
+        "dialogueConstraint": "Inside the minute, calendar units are forbidden; duration may be named only through completed or refused obligations.",
+        "persistentWorldChange": "Cinderward accepts accumulated wear, recognizes a sealed society inside one minute, or rotates temporal debt among beneficiaries.",
+        "forbiddenSubstitution": "Maintenance schedules and cost appeals are settled inputs; the playable space is accumulated missing duration and every advance ages another society."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "faction_heresy_gentle_horizon",
+      "chainId": "lucent_synod_schism",
+      "order": 1,
+      "type": "faction",
+      "portfolioId": "faction_schism",
+      "title": "The Heresy of a Gentle Horizon",
+      "giverId": "arch_lumen_seraphel_orr",
+      "supportingCharacterIds": [
+        "subcanon_liora_seventh_apology"
+      ],
+      "creatureIds": [
+        "contrition_oculus"
+      ],
+      "stateDomain": "authority",
+      "stateReads": [
+        {
+          "key": "campaign_cosmology_ending",
+          "mode": "all-values",
+          "values": [
+            "mortal_dawn",
+            "synod_full_restoration",
+            "negotiated_dusk",
+            "sun_refused_world_continues_dying"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "synod_imperfect_miracle_sainthood",
+          "values": [
+            "refusal_canonized_as_law_of_light",
+            "gentle_horizon_abolished_liora_freed",
+            "restoration_discharged_into_consenting_chapter"
+          ]
+        }
+      ],
+      "premise": "A Lucent chapter's dawn stops at valid thresholds, but every unperformed restoration accumulates around Subcanon Liora, forcing the post-ending Synod to decide whether refusal can be sacred without another coerced vessel.",
+      "primaryMechanicId": "make_a_miracle_demonstrate_its_refusal",
+      "dilemmaId": "limited_salvation_coerced_vessel_or_perfect_doctrine",
+      "locationId": "cathedral_of_six_rehearsed_dawns",
+      "consequenceId": "synod_imperfect_miracle_sainthood",
+      "objectives": [
+        {
+          "type": "doctrinal_position_hearing",
+          "target": "three_lucent_claims",
+          "required": 3
+        },
+        {
+          "type": "horizon_transport",
+          "target": "six_damaged_communities",
+          "required": 6
+        },
+        {
+          "type": "refusal_demonstration",
+          "target": "memory_anatomy_shadow_agriculture_architecture_time",
+          "required": 6,
+          "rule": "Each subject must have a materially possible benefit and refusal."
+        },
+        {
+          "type": "vessel_pressure_release",
+          "target": "liora_seventh_apology"
+        },
+        {
+          "type": "sainthood_adjudication",
+          "target": "synod_imperfect_miracle_sainthood"
+        }
+      ],
+      "outcomes": [
+        "refusal_canonized_as_law_of_light",
+        "gentle_horizon_abolished_liora_freed",
+        "restoration_discharged_into_consenting_chapter"
+      ],
+      "rewardItemIds": [
+        "indulgence_uncrossed_horizon"
+      ],
+      "loreReveal": "Refusal was once a law of the First Light; the early Synod removed it because a sun capable of declining worship could not guarantee restoration.",
+      "dialogueThesis": "A mercy that cannot stop is merely conquest with a healer's hands.",
+      "authorshipProof": {
+        "setpiece": "Six beautiful horizons fold like cathedral wings around Liora while a white-gold eye holds thousands of healing hands one finger-width from contact.",
+        "failureTransformation": "A failed refusal restores the target and vitrifies its lost adaptation into a silent exterior panel that obstructs later demonstrations without speaking or gaining standing.",
+        "dialogueConstraint": "No apology is admissible before the act is named, and no refusal counts unless the subject retains a materially possible alternative.",
+        "persistentWorldChange": "The Synod canonizes refusal, abolishes its limited dawn to free Liora, or legitimizes a consenting chapter as restoration discharge.",
+        "forbiddenSubstitution": "The cosmic regime is already fixed; this quest tests institutional reproduction of restraint rather than selecting or assembling a sun."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "faction_hunger_asked_taxed",
+      "chainId": "charnel_night_schism",
+      "order": 1,
+      "type": "faction",
+      "portfolioId": "faction_schism",
+      "title": "The Hunger That Asked to Be Taxed",
+      "giverId": "prince_thirteen_throats",
+      "supportingCharacterIds": [
+        "vekh_tallowmouth_appetite_assessor"
+      ],
+      "creatureIds": [
+        "appetite_bailiff"
+      ],
+      "stateDomain": "obligation",
+      "stateReads": [
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "values": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "charnel_appetite_levy",
+          "values": [
+            "licensed_feeding_requires_embodied_reparation",
+            "fear_commons_worker_owned_and_revocable",
+            "appetite_law_refused_each_hunt_personally_answerable"
+          ]
+        }
+      ],
+      "premise": "The Charnel Night tries to assess and repay feeding, but a regulated appetite may acquire legal title to victims while voluntary fear work becomes a livelihood too poor to refuse.",
+      "primaryMechanicId": "price_hunger_by_withheld_consumption",
+      "dilemmaId": "govern_predation_legitimize_it_or_leave_hunts_personal",
+      "locationId": "fear_exchange_beneath_thirteen_tables",
+      "consequenceId": "charnel_appetite_levy",
+      "objectives": [
+        {
+          "type": "concealed_appetite_identification",
+          "target": "appetite_bailiff",
+          "required": 4
+        },
+        {
+          "type": "fear_worker_exit_contract",
+          "target": "revocable_performers",
+          "required": 3
+        },
+        {
+          "type": "restraint_lot_staging",
+          "target": "begun_unconsumed_meals",
+          "required": 3,
+          "rule": "Value exists only when attack readiness fully cues and the predator voluntarily stops."
+        },
+        {
+          "type": "licensed_feeding_audit",
+          "target": "claimed_accident"
+        },
+        {
+          "type": "appetite_constitution",
+          "target": "charnel_appetite_levy"
+        }
+      ],
+      "outcomes": [
+        "licensed_feeding_requires_embodied_reparation",
+        "fear_commons_worker_owned_and_revocable",
+        "appetite_law_refused_each_hunt_personally_answerable"
+      ],
+      "rewardItemIds": [
+        "edible_tariff"
+      ],
+      "loreReveal": "Ritual terror synchronized incompatible hungers so smaller demons could survive without eating bodies; rationing became cruelty after the emergency became culture.",
+      "dialogueThesis": "A measured hunger may be safer and still become a privilege that purchases victims.",
+      "authorshipProof": {
+        "setpiece": "A nested-jaw bailiff kneels before a worker while thirteen wet ledgers measure the bite it has fully prepared and not taken.",
+        "failureTransformation": "Completed feeding preserves the victim as a speaking claim inside the predator's rib-ledger, making reparations bodily enforceable and impossible to silence.",
+        "dialogueConstraint": "Need, nature, and voluntary are forbidden unless the speaker names the available alternative, the person who can leave, and the body that would starve.",
+        "persistentWorldChange": "Feeding gains embodied reparation, fear labor becomes worker-owned, or appetite remains outside institutions but personally answerable.",
+        "forbiddenSubstitution": "No treaty mapping or ordinary market can substitute because value is created only by voluntary restraint at the final readable instant before a real meal."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "character_saint_cannot_inherit_body",
+      "chainId": "vespera_two_person_estate",
+      "order": 1,
+      "type": "character",
+      "portfolioId": "character_guest_follower",
+      "title": "A Saint Cannot Inherit Her Own Body",
+      "giverId": "saint_vespera_second_shadow",
+      "supportingCharacterIds": [
+        "cera_invi_probate_advocate"
+      ],
+      "creatureIds": [],
+      "stateDomain": "obligation",
+      "stateReads": [
+        {
+          "key": "vespera_shadow_relation",
+          "mode": "all-values",
+          "values": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "vespera_mortal_estate",
+          "values": [
+            "vespera_accepts_source_rights_and_debts",
+            "source_and_saint_legally_distinct_dependants_protected",
+            "saint_source_estates_become_public_restitution_trust"
+          ]
+        }
+      ],
+      "premise": "The mortal woman consumed to construct Vespera left debts, dependants, crimes, and rights in rooms inside the saint's veil, but continuity could let the institution that consumed her inherit its victim.",
+      "primaryMechanicId": "partition_autonomous_companion_senses_for_probate",
+      "dilemmaId": "continuity_with_liability_distinction_or_public_restitution",
+      "locationId": "mortal_estate_inside_vespera_veil",
+      "consequenceId": "vespera_mortal_estate",
+      "objectives": [
+        {
+          "type": "autonomous_entry_contract",
+          "target": "saint_vespera_second_shadow"
+        },
+        {
+          "type": "vetoable_estate_traversal",
+          "target": "four_probate_rooms",
+          "required": 4
+        },
+        {
+          "type": "sense_partition",
+          "target": "sight_heat_speech_shadow",
+          "required": 4,
+          "rule": "Vespera selects the active sense mode from trust state; the player cannot issue the selection."
+        },
+        {
+          "type": "cross_mode_evidence_filing",
+          "target": "cera_invi_probate_advocate"
+        },
+        {
+          "type": "estate_disposition",
+          "target": "vespera_mortal_estate"
+        }
+      ],
+      "outcomes": [
+        "vespera_accepts_source_rights_and_debts",
+        "source_and_saint_legally_distinct_dependants_protected",
+        "saint_source_estates_become_public_restitution_trust"
+      ],
+      "rewardItemIds": [
+        "bifurcated_estate_key"
+      ],
+      "loreReveal": "Sainthood contracts preserved a source body's obligations as obedience fuel while treating the same person's rights as abandoned property.",
+      "dialogueThesis": "Continuity is unjust when duties survive the person but rights do not.",
+      "authorshipProof": {
+        "setpiece": "Vespera crosses a cottage magnified to cathedral scale while her articulated second shadow carries mortal furniture she cannot perceive in light-sense.",
+        "failureTransformation": "Misfiled evidence becomes an interim heir with temporary control of one companion sense, changing later autonomous behavior instead of resetting the room.",
+        "dialogueConstraint": "Vespera answers continuity once as office and once as person; neither answer may contradict an act already performed, and the player cannot demand reconciliation.",
+        "persistentWorldChange": "Vespera becomes a rights-and-debts continuation, remains distinct with dependants protected, or opens a restitution trust for saint-source estates.",
+        "forbiddenSubstitution": "The earlier two-shadow inquiry settles identity relation; this quest partitions autonomous perception to allocate predecessor rights and executable duties."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "character_thirteen_pilgrims_one_feet",
+      "chainId": "prince_mobile_polity",
+      "order": 1,
+      "type": "character",
+      "portfolioId": "character_guest_follower",
+      "title": "Thirteen Pilgrims, One Pair of Feet",
+      "giverId": "prince_thirteen_throats",
+      "supportingCharacterIds": [
+        "iro_pennant_without_wind"
+      ],
+      "creatureIds": [
+        "unsounded_host"
+      ],
+      "stateDomain": "admission",
+      "stateReads": [
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "values": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "prince_traveling_quorum",
+          "values": [
+            "polity_admitted_as_one_revocable_traveler",
+            "each_voice_holds_independent_border_exit",
+            "destinations_appoint_temporary_throats"
+          ]
+        }
+      ],
+      "premise": "The Prince must cross three borders on a road where every step is a vote, dissent becomes direction, and abstention gives a horrifying guardian of unrepresented positions the right to travel.",
+      "primaryMechanicId": "walk_by_collective_motion_quorum",
+      "dilemmaId": "collective_mobility_individual_exit_or_destination_representation",
+      "locationId": "road_that_moves_only_by_vote",
+      "consequenceId": "prince_traveling_quorum",
+      "objectives": [
+        {
+          "type": "constituency_reconstruction",
+          "target": "thirteen_current_positions",
+          "required": 13
+        },
+        {
+          "type": "multimodal_step_ballot",
+          "target": "weight_pace_silence_and_sound",
+          "required": 4,
+          "rule": "Every player proposal triggers independent companion positions before movement resolves."
+        },
+        {
+          "type": "border_law_crossing",
+          "target": "body_voice_and_silence_jurisdictions",
+          "required": 3
+        },
+        {
+          "type": "midstep_exit_execution",
+          "target": "one_constituent_safe_departure"
+        },
+        {
+          "type": "destination_admission",
+          "target": "prince_traveling_quorum"
+        }
+      ],
+      "outcomes": [
+        "polity_admitted_as_one_revocable_traveler",
+        "each_voice_holds_independent_border_exit",
+        "destinations_appoint_temporary_throats"
+      ],
+      "rewardItemIds": [
+        "walking_quorum"
+      ],
+      "loreReveal": "The Prince began as a refugee road-engine; consumed throats were a violent shortcut that made temporary border representation permanent.",
+      "dialogueThesis": "A collective remains a prison if dissent may speak but cannot change where the body goes.",
+      "authorshipProof": {
+        "setpiece": "One headless body walks on delicate feet while thirteen throat collars lean toward different horizons and an immense absence carries unchosen roads overhead.",
+        "failureTransformation": "A failed quorum lets the Unsounded Host take the step for the absent constituency, creating a real destination obligation rather than stopping travel.",
+        "dialogueConstraint": "Spoken majority is inadmissible; weight, pace, silence, and sound positions must be named separately, and the Prince cannot summarize dissent.",
+        "persistentWorldChange": "The Prince becomes one revocable traveler, every voice gains independent border exit, or destinations appoint temporary throats.",
+        "forbiddenSubstitution": "A stationary vote or escort cannot substitute because votes are locomotion, dissent creates geography, and the companion autonomously resolves every step."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "regional_cairns_keep_winter",
+      "chainId": "graven_march_sleeping_stone",
+      "order": 1,
+      "type": "regional",
+      "portfolioId": "regional",
+      "title": "The Winter the Cairns Learned to Keep",
+      "giverId": "king_ash_without_country",
+      "supportingCharacterIds": [
+        "dara_kest_heat_mourner"
+      ],
+      "creatureIds": [
+        "winter_cairn_choir"
+      ],
+      "stateDomain": "ecology",
+      "stateReads": [
+        {
+          "key": "dead_settlement_claims",
+          "mode": "all-values",
+          "values": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "ecology",
+          "key": "graven_cairn_winter",
+          "values": [
+            "unused_road_corridor_preserves_cairn_breeding",
+            "march_villages_share_seasonal_hibernation",
+            "artificial_grave_warmth_ends_herd_disperses"
+          ]
+        }
+      ],
+      "premise": "Accepted dead-settlement law has left grave heat diffuse, household-concentrated, or migratory, and Cairn Beasts can no longer complete the cold interval required to breed.",
+      "primaryMechanicId": "compose_hibernation_from_deliberate_absence",
+      "dilemmaId": "ecological_winter_public_access_or_species_continuity",
+      "locationId": "graven_march_black_pine_occlusion_basin",
+      "consequenceId": "graven_cairn_winter",
+      "objectives": [
+        {
+          "type": "molting_den_survey",
+          "target": "three_failed_hibernation_sites",
+          "required": 3
+        },
+        {
+          "type": "heat_topology_classification",
+          "target": "accepted_dead_claim_outcome"
+        },
+        {
+          "type": "black_pine_occlusion_composition",
+          "target": "five_unused_intervals",
+          "required": 5,
+          "rule": "Create cold by preventing footfall and light; do not transfer grave heat or move a body."
+        },
+        {
+          "type": "beast_cadence_rehearsal",
+          "target": "winter_cairn_choir"
+        },
+        {
+          "type": "seasonal_access_constitution",
+          "target": "graven_cairn_winter"
+        }
+      ],
+      "outcomes": [
+        "unused_road_corridor_preserves_cairn_breeding",
+        "march_villages_share_seasonal_hibernation",
+        "artificial_grave_warmth_ends_herd_disperses"
+      ],
+      "rewardItemIds": [
+        "calendar_of_unwalked_steps"
+      ],
+      "loreReveal": "Cairn Beasts breed not from corpse heat but from the first cold interval after mourners stop returning; continuous political attention accidentally sterilized them.",
+      "dialogueThesis": "A road can be public infrastructure and still owe an ecosystem the season in which nobody uses it.",
+      "authorshipProof": {
+        "setpiece": "Five black-pine shadows eclipse a basin in sequence while a choir of dormant stones lifts one note only when the last road falls still.",
+        "failureTransformation": "A premature cadence puts one public road into non-destructive stone torpor until the next seasonal window, rerouting trade while the herd continues hibernation.",
+        "dialogueConstraint": "Dara permits no claim about the dead; speakers must name an observed animal behavior, an access interval, and the livelihood that loses that interval.",
+        "persistentWorldChange": "The March preserves a closed-road breeding corridor, shares hibernation with its villages, or ends artificial warmth and disperses the cairn herd.",
+        "forbiddenSubstitution": "No burial, corpse, descendant, speaking authority, host, organ, heat transfer, or custody hearing performs the dramatic work; the player authors winter through deliberate public absence."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "regional_flood_learned_last_name",
+      "chainId": "dunmire_upstream_dead",
+      "order": 1,
+      "type": "regional",
+      "portfolioId": "regional",
+      "title": "The Flood That Learned a Last Name",
+      "giverId": "enoch_last_lamplighter",
+      "supportingCharacterIds": [
+        "moth_winn_surname_ferryman"
+      ],
+      "creatureIds": [
+        "sluice_son"
+      ],
+      "stateDomain": "admission",
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "dunmire_reflection_kinship",
+          "values": [
+            "sluice_son_admitted_as_heir_with_duties",
+            "reflection_classed_as_public_flood_body",
+            "surname_released_reverse_estuary_unowned"
+          ]
+        }
+      ],
+      "premise": "A blackwater reflection has taken a dead family's surname and saves houses by absorbing floods, making every rescue evidence that it is family and therefore owed inheritance, burial, and a body.",
+      "primaryMechanicId": "braid_performed_kinship_into_upstream_water",
+      "dilemmaId": "family_by_rescue_public_service_or_unowned_wetland",
+      "locationId": "dunmire_uphill_drowning_genealogy",
+      "consequenceId": "dunmire_reflection_kinship",
+      "objectives": [
+        {
+          "type": "saved_house_trace",
+          "target": "three_rescued_households",
+          "required": 3
+        },
+        {
+          "type": "calendar_branch_relationship_proof",
+          "target": "accepted_bond_history"
+        },
+        {
+          "type": "non_genealogical_name_braid",
+          "target": "four_uphill_confluences",
+          "required": 4
+        },
+        {
+          "type": "heirloom_room_rescue_test",
+          "target": "sluice_son"
+        },
+        {
+          "type": "kinship_while_flooding_hearing",
+          "target": "dunmire_reflection_kinship"
+        }
+      ],
+      "outcomes": [
+        "sluice_son_admitted_as_heir_with_duties",
+        "reflection_classed_as_public_flood_body",
+        "surname_released_reverse_estuary_unowned"
+      ],
+      "rewardItemIds": [
+        "name_sluice_ferrule"
+      ],
+      "loreReveal": "Dunmire surnames began as flood routes families promised to maintain; drowned water later reversed the covenant and claimed its maintainers.",
+      "dialogueThesis": "Kinship may begin as a duty, but performing rescue does not automatically entitle anyone to a body.",
+      "authorshipProof": {
+        "setpiece": "An inverted pitch-water child climbs a staircase-family-tree with reflected houses suspended inside its transparent torso.",
+        "failureTransformation": "False relation detaches the witness's oldest memory-room into the Sluice Son, preserving it while the former owner may enter only as a guest.",
+        "dialogueConstraint": "Every family noun must become a performed verb, followed by one possibly false memory and one rescue still owed without resemblance.",
+        "persistentWorldChange": "The reflection becomes an heir with duties, a public flood body, or a nameless reverse estuary.",
+        "forbiddenSubstitution": "Genealogical investigation or flood control cannot substitute because relationship evidence physically raises water uphill and dispossesses memory rooms on false proof."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "settlement_street_must_burn_once",
+      "chainId": "cinderward_civic_furnace",
+      "order": 1,
+      "type": "side",
+      "portfolioId": "settlement",
+      "title": "The Street That Must Burn Once",
+      "giverId": "enoch_last_lamplighter",
+      "supportingCharacterIds": [
+        "mayor_sile_rusk_chimney_elected"
+      ],
+      "creatureIds": [],
+      "stateDomain": "infrastructure",
+      "stateReads": [],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "cinderward_sacrificial_address",
+          "values": [
+            "archive_burns_pressure_released_history_displaced",
+            "all_streets_share_permanent_fire_scar",
+            "civic_office_burns_district_self_governs"
+          ]
+        }
+      ],
+      "premise": "Cinderward survives by burning one full street each generation, but its furnace has learned six cycles of fraudulent address transfers and will now ignite whichever address the town publicly praises most.",
+      "primaryMechanicId": "readdress_buildings_while_fire_reads_reputation",
+      "dilemmaId": "necessary_loss_equal_risk_or_vacant_government",
+      "locationId": "cinderward_readdressing_district",
+      "consequenceId": "cinderward_sacrificial_address",
+      "objectives": [
+        {
+          "type": "soot_direction_audit",
+          "target": "six_historic_address_transfers",
+          "required": 6
+        },
+        {
+          "type": "building_function_testimony",
+          "target": "occupied_structures"
+        },
+        {
+          "type": "live_reputation_readdressing",
+          "target": "four_civic_address_plates",
+          "required": 4,
+          "rule": "Praise, blame, and silence continue changing the fire's legal target while plates move."
+        },
+        {
+          "type": "flame_address_entry",
+          "target": "approaching_legal_fire"
+        },
+        {
+          "type": "unavoidable_loss_assignment",
+          "target": "cinderward_sacrificial_address"
+        }
+      ],
+      "outcomes": [
+        "archive_burns_pressure_released_history_displaced",
+        "all_streets_share_permanent_fire_scar",
+        "civic_office_burns_district_self_governs"
+      ],
+      "rewardItemIds": [
+        "municipal_firebrand_empty_office"
+      ],
+      "loreReveal": "The founders rotated sacrifice among vacant civic offices; hereditary mayors turned those offices into homes and erased the distinction.",
+      "dialogueThesis": "A fair sacrifice remains violence, but a hidden sacrifice also teaches government whose homes do not count.",
+      "authorshipProof": {
+        "setpiece": "An inhabited street rises around a furnace like an iron crown while address plates orbit and fire spells the name the town loves most.",
+        "failureTransformation": "A wrong transfer burns one room and permanently moves its civic function into the next building that receives the address.",
+        "dialogueConstraint": "No place may be praised until the speaker names what they would permit that place to lose; compliments are live ignition cues.",
+        "persistentWorldChange": "The archive burns and history migrates, every street bears a fire scar, or the civic office burns and the district self-governs.",
+        "forbiddenSubstitution": "Evacuation or choosing a building cannot substitute because addresses, reputation, civic functions, and physical streets move independently."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "id": "profession_bell_paid_in_silence",
+      "chainId": "hollow_abbey_labor_of_sound",
+      "order": 1,
+      "type": "side",
+      "portfolioId": "profession_systemic",
+      "title": "A Bell Is Paid in Silence",
+      "giverId": "deacon_halix_bell_of_noon",
+      "supportingCharacterIds": [
+        "ader_coil_deaf_bellwright"
+      ],
+      "creatureIds": [],
+      "stateDomain": "obligation",
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "abbey_silence_labor",
+          "values": [
+            "future_silence_individually_paid_and_revocable",
+            "quiet_collectivized_as_labor_commons",
+            "bell_refused_halix_carries_erased_names"
+          ]
+        }
+      ],
+      "premise": "Hollow Abbey can cast a bell that restores names erased by Halix, but every operation is paid with a specific future social silence taken from a worker, beneficiary, or institution.",
+      "primaryMechanicId": "escrow_future_silence_as_craft_wage",
+      "dilemmaId": "restore_names_spend_worker_futures_or_refuse_craft",
+      "locationId": "hollow_abbey_foundry_of_borrowed_quiet",
+      "consequenceId": "abbey_silence_labor",
+      "objectives": [
+        {
+          "type": "mortgaged_silence_inspection",
+          "target": "apprentice_wage_records"
+        },
+        {
+          "type": "state_conditioned_bell_profile",
+          "target": "calendar_and_maintenance_pair"
+        },
+        {
+          "type": "nonrhythmic_craft_sequence",
+          "target": "sleep_secrecy_refusal_mourning_concentration_truce_death",
+          "required": 7,
+          "rule": "Cooling physics fixes operation order; music cannot solve it."
+        },
+        {
+          "type": "wage_theft_noise_interruption",
+          "target": "stolen_future_refusal"
+        },
+        {
+          "type": "advance_funeral_and_final_cast",
+          "target": "abbey_silence_labor"
+        }
+      ],
+      "outcomes": [
+        "future_silence_individually_paid_and_revocable",
+        "quiet_collectivized_as_labor_commons",
+        "bell_refused_halix_carries_erased_names"
+      ],
+      "rewardItemIds": [
+        "wage_clapper"
+      ],
+      "loreReveal": "The Hush Order's vow began as skilled-labor compensation; abbey rulers converted earned quiet into obedience and concealed that sacred silence was owed wages.",
+      "dialogueThesis": "Silence is not free merely because the person who paid it cannot be heard.",
+      "authorshipProof": {
+        "setpiece": "Seven visible rooms containing future silences orbit a molten bell while deaf artisans hammer by watching black-water ripples.",
+        "failureTransformation": "A flawed operation immediately spends the nearest pledged silence and leaves its lost social function as a crack with a named creditor.",
+        "dialogueConstraint": "Every wage promise must be repeated as a visible act that stages the exact future scene from which quiet will be taken.",
+        "persistentWorldChange": "Future silence becomes revocable pay, quiet becomes a labor commons, or Halix personally carries every erased name.",
+        "forbiddenSubstitution": "Resource gathering, rhythm play, and ordinary crafting cannot substitute because wages are future social events and failure spends one immediately."
+      }
+    }
+  ]
+}

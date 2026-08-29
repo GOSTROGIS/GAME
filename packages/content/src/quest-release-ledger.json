@@ -64,14 +64,38 @@
         {"id":"aftermath_maintenance_window_miracle","portfolio":"profession_systemic","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
         {"id":"aftermath_person_engine_must_outlive","portfolio":"character_guest_follower","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]}
       ]
+    },
+    {
+      "id": "quest-batch-0003",
+      "status": "accepted",
+      "packetPath": "design-review/quest-release-evidence/quest-batch-0003.packet.json",
+      "packetSha256": "5cd44a8f6e66c4dfa47d2c5db0952973e8ac843208bdbeccc00f5333aa1e80f9",
+      "collisionReportPath": "design-review/quest-release-evidence/quest-batch-0003.collision.json",
+      "collisionReportSha256": "534931bec583a017d61fe6b9716c072c72c4d4d92831e9182fbf3b7ffe4a91d2",
+      "stateReportPath": "design-review/quest-release-evidence/quest-batch-0003.state.json",
+      "stateReportSha256": "0b305c7ff971d7d0a40a25b7c51983f035a23c77ab79c836e0fa72eb02f776bb",
+      "quests": [
+        {"id":"aftermath_cost_that_learned_to_vote","portfolio":"world_state_reaction","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+        {"id":"reaction_orchard_casts_legal_shadow","portfolio":"world_state_reaction","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+        {"id":"reaction_rain_owes_door_answer","portfolio":"world_state_reaction","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+        {"id":"reaction_machine_widowed_minute","portfolio":"world_state_reaction","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+        {"id":"faction_heresy_gentle_horizon","portfolio":"faction_schism","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+        {"id":"faction_hunger_asked_taxed","portfolio":"faction_schism","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+        {"id":"character_saint_cannot_inherit_body","portfolio":"character_guest_follower","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+        {"id":"character_thirteen_pilgrims_one_feet","portfolio":"character_guest_follower","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+        {"id":"regional_cairns_keep_winter","portfolio":"regional","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+        {"id":"regional_flood_learned_last_name","portfolio":"regional","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+        {"id":"settlement_street_must_burn_once","portfolio":"settlement","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+        {"id":"profession_bell_paid_in_silence","portfolio":"profession_systemic","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]}
+      ]
     }
   ],
   "inReviewBatches": [
     {
-      "id": "quest-batch-0003",
-      "status": "open_for_wave_03",
+      "id": "quest-batch-0004",
+      "status": "open_for_wave_04",
       "quests": [
-        { "id": "aftermath_cost_that_learned_to_vote" }
+        { "id": "relic_mirror_gave_birth_elsewhere" }
       ]
     }
   ]

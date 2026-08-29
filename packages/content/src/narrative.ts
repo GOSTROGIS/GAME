@@ -1,5 +1,6 @@
 import {
   ALIGNMENT_HOOKS as alignmentHooksData,
+  COMPANION_QUEST_CONTRACTS as companionContractData,
   COSMIC_FACTIONS as factionData,
   EXPANSION_CHARACTERS as characterData,
   EXPANSION_PRINCIPALS as principalData,
@@ -58,6 +59,7 @@ export interface ExpansionCharacter {
   readonly alignmentOptions: readonly string[];
   readonly visualBrief: string;
   readonly questArcIds: readonly string[];
+  readonly ownedDecision?: string;
   readonly pipeline: ExpansionAssetPipeline;
 }
 
@@ -72,21 +74,39 @@ export interface ExpansionCreature {
   readonly combatRole: string;
   readonly anatomy: string;
   readonly locomotion: string;
+  readonly sound?: string;
   readonly ecology: string;
   readonly origin: string;
+  readonly purpose?: string;
   readonly mechanic: { readonly id: string; readonly cue: string; readonly counterplay: string };
   readonly narrativeUse: string;
   readonly visualBrief: string;
   readonly pipeline: ExpansionAssetPipeline;
 }
 
-export interface ExpansionItem {
+export interface ExpansionItemV1 {
+  readonly schemaVersion?: 1;
   readonly id: string;
   readonly name: string;
   readonly category: string;
   readonly mechanic: string;
   readonly lore: string;
 }
+
+export interface ExpansionArtifactV2 {
+  readonly schemaVersion: 2;
+  readonly id: string;
+  readonly name: string;
+  readonly category: string;
+  readonly mechanic: string;
+  readonly lore: string;
+  readonly custody: { readonly defaultHolderId: string; readonly transferRule: string };
+  readonly activation: { readonly evidence: readonly string[]; readonly procedure: string };
+  readonly cost: { readonly limitation: string; readonly worldDebt: string };
+  readonly laterContest: { readonly triggerStateKey: string; readonly contestedQuestion: string; readonly venue: string };
+}
+
+export type ExpansionItem = ExpansionItemV1 | ExpansionArtifactV2;
 
 export interface ExpansionQuestObjective {
   readonly type: string;
@@ -136,10 +156,48 @@ export interface ExpansionQuest {
   readonly authorshipProof: QuestAuthorshipProof;
 }
 
+export interface CompanionQuestContract {
+  readonly schemaVersion: 1;
+  readonly questId: string;
+  readonly companionId: string;
+  readonly mode: "autonomous_guest" | "autonomous_follower";
+  readonly entryReason: string;
+  readonly entryCondition: { readonly stateKey: string; readonly allowedValues: readonly string[] };
+  readonly independentAction: {
+    readonly id: string;
+    readonly trigger: string;
+    readonly playerOverride: false;
+    readonly behaviorByTrustValue?: Readonly<Record<string, string>>;
+    readonly behaviorByUpstreamValue?: Readonly<Record<string, string>>;
+    readonly trustModifier?: Readonly<Record<string, string>>;
+  };
+  readonly refusalActionIds: readonly string[];
+  readonly autonomousPriority: { readonly id: string; readonly whenPlayerDoesNothing: string };
+  readonly trust: {
+    readonly key: string;
+    readonly values: readonly string[];
+    readonly initialByUpstreamValue: Readonly<Record<string, string>>;
+    readonly transitions: readonly { readonly eventId: string; readonly from: string; readonly to: string }[];
+  };
+  readonly availability: {
+    readonly availableTrustValues: readonly string[];
+    readonly effectByTrustValue: Readonly<Record<string, string>>;
+    readonly violationCounter: { readonly key: string; readonly incrementEventId: string; readonly forcedExitAt: number };
+  };
+  readonly exit: {
+    readonly normalTrigger: string;
+    readonly normalAction: string;
+    readonly forcedTrigger: string;
+    readonly forcedAction: string;
+    readonly forcedOutcomeLock: string;
+  };
+  readonly pipeline: ExpansionAssetPipeline;
+}
+
 export interface NarrativeValidationResult {
   readonly valid: boolean;
   readonly errors: readonly { readonly path: string; readonly code: string; readonly message: string }[];
-  readonly stats: { readonly factions: number; readonly characters: number; readonly creatures: number; readonly items: number; readonly quests: number; readonly capacityTarget: number };
+  readonly stats: { readonly factions: number; readonly characters: number; readonly creatures: number; readonly items: number; readonly quests: number; readonly companionContracts: number; readonly capacityTarget: number };
 }
 
 export const NARRATIVE_TARGETS = targetsData as Readonly<{
@@ -176,11 +234,13 @@ export const EXPANSION_CREATURES = creatureData as readonly ExpansionCreature[];
 export const ALIGNMENT_HOOKS = alignmentHooksData as readonly { readonly characterId: string; readonly affinities: readonly string[]; readonly fracture: string }[];
 export const EXPANSION_ITEMS = itemData as readonly ExpansionItem[];
 export const EXPANSION_QUESTS = questData as readonly ExpansionQuest[];
+export const COMPANION_QUEST_CONTRACTS = companionContractData as readonly CompanionQuestContract[];
 
 export const EXPANSION_CHARACTER_BY_ID: ReadonlyMap<string, ExpansionCharacter> = new Map(EXPANSION_CHARACTERS.map((character) => [character.id, character]));
 export const EXPANSION_CREATURE_BY_ID: ReadonlyMap<string, ExpansionCreature> = new Map(EXPANSION_CREATURES.map((creature) => [creature.id, creature]));
 export const EXPANSION_ITEM_BY_ID: ReadonlyMap<string, ExpansionItem> = new Map(EXPANSION_ITEMS.map((item) => [item.id, item]));
 export const EXPANSION_QUEST_BY_ID: ReadonlyMap<string, ExpansionQuest> = new Map(EXPANSION_QUESTS.map((quest) => [quest.id, quest]));
+export const COMPANION_QUEST_CONTRACT_BY_KEY: ReadonlyMap<string, CompanionQuestContract> = new Map(COMPANION_QUEST_CONTRACTS.map((contract) => [`${contract.questId}|${contract.companionId}`, contract]));
 
 export function questSimilarity(left: ExpansionQuest, right: ExpansionQuest): number {
   return similarityData(left, right);
@@ -192,6 +252,7 @@ export function validateNarrativeExpansion(input?: {
   readonly creatures?: readonly ExpansionCreature[];
   readonly items?: readonly ExpansionItem[];
   readonly quests?: readonly ExpansionQuest[];
+  readonly companionContracts?: readonly CompanionQuestContract[];
 }): NarrativeValidationResult {
   return validateData(input) as NarrativeValidationResult;
 }
