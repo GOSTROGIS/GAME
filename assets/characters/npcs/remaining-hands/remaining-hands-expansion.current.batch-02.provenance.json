@@ -1,0 +1,188 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-remaining-hands-expansion-batch-02",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "promptPackets": [
+    {
+      "path": "assets/characters/npcs/remaining-hands/remaining-hands-expansion.batch-02.prompt.json",
+      "sha256": "6c0e6f0ad8c40e88de852a3970e5168c71e612fff850ce2993dba3cbd995b101"
+    },
+    {
+      "path": "assets/characters/npcs/remaining-hands/remaining-hands-expansion.batch-02.revisions-v2.json",
+      "sha256": "995a2dcf53c502c5f9f973cd986a97a869568ba354df9c83eb0f4222c9ec88ec"
+    }
+  ],
+  "independentReview": {
+    "path": "assets/characters/npcs/remaining-hands/remaining-hands-expansion.batch-02.reviews.json",
+    "sha256": "304e5aefabaaa19b5bf8e63dc8e5b18616929af8d0d2c5f2d2e0c12d4d7e10da",
+    "reviewerRoles": [
+      "coordinator-independent-review-wave02-remaining",
+      "charnel-owner-crossreview-wave02"
+    ]
+  },
+  "records": [
+    {
+      "id": "concept_master.mara_quoin_counter_deed",
+      "subjectId": "mara_quoin_counter_deed",
+      "familyId": "remaining_hands",
+      "rank": "support",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/mara-quoin-counter-deed-v1.png",
+      "sha256": "dccf62567d360f864daf8cd2f323eb1870281ecd06bacafac4d18135c9b503a1",
+      "bytes": 2119201,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "exact public direction hash retained; private execution context omitted",
+      "promptSha256": "184525a81c74e2a4438524c1b81a7f8d3ef9c76feea78d1b5c4be5b93dacaafa",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "dccf62567d360f864daf8cd2f323eb1870281ecd06bacafac4d18135c9b503a1"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.kessa_pale_absence_clerk",
+      "subjectId": "kessa_pale_absence_clerk",
+      "familyId": "remaining_hands",
+      "rank": "support",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/kessa-pale-absence-clerk-v1.png",
+      "sha256": "298ecbd7190adbb960aa4834e131ef4b01e4d3b087ebefb87be4408d845d9ce2",
+      "bytes": 2127698,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "exact public direction hash retained; private execution context omitted",
+      "promptSha256": "2eb79649439b7d7270b3b32a7f74c9c8140a6f01e57307d4f5f7658018563bf7",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "298ecbd7190adbb960aa4834e131ef4b01e4d3b087ebefb87be4408d845d9ce2"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.hobb_marr_shade_driver",
+      "subjectId": "hobb_marr_shade_driver",
+      "familyId": "remaining_hands",
+      "rank": "support",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/hobb-marr-shade-driver-v1.png",
+      "sha256": "b9fc2968269eec7b07b41bda68ba6364c7ba6b9291dd734b03c657f6004e48b3",
+      "bytes": 1874451,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "exact public direction hash retained; private execution context omitted",
+      "promptSha256": "aa44c985075c91bf5b0d5768ce8932bcf69636ef806c4fe8bcb93a6eae8b3ac7",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "generate",
+        "outputSha256": "b9fc2968269eec7b07b41bda68ba6364c7ba6b9291dd734b03c657f6004e48b3"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.gannet_triune_veto_clerk",
+      "subjectId": "gannet_triune_veto_clerk",
+      "familyId": "remaining_hands",
+      "rank": "support",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/gannet-triune-veto-clerk-v1.png",
+      "sha256": "961d865aa6deefb006e8aa8c030e3625e053e38fa7ec3a5724b8e7f29bc32e45",
+      "bytes": 1913775,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "exact public direction hash retained; private execution context omitted",
+      "promptSha256": "61b02cf6503c5b2b7b961a4d86a528e3316cc6507dfc812e7a363a6ff5946ceb",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "generate",
+        "outputSha256": "961d865aa6deefb006e8aa8c030e3625e053e38fa7ec3a5724b8e7f29bc32e45"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.jorem_mortality_bearer",
+      "subjectId": "jorem_mortality_bearer",
+      "familyId": "remaining_hands",
+      "rank": "support",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/jorem-mortality-bearer-v1.png",
+      "sha256": "20a859c30de5ea562ebb8e005bd64ddbe3f29bf367712f7da979e685c42f0015",
+      "bytes": 1981255,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "exact public direction hash retained; private execution context omitted",
+      "promptSha256": "0af6b24730efa8427841e1815ce0ac62bf069b2b431707c5fcba9fcb5b2c6e27",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "generate",
+        "outputSha256": "20a859c30de5ea562ebb8e005bd64ddbe3f29bf367712f7da979e685c42f0015"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.della_quorum_unseated_cost",
+      "subjectId": "della_quorum_unseated_cost",
+      "familyId": "remaining_hands",
+      "rank": "support",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/remaining-hands/della-quorum-unseated-cost-v1.png",
+      "sha256": "042a185697b53a9457afdadc91e9c1bcea2dab24af941563eab373eb3d63dbdc",
+      "bytes": 1983338,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "exact public direction hash retained; private execution context omitted",
+      "promptSha256": "898f540e63e604810421ddbe6527f84da20837c1ae2305045f051ab6531100df",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "042a185697b53a9457afdadc91e9c1bcea2dab24af941563eab373eb3d63dbdc"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

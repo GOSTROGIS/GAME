@@ -82,6 +82,12 @@ const fixture = String.raw`<!doctype html>
       'king_ash_without_country',
       'nima_sorn_keeper_of_one_shadow',
       'oren_lusk_last_calendarer',
+      'mara_quoin_counter_deed',
+      'kessa_pale_absence_clerk',
+      'hobb_marr_shade_driver',
+      'gannet_triune_veto_clerk',
+      'jorem_mortality_bearer',
+      'della_quorum_unseated_cost',
     ]);
     const acceptedRemaining = subjects.filter(({ contentId }) => acceptedRemainingIds.has(contentId));
     const images = await Promise.all([
@@ -155,8 +161,8 @@ try {
   assert.equal(result.counts.foundingTotal, 228);
   assert.equal(await page.locator('[data-subject-id]').count(), result.subjectCount);
   assert.equal(result.acceptedCharnel.length, 12);
-  assert.equal(result.acceptedRemaining.length, 6);
-  assert.equal(new Set(result.images.map(({ id }) => id)).size, 20);
+  assert.equal(result.acceptedRemaining.length, 12);
+  assert.equal(new Set(result.images.map(({ id }) => id)).size, 26);
   for (const subject of [...result.acceptedCharnel, ...result.acceptedRemaining]) {
     assert.equal(subject.artStatus, 'accepted');
     assert.equal(subject.tier, 'queued');
