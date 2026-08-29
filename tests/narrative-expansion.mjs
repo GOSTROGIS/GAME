@@ -57,6 +57,12 @@ const acceptedExpansionMasters = new Map([
   ['jointless_advocate', 'assets/bestiary/forms/charnel-households/jointless-advocate-v1.png'],
   ['mercy_eater', 'assets/bestiary/forms/charnel-households/mercy-eater-v1.png'],
   ['corridor_maw', 'assets/bestiary/forms/charnel-households/corridor-maw-v1.png'],
+  ['tima_vale_twice_born', 'assets/characters/npcs/charnel-households/tima-vale-twice-born-v1.png'],
+  ['parn_exit_law', 'assets/characters/npcs/charnel-households/parn-exit-law-v1.png'],
+  ['orra_rain_in_ribs', 'assets/characters/npcs/charnel-households/orra-rain-in-ribs-v1.png'],
+  ['pell_nacreyear_road_witness', 'assets/characters/npcs/remaining-hands/pell-nacreyear-road-witness-v1.png'],
+  ['threshold_lamb', 'assets/bestiary/forms/charnel-households/threshold-lamb-v1.png'],
+  ['eave_lung', 'assets/bestiary/forms/charnel-weather/eave-lung-v1.png'],
 ]);
 
 const unique = (records, selector) => new Set(records.map(selector)).size === records.length;

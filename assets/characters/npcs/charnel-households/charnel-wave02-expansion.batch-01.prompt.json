@@ -1,0 +1,220 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "charnel-wave02-concept-masters-batch-01",
+  "status": "immutable-before-generation",
+  "authority": "GAME current canonical records",
+  "planningAliasResolution": {
+    "tima_nacre_disputed_daughter": "tima_vale_twice_born",
+    "parn_hook_exit_notary": "parn_exit_law",
+    "orra_eavesovereign_weather_heir": "orra_rain_in_ribs"
+  },
+  "formsInCanonicalOrder": [
+    "tima_vale_twice_born",
+    "parn_exit_law",
+    "orra_rain_in_ribs",
+    "pell_nacreyear_road_witness",
+    "threshold_lamb",
+    "eave_lung"
+  ],
+  "sources": [
+    {
+      "path": "packages/content/src/narrative.data.js",
+      "sha256": "fae6409804aa035e39bd665aa5d9dfc59150c5003bacb043669fbb2e0b71f873"
+    },
+    {
+      "path": "design-review/kit/hm-art-law.js",
+      "sha256": "26e5a03220657c67b520c7ba163644e3848ed7f622f2b2beb3ab4b12a97ed0ff"
+    }
+  ],
+  "referenceAudit": {
+    "inspectionMode": "original-resolution local inspection before packet freeze",
+    "policy": "References establish only the existing project's rendering, palette, material, and family grammar. They may not contribute extra anatomy, identity, props, or canon. Charnel Measures was excluded as a separate family. Pell retains Remaining Hands ownership and uses that family's mortal material language.",
+    "inspected": [
+      { "path": "assets/characters/npcs/charnel-princes/mother-nacre-open-rib-v1.png", "sha256": "1c79c2d6ed46a06d61b078e1f0119c2e48c94eb72a21516fc50488a2804707ca" },
+      { "path": "assets/characters/npcs/charnel-princes/prince-thirteen-throats-v1.png", "sha256": "666167e20725e8aa044971cb59cb9fd9f7f0ccbe40ff40e2d87dc83b0c959010" },
+      { "path": "assets/characters/npcs/charnel-princes/wound-scribe-keth-v1.png", "sha256": "fe7e35007a342def3a71790a2f82436852fc2b0a78a8f59e44c4d92fe6793fc5" },
+      { "path": "assets/characters/npcs/charnel-princes/maw-behind-mercy-v1.png", "sha256": "4c6549c1abdf42960fb3473236dd6e8592568c58a23e5b2b897c07d9d82fd942" },
+      { "path": "assets/characters/npcs/charnel-households/ilar-rook-unhoused-shadow-v1.png", "sha256": "ad56fbfb2749dc74d9895f23169dcba13560360d3f2dc7207fcecf105eb1852d" },
+      { "path": "assets/characters/npcs/charnel-households/ilyen-doorborn-outer-age-v1.png", "sha256": "07d9a6a5061c5bc0df5a2ecf24e8f57a8585cb571a8cdeb0c112704761ab65dd" },
+      { "path": "assets/bestiary/forms/charnel-households/door-lung-courser-v1.png", "sha256": "e582a7efc5c23f054cecff245bbd3927ebaa2a8c9bbb3ca7c6f4a5075d7a35df" },
+      { "path": "assets/bestiary/forms/charnel-households/reverse-rib-bride-v1.png", "sha256": "d02855941e1f89dfdcd3841556d33793ae7bce8d30e6de6ba096b242f6981f3d" },
+      { "path": "assets/bestiary/forms/charnel-households/throat-orchard-v1.png", "sha256": "cc06b0b9c9710c91341a08400cffde37f5d6aeef09c3687c1372948638bd93eb" },
+      { "path": "assets/bestiary/forms/charnel-households/jointless-advocate-v1.png", "sha256": "44dbdd2f184fb6903a8804753725aed6ea83e4fadcdc73df2c4b363a28261f97" },
+      { "path": "assets/bestiary/forms/charnel-households/mercy-eater-v1.png", "sha256": "80407c122989a02ad18a26fbb2af187ef05c98f67c758bba5a95fed9ea8a08bd" },
+      { "path": "assets/bestiary/forms/charnel-households/corridor-maw-v1.png", "sha256": "7ecd116305601b0b3d10330168b3cd18fad3e73c826fadafaa4914f0a472c5d5" },
+      { "path": "assets/characters/npcs/remaining-hands/enoch-last-lamplighter-v1.png", "sha256": "45572e07f55896c259f1b1185e66c39227399f19c7c627398c595b510459cb1e" },
+      { "path": "assets/characters/npcs/remaining-hands/sister-calve-unlit-hospice-v1.png", "sha256": "fcd9f552c08716e6cd3322c81bfb9098264ac95d34c9f9d89f964211e45c0fc9" },
+      { "path": "assets/characters/npcs/remaining-hands/tor-vannic-defector-of-dawn-v1.png", "sha256": "a10fc2c3f402049437163eb6ce71713523f13d0f366da0973341eedf2b1d4da0" },
+      { "path": "assets/characters/npcs/remaining-hands/king-ash-without-country-v1.png", "sha256": "73396a77c4e01c009dc3e6155967fc36049f9a8e086a927fe121a65c8e19be05" },
+      { "path": "assets/characters/npcs/remaining-hands/nima-sorn-keeper-of-one-shadow-v1.png", "sha256": "db9056d7dba31776eb0e9d2e22588f73af0472610b7cb3635eb3e823d8ea1366" },
+      { "path": "assets/characters/npcs/remaining-hands/oren-lusk-last-calendarer-v1.png", "sha256": "2b9d9acd89f9a2781d3ca099ca097fa601098b59ca6cbd3b31a2b991988715e8" }
+    ]
+  },
+  "promptCompilation": "For each asset, submit exactly commonDirection, two newline characters, then masterDirection in one built-in image-generation call. Candidate corrections require a new immutable revision packet and versioned filename; never mutate this packet or an earlier candidate.",
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical individual opaque production concept master for later 3D design. Render exactly one complete original Sable Reach subject in polished stylized 3D dark-fantasy MMORPG production quality. Obey the selected canonical record and only the reference images explicitly named for style/material continuity; never copy a reference subject's identity, pose, props, or anatomy. Charnel subjects use restrained tactile wet black nacre, subdued pearl edges, deep mourning black, and canon-required translucent tissue or mortal fabric only. Remaining Hands subjects use grounded worn mortal textiles, weathered leather, and restrained old metal without heroic styling. Three-quarter production view, centered, full body, generous near-black clearance around every extremity and mechanic cue. Flat near-black neutral fully opaque studio backdrop, cold raking studio light from one side, ungraded neutral presentation. No transparency and no alpha-cutout request. Horror comes from impossible articulation, environmental absence, and ritual repetition; no exposed entrails and no gratuitous blood. No scene, room, village, road, landscape, weather scene, battlefield, courtroom, floor, ground plane, terrain, pedestal, cast floor shadow, extra creature, extra person, duplicate subject, caption, UI, text, readable symbol, letter, numeral, rune, real religious mark, logo, watermark, franchise resemblance, ordinary undead, ordinary demon, glossy plastic, cute or chibi proportions, sexualization of minors, or bright saturation. Do not add anatomy or props absent from the selected canonical record.",
+  "assets": [
+    {
+      "id": "tima_vale_twice_born",
+      "planningAlias": "tima_nacre_disputed_daughter",
+      "name": "Tima Vale Twice-Born",
+      "kind": "support_character",
+      "family": "charnel_households",
+      "orientation": "portrait",
+      "masterFile": "tima-vale-twice-born-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/charnel-households/tima-vale-twice-born-v1.png",
+      "pipelinePath": "EXPANSION_CHARACTERS.tima_vale_twice_born.pipeline.conceptMaster",
+      "referencesUsed": [
+        "assets/characters/npcs/charnel-households/ilyen-doorborn-outer-age-v1.png",
+        "assets/characters/npcs/remaining-hands/sister-calve-unlit-hospice-v1.png",
+        "assets/characters/npcs/remaining-hands/oren-lusk-last-calendarer-v1.png"
+      ],
+      "canonical": {
+        "epithet": "The Sixteen-Year Ancestor",
+        "factionId": "charnel_night",
+        "role": "Sanctuary resident who is a child by body and ancestor to Hearthmere's oldest family",
+        "desire": "Build kinship with descendants without accepting command over them or becoming their sacred child.",
+        "fear": "That age and lineage will let either side convert affection into custody.",
+        "contradiction": "She refuses ancestral rule while concealing that she once ordered Mother Nacre's door closed on the line she now disclaims.",
+        "visualBrief": "Sixteen-year-old ancestor wearing domestic objects from three centuries as unresolved inheritance, without royal or child-savior styling."
+      },
+      "masterDirection": "Subject: Tima Vale Twice-Born, The Sixteen-Year Ancestor. Portrait canvas, 1024x1536. Depict exactly one fully clothed sixteen-year-old sanctuary resident in an age-appropriate, dignified, non-heroic three-quarter stance. Her body and face are visibly adolescent, while her gaze and bearing carry ancestral responsibility without artificially aging her skin. She wears layered ordinary domestic objects and household garments from exactly three visibly different historical periods at once; keep the three material eras readable through incompatible construction, repair, and wear, but make every element practical, intimate, and non-ceremonial. The inherited layers must remain unresolved rather than becoming royal regalia, armor, a costume, or a sacred-child halo. Use normal human anatomy, two arms, two hands, two legs, and two feet, with both hands empty and no rib door or added mutation. Keep every garment edge and both feet inside frame. No crown, throne, weapon, staff, relic aura, child-savior pose, adult sexualization, other family member, grave, meal table, doorway, text, or scenery."
+    },
+    {
+      "id": "parn_exit_law",
+      "planningAlias": "parn_hook_exit_notary",
+      "name": "Parn Exit-Law",
+      "kind": "support_character",
+      "family": "charnel_households",
+      "orientation": "portrait",
+      "masterFile": "parn-exit-law-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/charnel-households/parn-exit-law-v1.png",
+      "pipelinePath": "EXPANSION_CHARACTERS.parn_exit_law.pipeline.conceptMaster",
+      "referencesUsed": [
+        "assets/characters/npcs/charnel-households/ilyen-doorborn-outer-age-v1.png",
+        "assets/bestiary/forms/charnel-households/door-lung-courser-v1.png",
+        "assets/bestiary/forms/charnel-households/reverse-rib-bride-v1.png"
+      ],
+      "canonical": {
+        "epithet": "Prosecutor of Revocable Doors",
+        "factionId": "charnel_night",
+        "role": "Sanctuary jurist born with a rib door that opens only outward",
+        "desire": "Test revocation in real danger so consent cannot remain a decorative promise.",
+        "fear": "That the right to leave disappears exactly when protection becomes necessary.",
+        "contradiction": "He prosecutes Mother's summons on behalf of people who hear them, while secretly being unable to hear the summons himself.",
+        "visualBrief": "Young jurist with one small outward-opening rib door and garments fastened entirely by revocable latches."
+      },
+      "masterDirection": "Subject: Parn Exit-Law, Prosecutor of Revocable Doors. Portrait canvas, 1024x1536. Depict exactly one complete young adult sanctuary jurist with ordinary two-arm, two-leg human anatomy except for exactly one small living rib door grown through the torso. The rib door must be physically hinged to his own backward-curving black-nacre ribs and visibly open only outward from his body; show one complete shallow door assembly and one empty near-black aperture, never an inward-opening flap, prop, badge, pendant, or architectural doorway. His restrained dark legal garments must be fastened entirely by many individually readable revocable latch closures: every visible closure is a latch, with no buttons, zippers, knots, pins, or ordinary buckles. Keep hands empty and expression procedural rather than villainous. Preserve full head, coat hem, hands, feet, open door, and all latch silhouettes with generous clearance. No second door, summons effect, papers, book, scales, gavel, weapon, courtroom, organs, gore, text, or scenery."
+    },
+    {
+      "id": "orra_rain_in_ribs",
+      "planningAlias": "orra_eavesovereign_weather_heir",
+      "name": "Orra Rain-in-Ribs",
+      "kind": "support_character",
+      "family": "charnel_households",
+      "orientation": "portrait",
+      "masterFile": "orra-rain-in-ribs-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/charnel-households/orra-rain-in-ribs-v1.png",
+      "pipelinePath": "EXPANSION_CHARACTERS.orra_rain_in_ribs.pipeline.conceptMaster",
+      "referencesUsed": [
+        "assets/characters/npcs/charnel-households/ilyen-doorborn-outer-age-v1.png",
+        "assets/characters/npcs/charnel-princes/mother-nacre-open-rib-v1.png",
+        "assets/bestiary/forms/charnel-households/door-lung-courser-v1.png"
+      ],
+      "canonical": {
+        "epithet": "Roofer of the Borrowed Sky",
+        "factionId": "charnel_night",
+        "role": "Sanctuary roofer whose lungs forecast weather inside Mother Nacre",
+        "desire": "Keep the village safe outside without replacing Mother's body with another unaccountable shelter.",
+        "fear": "Ordinary sky, because no one can open it from within and repair the leak.",
+        "contradiction": "She insists weather must name who paid for it while secretly causing storms whenever residents discuss permanent departure.",
+        "visualBrief": "Roofer with two translucent forecast lungs and folding eave tools grown from shoulder ribs."
+      },
+      "masterDirection": "Subject: Orra Rain-in-Ribs, Roofer of the Borrowed Sky. Portrait canvas, 1024x1536. Depict exactly one complete adult sanctuary roofer with normal two-arm, two-leg anatomy and work-worn dark clothing altered only by the two canonical systems. Show exactly TWO separately readable translucent forecast lungs integrated anatomically within her upper torso, one on each side, without exposing gore; restrained internal pressure layers may be visible, but never a weather map, cloud image, text, or symbols. From her actual shoulder ribs grow folding eave tools: several attached black-nacre rafter-like implements that articulate into load-bearing overhang shapes and visibly fold back against the shoulders, never detached hand tools, wings, extra arms, or scenery. Her posture is capable but guarded, with both hands empty so the shoulder-grown mechanism remains the cue. Keep every eave-tool tip, both lungs, coat hem, hands, and feet inside frame. No third lung, detached lung, rooftop, building, ladder, cloud, rain scene, umbrella, weapon, exposed organs, text, or extra figure."
+    },
+    {
+      "id": "pell_nacreyear_road_witness",
+      "name": "Pell Nacreyear",
+      "kind": "support_character",
+      "family": "remaining_hands",
+      "orientation": "portrait",
+      "masterFile": "pell-nacreyear-road-witness-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/remaining-hands/pell-nacreyear-road-witness-v1.png",
+      "pipelinePath": "EXPANSION_CHARACTERS.pell_nacreyear_road_witness.pipeline.conceptMaster",
+      "referencesUsed": [
+        "assets/characters/npcs/remaining-hands/enoch-last-lamplighter-v1.png",
+        "assets/characters/npcs/remaining-hands/sister-calve-unlit-hospice-v1.png",
+        "assets/characters/npcs/remaining-hands/oren-lusk-last-calendarer-v1.png"
+      ],
+      "canonical": {
+        "epithet": "The Road's Older Child",
+        "factionId": "league_of_remaining_hands",
+        "role": "Last child born before the sanctuary closed and sole witness to its forgotten road",
+        "desire": "Have the vanished road recognized as a person rather than be forced to replace its testimony.",
+        "fear": "That remembering the route will give Mother Nacre a path to everyone who escaped.",
+        "contradiction": "Pell demands that roads retain moral agency while having taught this road to deny the village for its own protection.",
+        "visualBrief": "Child-sized elder whose limbs bend into remembered turns; no map, compass, travel pack, or cute adventurer silhouette."
+      },
+      "masterDirection": "Subject: Pell Nacreyear, The Road's Older Child. Portrait canvas, 1024x1536. Depict exactly one child-sized elder: a very short fully adult elderly person with unmistakably aged face and hands, never a child, dwarf-fantasy caricature, or cute adventurer. Use grounded Remaining Hands clothing made from worn dark textiles, weathered leather, restrained old metal, and no heroic armor. His one complete body has exactly two arms and two legs whose continuous silhouettes bend through a readable sequence of seven deliberate route-like turns derived from the canonical seven historical turns; distribute the seven major angular changes across the four limbs without adding joints, breaking anatomy, or turning them into separate roads. Keep the torso upright enough that every turn can be traced from the body, and keep both hands empty. No map, compass, scroll, road sign, travel pack, staff, weapon, literal road, paving, direction arrow, child face, oversized head, scenery, text, or extra figure."
+    },
+    {
+      "id": "threshold_lamb",
+      "name": "Threshold Lamb",
+      "kind": "expansion_creature",
+      "family": "charnel_households",
+      "rank": "regular",
+      "combatRole": "skirmisher",
+      "orientation": "landscape",
+      "masterFile": "threshold-lamb-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/charnel-households/threshold-lamb-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES.threshold_lamb.pipeline.conceptMaster",
+      "referencesUsed": [
+        "assets/characters/npcs/charnel-princes/mother-nacre-open-rib-v1.png",
+        "assets/bestiary/forms/charnel-households/door-lung-courser-v1.png",
+        "assets/bestiary/forms/charnel-households/reverse-rib-bride-v1.png"
+      ],
+      "canonical": {
+        "anatomy": "A woolless non-ovine sanctuary organism built from soft door hinges and backward ribs around a small unoccupied passage.",
+        "locomotion": "It crosses one resident's outward-opening body door and returns through a different resident, never traversing the space between them.",
+        "ecology": "It stress-tests rib-door exits under protective summons, exposing where one resident's consent silently authorizes passage through another body.",
+        "origin": "Mother Nacre made gentle test creatures for children learning their doors; centuries of closed sanctuary turned rehearsal into jurisdiction.",
+        "mechanic": {
+          "id": "misaddressed_return",
+          "cue": "Every nearby latch inhales at once before one backward rib selects the destination resident.",
+          "counterplay": "Revoke the destination door before inviting the creature across the origin threshold, forcing it to return through its own passage."
+        },
+        "visualBrief": "Small unsettling hinge-and-backward-rib organism with one empty passage, explicitly non-ovine and woolless; no cute lamb face, pasture, gore, or extra creature."
+      },
+      "masterDirection": "Subject: Threshold Lamb. Landscape canvas, 1536x1024. Depict exactly one complete small sanctuary organism that is explicitly NON-OVINE and woolless: no sheep, lamb head, muzzle, horns, hooves, four-legged livestock chassis, tail, fleece, or cute face. Build the single unsettling body from soft living door hinges and backward-curving black-nacre ribs arranged around exactly ONE complete small unoccupied passage. The passage is a shallow traversable near-black negative-space opening through the organism, with no resident, room, second doorway, or object inside. Integrate several latch structures into the one body and show all of them simultaneously drawing inward as the mechanic cue. Exactly one backward rib is distinctly extended as the current destination selector while every other rib remains nested around the passage; the selector remains attached and is not an extra limb or arrow. Keep all hinges, latch edges, backward ribs, and the passage fully visible with generous clearance. No eyes, ordinary mouth, fur, sheep anatomy, pasture, child, resident, gore, floor, text, or extra creature."
+    },
+    {
+      "id": "eave_lung",
+      "name": "Eave Lung",
+      "kind": "expansion_creature",
+      "family": "charnel_weather",
+      "rank": "elite",
+      "combatRole": "artillery",
+      "orientation": "landscape",
+      "masterFile": "eave-lung-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/charnel-weather/eave-lung-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES.eave_lung.pipeline.conceptMaster",
+      "referencesUsed": [
+        "assets/characters/npcs/charnel-princes/mother-nacre-open-rib-v1.png",
+        "assets/characters/npcs/charnel-princes/wound-scribe-keth-v1.png",
+        "assets/bestiary/forms/charnel-households/door-lung-courser-v1.png"
+      ],
+      "canonical": {
+        "anatomy": "A free-floating respiratory roof organ with folding rafter bronchi and one named leak-valve, born without a surrounding body.",
+        "locomotion": "It migrates on the rain current it owns, inhaling rafters beneath itself and exhaling them as temporary eaves behind.",
+        "ecology": "It shelters communities that acknowledge the downstream drought created by its diverted pressure and abandons roofs whose beneficiaries deny the recipient.",
+        "origin": "A pressure error in Mother Nacre's living climate detached one forecast lung and made the stolen rain's custody anatomically independent.",
+        "mechanic": {
+          "id": "accountable_rain_current",
+          "cue": "Rafters breathe before clouds change direction and the single leak-valve turns away from an unnamed drought.",
+          "counterplay": "Give the lung a named leak with an accountable recipient, allowing pressure to leave without transferring the whole storm."
+        },
+        "visualBrief": "One translucent floating lung-roof organ with branching rafter bronchi and a single deliberate leak, uncanny civic anatomy without gore, clouds, village scenery, or second lung."
+      },
+      "masterDirection": "Subject: Eave Lung. Landscape canvas, 1536x1024. Depict exactly ONE complete free-floating translucent respiratory roof organ, born without any surrounding body and never a paired set of lungs. Its single organ volume must combine a readable lung-like respiratory sac with branching bronchi that fold into structural rafter and eave shapes; show the rafter bronchi in one coherent breathing phase, attached throughout, never as a separate roof, building, ribs, wings, or tree. Integrate exactly ONE deliberate leak-valve into the lower eave edge. The one valve must be uniquely distinguishable, mechanically turnable, and visibly turned away as the canonical cue; it is individually nameable by its unique anatomy but carries no label, tag, glyph, or text. Use restrained translucent pressure depth without blood, exposed viscera, cloud imagery, rain, or bright magic. Suspend the complete organ with generous black clearance around every bronchial rafter tip and the single valve. No second lung, body, heart, face, mouth, village, rooftop, cloud, storm scene, recipient figure, scenery, text, or gore."
+    }
+  ]
+}

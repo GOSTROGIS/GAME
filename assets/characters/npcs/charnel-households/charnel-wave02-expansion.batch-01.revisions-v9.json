@@ -1,0 +1,14 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-wave02-concept-masters-batch-01",
+  "revision": 9,
+  "status": "immutable-before-generation",
+  "reason": "Parn v7 finally met the scale target but self-screening found that the outward rib leaf became too visually compressed to demonstrate the one-way opening. Preserve the accepted small scale and restore only the missing topology cue.",
+  "asset": {
+    "id": "parn_exit_law",
+    "sourceCandidate": "candidates/parn-exit-law-concept-master-v7-rejected.png",
+    "sourceCandidateStatus": "rejected-before-external-review",
+    "masterFile": "parn-exit-law-concept-master-v8.png",
+    "editDirection": "Use the supplied Parn v7 image as the edit target. Preserve every pixel and property as closely as possible, including Parn's identity, face, pose, normal anatomy, empty hands, black coat, all bar-and-catch latches, button-free placket, footwear latch language, lighting, framing, opaque near-black backdrop, and the current tiny upper-torso aperture. Edit ONLY the tiny rib-door topology at that same anchor. Keep the COMPLETE assembly no taller than 72 to 80 pixels on this 1024 by 1536 canvas and unmistakably below 20 percent of shoulder-to-waist torso height. Preserve exactly one complete empty near-black aperture with jambs and sill. Add or clarify exactly one complete matching ribbed door leaf visibly hinged along the aperture's image-right side and swung outward toward the viewer at a strong three-quarter angle, leaving black clearance between the leaf and the open aperture so they read as two connected but distinct components. The outward leaf must remain fully inside the same tiny total scale; do not enlarge the aperture, person, or assembly beyond the height limit. No second leaf, second aperture, inward flap, grille, brooch, badge, pendant, button, ordinary buckle, new anatomy, prop, text, scenery, transparency, or alpha cutout. Opaque concept master only."
+  }
+}

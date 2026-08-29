@@ -1,0 +1,14 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-wave02-concept-masters-batch-01",
+  "revision": 6,
+  "status": "immutable-before-generation",
+  "reason": "Independent review found that Orra v3's structural pieces remained too large, lateral, symmetrical, and wing-like. Technical silhouette correction only; all other accepted pixels and counts remain frozen.",
+  "asset": {
+    "id": "orra_rain_in_ribs",
+    "sourceCandidate": "candidates/orra-rain-in-ribs-concept-master-v3.png",
+    "sourceCandidateStatus": "rejected-by-independent-review",
+    "masterFile": "orra-rain-in-ribs-concept-master-v4.png",
+    "editDirection": "Use the supplied Orra v3 image as the edit target. Preserve Orra's exact identity, face, hair, gaze, ordinary mortal body with exactly two arms, two empty hands, two legs and two feet, grounded clothing, exactly two translucent chest lungs, pose, lighting, framing, colors, materials, and opaque near-black backdrop. Edit ONLY the shoulder-grown structural tool system. Compress both assemblies into short blocky roof brackets and blunt rafter modules nested backward along the upper back, close to shoulder width and close to the body. Lower their height so they remain at or just above the shoulder line. Eliminate all lateral spread, broad triangular profiles, repeated feather-like or shingle-like edges, pointed tips, long free struts, and mirrored wing geometry. Make the two sides modestly asymmetric in fold angle and compact construction so their combined silhouette cannot read as wings, extra arms, spider legs, claws, a halo, or a separate roof. Show a clear mechanical load path from each short nested bracket into the shoulder ribs; the pieces are folded carpentry tools carried by the shoulders, not appendages. Keep every part behind or immediately above the shoulders and within the person's torso-width silhouette as closely as practical. Do not alter the two lungs or any mortal anatomy. No new anatomy, props, text, scenery, transparency, or alpha cutout. Opaque concept master only."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-wave02-concept-masters-batch-01",
+  "revision": 8,
+  "status": "immutable-before-generation",
+  "reason": "Parn v6 removed ambiguous placket buttons but self-screening found the generator did not visibly reduce the complete door assembly enough. One stronger scale-only correction follows; v6 remains rejected and untracked.",
+  "asset": {
+    "id": "parn_exit_law",
+    "sourceCandidate": "candidates/parn-exit-law-concept-master-v6-rejected.png",
+    "sourceCandidateStatus": "rejected-before-external-review",
+    "masterFile": "parn-exit-law-concept-master-v7.png",
+    "editDirection": "Use the supplied Parn v6 image as the edit target. Preserve the entire image, including Parn's identity, face, hair, pose, anatomy, empty hands, long black coat, every bar-and-catch garment latch, button-free placket, footwear latch language, lighting, framing, and opaque near-black backdrop. Make ONE localized scale correction only. Drastically miniaturize the COMPLETE existing upper-torso rib-door assembly—one near-black aperture, complete jambs and sill, hinge, and the single outward-swung rib leaf—so the entire assembly is approximately 64 to 72 pixels tall on this 1024 by 1536 canvas, no taller than Parn's visible ear, and plainly less than 20 percent of the shoulder-to-waist torso height. Reduce aperture, frame, hinge, and leaf together without separating or losing any component. Keep it at the same upper-torso anchor and preserve the one outward-open topology. Reconstruct plain coat in the vacated area. Do not change Parn's scale or enlarge any door component after reduction. No button, ordinary buckle, second door, second aperture, inward flap, badge, pendant, new anatomy, props, text, scenery, transparency, or alpha cutout. Opaque concept master only."
+  }
+}

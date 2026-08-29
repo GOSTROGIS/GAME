@@ -73,6 +73,11 @@ const fixture = String.raw`<!doctype html>
       'jointless_advocate',
       'mercy_eater',
       'corridor_maw',
+      'tima_vale_twice_born',
+      'parn_exit_law',
+      'orra_rain_in_ribs',
+      'threshold_lamb',
+      'eave_lung',
     ]);
     const acceptedCharnel = subjects.filter(({ contentId }) => acceptedCharnelIds.has(contentId));
     const acceptedRemainingIds = new Set([
@@ -88,6 +93,7 @@ const fixture = String.raw`<!doctype html>
       'gannet_triune_veto_clerk',
       'jorem_mortality_bearer',
       'della_quorum_unseated_cost',
+      'pell_nacreyear_road_witness',
     ]);
     const acceptedRemaining = subjects.filter(({ contentId }) => acceptedRemainingIds.has(contentId));
     const images = await Promise.all([
@@ -160,9 +166,9 @@ try {
   assert.equal(result.counts.total, 228);
   assert.equal(result.counts.foundingTotal, 228);
   assert.equal(await page.locator('[data-subject-id]').count(), result.subjectCount);
-  assert.equal(result.acceptedCharnel.length, 12);
-  assert.equal(result.acceptedRemaining.length, 12);
-  assert.equal(new Set(result.images.map(({ id }) => id)).size, 26);
+  assert.equal(result.acceptedCharnel.length, 17);
+  assert.equal(result.acceptedRemaining.length, 13);
+  assert.equal(new Set(result.images.map(({ id }) => id)).size, 32);
   for (const subject of [...result.acceptedCharnel, ...result.acceptedRemaining]) {
     assert.equal(subject.artStatus, 'accepted');
     assert.equal(subject.tier, 'queued');

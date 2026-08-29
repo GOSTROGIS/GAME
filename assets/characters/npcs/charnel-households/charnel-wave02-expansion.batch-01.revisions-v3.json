@@ -1,0 +1,14 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-wave02-concept-masters-batch-01",
+  "revision": 3,
+  "status": "immutable-before-generation",
+  "reason": "Parn v2 self-screened as an obvious scale failure: the outward-opening rib-door assembly occupies roughly half of shoulder-to-waist torso height and therefore contradicts canonical 'small'. Technical correction only.",
+  "sourceCandidate": "candidates/parn-exit-law-concept-master-v2-rejected.png",
+  "sourceCandidateStatus": "rejected-before-external-review",
+  "asset": {
+    "id": "parn_exit_law",
+    "masterFile": "parn-exit-law-concept-master-v3.png",
+    "editDirection": "Use the supplied Parn v2 image as the edit target. Preserve the entire image pixel-faithfully except for one localized correction to the living rib-door assembly and the immediately reconstructed coat beneath it. Uniformly reduce the COMPLETE one-door assembly—including its aperture, rib jambs, all hinges, and the outward-open rib flap—until the assembly's total height is unmistakably no more than 20 percent of Parn's shoulder-to-waist torso height. Keep it anatomically grown through the upper torso and still visibly open only outward. Preserve exactly one shallow near-black aperture; do not turn it into a badge, pendant, ordinary coat flap, second door, or closed door. Preserve Parn's identity, face, hair, gaze, pose, proportions, hands, feet, coat length, every visible revocable garment latch, colors, materials, lighting, opaque near-black backdrop, framing, and all other pixels as closely as possible. Keep all closures as latches. No new anatomy, props, text, scenery, transparency, or alpha cutout."
+  }
+}
