@@ -9,3 +9,10 @@
 *.blend filter=lfs diff=lfs merge=lfs -text
 *.wav filter=lfs diff=lfs merge=lfs -text
 *.flac filter=lfs diff=lfs merge=lfs -text
+
+# New concept-art payloads only. Existing raster directories remain ordinary Git
+# objects; these paths are intentionally scoped to the forthcoming art batches.
+assets/characters/npcs/grave-tithe/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/characters/npcs/unwritten-roads/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/characters/npcs/exact-word/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/bestiary/forms/**/*.png filter=lfs diff=lfs merge=lfs -text

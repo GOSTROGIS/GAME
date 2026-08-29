@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "policy": "Each accepted revision direction is appended to the immutable pre-generation packet. Earlier candidates remain untracked and are never overwritten.",
+  "revisions": {
+    "rope-larva-v3": {
+      "source": "rope-larva-v1.png",
+      "reason": "Earlier candidates introduced humanoid anatomy instead of one abstract clapper-shaped skeleton.",
+      "append": "Preserve one low wet weather-black rope-knot larva and make its only internal skeleton unmistakably mechanical: exactly one central bronze clapper rod, three curved yoke ribs, sparse support struts and one bottom clapper bulb, with no skull, humanoid torso, arms, legs or extra skeleton. Attach exactly one upward resonant rope-wave ending at an exposed cut neck in empty space. No ceiling, ground, figure, scene, text or transparency."
+    },
+    "cracked-acolyte-v2": {
+      "source": "cracked-acolyte-v1.png",
+      "reason": "The first candidate's small chest handbell did not visibly carry the canonical crack.",
+      "append": "Preserve exactly two complete leaning bronze body halves, one wide continuous luminous traversable seam from crown through chest, pelvis and between the feet, exactly two tiny resonant bridges, pose, lighting and framing. Add only one unmistakable dark physical fracture across the shell of the single small handbell suspended in the chest seam. Do not alter the body seam or create another split, body, scene, floor, text or transparency."
+    },
+    "vesper-engine-v2": {
+      "source": "vesper-engine-v1.png",
+      "reason": "The first candidate used a plain circular aperture instead of a clearly ringer-shaped central absence.",
+      "append": "Preserve exactly three countable concentric ceremonial torso frames, all bearings and ropes, and exactly three flat tower-shadow markers joined by exactly three thin lines in one triangular route with one dissolving corner. Reshape only the central aperture into one unmistakable empty head-and-shoulders ringer-shaped negative-space void. It contains no visible person, material body, face, robe or skeleton. No fourth torso, village, floor route, scene, text or transparency."
+    }
+  }
+}

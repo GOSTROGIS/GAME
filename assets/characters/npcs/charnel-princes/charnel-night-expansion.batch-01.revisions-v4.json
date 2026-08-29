@@ -1,0 +1,31 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-01-revision-v4",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "aaa954173a043e9b10637fcd18b2c058425612869d3abfbafe83aff3dc2aa4bb",
+  "previousRevisionSha256": "6343bd0a982914934114e64f69dbbf9ba2db4d19107a277d1c47aec8ba654bd8",
+  "assets": [
+    {
+      "id": "prince_thirteen_throats",
+      "reference": "prince-thirteen-throats-concept-master-v3-rejected.png",
+      "outputFile": "prince-thirteen-throats-concept-master-v4.png",
+      "reason": "The v3 edit removed two throats and now contains twelve, one fewer than the canonical thirteen.",
+      "revisionDirection": "Faithfully preserve every v3 design feature and all twelve existing throats without altering any of them. Add exactly ONE new complete wet throat aperture on exactly ONE new distinct articulated black-nacre collar in the open lower-inner viewer-right gap, approximately opposite the existing lower-inner viewer-left collar. Root the new collar visibly into the viewer-right torso lattice; keep it separate from the outer-right lower collar and well above the physical hand. Add no other object. The final image must contain exactly THIRTEEN complete circular throat apertures total, each on its own visible jointed collar. Preserve the headless central absence, broken halo, no crown, two ordinary arms/hands, two feet, opaque backdrop, lighting and framing. No fourteenth throat, merged throat, face, text, floor or crop."
+    },
+    {
+      "id": "door_lung_courser",
+      "reference": "door-lung-courser-concept-master-v1.png",
+      "outputFile": "door-lung-courser-concept-master-v2.png",
+      "reason": "Independent review passes the quadruped, four legs, door-ribs, one open doorway and contained path, but only one inflated lung volume is visibly countable rather than the canonical two.",
+      "revisionDirection": "Faithfully preserve the exact v1 Courser silhouette, head, tail, four legs and hooves, stride, all paired hinged rib-doors, exactly one final open traversable doorway, the one smooth unmarked contained path, all other doors closed/closing, black-nacre materials, landscape canvas, lighting and full framing. Expose exactly TWO separately countable inflated mapless lung volumes inside the rib cage: retain the existing pale lung behind the open doorway and add one second distinct inflated lung bladder on the viewer-far side, visible as a separate rounded pale volume through narrow gaps between CLOSED rib-doors. A clear black seam must separate the two lungs. Do not open another door, duplicate the path, add markings, or change the exterior silhouette. No second open doorway, third lung, road scene, map, text, organ gore, floor or crop."
+    },
+    {
+      "id": "reverse_rib_bride",
+      "reference": "reverse-rib-bride-concept-master-v3-rejected.png",
+      "outputFile": "reverse-rib-bride-concept-master-v4.png",
+      "reason": "The rib-origin pointers and spouse absence now pass, but the two target apertures remain ornate closed oval rings rather than plain irregular unbordered position evidence.",
+      "revisionDirection": "Faithfully preserve every v3 feature except the two target markers: the complete spouse-shaped black absence, all clasped rib-hands, exactly two mid-height released pointer-ribs visibly rooted in the rib lattice, no ordinary arms, two legs/feet, material, lighting, backdrop and framing. Delete both ornate closed oval rings completely. At each unchanged pointer direction add exactly one small flat asymmetric amorphous matte-black position patch. Each patch must be non-oval, non-circular, nonsemantic and unbordered; reveal it against the backdrop with only one short broken subdued nacre edge on one side, never a closed outline. Exactly two patches total, one per pointer. Add nothing else. No loop, ring, oval, circle, symbol, glyph, glow, tether, floor, third target, bride realism, spouse figure, text, gore or crop."
+    }
+  ]
+}

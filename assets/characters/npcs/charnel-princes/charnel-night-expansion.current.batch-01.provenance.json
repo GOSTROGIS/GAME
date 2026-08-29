@@ -1,0 +1,230 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-charnel-night-expansion-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "promptPackets": [
+    {
+      "path": "assets/characters/npcs/charnel-princes/charnel-night-expansion.batch-01.prompt.json",
+      "sha256": "aaa954173a043e9b10637fcd18b2c058425612869d3abfbafe83aff3dc2aa4bb"
+    },
+    {
+      "path": "assets/characters/npcs/charnel-princes/charnel-night-expansion.batch-01.revisions-v2.json",
+      "sha256": "5cfaeccd7da3af6acebf813a2cbe90da2dde613e51c91114956cff2840f6b03d"
+    },
+    {
+      "path": "assets/characters/npcs/charnel-princes/charnel-night-expansion.batch-01.revisions-v3.json",
+      "sha256": "6343bd0a982914934114e64f69dbbf9ba2db4d19107a277d1c47aec8ba654bd8"
+    },
+    {
+      "path": "assets/characters/npcs/charnel-princes/charnel-night-expansion.batch-01.revisions-v4.json",
+      "sha256": "4fcb64ac8f981aec2f1f4af8ee64d18b35ae6916a6de14854ec8911eb6dff66d"
+    },
+    {
+      "path": "assets/characters/npcs/charnel-princes/charnel-night-expansion.batch-01.revisions-v5.json",
+      "sha256": "c6701951553bd5c7a1f791c3c11d07b1f387dd980a43b88f8c3b52e8c560e8ee"
+    },
+    {
+      "path": "assets/characters/npcs/charnel-princes/charnel-night-expansion.batch-01.revisions-v6.json",
+      "sha256": "c9751e4822ccc58ccb41800c52925223800492f98b1579cfad62610c7c6f9875"
+    },
+    {
+      "path": "assets/characters/npcs/charnel-princes/charnel-night-expansion.batch-01.revisions-v7.json",
+      "sha256": "8ae759bc1bbf6e162d3d3fe0e8960181acea7d7a26c29819d0333bfa183afc04"
+    }
+  ],
+  "records": [
+    {
+      "id": "concept_master.mother_nacre_open_rib",
+      "subjectId": "mother_nacre_open_rib",
+      "familyId": "charnel_princes",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/charnel-princes/mother-nacre-open-rib-v1.png",
+      "sha256": "1c79c2d6ed46a06d61b078e1f0119c2e48c94eb72a21516fc50488a2804707ca",
+      "bytes": 1596003,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "9fc98c90502ac121c8a7d11133caa22c749808c887ffec4999154dff4f868191",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "1c79c2d6ed46a06d61b078e1f0119c2e48c94eb72a21516fc50488a2804707ca"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.prince_thirteen_throats",
+      "subjectId": "prince_thirteen_throats",
+      "familyId": "charnel_princes",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/charnel-princes/prince-thirteen-throats-v1.png",
+      "sha256": "666167e20725e8aa044971cb59cb9fd9f7f0ccbe40ff40e2d87dc83b0c959010",
+      "bytes": 1772317,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "c317d0b893a01b9a5996ccbc397871fdf66a3775e38cb3acd8902f30fe31b080",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "666167e20725e8aa044971cb59cb9fd9f7f0ccbe40ff40e2d87dc83b0c959010"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.wound_scribe_keth",
+      "subjectId": "wound_scribe_keth",
+      "familyId": "charnel_princes",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/charnel-princes/wound-scribe-keth-v1.png",
+      "sha256": "fe7e35007a342def3a71790a2f82436852fc2b0a78a8f59e44c4d92fe6793fc5",
+      "bytes": 2057977,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "a187c7717b2e255d169cf1cd1c2bd0bd954f11fc8ea9fa101dd68102c8a75845",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "fe7e35007a342def3a71790a2f82436852fc2b0a78a8f59e44c4d92fe6793fc5"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.maw_behind_mercy",
+      "subjectId": "maw_behind_mercy",
+      "familyId": "charnel_princes",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/charnel-princes/maw-behind-mercy-v1.png",
+      "sha256": "4c6549c1abdf42960fb3473236dd6e8592568c58a23e5b2b897c07d9d82fd942",
+      "bytes": 1921037,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "e6f11be323207d7094d4457104871efaa52962cea0af0eec45e3c08fec7bcf34",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "generate",
+        "outputSha256": "4c6549c1abdf42960fb3473236dd6e8592568c58a23e5b2b897c07d9d82fd942"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.door_lung_courser",
+      "subjectId": "door_lung_courser",
+      "familyId": "charnel_households",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/charnel-households/door-lung-courser-v1.png",
+      "sha256": "e582a7efc5c23f054cecff245bbd3927ebaa2a8c9bbb3ca7c6f4a5075d7a35df",
+      "bytes": 1948823,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "99c7ea922a9004d9947aadaea6f13dd63c9f5c1733e639ba78c5ba1e7a016be8",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "e582a7efc5c23f054cecff245bbd3927ebaa2a8c9bbb3ca7c6f4a5075d7a35df"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.reverse_rib_bride",
+      "subjectId": "reverse_rib_bride",
+      "familyId": "charnel_households",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/charnel-households/reverse-rib-bride-v1.png",
+      "sha256": "d02855941e1f89dfdcd3841556d33793ae7bce8d30e6de6ba096b242f6981f3d",
+      "bytes": 840680,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "0c3fb1999bf1d4dbfac4e24338946a64cd96e71a0f488df428c40148c3011d11",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "d02855941e1f89dfdcd3841556d33793ae7bce8d30e6de6ba096b242f6981f3d"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

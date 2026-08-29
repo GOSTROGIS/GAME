@@ -1,0 +1,20 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v8",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "e5dd1da311c18f21de80f62360e013d8232d26b7bdf85884818e8680ae949472",
+  "policy": "Preserve accepted identity, exact count, body, roots, material and framing. Correct only the final two closed-cuff size ranks; all prior bytes remain immutable.",
+  "assets": [
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v7-rejected.png",
+      "referenceSha256": "d33ac74f15fbd0219389f0b772d09325baefecdd22213e11d5926241b9630ab9",
+      "outputFile": "throat-orchard-concept-master-v8.png",
+      "reason": "The seventh candidate preserves exact count and the cyclic layout, but the final closed cuff nearest and directly above the open exception is still small while the preceding diagonal upper-right cuff is oversized.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Swap only the relative sizes of two explicitly located closed cuffs; preserve all positions, count, seams, body, roots, materials, lighting and framing.",
+      "revisionDirection": "Faithfully preserve one low broad rooted anatomical body, every root, exactly TWELVE total attached laryngeal cuffs, exactly ELEVEN closed and exactly ONE open lower-right ring, black-nacre material, near-black opaque isolation and full landscape clearance. Do not add, remove, merge, move or duplicate any cuff. Identify the small nearly HORIZONTAL closed cuff at the EXTREME VIEWER-RIGHT, on a short stalk immediately ABOVE and nearest the open ring. This is the FINAL closed cuff in the inhale circuit: enlarge ONLY this exact horizontal cuff until it is unmistakably the tallest, widest and most distended of all eleven closed cuffs, while keeping its shut seam and attachment. Identify the oversized DIAGONALLY UPRIGHT closed cuff immediately UP-LEFT of that horizontal cuff. Reduce ONLY that diagonal cuff enough that it is slightly smaller than the new final horizontal cuff but still slightly larger than the preceding cuff to its left. Preserve the tiny closed cuff immediately BELOW-LEFT of the open ring as the smallest first step. Every other closed cuff retains its current size and position. The single open ring stays shallow, empty and contrary-facing. No extra throat, tree, pod, stem, head, mouth behind the opening, floor, scene, notation, text, logo, watermark, transparency or crop. Opaque RGB master, landscape 1536x1024."
+    }
+  ]
+}

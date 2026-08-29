@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-01",
+  "policy": "The frozen packet remains unchanged. This is one narrow forward revision after owner preflight of Crypt Assembler v2. All accepted topology, basket count, tab shapes, contents and wrong-pile actuator are frozen except the viewer-right basket contents.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-01/prompt-packet.json",
+    "sha256": "5cb9e3f21b9d6f731c53bf2f2331b6b645e6ec23822f6bcd18a4d2478fe731ee"
+  },
+  "revisions": {
+    "crypt-assembler-v3": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-01/crypt-assembler-concept-master-v2.png",
+      "sourceSha256": "ae87479ea8cb4eb3ed81f5479277ef601109d5d41f5285bb6847f4349e66db9c",
+      "reason": "V2 correctly preserves four attached baskets, four distinct blank tabs, skull-only top, jaw-only left, mixed bottom and the wrong-pile actuator, but the viewer-right square-tab basket contains ordinary long bones rather than short articulated finger bones.",
+      "prompt": "Surgical viewer-right basket-content correction of this exact Crypt Assembler. Freeze the entire central body, every skull joint, all rails, EXACTLY FOUR attached baskets, top skull-only basket with round blank tab, viewer-left lower-jaw-only basket with triangular blank tab, bottom mixed basket with trapezoid blank tab, square blank tab on the viewer-right basket, and the central lower-jaw scoop holding one wrong-pile finger segment over the bottom basket. Replace ONLY the contents inside the VIEWER-RIGHT square-tab basket. Remove every current long bone from that basket and fill it only with many short separately recognizable articulated human finger-bone segments: small phalanges with compact knuckle ends, no humerus, femur, tibia, radius, ulna, rib, jaw, skull or other category. Keep the basket rim, rail and square tab unchanged and completely blank. No fifth basket, mark, label, text, symbol, new actuator, floor, workroom, glow, scene, logo or watermark. Canvas, materials, lighting, scale and framing unchanged."
+    }
+  }
+}

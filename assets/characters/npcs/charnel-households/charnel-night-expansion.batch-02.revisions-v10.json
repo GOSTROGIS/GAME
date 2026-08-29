@@ -1,0 +1,20 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v10",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "8b7f187d31eed617e27e320c5a17a1cd601cfbe237f46590f2e8d651eb9de6e3",
+  "policy": "Technical sanitization only. Preserve accepted count, one-open topology, body, roots, material and lighting. Correct only the final two size ranks and the clearance needed to display them; all prior bytes remain immutable and no generator may approve its own output.",
+  "assets": [
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v9-rejected.png",
+      "referenceSha256": "197a874bd1e1a31b1854d264e34ad3392a3eadb32559a152bc3f82fda121f3b4",
+      "outputFile": "throat-orchard-concept-master-v10.png",
+      "reason": "The ninth edit preserves exact topology but cannot enlarge the extreme-right final cuff while it remains against the canvas edge; it remains visibly smaller than the preceding diagonal cuff.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Reposition only the final closed cuff inward enough to create safe clearance, then impose an unmistakable final size increase; preserve everything else.",
+      "revisionDirection": "Faithfully preserve exactly one low broad rooted anatomical body, every root, exactly TWELVE attached laryngeal cuffs, exactly ELEVEN closed and exactly ONE open lower-right ring, every other cuff and attachment, black-nacre material, lighting, near-black opaque isolation and landscape framing. Change ONLY two closed cuffs. First identify the final CLOSED cuff at the extreme viewer-right on the short almost-horizontal stalk, immediately above and nearest the open lower-right ring. Bend ONLY its existing stalk inward toward the body enough to place the whole final bud at least 140 pixels from the right canvas edge, without detaching, crossing another stalk or moving the open ring. Then enlarge that final closed bud until it is unmistakably the largest: its bud height and width must each be about 150% of the diagonally upright closed bud immediately up-left. Its seam remains fully shut. Reduce ONLY that diagonal up-left bud by roughly 20% if needed so it remains slightly larger than the preceding top-arc closed cuff but substantially smaller than the final inward-shifted bud. Preserve the tiny closed cuff below-left of the open ring as the unique smallest first step and preserve the increasing sequence of all other closed cuffs. Keep the open ring unchanged, shallow, empty and contrary-facing. Do not add, remove, merge, duplicate, open or close any cuff. No extra throat, tree, pod, fruit, stem, head, mouth behind the opening, floor, scene, notation, text, logo, watermark, transparency or crop. Opaque RGB master, landscape 1536x1024."
+    }
+  ]
+}

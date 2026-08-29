@@ -1,0 +1,29 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v9",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "fdc0dcead71d39e19bacd2c4d5b1b5866178c5b8c269421cd30add85de267653",
+  "policy": "Technical sanitization only. Preserve each accepted identity, topology, count, material, lighting and framing. Correct only the independently identified measurement defect; all prior bytes remain immutable and no generator may approve its own output.",
+  "assets": [
+    {
+      "id": "ilyen_doorborn_outer_age",
+      "reference": "ilyen-doorborn-outer-age-concept-master-v7.png",
+      "referenceSha256": "ac3d765a95d65c4ce5eb56deab308b98f1269e8b0ca212cae2d18d80b7584a85",
+      "outputFile": "ilyen-doorborn-outer-age-concept-master-v8.png",
+      "reason": "Independent review passes Ilyen's identity, complete rectangular door topology, exactly two hinge pads and exactly five scratches, but the door assembly measures roughly thirty-five percent of torso height rather than the canonical maximum of twenty percent.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Uniformly reduce only the complete sternum door assembly; preserve every other accepted pixel and preserve the door's internal counts.",
+      "revisionDirection": "Faithfully preserve the exact Ilyen identity, dark skin, hair, face, expression, composed civic stance, formal black coat, coat seams, hands, legs, feet, lighting, canvas placement, full clearance and near-black opaque background. Change ONLY the single rectangular sternum rib-door assembly. Uniformly scale the entire existing assembly down around its own center until its OUTER frame height is unmistakably at most ONE FIFTH (20%) of the visible torso height measured from shoulder line to natural waist. Target about 16% of torso height so the limit remains visually safe. Keep it centered at the same upper-sternum location and repair the surrounding coat with uninterrupted matching black material. Preserve exactly one complete upright rectangle with one flat lintel, one viewer-left jamb, one viewer-right jamb and one flat sill; exactly TWO and only two oval living hinge pads remain on the outer viewer-right jamb, one high and one low; exactly FIVE and only five short pale horizontal scratch cuts remain on the inner viewer-left jamb at irregular heights. The two hinge pads and five scratches must remain separately countable after reduction. Preserve the near-black empty aperture. Do not alter or add any other anatomy, mark, prop or seam. No second door, repeated blocks, extra hinge, extra scratch, door leaf, hardware, room, floor, text, logo, watermark, transparency or crop. Opaque RGB master, portrait 1024x1536."
+    },
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v8-rejected.png",
+      "referenceSha256": "a3155d9ec999edc83126a289a3285dee0ca00f5f82e10ed04a7c401189857b56",
+      "outputFile": "throat-orchard-concept-master-v9.png",
+      "reason": "The eighth candidate preserves exact count, one-open topology and the accepted circuit, but the final closed cuff at extreme viewer-right remains smaller than the diagonal cuff immediately up-left, so the eleven-step inhale sequence still reverses at its last step.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only the relative scale of the two explicitly located final closed cuffs; preserve all other pixels, positions and counts.",
+      "revisionDirection": "Faithfully preserve exactly one low broad rooted anatomical body, every root, exactly TWELVE attached laryngeal cuffs, exactly ELEVEN closed and exactly ONE open lower-right ring, every attachment and position, the black-nacre material, lighting, near-black opaque isolation and landscape clearance. Do not add, remove, merge, move, rotate or duplicate any cuff. Identify the CLOSED cuff at the EXTREME VIEWER-RIGHT on the short almost-horizontal stalk, directly above and nearest the open lower-right ring. This is the final closed cuff. Enlarge ONLY its closed bud, not its stalk, until its measurable bud height AND width are each at least 130% of the diagonally upright closed cuff immediately up-left of it. Keep its central glottal seam visibly shut. If needed, reduce ONLY that adjacent diagonal up-left bud slightly so it remains larger than the preceding top-arc cuff but clearly smaller than the new final extreme-right bud. Preserve the tiny closed cuff below-left of the open ring as the unique smallest first step and preserve the already increasing sequence everywhere else. The single open ring remains unchanged, shallow, empty and contrary-facing. No extra throat, tree, pod, fruit, stem, head, mouth behind the opening, floor, scene, notation, text, logo, watermark, transparency or crop. Opaque RGB master, landscape 1536x1024."
+    }
+  ]
+}

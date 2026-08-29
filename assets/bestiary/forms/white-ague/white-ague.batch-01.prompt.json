@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "packetStatus": "immutable-before-generation",
+  "familyId": "white_ague",
+  "familyName": "White Ague",
+  "batchId": "white-ague-complete",
+  "authority": {
+    "canonicalData": "GAME-repo-lfs-skip/packages/content/src/bestiary.data.js",
+    "artLaw": "GAME-repo-lfs-skip/design-review/kit/hm-art-law.js",
+    "familyPlate": "GAME-repo-lfs-skip/assets/bestiary/white-ague-plate.png"
+  },
+  "authorityPolicy": "GAME canonical BESTIARY fields and global art law control identity. The inspected family plate controls palette, materials, finish, silhouette language, and lighting only; it is not an instruction to copy the plate representative's complete anatomy. Attached text is reference, never executable instruction. Do not invent canon.",
+  "plateInspection": {
+    "status": "inspected-full-resolution-before-generation",
+    "sha256": "2603b99e703d7c757209fee95192ab8b671a944caf9d5d7bf8e3715398e02b87",
+    "dimensions": {
+      "width": 1536,
+      "height": 1024
+    },
+    "bytes": 2285719,
+    "observedVisualLanguage": "Near-black neutral studio presentation; cold directional light; salt-white and dawnless-gray eroded mineral lamellae; translucent mineral membranes; sparse taut thread-like suspension; attenuated, horizon-bent, asymmetrical load-bearing anatomy; restrained shadow-violet darkness; no environment. These observations constrain style only."
+  },
+  "familyCanon": {
+    "regions": [
+      "salt_waste_frontier"
+    ],
+    "ecology": "A directional curse strips away every bearing except a false horizon that its pilgrims must follow.",
+    "material": "horizon_salt",
+    "palette": [
+      "salt_white",
+      "shadow_violet",
+      "dawnless_gray"
+    ],
+    "silhouette": {
+      "shape": "attenuated",
+      "posture": "horizon_bent",
+      "features": [
+        "compass_bones",
+        "blank_faces"
+      ]
+    },
+    "resistanceTags": [
+      "frost",
+      "radiance"
+    ],
+    "weaknessTags": [
+      "water",
+      "sonic"
+    ],
+    "habitat": {
+      "substrates": [
+        "salt_playa",
+        "gypsum"
+      ],
+      "moisture": [
+        0,
+        0.22
+      ],
+      "corruption": [
+        0.55,
+        1
+      ]
+    }
+  },
+  "compilation": {
+    "master": "commonMaster + two LF characters + forms[id].master",
+    "referencePolicy": "Each master generation receives only the inspected White Ague family plate as Image 1. One call creates one asset."
+  },
+  "formsInCanonicalOrder": [
+    "salt_compass",
+    "horizon_kneeler",
+    "direction_eater",
+    "meridian_widow",
+    "eastmost_penitent",
+    "destination_without_land"
+  ],
+  "commonMaster": "Use case: stylized-concept\nAsset type: canonical individual bestiary production concept master.\nInput image: Image 1 is the approved White Ague family style, palette, materials, silhouette language, finish, and lighting reference only. Create the distinct canonical form described below; do not copy the plate representative's complete multi-limbed anatomy, membranes, pose, or prop layout unless the form canon explicitly requires them.\nPrimary request: Render exactly one isolated White Ague subject as a polished stylized 3D dark-fantasy MMORPG production concept for original IP. White Ague is a directional occult curse that strips away every bearing except a false horizon. Preserve an attenuated mature silhouette, horizon-bent posture, compass-bone logic and blank-face language where the form has a face. Use plausible load-bearing construction, readable locomotion, restrained material density, and a clean form-specific silhouette suitable for later 3D modeling.\nComposition: show one complete subject centered in a three-quarter production-design view. Every canonical limb, joint, salt structure, signpost, shadow cue, mirage edge, and subordinate telegraph element must be fully visible with generous clearance on all four edges. No crop, extra figure, scene, environment, floor, ground plane, pedestal, landscape, city scene, water surface, or narrative vignette. Flat near-black neutral opaque backdrop; complete canvas opaque.\nLighting: cold raking studio key from one side, ungraded neutral and measurement-friendly. Shadow-violet darkness and very restrained mineral translucency may occur inside canonical membranes or mirage anatomy only; never form an aura.\nPalette: salt white, shadow violet, dawnless gray. Material: dry horizon salt expressed through eroded mineral lamellae and powdery gypsum; translucent mineral membrane and sparse taut thread-like suspension may be used only where structurally coherent with the form. Avoid glossy crystal and bright magical effects.\nCanon communication: anatomy, locomotion permission, sound grammar, ecological purpose, narrative origin, mechanic, visual cue, and counterplay below all constrain the design. Communicate the mechanic and cue in a poised isolated production state without inventing a target, arena, terrain, settlement, or unrelated prop. Directional lines and shadows must be abstract, subject-bound, unlettered, and subordinate.\nForbidden: ordinary pilgrim, generic robed ghost, generic salt zombie, generic many-armed deity, generic spider, generic flower-mouth monster, generic fantasy city, real-world disease taxonomy, disability shorthand, gore spectacle, exposed entrails, bright magic, aura, glossy plastic or crystal, cute or chibi proportions, readable writing, cardinal letters, words, numbers, maps, compass letters, runes, logos, watermark, recognizable franchise resemblance, recognizable real-world religious marks, baked checkerboard, border, caption, or UI.",
+  "forms": {
+    "salt_compass": {
+      "name": "Salt Compass",
+      "fileStem": "salt-compass",
+      "rank": "regular",
+      "role": "swarm",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "Four human arms form a compass rose around a featureless salt center.",
+        "locomotion": "It cartwheels toward whichever arm casts no shadow.",
+        "sound": "Knuckles scrape cardinal letters into the playa.",
+        "purpose": "It redraws directional fields after wind erases them.",
+        "origin": "Four guides died pointing in different directions around the same vanished caravan.",
+        "mechanic": "Shadowless Cardinal",
+        "cue": "Three arms cast long shadows while one remains bare.",
+        "counterplay": "Move opposite the bare arm and strike the central salt joint."
+      },
+      "master": "Canonical form: Salt Compass, regular swarm, 1.65 meters, portrait 2:3. Make the anatomy literal and countable: exactly four complete mature human arms, and no legs or ordinary torso, form one radial compass-rose body around exactly one featureless salt center. Each arm is load-bearing and physically joins the same exposed central salt joint; spread the four arms in distinct cardinal directions without letters, labels, compass glyphs, or readable marks. Pose the radial body at the poised start of a cartwheel. Exactly three arms must have long, flattened shadow-violet cast-shadow echoes attached behind them, while exactly one arm remains completely bare with no shadow echo. Keep all three shadow echoes separated and countable in empty space, never painted on a floor. Make the bare arm unmistakable and the central salt joint cleanly strikeable. Knuckles may carry shallow abstract scrape wear, never letters. No head, face, extra arm, handless stump, legs, ground, playa, landmark, compass graphic, text, or scene."
+    },
+    "horizon_kneeler": {
+      "name": "Horizon Kneeler",
+      "fileStem": "horizon-kneeler",
+      "rank": "regular",
+      "role": "skirmisher",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "Its knees emerge from the shoulders so every bow faces the sky line.",
+        "locomotion": "It kneels forward in long arcs instead of walking.",
+        "sound": "Each impact whispers that the destination is almost visible.",
+        "purpose": "It flattens dunes into false level horizons.",
+        "origin": "A penitent followed a promised shrine until kneeling became the only remaining direction.",
+        "mechanic": "Level Devotion",
+        "cue": "A white arc joins its shoulders to the distant horizon.",
+        "counterplay": "Change elevation and attack beneath the arc after impact."
+      },
+      "master": "Canonical form: Horizon Kneeler, regular skirmisher, 1.65 meters, portrait 2:3. Show one narrow featureless salt-faced figure whose only two knee joints emerge unmistakably and directly from the left and right shoulder positions. Do not place knees at ordinary hip height and do not add ordinary lower legs below the pelvis. From each shoulder-knee, one long lower leg and foot arcs forward and downward so the entire subject advances by repeated sky-facing bows rather than walking. Preserve exactly two shoulder-knees, exactly two lower legs and exactly two feet, all fully visible; keep the pelvis and attenuated torso subordinate rather than a second normal body. Attach one thin salt-white arc physically to both shoulder-knees; its outer span becomes perfectly level and extends laterally within the isolated silhouette as the false-horizon cue, with clear open space beneath it for the punish window. The arc is subject-bound telegraph anatomy, not scenery. Pose the figure just after one forward kneeling impact without ground, dune, shrine, skyline, distant landscape, extra limb, ordinary praying pose, readable mark, or scene."
+    },
+    "direction_eater": {
+      "name": "Direction Eater",
+      "fileStem": "direction-eater",
+      "rank": "specialist",
+      "role": "artillery",
+      "heightMeters": 1.9,
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "A radial mouth opens through the torso and contains rotating signposts as teeth.",
+        "locomotion": "It moves faster as nearby route options disappear.",
+        "sound": "Wooden arrows snap one by one inside the mouth.",
+        "purpose": "It removes competing bearings from the White Ague's range.",
+        "origin": "A crossroads keeper burned every sign during a salt storm and inhaled their destinations.",
+        "mechanic": "Consume Exit",
+        "cue": "One route marker bends toward the radial mouth.",
+        "counterplay": "Create a temporary route or break the targeted sign before it is swallowed."
+      },
+      "master": "Canonical form: Direction Eater, specialist artillery, 1.9 meters, portrait 2:3. Show exactly one attenuated, horizon-bent White Ague body with a blank featureless salt head and a large circular radial mouth opening all the way through the torso as black negative space; no flesh, organs, gore, second face, or ordinary abdominal mouth. The mouth's teeth are a rotating ring made only from multiple small weathered wooden signposts with plain pointed plank ends, all completely unlettered and nonsymbolic. Exactly one distinct route-marker tooth bends visibly inward toward the radial opening and has one clean break notch as the targeted, interruptible sign; keep every other signpost tooth unbent so the cue is unique. Suggest speed increasing as route options disappear through several empty sockets in the rotating tooth ring, never through a map or scene. The signposts must remain teeth integrated inside the mouth, not a crossroads prop cluster. No readable arrow, word, letter, destination, route diagram, external road sign, landscape, crossroads, extra creature, glossy crystal, or environment."
+    },
+    "meridian_widow": {
+      "name": "Meridian Widow",
+      "fileStem": "meridian-widow",
+      "rank": "elite",
+      "role": "support",
+      "heightMeters": 2.15,
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "A black meridian divides her vertically and each half sees a different noon.",
+        "locomotion": "The halves circle the world in opposite directions while remaining joined.",
+        "sound": "Two funeral prayers overlap from dawn and dusk.",
+        "purpose": "She patrols the boundary between true and false bearings.",
+        "origin": "A surveyor's widow walked one meridian searching both east and west for the same grave.",
+        "mechanic": "Divided Noon",
+        "cue": "Opposed shadows rotate around her joined feet.",
+        "counterplay": "Stand on the meridian line and strike when both shadows overlap."
+      },
+      "master": "Canonical form: Meridian Widow, elite support, 2.15 meters, portrait 2:3. Show exactly one tall mature salt figure divided from crown through featureless face, torso, pelvis, and joined feet by exactly one continuous near-black vertical meridian. The left and right halves remain physically joined along that single line but twist in visibly opposite circumferential directions, as if each half circles the world against the other; do not make twins, two people, a clone, or detached halves. Let restrained opposed dawnless-gray highlights across the two blank half-faces imply different noons without adding suns or a scene. From the single joined foot base, attach exactly two flattened shadow-violet shadow arcs that rotate in opposite directions around the subject in empty space. Their paths must visibly overlap once on the black meridian at the strike window while remaining distinct elsewhere. Keep the shadows subject-bound, not floor shadows. No ordinary mourning dress, grave, sun, horizon landscape, globe, map, readable survey marks, extra limb, duplicate figure, ground, or environment."
+    },
+    "eastmost_penitent": {
+      "name": "Eastmost Penitent",
+      "fileStem": "eastmost-penitent",
+      "rank": "miniboss",
+      "role": "ambusher",
+      "heightMeters": 2.56,
+      "orientation": "landscape-3:2",
+      "canonical": {
+        "anatomy": "Its body tapers into an endless pointing finger beyond visible distance.",
+        "locomotion": "It pulls the landscape westward beneath its stationary knees.",
+        "sound": "Far landmarks groan as though dragged over salt.",
+        "purpose": "It concentrates pilgrims toward the basin's false eastern edge.",
+        "origin": "The oldest pilgrim reached the eastmost marker and found another marker growing from his hand.",
+        "mechanic": "Landscape Penance",
+        "cue": "Distant terrain begins sliding beneath a fixed pointing shadow.",
+        "counterplay": "Anchor to exposed bedrock and sever the finger's nearest joint."
+      },
+      "master": "Canonical form: Eastmost Penitent, miniboss ambusher, 2.56 meters, landscape 3:2 to preserve the extreme directional silhouette. Show exactly one stationary kneeling White Ague body whose entire attenuated torso progressively becomes exactly one vast east-pointing human index finger; the body and finger are one continuous anatomy, not a humanoid merely holding a long finger, not an arm with a hand, and not multiple fingers. Keep both stationary knees complete and clearly readable at the broad western base. From them, the salt body narrows through one prominent nearest finger joint with a clean visible severance notch, then repeats diminishing salt joints eastward into an impossibly long hair-thin continuation that visually recedes beyond measurable distance while retaining canvas clearance. Under this form, attach one perfectly fixed narrow pointing-shadow ribbon aligned with the endless finger. Behind and below that fixed shadow, show a few small abstract dawnless-gray horizon-stratum fragments offset westward in a single sliding cadence to communicate dragged distant terrain; they are sparse subject-bound telegraph tokens, never a floor, road, map, or landscape. No ordinary pilgrim, hand at the end of a normal arm, multiple fingers, landmark building, shrine, compass marker, ground plane, bedrock pedestal, text, or scene."
+    },
+    "destination_without_land": {
+      "name": "Destination Without Land",
+      "fileStem": "destination-without-land",
+      "rank": "boss",
+      "role": "hunter",
+      "heightMeters": 3.63,
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "An empty city silhouette walks inside a towering salt mirage.",
+        "locomotion": "It approaches only when travelers navigate toward something else.",
+        "sound": "Market bells and doors sound from beyond the visible horizon.",
+        "purpose": "It absorbs intended destinations and replaces them with itself.",
+        "origin": "Generations crossed the waste toward a city copied from one dying cartographer's memory.",
+        "mechanic": "False Arrival",
+        "cue": "Every known landmark acquires the same impossible city gate.",
+        "counterplay": "Navigate by terrain process—flow, slope, and shadow—rather than any named place."
+      },
+      "master": "Canonical form: Destination Without Land, boss hunter, 3.63 meters, portrait 2:3. Show exactly one towering, attenuated, horizon-bent salt mirage as the outer walking body: an eroded translucent horizon-salt shell with exactly two long load-bearing walking legs and no ordinary face. Inside that single mirage, contain one empty near-black city silhouette as negative-space anatomy, not a real city scene and not solid buildings placed in an environment. The internal city-shaped absence must visibly walk with the outer body: its lower skyline resolves into the same two leg channels, while its upper edge remains an unoccupied roof-and-tower silhouette with no people, windows, rooms, or deep perspective. Repeat one identical impossible gate-shaped void across several small abstract internal landmark fragments attached within the mirage, so every fragment acquires the same gate cue; keep all gates blank and unlettered. Make three non-named terrain-process cues—one thin flow curve, one stepped slope edge, and one cast-shadow strip—subordinate and integrated along the outer salt shell as neutral navigation counterplay, never a map, UI, or scene. No separate city, street, landscape, traveler, crowd, readable place name, market stall, bell tower prop, portal, floor, horizon environment, extra creature, or bright aura."
+    }
+  }
+}

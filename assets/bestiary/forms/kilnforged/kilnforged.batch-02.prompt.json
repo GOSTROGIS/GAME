@@ -1,0 +1,100 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "kilnforged-batch-02",
+  "status": "generation",
+  "familyId": "kilnforged",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/kilnforged-plate.png"
+  ],
+  "commonDirection": "Use the Kilnforged family plate only as authoritative family style and material reference, never as a subject to copy. Carry forward soot iron, restrained furnace orange, black heat scale, dull brick gray, muted oxide red, pitted forged iron, cracked firebrick, vitrified slag, greasy chain, heat-blued scale, powdery soot, cold raking studio light, and restrained internal chamber heat. Each form's canonical anatomy overrides the plate's humanoid chassis where they conflict. Original design with no franchise resemblance. Polished stylized 3D dark-fantasy MMORPG production concept, mature material density, one complete subject in three-quarter view, every extremity and mechanic cue visible, centered with generous clearance. Flat near-black neutral opaque studio backdrop; no environment, floor, ground plane, cast floor shadow, extra unrelated figure, text, readable symbols, runes, real religious marks, logo, watermark, heroic power armor, steampunk boiler-person shorthand, clean knight, generic lava elemental, oversized shoulders, glossy plastic, cute proportions, bright saturation, gore, exposed entrails, or transparency pattern.",
+  "assets": [
+    {
+      "id": "kiln_knight_rusk",
+      "name": "Rusk, the Kiln Knight",
+      "rank": "boss",
+      "orientation": "portrait",
+      "masterFile": "kiln-knight-rusk-v1.png",
+      "canonical": {
+        "anatomy": "The foundry's last knight sealed himself inside furnace armor with the royal Cinder Seal. The violation closes into a usable limb when every vent opens and Rusk's hammer lifts without effort.",
+        "locomotion": "It steps only on the recovery beat of the last action it witnessed; the permission cue is every vent opens and Rusk's hammer lifts without effort.",
+        "sound": "Ember iron produces the opponent's last rhythm returned with one deliberately missing beat; Overheated Judgment commits on the first strike/fire/unblockable sound after the gap.",
+        "purpose": "Foundry workers and royal guards fused into the furnace systems they were ordered to seal. This form serves the niche expressed by the foundry's last knight sealed himself inside furnace armor with the royal cinder seal.",
+        "origin": "The foundry's last knight sealed himself inside furnace armor with the royal Cinder Seal.",
+        "mechanic": "Overheated Judgment",
+        "cue": "Every vent opens and Rusk's hammer lifts without effort.",
+        "counterplay": "Freeze two vents, then dodge through the delayed hammer arc to reach the seal."
+      }
+    },
+    {
+      "id": "furnace_louse",
+      "name": "Furnace Louse",
+      "rank": "regular",
+      "orientation": "landscape",
+      "masterFile": "furnace-louse-v1.png",
+      "canonical": {
+        "anatomy": "An iron insect uses a worker's detached teeth as cooling fins.",
+        "locomotion": "It scuttles toward the hottest metal, then recoils exactly three body lengths.",
+        "sound": "Teeth chatter faster as nearby armor heats.",
+        "purpose": "It strips slag from active vents and seeds it into cooler machinery.",
+        "origin": "Foundry lice survived a sealing fire by borrowing teeth from the shift bell's casualties.",
+        "mechanic": "Heat Recoil",
+        "cue": "Its tooth fins glow in a front-to-back wave.",
+        "counterplay": "Present heated metal, then punish the fixed recoil landing."
+      }
+    },
+    {
+      "id": "clinker_page",
+      "name": "Clinker Page",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "clinker-page-v1.png",
+      "canonical": {
+        "anatomy": "A small suit has a clinker brick for a head and molten handwriting in its visor.",
+        "locomotion": "It marches on the shadow of a larger absent knight.",
+        "sound": "Spurs ring from empty space one pace ahead.",
+        "purpose": "It gathers usable clinker and lays it into ceremonial furnace paths.",
+        "origin": "An apprentice polished armor for a knight who existed only on the duty roster.",
+        "mechanic": "Absent Spur",
+        "cue": "An oversized knight shadow raises a weapon before the page does.",
+        "counterplay": "Attack the small body during the shadow's exaggerated windup."
+      }
+    },
+    {
+      "id": "draft_taster",
+      "name": "Draft Taster",
+      "rank": "specialist",
+      "orientation": "landscape",
+      "masterFile": "draft-taster-v1.png",
+      "canonical": {
+        "anatomy": "A long copper tongue passes through furnace vents in place of a spine.",
+        "locomotion": "It is pulled sideways by changes in air pressure.",
+        "sound": "Vents whistle a rising scale before the tongue appears.",
+        "purpose": "It maps clean drafts and diverts them away from sealed workers.",
+        "origin": "A safety inspector tasted furnace air until the foundry learned to use him as a vane.",
+        "mechanic": "Reverse Draft",
+        "cue": "Soot streams sideways toward a closed vent.",
+        "counterplay": "Open the opposite vent to drag the tongue across exposed gears."
+      }
+    },
+    {
+      "id": "crucible_centurion",
+      "name": "Crucible Centurion",
+      "rank": "elite",
+      "orientation": "landscape",
+      "masterFile": "crucible-centurion-v1.png",
+      "canonical": {
+        "anatomy": "Its torso is a tilting crucible balanced on four mismatched armored legs.",
+        "locomotion": "It advances only while molten weight remains level.",
+        "sound": "Liquid metal counts cadence against the vessel walls.",
+        "purpose": "It transports furnace memory between isolated foundry districts.",
+        "origin": "Four guards carried the royal crucible until a command fused bearer and burden.",
+        "mechanic": "Level the Pour",
+        "cue": "The crucible tilts and a white line climbs one rim.",
+        "counterplay": "Strike the high-side leg to spill metal away and topple the formation."
+      }
+    }
+  ],
+  "cutoutDirection": "After a master receives two independent non-generator passes, edit that exact master only to remove its studio background. Preserve canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact-count cues, and RGB identity. Output genuine RGBA: background and four corners alpha 0, opaque subject interiors alpha 255, partial alpha only at true antialiased/fine-fiber edges; no painted transparency pattern, floor, shadow, matte, halo, text, logo, or watermark."
+}

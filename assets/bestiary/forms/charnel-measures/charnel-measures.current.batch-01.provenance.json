@@ -1,0 +1,200 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-charnel-measures-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.drawerling",
+      "subjectId": "drawerling",
+      "familyId": "charnel_measures",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/charnel-measures/drawerling-v1.png",
+      "sha256": "17333b0d537be321914ae1d32e19d53f1aec50a9391b46465e23d0aec1fade16",
+      "bytes": 1369354,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "17333b0d537be321914ae1d32e19d53f1aec50a9391b46465e23d0aec1fade16"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.folded_registrar",
+      "subjectId": "folded_registrar",
+      "familyId": "charnel_measures",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/charnel-measures/folded-registrar-v4.png",
+      "sha256": "b02e0fb31113b88cdad7bf91a4bc747dfa0eac35fcf99fc5d3867537631a51e7",
+      "bytes": 2039990,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "b02e0fb31113b88cdad7bf91a4bc747dfa0eac35fcf99fc5d3867537631a51e7"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.master_cubit",
+      "subjectId": "master_cubit",
+      "familyId": "charnel_measures",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/charnel-measures/master-cubit-v1.png",
+      "sha256": "f73003518669bd680897d3c1a24f5f71938b0083319646a656d174998fa06e9d",
+      "bytes": 1519555,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "f73003518669bd680897d3c1a24f5f71938b0083319646a656d174998fa06e9d"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.plumb_line_butcher",
+      "subjectId": "plumb_line_butcher",
+      "familyId": "charnel_measures",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/charnel-measures/plumb-line-butcher-v2.png",
+      "sha256": "7d2708e2cef6934d18ab2b2fe525bd007c3665b9ec28ffbee6226f858fbce138",
+      "bytes": 948887,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "7d2708e2cef6934d18ab2b2fe525bd007c3665b9ec28ffbee6226f858fbce138"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.tally_corpse",
+      "subjectId": "tally_corpse",
+      "familyId": "charnel_measures",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/charnel-measures/tally-corpse-v2.png",
+      "sha256": "0871d8797a2a07b20a7109d380da3e922e05d81a801aa4521b264bf4f127ba22",
+      "bytes": 1682707,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "0871d8797a2a07b20a7109d380da3e922e05d81a801aa4521b264bf4f127ba22"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.warehouse_one_body",
+      "subjectId": "warehouse_one_body",
+      "familyId": "charnel_measures",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/charnel-measures/warehouse-one-body-v1.png",
+      "sha256": "1bd64f0cf69deb9f2171b65d57c557d77fe9d5c6ce9f170f3d813135f3f658e7",
+      "bytes": 1986955,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "1bd64f0cf69deb9f2171b65d57c557d77fe9d5c6ce9f170f3d813135f3f658e7"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

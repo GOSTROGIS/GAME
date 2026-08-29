@@ -1,0 +1,328 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-kilnforged-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.chain_stoker",
+      "subjectId": "chain_stoker",
+      "familyId": "kilnforged",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/kilnforged/chain-stoker-v1.png",
+      "sha256": "128ca3aa62da086940a848e944506287aafaf6f5e14958452aed84c009896a97",
+      "bytes": 2147453,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "128ca3aa62da086940a848e944506287aafaf6f5e14958452aed84c009896a97"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.clinker_page",
+      "subjectId": "clinker_page",
+      "familyId": "kilnforged",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/kilnforged/clinker-page-v6.png",
+      "sha256": "b791748344be88cdce705dc36702f94014d3d1c24ef3d36b37fcb0cdc173ca78",
+      "bytes": 1767157,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "b791748344be88cdce705dc36702f94014d3d1c24ef3d36b37fcb0cdc173ca78"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.crucible_centurion",
+      "subjectId": "crucible_centurion",
+      "familyId": "kilnforged",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/kilnforged/crucible-centurion-v1.png",
+      "sha256": "96b545b35a85f2da7a32c446ac6e7d4dc56b06484198b1c89ebbc55ec0a30441",
+      "bytes": 2006868,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "96b545b35a85f2da7a32c446ac6e7d4dc56b06484198b1c89ebbc55ec0a30441"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.draft_taster",
+      "subjectId": "draft_taster",
+      "familyId": "kilnforged",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/kilnforged/draft-taster-v1.png",
+      "sha256": "ff1bee02dab5a9365af8e1a847715668632786658d5ecdd0df57fd04f95c936e",
+      "bytes": 1504226,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "ff1bee02dab5a9365af8e1a847715668632786658d5ecdd0df57fd04f95c936e"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.furnace_louse",
+      "subjectId": "furnace_louse",
+      "familyId": "kilnforged",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/kilnforged/furnace-louse-v1.png",
+      "sha256": "a9659d7b5b8fb78600334576bee2471bce8fe628256bd9808c9de0161ec40740",
+      "bytes": 1915770,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a9659d7b5b8fb78600334576bee2471bce8fe628256bd9808c9de0161ec40740"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.furnace_shield_guard",
+      "subjectId": "furnace_shield_guard",
+      "familyId": "kilnforged",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/kilnforged/furnace-shield-guard-v5.png",
+      "sha256": "d33e5f7e8f2fa130cf14c240425bd3c004f22eec3897424796c38736556cfb5c",
+      "bytes": 1899272,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "d33e5f7e8f2fa130cf14c240425bd3c004f22eec3897424796c38736556cfb5c"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.kiln_knight_rusk",
+      "subjectId": "kiln_knight_rusk",
+      "familyId": "kilnforged",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/kilnforged/kiln-knight-rusk-v2.png",
+      "sha256": "1ccc4617ad60a550b5e996f2055c28b7e8caeb912871f28dcd18be8a5e4a9eb2",
+      "bytes": 2227109,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "1ccc4617ad60a550b5e996f2055c28b7e8caeb912871f28dcd18be8a5e4a9eb2"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.kiln_thrall",
+      "subjectId": "kiln_thrall",
+      "familyId": "kilnforged",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/kilnforged/kiln-thrall-v5.png",
+      "sha256": "5d280ecfd9398889f205c7b7e6573788391b4d889c2526d3cb2c12f68d404f4f",
+      "bytes": 1627233,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "5d280ecfd9398889f205c7b7e6573788391b4d889c2526d3cb2c12f68d404f4f"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.quenchless_smith",
+      "subjectId": "quenchless_smith",
+      "familyId": "kilnforged",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/kilnforged/quenchless-smith-v5.png",
+      "sha256": "f19b298720d48244244b7db5ae6d11e52bff6deb91f22316bfa2e02ab9c0032d",
+      "bytes": 1434522,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "f19b298720d48244244b7db5ae6d11e52bff6deb91f22316bfa2e02ab9c0032d"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.slag_foreman",
+      "subjectId": "slag_foreman",
+      "familyId": "kilnforged",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/kilnforged/slag-foreman-v1.png",
+      "sha256": "e134abb8c8475395e282b530de76a7db087babc69fa5d9b62229ef8217ca77c3",
+      "bytes": 2487238,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "e134abb8c8475395e282b530de76a7db087babc69fa5d9b62229ef8217ca77c3"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

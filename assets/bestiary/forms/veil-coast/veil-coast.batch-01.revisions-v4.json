@@ -1,0 +1,24 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "veil-coast-kin-masters-batch-01-revision-v4",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast_kin",
+  "basePacketSha256": "eb97a1a39e7554f1e351d3d9a1e2c23eebd25316ea57b0e7049bd0b00297dc2e",
+  "previousRevisionSha256": "4c4782d57b1a7775d682ae2905af7aba11b8744296a236369bd7448250bf6731",
+  "assets": [
+    {
+      "id": "lantern_gilled_raider",
+      "reference": "assets/bestiary/veil-coast-plate.png",
+      "outputFile": "lantern-gilled-raider-concept-master-v4.png",
+      "reason": "The v3 has only two aperture tokens and invents a carried staff.",
+      "revisionDirection": "Regenerate from the inspected family plate. Preserve the canonical pulsing integrated gill lanterns and one poised exchange step. Keep both hands completely empty. At fixed positions left of the rear foot, centered below and behind both feet, and right of the forward foot, show exactly three separate shallow absolute-black water-film apertures, each a filled oval with one small inward pressure dent and no visible thing inside or emerging. Tie each aperture to the subject only through one hair-thin non-glowing blackwater filament. Add one incomplete vacated-position after-contour behind the torso. No staff, weapon, prop, bell, fish, creature, floor, puddle scene, outline glow, extra aperture or crop."
+    },
+    {
+      "id": "undertow_harpooner",
+      "reference": "undertow-harpooner-concept-master-v2.png",
+      "outputFile": "undertow-harpooner-concept-master-v4.png",
+      "reason": "The v2 already solves the current/line/anchor topology; only the current ribbon is cropped.",
+      "revisionDirection": "Faithful measurement reframe of the exact inspected v2 subject. Preserve its exact hunter identity, one off-axis harpoon, pose, both hands and feet, continuous retrieval line, one knot visibly embedded in the abstract bodyless blackwater current, and all family materials. Scale the entire existing composition uniformly down to about eighty-two percent and center it so the complete current ribbon, every water tip, the line, knot, harpoon tip, head crest and both feet all have generous near-black clearance. Do not redesign or add anything. No crop, floor, boat, creature anatomy in the current, second harpoon, text, glow or scene."
+    }
+  ]
+}

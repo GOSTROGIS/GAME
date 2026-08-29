@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "familyId": "hush_order",
+  "batchId": "hush-order-masters-batch-02",
+  "policy": "The frozen packet remains unchanged. This is one narrow forward revision after owner full-resolution preflight of Pause Inquisitor v5. All topology, pose and family design are frozen; only the central unfinished-stroke silhouette may change.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/hush-order/batch-02/prompt-packet.json",
+    "sha256": "8e15b4735f602db93ac7c2bd7dbe5c87267e2607a5f8f079367e8a2a36ae27d8"
+  },
+  "revisions": {
+    "pause-inquisitor-v6": {
+      "source": "work/concept-art-production/hush-order/batch-02/pause-inquisitor-concept-master-v5.png",
+      "sourceSha256": "99cc3fa9f8bed4bcf7f2579ce14eba8a67caadf72502292d90a20e6875c36a50",
+      "reason": "The v5 topology, hands and family presentation pass owner preflight, but the two near-rectangular vertical fragments and centered bead can still parse as punctuation. The replacement must read as one broad nonsemantic unfinished horizontal gesture.",
+      "prompt": "Surgical central-cue silhouette correction of this exact Pause Inquisitor. Freeze and preserve the complete prayer-cord topology, crown route, compact two-ended return knot, both wrist-to-leg pass-throughs, both complete feet, low bridge, two repeated hands, hood, pose, canvas, materials, lighting, scale, placement, silhouette and framing. Delete ONLY the two dark rectangular central fragments and bead. In the same central empty air create exactly ONE broad low horizontal dry-ink gesture, interrupted exactly once: make it from exactly TWO very wide, low, asymmetrical jagged matte-black segments with blunt torn ends that visually align left-to-right across one small diagonal gap. Each segment must be at least three times wider than tall and must have an irregular multi-lobed torn silhouette; neither is a rectangle, curve, hook or vertical bar. Suspend exactly ONE small irregular dry-ink bead inside the gap, displaced strongly toward the gap's upper-left edge rather than on the gesture centerline. Together the two segments and bead must read as one unfinished material smear, not as a character, punctuation, letter, numeral, rune, icon, glyph, face or symbol. No third segment, second bead, text, page, pen, stone, body, waist cord, second rope, glow, floor, scene, logo or watermark. Opaque near-black neutral studio; full-body isolation and clearance unchanged."
+    }
+  }
+}

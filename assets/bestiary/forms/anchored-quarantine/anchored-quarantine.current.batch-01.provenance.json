@@ -1,0 +1,268 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-anchored-quarantine-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "transparent_cutout.buoy_corpse",
+      "subjectId": "buoy_corpse",
+      "familyId": "anchored_quarantine",
+      "rank": "regular",
+      "role": "transparent_cutout",
+      "path": "assets/bestiary/forms/anchored-quarantine/buoy-corpse-v1-cutout.png",
+      "sha256": "77cd89206d37cfd58e0d3afc1bb02eb0d70f92b78ab56bb741145a3c14c1e2d2",
+      "bytes": 1096366,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "77cd89206d37cfd58e0d3afc1bb02eb0d70f92b78ab56bb741145a3c14c1e2d2"
+      },
+      "sourceReferences": [
+        "assets/bestiary/forms/anchored-quarantine/buoy-corpse-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.buoy_corpse",
+      "subjectId": "buoy_corpse",
+      "familyId": "anchored_quarantine",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/anchored-quarantine/buoy-corpse-v1.png",
+      "sha256": "fa4efea51e59a619ad53c8098405a011ad2019cd66a2f462f589ec6663f69829",
+      "bytes": 1387168,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "fa4efea51e59a619ad53c8098405a011ad2019cd66a2f462f589ec6663f69829"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.captain_under_keel",
+      "subjectId": "captain_under_keel",
+      "familyId": "anchored_quarantine",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/anchored-quarantine/captain-under-keel-v1.png",
+      "sha256": "d7ba4b8f9a14d5b35631397106fc8040f36395deaebde21d788eb58fccdbcdad",
+      "bytes": 1724857,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "d7ba4b8f9a14d5b35631397106fc8040f36395deaebde21d788eb58fccdbcdad"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.fleet_one_shadow",
+      "subjectId": "fleet_one_shadow",
+      "familyId": "anchored_quarantine",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/anchored-quarantine/fleet-one-shadow-v1.png",
+      "sha256": "df04e014e298b3d06d5b9e300d3cba3d69fcacc8a7ca907207bbb5f71e7615f7",
+      "bytes": 1644284,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "df04e014e298b3d06d5b9e300d3cba3d69fcacc8a7ca907207bbb5f71e7615f7"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.hawser_hand",
+      "subjectId": "hawser_hand",
+      "familyId": "anchored_quarantine",
+      "rank": "regular",
+      "role": "transparent_cutout",
+      "path": "assets/bestiary/forms/anchored-quarantine/hawser-hand-v1-cutout.png",
+      "sha256": "c4319c6f38a04ff08b05f1b535dbcd16222d0f8962e9c69a7bb59d255dc6c6fb",
+      "bytes": 1591992,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "c4319c6f38a04ff08b05f1b535dbcd16222d0f8962e9c69a7bb59d255dc6c6fb"
+      },
+      "sourceReferences": [
+        "assets/bestiary/forms/anchored-quarantine/hawser-hand-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.hawser_hand",
+      "subjectId": "hawser_hand",
+      "familyId": "anchored_quarantine",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/anchored-quarantine/hawser-hand-v1.png",
+      "sha256": "ba0dc7c24d43a26df0ef5fb6f83ec6411841abbfce850ea2c200e6c2ff82cc84",
+      "bytes": 2122538,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "ba0dc7c24d43a26df0ef5fb6f83ec6411841abbfce850ea2c200e6c2ff82cc84"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.quarantine_bosun",
+      "subjectId": "quarantine_bosun",
+      "familyId": "anchored_quarantine",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/anchored-quarantine/quarantine-bosun-v1.png",
+      "sha256": "ab22aa88d6d65d2da2ae2aabe37404a50088661c1947592c39eefad3bff1755c",
+      "bytes": 1662354,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "ab22aa88d6d65d2da2ae2aabe37404a50088661c1947592c39eefad3bff1755c"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.signal_mate",
+      "subjectId": "signal_mate",
+      "familyId": "anchored_quarantine",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/anchored-quarantine/signal-mate-v1.png",
+      "sha256": "99a8f0269f2f9be4bb21d4b201cd85dcd262812cb12d77a03b6eed2d86082aeb",
+      "bytes": 2096986,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "99a8f0269f2f9be4bb21d4b201cd85dcd262812cb12d77a03b6eed2d86082aeb"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

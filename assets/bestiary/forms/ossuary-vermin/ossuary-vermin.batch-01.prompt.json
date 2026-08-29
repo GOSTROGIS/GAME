@@ -1,0 +1,135 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "ossuary-vermin-masters-batch-01",
+  "status": "immutable-before-generation",
+  "familyId": "ossuary_vermin",
+  "formsInCanonicalOrder": [
+    "finger_mice",
+    "ribcage_screecher",
+    "borrowed_spine",
+    "reliquary_millipede",
+    "crypt_assembler"
+  ],
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/ossuary-vermin-plate.png"
+  ],
+  "plateInspection": {
+    "status": "inspected-full-resolution-before-generation",
+    "sha256": "c422037c0c780bbbc193898d8e67200296ea7c27b1cd5d9a896a89e49bdb974b",
+    "dimensions": { "width": 1536, "height": 1024 },
+    "bytes": 2012543,
+    "observedVisualLanguage": "Near-black neutral studio presentation; low scrambling composite silhouette; porous age-darkened borrowed bone; cracked tooth enamel; living mold-green ligament lashings; skulls and incompatible small bones used as mechanical load-bearing joints; central negative space; cold side light; restrained material density; no magical glow. These observations constrain family style only."
+  },
+  "referencePolicy": "The inspected Ossuary Vermin plate controls family palette, porous bone/enamel/mold/ligament materials, communal assembly logic, low scrambling silhouette language, finish, and cold studio lighting. Its exact representative nine-skull wheel and eighteen-limb count are not universal anatomy: each canonical form below replaces that representative chassis with its explicitly authored body plan and exact cue. Each master generation receives only this local plate as its visual reference.",
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical individual bestiary production concept master for later 3D design. Create exactly one complete original Ossuary Vermin subject, or one complete colony when the canonical subject is explicitly a colony, in a polished stylized 3D dark-fantasy MMORPG production style, three-quarter view, centered with generous silhouette clearance. Family identity is an intelligent communal organism assembled from borrowed skeletal fragments rather than an ordinary skeleton: porous old bone, cracked tooth-white enamel, dusty mold green, crypt black, dry fibrous ligament brown, and sparse matte chitin; incompatible bones are mechanically load-bearing, joined by living mold-green ligament threads. Form-specific anatomy and counts below are mandatory and override the family plate's representative wheel body. Flat near-black neutral opaque studio backdrop; cold raking light from one side; ungraded neutral measurement-friendly presentation; no magical glow. No environment, abbey, crypt room, floor, ground plane, pedestal, contact or cast floor shadow, unrelated extra creature or person, narrative scene, caption, UI, readable writing, labels with language, letters, numerals, runes, real religious marks, logo, watermark, franchise resemblance, ordinary humanoid skeleton, generic skeleton spider, skull pile as the whole design, generic centipede, necromancer summon, cute swarm, gore, exposed entrails, bright magic, aura, glossy plastic, baked checkerboard, transparency, or crop. Canonical motion trails, warning cones, sorting evidence, and mechanic cues must be subordinate, subject-bound or clearly non-solid, and must not become an environment.",
+  "assets": [
+    {
+      "id": "finger_mice",
+      "name": "Finger-Mice Colony",
+      "rank": "regular",
+      "role": "swarm",
+      "heightMeters": 1.65,
+      "orientation": "landscape-3:2",
+      "masterFile": "finger-mice-colony-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/ossuary-vermin/finger-mice-v1.png",
+      "canonical": {
+        "anatomy": "Knucklebones scurry in groups of five, assembling a hand only when threatened. No joint explains the motion; instead five separate trails curl toward one center point.",
+        "locomotion": "Its bodies move by passing one impulse through the whole colony; the permission cue is five separate trails curl toward one center point.",
+        "sound": "Gnawed relic produces many dry contacts resolving into a single synchronized beat; Make a Fist commits on the first strike sound after the gap.",
+        "purpose": "Small scavengers assemble borrowed skeletons into increasingly ambitious communal bodies; this colony uses five scurrying knucklebone groups that assemble a hand only when threatened.",
+        "origin": "Knucklebones scurry in groups of five, assembling a hand only when threatened.",
+        "mechanic": "Make a Fist",
+        "cue": "Five separate trails curl toward one center point.",
+        "counterplay": "Scatter the fingers with area damage before the fist closes."
+      },
+      "masterDirection": "Show one complete Finger-Mice Colony as EXACTLY FIVE separately countable finger-shaped knucklebone organisms, each a mature unsettling chain of small borrowed finger joints and cracked enamel rather than a cute mouse, ordinary hand, or humanoid skeleton. The five units are still separate but are converging to assemble one incomplete hand/fist at a single hollow center. From each unit, exactly one thin pale tooth-dust and mold-ligament motion trail curls inward toward that same center, making EXACTLY FIVE separate trails; no trails merge before the center. Arrange the units at five distinct stages of one synchronized inward impulse so the imminent fist closure is readable but not complete, leaving clear gaps where area damage can scatter them. Treat all five units and trails as one colony subject. Keep every unit and every trail fully inside frame and separated against black. No sixth unit, completed flesh hand, separate ordinary mouse, ground track, floor, skull wheel, text, glow, scene, or extra creature."
+    },
+    {
+      "id": "ribcage_screecher",
+      "name": "Ribcage Screecher",
+      "rank": "regular",
+      "role": "artillery",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "masterFile": "ribcage-screecher-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/ossuary-vermin/ribcage-screecher-v1.png",
+      "canonical": {
+        "anatomy": "A carrion bird nests inside a ribcage and plays the bones like a warning instrument. The violation closes into a usable limb when the bird draws one wing across the ribs.",
+        "locomotion": "It relocates only while its firing anatomy is occluded or recovering; the permission cue is the bird draws one wing across the ribs.",
+        "sound": "Gnawed relic produces a narrowing whistle that stops exactly once before release; Rib Whistle commits on the first sonic/fear sound after the gap.",
+        "purpose": "Small scavengers assemble borrowed skeletons into increasingly ambitious communal bodies; this form uses a nested carrion bird to play its borrowed ribcage as a warning instrument.",
+        "origin": "A carrion bird nests inside a ribcage and plays the bones like a warning instrument.",
+        "mechanic": "Rib Whistle",
+        "cue": "The bird draws one wing across the ribs.",
+        "counterplay": "Strike the open cage or move behind its narrow sonic cone."
+      },
+      "masterDirection": "Show one complete low scrambling Ribcage Screecher whose dominant body is one open borrowed human ribcage, mechanically supported by several mismatched small finger-bone and lower-jaw limbs bound in mold-green ligament, never a conventional torso or complete skeleton. Exactly ONE black carrion bird is physically nested inside and integral to the open cage; it is not a separate companion. The bird reaches exactly one extended wing laterally across the exposed rib row so its primary feathers scrape the ribs like instrument bars at the instant before release. Keep the opposite wing folded inside. From the scraped rib edge project one short, narrow, incomplete cone of sparse compressed tooth-dust arcs, visually non-solid and wholly subordinate, leaving the open cage directly strikeable and the rear escape side clear. Preserve the complete cage opening, the one nested bird, scraping wing, every support limb, and narrow cone inside frame. No second bird, closed chest, humanoid body, floor, landscape, music notation, readable mark, glow, gore, scene, or extra creature."
+    },
+    {
+      "id": "borrowed_spine",
+      "name": "Borrowed Spine",
+      "rank": "specialist",
+      "role": "skirmisher",
+      "heightMeters": 1.9,
+      "orientation": "landscape-3:2",
+      "masterFile": "borrowed-spine-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/ossuary-vermin/borrowed-spine-v1.png",
+      "canonical": {
+        "anatomy": "Dozens of jawless skulls share one long spine and argue through tooth clicks. The impossible structure becomes clearest when the skulls bite the spine in sequence toward its tail.",
+        "locomotion": "It changes lanes after a false retreat and never repeats the same return angle; the permission cue is the skulls bite the spine in sequence toward its tail.",
+        "sound": "Gnawed relic produces two retreating clicks answered by a third sound from the return angle; Vertebrae Whip commits on the first strike/multi-hit sound after the gap.",
+        "purpose": "Small scavengers assemble borrowed skeletons into increasingly ambitious communal bodies; this form shares one long spine across dozens of arguing jawless skulls.",
+        "origin": "Dozens of jawless skulls share one long spine and argue through tooth clicks.",
+        "mechanic": "Vertebrae Whip",
+        "cue": "The skulls bite the spine in sequence toward its tail.",
+        "counterplay": "Dodge toward the leading skull after the click wave passes it."
+      },
+      "masterDirection": "Show one complete long serpentine Borrowed Spine with NO torso and one continuous articulated vertebral column from a clearly identified leading end to a tapering tail. Attach at least TWENTY-FOUR separately countable mismatched borrowed skulls along that same spine so the anatomy unmistakably reads as dozens. Every skull is jawless: no lower mandible is present. Rotate each skull inward so its remaining upper tooth row mechanically catches or releases the shared spine. Stage one clearly ordered bite-wave along the length: nearest the leading skull, the upper teeth have just released and leave open clearance; successive skulls clamp progressively onto the vertebrae toward the tail, with mold-green ligaments tightening in the same direction. The sequence must be readable without arrows, numbers, text, glowing marks, or duplicated spines. Make the entire body curve through one false-retreat lane change while every skull and both spine ends remain inside the landscape frame. No complete jaw, central body, ordinary snake, generic centipede, ground trail, floor, skull heap, gore, aura, scene, or extra creature."
+    },
+    {
+      "id": "reliquary_millipede",
+      "name": "Reliquary Millipede",
+      "rank": "elite",
+      "role": "juggernaut",
+      "heightMeters": 2.15,
+      "orientation": "landscape-3:2",
+      "masterFile": "reliquary-millipede-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/ossuary-vermin/reliquary-millipede-v1.png",
+      "canonical": {
+        "anatomy": "It wears holy finger bones as legs and a gilded reliquary as an armored shell. The impossible structure becomes clearest when gilded feet lift from front to back like a wave.",
+        "locomotion": "It cannot turn during a committed advance and brakes by striking the terrain; the permission cue is gilded feet lift from front to back like a wave.",
+        "sound": "Gnawed relic produces slow impacts whose interval shortens without their volume changing; Saints' March commits on the first radiance/physical sound after the gap.",
+        "purpose": "Small scavengers assemble borrowed skeletons into increasingly ambitious communal bodies; this form carries a gilded armored reliquary on marching finger-bone legs.",
+        "origin": "It wears holy finger bones as legs and a gilded reliquary as an armored shell.",
+        "mechanic": "Saints' March",
+        "cue": "Gilded feet lift from front to back like a wave.",
+        "counterplay": "Roll under the lifted middle section and attack the soft underside."
+      },
+      "masterDirection": "Show one complete long low Reliquary Millipede. Its dominant armored shell is exactly ONE elongated closed gilded reliquary casing assembled from overlapping age-darkened bone plates and restrained worn gold, entirely blank and free of real religious marks, writing, icons, or heraldry. Beneath it, build many paired walking legs exclusively from small articulated human finger bones with tooth-white tips and mold-green ligament joints; no normal long bones, insect legs, ordinary feet, or flesh. Pose the leg rows in one unmistakable front-to-back marching wave: front legs have just planted, the lift rises progressively to a high OPEN middle section, and rear legs descend toward the next plant. The lifted middle must expose a clearly visible soft matte ligament-and-chitin underside with enough black clearance for the counterplay to roll beneath and strike it. Keep the full shell, every visible finger-bone leg, both ends, underside opening, and wave silhouette inside the landscape frame. No second reliquary, shrine, altar, floor, contact shadow, normal centipede, readable label, symbol, glow, scene, or extra creature."
+    },
+    {
+      "id": "crypt_assembler",
+      "name": "Crypt Assembler",
+      "rank": "miniboss",
+      "role": "support",
+      "heightMeters": 2.56,
+      "orientation": "landscape-3:2",
+      "masterFile": "crypt-assembler-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/ossuary-vermin/crypt-assembler-v1.png",
+      "canonical": {
+        "anatomy": "A clever colony that sorts bones by combat usefulness rather than former owner. Its body can sustain that arrangement only because loose bones slide into labeled piles around the colony.",
+        "locomotion": "It moves by exchanging places with the nearest allied ritual position; the permission cue is loose bones slide into labeled piles around the colony.",
+        "sound": "Gnawed relic produces a call-and-response in which the answering voice comes from an ally; Build a Better Body commits on the first summon/heal sound after the gap.",
+        "purpose": "Small scavengers assemble borrowed skeletons into increasingly ambitious communal bodies; this clever colony sorts bones by combat usefulness rather than former owner.",
+        "origin": "A clever colony that sorts bones by combat usefulness rather than former owner.",
+        "mechanic": "Build a Better Body",
+        "cue": "Loose bones slide into labeled piles around the colony.",
+        "counterplay": "Kick bones into the wrong piles or destroy the skull pile first."
+      },
+      "masterDirection": "Show one complete dominant Crypt Assembler colony as a low intelligent communal sorting organism with no central torso, built from several load-bearing borrowed skull joints, finger-bone levers, lower-jaw scoops, and mold-green ligament belts. Around but physically attached to this one body, suspend exactly FOUR separate shallow bone-sorting baskets on visible ligament rails, all fully off any floor and clearly part of the subject: one basket holds skulls, one lower jaws, one finger bones, and one mixed incompatible-bone pile. Give each basket exactly one blank tooth-white inventory tab with a distinct nonalphabetic EDGE SHAPE only; no written label, letter, numeral, rune, icon, or real symbol. Show several loose bones sliding along the four subject-bound rails toward their correct baskets, with the skull basket uniquely large, frontal, and directly destructible. One actuator is visibly reaching to redirect a bone toward the wrong basket, making the counterplay mechanically readable. Keep the whole assembler, all four baskets/tabs, every rail, and the exposed skull pile inside the landscape frame. No ground piles, labels with language, separate helper creature, ordinary skeleton, workroom, shelves, floor, gore, glow, scene, or extra figure."
+    }
+  ],
+  "cutoutDirection": "Cutouts are outside this assignment. After a master later receives two independent non-generator passes, edit only that exact accepted master to remove the studio background while preserving canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact cues and RGB identity. Output genuine RGBA; no checkerboard, matte, halo, post-processing, floor, text, logo, or watermark."
+}

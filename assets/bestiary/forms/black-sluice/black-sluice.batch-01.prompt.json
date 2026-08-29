@@ -1,0 +1,60 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "black-sluice-batch-01",
+  "status": "accepted-masters-cutouts-pending",
+  "familyId": "black_sluice",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/black-sluice-plate.png"
+  ],
+  "commonDirection": "Use the Black Sluice family plate only as the authoritative family-style and material reference: pitch-black reflective water, silver film, restrained reed-green undertones, reflected/inverted posture, mirror skin, drain apertures, and upstream movement. Produce an original canonical form, not a copy of the plate subject. Highly polished stylized 3D dark-fantasy MMORPG production concept render, mature restrained anatomy and material density, single complete subject in three-quarter view, all extremities visible, centered with generous silhouette clearance. Flat near-black neutral opaque studio backdrop, no environment or ground plane. Cold raking light from one side, ungraded neutral. No extra figures, text, readable symbols, runes, real religious marks, logos, watermark, franchise resemblance, glossy plastic, cute proportions, bright saturation, exposed entrails, nudity, or disability shorthand.",
+  "assets": [
+    {
+      "id": "gutter_double",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "gutter-double-v3.png",
+      "masterPrompt": "A wet duplicate hangs upside down beneath a skin-thin surface of air. It moves only in channels where runoff travels opposite its body. Drips land upward in exact imitation of nearby footsteps. It tests drainage paths before stronger reflections move upstream. Counterflow Crawl cue: surface ripples travel against the visible slope. Counterplay: step onto dry high ground and strike the inverted outline as it stalls.",
+      "revisionDirection": "Show the complete membrane on a visible diagonal slope with an isolated train of surface ripples traveling uphill against it; keep both membrane ends and every inverted extremity clear of frame edges."
+    },
+    {
+      "id": "puddle_face",
+      "rank": "regular",
+      "orientation": "landscape",
+      "masterFile": "puddle-face-v1.png",
+      "masterPrompt": "A flat human face occupies every connected puddle but has no body between them. It blinks between water surfaces through buried drains. A gargle begins from the smallest puddle. It maps connected wet ground. Connected Blink cue: all puddles close their eyes except the destination. Counterplay: disturb the open-eyed puddle before the face arrives."
+    },
+    {
+      "id": "upstream_widow",
+      "rank": "specialist",
+      "orientation": "portrait",
+      "masterFile": "upstream-widow-v2.png",
+      "masterPrompt": "A fully covered nonsexual mourning figure of layered opaque blackwater veils and a high-necked mantle. Her translucent water veil narrows and flows into the smooth mask's dark oval aperture while hair trails rigidly against the current. Both empty hands carry no weapon. Backward condolences form restrained bubbles. Reverse Condolence cue: a backward sentence is represented only by abstract bubbles, never readable text. Counterplay: face downstream and interrupt the first word as it becomes the last.",
+      "revisionDirection": "Make the water ribbon visibly converge into and terminate inside the mask aperture, hair stream in the opposite direction, both hands empty, and the complete ribbon remain inside frame."
+    },
+    {
+      "id": "culvert_bishop",
+      "rank": "elite",
+      "orientation": "portrait",
+      "masterFile": "culvert-bishop-v1.png",
+      "masterPrompt": "A stone drainage arch passes through its shoulders like an abstract vestment. It emerges where two watercourses cross without touching. Resonance comes from pipes too narrow for breath. It consecrates artificial channels and recruits drowned reflections. Uncrossed Waters cue: two luminous currents overlap at different heights. Counterplay: block either current or stand in the dry space between them. No real-world religious mark."
+    },
+    {
+      "id": "keeper_beneath_grate",
+      "rank": "miniboss",
+      "orientation": "portrait",
+      "masterFile": "keeper-beneath-grate-v1.png",
+      "masterPrompt": "A grate divides its body into dozens of independently moving wet squares. It pours through grid shadows. Keys turn beneath every drain. It controls passage between reflections and open water. Distributed Key cue: exactly one body square reflects a brass key while all others darken. Counterplay: strike that square before it trades places."
+    },
+    {
+      "id": "river_remembers_backward",
+      "rank": "boss",
+      "orientation": "landscape",
+      "masterFile": "river-remembers-backward-v2.png",
+      "masterPrompt": "A river-length corpse is visible only as sequential faces in one continuous reflective body. It advances by reversing the last minute of local water movement. Rain and drowning cries play backward from sea to source. It attempts to restore every dead thing to the upstream instant before death. Reverse Catchment cue: streams pause and abstract foam begins coherently reversing upstream without readable names. Counterplay: open one declared outlet so the reversed surge spends beyond the arena.",
+      "revisionDirection": "Make all droplets, foam beads, and wave crests curl coherently upstream against apparent flow, and integrate one complete closed outlet iris at the downstream tail."
+    }
+  ],
+  "cutoutDirection": "After the master receives two independent passes, create a cutout by editing that exact master. Preserve canvas dimensions, pose, design, materials, lighting, scale, placement and silhouette. Remove only the background. Output a real RGBA PNG with alpha 0 outside the subject and at all four corners; do not depict checkerboard, ground, shadow, backdrop, text, logo or watermark."
+}

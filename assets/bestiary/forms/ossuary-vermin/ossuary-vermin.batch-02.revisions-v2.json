@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-02",
+  "policy": "The frozen packet remains unchanged. These are narrow forward revisions after owner full-resolution preflight of batch-02 v1 candidates. Heel Crab v1 and Marrow Factor v1 are unchanged and proceed to independent review.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-02/prompt-packet.json",
+    "sha256": "16ffd058dbfd73609fed27836f475873696282f6eb29e4acd2dc2c9793d9d2bc"
+  },
+  "revisions": {
+    "borrowed-saint-v2": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/borrowed-saint-concept-master-v1.png",
+      "sourceSha256": "d6df67ced1104bc11ba75cd6287f07aec7129b1a82a24f83d09d92edf6bcf637",
+      "reason": "V1 has eight blank tags and the contradictory pelvis target, but its ordinary head/shoulder/two-arm/two-leg skeleton reads conventionally and only two lower limbs visibly kneel rather than seven tagged borrowed modules sharing the kneeling load path.",
+      "prompt": "Constrained topology correction of this exact Borrowed Saint. Preserve the eight blank ivory tags, the uniquely cold-lit central contradictory pelvis-hoop target and its mismatched tag/notch, porous bone, mold-green ligaments, canvas, cold light, scale and full portrait clearance. Remove the ordinary complete humanoid skull-head, shoulder bar, paired conventional arms, paired conventional legs and hand/foot skeletons as a recognizable normal skeleton. Rebuild the one towering body as one open vertical reliquary lattice supporting EXACTLY EIGHT separately countable tagged borrowed limb modules arranged around it. Each module is an incompatible composite of skull joint, pelvis arc, rib brace, finger-bone strut and lower-jaw terminal, never a normal arm or leg. EXACTLY SEVEN of the eight modules must be visibly folded through a deep knee-like hinge into one shared downward kneeling load path around the lower lattice, their dim tags physically following the fold. The eighth is the contradictory broad pelvis hoop on a narrow horizontal arm module at chest height; it remains unfolded, uniquely exposed and cold-lit, and its tag edge visibly fails to fit the arm notch. Keep exactly eight tags total, all blank, one per module. No ordinary skeleton silhouette, ninth module, ninth tag, altar, halo, congregation, floor, text, symbol, religion, aura, scene, logo or watermark."
+    },
+    "tooth-rook-v2": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/tooth-rook-concept-master-v1.png",
+      "sourceSha256": "98314ee2da975a7a8abe3126eba752a07ae1c87580b7590198fade0011aabf33",
+      "reason": "V1 passes the all-tooth bird, two molar feet and opposed breast-row cue, but a horizontal floor/contact shadow remains beneath the feet.",
+      "prompt": "Surgical isolation correction of this exact Tooth Rook. Preserve every interlocking tooth, both complete wings, folded pre-flight pose, tail, exactly two molar-terminated feet, exactly two opposed U-shaped breast rows and their black gap, canvas, materials, lighting, scale and framing. Remove ONLY every floor, ground plane, contact shadow, horizontal haze and dark surface band beneath the two molar feet. Float the entire rook slightly upward in clean near-black studio space so pure black clearance is visible below and around both molars. Do not add, remove, merge, duplicate or redraw teeth, feet, wings, breast rows or tail except the minimal whole-subject lift needed for clearance. No perch, text, symbol, glow, scene, logo or watermark."
+    },
+    "pelvis-paladin-v2": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/pelvis-paladin-concept-master-v1.png",
+      "sourceSha256": "30abbab1262bd9dcc615902ce905f4378adc33402906c0bc4887cf9adcff9ed0",
+      "reason": "V1 presents seven nested pelvis modules, two counterplay tunnels and one central tail, but a floor/contact shadow remains at the lower hoop and the wheel touches an implied baseline.",
+      "prompt": "Surgical isolation correction of this exact Pelvis Paladin. Freeze the exact seven separately countable nested pelvis hoops, every mold-green binding, exactly two fully aligned black socket tunnels, all other blocked sockets, exactly one needle-thin central segmented tail, rolling stance, canvas, materials, cold light, scale and framing. Remove ONLY the floor, ground plane, contact shadow and horizontal haze beneath the lower hoop. Float the complete seven-pelvis wheel slightly upward in empty near-black studio space so pure black clearance is visible below every bone and beneath the full tail; no element touches an implied baseline. Preserve the slight three-dimensional rolling depth and do not flatten it further. Do not add, remove, merge, duplicate, rotate or redraw any pelvis, tunnel or tail except the minimal whole-subject lift for clearance. No eighth pelvis, knight body, heraldry, text, glow, scene, logo or watermark."
+    }
+  }
+}

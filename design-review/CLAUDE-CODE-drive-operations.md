@@ -173,7 +173,7 @@ it, that disagreement is the finding.
 >          "subject": "enemy.ash-husk",
 >          "family": "ashbound",
 >          "promptFile": "prompts/family-plates-batch-01.md",
->          "promptCall": "call_nIgtNVLVAaxYFQ2Pt3fXba2w",
+>          "promptCall": null,
 >          "generator": "chatgpt",
 >          "status": "approved",
 >          "supersedes": null,
@@ -182,10 +182,9 @@ it, that disagreement is the finding.
 >      ]
 >    }
 >    ```
-> 3. `promptCall` may only be filled from a call id **actually recorded** in a
->    prompt file. If a family plate's call id is known but an individual form's
->    is not, set the form's to `null` and set `family` — inheritance is
->    inferable, a call id is not.
+> 3. External generation identifiers stay redacted in published files. Keep
+>    `promptCall` null and use the repository-local prompt file plus content
+>    hash for traceability; family inheritance is explicit, not inferred.
 > 4. `status` ∈ `approved` | `rejected` | `superseded` | `unreviewed`.
 >    Default to `unreviewed`. Never assume `approved`.
 >

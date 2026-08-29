@@ -2,14 +2,116 @@
   "schema": "FamilyPlateBatchProvenanceV1",
   "batchId": "family-plates-batch-04",
   "generatedOn": "2026-08-25",
-  "tool": "OpenAI built-in image generation",
+  "tool": "built-in image generation",
   "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
   "records": [
-    {"familyId":"last_pest_cart","path":"assets/bestiary/last-pest-cart-plate.png","source":"exec-33e694ee-08e5-4e43-ac53-8c67f742844e.png"},
-    {"familyId":"breath_tithe","path":"assets/bestiary/breath-tithe-plate.png","source":"exec-ccd86c47-7bae-4317-8d2a-e87ed62e54f2.png"},
-    {"familyId":"white_ague","path":"assets/bestiary/white-ague-plate.png","source":"exec-1ff07539-d520-448d-85f7-1faa13f39ed0.png","supersedesRejectedSource":"exec-ba9eb1f7-c9bf-4941-86e2-39454d848d41.png","review":"reconnected front-left leg at approximately x=19.7%, y=71.8%"},
-    {"familyId":"pallid_root_communion","path":"assets/bestiary/pallid-root-communion-plate.png","source":"exec-45b8e85f-d560-4921-929e-8c7e1eba1248.png"},
-    {"familyId":"anchored_quarantine","path":"assets/bestiary/anchored-quarantine-plate.png","source":"exec-9766dce1-f64c-4ca0-91a0-890e7397e24a.png"}
+    {
+      "id": "bestiary_family.last_pest_cart.master",
+      "familyId": "last_pest_cart",
+      "role": "family_plate",
+      "path": "assets/bestiary/last-pest-cart-plate.png",
+      "sha256": "5697a084ff05d81c368510dfbf3c8ba0a4eafca49e53dbea4897528ebb676cc8",
+      "bytes": 2068315,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "generation": {
+        "outputSha256": "5697a084ff05d81c368510dfbf3c8ba0a4eafca49e53dbea4897528ebb676cc8",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
+    },
+    {
+      "id": "bestiary_family.breath_tithe.master",
+      "familyId": "breath_tithe",
+      "role": "family_plate",
+      "path": "assets/bestiary/breath-tithe-plate.png",
+      "sha256": "4b3b6b5306575f9f3aa59cc6f4e3fbf4e5fde85bc2b0004f4a7f5442924708ae",
+      "bytes": 2057922,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "generation": {
+        "outputSha256": "4b3b6b5306575f9f3aa59cc6f4e3fbf4e5fde85bc2b0004f4a7f5442924708ae",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
+    },
+    {
+      "id": "bestiary_family.white_ague.master",
+      "familyId": "white_ague",
+      "role": "family_plate",
+      "path": "assets/bestiary/white-ague-plate.png",
+      "sha256": "2603b99e703d7c757209fee95192ab8b671a944caf9d5d7bf8e3715398e02b87",
+      "bytes": 2285719,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "generation": {
+        "outputSha256": "2603b99e703d7c757209fee95192ab8b671a944caf9d5d7bf8e3715398e02b87",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      },
+      "supersededRejectedOutput": true,
+      "review": "reconnected front-left leg at approximately x=19.7%, y=71.8%"
+    },
+    {
+      "id": "bestiary_family.pallid_root_communion.master",
+      "familyId": "pallid_root_communion",
+      "role": "family_plate",
+      "path": "assets/bestiary/pallid-root-communion-plate.png",
+      "sha256": "70a8f063d9dd270ce6c6f61b0c60906b67c3e95d62520aba57aa38c0539551e7",
+      "bytes": 2451440,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "generation": {
+        "outputSha256": "70a8f063d9dd270ce6c6f61b0c60906b67c3e95d62520aba57aa38c0539551e7",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
+    },
+    {
+      "id": "bestiary_family.anchored_quarantine.master",
+      "familyId": "anchored_quarantine",
+      "role": "family_plate",
+      "path": "assets/bestiary/anchored-quarantine-plate.png",
+      "sha256": "99fc10c48a0e858603b427c335be80d26d1c26b02501581384c55b4a16e5a372",
+      "bytes": 1960933,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "generation": {
+        "outputSha256": "99fc10c48a0e858603b427c335be80d26d1c26b02501581384c55b4a16e5a372",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
+    }
   ],
-  "maturity": {"concept_master":"authored","runtime_integrated":false,"production_asset":false}
+  "maturity": {
+    "concept_master": "authored",
+    "runtime_integrated": false,
+    "production_asset": false
+  },
+  "promptSource": "assets/bestiary/family-plates-batch-04.md"
 }

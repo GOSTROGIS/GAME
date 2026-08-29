@@ -1,0 +1,17 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-01-revision-v7",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "aaa954173a043e9b10637fcd18b2c058425612869d3abfbafe83aff3dc2aa4bb",
+  "previousRevisionSha256": "c9751e4822ccc58ccb41800c52925223800492f98b1579cfad62610c7c6f9875",
+  "assets": [
+    {
+      "id": "door_lung_courser",
+      "reference": "door-lung-courser-concept-master-v2.png",
+      "outputFile": "door-lung-courser-concept-master-v3.png",
+      "reason": "The independently accepted v2 design is technically valid but the generator returned a nonstandard 1403x1121 landscape canvas instead of the production-standard 1536x1024 required for horizontal quadrupeds.",
+      "revisionDirection": "Faithfully preserve the exact v2 Door-Lung Courser design, identity, materials, camera angle, four-leg stride, head, tail, every rib-door, exactly two separate pale inflated lungs with their black seam, exactly one traversable open doorway, exactly one contained smooth unmarked path, and all other doors closed. Change only framing. Output an exact 1536 by 1024 pixel landscape canvas. Center the complete subject at roughly ninety percent of canvas width and eighty-six percent of canvas height with comfortable flat near-black clearance around muzzle, antler tips, tail, all four hooves and the entire rib silhouette. Do not crop, stretch, distort, add, remove, redesign or relight anything. No second open doorway, third lung, scene, map, text, floor or cast shadow."
+    }
+  ]
+}

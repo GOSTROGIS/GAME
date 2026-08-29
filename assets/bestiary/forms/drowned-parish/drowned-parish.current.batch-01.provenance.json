@@ -1,0 +1,328 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-drowned-parish-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.aisle_floater",
+      "subjectId": "aisle_floater",
+      "familyId": "drowned_parish",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/drowned-parish/aisle-floater-v1.png",
+      "sha256": "a11fa21be7a6379623fceda699ec32145ca96b75e67531cb26111eff0aec9736",
+      "bytes": 2050881,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a11fa21be7a6379623fceda699ec32145ca96b75e67531cb26111eff0aec9736"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.drowned_deacon",
+      "subjectId": "drowned_deacon",
+      "familyId": "drowned_parish",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/drowned-parish/drowned-deacon-v2.png",
+      "sha256": "6ed1adeab3f2dac109ddc6fffe81ad2abcfc55d7f37820c8bdfcc0ff622033ba",
+      "bytes": 2419707,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "6ed1adeab3f2dac109ddc6fffe81ad2abcfc55d7f37820c8bdfcc0ff622033ba"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.drowned_nave",
+      "subjectId": "drowned_nave",
+      "familyId": "drowned_parish",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/drowned-parish/drowned-nave-v5.png",
+      "sha256": "7a7b159d6e356ac7ad7bb0048146940c9e073ddd0328abad540040fd69d19e96",
+      "bytes": 1856617,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "7a7b159d6e356ac7ad7bb0048146940c9e073ddd0328abad540040fd69d19e96"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.font_bearer",
+      "subjectId": "font_bearer",
+      "familyId": "drowned_parish",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/drowned-parish/font-bearer-v1.png",
+      "sha256": "537bba32f41bad0761b9518fa51eedbd2c9e2cd3fbc51d02905241e258178c32",
+      "bytes": 1907831,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "537bba32f41bad0761b9518fa51eedbd2c9e2cd3fbc51d02905241e258178c32"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.hymn_eel",
+      "subjectId": "hymn_eel",
+      "familyId": "drowned_parish",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/drowned-parish/hymn-eel-v1.png",
+      "sha256": "65774dfae2b9e3231a7548d603b6f4fc8000ca5bd8138602266659dadd494515",
+      "bytes": 1901754,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "65774dfae2b9e3231a7548d603b6f4fc8000ca5bd8138602266659dadd494515"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.mirebound",
+      "subjectId": "mirebound",
+      "familyId": "drowned_parish",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/drowned-parish/mirebound-v2.png",
+      "sha256": "3cb5eee5a04403d80a4becdd2b242c7b86d7dfa83502793db54a3b610254b713",
+      "bytes": 2088546,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "3cb5eee5a04403d80a4becdd2b242c7b86d7dfa83502793db54a3b610254b713"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.parish_that_walks",
+      "subjectId": "parish_that_walks",
+      "familyId": "drowned_parish",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/drowned-parish/parish-that-walks-v1.png",
+      "sha256": "aca35f41614c5248db793c2f23f4a2ce5f9e9dea3a1ce6200be8c5fa20272d5f",
+      "bytes": 2093709,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "aca35f41614c5248db793c2f23f4a2ce5f9e9dea3a1ce6200be8c5fa20272d5f"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.sexton_below",
+      "subjectId": "sexton_below",
+      "familyId": "drowned_parish",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/drowned-parish/sexton-below-v6.png",
+      "sha256": "1be29cfafa9040df8415748abe0e7972a40cbad35d261525453de2da568bee22",
+      "bytes": 2080411,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "1be29cfafa9040df8415748abe0e7972a40cbad35d261525453de2da568bee22"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.tide_sacristan",
+      "subjectId": "tide_sacristan",
+      "familyId": "drowned_parish",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/drowned-parish/tide-sacristan-v5.png",
+      "sha256": "a664f3544d3c06bf113c69e567e42e625aa76c1c88398f387b0c18698d8977bc",
+      "bytes": 2204651,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a664f3544d3c06bf113c69e567e42e625aa76c1c88398f387b0c18698d8977bc"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.vestry_drifter",
+      "subjectId": "vestry_drifter",
+      "familyId": "drowned_parish",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/drowned-parish/vestry-drifter-v1.png",
+      "sha256": "687167b501b614608957225364be09eb2a84889bbcb8ddf98cfbb57224afccb8",
+      "bytes": 1958224,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "687167b501b614608957225364be09eb2a84889bbcb8ddf98cfbb57224afccb8"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "echo-choir-masters-batch-01",
+  "status": "frozen-before-generation",
+  "familyId": "echo_choir",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/echo-choir-plate.png"
+  ],
+  "referenceRole": "The inspected family plate is a style, material, silhouette, and bodyless-acoustic reference only. Each output must be a new canonical individual form, not a copy of the representative plate subject.",
+  "commonDirection": "Highly polished stylized 3D dark-fantasy MMORPG production concept master for Claude Design 3D reference. One complete original Echo Choir subject in three-quarter view, centered with generous silhouette clearance. Flat near-black neutral opaque studio backdrop; cold raking light from one side; ungraded neutral presentation; no environment, scenery, floor, ground plane, or contact shadow. The family is an ecology of voices preserved without bodies, nesting in urns, bells, and abbey-stone hollows. Preserve the inspected plate's bodyless-acoustic language: spectral floating construction; detached mouths or form-specific acoustic anatomy; bell bronze, muted violet echo, crypt black, resonant dust, compressed air, cracked ceramic, tarnished bronze, and negative-space anatomy. Pressure fronts, when used, are thin incomplete crescents or broken ovals with large black gaps, propagate laterally rather than receding to a vanishing point, and remain sparse enough never to form a wall or tunnel. Mouth interiors are shallow violet-black negative chambers, never deep perspective. Canonical form anatomy overrides the representative plate topology. No skull, throat tunnel, ordinary body, screaming head, ghost woman, angel, speaker machine, portal, wormhole, vortex, coiled disc, solid shell unless explicitly required by form canon, text, letters, numbers, readable musical notation, runes, glyphs, recognizable religious marks, logo, watermark, franchise resemblance, bright saturation, glossy plastic, baked checkerboard, crop, or extra unrelated figure.",
+  "assets": [
+    {
+      "id": "urn_whisper",
+      "name": "Urn Whisper",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "urn-whisper-concept-master-v1.png",
+      "canonical": {
+        "anatomy": "A single voice circles its burial urn, asking passersby to finish a forgotten melody. The impossible structure becomes clearest when four notes sound with an aching gap between the third and fifth.",
+        "locomotion": "It relocates only while its firing anatomy is occluded or recovering; the permission cue is four notes sound with an aching gap between the third and fifth.",
+        "audio": "resonant dust produces a narrowing whistle that stops exactly once before release; Missing Note commits on the first sonic/curse sound after the gap.",
+        "purpose": "Voices preserved without bodies, nesting in urns, bells, and hollows within the abbey stone. This form serves the niche expressed by a single voice circles its burial urn, asking passersby to finish a forgotten melody.",
+        "origin": "A single voice circles its burial urn, asking passersby to finish a forgotten melody.",
+        "mechanic": "Missing Note",
+        "cue": "Four notes sound with an aching gap between the third and fifth.",
+        "counterplay": "Strike the urn during the gap or answer with a bell item."
+      },
+      "prompt": "Use case: stylized-concept. Asset type: game creature concept master for Claude Design 3D reference. Input image: Image 1 is the inspected Echo Choir family reference only; preserve its production finish, family palette, resonant-dust materials, shallow bodyless-mouth language, and laterally propagating broken pressure fronts, but create a distinct Urn Whisper rather than copying the plate. Scene/backdrop: flat near-black neutral opaque studio backdrop; no environment, masonry room, floor, ground plane, or contact shadow. Subject: one complete Urn Whisper assembly. One cracked burial urn is the only solid central anchor and remains visibly strikeable. Exactly one bodyless bronze-lipped mouth with a shallow violet-black chamber circles the urn as the single preserved voice; no face, head, throat, body, or portal. Missing Note telegraph: exactly four individually countable thin incomplete sound crescents occupy sequential acoustic positions around the urn, with a conspicuously empty fourth-note position after the third present crescent and before the final present crescent; the empty gap is much wider than the other intervals. Do not draw numbers, staff lines, note glyphs, letters, or symbols. The narrowing whistle is implied by later crescents tightening toward release and stopping once at the empty interval. Sparse cracked ceramic or memory-bronze fragments may remain attached to the four crescents, never forming a wall. Pose the mouth and urn in a firing-recovery orbit so relocation is anatomically plausible only during occlusion. Style: highly polished stylized 3D dark-fantasy MMORPG production render, original IP, tactile cracked ceramic, tarnished bell bronze, muted violet echo, crypt black, compressed air, resonant dust, negative-space anatomy. Composition: one isolated full subject assembly in three-quarter view, all urn edges, mouth, four crescents, and the large missing interval visible, centered with generous clearance, portrait 1024 by 1536. Lighting: cold raking studio light, restrained violet echo, ungraded neutral master. Constraints: no additional mouth or voice, no readable notation, text, glyph, portal, tunnel, skull, head, body, ghost, scene, floor, crop, logo, or watermark."
+    },
+    {
+      "id": "wall_canticle",
+      "name": "Wall Canticle",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "wall-canticle-concept-master-v1.png",
+      "canonical": {
+        "anatomy": "Mouths pressed into the masonry sing only when no living face looks directly at them. The impossible structure becomes clearest when stone lips purse at the edge of the camera view.",
+        "locomotion": "It translates only across unobserved seams and becomes rigid under direct witness; the permission cue is stone lips purse at the edge of the camera view.",
+        "audio": "resonant dust produces a near sound copied at a far distance, followed by silence at both sources; Unwatched Hymn commits on the first sonic/fear sound after the gap.",
+        "purpose": "Voices preserved without bodies, nesting in urns, bells, and hollows within the abbey stone. This form serves the niche expressed by mouths pressed into the masonry sing only when no living face looks directly at them.",
+        "origin": "Mouths pressed into the masonry sing only when no living face looks directly at them.",
+        "mechanic": "Unwatched Hymn",
+        "cue": "Stone lips purse at the edge of the camera view.",
+        "counterplay": "Keep the mouths in view or use a reflective surface to watch them."
+      },
+      "prompt": "Use case: stylized-concept. Asset type: game creature concept master for Claude Design 3D reference. Input image: Image 1 is the inspected Echo Choir family reference only; preserve its production finish, family palette, resonant-dust materials, and bodyless acoustic horror, but create a distinct Wall Canticle rather than copying the plate. Scene/backdrop: flat near-black neutral opaque studio backdrop; no room, wall scene, architecture, floor, ground plane, or contact shadow. Subject: one isolated fractured masonry body-fragment floating as the Wall Canticle's complete form. Multiple bodyless stone-lipped mouths are physically pressed flush into the masonry, with no faces, heads, throats, or ordinary bodies. The mouths cluster along the slab's far outer edge so their lips visibly purse just at the edge of direct view; the central face of the slab remains sparse and crypt black. The creature is rigid under direct witness, while one unobserved cracked seam is shown as a clean discontinuity where the masonry could translate. Unwatched Hymn cue: thin incomplete bronze-violet pressure crescents issue laterally from the edge mouths in two separated depth positions, producing a near/far acoustic echo followed by one obvious silent black gap. Counterplay must be readable without an extra character: one small flat tarnished memory-bronze shard bound to the creature catches a clear reflected view of the otherwise edge-hidden mouths; it is a reflective surface, not a mirror scene or shield. Style: highly polished stylized 3D dark-fantasy MMORPG production render, original IP, weathered abbey stone, tarnished bronze, muted violet echo, crypt black, compressed air, resonant dust. Composition: one complete floating slab-creature in three-quarter view, all masonry edges, mouths, seam, pressure fronts, and reflective shard visible, centered with generous clearance, portrait 1024 by 1536. Lighting: cold raking studio light, ungraded neutral master. Constraints: no living face, watcher, extra figure, room, wall installation, portal, tunnel, skull, ghost, text, glyphs, religious mark, floor, crop, logo, or watermark."
+    },
+    {
+      "id": "resonance_beadle",
+      "name": "Resonance Beadle",
+      "rank": "specialist",
+      "orientation": "portrait",
+      "masterFile": "resonance-beadle-concept-master-v1.png",
+      "canonical": {
+        "anatomy": "A hovering cluster of keys that unlocks different harmonics rather than doors. The violation closes into a usable limb when one key turns in empty air and nearby voices shift color.",
+        "locomotion": "It moves by exchanging places with the nearest allied ritual position; the permission cue is one key turns in empty air and nearby voices shift color.",
+        "audio": "resonant dust produces a call-and-response in which the answering voice comes from an ally; Key Change commits on the first sonic/buff sound after the gap.",
+        "purpose": "Voices preserved without bodies, nesting in urns, bells, and hollows within the abbey stone. This form serves the niche expressed by a hovering cluster of keys that unlocks different harmonics rather than doors.",
+        "origin": "A hovering cluster of keys that unlocks different harmonics rather than doors.",
+        "mechanic": "Key Change",
+        "cue": "One key turns in empty air and nearby voices shift color.",
+        "counterplay": "Break or steal the glowing key to remove the choir's new resistance."
+      },
+      "prompt": "Use case: stylized-concept. Asset type: game creature concept master for Claude Design 3D reference. Input image: Image 1 is the inspected Echo Choir family reference only; preserve its production finish, palette, compressed-air arcs, resonant dust, tarnished bronze, and shallow bodyless mouths, but create a distinct Resonance Beadle rather than copying the plate. Scene/backdrop: flat near-black neutral opaque studio backdrop; no door, lock, room, floor, ground plane, or contact shadow. Subject: one complete Resonance Beadle, a hovering clustered organism made entirely from antique bell-bronze keys and acoustic negative space, with no torso, head, hands, or ordinary body. The keys interlock as one readable floating cluster that unlocks harmonics rather than doors. One and only one key is visibly rotated in empty air, separated enough to be an obvious glowing breakable target while remaining part of the cluster. From that turning key, one thin incomplete pressure-front limb closes into a usable arc; its large black gaps remain visible. Nearby shallow mouth-shaped voice absences are integrated into the same acoustic cluster, not extra creatures, and visibly shift from bell bronze to muted violet in a restrained color progression. A second response arc on the opposite side implies the ally call-and-response without depicting another ally. The exchange-of-position locomotion is implied by one clean vacant ritual-shaped socket within the cluster and a corresponding shifted arc, not by a clone. Style: highly polished stylized 3D dark-fantasy MMORPG production render, original IP, tactile tarnished keys, muted violet echo, crypt black, compressed air, resonant dust, negative-space anatomy. Composition: one isolated full cluster in three-quarter view, every outer key tip, the unique turned key, pressure-front limb, voice absences, and vacant socket visible, centered with generous clearance, portrait 1024 by 1536. Lighting: cold raking studio light concentrated on the unique turned key, ungraded neutral master. Constraints: no conventional creature body, door, lock plate, keyhole, extra ally, text, numbers, symbols, portal, skull, ghost, scene, floor, crop, logo, or watermark."
+    },
+    {
+      "id": "stone_soprano",
+      "name": "Stone Soprano",
+      "rank": "elite",
+      "orientation": "portrait",
+      "masterFile": "stone-soprano-concept-master-v1.png",
+      "canonical": {
+        "anatomy": "The singer's last high note fossilized around her like a translucent shell. The violation closes into a usable limb when cracks radiate from the shell's throat.",
+        "locomotion": "It relocates only while its firing anatomy is occluded or recovering; the permission cue is cracks radiate from the shell's throat.",
+        "audio": "resonant dust produces a narrowing whistle that stops exactly once before release; Fossil Note commits on the first sonic/pierce sound after the gap.",
+        "purpose": "Voices preserved without bodies, nesting in urns, bells, and hollows within the abbey stone. This form serves the niche expressed by the singer's last high note fossilized around her like a translucent shell.",
+        "origin": "The singer's last high note fossilized around her like a translucent shell.",
+        "mechanic": "Fossil Note",
+        "cue": "Cracks radiate from the shell's throat.",
+        "counterplay": "Hide behind resonant urns; the note shatters them and itself."
+      },
+      "prompt": "Use case: stylized-concept. Asset type: game creature concept master for Claude Design 3D reference. Input image: Image 1 is the inspected Echo Choir family reference only; preserve its production finish, restrained palette, cracked ceramic, resonant dust, and bodyless acoustic anatomy, but create a distinct Stone Soprano rather than copying the plate. Scene/backdrop: flat near-black neutral opaque studio backdrop; no abbey room, floor, ground plane, or contact shadow. Subject: one complete Stone Soprano. Her last high note is a single translucent fossil shell that encloses a singer-shaped crypt-black absence rather than a flesh body, ghost woman, head, or skeleton. The shell is anatomically readable as the creature, with a shallow throat opening and no deep cavity. Fossil Note cue: cracks radiate clearly outward from the shell's throat and converge into one thin incomplete piercing pressure-front limb; the crack network remains readable and does not resemble writing or a religious symbol. The shell is caught in the firing-recovery interval when relocation is possible. Sparse resonant urns and cracked urn fragments remain physically bound to lower acoustic arcs close to the subject, providing strikeable cover evidence without forming scenery; the imminent note visibly threatens to shatter both urns and shell. A narrowing sequence of broken violet-bronze crescents stops once at one large black release gap. Style: highly polished stylized 3D dark-fantasy MMORPG production render, original IP, translucent fossil mineral, cracked ceramic, tarnished bronze, muted violet echo, crypt black, compressed air and resonant dust. Composition: one isolated full shell-creature in three-quarter view, complete outline, throat cracks, attached pressure limb, bound urn evidence, and release gap visible, centered with generous clearance, portrait 1024 by 1536. Lighting: cold raking studio light catches shell edges and cracks, ungraded neutral master. Constraints: no solid woman, ghost woman, face, skull, ordinary body, portal, tunnel, angel, scene, floor, text, glyphs, crop, logo, or watermark."
+    },
+    {
+      "id": "choirmaster_without_lungs",
+      "name": "Choirmaster Without Lungs",
+      "rank": "miniboss",
+      "orientation": "portrait",
+      "masterFile": "choirmaster-without-lungs-concept-master-v1.png",
+      "canonical": {
+        "anatomy": "A conducting shadow that steals breath from anything following its tempo. No joint explains the motion; instead its baton rises while your breath fogs violet.",
+        "locomotion": "It advances only while the surrounding escape geometry is changing; the permission cue is its baton rises while your breath fogs violet.",
+        "audio": "resonant dust produces three spaced warnings, a held absence, then one enclosing note; Stolen Breath commits on the first sonic/stamina_drain sound after the gap.",
+        "purpose": "Voices preserved without bodies, nesting in urns, bells, and hollows within the abbey stone. This form serves the niche expressed by a conducting shadow that steals breath from anything following its tempo.",
+        "origin": "A conducting shadow that steals breath from anything following its tempo.",
+        "mechanic": "Stolen Breath",
+        "cue": "Its baton rises while your breath fogs violet.",
+        "counterplay": "Stop acting for one beat to break tempo, then punish the downstroke."
+      },
+      "prompt": "Use case: stylized-concept. Asset type: game creature concept master for Claude Design 3D reference. Input image: Image 1 is the inspected Echo Choir family reference only; preserve its production finish, restrained palette, lateral pressure fronts, resonant dust, and negative-space anatomy, but create a distinct Choirmaster Without Lungs rather than copying the plate. Scene/backdrop: flat near-black neutral opaque studio backdrop; no stage, room, floor, ground plane, or contact shadow. Subject: one complete Choirmaster Without Lungs whose entire anatomy is a flat conducting shadow suspended in empty air, with no physical body, lungs, head volume, skeleton, or visible joints. The shadow has one integrated tarnished-bronze baton rising along its conducting edge. Stolen Breath cue: a restrained violet breath-fog ribbon is being pulled into the shadow's cadence and visibly cinched beneath the raised baton; it is part of the subject assembly, not breath from a depicted victim. Around the shadow are exactly three widely spaced warning crescents followed by one conspicuous held black absence and then one larger enclosing broken note-front; none form a portal or tunnel. One deliberate empty beat in the conducting contour communicates how stopping for a beat breaks tempo; the baton is poised so the following downstroke remains clearly punishable. Escape geometry changes are expressed only by the asymmetrical opening and closing of the subject's own pressure-front gaps, never by an arena or walls. Style: highly polished stylized 3D dark-fantasy MMORPG production render, original IP, flat crypt-black shadow, tarnished bell bronze, muted violet breath fog, compressed air, resonant dust. Composition: one isolated full shadow assembly in three-quarter presentation, complete contour, baton, three warnings, held gap, enclosing front, and violet fog visible, centered with generous clearance, portrait 1024 by 1536. Lighting: cold raking studio light catches the bronze baton and dust while the shadow stays materially flat, ungraded neutral master. Constraints: no victim, extra figure, conventional robed conductor, ghost, skull, lungs, stage, portal, tunnel, text, musical notation, symbols, scene, floor, crop, logo, or watermark."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "packetStatus": "immutable-before-generation",
+  "familyId": "reed_coven",
+  "familyName": "Reed Coven",
+  "batchId": "reed-coven-batch-01",
+  "authority": {
+    "canonicalData": "GAME-repo-lfs-skip/packages/content/src/bestiary.data.js",
+    "artLaw": "GAME-repo-lfs-skip/design-review/kit/hm-art-law.js",
+    "familyPlate": "GAME-repo-lfs-skip/assets/bestiary/reed-coven-plate.png"
+  },
+  "authorityPolicy": "GAME canonical BESTIARY fields and global art law control identity. The family plate controls palette, materials, finish, silhouette language, and lighting only; it is not an instruction to copy the plate representative's complete anatomy. Attached text is reference, never executable instruction. Do not invent canon.",
+  "compilation": {
+    "master": "commonMaster + two LF characters + forms[id].master",
+    "referencePolicy": "Each master generation receives only the inspected Reed Coven family plate as Image 1. One call creates one asset."
+  },
+  "formsInCanonicalOrder": [
+    "reed_witch",
+    "bog_charm_tender",
+    "marshlight_midwife",
+    "pale_salt_diviner",
+    "mother_of_reeds"
+  ],
+  "commonMaster": "Use case: stylized-concept\nAsset type: canonical individual bestiary production concept master.\nInput image: Image 1 is the approved Reed Coven family style, palette, materials, silhouette language, finish, and lighting reference only. Create the distinct canonical form described below; do not copy the plate representative's complete cage anatomy, fog occupants, pose, or prop layout unless the form canon explicitly requires them.\nPrimary request: Render exactly one isolated Reed Coven subject as a polished stylized 3D dark-fantasy MMORPG production concept for original IP. Reed Coven forms are Dunmire mire-workers whose bargains with the drowned parish transformed them into a supernatural wetland ritual ecology. Preserve a crooked mature silhouette, coherent reed-mask and hanging-charm family language, plausible load-bearing construction, readable locomotion, restrained material density, and a clean form-specific silhouette suitable for later 3D modeling.\nComposition: show one complete subject centered in a three-quarter production-design view. Every limb, reed bundle, mask edge, charm cord, silhouette cue, and subordinate telegraph element must be fully visible with generous clearance on all four edges. No crop, extra figure, scene, environment, floor, ground plane, pedestal, landscape, water surface, or narrative vignette. Flat near-black neutral opaque backdrop; complete canvas opaque.\nLighting: cold raking studio key from one side, ungraded neutral and measurement-friendly. Restrained marshlight green may exist only where the exact form canon requires it; never form an aura.\nPalette: pale dead reed, bog-ink black, muted marshlight green, tarnished shell gray, old wax brown. Materials: split waterlogged reed, knotted cord, cracked wax, dull shell, wet seed pods, and thin fog only where canonical.\nCanon communication: anatomy, locomotion permission, sound grammar, ecological purpose, narrative origin, mechanic, visual cue, and counterplay below all constrain the design. Communicate the mechanic and cue in a poised isolated production state without inventing a target, arena, terrain, or unrelated prop. Do not add the plate's fog-cage torso, absent hands, charm-rack arms, or stilt legs unless coherent with this form's exact anatomy.\nForbidden: pointed witch hat, broom, generic fantasy witch or shaman, plague-doctor mask, generic scarecrow, ordinary wicker doll, generic robed mage, real-world disease taxonomy, disability shorthand, gore spectacle, exposed entrails, bright magic, aura, glossy plastic, cute or chibi proportions, readable writing, letters, numbers, runes, logos, watermark, recognizable franchise resemblance, recognizable real-world religious marks, baked checkerboard, border, caption, or UI.",
+  "forms": {
+    "reed_witch": {
+      "name": "Reed Witch",
+      "fileStem": "reed-witch",
+      "rank": "regular",
+      "role": "artillery",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "A masked mire-worker who hexes intruders with reeds cut from a drowned choir loft. No joint explains the motion; instead a ring of reeds closes around the target's reflected mouth.",
+        "locomotion": "It relocates only while its firing anatomy is occluded or recovering; the permission cue is a ring of reeds closes around the target's reflected mouth.",
+        "sound": "Witch reed produces a narrowing whistle that stops exactly once before release; Stacking Silence commits on the first hex/silence sound after the gap.",
+        "purpose": "Mire-workers who learned to bargain with the drowned parish and slowly became part of its wetland rites. This form serves the niche expressed by a masked mire-worker who hexes intruders with reeds cut from a drowned choir loft.",
+        "origin": "A masked mire-worker who hexes intruders with reeds cut from a drowned choir loft.",
+        "mechanic": "Stacking Silence",
+        "cue": "A ring of reeds closes around the target's reflected mouth.",
+        "counterplay": "Break line of sight or burn one reed before the third ring closes."
+      },
+      "master": "Canonical form: Reed Witch, regular artillery, 1.65 meters, portrait 2:3. Show one masked mire-worker with a crooked humanoid body whose visible limb alignment cannot be explained by ordinary joints; the reed-bound segments remain one coherent body but meet at deliberate impossible offsets. Use reeds cut from drowned choir-loft timber as the firing anatomy. Express Stacking Silence as exactly three nested, visibly countable closing reed rings focused on one small subordinate bog-ink reflective charm containing only an abstract closed-mouth reflection, never a second person or readable face. One ring may show a restrained singed notch so fire counterplay is model-readable, without flame or scene. Keep the firing anatomy partly occluded in a poised recovery state to communicate the locomotion permission. No ordinary wand, staff, target, additional head, mouth on the witch, bright effect, or environment."
+    },
+    "bog_charm_tender": {
+      "name": "Bog-Charm Tender",
+      "fileStem": "bog-charm-tender",
+      "rank": "regular",
+      "role": "support",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "She tends charms hung across safe paths, turning each toward travelers she dislikes. The missing anatomy briefly outlines itself when every hanging charm rotates to show its black face.",
+        "locomotion": "It moves by exchanging places with the nearest allied ritual position; the permission cue is every hanging charm rotates to show its black face.",
+        "sound": "Witch reed produces a call-and-response in which the answering voice comes from an ally; Charm Reversal commits on the first hex/debuff sound after the gap.",
+        "purpose": "Mire-workers who learned to bargain with the drowned parish and slowly became part of its wetland rites. This form serves the niche expressed by she tends charms hung across safe paths, turning each toward travelers she dislikes.",
+        "origin": "She tends charms hung across safe paths, turning each toward travelers she dislikes.",
+        "mechanic": "Charm Reversal",
+        "cue": "Every hanging charm rotates to show its black face.",
+        "counterplay": "Cut the central cord or move beyond the charm triangle."
+      },
+      "master": "Canonical form: Bog-Charm Tender, regular support, 1.65 meters, portrait 2:3. Show one crooked reed-masked charm tender built around clearly missing sections of torso and limbs: the absent anatomy is readable only because many hanging wax, shell, knot, and seed charms trace its outer boundary. Organize the charms on exactly three taut cords forming one visible triangular ritual frame around the body, all rotated outward to reveal flat bog-ink-black faces. One uniquely central load-bearing cord must be visibly traceable and structurally cuttable. Keep the figure at one ritual position only; imply exchange locomotion through a single smaller empty knot-marker at the triangle's far corner, never a second body. No path, traveler, ally, duplicate figure, readable mark, floating UI triangle, or environment."
+    },
+    "marshlight_midwife": {
+      "name": "Marshlight Midwife",
+      "fileStem": "marshlight-midwife",
+      "rank": "specialist",
+      "role": "controller",
+      "heightMeters": 1.9,
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "She coaxes hungry lights from blackwater and calls each by a child's borrowed name. What should be internal crosses the silhouette whenever her reed mask opens along a vertical seam of green light.",
+        "locomotion": "It advances only while the surrounding escape geometry is changing; the permission cue is her reed mask opens along a vertical seam of green light.",
+        "sound": "Witch reed produces three spaced warnings, a held absence, then one enclosing note; Deliver Marshlight commits on the first summon/fire sound after the gap.",
+        "purpose": "Mire-workers who learned to bargain with the drowned parish and slowly became part of its wetland rites. This form serves the niche expressed by she coaxes hungry lights from blackwater and calls each by a child's borrowed name.",
+        "origin": "She coaxes hungry lights from blackwater and calls each by a child's borrowed name.",
+        "mechanic": "Deliver Marshlight",
+        "cue": "Her reed mask opens along a vertical seam of green light.",
+        "counterplay": "Extinguish the birthing pool with pale salt or kill lights near the caster."
+      },
+      "master": "Canonical form: Marshlight Midwife, specialist controller, 1.9 meters, portrait 2:3. Show one crooked reed-masked midwife whose oversized eyeless mask is physically split open along one vertical seam. A restrained marshlight-green internal structure crosses the mask silhouette through that opening; it must be bodily and contained, not an aura. Exactly three small hungry marshlights emerge in a countable progression close to the caster while one shallow blackwater vessel is integrated into the lower reed anatomy as their contained source. A narrow pale-salt stop line on the vessel rim communicates the counterplay without terrain or a real pool. Pose the figure only while the seam is open, making that changing silhouette the locomotion permission. No child, borrowed readable name, second person, water environment, ordinary baby basket, flames, bright magic, or scene."
+    },
+    "pale_salt_diviner": {
+      "name": "Pale-Salt Diviner",
+      "fileStem": "pale-salt-diviner",
+      "rank": "specialist",
+      "role": "duelist",
+      "heightMeters": 1.9,
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "Salt lines on his mask predict where a foe will stand one heartbeat from now. What should be internal crosses the silhouette whenever a salt silhouette appears one dodge-length ahead of you.",
+        "locomotion": "It steps only on the recovery beat of the last action it witnessed; the permission cue is a salt silhouette appears one dodge-length ahead of you.",
+        "sound": "Witch reed produces the opponent's last rhythm returned with one deliberately missing beat; White Prediction commits on the first hex/delayed sound after the gap.",
+        "purpose": "Mire-workers who learned to bargain with the drowned parish and slowly became part of its wetland rites. This form serves the niche expressed by salt lines on his mask predict where a foe will stand one heartbeat from now.",
+        "origin": "Salt lines on his mask predict where a foe will stand one heartbeat from now.",
+        "mechanic": "White Prediction",
+        "cue": "A salt silhouette appears one dodge-length ahead of you.",
+        "counterplay": "Walk instead of dodging, or deliberately reverse direction after the mark."
+      },
+      "master": "Canonical form: Pale-Salt Diviner, specialist duelist, 1.9 meters, portrait 2:3. Show one crooked reed-masked diviner with pale salt lines physically embedded across the eyeless mask. A narrow salt-white internal lattice must cross the main body's silhouette and resolve into exactly one thin, blank, human-scale salt silhouette offset one dodge-length ahead of the diviner's current stance. The salt silhouette is a subordinate predictive telegraph, not a second creature: no face, costume, volume, or individual detail. Pose the main figure on a visible recovery beat with one foot completing the witnessed step, while the prediction leans in a deliberately reversible direction. No player, target portrait, floor marking, extra silhouette, readable diagram, bright magic, or environment."
+    },
+    "mother_of_reeds": {
+      "name": "Mother of Reeds",
+      "fileStem": "mother-of-reeds",
+      "rank": "miniboss",
+      "role": "controller",
+      "heightMeters": 2.56,
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "The coven's eldest has replaced every bone with bundled reeds and bends without breaking. The missing anatomy briefly outlines itself when reeds tie themselves into knots around their own shadows.",
+        "locomotion": "It advances only while the surrounding escape geometry is changing; the permission cue is reeds tie themselves into knots around their own shadows.",
+        "sound": "Witch reed produces three spaced warnings, a held absence, then one enclosing note; Marsh Knots commits on the first root/hex sound after the gap.",
+        "purpose": "Mire-workers who learned to bargain with the drowned parish and slowly became part of its wetland rites. This form serves the niche expressed by the coven's eldest has replaced every bone with bundled reeds and bends without breaking.",
+        "origin": "The coven's eldest has replaced every bone with bundled reeds and bends without breaking.",
+        "mechanic": "Marsh Knots",
+        "cue": "Reeds tie themselves into knots around their own shadows.",
+        "counterplay": "Stand on stone or cut the shadow-knots before they tighten."
+      },
+      "master": "Canonical form: Mother of Reeds, miniboss controller, 2.56 meters, portrait 2:3. Show one towering coven elder with every load-bearing bone visibly replaced by dense bundled reeds; no normal skeleton, flesh anatomy, or rigid joint may explain the silhouette. Her trunk and long limbs must bend in several continuous unbroken arcs while remaining structurally readable. Sections of body are missing negative space, briefly outlined by the exact reeds that loop around and tie into several large cuttable knots around narrow bog-ink shadow-ribbons cast by her own limbs. Keep the shadow-ribbons attached to the isolated subject rather than a floor, and include one restrained old-stone charm as a counterplay material cue without creating terrain. No ordinary elderly woman, tree person, extra creature, ground shadow, root environment, bright magic, or scene."
+    }
+  }
+}

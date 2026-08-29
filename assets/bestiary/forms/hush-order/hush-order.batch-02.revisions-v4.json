@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "familyId": "hush_order",
+  "batchId": "hush-order-masters-batch-02",
+  "policy": "The frozen packet remains unchanged. These are narrow forward revisions after owner full-resolution preflight of v3. Dust Novice v3 is retained for independent review and is not regenerated in this packet.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/hush-order/batch-02/prompt-packet.json",
+    "sha256": "8e15b4735f602db93ac7c2bd7dbe5c87267e2607a5f8f079367e8a2a36ae27d8"
+  },
+  "revisions": {
+    "abbot-of-exact-words-v4": {
+      "source": "work/concept-art-production/hush-order/batch-02/abbot-of-exact-words-concept-master-v3.png",
+      "sourceSha256": "078ec42971c43186f31e748ad6fc90ab86026eb5d1def4957c6f96ee2ad4a36d",
+      "reason": "The v3 one-cord topology and token arc pass owner preflight, but the six marked tooth blocks are not one sealed tooth gate and their droplet marks violate the nonsemantic evidence rule.",
+      "prompt": "Surgical head-cue edit of this exact Abbot. Preserve the entire accepted one-cord topology, both hands/feet, pose, incomplete blank token arc with exactly one misaligned token, canvas, materials, lighting, scale and framing unchanged. Replace ONLY the six marked rectangular objects across the hood opening. Install exactly ONE continuous dry-ivory tooth-gate rail spanning the black lower opening, with exactly eight plain narrow triangular teeth descending from that one rail. Every tooth is blank: no droplet, letter, rune, number, punctuation, icon, engraving or symbol. Immediately BEHIND the tooth row suspend exactly ONE separate narrow bloodless-gray sentence strip; it is a continuous unbroken blank ribbon carrying only a shallow irregular raised cadence of nonrepeating bumps, visible between the teeth and not readable as any language or marks. Do not add a second rail, tooth row, sentence strip or token. Do not change any cord segment or add body/face/skull/weapon/glow/floor/scene/logo/watermark. Opaque near-black studio."
+    },
+    "mute-porter-v4": {
+      "source": "work/concept-art-production/hush-order/batch-01/hush-monk-concept-master-v5.png",
+      "sourceSha256": "a2a6071d07b2dc56e6b0ef7a8b13f765ccfe04050b81678b1e9900cdbec8cd72",
+      "reason": "The v3 doorway edit displaced a wrist-to-leg continuation and added floor-like perspective; restart from the accepted topology and edit only the empty center.",
+      "prompt": "Surgical center-only conversion of this exact accepted one-cord Hush Order subject into the Mute Porter. DO NOT MOVE, REDRAW, CUT, HIDE OR RECONNECT ANY prayer cord, hand, wrist, leg, foot, low bridge, hood route or return knot. Preserve the full branchless loop exactly. Remove only the three floating wax gesture impressions. In their empty central space suspend exactly ONE narrow weathered stone doorway using two tiny straight bronze hangers from the linen shoulder tabs; the hangers are not cord and do not touch the prayer cord. The doorway is a thin open rectangular stone frame facing viewer, fully contained inside the rope loop. Inside its pure-black opening place exactly THREE nested, thin, shallow rectangular threshold OUTLINES decreasing in size; each is an open line frame floating parallel to the doorway, with no bottom surface, floor plane, room, wall depth or scenery. Both hands remain empty and in their original wrist pass-throughs. No door slab, key, person, architecture scene, floor/contact shadow, branch, waist cord, body, symbol, glow, logo or watermark. Preserve canvas, family materials, cold light and full clearance."
+    },
+    "pause-inquisitor-v4": {
+      "source": "work/concept-art-production/hush-order/batch-02/pause-inquisitor-concept-master-v3.png",
+      "sourceSha256": "afe8b6928148e2a2f52466fc1be81ec5d151b2a6fef0d8c33e7aa6a734110b88",
+      "reason": "The v3 topology and repeated hands pass owner preflight, but the central evidence broke into three stone-like pieces instead of one ink stroke interrupted once.",
+      "prompt": "Surgical central-cue edit of this exact Pause Inquisitor. Preserve the complete accepted one-cord topology, hands, pose, hood, canvas, materials, lighting, scale and framing unchanged. Delete ONLY the current three dark central fragments and bead. Replace them with exactly ONE short thick matte-black dry-ink stroke made from TWO connected-looking asymmetric blunt segments separated by exactly ONE small open interruption at center. The two segments align as one crooked nonsemantic three-bend slash; there are no other breaks, fragments or strokes. Suspend exactly ONE small dry ink bead within the single open interruption. The whole cue must not close or resemble a circle, oval, comma, semicolon, colon, question mark, exclamation, letter, numeral, rune, icon or punctuation. No stone material, second bead, text, pen, page, body, waist cord, glow, floor, scene, logo or watermark. Opaque near-black studio."
+    },
+    "comma-blade-ascetic-v4": {
+      "source": "work/concept-art-production/hush-order/batch-01/hush-monk-concept-master-v5.png",
+      "sourceSha256": "a2a6071d07b2dc56e6b0ef7a8b13f765ccfe04050b81678b1e9900cdbec8cd72",
+      "reason": "The v3 extreme bend moved both hands onto one side and made the ribbon an S-like glyph. Restart from accepted topology with a restrained crescent and short single ribbon.",
+      "prompt": "Convert this exact accepted one-cord Hush Order subject into the Comma-Blade Ascetic while preserving the one branchless closed topology and keeping ONE threaded hand on each side and ONE foot on each side. Remove the three gesture impressions. Apply only a restrained asymmetric circling lean: shift the hood and shoulder arc moderately toward viewer-right while the low bridge bows moderately toward viewer-left, producing one broad crescent around open black air without crossing or changing any cord connection. The viewer-left hand remains on viewer-left wrist and viewer-right hand on viewer-right wrist; both wrist cords continue directly into their same-side outer legs. Behind the OUTER viewer-left bend suspend exactly ONE short broad shadow-violet crescent ribbon, no more than half the subject height, with exactly one open inner entry gap. It is a simple C-like arc but deliberately irregular, not a comma, S, letter, punctuation, weapon, second body or floor shadow. No second ribbon, blade, text, glow, ground, scene, waist cord, branch, body, logo or watermark. Preserve portrait canvas, family materials, cold light and full silhouette clearance."
+    }
+  }
+}

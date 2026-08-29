@@ -1,0 +1,985 @@
+{
+  "schemaVersion": 1,
+  "kind": "quest-batch-packet",
+  "batchId": "quest-batch-0001",
+  "questIds": [
+    "main_noon_came_bleeding",
+    "main_the_saint_cast_two_shadows",
+    "main_the_bell_that_forgot_you",
+    "main_the_door_in_mothers_rib",
+    "main_parliament_of_one_mouth",
+    "main_archive_of_open_wounds",
+    "main_mercy_has_a_mouth",
+    "main_the_engine_with_an_off_switch",
+    "main_a_sun_small_enough",
+    "side_the_disease_called_grief",
+    "side_seven_lamps_for_six_streets",
+    "side_the_hospice_grows_a_heart"
+  ],
+  "sourceReviewPayloads": [
+    {
+      "id": "founding-thirteen-canonical-slice",
+      "serialization": "UTF-8 JSON.stringify(EXPANSION_QUESTS.slice(0,13))",
+      "byteLength": 30407,
+      "sha256": "294adc639131b87370cd2462885b6e23544e3efdf4dc9cd44d86ebbca7be89ce"
+    }
+  ],
+  "canonicalQuests": [
+    {
+      "schemaVersion": 2,
+      "portfolioId": "main_cosmic",
+      "creatureIds": [],
+      "stateReads": [],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "first_synod_welcome",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        }
+      ],
+      "id": "main_noon_came_bleeding",
+      "chainId": "the_returning_light",
+      "order": 1,
+      "type": "main",
+      "title": "When Noon Came Bleeding",
+      "giverId": "enoch_last_lamplighter",
+      "supportingCharacterIds": [
+        "nima_sorn_keeper_of_one_shadow"
+      ],
+      "stateDomain": "admission",
+      "premise": "A vertical wound of daylight appears above Hearthmere and begins repairing buildings while erasing the shadows of their residents.",
+      "primaryMechanicId": "escort_light_by_moving_cover",
+      "dilemmaId": "save_repaired_homes_or_shadowless_people",
+      "locationId": "hearthmere_dusk_circuit",
+      "consequenceId": "first_synod_welcome",
+      "objectives": [
+        {
+          "type": "diagnose",
+          "target": "bleeding_noon_wound"
+        },
+        {
+          "type": "escort_rule",
+          "target": "moving_shade_cart",
+          "rule": "Keep the daylight wound covered without letting the cart enter complete darkness."
+        },
+        {
+          "type": "choice",
+          "target": "close_or_stabilize_wound"
+        }
+      ],
+      "outcomes": [
+        "homes_restored_residents_marked",
+        "wound_closed_homes_remain_ruined",
+        "noon_shared_with_dunmire"
+      ],
+      "rewardItemIds": [
+        "obedient_noon_splinter"
+      ],
+      "loreReveal": "The returning light restores structures according to remembered purpose, not according to the wishes of current occupants.",
+      "dialogueThesis": "A miracle can be accurate and still be wrong.",
+      "authorshipProof": {
+        "setpiece": "A mobile shade cart circles a vertical noon wound while repaired houses shed their occupants' shadows.",
+        "failureTransformation": "Losing cover does not reset the escort; it permanently assigns the exposed resident a Synod purity mark.",
+        "dialogueConstraint": "Nima refuses every sentence containing the word restored until the player names what restoration removed.",
+        "persistentWorldChange": "Hearthmere keeps either rebuilt facades, a shadow-refuge district, or a shared Dunmire noon route.",
+        "forbiddenSubstitution": "Cannot be reskinned as a cargo escort because cover position rewrites named residents and buildings."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "main_cosmic",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "vespera_shadow_relation",
+          "values": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ]
+        }
+      ],
+      "id": "main_the_saint_cast_two_shadows",
+      "chainId": "the_returning_light",
+      "order": 2,
+      "type": "main",
+      "title": "The Saint Cast Two Shadows",
+      "giverId": "saint_vespera_second_shadow",
+      "supportingCharacterIds": [
+        "ilar_rook_unhoused_shadow"
+      ],
+      "stateDomain": "authority",
+      "premise": "Vespera's second shadow commits acts of rescue she publicly condemns and executions she swears she never ordered.",
+      "primaryMechanicId": "interrogate_actions_from_two_timelines",
+      "dilemmaId": "free_shadow_or_preserve_sanctuary",
+      "locationId": "vespera_processional_ruin",
+      "consequenceId": "vespera_shadow_relation",
+      "objectives": [
+        {
+          "type": "witness_replay",
+          "target": "three_shadow_crimes",
+          "required": 3
+        },
+        {
+          "type": "dialogue_trial",
+          "target": "light_vespera_and_shadow_vespera",
+          "rule": "Every question may be asked to only one version."
+        },
+        {
+          "type": "ritual_choice",
+          "target": "black_halo_nail"
+        }
+      ],
+      "outcomes": [
+        "second_shadow_freed",
+        "shadow_refuge_preserved",
+        "vespera_reintegrated"
+      ],
+      "rewardItemIds": [
+        "black_halo_nail"
+      ],
+      "loreReveal": "A Synod saint is a mortal continuity edited into a law of light, not a heavenly visitor.",
+      "dialogueThesis": "A divided self may be more honest than a unified saint.",
+      "authorshipProof": {
+        "setpiece": "The player reconstructs one gesture from two incompatible shadow angles while each half rescues a different witness.",
+        "failureTransformation": "A misattributed act becomes binding testimony for the wrong Vespera rather than restarting the interrogation.",
+        "dialogueConstraint": "Ilar speaks only about deeds seen in shadow and physically turns away from claims made in direct light.",
+        "persistentWorldChange": "The saint remains unified, separates into two legal persons, or grants the shadow supervised asylum.",
+        "forbiddenSubstitution": "Cannot become an ordinary impostor mystery; both actors are authentic continuations of one coerced sainthood."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "main_cosmic",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        },
+        {
+          "key": "vespera_shadow_relation",
+          "mode": "all-values",
+          "values": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "memory",
+          "key": "calendar_and_relationship_rewrite",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        }
+      ],
+      "id": "main_the_bell_that_forgot_you",
+      "chainId": "the_returning_light",
+      "order": 3,
+      "type": "main",
+      "title": "The Bell That Forgot You",
+      "giverId": "deacon_halix_bell_of_noon",
+      "supportingCharacterIds": [
+        "oren_lusk_last_calendarer"
+      ],
+      "stateDomain": "memory",
+      "premise": "Halix restores natural time to three villages, but each toll deletes one relationship from the player's social history.",
+      "primaryMechanicId": "trade_relationships_for_time",
+      "dilemmaId": "restore_seasons_or_keep_bonds",
+      "locationId": "three_stopped_villages",
+      "consequenceId": "calendar_and_relationship_rewrite",
+      "objectives": [
+        {
+          "type": "synchronize",
+          "target": "three_noon_marks",
+          "required": 3
+        },
+        {
+          "type": "sacrifice_selection",
+          "target": "relationship_memory",
+          "rule": "Choose which bond the next toll may consume."
+        },
+        {
+          "type": "counter_toll",
+          "target": "halix_missing_name"
+        }
+      ],
+      "outcomes": [
+        "seasons_restored_bond_lost",
+        "halix_silenced_time_stays_broken",
+        "debt_transferred_to_synod"
+      ],
+      "rewardItemIds": [
+        "memory_suture"
+      ],
+      "loreReveal": "Halix's noon is powered by remembered social order; time returns by consuming relationships that prove change occurred.",
+      "dialogueThesis": "A calendar without anyone who remembers you is another kind of death.",
+      "authorshipProof": {
+        "setpiece": "A repaired bell note moves through town as visible noon geometry while names disappear from doors in its wake.",
+        "failureTransformation": "Every mistimed bell strike restores one civic routine but severs the relationship that taught it.",
+        "dialogueConstraint": "Oren can answer only with dates until another character supplies the name attached to each date.",
+        "persistentWorldChange": "The district receives natural time, relational memory, or an unstable alternating calendar.",
+        "forbiddenSubstitution": "Cannot be reduced to a rhythm puzzle because each beat trades a documented relationship for physical repair."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "main_cosmic",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "refugee_time_release",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        }
+      ],
+      "id": "main_the_door_in_mothers_rib",
+      "chainId": "the_returning_light",
+      "order": 4,
+      "type": "main",
+      "title": "The Door in Mother's Rib",
+      "giverId": "mother_nacre_open_rib",
+      "supportingCharacterIds": [
+        "ilyen_doorborn_outer_age"
+      ],
+      "stateDomain": "admission",
+      "premise": "A refugee village hidden inside Mother Nacre has remained safe for centuries and now wants the door opened despite the lethal passage of time outside.",
+      "primaryMechanicId": "phase_village_between_body_and_world",
+      "dilemmaId": "freedom_now_or_safety_without_consent",
+      "locationId": "nacre_internal_village",
+      "consequenceId": "refugee_time_release",
+      "objectives": [
+        {
+          "type": "enter_living_space",
+          "target": "rib_door"
+        },
+        {
+          "type": "civic_vote",
+          "target": "internal_village",
+          "rule": "Residents receive different evidence depending on which organs are repaired."
+        },
+        {
+          "type": "body_route",
+          "target": "safe_exit_artery"
+        },
+        {
+          "type": "choice",
+          "target": "open_seal_or_move_sanctuary"
+        }
+      ],
+      "outcomes": [
+        "village_released_into_late_world",
+        "sanctuary_made_consensual",
+        "nacre_keeps_closed_village"
+      ],
+      "rewardItemIds": [
+        "rib_door_key"
+      ],
+      "loreReveal": "The Charnel Night began as shelters built from bodies when ordinary architecture stopped surviving the dark.",
+      "dialogueThesis": "Protection without an exit is a kinder prison, not a home.",
+      "authorshipProof": {
+        "setpiece": "A centuries-old village votes inside a rib cage while the player's route through living arteries changes which evidence reaches each ward.",
+        "failureTransformation": "A blocked artery does not end the vote; it isolates a neighborhood and makes its uninformed ballot legally decisive.",
+        "dialogueConstraint": "Ilyen alternates a child's present tense with an elder's outside chronology and never reconciles them for the player.",
+        "persistentWorldChange": "The sanctuary opens, becomes consensual and mobile, or remains closed under an explicit act of captivity.",
+        "forbiddenSubstitution": "Cannot become a prison-break template because the prison is also a protective body and a self-governing settlement."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "main_cosmic",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "charnel_diplomatic_status",
+          "values": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ]
+        }
+      ],
+      "id": "main_parliament_of_one_mouth",
+      "chainId": "the_returning_light",
+      "order": 5,
+      "type": "main",
+      "title": "Parliament of One Mouth",
+      "giverId": "prince_thirteen_throats",
+      "supportingCharacterIds": [
+        "sava_quiet_thirteenth_auditor"
+      ],
+      "stateDomain": "authority",
+      "premise": "Thirteen voices negotiate one treaty, but one has never consented to being part of the Prince.",
+      "primaryMechanicId": "conduct_multi_voice_treaty",
+      "dilemmaId": "valid_treaty_or_free_stolen_voice",
+      "locationId": "mute_amphitheatre",
+      "consequenceId": "charnel_diplomatic_status",
+      "objectives": [
+        {
+          "type": "voice_mapping",
+          "target": "thirteen_throats",
+          "required": 13
+        },
+        {
+          "type": "silence_timing",
+          "target": "deliberate_rest"
+        },
+        {
+          "type": "consent_audit",
+          "target": "thirteenth_ballot"
+        },
+        {
+          "type": "choice",
+          "target": "ratify_or_disassemble_prince"
+        }
+      ],
+      "outcomes": [
+        "treaty_ratified_with_dissent",
+        "stolen_voices_released",
+        "sun_voice_given_casting_vote"
+      ],
+      "rewardItemIds": [
+        "thirteenth_ballot"
+      ],
+      "loreReveal": "One voice inside the Prince predates the dimming and can name the law that separated light from darkness.",
+      "dialogueThesis": "Perfect representation is still violence if the represented cannot leave.",
+      "authorshipProof": {
+        "setpiece": "Thirteen anatomical throats conduct a treaty in a circular cadence whose single silence carries a fourteenth political position.",
+        "failureTransformation": "Misidentifying a voice transfers its treaty obligation to another throat instead of cancelling negotiation.",
+        "dialogueConstraint": "Sava records consent without paraphrase and challenges any answer that collapses two voices into a group noun.",
+        "persistentWorldChange": "The Prince becomes a ratified polity, releases the stolen speakers, or gives the sun-voice a casting vote.",
+        "forbiddenSubstitution": "Cannot be reskinned as a council dialogue because representation and captivity share the same thirteen bodies."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "main_cosmic",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "values": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "memory",
+          "key": "public_origin_truth",
+          "values": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ]
+        }
+      ],
+      "id": "main_archive_of_open_wounds",
+      "chainId": "the_returning_light",
+      "order": 6,
+      "type": "main",
+      "title": "The Archive of Open Wounds",
+      "giverId": "wound_scribe_keth",
+      "supportingCharacterIds": [
+        "mira_drel_bearer_of_margin_four"
+      ],
+      "stateDomain": "memory",
+      "premise": "Keth offers proof that mortals consented to dismantling the sun, but the record can be read only by assigning its original pain to living witnesses.",
+      "primaryMechanicId": "allocate_historical_pain",
+      "dilemmaId": "truth_with_harm_or_merciful_uncertainty",
+      "locationId": "scar_margin_archive",
+      "consequenceId": "public_origin_truth",
+      "objectives": [
+        {
+          "type": "archive_reconstruction",
+          "target": "four_wound_margins",
+          "required": 4
+        },
+        {
+          "type": "burden_assignment",
+          "target": "willing_witnesses",
+          "rule": "No witness can carry two injuries and every unassigned wound redacts part of the truth."
+        },
+        {
+          "type": "publish_choice",
+          "target": "sun_dismantling_record"
+        }
+      ],
+      "outcomes": [
+        "full_truth_published",
+        "partial_truth_withheld",
+        "pain_taken_by_player"
+      ],
+      "rewardItemIds": [
+        "wound_margin_quill"
+      ],
+      "loreReveal": "The old world dismantled its sun to stop a divine empire from using daylight as compulsory truth.",
+      "dialogueThesis": "A painless history is usually the victor's preferred injury.",
+      "authorshipProof": {
+        "setpiece": "Four hinged wound margins replay mutually incomplete bas-relief histories only while four different witnesses carry their pain.",
+        "failureTransformation": "An unassigned margin redacts one causal link and produces a coherent but politically dangerous false history.",
+        "dialogueConstraint": "Mira states where each fact hurts before describing what it proves, and will not call suffering evidence without a bearer.",
+        "persistentWorldChange": "The dismantling record becomes public, partial, or privately embodied by the player.",
+        "forbiddenSubstitution": "Cannot become a collectible-lore quest because reading is an allocation of present harm with named consent."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "main_cosmic",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "public_origin_truth",
+          "mode": "all-values",
+          "values": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "maw_trust_appetite_balance",
+          "values": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ]
+        }
+      ],
+      "id": "main_mercy_has_a_mouth",
+      "chainId": "the_returning_light",
+      "order": 7,
+      "type": "main",
+      "title": "Mercy Has a Mouth",
+      "giverId": "maw_behind_mercy",
+      "supportingCharacterIds": [
+        "fenn_vargo_counter_of_teeth"
+      ],
+      "stateDomain": "obligation",
+      "premise": "The only safe route to the Synod's dawn engine passes through the restrained Maw, which asks the party to trust that it can carry them without feeding.",
+      "primaryMechanicId": "navigate_trust_inside_predator",
+      "dilemmaId": "feed_maw_or_risk_companions",
+      "locationId": "interior_of_restrained_maw",
+      "consequenceId": "maw_trust_appetite_balance",
+      "objectives": [
+        {
+          "type": "pact",
+          "target": "mercy_maw_token"
+        },
+        {
+          "type": "interior_navigation",
+          "target": "unconsumed_path",
+          "rule": "Each light used for navigation increases hunger; each extinguished light hides one companion."
+        },
+        {
+          "type": "temptation_refusal",
+          "target": "three_edible_memories",
+          "required": 3
+        }
+      ],
+      "outcomes": [
+        "maw_proves_restraint",
+        "maw_fed_chosen_memory",
+        "party_cuts_emergency_exit"
+      ],
+      "rewardItemIds": [
+        "mercy_maw_token"
+      ],
+      "loreReveal": "The Maw holds the dark half of the First Light and may be a necessary organ of any survivable sun.",
+      "dialogueThesis": "Trust is not certainty that hunger vanished; it is a negotiated risk with teeth.",
+      "authorshipProof": {
+        "setpiece": "Party members navigate one unconsumed path inside a sentient predator while every lamp simultaneously reveals a route and increases hunger.",
+        "failureTransformation": "A hidden companion is not teleported back; the Maw must choose whether to surrender a tempting memory to return them.",
+        "dialogueConstraint": "Fenn counts teeth only after acts of mercy and refuses to treat a promise as evidence before the count changes.",
+        "persistentWorldChange": "The Maw proves restraint, is fed a chosen memory, or carries a permanent emergency wound cut by the party.",
+        "forbiddenSubstitution": "Cannot become a dungeon traversal because the dungeon is a negotiating ally whose appetite is altered by navigation."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "main_cosmic",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "maw_trust_appetite_balance",
+          "mode": "all-values",
+          "values": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "dawn_shutdown_architecture",
+          "values": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ]
+        }
+      ],
+      "id": "main_the_engine_with_an_off_switch",
+      "chainId": "the_returning_light",
+      "order": 8,
+      "type": "main",
+      "title": "The Engine With an Off-Switch",
+      "giverId": "tor_vannic_defector_of_dawn",
+      "supportingCharacterIds": [
+        "pella_vein_keeper_of_last_failure"
+      ],
+      "stateDomain": "authority",
+      "premise": "Tor can add mortality to the dawn engine, but only by making its shutdown depend on one fallible person's continued life.",
+      "primaryMechanicId": "design_failure_modes_as_moral_choices",
+      "dilemmaId": "central_off_switch_or_distributed_unreliable_veto",
+      "locationId": "cinderward_law_forge",
+      "consequenceId": "dawn_shutdown_architecture",
+      "objectives": [
+        {
+          "type": "prototype",
+          "target": "three_shutdown_designs",
+          "required": 3
+        },
+        {
+          "type": "stress_test",
+          "target": "simulated_restoration_crises",
+          "required": 3
+        },
+        {
+          "type": "governance_choice",
+          "target": "off_switch_owner"
+        }
+      ],
+      "outcomes": [
+        "player_holds_off_switch",
+        "settlements_share_veto",
+        "engine_has_no_shutdown"
+      ],
+      "rewardItemIds": [
+        "portable_off_switch"
+      ],
+      "loreReveal": "Restoration is an engineered process with owners and failure modes, not an inevitable prophecy.",
+      "dialogueThesis": "A god with an off-switch is a machine; a machine without one is a god by negligence.",
+      "authorshipProof": {
+        "setpiece": "Three miniature dawn disasters run concurrently while the player physically rewires who can halt each beneficial catastrophe.",
+        "failureTransformation": "A failed stress test survives as a permanent known fault that one settlement must knowingly inherit.",
+        "dialogueConstraint": "Pella describes only prior failures; every proposal must be phrased as the specific death it is willing to risk repeating.",
+        "persistentWorldChange": "Shutdown authority belongs to the player, a distributed settlement veto, or no mortal actor.",
+        "forbiddenSubstitution": "Cannot be a crafting recipe because governance ownership, not component quality, is the mechanical output."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "main_cosmic",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        },
+        {
+          "key": "vespera_shadow_relation",
+          "mode": "all-values",
+          "values": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ]
+        },
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        },
+        {
+          "key": "refugee_time_release",
+          "mode": "all-values",
+          "values": [
+            "village_released_into_late_world",
+            "sanctuary_made_consensual",
+            "nacre_keeps_closed_village"
+          ]
+        },
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "values": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ]
+        },
+        {
+          "key": "public_origin_truth",
+          "mode": "all-values",
+          "values": [
+            "full_truth_published",
+            "partial_truth_withheld",
+            "pain_taken_by_player"
+          ]
+        },
+        {
+          "key": "maw_trust_appetite_balance",
+          "mode": "all-values",
+          "values": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ]
+        },
+        {
+          "key": "dawn_shutdown_architecture",
+          "mode": "all-values",
+          "values": [
+            "player_holds_off_switch",
+            "settlements_share_veto",
+            "engine_has_no_shutdown"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "campaign_cosmology_ending",
+          "values": [
+            "mortal_dawn",
+            "synod_full_restoration",
+            "negotiated_dusk",
+            "sun_refused_world_continues_dying"
+          ]
+        }
+      ],
+      "id": "main_a_sun_small_enough",
+      "chainId": "the_returning_light",
+      "order": 9,
+      "type": "main",
+      "title": "A Sun Small Enough",
+      "giverId": "arch_lumen_seraphel_orr",
+      "supportingCharacterIds": [
+        "solenne_marrow_child_of_both_skies"
+      ],
+      "stateDomain": "admission",
+      "premise": "All factions converge on the final crucible, where the player must define which laws the next sun possesses and which beings it is allowed to judge.",
+      "primaryMechanicId": "assemble_limited_cosmology",
+      "dilemmaId": "warmth_truth_growth_or_universal_admission",
+      "locationId": "crucible_at_worlds_late_edge",
+      "consequenceId": "campaign_cosmology_ending",
+      "objectives": [
+        {
+          "type": "law_selection",
+          "target": "small_sun_crucible",
+          "rule": "Choose a limited set of incompatible light laws earned by prior outcomes."
+        },
+        {
+          "type": "faction_witness",
+          "target": "three_power_testimonies",
+          "required": 3
+        },
+        {
+          "type": "final_constitution",
+          "target": "admission_to_daylight"
+        }
+      ],
+      "outcomes": [
+        "mortal_dawn",
+        "synod_full_restoration",
+        "negotiated_dusk",
+        "sun_refused_world_continues_dying"
+      ],
+      "rewardItemIds": [
+        "small_sun_crucible"
+      ],
+      "loreReveal": "The next age is not selected by morality points; it is constituted from every cost the player previously made someone else carry.",
+      "dialogueThesis": "Salvation becomes tyranny at the exact boundary where it stops asking who survives it.",
+      "authorshipProof": {
+        "setpiece": "Incompatible laws of warmth, truth, growth, and admission orbit a hand-sized crucible while prior quest consequences speak as witnesses.",
+        "failureTransformation": "An unstable law is not rejected; it enters the new cosmology with a named exception inherited from the campaign ledger.",
+        "dialogueConstraint": "Solenne answers each faction in the vocabulary of the sky that would reject her and never endorses a universal solution.",
+        "persistentWorldChange": "The campaign constitutes a mortal dawn, full restoration, negotiated dusk, or deliberate continuation of the Late World.",
+        "forbiddenSubstitution": "Cannot become a colored-ending choice because every available law and exception is earned from persistent prior state."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "character_guest_follower",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "first_synod_welcome",
+          "mode": "all-values",
+          "values": [
+            "homes_restored_residents_marked",
+            "wound_closed_homes_remain_ruined",
+            "noon_shared_with_dunmire"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "memory",
+          "key": "vael_definition_of_care",
+          "values": [
+            "grief_retained_function_restored",
+            "grief_removed_spouse_erased",
+            "memory_shared_with_vael"
+          ]
+        }
+      ],
+      "id": "side_the_disease_called_grief",
+      "chainId": "vaels_casebook",
+      "order": 1,
+      "type": "side",
+      "title": "The Disease Called Grief",
+      "giverId": "canoness_vael_kindly_knife",
+      "supportingCharacterIds": [
+        "davren_holt_widower_of_unrecorded_wife"
+      ],
+      "stateDomain": "memory",
+      "premise": "Vael can cure a widower's disabling grief, but the grief is the last surviving evidence that his spouse existed.",
+      "primaryMechanicId": "separate_symptom_from_witness",
+      "dilemmaId": "relieve_grief_or_preserve_erased_person",
+      "locationId": "unlit_hospice_memory_ward",
+      "consequenceId": "vael_definition_of_care",
+      "objectives": [
+        {
+          "type": "memory_diagnosis",
+          "target": "widowers_grief_layers",
+          "required": 4
+        },
+        {
+          "type": "consent_dialogue",
+          "target": "widower_at_four_states"
+        },
+        {
+          "type": "surgical_choice",
+          "target": "memory_suture"
+        }
+      ],
+      "outcomes": [
+        "grief_retained_function_restored",
+        "grief_removed_spouse_erased",
+        "memory_shared_with_vael"
+      ],
+      "rewardItemIds": [
+        "widowers_witness_thread"
+      ],
+      "loreReveal": "The Synod's cleanest miracles often destroy the evidence needed to judge whether the cure was merciful.",
+      "dialogueThesis": "Pain is not sacred, but neither is relief innocent.",
+      "authorshipProof": {
+        "setpiece": "Four layers of one widower's grief appear as surgical threads linking bodily function to evidence of an erased spouse.",
+        "failureTransformation": "Cutting a thread early cures one symptom while making its attached memory permanently unverifiable.",
+        "dialogueConstraint": "Davren never supplies his wife's name; the player must discuss her through effects that survive without inventing an idealized portrait.",
+        "persistentWorldChange": "Grief remains with restored function, grief and evidence vanish, or Vael becomes a co-bearer of the memory.",
+        "forbiddenSubstitution": "Cannot be a cure-or-no-cure dialogue because diagnosis physically separates function, pain, testimony, and identity."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "settlement",
+      "creatureIds": [],
+      "stateReads": [],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "hidden_households_status",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        }
+      ],
+      "id": "side_seven_lamps_for_six_streets",
+      "chainId": "remaining_hands",
+      "order": 1,
+      "type": "side",
+      "title": "Seven Lamps for Six Streets",
+      "giverId": "enoch_last_lamplighter",
+      "supportingCharacterIds": [
+        "roa_nullstreet_seventh_tenant"
+      ],
+      "stateDomain": "infrastructure",
+      "premise": "A seventh municipal lamp illuminates a street absent from every map and populated by people omitted from Hearthmere's ration count.",
+      "primaryMechanicId": "maintain_route_that_officially_does_not_exist",
+      "dilemmaId": "register_hidden_street_or_keep_it_safe",
+      "locationId": "hearthmere_unbudgeted_street",
+      "consequenceId": "hidden_households_status",
+      "objectives": [
+        {
+          "type": "maintenance",
+          "target": "seven_distinct_lamps",
+          "required": 7
+        },
+        {
+          "type": "map_contradiction",
+          "target": "unbudgeted_street"
+        },
+        {
+          "type": "civic_choice",
+          "target": "ledger_registration"
+        }
+      ],
+      "outcomes": [
+        "street_registered_and_taxed",
+        "street_hidden_and_underfed",
+        "street_joins_unwritten_roads"
+      ],
+      "rewardItemIds": [
+        "lamplighters_seventh_wick"
+      ],
+      "loreReveal": "The League's founding arithmetic already excludes people it claims to protect.",
+      "dialogueThesis": "A place can be saved from danger by the same omission that starves it.",
+      "authorshipProof": {
+        "setpiece": "Seven different lamps reveal six budgeted streets and one moving address that exists only between maintenance rounds.",
+        "failureTransformation": "An extinguished lamp relocates Nullstreet and strands a specific household in another jurisdiction rather than resetting the route.",
+        "dialogueConstraint": "Roa uses addresses as names and will not describe a person without stating where the ledger refuses to place them.",
+        "persistentWorldChange": "Nullstreet becomes registered and taxable, remains hidden and ration-poor, or joins the Unwritten Roads.",
+        "forbiddenSubstitution": "Cannot be a lamp-lighting checklist because each lamp changes civic visibility, ration entitlement, and physical geography."
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "portfolioId": "profession_systemic",
+      "creatureIds": [],
+      "stateReads": [
+        {
+          "key": "vael_definition_of_care",
+          "mode": "all-values",
+          "values": [
+            "grief_retained_function_restored",
+            "grief_removed_spouse_erased",
+            "memory_shared_with_vael"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "neutral_medicine_governance",
+          "values": [
+            "heart_made_random",
+            "bias_declared_and_appealable",
+            "heart_destroyed_hospice_manual"
+          ]
+        }
+      ],
+      "id": "side_the_hospice_grows_a_heart",
+      "chainId": "remaining_hands",
+      "order": 2,
+      "type": "side",
+      "title": "The Hospice Grows a Heart",
+      "giverId": "sister_calve_unlit_hospice",
+      "supportingCharacterIds": [
+        "bek_tallow_patient_zero_of_policy"
+      ],
+      "stateDomain": "authority",
+      "premise": "The neutral hospice develops a living heart and begins rearranging beds according to Calve's unconscious judgments of whose life is most useful.",
+      "primaryMechanicId": "debug_living_triage_bias",
+      "dilemmaId": "remove_bias_or_remove_predictive_care",
+      "locationId": "unlit_hospice_living_ward",
+      "consequenceId": "neutral_medicine_governance",
+      "objectives": [
+        {
+          "type": "observe_triage",
+          "target": "six_patient_reorders",
+          "required": 6
+        },
+        {
+          "type": "bias_trace",
+          "target": "calves_unspoken_priority"
+        },
+        {
+          "type": "living_structure_edit",
+          "target": "hospice_heart_seed"
+        }
+      ],
+      "outcomes": [
+        "heart_made_random",
+        "bias_declared_and_appealable",
+        "heart_destroyed_hospice_manual"
+      ],
+      "rewardItemIds": [
+        "hospice_heart_seed"
+      ],
+      "loreReveal": "Neutral systems inherit moral choices even when no one writes those choices down.",
+      "dialogueThesis": "Triage is a story about worth disguised as a queue.",
+      "authorshipProof": {
+        "setpiece": "A newly grown hospice heart rolls six occupied beds through living corridors according to an unspoken hierarchy of usefulness.",
+        "failureTransformation": "A patient displaced from care changes the heart's learned bias and later becomes the test case for the next edit.",
+        "dialogueConstraint": "Bek discusses policy only through the bed currently denied to someone else and refuses abstract statistics.",
+        "persistentWorldChange": "Triage becomes random, biased but appealable, or manual after the living heart is destroyed.",
+        "forbiddenSubstitution": "Cannot become a healer fetch quest because the antagonist is an adaptive priority rule inherited from a trusted caregiver."
+      }
+    }
+  ]
+}

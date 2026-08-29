@@ -1,0 +1,17 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "veil-coast-kin-masters-batch-02-revision-v6",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast_kin",
+  "basePacketSha256": "eb01b55a4988fa15bd14d64e5fa2c925ef7232672fe35216473ad7889a4ac125",
+  "previousRevisionSha256": "7d7cab1bf903c3618020a468bf3f8382ad7e1300e96b4ec72405d9eb0552c1ce",
+  "assets": [
+    {
+      "id": "coral_reeve",
+      "reference": "coral-reeve-concept-master-v3.png",
+      "outputFile": "coral-reeve-concept-master-v4.png",
+      "reason": "The v3 preserves one charge and the closed dissent target but still has six open polyps plus one closed, seven total; the 12-o'clock narrow-slit polyp is absent.",
+      "revisionDirection": "Faithfully preserve every pixel-level design feature of the inspected v3 except the voting-ring count. Add exactly one small matte-red narrow-slit living polyp at the empty 12-o'clock position directly between the nested judge and the central cyan charge. It must be clearly separate from both judge and charge and have a dark non-glowing slit interior. Preserve the existing six open red polyps and one closed pearl-gray polyp unchanged, for EXACTLY EIGHT total polyps: seven open states plus one closed dissent. Do not add or remove any other object, glow, orb, charge or polyp. Preserve framing, pose, palette and backdrop."
+    }
+  ]
+}

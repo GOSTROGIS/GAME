@@ -1,0 +1,17 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "veil-coast-kin-masters-batch-01-revision-v6",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast_kin",
+  "basePacketSha256": "eb97a1a39e7554f1e351d3d9a1e2c23eebd25316ea57b0e7049bd0b00297dc2e",
+  "previousRevisionSha256": "a83a1b21eb2c5eb1680c2b3cfa0f13a4c1d88ff5bb096395098e1148100ce132",
+  "assets": [
+    {
+      "id": "lantern_gilled_raider",
+      "reference": "lantern-gilled-raider-concept-master-v5.png",
+      "outputFile": "lantern-gilled-raider-concept-master-v6.png",
+      "reason": "Independent review passes the three suspended vertical apertures/gills/empty hands but finds the canonical vacated-position after-contour absent.",
+      "revisionDirection": "Faithfully preserve every inspected v5 design feature, pose, three matte vertical suspended apertures, empty hands, pulsing gills, family materials, framing and backdrop. Add exactly one thin incomplete amphibious after-contour behind the viewer-right torso: a single pale-gray hairline tracing only the rear head crest, shoulder, outer arm, hip and upper webbed thigh, with large gaps at chest, hand, knee and foot so it cannot read as a duplicate body. Keep the contour behind and subordinate to the solid raider; do not overlap any aperture. Add nothing else. No second contour, creature, prop, tether, floor, glow, text or crop."
+    }
+  ]
+}

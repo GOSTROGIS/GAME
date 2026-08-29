@@ -1,0 +1,328 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-salt-waste-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.brine_oracle",
+      "subjectId": "brine_oracle",
+      "familyId": "salt_waste",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/salt-waste/brine-oracle-v2.png",
+      "sha256": "849fa9da0e9f5474cb91b79c965b90798751e7a4a1e0674c5fcdd701d89af38f",
+      "bytes": 1699753,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "849fa9da0e9f5474cb91b79c965b90798751e7a4a1e0674c5fcdd701d89af38f"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.caravan_of_one",
+      "subjectId": "caravan_of_one",
+      "familyId": "salt_waste",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/salt-waste/caravan-of-one-v4.png",
+      "sha256": "54e6abb5124a0d852f0f9b5e7c074fdd90d491fe4ece256efcf1be2732df0d43",
+      "bytes": 2116334,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "54e6abb5124a0d852f0f9b5e7c074fdd90d491fe4ece256efcf1be2732df0d43"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.compass_slug",
+      "subjectId": "compass_slug",
+      "familyId": "salt_waste",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/salt-waste/compass-slug-v3.png",
+      "sha256": "043a3c9179d3171bc469ff3051ad9b54a6f8a18dcf095c6cadb67630e849d60b",
+      "bytes": 1699373,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "043a3c9179d3171bc469ff3051ad9b54a6f8a18dcf095c6cadb67630e849d60b"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.eastward_witness",
+      "subjectId": "eastward_witness",
+      "familyId": "salt_waste",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/salt-waste/eastward-witness-v4.png",
+      "sha256": "e499b7e4647b99bb2e9257ae42359c2d08bbaaecd96b33bf02e55e36ca095b76",
+      "bytes": 1778717,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "e499b7e4647b99bb2e9257ae42359c2d08bbaaecd96b33bf02e55e36ca095b76"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.latitude_abductor",
+      "subjectId": "latitude_abductor",
+      "familyId": "salt_waste",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/salt-waste/latitude-abductor-v3.png",
+      "sha256": "6ff47c8321d81459fc6c63f8925fed70b77ad9c1602ae55e4b9e8103ac40d74e",
+      "bytes": 1177251,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "6ff47c8321d81459fc6c63f8925fed70b77ad9c1602ae55e4b9e8103ac40d74e"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.mirror_beetle",
+      "subjectId": "mirror_beetle",
+      "familyId": "salt_waste",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/salt-waste/mirror-beetle-v1.png",
+      "sha256": "a40d612af0e9df4098cd4a7ce8ffaaf3e21f6d13d70c1924e11a61686fb9e1e7",
+      "bytes": 1553907,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a40d612af0e9df4098cd4a7ce8ffaaf3e21f6d13d70c1924e11a61686fb9e1e7"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.needle_pilgrim",
+      "subjectId": "needle_pilgrim",
+      "familyId": "salt_waste",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/salt-waste/needle-pilgrim-v3.png",
+      "sha256": "7cc5a89a4cfeb5d48e10992edc19a619755628e28720a2da90f97fd04ed53a35",
+      "bytes": 1224302,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "7cc5a89a4cfeb5d48e10992edc19a619755628e28720a2da90f97fd04ed53a35"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.saint_of_closed_mirrors",
+      "subjectId": "saint_of_closed_mirrors",
+      "familyId": "salt_waste",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/salt-waste/saint-of-closed-mirrors-v1.png",
+      "sha256": "658cd9222cf1333dc8a1a1a2c1ba604c539dc93d0d8c8e870a1ec77b4280ea04",
+      "bytes": 2017228,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "658cd9222cf1333dc8a1a1a2c1ba604c539dc93d0d8c8e870a1ec77b4280ea04"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.salt_veil_strider",
+      "subjectId": "salt_veil_strider",
+      "familyId": "salt_waste",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/salt-waste/salt-veil-strider-v2.png",
+      "sha256": "e1c5be8d2c62dc2e2fb62689ca59b750efd922105c8dc2140e01a2637b70b15b",
+      "bytes": 1671115,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "e1c5be8d2c62dc2e2fb62689ca59b750efd922105c8dc2140e01a2637b70b15b"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.sealed_mirror_bearer",
+      "subjectId": "sealed_mirror_bearer",
+      "familyId": "salt_waste",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/salt-waste/sealed-mirror-bearer-v3.png",
+      "sha256": "65dad9e5b9faf205a87987a0c4bf2ec683a2af9e1a9acfbc87126a3590c0e32a",
+      "bytes": 2153065,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "65dad9e5b9faf205a87987a0c4bf2ec683a2af9e1a9acfbc87126a3590c0e32a"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

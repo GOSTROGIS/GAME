@@ -1,0 +1,122 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "hush-order-masters-batch-01",
+  "status": "immutable-before-generation",
+  "familyId": "hush_order",
+  "formsInCanonicalOrder": [
+    "hush_monk",
+    "vow_sweeper",
+    "exact_word_adept",
+    "inkless_lector",
+    "prior_cord"
+  ],
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/hush-order-plate.png"
+  ],
+  "referencePolicy": "The inspected Hush Order plate controls family chassis, closed-loop cord topology, materials, palette, finish, and lighting. It is not permission to copy the representative's exact pose or form-specific cue. Each generation receives only that plate as the visual reference.",
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical individual bestiary production concept master for later 3D design. Render exactly one complete original Hush Order subject in a polished stylized 3D dark-fantasy MMORPG production style, three-quarter view, centered with generous clearance. Flat near-black neutral opaque studio backdrop; cold raking studio light; ungraded measurement-friendly presentation; no environment, abbey, floor, ground plane, pedestal, cast floor shadow, scene, extra creature, extra full-size person, caption, UI, logo, watermark, franchise resemblance, bright magic, aura, gore, exposed entrails, generic evil monk, mummy, wearable mask over a head, ordinary skeleton, or ordinary body under cloth. Family topology is mandatory and must remain visually traceable without occlusion: the skeleton is one and only one uninterrupted thick braided CLOSED-LOOP prayer cord. The same physical cord passes from an unmistakably EMPTY stitched linen head shell down the throat as a spine, out through the left shoulder and left arm, through the left wrist, across one low front loop, through the right wrist and right arm, back through the right shoulder, and closes at one clearly visible RETURN KNOT on the upper spine. No separate rope segments, hidden waist join, branching cord, cut cord, ordinary bones, flesh, torso, or conventional limbs inside the gaps. Linen is removed from chest, abdomen, shoulders, and inner arms, leaving broad black negative-space gaps around the cord. A restrained linen skirt and small shoulder panels hang only from sparse knots and never hide the route. The hollow head shell is open widely across its lower half into pure black vacancy, with the cord passing freely through it and no face-like volume behind its closed lid seams. Preserve composed opposing-foot stance, chalk linen, worn verdigris strips, bloodless gray extremities where form-specific canon requires them, salt-stiff cord, dry wax stitching, grounded frayed textile, restrained material density, absolute quiet, and no magical glow.",
+  "assets": [
+    {
+      "id": "hush_monk",
+      "name": "Hush Monk",
+      "rank": "regular",
+      "role": "duelist",
+      "orientation": "portrait-2:3",
+      "masterFile": "hush-monk-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/hush-order/hush-monk-v1.png",
+      "canonical": {
+        "anatomy": "A tongueless monk trained to answer violence with its exact rhythm. The impossible structure becomes clearest when its hands rehearse your last attack sequence in miniature.",
+        "locomotion": "It steps only on the recovery beat of the last action it witnessed; the permission cue is its hands rehearse your last attack sequence in miniature.",
+        "sound": "Vow thread produces the opponent's last rhythm returned with one deliberately missing beat; Mirrored Combo commits on the first physical or counter sound after the gap.",
+        "purpose": "Tongueless monastics guard the abbey by turning combat rhythms into a silent liturgy; this form answers violence with its exact rhythm.",
+        "origin": "A tongueless monk trained to answer violence with its exact rhythm.",
+        "mechanic": "Mirrored Combo",
+        "cue": "Its hands rehearse your last attack sequence in miniature.",
+        "counterplay": "Use a different sequence or delay the final input to punish the mirror."
+      },
+      "masterDirection": "Create one distinct Hush Monk using the mandatory single closed-loop cord anatomy. Exactly two complete bloodless-gray hands terminate the two cord arms. Pose those hands close together at chest height, each articulating a different stage of one compact mirrored strike sequence; between and immediately attached to the two real hands, show three small nested dry-wax gesture impressions that progress in scale and orientation as non-solid movement evidence, never extra hands, a player, weapons, text, or detached figures. One bare heel is lifted in a restrained recovery step while the stitched veil and suspended linen remain perfectly still. Keep the low front cord loop, upper-spine return knot, every wrist/shoulder passage, both cord legs, both feet, and all silhouette clearance readable. No tongue, mouth, face, additional limb, glowing effect, scene, opponent, or attack impact."
+    },
+    {
+      "id": "vow_sweeper",
+      "name": "Vow Sweeper",
+      "rank": "regular",
+      "role": "controller",
+      "orientation": "portrait-2:3",
+      "masterFile": "vow-sweeper-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/hush-order/vow-sweeper-v1.png",
+      "canonical": {
+        "anatomy": "The abbey's floors were swept in ritual spirals; this monk still defends each line of dust. The impossible structure becomes clearest when the broom traces a bright spiral through crypt dust.",
+        "locomotion": "It advances only while the surrounding escape geometry is changing; the permission cue is the broom traces a bright spiral through crypt dust.",
+        "sound": "Vow thread produces three spaced warnings, a held absence, then one enclosing note; Dust Litany commits on the first blind or area sound after the gap.",
+        "purpose": "Tongueless monastics guard the abbey by turning combat rhythms into a silent liturgy; this form defends the ritual spiral lines once swept across the floors.",
+        "origin": "The abbey's floors were swept in ritual spirals; this monk still defends each line of dust.",
+        "mechanic": "Dust Litany",
+        "cue": "The broom traces a bright spiral through crypt dust.",
+        "counterplay": "Move against the spiral or leap across its narrow inner line."
+      },
+      "masterDirection": "Create one distinct Vow Sweeper using the mandatory single closed-loop cord anatomy. Exactly two real hands grip one long humble broom that remains subordinate to the cord silhouette. The broom head has just traced one complete pale crypt-dust spiral suspended tightly around the lower subject in empty air, not on a floor: the spiral is cold chalk dust catching the studio key, never magical glow. Make its direction unambiguous, leave one narrow inner line clearly crossable, and preserve a readable path against the spiral. The body advances in one composed controlled weight transfer while the closed cord route, hollow head, upper return knot, low front loop, both feet, broom tip, and every dust edge remain fully inside frame. No terrain, room, second spiral, letters, symbols, aura, extra broom, or unrelated prop."
+    },
+    {
+      "id": "exact_word_adept",
+      "name": "Exact-Word Adept",
+      "rank": "specialist",
+      "role": "support",
+      "orientation": "portrait-2:3",
+      "masterFile": "exact-word-adept-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/hush-order/exact-word-adept-v1.png",
+      "canonical": {
+        "anatomy": "She kept her tongue but speaks only one binding word in an entire lifetime. Her body can sustain that arrangement only because her stitched veil parts and every nearby monk kneels.",
+        "locomotion": "She moves by exchanging places with the nearest allied ritual position; the permission cue is her stitched veil parts and every nearby monk kneels.",
+        "sound": "Vow thread produces a call-and-response in which the answering voice comes from an ally; Reserved Word commits on the first silence or command sound after the gap.",
+        "purpose": "Tongueless monastics guard the abbey by turning combat rhythms into a silent liturgy; this form preserves one binding word for a single lifetime use.",
+        "origin": "She kept her tongue but speaks only one binding word in an entire lifetime.",
+        "mechanic": "Reserved Word",
+        "cue": "Her stitched veil parts and every nearby monk kneels.",
+        "counterplay": "Kneel before the word lands or stagger her during the single inhale."
+      },
+      "masterDirection": "Create one distinct Exact-Word Adept using the mandatory single closed-loop cord anatomy. The stitched hollow head shell parts at the lower veil to reveal exactly one preserved bloodless-gray tongue suspended alone from the throat cord inside pure black vacancy; no face, lips, teeth, skull, head volume, gore, or second tongue. Show the single held inhale through a slight tautness in the throat cord and veil, without breath glow. To communicate nearby monks kneeling while keeping one subject, attach three small flat blank linen prayer-knot effigies to the outer hem; all three fold into the same kneeling angle as subordinate ritual tokens, not living figures or duplicates. Keep the real body's two hands empty and composed, and keep the entire one-cord route, return knot, low loop, veil opening, tongue, effigies, feet, and skirt fully visible. No readable word, letter, glyph, rune, aura, kneeling full-size monk, extra person, or scene."
+    },
+    {
+      "id": "inkless_lector",
+      "name": "Inkless Lector",
+      "rank": "elite",
+      "role": "duelist",
+      "orientation": "portrait-2:3",
+      "masterFile": "inkless-lector-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/hush-order/inkless-lector-v1.png",
+      "canonical": {
+        "anatomy": "Invisible scripture covers his skin and moves to whichever limb is about to strike. The missing anatomy briefly outlines itself when raised lettering appears on the attacking limb.",
+        "locomotion": "It steps only on the recovery beat of the last action it witnessed; the permission cue is raised lettering appears on the attacking limb.",
+        "sound": "Vow thread produces the opponent's last rhythm returned with one deliberately missing beat; Living Annotation commits on the first radiance or physical sound after the gap.",
+        "purpose": "Tongueless monastics guard the abbey by turning combat rhythms into a silent liturgy; this form carries invisible scripture toward its next striking limb.",
+        "origin": "Invisible scripture covers his skin and moves to whichever limb is about to strike.",
+        "mechanic": "Living Annotation",
+        "cue": "Raised lettering appears on the attacking limb.",
+        "counterplay": "Read the limb, parry the annotated blow, then strike the blank side."
+      },
+      "masterDirection": "Create one distinct Inkless Lector using the mandatory single closed-loop cord anatomy. Pose one cord arm as the only attacking limb, extended into the next restrained blow, while the opposite side stays visibly blank and open for counterplay. Suspend one narrow bloodless-gray skin-like vellum strip along the attacking forearm without covering or replacing its cord route. On that strip, use raised dry blind-embossed typographic strokes that unmistakably read as lettering texture but form no real language, readable word, alphabet, rune, number, or symbol. A faint uninked relief trace may cross the adjacent negative-space gap to outline the missing anatomy, but nothing fills it. Keep exactly two hands, the entire closed-loop cord path, upper return knot, low loop, both feet, attacking relief, and blank side clear. No book, ink, readable text, magic light, extra arm, scribe tools, scene, or ordinary flesh body."
+    },
+    {
+      "id": "prior_cord",
+      "name": "Prior Cord",
+      "rank": "miniboss",
+      "role": "bruiser",
+      "orientation": "portrait-2:3",
+      "masterFile": "prior-cord-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/hush-order/prior-cord-v1.png",
+      "canonical": {
+        "anatomy": "The prior tied every broken vow into the cord wrapped around her body; it now moves like a second skeleton. Her body can sustain that arrangement only because one knot loosens and whispers the promise it once held.",
+        "locomotion": "She crosses ground in one committed weight transfer, then must reassemble her balance; the permission cue is one knot loosens and whispers the promise it once held.",
+        "sound": "Vow thread produces a load-bearing groan, one blunt beat, and a long settling scrape; Vow Unbound commits on the first physical or hex sound after the gap.",
+        "purpose": "Tongueless monastics guard the abbey by turning combat rhythms into a silent liturgy; this form carries every broken vow in the load-bearing cord around her body.",
+        "origin": "The prior tied every broken vow into the cord wrapped around her body; it now moves like a second skeleton.",
+        "mechanic": "Vow Unbound",
+        "cue": "One knot loosens and whispers the promise it once held.",
+        "counterplay": "Fulfill the spoken condition briefly or sever the lit knot."
+      },
+      "masterDirection": "Create one distinct Prior Cord using the mandatory single closed-loop cord anatomy. The one continuous cord is thicker and visibly load-bearing, doubled through the silhouette as a second skeletal alignment without ever branching, breaking, or becoming a second rope; it carries exactly thirteen individually countable vow knots around the full route. Exactly one of the thirteen is visibly loosened and uniquely caught by the cold raking light with a pale dry-wax collar, making it the severable whispered-condition knot; the other twelve remain tight and dark. Do not depict words, a mouth, voice glyphs, glow, or a separate cord. Hold the prior in one committed weight transfer that visibly needs recovery. Keep all thirteen knots countable, and keep the same cord traceable through hollow head, throat/spine, both shoulders, both arms/wrists, low front loop, both legs, and upper return knot. No hidden join, extra rope, staff, weapon, ordinary skeleton, extra figure, scene, or floor."
+    }
+  ]
+}

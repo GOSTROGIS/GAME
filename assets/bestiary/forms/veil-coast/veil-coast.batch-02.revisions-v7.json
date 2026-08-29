@@ -1,0 +1,17 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "veil-coast-kin-masters-batch-02-revision-v7",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast_kin",
+  "basePacketSha256": "eb01b55a4988fa15bd14d64e5fa2c925ef7232672fe35216473ad7889a4ac125",
+  "previousRevisionSha256": "9e026b6c528215a6282f34b3abe1961fc8f10ad795a470c39f32531da4fc2afc",
+  "assets": [
+    {
+      "id": "brackish_mimic",
+      "reference": "brackish-mimic-concept-master-v4.png",
+      "outputFile": "brackish-mimic-concept-master-v5.png",
+      "reason": "Independent review confirms the ribbon is elevated but finds it detached from both feet, while the skin tide lacks a visible direction opposite the ribbon.",
+      "revisionDirection": "Faithfully preserve the inspected v4 mimic identity, prop-free hands, back-skin shoreline, elevated left-extending matte ribbon, lighting and framing. Make the attachment topology explicit: from the rear outer edge of EACH webbed heel, grow one separate short flat black connector with uninterrupted visible contact; both connectors converge into the existing single broad ribbon before it extends viewer-left. Do not let the ribbon cross in front of the ankles or hide either connection. In the back skin's single shoreline display, make exactly one continuous foam tide line travel viewer-right by giving it one sharp bright leading crest at the viewer-right end and a progressively thinner fading trail toward viewer-left; no arrow or symbol. Keep every ribbon part suspended with clearance below. No second tide line, floor, prop, extra shadow, text or crop."
+    }
+  ]
+}

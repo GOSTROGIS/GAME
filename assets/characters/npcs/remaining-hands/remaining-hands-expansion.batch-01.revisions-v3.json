@@ -1,0 +1,19 @@
+{
+  "schema": "SableReachExpansionConceptPromptRevisionV1",
+  "batchId": "remaining-hands-expansion-batch-01-revision-v3",
+  "familyId": "remaining_hands",
+  "status": "immutable-before-generation",
+  "basePacketSha256": "0d7dd12a6ae060ed64519429deca9fe1c1297b0c37c27acc3db9fcfbffcbc593",
+  "policy": "Preserve all conforming identity, family, anatomy, framing, material and count features. Correct only the generator-identified canonical defect. Earlier candidate bytes remain immutable; every correction uses a new versioned filename and remains subject to two independent non-generator reviews.",
+  "promptCompilation": "For each revision, the exact built-in edit prompt is inputRole followed by two newline characters followed by revisionDirection.",
+  "revisions": [
+    {
+      "id": "nima_sorn_keeper_of_one_shadow",
+      "source": "candidates/nima-sorn-keeper-of-one-shadow-concept-master-v1-rejected.png",
+      "outputFile": "candidates/nima-sorn-keeper-of-one-shadow-concept-master-v2.png",
+      "reason": "The one child-sized pointing shadow, canopy, harness and gauges conform, but the shadow reads printed onto the cloth because no perimeter pins visibly fasten its edge to the suspended panel.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and identity anchor. Change only the fastening evidence around the one existing shadow; preserve every other conforming feature.",
+      "revisionDirection": "Faithfully preserve Nima Sorn's exact mortal identity, soot-marked face, practical road clothing, ordinary human anatomy and two hands, pose, one articulated black canopy and all spars, wearable harness, blank brass gauges, one suspended cloth panel, the exact one child-sized flat near-black pointing shadow silhouette, complete boots, near-black opaque studio backdrop, cold raking light, scale, placement and portrait framing. Change only how the existing shadow is fastened. Add EXACTLY SIX and only six tiny plain aged-brass pinheads visibly piercing six separate points on the shadow's outer edge into the cloth panel: one at the crown, one at the rear shoulder, one at the pointing wrist, one at the lower coat hem, one at the rear heel and one at the forward toe. Each pin must sit directly on the shadow boundary, not on the panel frame, and remain individually countable without becoming a symbol. Do not add internal face, clothing or body details to the flat shadow. Preserve exactly one shadow and one canopy. No second shadow, child figure, ghost, floor shadow, loose pin, wheel, beam, map, street, house, floor, text, logo, watermark, transparency or crop."
+    }
+  ]
+}

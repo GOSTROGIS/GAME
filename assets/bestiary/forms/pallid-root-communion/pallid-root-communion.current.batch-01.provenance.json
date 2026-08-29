@@ -1,0 +1,200 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-pallid-root-communion-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.communion_walker",
+      "subjectId": "communion_walker",
+      "familyId": "pallid_root_communion",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/pallid-root-communion/communion-walker-v1.png",
+      "sha256": "d58ad9bee71afc1c2b8ebe13b1b0037902d79e2d1c7a6b5ba78bed53fffc8179",
+      "bytes": 1915593,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "d58ad9bee71afc1c2b8ebe13b1b0037902d79e2d1c7a6b5ba78bed53fffc8179"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.grave_cap",
+      "subjectId": "grave_cap",
+      "familyId": "pallid_root_communion",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/pallid-root-communion/grave-cap-v2.png",
+      "sha256": "f21f9535cbc2e964a5dd11997faa3e49804f060a7013d4731cc43ec9d2000d49",
+      "bytes": 1803835,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "f21f9535cbc2e964a5dd11997faa3e49804f060a7013d4731cc43ec9d2000d49"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.nerve_gardener",
+      "subjectId": "nerve_gardener",
+      "familyId": "pallid_root_communion",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/pallid-root-communion/nerve-gardener-v3.png",
+      "sha256": "856bda22784646244b80da74650759a273884527c36522edb1e196df27f7fca2",
+      "bytes": 1140242,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "856bda22784646244b80da74650759a273884527c36522edb1e196df27f7fca2"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.orchard_below",
+      "subjectId": "orchard_below",
+      "familyId": "pallid_root_communion",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/pallid-root-communion/orchard-below-v4.png",
+      "sha256": "ed025f4cd4c4f717dd7bf9d16953562474c6b4ceffc2d9a9f56d1581a4c0b4d5",
+      "bytes": 2484824,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "ed025f4cd4c4f717dd7bf9d16953562474c6b4ceffc2d9a9f56d1581a4c0b4d5"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.pallid_sexton",
+      "subjectId": "pallid_sexton",
+      "familyId": "pallid_root_communion",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/pallid-root-communion/pallid-sexton-v3.png",
+      "sha256": "6b926c5c9dd8b11608229008204fc50b90ea540d9eae98f57ef29d734ddeb03b",
+      "bytes": 1660555,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "6b926c5c9dd8b11608229008204fc50b90ea540d9eae98f57ef29d734ddeb03b"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.root_fingerling",
+      "subjectId": "root_fingerling",
+      "familyId": "pallid_root_communion",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/pallid-root-communion/root-fingerling-v4.png",
+      "sha256": "7a8ba81d29d99c88b276b36edf2d5946aeeb4e65380e0662c691670e9a43847b",
+      "bytes": 1060968,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "7a8ba81d29d99c88b276b36edf2d5946aeeb4e65380e0662c691670e9a43847b"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

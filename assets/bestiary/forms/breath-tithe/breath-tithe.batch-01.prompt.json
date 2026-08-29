@@ -1,0 +1,111 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "breath-tithe-batch-01",
+  "status": "accepted-masters-cutouts-pending",
+  "familyId": "breath_tithe",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/breath-tithe-plate.png"
+  ],
+  "commonDirection": "Use the Breath Tithe family plate only as the authoritative family-style and material reference: soot-black hollow garments, breath-blue contained combustion, oxidized copper-red fittings, empty sleeves, bellows chests, and an inhaling silhouette. Produce an original canonical form, not a copy of the plate subject. Highly polished stylized 3D dark-fantasy MMORPG production concept render, mature restrained anatomy and material density, single full-body subject in three-quarter view, all extremities visible, centered with generous silhouette clearance. Flat near-black neutral opaque studio backdrop, no environment or ground plane. Cold raking light from one side, ungraded neutral. No extra figures, text, readable symbols, runes, real religious marks, logos, watermark, franchise resemblance, glossy plastic, cute proportions, bright saturation, exposed entrails, or disability shorthand.",
+  "assets": [
+    {
+      "id": "sleeve_crawler",
+      "rank": "regular",
+      "orientation": "landscape",
+      "masterFile": "sleeve-crawler-v1.png",
+      "canonical": {
+        "anatomy": "Two empty sleeves knot into an insect body around a copper cuff.",
+        "locomotion": "It scuttles toward the nearest visible exhalation.",
+        "sound": "Cloth inhales sharply between rapid cuff taps.",
+        "purpose": "It gathers stray breath escaping the foundry levy.",
+        "origin": "Workers tied sleeves over vents to steal warmth; the garments learned the inverse theft.",
+        "mechanic": "Visible Breath",
+        "cue": "Condensation bends toward the copper cuff.",
+        "counterplay": "Exhale behind a hot vent or chill the cuff before it reaches you."
+      }
+    },
+    {
+      "id": "exhale_rag",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "exhale-rag-v1.png",
+      "canonical": {
+        "anatomy": "A soot cloth is inflated by one continuous breath with no lungs attached.",
+        "locomotion": "It tumbles downwind but reverses whenever a voice is raised.",
+        "sound": "A held vowel leaks through stitched edges.",
+        "purpose": "It filters usable voices from furnace exhaust.",
+        "origin": "A signal caller breathed a final warning into the rag covering his mouth.",
+        "mechanic": "Raised Reversal",
+        "cue": "The cloth tightens when combat audio peaks.",
+        "counterplay": "Stay quiet as it passes or shout to reverse it into a furnace grate."
+      }
+    },
+    {
+      "id": "voice_assessor",
+      "rank": "specialist",
+      "orientation": "portrait",
+      "masterFile": "voice-assessor-v2.png",
+      "canonical": {
+        "anatomy": "Copper listening tubes replace the head and terminate inside nearby throats.",
+        "locomotion": "It steps closer for every distinct voice used in its hearing.",
+        "sound": "Collected phrases are priced in metallic whispers.",
+        "purpose": "It evaluates voices before the tithe separates them from breath.",
+        "origin": "A levy clerk taxed songs by length until singers began paying with the voices themselves.",
+        "mechanic": "Vocal Valuation",
+        "cue": "One listening tube glows for each recently used vocal source.",
+        "counterplay": "Use silence effects or create a false voice beyond its movement lane."
+      }
+    },
+    {
+      "id": "hollow_smelter",
+      "rank": "elite",
+      "orientation": "portrait",
+      "masterFile": "hollow-smelter-v2.png",
+      "canonical": {
+        "anatomy": "A furnace apron surrounds a body-shaped negative filled with blue combustion.",
+        "locomotion": "It leans through solid grates wherever draft pressure is lower.",
+        "sound": "Bellows work from inside the listener's own breathing rhythm.",
+        "purpose": "It refines stolen exhalations into motive force for empty garments.",
+        "origin": "A smelter entered a sealed furnace to find the worker whose breath still fed it.",
+        "mechanic": "Pressure Body",
+        "cue": "Blue fire flattens toward the lowest-pressure opening.",
+        "counterplay": "Close that opening and vent the opposite side to expose its negative core."
+      }
+    },
+    {
+      "id": "ninth_breath_collector",
+      "rank": "miniboss",
+      "orientation": "portrait",
+      "masterFile": "ninth-breath-collector-v1.png",
+      "canonical": {
+        "anatomy": "Nine empty masks orbit a chest bellows that contracts without a body.",
+        "locomotion": "It advances on every ninth stamina expenditure nearby.",
+        "sound": "Eight shallow breaths precede one complete absence of sound.",
+        "purpose": "It audits the tithe and repossesses breath concealed by workers.",
+        "origin": "The chief collector exempted his own household eight times; the ninth account collected him.",
+        "mechanic": "Ninth Exhalation",
+        "cue": "Masks illuminate sequentially around the bellows.",
+        "counterplay": "Pause before the ninth expenditure or spend it behind sealed cover."
+      }
+    },
+    {
+      "id": "lung_tax_office",
+      "rank": "boss",
+      "orientation": "landscape",
+      "masterFile": "lung-tax-office-v1.png",
+      "canonical": {
+        "anatomy": "A walking counting house expands and contracts around thousands of hanging empty coats.",
+        "locomotion": "It advances when the arena inhales and settles when every vent exhales.",
+        "sound": "Clerks count breaths from rooms visible only through soot windows.",
+        "purpose": "It centralizes all stolen breath and issues animated garments in return.",
+        "origin": "Cinderward converted air into royal property; the office survived the kingdom that claimed it.",
+        "mechanic": "Assessed Atmosphere",
+        "cue": "Soot windows display a rising breath total for every active creature.",
+        "counterplay": "Reverse three major vents to force the office to refund its stored atmosphere."
+      }
+    }
+  ],
+  "cutoutDirection": "After the master receives two independent passes, create a cutout by editing that exact master. Preserve canvas dimensions, pose, design, materials, lighting, scale, placement and silhouette. Remove only the background. Output a real RGBA PNG with alpha 0 outside the subject and at all four corners; do not depict checkerboard, ground, shadow, backdrop, text, logo or watermark."
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v11",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "2a07b40f065e163476551d0c8989c6d0bd80a458b329db7f11eca25aa9c71fdc",
+  "policy": "Technical topology rebuild from the last exact-count anchor. Preserve the accepted body, roots, material, lighting and one-open counterplay. Rebuild only the attached cuff arc so exact count and one-direction monotonic sequence are simultaneously measurable; no generator may approve its own output.",
+  "assets": [
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v8-rejected.png",
+      "referenceSha256": "a3155d9ec999edc83126a289a3285dee0ca00f5f82e10ed04a7c401189857b56",
+      "outputFile": "throat-orchard-concept-master-v11.png",
+      "reason": "Two local two-cuff edits failed: v9 left the final rank reversed and v10 lost one closed cuff. Return to the last exact twelve-cuff anchor and rebuild the complete cuff arc as a visually explicit eleven-step size ladder plus one open exception.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact-count identity anchor. Preserve its body, roots, open exception, materials, lighting and framing; replace only the eleven closed cuffs and their short flesh attachments with a clean countable monotonic arc.",
+      "revisionDirection": "Faithfully preserve exactly one low broad non-botanical black-nacre rooted body, every complete root, the existing single open lower-right breathless ring, near-black opaque isolation, lighting and landscape clearance. Replace ONLY the closed cuff array and its short flesh attachments. Build exactly ELEVEN and only eleven fully CLOSED laryngeal cuffs as a single evenly spaced horseshoe arc that starts immediately below-left of the open ring, travels across the lower-left edge, rises along the left edge, crosses the top, and descends the right edge to end immediately above-left of the open ring. Make the eleven closed buds an unmistakable strict size ladder: closed bud 1 is smallest; each next bud is visibly about twelve percent taller AND wider than the preceding bud; closed bud 11 is unmistakably largest. No pair may share the same size and there may be no decrease, central peak, symmetry or reversal. Use progressively longer but still short direct flesh attachments only as needed for separation. All eleven central glottal seams are visibly shut. Preserve exactly ONE additional twelfth cuff as the existing open lower-right ring: it remains shallow, empty, motionless, contrary-facing and visually unlike the closed size ladder. Total visible count must be exactly 12 = 11 closed + 1 open. Keep every cuff separately countable and inside generous black clearance. No tree, branch, stem, pod, fruit, head, severed anatomy, extra throat, second opening, mouth behind the open ring, floor, scene, notation, text, logo, watermark, transparency or crop. Opaque RGB master, landscape 1536x1024."
+    }
+  ]
+}

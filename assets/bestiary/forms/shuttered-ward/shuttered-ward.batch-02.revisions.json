@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "policy": "The frozen family packet remains unchanged. Each entry records the constrained edit direction used for the new-version candidate.",
+  "revisions": {
+    "wax-nurse-v2-edit": {
+      "reason": "Independent review found several unsupported external flame props competing with the canonical single downward internal candle.",
+      "prompt": "Use case: image-editing. Preserve the source canvas, full-body scale and placement, hollow headless caregiver apron, vacant collar, two suspended empty sleeves, boiled dirty linen, rain-dark leather and iron, cold raking light, near-black neutral opaque backdrop, and every non-prop silhouette detail. Remove every external lantern, external candle, hanging bowl, rack, backpack apparatus, bottle and dangling utility prop. The final creature contains exactly one candle total, located inside the hollow apron. That one candle hangs upside down and burns downward. Keep the apron, collar and sleeves unmistakably empty with no head, face, skull, torso, hands, arms, body or occupant. No floor, ground plane, contact shadow, room, bed, patient, extra figure, text, symbols, logo or watermark."
+    },
+    "wax-nurse-v3-edit": {
+      "reason": "The v2 cleanup isolated one downward candle but left the flame vertical rather than bending toward an unseen warm target.",
+      "prompt": "Use case: image-editing. Preserve the exact canvas, framing, scale, placement, hollow headless apron, vacant collar, two empty sleeves, all materials, lighting, neutral backdrop, and exactly one internal candle with no external props. Change only the orientation of the single downward-burning flame and its smoke. Keep the candle hanging upside down with the flame below it. Bend the entire flame into a clear 45-degree curve toward viewer-right, with its pointed tip visibly right of the candle centerline, and continue one thin attached smoke wisp in the same direction. Do not add a second flame, lantern, bowl, rack, body, hands, head, face, floor, shadow, scene, text, logo or watermark."
+    },
+    "night-physician-v3-edit": {
+      "reason": "Independent review found ordinary hands emerging from cuffs and conventional boots, contradicting cuff-first reversed anatomy and the empty coat.",
+      "prompt": "Use case: image-editing. Preserve the exact canvas, empty long physician coat, vacant collar, family materials, restrained red examination cord, cold light, neutral backdrop, scale and placement. Remove both conventional boots, legs and every suggestion of a body inside the coat; the empty lower hem hangs in black air. Both sleeves remain empty from shoulder to cuff. Outside each cuff place exactly one complete pale non-gory human arm with a softly cloth-wrapped shoulder end floating in empty air. Each external arm bends at its elbow inward toward the vacant coat and inserts hand-first into the cuff: all five fingers and the hand disappear into the cuff while forearm, elbow and upper arm remain outside. Exactly two arms total, one per cuff, with no shoulder connection and no extra hands. Keep the red examination cord as one closed subject-bound loop without floor or architecture. No head, face, mask, torso, body, conventional feet, floor, room, building, extra figure, text, symbols, logo or watermark."
+    },
+    "matron-empty-beds-v3-edit": {
+      "reason": "Independent review accepted the exact bed count but found an embodied human woman instead of an empty-linen central silhouette.",
+      "prompt": "Use case: image-editing. Preserve the exact landscape canvas, scale, placement, radial articulated-bed composition, neutral backdrop, lighting, and every bed topology. Keep exactly twelve complete countable iron bedframes: six on viewer-left and six on viewer-right, one pillow per bed, all unoccupied and separated. Change only the central matron. Replace the human woman, face, flesh, hair, hands and body with one very narrow entirely hollow empty-linen silhouette: a tall folded column of dirty ward linen and leather seams, a small hood-like head containing pure black vacancy, and two empty sleeve shapes open to black air. No skin, eyes, mouth, skull, normal body or occupant; the cloth is held upright by the twelve articulated bed-ribs. Preserve the central scale so no bed is obscured. No extra beds, occupied beds, person, patient, floor, room, ground, cast shadow, text, symbols, logo or watermark."
+    }
+  }
+}

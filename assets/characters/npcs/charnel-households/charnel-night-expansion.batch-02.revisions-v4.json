@@ -1,0 +1,38 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v4",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "1cfb50853b3990cc5d3528cd87f4da87930b2b65e45637e76126a8af61d8165f",
+  "assets": [
+    {
+      "id": "ilar_rook_unhoused_shadow",
+      "reference": "ilar-rook-unhoused-shadow-concept-master-v2.png",
+      "outputFile": "ilar-rook-unhoused-shadow-concept-master-v3.png",
+      "reason": "Independent review passes the single-sheet body, doorway fold, seal, and frame, but the head retains ordinary skull sockets, nasal cavity, mouth, and ears instead of a severe flat nacre plane.",
+      "revisionDirection": "Revise only the head of the supplied Ilar Rook source. Preserve exactly the accepted near-two-dimensional single-sheet body, its pose, two thin sheet arms/hands, two thin sheet legs/feet, one continuously attached doorway-shaped shadow fold, one blank brass sternum seal, black-nacre material, lighting, framing, and clearance. Replace the skull-like head with one extremely thin FEATURELESS black-nacre head plane whose outline remains recognizably adult and directly continuous with the sheet neck. It may have only subtle nonfigurative nacre surface grain and one cold edge highlight. It must have no eye sockets, eyes, nose, nasal hole, cheekbones, mouth, teeth, jaw cavity, ears, ordinary skull volume, face realism, mask seam, glyph, or symbol. Keep the doorway fold attached at the same head edge without making a second frame or body. Change nothing else. No scene, floor, text, logo, or watermark. Opaque RGB master, portrait 1024x1536."
+    },
+    {
+      "id": "ilyen_doorborn_outer_age",
+      "reference": "ilyen-doorborn-outer-age-concept-master-v3.png",
+      "outputFile": "ilyen-doorborn-outer-age-concept-master-v4.png",
+      "reason": "The third candidate has the correct open anatomical scale but reads as a round porthole and does not clearly expose generations of distinct hand-height scratches along an inner lintel/jamb.",
+      "revisionDirection": "Revise only the small sternum rib-door of the supplied Ilyen Doorborn source. Preserve her exact identity, dark skin, hair, composed civic posture, formal intact black coat, two empty hands, two legs/feet, lighting, framing, and the door's current small scale. Reshape the existing round opening into one unmistakably UPRIGHT DOORWAY-SHAPED living rib aperture: two short straight black-nacre rib jambs, a short flat inner lintel, and a restrained shallow rib arch, all grown through the coat/body; retain only empty near-black depth and no door leaf or hardware. The full aperture must remain no more than one fifth torso height. Make the generations of hand-height evidence clearly readable as a sparse vertical succession of separate SHORT HORIZONTAL scratch notches cut into one inner rib jamb at visibly different heights; no two join, and none resembles a letter, numeral, word, calendar, ruler, glyph, or decorative script. Restore uninterrupted coat around the small aperture. Change nothing else. No second mutation, physical door, village, room, paper, floor, text, logo, or watermark. Opaque RGB master, portrait 1024x1536."
+    },
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v3.png",
+      "outputFile": "throat-orchard-concept-master-v4.png",
+      "reason": "The third candidate reaches the exact 11-closed-plus-one-open count and non-tree anatomy, but the closed cuffs expand symmetrically toward the center rather than communicating one sequential inhale direction.",
+      "revisionDirection": "Revise only the inhale progression of the supplied Throat Orchard source. Preserve exactly one low broad rooted body, every framed anatomical root, exactly TWELVE total forms, exactly ELEVEN closed directly attached laryngeal throat cuffs in one nonoverlapping arc, exactly ONE open breathless lower-right cuff, non-botanical anatomy, landscape framing, lighting, and isolation. Rebuild the eleven closed cuffs as a strict visually monotonic left-to-right inhale sequence: the far-left closed cuff is shortest, narrowest, and least distended; each successive closed cuff across the arc is visibly a little taller, wider, and more inflated than the one before it; the far-right closed cuff immediately before the open exception is the largest and most distended. All eleven glottal folds remain fully shut. The open twelfth remains the only open form, motionless and contrary-facing, with shallow black absence and no mouth behind it. Recount 5 left + 1 center + 5 right closed cuffs, then the one open lower-right cuff = exactly 12. Do not change the body into a tree or add pods, stems, branches, heads, extra throats, floor, text, notation, logo, or watermark. Opaque RGB master, landscape 1536x1024."
+    },
+    {
+      "id": "corridor_maw",
+      "reference": "corridor-maw-concept-master-v3-rejected.png",
+      "outputFile": "corridor-maw-concept-master-v4.png",
+      "reason": "The third candidate has the correct one-frame body and organic cue material, but its second ribbon is still fused to the near outer frame instead of the distant exit frame.",
+      "revisionDirection": "Revise only the paired cue placement of the supplied Corridor Maw source. Preserve the exact one-piece vertical living doorframe body, one deep ribbed corridor, one near entrance, one distant exit, absence of limbs/extra apertures, lighting, opaque isolation, and full clearance. Keep the existing ragged matte-black entrance ribbon fused to the near viewer-left frame edge and angled up-left. Completely remove the existing lower viewer-right ribbon from the near outer frame. At the DISTANT EXIT deep inside the corridor, attach exactly one small ragged matte-black ribbon directly to the exit's viewer-right inner edge, with its torn free end visibly silhouetted across the pale exit opening and angled down-right. The small distant ribbon must physically originate on the distant exit rim, not the near corridor wall, and the black exit opening must contain no occupant or third shape. These are exactly two cues total at visibly opposite attached angles. Neither may form an arrow, triangle, chevron, emblem, letter, numeral, sign, icon, or detached object. Change nothing else. No extra marker, floor shadow, architecture scene, soldier, entrails, text, logo, or watermark. Opaque RGB master, portrait 1024x1536."
+    }
+  ]
+}

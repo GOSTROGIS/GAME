@@ -1,0 +1,24 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "veil-coast-kin-masters-batch-02-revision-v4",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast_kin",
+  "basePacketSha256": "eb01b55a4988fa15bd14d64e5fa2c925ef7232672fe35216473ad7889a4ac125",
+  "previousRevisionSha256": "c5cbd695a76e581b36b4683e32fcd926095cabaa14c2d08c62d7b77d09ec7920",
+  "assets": [
+    {
+      "id": "brackish_mimic",
+      "reference": "brackish-mimic-concept-master-v2.png",
+      "outputFile": "brackish-mimic-concept-master-v4.png",
+      "reason": "The v2 preserves clean prop-free identity and back display, but its true-position ribbon reads as a floor shadow.",
+      "revisionDirection": "Faithfully preserve the exact inspected v2 Brackish Mimic identity, family materials, back-skin shoreline and retreat pose. Remove the existing floor-like shadow completely. From the rear edges of both webbed feet, attach two short flat near-black connectors that immediately merge into exactly one broad matte-black ribbon held horizontally at ankle-to-calf height. Extend it unmistakably viewer-left while the one moving tide line on the back skin travels viewer-right. Place visible near-black backdrop clearance below every ribbon pixel. Both hands remain empty. No staff, lantern, shield, prop, ground, floor, contact shadow, extra ribbon, coast, text or scene."
+    },
+    {
+      "id": "coral_reeve",
+      "reference": "assets/bestiary/veil-coast-plate.png",
+      "outputFile": "coral-reeve-concept-master-v2.png",
+      "reason": "Independent review found the v1 charge indistinguishable from many cyan orb cages and its clockwise polyp vote unreadable.",
+      "revisionDirection": "Regenerate one integrated Coral Reeve organism from the inspected family plate. A dominant red-and-black living reef courthouse-frame grows around one small amphibious judge physically nested at center. Directly before the judge place exactly one and only one cold-cyan glowing charge. Around that charge arrange exactly eight large red living coral polyps in one clean circular ring: seven progressively open clockwise, starting as a narrow slit and ending as a wide blossom, while exactly one eighth polyp remains fully closed, pearl-gray, exposed and strikeable. The eight polyps are matte red with dark interiors and do not glow; no other orb, lantern or shell may resemble the single cyan charge. Keep the organism, judge, one charge, eight polyps and closed target fully framed. No gavel, scales, tablet, courtroom, building, extra judge, text, floor or crop."
+    }
+  ]
+}

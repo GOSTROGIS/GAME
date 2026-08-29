@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "familyId": "hush_order",
+  "batchId": "hush-order-masters-batch-02",
+  "policy": "The frozen packet remains unchanged. Dust Novice v4 restored hands and hem-bound footprints but failed owner topology preflight because the hands sit on linen sleeves beside the cord and two wrist dust rings disappeared. This revision changes only wrist threading and restores the exact ring set.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/hush-order/batch-02/prompt-packet.json",
+    "sha256": "8e15b4735f602db93ac7c2bd7dbe5c87267e2607a5f8f079367e8a2a36ae27d8"
+  },
+  "revisions": {
+    "dust-novice-v5": {
+      "source": "work/concept-art-production/hush-order/batch-02/dust-novice-concept-master-v4.png",
+      "sourceSha256": "3609f7f4e164830da5c9485ff279fa2740f0b71af36fd90fca979471d7f298f4",
+      "reason": "V4 has exactly two hands and three hem-bound footprints, but each hand emerges from a linen panel beside the prayer cord rather than being threaded at a wrist pass-through; the edit also reduced the ten joint rings to eight.",
+      "prompt": "Surgical wrist-topology correction of this exact Dust Novice. Preserve the complete hollow crown, one uninterrupted branchless prayer-cord perimeter, both complete feet, lifted heel, low bridge, exactly three footprint impressions bound to the existing viewer-left linen hem, both long linen panels, all other dust rings, pose, canvas, materials, lighting, scale, placement, silhouette and framing. Keep exactly TWO hands, but remove their current forearm-like linen attachment. Re-seat each hand directly ON the same-side prayer cord at the wrist transition: the arm cord must visibly enter a compact open-seam prayer-dust ring, pass through the bloodless-gray hand's wrist cuff, remain visible across the cuff opening, and visibly exit below the same wrist as the uninterrupted same-side outer leg cord. The hand cannot float beside the cord, terminate it, hold it, hide it, branch it or connect to a linen sleeve. Add exactly ONE restored compact open-seam dust ring around the viewer-left threaded wrist and exactly ONE around the viewer-right threaded wrist, so the final subject has exactly TEN countable joint rings total: two upper shoulder rings, two elbow rings, two wrist rings that physically encircle the threaded hand cuffs, two knee rings and two ankle rings. Do not add, remove, merge, hide or duplicate any other ring. Both empty palms face inward and remain separated in the central black gap. Keep the three hem footprints exactly unchanged. No body, face, extra hand, extra ring, separate rope, waist cord, branch, floor, ground print, bell, text, glow, scene, logo or watermark. Opaque near-black neutral studio; full clearance unchanged."
+    }
+  }
+}

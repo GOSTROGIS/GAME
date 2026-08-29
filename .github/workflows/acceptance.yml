@@ -18,14 +18,32 @@ jobs:
   pull-request-acceptance:
     runs-on: windows-latest
     timeout-minutes: 45
+    env:
+      RASTER_ART_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before || '' }}
     steps:
-      - name: Check out source without complete bridge LFS
+      - name: Check out source without automatic LFS hydration
         uses: actions/checkout@v4
         with:
           lfs: false
+          fetch-depth: 0
 
-      - name: Fetch non-bridge assets and representative bridge seeds
-        run: git lfs pull --exclude="assets/3d/runtime/bridge/**"
+      - name: Fetch repaired historical and changed concept-art LFS payloads
+        shell: pwsh
+        run: |
+          git lfs pull --include="assets/3d/runtime/bridge/**,assets/3d/seeds/slipcurve/**,tools/worldgen/generated/source/**" --exclude=""
+          if ($LASTEXITCODE -ne 0) { throw "Unable to fetch the repaired historical LFS payloads" }
+          $base = $env:RASTER_ART_BASE_SHA
+          if ([string]::IsNullOrWhiteSpace($base) -or $base -match '^0+$') { $base = 'HEAD^' }
+          $changed = git diff --name-only --diff-filter=ACMR "$base...HEAD" -- assets/characters assets/bestiary |
+            Where-Object { $_ -match '\.png$' }
+          foreach ($asset in $changed) {
+            git lfs pull --include="$asset" --exclude=""
+            if ($LASTEXITCODE -ne 0) { throw "Unable to fetch changed LFS payload: $asset" }
+          }
+          git lfs fsck
+          if ($LASTEXITCODE -ne 0) { throw "Git LFS object verification failed" }
+          git lfs fsck --pointers HEAD
+          if ($LASTEXITCODE -ne 0) { throw "Git LFS pointer verification failed" }
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4

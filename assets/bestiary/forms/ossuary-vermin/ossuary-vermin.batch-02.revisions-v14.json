@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-02",
+  "policy": "The frozen canonical packet remains authoritative. V13 establishes the accepted simplified eight-module chassis. This surgical revision changes only four large ordinary receiver void contours; all tags, counts, body topology, materials, pose and framing are immutable.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-02/prompt-packet.json",
+    "sha256": "16ffd058dbfd73609fed27836f475873696282f6eb29e4acd2dc2c9793d9d2bc"
+  },
+  "revisions": {
+    "borrowed-saint-v14": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/borrowed-saint-concept-master-v13.png",
+      "sourceSha256": "f89b78ef04e10fac8df5f98b65ea4751992273351623e36e1b43bafcd014b945",
+      "reason": "V13 passes exact eight-module/tag counts, seven folded loads, one unfolded pelvis mismatch, and three ordinary matches, but four large ordinary receiver voids do not duplicate their nearby tag contours.",
+      "prompt": "Surgical four-hole correction on this exact simplified Borrowed Saint v13. Freeze the central body, head, EXACTLY EIGHT large modules arranged four per side, all skull joints, lower-jaw braces, seven folded kneeling load paths, one unfolded chest-height pelvis-hoop module, EXACTLY EIGHT blank tags and their contours, tag rings, seven dim tags, one cold-lit broad scalloped target, pose, materials, lighting, 1024x1536 canvas, scale, placement, silhouette and black isolation. Preserve unchanged the correct upper-left oval pair, viewer-left third asymmetric-trapezoid pair, viewer-left bottom octagon pair, and the broad pelvis-tag versus narrow-slot mismatch. EDIT ONLY four existing black open receiver voids, leaving their surrounding root bone integrated and unmarked. (1) On the second module down at viewer-left, reshape the current diamond void into a tall pointed-shield void that exactly copies the adjacent pointed-shield tag, including rounded shoulders and one centered pointed bottom. (2) On the second module down at viewer-right, immediately below the pelvis module, reshape the current octagonal void into a rectangular void with exactly one deep semicircular notch cut from its viewer-right side, matching the adjacent one-side-notched tag. (3) On the third module down at viewer-right, reshape the current plain rectangular void into a tall clipped-corner/chamfered rectangle with four visibly cut corners, matching the adjacent chamfered tag. (4) On the bottom module at viewer-right, reshape the current plain rectangle into a strongly waisted hourglass void with concave left and right sides and wider top and bottom, matching the adjacent hourglass tag. Every void stays fully open to black backdrop and large enough to count. Do not alter any tag face or perimeter. No fifth edit, extra hole, plaque, icon, keyhole graphic, tag, module, limb, hand, foot, floor, shadow, text, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    }
+  }
+}

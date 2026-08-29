@@ -1,0 +1,151 @@
+import assert from 'node:assert/strict';
+
+import { BESTIARY } from '../packages/content/src/bestiary.data.js';
+import { CHARACTERS } from '../src/data/characters.js';
+import { EXPANSION_CHARACTERS, EXPANSION_CREATURES, EXPANSION_ITEMS, EXPANSION_QUESTS, NARRATIVE_TARGETS } from '../packages/content/src/narrative.data.js';
+import {
+  ART_INDEX,
+  CONCEPT_ART,
+  artFor,
+  coverage,
+  url,
+} from '../design-review/kit/hm-concept-art.js';
+import { buildRegistry, tally } from '../design-review/kit/hm-model-registry.js';
+
+const toViewId = (prefix, id) => `${prefix}.${id.replaceAll('_', '-')}`;
+
+assert.equal(ART_INDEX.schema, 'SableReachArtIndexV1');
+assert.equal(url('assets/characters/example.png'), '../assets/characters/example.png');
+assert.equal(url('https://example.test/art.png'), null);
+assert.equal(url('//example.test/art.png'), null);
+assert.equal(url('../assets/characters/example.png'), null);
+
+const firstOrigin = ART_INDEX.playableOrigins[0];
+const originArt = artFor(toViewId('origin', firstOrigin.id), 320, 2);
+assert.equal(originArt.has, true);
+assert.equal(originArt.kind, 'concept cutout');
+assert.equal(originArt.src, originArt.cutoutSrc);
+assert.ok(originArt.masterPath.startsWith('assets/'));
+assert.ok(originArt.cutoutPath.startsWith('assets/'));
+assert.equal('driveId' in originArt, false);
+
+const namedIds = CHARACTERS.map(({ id }) => toViewId('npc', id));
+const namedCoverage = coverage(namedIds);
+const indexedNamedMasters = ART_INDEX.namedCharacters.filter(({ conceptMaster }) => conceptMaster).length;
+const indexedNamedCutouts = ART_INDEX.namedCharacters.filter(({ transparentCutout }) => transparentCutout).length;
+assert.equal(namedCoverage.total, 42);
+assert.equal(namedCoverage.master, indexedNamedMasters);
+assert.equal(namedCoverage.cutout, indexedNamedCutouts);
+assert.equal(namedCoverage.unregistered, 42 - ART_INDEX.namedCharacters.length);
+
+for (const [id, row] of Object.entries(CONCEPT_ART)) {
+  assert.equal(JSON.stringify(row).includes('google'), false, `${id} contains provider behavior`);
+  for (const src of [row.masterSrc, row.cutoutSrc, row.plateSrc].filter(Boolean)) {
+    assert.ok(src.startsWith('../assets/'), `${id} resolves outside repository assets: ${src}`);
+  }
+}
+
+const registry = buildRegistry();
+const counts = tally(registry);
+const acceptedExpansionMasters = new Map([
+  ['mother_nacre_open_rib', '../assets/characters/npcs/charnel-princes/mother-nacre-open-rib-v1.png'],
+  ['prince_thirteen_throats', '../assets/characters/npcs/charnel-princes/prince-thirteen-throats-v1.png'],
+  ['wound_scribe_keth', '../assets/characters/npcs/charnel-princes/wound-scribe-keth-v1.png'],
+  ['maw_behind_mercy', '../assets/characters/npcs/charnel-princes/maw-behind-mercy-v1.png'],
+  ['door_lung_courser', '../assets/bestiary/forms/charnel-households/door-lung-courser-v1.png'],
+  ['reverse_rib_bride', '../assets/bestiary/forms/charnel-households/reverse-rib-bride-v1.png'],
+  ['arch_lumen_seraphel_orr', '../assets/characters/npcs/lucent-synod/arch-lumen-seraphel-orr-v1.png'],
+  ['canoness_vael_kindly_knife', '../assets/characters/npcs/lucent-synod/canoness-vael-kindly-knife-v2.png'],
+  ['deacon_halix_bell_of_noon', '../assets/characters/npcs/lucent-synod/deacon-halix-bell-of-noon-v2.png'],
+  ['saint_vespera_second_shadow', '../assets/characters/npcs/lucent-synod/saint-vespera-second-shadow-v3.png'],
+  ['apse_seraph', '../assets/bestiary/forms/lucent-procession/apse-seraph-v2.png'],
+  ['misericord_of_borrowed_pain', '../assets/bestiary/forms/lucent-procession/misericord-of-borrowed-pain-v1.png'],
+  ['noon_bailiff', '../assets/bestiary/forms/lucent-procession/noon-bailiff-v2.png'],
+  ['unbroken_note_engine', '../assets/bestiary/forms/lucent-procession/unbroken-note-engine-v3.png'],
+  ['reliquary_of_the_last_breath', '../assets/bestiary/forms/lucent-procession/reliquary-of-the-last-breath-v1.png'],
+  ['gold_shutter_penitent', '../assets/bestiary/forms/lucent-procession/gold-shutter-penitent-v2.png'],
+  ['enoch_last_lamplighter', '../assets/characters/npcs/remaining-hands/enoch-last-lamplighter-v1.png'],
+  ['sister_calve_unlit_hospice', '../assets/characters/npcs/remaining-hands/sister-calve-unlit-hospice-v1.png'],
+  ['tor_vannic_defector_of_dawn', '../assets/characters/npcs/remaining-hands/tor-vannic-defector-of-dawn-v1.png'],
+  ['king_ash_without_country', '../assets/characters/npcs/remaining-hands/king-ash-without-country-v1.png'],
+  ['nima_sorn_keeper_of_one_shadow', '../assets/characters/npcs/remaining-hands/nima-sorn-keeper-of-one-shadow-v1.png'],
+  ['oren_lusk_last_calendarer', '../assets/characters/npcs/remaining-hands/oren-lusk-last-calendarer-v1.png'],
+  ['ilar_rook_unhoused_shadow', '../assets/characters/npcs/charnel-households/ilar-rook-unhoused-shadow-v1.png'],
+  ['ilyen_doorborn_outer_age', '../assets/characters/npcs/charnel-households/ilyen-doorborn-outer-age-v1.png'],
+  ['throat_orchard', '../assets/bestiary/forms/charnel-households/throat-orchard-v1.png'],
+  ['jointless_advocate', '../assets/bestiary/forms/charnel-households/jointless-advocate-v1.png'],
+  ['mercy_eater', '../assets/bestiary/forms/charnel-households/mercy-eater-v1.png'],
+  ['corridor_maw', '../assets/bestiary/forms/charnel-households/corridor-maw-v1.png'],
+]);
+assert.equal(registry.bestiary.length, 178);
+assert.equal(registry.namedCast.length, 42);
+assert.equal(registry.origins.length, 8);
+assert.equal(registry.expansionCharacters.length, EXPANSION_CHARACTERS.length);
+assert.equal(registry.expansionCreatures.length, EXPANSION_CREATURES.length);
+assert.equal(registry.expansionCharacters.length, 37);
+assert.equal(registry.expansionCreatures.length, 24);
+assert.equal(counts.total, 228);
+assert.equal(counts.foundingTotal, 228);
+assert.equal(counts.grandTotal, 289);
+assert.equal(counts.expansionItems, 25);
+assert.equal(counts.expansionQuests, 25);
+assert.equal(counts.expansionItems, EXPANSION_ITEMS.length);
+assert.equal(counts.expansionQuests, EXPANSION_QUESTS.length);
+assert.equal(counts.authoredQuestTarget, NARRATIVE_TARGETS.authoredQuestTarget);
+assert.equal(registry.sculpted.length, 4);
+assert.equal(registry.queuedBestiary.length, 174);
+
+const expansionRows = [...registry.expansionCharacters, ...registry.expansionCreatures];
+for (const [contentId, masterSrc] of acceptedExpansionMasters) {
+  const row = expansionRows.find((candidate) => candidate.contentId === contentId);
+  assert.ok(row, `${contentId} is missing from the MODEL MAKER registry`);
+  assert.equal(row.masterSrc, masterSrc);
+  assert.equal(row.plate, masterSrc);
+  assert.equal(row.cutoutSrc, null);
+  assert.equal(row.staticModel, null);
+  assert.equal(row.animatedModel, null);
+  assert.equal(row.artStatus, 'accepted');
+  assert.equal(row.staticModelStatus, 'unassessed');
+  assert.equal(row.animatedModelStatus, 'unassessed');
+  assert.equal(row.tier, 'queued');
+}
+
+const bestiaryIds = new Set(registry.bestiary.map(({ contentId }) => contentId));
+assert.deepEqual(bestiaryIds, new Set(BESTIARY.map(({ id }) => id)));
+assert.equal(new Set(registry.bestiary.map(({ id }) => id)).size, 178);
+assert.equal(new Set(registry.namedCast.map(({ id }) => id)).size, 42);
+assert.equal(new Set(registry.origins.map(({ id }) => id)).size, 8);
+assert.equal(new Set(registry.expansionCharacters.map(({ id }) => id)).size, EXPANSION_CHARACTERS.length);
+
+for (const row of registry.expansionCharacters) {
+  assert.ok(row.contradiction);
+  assert.ok(row.visualBrief);
+  assert.ok(['awaiting-art', 'queued', 'static-model', 'animated-model'].includes(row.tier));
+  assert.equal(/^https?:/i.test(row.plate || ''), false);
+  assert.ok(Object.hasOwn(row, 'staticModel'));
+  assert.ok(Object.hasOwn(row, 'animatedModel'));
+}
+
+for (const row of registry.expansionCreatures) {
+  assert.ok(row.mechanic?.cue);
+  assert.ok(row.mechanic?.counterplay);
+  assert.ok(row.narrativeUse);
+  assert.ok(row.visualBrief);
+  assert.ok(['awaiting-art', 'queued', 'static-model', 'animated-model'].includes(row.tier));
+  assert.equal(/^https?:/i.test(row.plate || ''), false);
+}
+
+const bestiaryTiers = new Set(['sculpted', 'awaiting-art', 'queued', 'refused', 'unassessed']);
+for (const row of registry.bestiary) {
+  assert.ok(bestiaryTiers.has(row.tier), `${row.id} has unexpected tier ${row.tier}`);
+  assert.ok(row.familyId);
+  assert.ok(row.rank);
+  assert.equal(/^https?:/i.test(row.plate || ''), false);
+}
+
+assert.equal(
+  counts.sculpted + counts.awaitingArt + counts.queued + counts.refused + counts.unassessed,
+  178,
+);
+
+console.log(JSON.stringify({ valid: true, counts, indexedRows: Object.keys(CONCEPT_ART).length }, null, 2));

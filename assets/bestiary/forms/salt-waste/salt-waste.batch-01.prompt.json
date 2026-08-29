@@ -1,0 +1,135 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "salt-waste-pilgrims-batch-01",
+  "status": "immutable-before-generation",
+  "familyId": "salt_waste",
+  "formsInCanonicalOrder": [
+    "salt_veil_strider",
+    "mirror_beetle",
+    "sealed_mirror_bearer",
+    "brine_oracle",
+    "caravan_of_one"
+  ],
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/salt-waste-plate.png"
+  ],
+  "plateInspection": {
+    "status": "inspected-full-resolution-before-generation",
+    "sha256": "e5eb0eb20ad72f3b66238a07a09f6ca24be133de82a950259816517c988b203e",
+    "dimensions": { "width": 1024, "height": 1536 },
+    "bytes": 596375,
+    "observedVisualLanguage": "Near-black neutral studio presentation; mature wind-bent layered robe silhouette; pale salt crust and crystalline erosion; oval mirror-blue face surfaces; restrained sunless-gold frames, chain, hinges and seals; cold side light; no environment. These observations constrain family style only."
+  },
+  "referencePolicy": "The inspected Salt-Waste Pilgrims plate controls family palette, materials, finish, robe construction, mirror treatment, silhouette language, and lighting only. It is not permission to copy the representative's carried mirror, lock, exact pose, or complete anatomy unless the form requires them. Each master generation receives only that local plate as its visual reference.",
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical individual bestiary production concept master for later 3D design. Create exactly one complete original Salt-Waste Pilgrims subject in a polished stylized 3D dark-fantasy MMORPG production style, three-quarter view, centered with generous clearance. Family identity is mirror salt: salt-white crust and powder, mirror-blue reflective surfaces, restrained sunless-gold framing and hardware, mature wind-bent robe or burrower construction where canon requires it. Every load-bearing element and form-specific mechanic cue must remain mechanically plausible and measurable. Flat near-black neutral opaque studio backdrop; cold raking light from one side; ungraded neutral presentation. No environment, salt flat, horizon scene, floor, ground plane, pedestal, contact or cast floor shadow, extra solid figure or creature, narrative vignette, caption, UI, readable writing, ordinary map, compass graphic, route diagram, runes, real religious marks, logo, watermark, franchise resemblance, real-world disease taxonomy, disability shorthand, gore, exposed entrails, bright magic, aura, glossy plastic, cute proportions, baked checkerboard, transparency, or crop. Canonical reflected evidence, shadow evidence, and action previews must stay flat, subject-bound, subordinate, and visibly non-solid.",
+  "assets": [
+    {
+      "id": "salt_veil_strider",
+      "name": "Salt-Veil Strider",
+      "rank": "regular",
+      "role": "bruiser",
+      "heightMeters": 1.65,
+      "orientation": "portrait-2:3",
+      "masterFile": "salt-veil-strider-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/salt-waste/salt-veil-strider-v1.png",
+      "canonical": {
+        "anatomy": "A pilgrim crusted to its robes after walking through a storm that scoured away direction. The missing anatomy briefly outlines itself when its robe spreads into a perfectly level line.",
+        "locomotion": "It crosses ground in one committed weight transfer, then must reassemble its balance; the permission cue is its robe spreads into a perfectly level line.",
+        "sound": "mirror salt produces a load-bearing groan, one blunt beat, and a long settling scrape; White Horizon commits on the first frost/blind sound after the gap.",
+        "purpose": "A future frontier hook: pilgrims cross the eastern salt waste carrying sealed mirrors toward the Reach. This form serves the niche expressed by a pilgrim crusted to its robes after walking through a storm that scoured away direction.",
+        "origin": "A pilgrim crusted to its robes after walking through a storm that scoured away direction.",
+        "mechanic": "White Horizon",
+        "cue": "Its robe spreads into a perfectly level line.",
+        "counterplay": "Move close enough that the horizon passes behind you."
+      },
+      "masterDirection": "Show one mature wind-bent pilgrim almost entirely fused into layered salt-crusted robes, with one sealed oval mirror-blue face and no visible ordinary face or flesh. The robe shell is hollow through the central torso and lower limbs: only a thin salt-white outline of the missing anatomy remains inside the black gaps. At the poised end of one committed weight transfer, the opposing outer robe edges pull outward into exactly one perfectly straight, perfectly level horizontal salt-white line crossing behind the central body from left edge to right edge of the subject silhouette. The line is physically made from the spread robe hem, not a horizon, beam, floor, landscape, or aura; the central body visibly passes in front so the counterplay can move close enough for the line to pass behind. Preserve exactly two complete braced feet, the single level line, full mirror face, hollow robe gaps, and complete framing. No weapon, second line, terrain, skyline, extra pilgrim, text, or readable mark."
+    },
+    {
+      "id": "mirror_beetle",
+      "name": "Mirror Beetle",
+      "rank": "regular",
+      "role": "skirmisher",
+      "heightMeters": 1.65,
+      "orientation": "landscape-3:2",
+      "masterFile": "mirror-beetle-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/salt-waste/mirror-beetle-v1.png",
+      "canonical": {
+        "anatomy": "A salt burrower that carries a mirrored shell reflecting somewhere several miles east. Its body can sustain that arrangement only because the shell reflection rushes toward the viewer before the beetle moves.",
+        "locomotion": "It changes lanes after a false retreat and never repeats the same return angle; the permission cue is the shell reflection rushes toward the viewer before the beetle moves.",
+        "sound": "mirror salt produces two retreating clicks answered by a third sound from the return angle; Elsewhere Dive commits on the first movement/strike sound after the gap.",
+        "purpose": "A future frontier hook: pilgrims cross the eastern salt waste carrying sealed mirrors toward the Reach. This form serves the niche expressed by a salt burrower that carries a mirrored shell reflecting somewhere several miles east.",
+        "origin": "A salt burrower that carries a mirrored shell reflecting somewhere several miles east.",
+        "mechanic": "Elsewhere Dive",
+        "cue": "The shell reflection rushes toward the viewer before the beetle moves.",
+        "counterplay": "Track the reflected terrain to predict its emergence direction."
+      },
+      "masterDirection": "Show one low mature salt-burrowing beetle form in a complete lateral three-quarter crawl, with exactly six complete jointed mirror-salt legs and a single large sealed mirror-blue shell framed in restrained sunless gold. Inside that shell only, show one flat optical reflection of the same beetle silhouette rushing sharply toward the viewer before the solid body moves; it is one reflection, never a second creature or body. Contain a few sparse abstract salt-stratum shapes entirely inside the shell reflection so their directional convergence can be tracked to predict emergence, without forming a real landscape or readable map. Pose the solid beetle in the false-retreat transition with one returning lane angle carried by the legs. Keep all six legs, the complete shell, the rushing flat reflection, and the contained reflected strata fully visible. No humanoid, extra beetle, ordinary scenery, ground trail, burrow hole, bright glare, text, or external mirror panel."
+    },
+    {
+      "id": "sealed_mirror_bearer",
+      "name": "Sealed Mirror-Bearer",
+      "rank": "specialist",
+      "role": "artillery",
+      "heightMeters": 1.9,
+      "orientation": "portrait-2:3",
+      "masterFile": "sealed-mirror-bearer-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/salt-waste/sealed-mirror-bearer-v1.png",
+      "canonical": {
+        "anatomy": "The bearer swore never to see what travels behind the mirror strapped to its face. No joint explains the motion; instead one wax corner seal slowly lifts.",
+        "locomotion": "It relocates only while its firing anatomy is occluded or recovering; the permission cue is one wax corner seal slowly lifts.",
+        "sound": "mirror salt produces a narrowing whistle that stops exactly once before release; Unseal a Glimpse commits on the first radiance/curse sound after the gap.",
+        "purpose": "A future frontier hook: pilgrims cross the eastern salt waste carrying sealed mirrors toward the Reach. This form serves the niche expressed by the bearer swore never to see what travels behind the mirror strapped to its face.",
+        "origin": "The bearer swore never to see what travels behind the mirror strapped to its face.",
+        "mechanic": "Unseal a Glimpse",
+        "cue": "One wax corner seal slowly lifts.",
+        "counterplay": "Re-seal it with a strike or face away before the reflected thing looks out."
+      },
+      "masterDirection": "Show one mature narrow wind-bent bearer whose head and face are completely replaced by one large mirror-blue plate strapped directly to the front of the hood with taut weathered bands and sunless-gold corner hardware. The mirror has exactly four plain wax corner seals, one at each corner. Exactly one seal at the viewer-upper outer corner is slowly lifting as a single hinged wax flap and exposes one thin near-black gap behind the mirror; the other three seals remain fully flat, intact, and closed. Nothing behind the mirror is depicted as a creature, eye, face, limb, or scene. Pose the two empty hands ready to strike the lifted seal shut or shield the plate, while the firing anatomy remains otherwise occluded within the hollow robe. Keep all four seals countable and the unique lifted seal directly strikeable. No carried second mirror, exposed face, readable inscription, beam, reflected room, extra limb, weapon, terrain, or aura."
+    },
+    {
+      "id": "brine_oracle",
+      "name": "Brine Oracle",
+      "rank": "elite",
+      "role": "controller",
+      "heightMeters": 2.15,
+      "orientation": "portrait-2:3",
+      "masterFile": "brine-oracle-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/salt-waste/brine-oracle-v1.png",
+      "canonical": {
+        "anatomy": "She reads futures in salt crystals grown from tears willingly donated by travelers. The missing anatomy briefly outlines itself when ghosts of your next three possible actions appear in salt.",
+        "locomotion": "It advances only while the surrounding escape geometry is changing; the permission cue is ghosts of your next three possible actions appear in salt.",
+        "sound": "mirror salt produces three spaced warnings, a held absence, then one enclosing note; Crystallize Choice commits on the first frost/root sound after the gap.",
+        "purpose": "A future frontier hook: pilgrims cross the eastern salt waste carrying sealed mirrors toward the Reach. This form serves the niche expressed by she reads futures in salt crystals grown from tears willingly donated by travelers.",
+        "origin": "She reads futures in salt crystals grown from tears willingly donated by travelers.",
+        "mechanic": "Crystallize Choice",
+        "cue": "Ghosts of your next three possible actions appear in salt.",
+        "counterplay": "Choose no previewed action; wait or use an item not shown."
+      },
+      "masterDirection": "Show one tall mature wind-bent oracle with an eyeless sealed mirror-blue face and a hollow salt-crystal torso threaded by clear brine channels descending from both face edges. Around that one body, display EXACTLY THREE separate flat salt-crystal action ghosts, each an incomplete human-scale outline made only from pale mineral facets: one poised in a forward step, one in a guarded turn, and one in a reaching action. They are non-solid predictive evidence attached to three distinct brine-crystal filaments from the oracle, not extra people, clones, spirits, or companions. Leave a fourth clearly empty interval beside the three previews to communicate waiting or choosing something unshown. The oracle advances only into the changing geometry created by the three outlines. Keep exactly three ghosts separated and countable, the empty option readable, and the central oracle dominant. No tearful human face, weapon, named item, ground, arena, writing, cards, crystal ball, bright magic, or aura."
+    },
+    {
+      "id": "caravan_of_one",
+      "name": "The Caravan of One",
+      "rank": "miniboss",
+      "role": "juggernaut",
+      "heightMeters": 2.56,
+      "orientation": "portrait-2:3",
+      "masterFile": "caravan-of-one-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/salt-waste/caravan-of-one-v1.png",
+      "canonical": {
+        "anatomy": "A single bent pilgrim carries the luggage, bones, and shadows of an entire vanished caravan. The missing anatomy briefly outlines itself when different packs begin knocking from the inside.",
+        "locomotion": "It cannot turn during a committed advance and brakes by striking the terrain; the permission cue is different packs begin knocking from the inside.",
+        "sound": "mirror salt produces slow impacts whose interval shortens without their volume changing; Unpack the Lost commits on the first summon/strike sound after the gap.",
+        "purpose": "A future frontier hook: pilgrims cross the eastern salt waste carrying sealed mirrors toward the Reach. This form serves the niche expressed by a single bent pilgrim carries the luggage, bones, and shadows of an entire vanished caravan.",
+        "origin": "A single bent pilgrim carries the luggage, bones, and shadows of an entire vanished caravan.",
+        "mechanic": "Unpack the Lost",
+        "cue": "Different packs begin knocking from the inside.",
+        "counterplay": "Cut only packs casting no human shadow; the others release hostile memories."
+      },
+      "masterDirection": "Show exactly one enormous bent wind-bent pilgrim advancing under the complete luggage, bound bone spars, and flat memory shadows of a vanished caravan. Build one continuous load-bearing pack frame across the back and shoulders, carrying several individually separated salt-crusted travel packs of visibly different shapes. Every pack shows one small taut outward knock-bulge or concentric impact dent from inside. At least two packs must be uniquely and unmistakably shadowless, with clean black backdrop immediately behind them as cut targets; every other pack carries one attached flat rain-black human-shaped memory shadow, clearly optical evidence and never a solid person. Bind sparse clean bones into the pack frame as structural spars without skulls, flesh, or gore. Keep the single bent pilgrim, both feet, every pack, all shadow attachments, and shadowless cut targets visible. No actual caravan, cart, animal, extra traveler, released memory creature, floor, terrain, manifest text, or scene."
+    }
+  ],
+  "cutoutDirection": "Cutouts are outside this assignment. After a master later receives two independent non-generator passes, edit only that exact accepted master to remove the studio background while preserving canvas dimensions, pose, topology, design, materials, lighting, scale, placement, silhouette, exact cues and RGB identity. Output genuine RGBA; no checkerboard, matte, halo, post-processing, floor, text, logo, or watermark."
+}

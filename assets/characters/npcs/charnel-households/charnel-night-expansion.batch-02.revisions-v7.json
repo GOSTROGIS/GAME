@@ -1,0 +1,29 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v7",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "124614dd10ae3c3b16299e8d824baac9eea11f7422a6c44164d7503c43f1d2eb",
+  "policy": "Preserve accepted identity, count, anatomy, materials and framing. Correct only the remaining locally identified defects; all prior bytes remain immutable.",
+  "assets": [
+    {
+      "id": "ilyen_doorborn_outer_age",
+      "reference": "ilyen-doorborn-outer-age-concept-master-v6-rejected.png",
+      "referenceSha256": "70c5515f1b249b5b62772a7505cf397f6d95ad1cfb82434893896f1f0447ff63",
+      "outputFile": "ilyen-doorborn-outer-age-concept-master-v7.png",
+      "reason": "The sixth candidate preserves the rectangular opening and Ilyen identity but still distributes many small repeated protrusions around both jambs, so exactly two hinges and five discrete evidence marks cannot be counted.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Simplify only the tiny sternum-door frame markings; preserve the person, coat, pose, opening scale and framing pixel-for-pixel as closely as possible.",
+      "revisionDirection": "Faithfully preserve the exact Ilyen identity, dark skin, hair, expression, composed civic stance, intact formal black coat, two empty hands, two complete feet, lighting, placement, and one tiny upright rectangular open sternum rib-door no more than one fifth torso height. Make the frame completely SMOOTH and unsegmented: one plain flat lintel, one plain viewer-left jamb, one plain viewer-right jamb and one plain sill, with no repeated blocks, ribs, teeth, stitches, studs, beading or decorative marks anywhere. Add exactly TWO and only two clearly larger oval living hinge pads on the OUTER viewer-right jamb, one near the upper third and one near the lower third. Add exactly FIVE and only five short pale horizontal scratch cuts on the INNER viewer-left jamb, spaced irregularly at five visibly different heights. The two hinge pads are rounded organic anatomy; the five scratches are thin cuts, so the two groups cannot be confused. No mark appears on lintel, sill or any other surface. Keep near-black empty depth inside; no door leaf, knob, handle, lock, room, second mutation, floor, text, logo, watermark, transparency or crop. Opaque RGB master, portrait 1024x1536."
+    },
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v6-rejected.png",
+      "referenceSha256": "365d70846f243ee97eb403efd464ae57fd92c8c6cdc382e502200ccdad824fa1",
+      "outputFile": "throat-orchard-concept-master-v7.png",
+      "reason": "The sixth candidate establishes the intended horseshoe and exact one-open exception, but the final closed cuff immediately above the open exception is smaller than the preceding top-right cuff, leaving one late size reversal.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only the last two closed cuffs before the open exception; preserve the body, roots, all other cuffs, exact total count, lighting and landscape framing.",
+      "revisionDirection": "Faithfully preserve exactly one low broad rooted anatomical body, every root, exactly TWELVE total attached laryngeal cuffs, exactly ELEVEN closed and exactly ONE open lower-right exception, the current horseshoe placement, black-nacre material, near-black isolation and full landscape clearance. Do not add, remove, merge or duplicate any cuff. Keep the tiny closed cuff immediately below the open exception as sequence step 1 and keep the accepted progressive increase through the upper arc. Correct only the final two closed cuffs on the viewer-right descent: make the penultimate top-right closed cuff slightly smaller than it is now, and make the final closed cuff directly ABOVE and nearest the open exception unmistakably the tallest, widest and most distended of all eleven closed cuffs. Thus the final two steps continue increasing rather than shrinking. Both remain fully CLOSED with visible shut glottal seams. The single lower-right open cuff remains the only open form, shallow, empty and contrary-facing. No other change, no extra throat, tree, pod, stem, head, mouth behind the opening, floor, scene, notation, text, logo, watermark, transparency or crop. Opaque RGB master, landscape 1536x1024."
+    }
+  ]
+}

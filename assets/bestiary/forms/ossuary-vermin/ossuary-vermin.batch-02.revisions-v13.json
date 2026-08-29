@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-02",
+  "policy": "The frozen canonical packet remains authoritative. Surgical lineage v1-v12 is retained privately, but dense silhouette edits repeatedly failed measurable tag/socket topology. V13 is a new simplified master composition prioritizing exact eight-module counts, large modelable tag/socket pairs, seven kneeling load paths and one contradictory pelvis mismatch.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-02/prompt-packet.json",
+    "sha256": "16ffd058dbfd73609fed27836f475873696282f6eb29e4acd2dc2c9793d9d2bc"
+  },
+  "revisions": {
+    "borrowed-saint-v13": {
+      "sourceMode": "from-scratch",
+      "reason": "V12 preserves exact counts but seven receiver openings remain generic rounded holes. A simpler spacious chassis is required so every unique tag profile and corresponding physical notch can be audited at full-body scale.",
+      "prompt": "Create a new simplified canonical production concept master of THE BORROWED SAINT, one complete original Ossuary Vermin boss, on a 1024x1536 portrait canvas. Polished stylized 3D dark-fantasy MMORPG concept, three-quarter view, full body centered with generous black clearance, flat near-black neutral opaque studio backdrop, cold raking side light, ungraded measurement-friendly finish. Family materials: porous age-darkened borrowed bone, cracked tooth ivory, dusty mold-green ligament lashings, crypt black, dry fibrous brown, sparse matte chitin. It is an intelligent communal relic organism, not an ordinary skeleton and not a religious icon.
+
+Build one simple tall central spine-and-rib lattice with EXACTLY EIGHT large separately countable borrowed limb modules arranged spaciously as four on viewer-left and four on viewer-right. No extra limb module. Each module is one articulated chain of incompatible skull joint, pelvis/rib/finger-bone struts and lower-jaw brace, with no conventional human hand or foot. Seven modules visibly fold downward and inward into one shared kneeling load path: their joints are bent, their lower-jaw terminal braces point inward/down, and they visibly carry the tower's weight without touching a floor. Exactly one chest-height module remains unfolded and extends laterally; it bears one oversized broad pelvis hoop as a structural relic.
+
+Give each module EXACTLY ONE oversized attached blank ivory relic tag, EXACTLY EIGHT tags total. Place each tag immediately beside its own module root so its receiver pairing is unambiguous. Every tag face is completely blank. Give the eight tags eight clearly different large outer contours: oval, pointed shield, asymmetric trapezoid, octagon, one-side-notched rectangle, chamfered rectangle, waisted hourglass, and broad scalloped pelvis profile. Beside each of the seven folded modules, cut one large OPEN NEGATIVE-SPACE NOTCH directly through a thick bone root collar; black backdrop is visible through it. Each of those seven collar notches exactly duplicates the nearby tag's entire outer contour at about half the tag size: oval-to-oval, shield-to-shield, trapezoid-to-trapezoid, octagon-to-octagon, side-notch-to-side-notch, chamfered rectangle-to-chamfered rectangle, hourglass-to-hourglass. The collar itself is the bone rim: no plaque, framed sign, internal mark, keyhole or icon.
+
+The one unfolded chest-height arm is the sole contradiction. Its oversized broad pelvis-hoop tag has the broad scalloped profile and restrained cold ivory light, but its direct bone collar contains only one narrow straight vertical slot, visibly too narrow and differently shaped to accept the tag. Keep this mismatched pelvis relic uniquely exposed, structurally load-bearing and directly breakable. The other seven tags are dim soot-stained warm ivory. Exact final audit: 1 body, 8 modules, 8 blank tags, 7 folded/kneeling modules, 7 direct matching contour notches, 1 unfolded broad pelvis mismatch against 1 narrow slot, no hands, no feet.
+
+Keep head, all modules, every tag and notch, and the complete silhouette inside frame. No altar, halo, congregation, worshipper, doctrine symbol, real religious mark, readable label, letter, numeral, rune, icon, heraldry, floor, ground plane, pedestal, contact shadow, environment, abbey, crypt room, scene, extra figure, extra creature, gore, bright magic, aura, text, logo, watermark, baked checkerboard, transparency or crop.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    }
+  }
+}

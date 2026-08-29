@@ -1,0 +1,328 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-reed-coven-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.bog_charm_tender",
+      "subjectId": "bog_charm_tender",
+      "familyId": "reed_coven",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/reed-coven/bog-charm-tender-v3.png",
+      "sha256": "27f9eaa9d18deca14cdc9dd95f09fc84b2261c68ea989b3f1af06fd0b37dc333",
+      "bytes": 1294182,
+      "dimensions": {
+        "width": 1023,
+        "height": 1537
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "27f9eaa9d18deca14cdc9dd95f09fc84b2261c68ea989b3f1af06fd0b37dc333"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.charm_mite",
+      "subjectId": "charm_mite",
+      "familyId": "reed_coven",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/reed-coven/charm-mite-v2.png",
+      "sha256": "0f966154efa6e7489eb2463519cdcdfe9b22746ea6be569756d4181ab45f8ba1",
+      "bytes": 1966677,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "0f966154efa6e7489eb2463519cdcdfe9b22746ea6be569756d4181ab45f8ba1"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.fog_loaner",
+      "subjectId": "fog_loaner",
+      "familyId": "reed_coven",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/reed-coven/fog-loaner-v1.png",
+      "sha256": "6d1f4af4858a708c64a3fbde668becd7e2aba6517874e4e5ae06a344d6526b9a",
+      "bytes": 1522828,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "6d1f4af4858a708c64a3fbde668becd7e2aba6517874e4e5ae06a344d6526b9a"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.knot_leg_magus",
+      "subjectId": "knot_leg_magus",
+      "familyId": "reed_coven",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/reed-coven/knot-leg-magus-v1.png",
+      "sha256": "4a1e3d61330181abff8b0dd6be2a130adf557619470472f58d3a8c3517cc88ff",
+      "bytes": 1739373,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "4a1e3d61330181abff8b0dd6be2a130adf557619470472f58d3a8c3517cc88ff"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.marshlight_midwife",
+      "subjectId": "marshlight_midwife",
+      "familyId": "reed_coven",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/reed-coven/marshlight-midwife-v1.png",
+      "sha256": "dd06531c73cc2dd0e5b2add9665ac24d51666a9cce4a64b036eaca1d08cde2d1",
+      "bytes": 2176267,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "dd06531c73cc2dd0e5b2add9665ac24d51666a9cce4a64b036eaca1d08cde2d1"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.mother_of_reeds",
+      "subjectId": "mother_of_reeds",
+      "familyId": "reed_coven",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/reed-coven/mother-of-reeds-v3.png",
+      "sha256": "f35e565f491007c52b3f4026a873f50873d9346c7de0f74001d2c2bf6ff8bfbc",
+      "bytes": 1950324,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "f35e565f491007c52b3f4026a873f50873d9346c7de0f74001d2c2bf6ff8bfbc"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.pale_salt_diviner",
+      "subjectId": "pale_salt_diviner",
+      "familyId": "reed_coven",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/reed-coven/pale-salt-diviner-v2.png",
+      "sha256": "fedd18ab106c38ffeda5b8dc88263903e96a860e2db3c0c729059e161bf54f31",
+      "bytes": 2250116,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "fedd18ab106c38ffeda5b8dc88263903e96a860e2db3c0c729059e161bf54f31"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.reed_witch",
+      "subjectId": "reed_witch",
+      "familyId": "reed_coven",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/reed-coven/reed-witch-v1.png",
+      "sha256": "98671719b49ee868f9ee8d5410fb9986a812d7ddb10d7544cf2f638472f637d1",
+      "bytes": 1975417,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "98671719b49ee868f9ee8d5410fb9986a812d7ddb10d7544cf2f638472f637d1"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.veksa_nine_masks",
+      "subjectId": "veksa_nine_masks",
+      "familyId": "reed_coven",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/reed-coven/veksa-nine-masks-v2.png",
+      "sha256": "6c9791b7efef9934ef08bee0c84f48874fe19c99f932099c5a2f9ec378f82696",
+      "bytes": 2084959,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "6c9791b7efef9934ef08bee0c84f48874fe19c99f932099c5a2f9ec378f82696"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.wicker_child",
+      "subjectId": "wicker_child",
+      "familyId": "reed_coven",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/reed-coven/wicker-child-v1.png",
+      "sha256": "a82ab8d3cbbc3ce32c431fe1a6fd19c390d88625b222845bc033fd8e26b2dc0f",
+      "bytes": 1951087,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a82ab8d3cbbc3ce32c431fe1a6fd19c390d88625b222845bc033fd8e26b2dc0f"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

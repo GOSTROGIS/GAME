@@ -1,6 +1,6 @@
 # Bell-Wardens Named NPCs — Batch 01 Prompts
 
-Generated on 2026-08-26 with the OpenAI built-in image-generation tool. Existing Sable Reach art was used only to define rendering quality, mature proportions, restrained material language, faction palette, and near-black presentation. Existing identities, faces, poses, garments, tools, and silhouettes were explicitly excluded.
+Generated on 2026-08-26 with a built-in image-generation tool. Existing Sable Reach art was used only to define rendering quality, mature proportions, restrained material language, faction palette, and near-black presentation. Existing identities, faces, poses, garments, tools, and silhouettes were explicitly excluded.
 
 ## Torren Vale
 

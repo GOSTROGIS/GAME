@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-02",
+  "policy": "The frozen packet remains unchanged. These are constrained corrections from independent full-resolution review. Preserve every accepted count, anatomical relationship, pose, material outside the named edit, lighting, silhouette and isolated framing.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-02/prompt-packet.json",
+    "sha256": "16ffd058dbfd73609fed27836f475873696282f6eb29e4acd2dc2c9793d9d2bc"
+  },
+  "revisions": {
+    "borrowed-saint-v7": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/borrowed-saint-concept-master-v6.png",
+      "sourceSha256": "dce349cd593799d4788a4bc0986d8febb01ce350375b1fc7c731feec57f88e21",
+      "reason": "V6 preserves the accepted eight-module topology and eight differentiated tags, but its tiny receiver marks still do not visibly duplicate each corresponding tag perimeter. Seven correct fits versus one impossible fit remain ambiguous at model-reference scale.",
+      "prompt": "Surgical receiver-profile correction on this exact Borrowed Saint v6. Freeze the complete bone lattice, EXACTLY EIGHT skull-jointed modules, seven folded kneeling load paths, one unfolded central cold-lit pelvis-hoop target, no conventional hands or feet, both lower-jaw crescent terminals, EXACTLY EIGHT blank ivory tags with their current distinct profiles, 1024x1536 canvas, pose, materials, lighting, scale, placement, silhouette and black framing. EDIT ONLY the eight tiny receiver marks immediately upstream of the eight tag rings. Make each receiver large enough to read clearly, about one quarter the height of its tag, as a recessed near-black keyhole with a pale bone rim. Position-specific requirements: upper-left oval tag gets an oval receiver; middle-left shield tag gets a shield receiver; middle-right trapezoid tag gets a trapezoid receiver; lower-left octagonal tag gets an octagonal receiver; lower-right side-notched rectangle gets the same side-notched rectangle receiver; bottom-left clipped rectangle gets a clipped-rectangle receiver; bottom-right waisted hourglass tag gets a waisted-hourglass receiver. These seven pairs must be unmistakable miniature silhouette matches. The central broad scalloped pelvis tag alone keeps a narrow straight vertical slot receiver, visibly too narrow and differently keyed to accept it. Exactly eight receivers total, one per tag: seven matches and one central mismatch. Do not change any tag, ring, module, skull, limb, brace, terminal or target. All faces and receivers remain blank, nonalphabetic and nonsymbolic. No text, digits, pictograms, runes, icons, floor, ground plane, shadow, aura, scene, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    },
+    "tooth-rook-v3": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/tooth-rook-concept-master-v2.png",
+      "sourceSha256": "a432873fbd85452507717503691663765c897ad2cde0b84a39a72a61592f2643",
+      "reason": "V2 passes its all-tooth avian body, two wings, two molar feet and isolated framing, but the breast reads as one broad conventional gaping mouth portal rather than two shallow opposed U-shaped tooth rows around a thin gap.",
+      "prompt": "Surgical breast correction on this exact Tooth Rook source. Freeze the all-tooth corvid body, head, beak, EXACTLY TWO complete wings, EXACTLY TWO molar feet, pose, 1024x1536 canvas, lighting, materials, scale, placement, silhouette, margins and black isolation. EDIT ONLY the broad gaping breast cavity. Close that conventional mouth-like portal with the same densely packed tooth mass as the surrounding chest. On the now-solid breast surface, arrange EXACTLY TWO shallow opposed U-shaped rows of small teeth, one upright U and one inverted U, facing one another around one THIN horizontal near-black slit. The two rows are breast anatomy, not lips or jaws; no deep cavity, throat, gums, mouth corners, tongue or face. Keep the slit narrow and subordinate so the chest cannot read as an open mouth. Do not add a third row, a third foot, an extra wing, ordinary feathers, floor, ground, shadow, scene, text, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    },
+    "marrow-factor-v2": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/marrow-factor-concept-master-v1.png",
+      "sourceSha256": "b016ee800f076113690aff064e1fa130bae247eea78a2a7424abae7d800727d4",
+      "reason": "V1 passes exactly two skulls, five rods, fifteen beads, five tethered fragments, left weighting and right emptiness, but all fifteen beads look like dry cracked bone spheres instead of living wet marrow.",
+      "prompt": "Surgical material correction on this exact Marrow Factor source. Freeze EXACTLY TWO skulls, EXACTLY FIVE horizontal abacus rods, EXACTLY FIFTEEN total beads arranged three per rod, EXACTLY FIVE separately tethered knuckle fragments on the left, the same left-weighted bead distribution and empty right rod lengths, 1536x1024 canvas, pose, anatomy, cords, lighting, scale, placement, silhouette, margins and black isolation. EDIT ONLY the material and surface of all fifteen beads. Replace every dry cracked bone sphere with one unmistakably living wet marrow lobule: semi-translucent pale cream-pink tissue, softly irregular organic lobed shape, moist specular surface and subtle internal veining, subdued and non-glowing. All fifteen living marrow lobules must remain countable, three on each of five rods, and materially distinct from the dry ivory skulls, rods and tethered bone fragments. No bead may retain a cracked ossuary shell or read as a stone/bone ball. Do not change counts, distribution, skulls, rods, fragments, tethers, frame, or silhouette. No blood spray, gore pool, floor, ground, shadow, scene, text, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1536,
+        "height": 1024,
+        "alphaPolicy": "opaque"
+      }
+    }
+  }
+}

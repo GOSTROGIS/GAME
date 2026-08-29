@@ -4,7 +4,7 @@ These are the exact prompt strings submitted for the ten approved canonical conc
 
 ## Ashbound
 
-Generation call: `call_nIgtNVLVAaxYFQ2Pt3fXba2w`
+Generation call: `[redacted from published provenance]`
 
 ```text
 Use case: stylized-concept
@@ -24,7 +24,7 @@ Avoid: cute or chibi proportions, cartoon shoulders, clean heroic armor, glamoro
 
 ## Cairn Beasts
 
-Generation call: `call_3DCkzchVv1431C8jGd8UjVSp`
+Generation call: `[redacted from published provenance]`
 
 ```text
 Use case: stylized-concept
@@ -44,7 +44,7 @@ Avoid: cute or chibi proportions, familiar fantasy wolf, oversized heroic muscul
 
 ## March Deserters
 
-Generation call: `call_tsmk6ScuQHgGgAMN4G0FHUMj`
+Generation call: `[redacted from published provenance]`
 
 ```text
 Use case: precise-object-edit
@@ -61,7 +61,7 @@ Avoid: generic black knight, heroic soldier, normal plate-armored anatomy, Bell 
 
 ## Drowned Parish
 
-Generation call: `call_L3NcHEm8i3Dd9D43p0MrGFli`
+Generation call: `[redacted from published provenance]`
 
 ```text
 Use case: stylized-concept
@@ -81,7 +81,7 @@ Avoid: ordinary drowned zombie, sea pirate, mermaid, generic ghost, exposed entr
 
 ## Reed Coven
 
-Generation call: `call_nT0Nqp15J7zMJmskI6oGcD9Y`
+Generation call: `[redacted from published provenance]`
 
 ```text
 Use case: stylized-concept
@@ -101,7 +101,7 @@ Avoid: pointed witch hat, broom, familiar fantasy shaman, plague-doctor mask, gl
 
 ## Kilnforged
 
-Generation call: `call_8pJvOCIcTUx0WkyNX6yvJl8X`
+Generation call: `[redacted from published provenance]`
 
 ```text
 Use case: stylized-concept
@@ -121,7 +121,7 @@ Avoid: heroic power armor, steampunk boiler person, clean medieval knight, gener
 
 ## Glasswood Brood
 
-Generation call: `call_I01tyal8BNLwWNgLRdLDYnxP`
+Generation call: `[redacted from published provenance]`
 
 ```text
 Use case: stylized-concept
@@ -141,7 +141,7 @@ Avoid: normal deer, elk, wolf, generic crystal animal, insectoid monster, cute p
 
 ## Hush Order
 
-Generation call: `call_ZMLgkyB03Utfk32EMmXyU5V9`
+Generation call: `[redacted from published provenance]`
 
 ```text
 Use case: precise-object-edit
@@ -159,7 +159,7 @@ Avoid: separate decorative ropes, hidden cord joins, normal body under linen, we
 
 ## Echo Choir
 
-Generation call: `call_c9WTemM5npiP7DUboc9h3ZDJ`
+Generation call: `[redacted from published provenance]`
 
 ```text
 Use case: precise-object-edit
@@ -177,7 +177,7 @@ Avoid: eldritch portal, wormhole, vortex, coiled disc, screaming head, floating 
 
 ## Ossuary Vermin
 
-Generation call: `call_4fTql3rHjFCV17dMm01wOkYp`
+Generation call: `[redacted from published provenance]`
 
 ```text
 Use case: stylized-concept
@@ -194,5 +194,4 @@ Materials/textures: porous age-darkened bone, cracked enamel, dusty mold, fibrou
 Constraints: no ordinary skeleton or bone spider anatomy; inward-facing skull wheel and alternating jaw/finger limbs must be legible at thumbnail scale; horror from cooperative borrowed anatomy and synchronized movement, gore secondary; fictional occult ecology only; no real-world disease taxonomy; no disability-as-hostility shorthand; no extra separate creatures outside the central communal structure; no text; no symbols; no logos; no watermark; no franchise resemblance
 Avoid: generic skeleton spider, skull pile, centipede, fantasy necromancer summon, exposed flesh or entrails, bright magic, cute swarm, copied or recognizable franchise creatures
 ```
-
 

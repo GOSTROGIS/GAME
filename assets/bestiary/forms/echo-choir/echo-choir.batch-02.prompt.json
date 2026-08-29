@@ -1,0 +1,106 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "echo-choir-masters-batch-02",
+  "status": "frozen-before-generation",
+  "familyId": "echo_choir",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/echo-choir-plate.png"
+  ],
+  "referenceRole": "The inspected family plate is a style, material, silhouette, and bodyless-acoustic reference only. Each output must be a new canonical individual form, not a copy of the representative plate subject.",
+  "commonDirection": "Highly polished stylized 3D dark-fantasy MMORPG production concept master for Claude Design 3D reference. One complete original Echo Choir subject in three-quarter view, centered with generous silhouette clearance. Flat near-black neutral opaque studio backdrop; cold raking light from one side; ungraded neutral presentation; no environment, scenery, floor, ground plane, or contact shadow. The family is an ecology of voices preserved without bodies, nesting in urns, bells, and abbey-stone hollows. Preserve the inspected plate's bodyless-acoustic language: spectral floating construction; detached mouths or form-specific acoustic anatomy; bell bronze, muted violet echo, crypt black, resonant dust, compressed air, cracked ceramic, tarnished bronze, and negative-space anatomy. Pressure fronts, when used, are thin incomplete crescents or broken ovals with large black gaps, propagate laterally rather than receding to a vanishing point, and remain sparse enough never to form a wall or tunnel. Mouth interiors are shallow violet-black negative chambers, never deep perspective. Canonical form anatomy overrides the representative plate topology. No skull, throat tunnel, ordinary body, screaming head, ghost woman, angel, speaker machine, portal, wormhole, vortex, coiled disc, solid shell unless explicitly required by form canon, text, letters, numbers, readable musical notation, runes, glyphs, recognizable religious marks, logo, watermark, franchise resemblance, bright saturation, glossy plastic, baked checkerboard, crop, or extra unrelated figure.",
+  "assets": [
+    {
+      "id": "cantor_oss",
+      "name": "Cantor Oss, Voice Beneath Stone",
+      "rank": "boss",
+      "orientation": "portrait",
+      "masterFile": "cantor-oss-voice-beneath-stone-concept-master-v1.png",
+      "canonical": {
+        "anatomy": "The buried cantor feeds preserved names into the Last Bell until memory becomes hunger. What should be internal crosses the silhouette whenever resonant urns answer in a visible clockwise sequence.",
+        "locomotion": "It advances only while the surrounding escape geometry is changing; the permission cue is resonant urns answer in a visible clockwise sequence.",
+        "audio": "resonant dust produces three spaced warnings, a held absence, then one enclosing note; Litany Beneath Stone commits on the first sonic/summon/radiance sound after the gap.",
+        "purpose": "Voices preserved without bodies, nesting in urns, bells, and hollows within the abbey stone. This form serves the niche expressed by the buried cantor feeds preserved names into the Last Bell until memory becomes hunger.",
+        "origin": "The buried cantor feeds preserved names into the Last Bell until memory becomes hunger.",
+        "mechanic": "Litany Beneath Stone",
+        "cue": "Resonant urns answer in a visible clockwise sequence.",
+        "counterplay": "Break selected urns to remove voices and open safe gaps in the pattern.",
+        "phase": "Each broken urn permanently subtracts a voice but empowers the remaining choir."
+      },
+      "prompt": "Use case: stylized-concept. Asset type: game creature concept master for Claude Design 3D reference. Input image: Image 1 is the inspected Echo Choir family reference only; preserve its production finish, bodyless acoustic horror, palette, pressure-front restraint, cracked urns, tarnished bronze, and negative-space anatomy, but create distinct boss Cantor Oss, Voice Beneath Stone rather than copying the plate. Scene/backdrop: flat near-black neutral opaque studio backdrop; no abbey room, cemetery, floor, ground plane, or contact shadow. Subject: one complete floating boss assembly. A massive tarnished Last Bell is the dominant central body; beneath one isolated broken stone burial plate, the buried cantor exists only as a shallow bodyless bronze mouth and crypt-black voice absence, never a visible corpse, head, skeleton, or ghost. Preserved names are abstract nonletter resonant-dust filaments that feed from beneath the stone into and visibly through the bell silhouette; no writing or name glyphs. Litany Beneath Stone telegraph: multiple individually separated resonant urns orbit the bell in a clearly readable clockwise progression, each answering in successive restrained violet brightness. Every urn is discrete and visibly breakable; selected urns have clear hairline fractures and the gaps between urns remain open safe lanes. Internal name-dust and voice fronts cross outside the bell silhouette only when the clockwise urn sequence lights. Exactly three spaced warning crescents lead to one held black absence and then one enclosing broken note-front, never a portal. The phase rule is readable because one already-broken urn leaves a conspicuous empty voice position while the remaining urns glow more intensely. Style: highly polished stylized 3D dark-fantasy MMORPG production render, original IP, monumental but sparse, tarnished bell bronze, cracked ceramic, muted violet echo, crypt black, compressed air, resonant dust. Composition: one isolated full boss assembly in three-quarter view, complete bell, burial plate, bodyless mouth, every orbiting urn, warning sequence, broken-urn gap, and outer front visible, centered with generous clearance, portrait 1024 by 1536. Lighting: cold raking studio light catches bell and urn edges, ungraded neutral master. Constraints: no readable names, letters, musical notation, corpse, skull, ghost person, congregation, extra figure, architecture scene, portal, tunnel, floor, crop, logo, or watermark."
+    },
+    {
+      "id": "breathless_note",
+      "name": "Breathless Note",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "breathless-note-concept-master-v1.png",
+      "canonical": {
+        "anatomy": "A single violet mouth stretches vertically through a floating musical mark.",
+        "locomotion": "It drifts along the decay of the last loud sound.",
+        "audio": "One note begins after its echo has already ended.",
+        "purpose": "It scavenges residual resonance before it stains abbey stone.",
+        "origin": "A chorister died during an inhale and left the intended note waiting behind.",
+        "mechanic": "Aftertone",
+        "cue": "A violet trail follows the last loud impact in reverse.",
+        "counterplay": "Create a quieter decoy sound and leave the original decay path."
+      },
+      "prompt": "Use case: stylized-concept. Asset type: game creature concept master for Claude Design 3D reference. Input image: Image 1 is the inspected Echo Choir family reference only; preserve its production finish, shallow mouth, palette, compressed air, and resonant-dust materials, but create a distinct Breathless Note rather than copying the plate. Scene/backdrop: flat near-black neutral opaque studio backdrop; no abbey, floor, ground plane, or contact shadow. Subject: one complete Breathless Note with exactly one bodyless violet mouth stretched vertically through one floating musical mark. The mark is an original abstract resonant-dust stroke with no resemblance to a conventional music note, staff notation, letter, numeral, rune, logo, or readable symbol; it is the creature's load-bearing anatomy rather than typography. The mouth interior is a shallow violet-black negative chamber with no face, head, throat, or body. Aftertone telegraph: one thin violet decay trail starts at a compact nonsemantic loud-impact knot and runs backward in a clearly readable reverse path into the mouth, while the mouth drifts along that fading path. The note begins only after its earlier echo ended, shown by one conspicuous empty black interval between the dim old echo front and the newly bright mouth-front. One smaller quieter decoy knot sits offset from the original decay path and pulls a short restrained branch of dust, communicating redirection without creating a second creature. Sparse thin broken pressure crescents propagate laterally and never form a tunnel. Style: highly polished stylized 3D dark-fantasy MMORPG production render, original IP, muted violet echo, tarnished bronze lip, crypt black, compressed air, resonant dust. Composition: one isolated full vertical subject in three-quarter presentation, complete mark, single mouth, reverse trail, impact knot, decoy knot, old echo, and empty interval visible, centered with generous clearance, portrait 1024 by 1536. Lighting: cold raking studio light on lip and dust, ungraded neutral master. Constraints: exactly one mouth; no conventional musical symbol, readable notation, text, glyph, head, body, portal, tunnel, extra figure, scene, floor, crop, logo, or watermark."
+    },
+    {
+      "id": "urn_moth",
+      "name": "Urn Moth",
+      "rank": "regular",
+      "orientation": "landscape",
+      "masterFile": "urn-moth-concept-master-v1.png",
+      "canonical": {
+        "anatomy": "Each wing is a thin funeral urn seen from above.",
+        "locomotion": "It flutters between names spoken within the same room.",
+        "audio": "Powdered ceramic whispers the names it refuses to land on.",
+        "purpose": "It transfers voice dust between cracked reliquaries.",
+        "origin": "Moths fed on burial cloth until the stored epitaphs altered their wings.",
+        "mechanic": "Named Landing",
+        "cue": "One spoken name condenses as dust on the target's shoulder.",
+        "counterplay": "Speak a different discovered name to redirect its landing."
+      },
+      "prompt": "Use case: stylized-concept. Asset type: game creature concept master for Claude Design 3D reference. Input image: Image 1 is the inspected Echo Choir family reference only; preserve its production finish, palette, cracked ceramic, resonant dust, and bodyless acoustic restraint, but create a distinct Urn Moth rather than copying the plate. Scene/backdrop: flat near-black neutral opaque studio backdrop; no room, reliquary scene, floor, ground plane, or contact shadow. Subject: one complete Urn Moth in broad flight. It has exactly two wings, and each entire wing is unmistakably a thin funeral urn viewed from above: one left urn-wing and one right urn-wing, with rim, hollow opening, cracked ceramic wall, and taper visible in foreshortened top view. There are no conventional insect wings. A narrow central body is assembled from powdered ceramic, burial-cloth fibers, and resonant dust rather than ordinary insect anatomy. Named Landing cue: one dense nonletter cluster of pale ceramic name-dust condenses at a single shoulder-shaped empty landing notch carried within the creature's lower pressure arc; a second differently toned discovered-name dust cluster pulls the flight direction sideways, clearly communicating redirection without depicting a person or readable name. Powder trails whisper refusal through broken nonsemantic dust filaments, never letters or epitaph text. Sparse incomplete bronze-violet pressure crescents trail laterally behind the two urn-wings with large black gaps. Style: highly polished stylized 3D dark-fantasy MMORPG production render, original IP, tactile funeral ceramic, burial cloth, tarnished bronze dust, muted violet echo, crypt black. Composition: one isolated full flying subject in three-quarter top view, both complete urn-wings, central dust body, wing tips, landing notch, both dust clusters, and trail visible, centered with generous clearance, landscape 1536 by 1024. Lighting: cold raking studio light catches urn rims and powder, ungraded neutral master. Constraints: exactly two urn-wings; no ordinary moth wings, spider or beetle body, readable names, letters, symbols, extra person, room, portal, scene, floor, crop, logo, or watermark."
+    },
+    {
+      "id": "interval_thief",
+      "name": "Interval Thief",
+      "rank": "specialist",
+      "orientation": "landscape",
+      "masterFile": "interval-thief-concept-master-v1.png",
+      "canonical": {
+        "anatomy": "Two hovering mouths share no body and preserve a fixed distance between them.",
+        "locomotion": "It moves by stealing the gap between paired objects.",
+        "audio": "Nearby rhythms lose their rests and become breathlessly continuous.",
+        "purpose": "It collects silence required for the choir's largest invocations.",
+        "origin": "A choirmaster cut too many rests from one hymn; the discarded intervals learned hunger.",
+        "mechanic": "Stolen Rest",
+        "cue": "The space between two pillars collapses visually.",
+        "counterplay": "Occupy the interval before it vanishes or create a wider paired gap."
+      },
+      "prompt": "Use case: stylized-concept. Asset type: game creature concept master for Claude Design 3D reference. Input image: Image 1 is the inspected Echo Choir family reference only; preserve its production finish, shallow bronze mouths, palette, compressed air, and resonant-dust materials, but create a distinct Interval Thief rather than copying the plate. Scene/backdrop: flat near-black neutral opaque studio backdrop; no abbey interior, floor, ground plane, or contact shadow. Subject: one complete horizontally organized Interval Thief made of exactly two hovering bodyless bronze-lipped mouths and nothing resembling a shared body. The two mouths are the only mouths in the image and preserve one visibly fixed distance between them. Each mouth has a shallow violet-black negative chamber, no face, head, throat, torso, or connecting flesh. Between them hover exactly two compact broken stone pillar fragments as a paired-object token, not architecture or scenery. Stolen Rest telegraph: the visible space between the two pillar fragments is collapsing into one compressed crypt-black interval drawn taut between the fixed mouths; surrounding sound rhythms become breathlessly continuous because their broken crescents have lost all rests. Counterplay remains readable through one wider open paired gap beyond the compact pillar token, clearly large enough to occupy, without adding another mouth or figure. The creature's locomotion is the theft and relocation of the central gap itself, shown by one displaced empty interval aligned laterally with the mouths. Style: highly polished stylized 3D dark-fantasy MMORPG production render, original IP, tarnished bell bronze, muted violet echo, crypt black, compressed air, resonant dust, sparse broken masonry. Composition: one isolated full horizontal subject in three-quarter presentation, both complete mouths, fixed interval, both pillar fragments, collapsed gap, wider counter-gap, and displaced interval visible, centered with generous clearance, landscape 1536 by 1024. Lighting: cold raking studio light catches lips, pillar edges, and dust, ungraded neutral master. Constraints: exactly two mouths and no other mouth shapes; no body, face, skull, corridor, full pillars, architecture scene, portal, tunnel, text, notation, symbols, extra figure, floor, crop, logo, or watermark."
+    },
+    {
+      "id": "nave_resonator",
+      "name": "Nave Resonator",
+      "rank": "elite",
+      "orientation": "portrait",
+      "masterFile": "nave-resonator-concept-master-v1.png",
+      "canonical": {
+        "anatomy": "A stone rib vault floats around an invisible singer.",
+        "locomotion": "It translates between architecture sharing the same resonant pitch.",
+        "audio": "Every chamber answers with a different vowel before it arrives.",
+        "purpose": "It tunes ruined spaces into a connected hunting instrument.",
+        "origin": "The abbey tested one sustained note until the nave learned to carry itself.",
+        "mechanic": "Architectural Answer",
+        "cue": "Two matching arches glow with the same violet frequency.",
+        "counterplay": "Change one arch's pitch with a strike before the translation completes."
+      },
+      "prompt": "Use case: stylized-concept. Asset type: game creature concept master for Claude Design 3D reference. Input image: Image 1 is the inspected Echo Choir family reference only; preserve its production finish, palette, shallow mouth absences, pressure-front restraint, cracked stone, tarnished bronze, and resonant dust, but create a distinct Nave Resonator rather than copying the plate. Scene/backdrop: flat near-black neutral opaque studio backdrop; no abbey interior, building, floor, ground plane, or contact shadow. Subject: one complete Nave Resonator, a self-contained floating stone rib-vault organism curved around one invisible singer-shaped crypt-black absence. The singer remains wholly invisible: no body, face, head, skeleton, robe, or ghost. The vault is anatomy rather than architecture scenery, with every rib and buttress terminating inside the isolated silhouette. Architectural Answer cue: exactly two matching arch ribs glow with the same muted violet frequency and are unmistakably paired; all other ribs remain unlit. One of those two glowing ribs has one clear fresh strike crack and a locally shifted pitch color, showing how a strike breaks the match before translation. The vault's separate inner chambers each contain a different shallow vowel-like mouth absence, but no readable letters or extra beings. Thin broken pressure fronts translate laterally from the matched arches with large black gaps, and one displaced rib echo shows motion between matching resonant architecture without depicting another building. Style: highly polished stylized 3D dark-fantasy MMORPG production render, original IP, weathered abbey stone, tarnished bell bronze, muted violet echo, crypt black, compressed air, resonant dust. Composition: one isolated full vault-creature in three-quarter view, every rib endpoint, invisible singer void, exactly two matching glowing arches, strike crack, chambers, and displaced echo visible, centered with generous clearance, portrait 1024 by 1536. Lighting: cold raking studio light defines the stone structure and two matched arches, ungraded neutral master. Constraints: no building scene, floor, cathedral interior, human singer, ghost, skull, readable vowel letters, text, symbols, portal, tunnel, extra figure, crop, logo, or watermark."
+    }
+  ]
+}

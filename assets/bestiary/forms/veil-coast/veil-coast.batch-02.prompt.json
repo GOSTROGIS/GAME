@@ -1,0 +1,129 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "veil-coast-kin-masters-batch-02",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast",
+  "formsInCanonicalOrder": [
+    "admiral_of_the_inland_tide",
+    "pearl_lamprey",
+    "keel_crawler",
+    "brackish_mimic",
+    "coral_reeve"
+  ],
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/veil-coast-plate.png"
+  ],
+  "referenceImage": {
+    "path": "assets/bestiary/veil-coast-plate.png",
+    "sha256": "663b25f11699b99d995ecfbbc767e24d0c8302fbeb4dbd749e3e480f818b1ac9",
+    "width": 1024,
+    "height": 1536
+  },
+  "referencePolicy": "The inspected plate controls only the shared Veil-Coast Kin silhouette, palette, materials, lantern-organ construction, finish, and lighting. Each canonical form controls its own anatomy and mechanic evidence. Do not copy the plate subject's exact pose, staff, handheld lantern, hood, or other props unless the form record requires them.",
+  "promptCompilation": "For each asset, the exact generation prompt is commonDirection followed by two newline characters followed by masterDirection. Neither field may change after the first generation call; corrections require a separate immutable revision packet and a versioned candidate.",
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical individual bestiary production concept master for later 3D design. Use the inspected Veil-Coast Kin plate only as shared family reference. Render exactly one complete original Veil-Coast Kin subject in polished stylized 3D dark-fantasy MMORPG production quality. Preserve the family's tide-born amphibious, asymmetrical swaying silhouette; slick deep-blue skin and webbed extremities where the form's anatomy permits them; layered wet black-coral armor; restrained coral-red branching growths; pearl-gray shell and barnacle nodes; ragged water-dark textile and cord; and cold pale-cyan lantern organs caged into the body. A non-humanoid form keeps its canonical body plan while carrying this same material and palette language. Three-quarter production view, mature narrow anatomy, grounded tactile material density, all extremities and every required mechanic cue visible, centered with generous silhouette clearance. Flat near-black neutral opaque studio backdrop, cold raking studio light, ungraded neutral presentation. Any cue evidence must remain self-contained and visually bound to the subject in empty air rather than becoming an environment. No coast, sea, room, ship deck, floor, ground plane, water plane, terrain, pedestal, cast floor shadow, scene, extra creature, extra person, duplicate subject, caption, UI, text, readable symbol, rune, real religious mark, logo, watermark, franchise resemblance, ordinary pirate, generic fish-person, mermaid, glossy plastic, cute proportions, bright saturation, aura, gore, or exposed entrails. Do not copy the plate's staff, handheld lantern, exact hood, pose, or prop loadout.",
+  "assets": [
+    {
+      "id": "admiral_of_the_inland_tide",
+      "name": "Admiral of the Inland Tide",
+      "rank": "boss",
+      "role": "juggernaut",
+      "orientation": "landscape-3:2",
+      "masterFile": "admiral-of-the-inland-tide-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/veil-coast/admiral-of-the-inland-tide-v1.png",
+      "canonical": {
+        "anatomy": "A drowned admiral sails a ship-shaped current through soil, seeking the bell that commanded the sea to retreat. The violation closes into a usable limb when a keel-shaped ripple cuts through stone beneath the arena.",
+        "locomotion": "It cannot turn during a committed advance and brakes by striking the terrain; the permission cue is a keel-shaped ripple cuts through stone beneath the arena.",
+        "sound": "black coral produces slow impacts whose interval shortens without their volume changing; Ship Without Water commits on the first water/strike/area sound after the gap.",
+        "purpose": "A future frontier hook: tide-born raiders follow a moonless current inland, searching for the Bell's missing echo. This form serves the niche expressed by a drowned admiral sails a ship-shaped current through soil, seeking the bell that commanded the sea to retreat.",
+        "origin": "A drowned admiral sails a ship-shaped current through soil, seeking the bell that commanded the sea to retreat.",
+        "mechanic": "Ship Without Water",
+        "cue": "A keel-shaped ripple cuts through stone beneath the arena.",
+        "counterplay": "Climb exposed terrain, then board the current during its turning arc."
+      },
+      "masterDirection": "Create one Admiral of the Inland Tide as a single boss organism fused into and sailing a broad ship-shaped current of dense blackwater through empty air. The current itself, not an ordinary boat, forms the admiral's load-bearing lower anatomy and temporary deck-like surfaces. Directly beneath it, include one compact isolated broken-stone strip bound to the subject, pierced by one unmistakable keel-shaped ripple; the strip is mechanic evidence only, not terrain or a floor. Pose the current in a committed forward arc that cannot turn sharply, with one raised exposed deck-like edge readable as the boarding counterplay. Carry the family black-coral armor, coral-red growths, pearl-gray shell, deep-blue amphibious anatomy, and caged lantern organs into the admiral without adding naval insignia. Keep the entire current prow/stern, admiral, keel ripple, stone evidence, and turning arc fully inside a wide frame. No real ship hull, crew, extra figure, mast, flag, text, ocean, shoreline, arena, floor, or scene."
+    },
+    {
+      "id": "pearl_lamprey",
+      "name": "Pearl Lamprey",
+      "rank": "regular",
+      "role": "swarm",
+      "orientation": "landscape-3:2",
+      "masterFile": "pearl-lamprey-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/veil-coast/pearl-lamprey-v1.png",
+      "canonical": {
+        "anatomy": "A ring mouth surrounds a pearl that contains a tiny receding tide.",
+        "locomotion": "It swims through wet surfaces thinner than its body.",
+        "sound": "A beach recedes inside the pearl with each pulse.",
+        "purpose": "It drains standing water into underground coastal channels.",
+        "origin": "Harbor pearls fed on moonless tide until the oysters grew teeth around absence.",
+        "mechanic": "Thin-Water Breach",
+        "cue": "A puddle's reflection drains toward one bright pearl point.",
+        "counterplay": "Leave the wet surface or dry its emergence point with fire."
+      },
+      "masterDirection": "Create one horizontal Pearl Lamprey, elongated and clearly original, with a complete circular ring mouth surrounding exactly one large pearl at the center. Inside that pearl, show one tiny receding tide as a contained dark-water crescent and retreat line; the pearl remains the single brightest point. The body must visibly pass through one impossibly thin floating wet membrane narrower than its own diameter, with the membrane's restrained reflection draining radially toward the mouth pearl. Adapt family black-coral plates, deep-blue slick tissue, pearl-gray nodes, coral-red growths, and small caged lantern organs along the lamprey without giving it limbs, a humanoid face, or ordinary fish anatomy. Keep both body ends, every mouth tooth, entire pearl, thin membrane, and drainage lines fully inside a landscape frame. No puddle scene, ground, ocean, extra lamprey, oyster shell, text, aura, or crop."
+    },
+    {
+      "id": "keel_crawler",
+      "name": "Keel Crawler",
+      "rank": "regular",
+      "role": "duelist",
+      "orientation": "landscape-3:2",
+      "masterFile": "keel-crawler-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/veil-coast/keel-crawler-v1.png",
+      "canonical": {
+        "anatomy": "A ship keel replaces its spine and divides the body into port and starboard halves.",
+        "locomotion": "It crawls along soil as though cresting invisible waves.",
+        "sound": "Barnacles knock in the cadence of hull timbers.",
+        "purpose": "It cuts drainage furrows that let inland tides move beneath roads.",
+        "origin": "A wreck's keel remembered its crew so fiercely that mud supplied their jointed outline.",
+        "mechanic": "Land Swell",
+        "cue": "A wave-shaped ridge rises in dry soil ahead of the keel.",
+        "counterplay": "Cross behind the crest and strike the exposed centerline."
+      },
+      "masterDirection": "Create one low horizontal Keel Crawler whose entire spine is physically replaced by one exposed ship keel running continuously from front to rear. The keel must split the mud-supplied jointed body into clearly separate port and starboard halves with open black clearance along the strikeable centerline; no normal spine bridges the halves. Arrange the paired crawling limbs in a cresting invisible-wave posture. Ahead of and directly bound to the exposed keel, suspend one narrow self-contained dry-mud ridge shaped like a single wave crest, with a clear crossable gap behind it; it is mechanic evidence, not terrain or a ground plane. Barnacles cluster along the keel in hull-timber cadence, while family black coral, deep-blue tissue, coral-red growths, pearl-gray shells, and restrained lantern organs remain integrated. Keep every limb, both keel ends, center gap, mud ridge, and counter-gap fully framed. No boat, road, soil scene, water plane, extra crawler, ordinary quadruped spine, or crop."
+    },
+    {
+      "id": "brackish_mimic",
+      "name": "Brackish Mimic",
+      "rank": "specialist",
+      "role": "controller",
+      "orientation": "portrait-2:3",
+      "masterFile": "brackish-mimic-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/veil-coast/brackish-mimic-v1.png",
+      "canonical": {
+        "anatomy": "Its skin displays the shoreline that should be behind the viewer.",
+        "locomotion": "It retreats toward observers while appearing to advance away.",
+        "sound": "Footsteps arrive with the gull calls of a different coast.",
+        "purpose": "It lures inland prey toward hidden tidal channels.",
+        "origin": "A raider wore a painted escape coast inside his shield until the image replaced his back.",
+        "mechanic": "Reversed Shore",
+        "cue": "The shoreline on its skin gains a moving tide line.",
+        "counterplay": "Track its cast shadow rather than the false perspective."
+      },
+      "masterDirection": "Create one Brackish Mimic as an amphibious raider in a back-revealing three-quarter retreat that visually appears to advance away. A broad continuous area of its actual deep-blue back skin, not clothing or a carried shield, must display an impossible original shoreline perspective that should lie behind the viewer. Within that skin display, one moving tide line is sharply readable without becoming a separate landscape or rectangular screen. Attach one flat near-black true-position shadow ribbon to the subject's feet and trail it in the opposite direction from the false skin perspective; keep it suspended in empty air rather than on a floor. Preserve family black-coral armor around but not covering the skin display, coral-red growths, pearl-gray shell nodes, webbed extremities, and caged lantern organs. Keep full body, shoreline skin, tide line, and complete shadow ribbon framed. No held shield, second coast, gull, ocean scene, floor, extra figure, text, map, or crop."
+    },
+    {
+      "id": "coral_reeve",
+      "name": "Coral Reeve",
+      "rank": "elite",
+      "role": "skirmisher",
+      "orientation": "portrait-2:3",
+      "masterFile": "coral-reeve-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/veil-coast/coral-reeve-v1.png",
+      "canonical": {
+        "anatomy": "A red reef grows as a courthouse around a small amphibious judge.",
+        "locomotion": "It moves only after coral polyps vote by opening in sequence.",
+        "sound": "Shell fragments click out verdicts in legal cadence.",
+        "purpose": "It assigns hunting water and punishes kin that cross invisible tide borders.",
+        "origin": "A drowned reeve's law tablets became substrate for a reef that preserved only penalties.",
+        "mechanic": "Reef Verdict",
+        "cue": "Polyps open clockwise around one glowing charge.",
+        "counterplay": "Strike the dissenting closed polyp to invalidate the verdict."
+      },
+      "masterDirection": "Create one Coral Reeve as a single integrated organism: a dominant red-and-black reef body grows into a compact courthouse-like frame around one small amphibious judge physically nested at its center, never as a separate person or surrounding building. At the center place exactly one restrained cold-cyan glowing charge. Around that charge, arrange one clearly countable circular vote sequence of coral polyps opening clockwise, with exactly one dissenting polyp fully closed, structurally exposed, and strikeable. The reef frame may suggest lintel and chamber geometry but must remain living coral anatomy, not architecture or a scene. Carry family deep-blue skin, pearl-gray shell fragments, black-coral armor, lantern-organ cages, and swaying asymmetry throughout. Keep the complete reef organism, nested judge, one charge, every voting polyp, and closed target fully visible. No law tablet text, gavel, scales, courtroom, extra judge, building, floor, emblem, or crop."
+    }
+  ]
+}

@@ -80,8 +80,10 @@
   .pill { flex:0 0 auto; padding:3px 6px; font:500 8px var(--display); letter-spacing:.08em; text-transform:uppercase; }
   .pill.sculpted { color:#8aa596; background:rgba(82,102,92,.16); border:1px solid rgba(82,102,92,.45); }
   .pill.generic-rig { color:#7ba6b6; background:rgba(60,90,100,.18); border:1px solid rgba(60,90,100,.5); }
+  .pill.awaiting-art { color:#b99a78; background:rgba(120,90,65,.14); border:1px solid rgba(120,90,65,.42); }
   .pill.queued { color:#c9a25f; background:rgba(150,110,40,.14); border:1px solid rgba(150,110,40,.4); }
   .pill.refused { color:#c98d78; background:rgba(110,37,37,.18); border:1px solid rgba(110,37,37,.55); }
+  .pill.unassessed { color:#9ba7a1; background:rgba(90,105,100,.13); border:1px solid rgba(90,105,100,.4); }
   .pill.reference { color:#8d938d; background:rgba(255,255,255,.05); border:1px solid var(--line); }
   #placeholderView { position:absolute; inset:0; z-index:9; background:#0a0e10; display:flex; align-items:center; justify-content:center; }
   #placeholderView[hidden] { display:none; }
@@ -158,14 +160,17 @@ const stage = document.getElementById('stage');
 const { THREE } = await stage.ready;
 
 const REG = buildRegistry();
-const ALL = [...REG.sculpted, ...REG.namedCast, ...REG.queuedBestiary, ...REG.origins];
+const COUNTS = tally(REG);
+const ALL = [...REG.bestiary, ...REG.namedCast, ...REG.origins, ...REG.expansionCharacters, ...REG.expansionCreatures];
 const BY_ID = new Map(ALL.map((s) => [s.id, s]));
 const FRONT_VIEW = { 'enemy.ash-husk': { pos: [1.35, 1.06, 2.35], target: [0, 0.90, 0] } };
 
 document.getElementById('roster').textContent =
-  `${ALL.length} subjects catalogued \u00b7 ${REG.sculpted.length} sculpted \u00b7 ${REG.namedCast.length} generic-rig \u00b7 `
-  + `${REG.queuedBestiary.filter((r) => r.tier === 'queued').length} queued \u00b7 `
-  + `${REG.queuedBestiary.filter((r) => r.tier === 'refused').length} refused \u00b7 ${REG.origins.length} reference`;
+  `${COUNTS.grandTotal} subjects catalogued \u00b7 ${COUNTS.foundingTotal} founding \u00b7 ${COUNTS.expansionTotal} expansion \u00b7 `
+  + `${REG.bestiary.length} founding bestiary \u00b7 ${COUNTS.namedCast} named \u00b7 ${COUNTS.origins} origins \u00b7 `
+  + `${COUNTS.expansionCharacters} new characters \u00b7 ${COUNTS.expansionCreatures} new creatures \u00b7 `
+  + `${COUNTS.sculpted} sculpted \u00b7 ${COUNTS.awaitingArt} awaiting art \u00b7 ${COUNTS.queued} queued \u00b7 `
+  + `${COUNTS.refused} refused \u00b7 ${COUNTS.unassessed} unassessed`;
 
 /* ---------------------------------------------------------------- shell */
 const eyebrowEl = document.getElementById('eyebrow');
@@ -534,33 +539,67 @@ function mountPlaceholder(subject) {
   if (subject.plate) { placeholderImg.src = subject.plate; placeholderImg.style.visibility = 'visible'; }
   else { placeholderImg.removeAttribute('src'); placeholderImg.style.visibility = 'hidden'; }
 
-  const TIER_LABEL = { queued: 'Queued', refused: 'Refused', reference: 'Reference only' };
-  const TIER_COLOR = { queued: '#c9a25f', refused: '#c98d78', reference: '#8d938d' };
+  const TIER_LABEL = {
+    'awaiting-art': 'Awaiting individual art',
+    queued: 'Queued',
+    refused: 'Refused',
+    unassessed: 'Unassessed',
+    reference: 'Reference only',
+    'static-model': 'Static model ready',
+    'animated-model': 'Animated model ready',
+  };
+  const TIER_COLOR = {
+    'awaiting-art': '#b99a78',
+    queued: '#c9a25f',
+    refused: '#c98d78',
+    unassessed: '#9ba7a1',
+    reference: '#8d938d',
+    'static-model': '#8aa596',
+    'animated-model': '#7ba6b6',
+  };
   placeholderView.querySelector('.msg').innerHTML = `
     <p class="nano" style="margin:0 0 8px;color:${TIER_COLOR[subject.tier]}">${TIER_LABEL[subject.tier]}${subject.family ? ' \u00b7 ' + subject.family : ''}</p>
     <h2 style="margin:0 0 8px;color:var(--bone-bright);font:500 22px var(--display)">${subject.name}</h2>
     <p style="margin:0;color:#c9c2ae;font:14px/1.6 var(--serif)">${subject.reason}</p>
-    ${subject.promptCall ? `<p class="nano" style="margin:8px 0 0;color:#7f857f">Prompt call \u2014 ${subject.promptCall}</p>` : ''}
+    ${subject.promptAuthority ? `<p class="nano" style="margin:8px 0 0;color:#7f857f">Prompt authority \u2014 ${subject.promptAuthority}</p>` : ''}
   `;
 
   setHeader({
-    eyebrow: `Sable Reach \u00b7 ${subject.kind === 'origin' ? 'playable origin' : 'bestiary'} \u00b7 ${TIER_LABEL[subject.tier].toLowerCase()}`,
+    eyebrow: `Sable Reach \u00b7 ${subject.kind === 'origin' ? 'playable origin' : subject.kind === 'expansion-character' ? 'expansion character' : subject.kind === 'expansion-creature' ? 'expansion creature' : 'bestiary'} \u00b7 ${TIER_LABEL[subject.tier].toLowerCase()}`,
     title: subject.name, idTag: subject.id,
-    stat: subject.plate ? 'Concept art exists; no 3D model yet.' : 'No concept art vendored, and no model.',
+    stat: subject.hasIndividualArt || subject.kind === 'origin'
+      ? 'Indexed subject art exists; no subject-specific 3D model yet.'
+      : subject.plate
+        ? 'Family reference exists; individual art and a subject-specific model do not.'
+        : 'No indexed concept art or subject-specific model.',
   });
   renderPlateBlock(subject.plate, subject.plate ? 'Concept plate \u00b7 vendored' : '', '');
   tierBody.innerHTML = `
-    <p class="eyebrow" style="margin:26px 0 10px">Why there is no model here</p>
+    <p class="eyebrow" style="margin:26px 0 10px">Readiness assessment</p>
     <article style="padding:13px 15px;background:var(--glass-bg);border:1px solid var(--line-soft);border-left:3px solid ${TIER_COLOR[subject.tier]}">
       <p style="margin:0;color:#c9c2ae;font:14px/1.6 var(--serif)">${subject.reason}</p>
     </article>
-    ${subject.promptCall ? `<p style="margin:12px 0 0;color:#8d938d;font:var(--type-body-xs)">Rank-1 authority: <code>${subject.promptCall}</code>, in kit/hm-art-law.js.</p>` : ''}
+    ${subject.kind.startsWith('expansion-') ? `
+      <p class="eyebrow" style="margin:24px 0 8px">Production pipeline</p>
+      <p style="margin:0 0 6px;color:#9fa59f;font:var(--type-body-xs)">Concept art \u2014 ${subject.artStatus}</p>
+      <p style="margin:0 0 6px;color:#9fa59f;font:var(--type-body-xs)">Static model \u2014 ${subject.staticModelStatus}${subject.staticModel ? ` \u00b7 ${subject.staticModel}` : ''}</p>
+      <p style="margin:0 0 12px;color:#9fa59f;font:var(--type-body-xs)">Animated model \u2014 ${subject.animatedModelStatus}${subject.animatedModel ? ` \u00b7 ${subject.animatedModel}` : ''}</p>
+      <p style="margin:0 0 8px;color:#c9c2ae;font:14px/1.6 var(--serif)">${subject.contradiction || subject.narrativeUse}</p>
+      ${subject.mechanic ? `<p style="margin:0 0 8px;color:#a7aaa4;font:var(--type-body-xs)"><strong>${subject.mechanic.id}</strong> \u2014 ${subject.mechanic.cue} Counterplay: ${subject.mechanic.counterplay}</p>` : ''}
+      <p style="margin:0;color:#8d938d;font:var(--type-body-xs)">${subject.visualBrief}</p>` : ''}
+    ${subject.promptAuthority ? `<p style="margin:12px 0 0;color:#8d938d;font:var(--type-body-xs)">Rank-1 authority: <code>${subject.promptAuthority}</code>.</p>` : ''}
     <p class="eyebrow" style="margin:24px 0 8px">Roadmap</p>
     <p style="margin:0;color:#9fa59f;font:var(--type-body-sm)">${subject.tier === 'queued'
-      ? 'Next in line for section-generator authoring \u2014 see GAP-ANALYSIS-MODELS.md.'
-      : subject.tier === 'refused'
-        ? 'Blocked on a chassis or an approved prompt this pipeline does not have yet, not on modelling effort. Building it anyway would be exactly the invention the manifest law forbids.'
-        : 'Reference art for a playable origin. Building a body needs an appearance spec this project does not have (see GAP-ANALYSIS-CONTENT.md, "appearanceDefaults").'}</p>
+      ? 'Ready for subject-specific section-generator authoring against the indexed art and approved family law.'
+      : subject.tier === 'awaiting-art'
+        ? 'Create and approve the individual master and cutout before assessing a subject-specific model.'
+        : subject.tier === 'refused'
+          ? 'The current chassis inventory cannot satisfy the approved anatomy; no substitute body is claimed.'
+          : subject.tier === 'unassessed'
+            ? 'Write or reconcile the family prompt-law assessment before assigning this form to a modelling queue.'
+            : subject.kind.startsWith('expansion-')
+              ? 'Accept a subject concept master and transparent cutout, then link static and animated model artifacts independently as they pass review.'
+              : 'Reference art for a playable origin. A subject-specific appearance contract is required before modelling.'}</p>
   `;
 }
 
@@ -595,8 +634,12 @@ function buildGroups(filter) {
   const groups = [
     { label: `Bestiary \u2014 sculpted (${REG.sculpted.length})`, rows: REG.sculpted.filter((s) => match(s, s.family)).map((s) => rowHtml(s, s.family)) },
     { label: `Named characters \u2014 generic rig (${REG.namedCast.length})`, rows: REG.namedCast.filter((s) => match(s, s.role + ' ' + s.faction)).map((s) => rowHtml(s, s.role)) },
-    { label: `Bestiary \u2014 queued`, rows: REG.queuedBestiary.filter((s) => s.tier === 'queued' && match(s, s.family)).map((s) => rowHtml(s, s.family)) },
-    { label: `Bestiary \u2014 refused (chassis or authority missing)`, rows: REG.queuedBestiary.filter((s) => s.tier === 'refused' && match(s, s.family)).map((s) => rowHtml(s, s.family)) },
+    { label: `Expansion characters \u2014 lore and production pipeline (${REG.expansionCharacters.length})`, rows: REG.expansionCharacters.filter((s) => match(s, s.role + ' ' + s.faction + ' ' + s.epithet)).map((s) => rowHtml(s, `${s.faction} \u00b7 ${s.epithet}`)) },
+    { label: `Expansion creatures \u2014 no generic enemies (${REG.expansionCreatures.length})`, rows: REG.expansionCreatures.filter((s) => match(s, s.family + ' ' + s.faction + ' ' + s.combatRole)).map((s) => rowHtml(s, `${s.family} \u00b7 ${s.combatRole}`)) },
+    { label: `Bestiary \u2014 awaiting individual art (${COUNTS.awaitingArt})`, rows: REG.bestiary.filter((s) => s.tier === 'awaiting-art' && match(s, s.family)).map((s) => rowHtml(s, `${s.family} \u00b7 ${s.rank}`)) },
+    { label: `Bestiary \u2014 queued (${COUNTS.queued})`, rows: REG.bestiary.filter((s) => s.tier === 'queued' && match(s, s.family)).map((s) => rowHtml(s, `${s.family} \u00b7 ${s.rank}`)) },
+    { label: `Bestiary \u2014 refused (${COUNTS.refused})`, rows: REG.bestiary.filter((s) => s.tier === 'refused' && match(s, s.family)).map((s) => rowHtml(s, `${s.family} \u00b7 ${s.rank}`)) },
+    { label: `Bestiary \u2014 unassessed (${COUNTS.unassessed})`, rows: REG.bestiary.filter((s) => s.tier === 'unassessed' && match(s, s.family)).map((s) => rowHtml(s, `${s.family} \u00b7 ${s.rank}`)) },
     { label: `Playable origins \u2014 reference art`, rows: REG.origins.filter((s) => match(s, '')).map((s) => rowHtml(s, 'origin')) },
   ];
   return groups.filter((g) => g.rows.length).map((g) => `<p class="selgroup">${g.label}</p>${g.rows.join('')}`).join('');

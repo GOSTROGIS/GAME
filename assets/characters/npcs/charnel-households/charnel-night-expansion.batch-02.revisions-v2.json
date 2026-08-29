@@ -1,0 +1,37 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v2",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "assets": [
+    {
+      "id": "ilar_rook_unhoused_shadow",
+      "reference": "ilar-rook-unhoused-shadow-concept-master-v1-rejected.png",
+      "outputFile": "ilar-rook-unhoused-shadow-concept-master-v2.png",
+      "reason": "The first candidate is a conventionally volumetric skeletal humanoid in front of a rectangular frame; the canonical body must itself be nearly two-dimensional and continuously unfolded from one doorway-shaped shadow.",
+      "revisionDirection": "Revise the supplied Ilar Rook source into the exact canonical near-two-dimensional anatomy while preserving the single-subject portrait composition, black-nacre material, blank brass sternum seal, cold raking light, and near-black isolation. Remove all ordinary volumetric skull, exposed rib cage, muscle, thick torso, and conventional skeletal detail. Ilar's one complete adult body must instead be an extremely thin articulated black-nacre sheet with only narrow edge thickness: a severe nearly flat head plane, flat torso plane, two thin sheet arms/hands, and two thin sheet legs/feet. One side of that same sheet body must continuously fold into exactly one flat doorway-shaped black shadow outline behind it; the doorway is not a physical frame, wall, room, portal, or second body. Keep exactly one blank mortal-brass tenancy seal embedded at the flat anatomical sternum. The doorway-shadow corners and every body extremity require generous black clearance. No second shadow, ordinary human volume, bones, exposed ribs, face realism, architecture, scene, text, glyph, floor, logo, or watermark. Opaque RGB master, portrait 1024x1536."
+    },
+    {
+      "id": "ilyen_doorborn_outer_age",
+      "reference": "ilyen-doorborn-outer-age-concept-master-v1-rejected.png",
+      "outputFile": "ilyen-doorborn-outer-age-concept-master-v2.png",
+      "reason": "The first candidate turns the small canonical rib-door into a full-length torso cavity and renders the lintel wear as dense text-like marks.",
+      "revisionDirection": "Revise the supplied Ilyen Doorborn source while preserving her identity, composed three-quarter civic posture, dark skin, restrained formal black coat, empty hands, full-body portrait framing, cold raking light, and near-black isolation. Replace the enormous torso-length rib opening with exactly one SMALL living rib-door centered high at the sternum: the complete door including hinges and lintel must occupy no more than one fifth of the torso height and must visibly grow through the coat and body rather than hang as a badge or pendant. Close and restore the rest of the coat and torso as ordinary intact human anatomy. The tiny rib-door contains only near-black depth. On its inner lintel show generations of hand-height evidence only as sparse, short, uneven plain scratch notches at different heights; no dense rows, letters, numerals, words, calendar, glyph, or decorative script. Keep exactly two arms, two hands, two legs, and two feet; add no other Charnel anatomy, residents, village, room, papers, banners, architecture, floor, logo, or watermark. Opaque RGB master, portrait 1024x1536."
+    },
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v1-rejected.png",
+      "outputFile": "throat-orchard-concept-master-v2.png",
+      "reason": "The first candidate has the right 11-closed-plus-one-open count but reads as a botanical pod tree rather than one low rooted anatomical organism with throat forms.",
+      "revisionDirection": "Revise the supplied Throat Orchard source while preserving one isolated low rooted black-nacre organism, exactly twelve total throat-fruits, the 11-closed-plus-one-open count, landscape framing, cold raking light, and near-black opaque backdrop. Remove every woody branch, long fruit stem, botanical pod, seed seam, tree crown, and ordinary fruit silhouette. Rebuild the twelve forms directly around the perimeter of one broad low anatomical body as unmistakable short laryngeal throat structures: exactly eleven closed wet throat cuffs with sealed soft glottal folds, plus exactly one open breathless cuff containing only a shallow black absence with no mouth behind it, teeth, tongue, face, or head. Make the eleven closed cuffs show a single clockwise inhale sequence through progressively increasing throat distension while all remain closed; the open twelfth stays motionless and faces contrary to that sequence as the unique silent counterplay target. All root tips remain anatomical, suspended, and fully framed with no soil or floor. Recount exactly twelve before finalizing. No tree, branches, botanical fruit, human heads, extra throat, ordinary mouth, text, notation, scene, logo, or watermark. Opaque RGB master, landscape 1536x1024."
+    },
+    {
+      "id": "corridor_maw",
+      "reference": "corridor-maw-concept-master-v1-rejected.png",
+      "outputFile": "corridor-maw-concept-master-v2.png",
+      "reason": "The first candidate adds detached triangular icon-like angle markers, an extra upper aperture, and humanoid arms/hands that are not part of the canonical standing-doorframe predator.",
+      "revisionDirection": "Revise the supplied Corridor Maw source while preserving the immense vertical black-nacre scale, one contained deep corridor, near-black isolation, cold raking light, and full portrait framing. Remove both detached triangular panels, every arrow/icon/glyph shape, the separate circular upper aperture, and all humanoid arms, hands, legs, or claws. The creature must be exactly one cathedral-length body impossibly folded into one freestanding upright living doorframe, with no other openings. Inside that one entrance, retain exactly one deep non-gory anatomical corridor terminating in one visibly distant exit frame. Attach exactly two cue shapes: one irregular flat matte subject-shadow ribbon fused flush to the exterior edge of the near entrance frame, and one irregular flat matte subject-shadow ribbon fused flush to the opposite exterior edge of the distant exit frame. Their long axes must clearly oppose one another, but neither may form a triangle, arrow, chevron, letter, numeral, icon, sign, or detached object. Only the distant exit edge may carry restrained closed nacre tooth ridges; do not create a second mouth. Keep all body/frame tips clear of the canvas and touching no floor. No architecture scene, hallway floor, fortress, soldiers, extra aperture, entrails, text, logo, or watermark. Opaque RGB master, portrait 1024x1536."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "veil-coast-kin-masters-batch-02-revision-v3",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast_kin",
+  "basePacketSha256": "eb01b55a4988fa15bd14d64e5fa2c925ef7232672fe35216473ad7889a4ac125",
+  "previousRevisionSha256": "9766d2ce04ec20b2cec5543830846963e097277f83535633cbcdf0a76600d59e",
+  "referencePolicy": "Use only the inspected canonical Veil-Coast family plate as visual reference. Preserve the frozen base packet's global direction and all canonical fields. These constraints address only v2 preflight blockers and add no canon.",
+  "assets": [
+    {
+      "id": "admiral_of_the_inland_tide",
+      "sourceCandidate": "admiral-of-the-inland-tide-concept-master-v2.png",
+      "outputFile": "admiral-of-the-inland-tide-concept-master-v3.png",
+      "reason": "The v2 removes the ship, but its long rectangular stone evidence reads as a road or floor and the keel cue is only a generic water channel.",
+      "revisionDirection": "Regenerate the canonical Admiral fused into a broad ship-shaped blackwater current with no ordinary ship component and no carried staff or weapon. Place one compact isolated irregular stone shard, no more than one fifth of the canvas width, off to the lower viewer-left with black clearance around every edge. Through that shard cut exactly one deep keel cross-section: a straight central knife groove terminating in a symmetric V-shaped prow notch, unmistakably a keel-shaped ripple rather than a river, crack or channel. The shard floats as subject-bound evidence and is not below the subject as a base. Preserve the raised boardable current edge and committed turn. No road, paving, platform, floor, ground, boat, crew, insignia, text or crop."
+    },
+    {
+      "id": "pearl_lamprey",
+      "sourceCandidate": "pearl-lamprey-concept-master-v2.png",
+      "outputFile": "pearl-lamprey-concept-master-v3.png",
+      "reason": "The v2 wet membrane reads as enormous dorsal and ventral fins attached to the body.",
+      "revisionDirection": "Regenerate the canonical limbless Pearl Lamprey with exactly one ring mouth and central tide pearl. Do not add any fin. Ahead of the body's midpoint, suspend one small complete translucent wet-film rectangle at a clear oblique angle, with four ragged corners and black clearance around its entire perimeter. The body passes through one round opening in that detached film sheet; the sheet never grows from or follows the body contour. On the film only, show faint radial reflection drainage lines converging toward the mouth pearl. Keep the rectangle no taller than twice the body diameter and fully inside frame. No dorsal, ventral, pectoral or tail fin, water plane, puddle, portal glow, scene or crop."
+    },
+    {
+      "id": "brackish_mimic",
+      "sourceCandidate": "brackish-mimic-concept-master-v2.png",
+      "outputFile": "brackish-mimic-concept-master-v3.png",
+      "reason": "The v2 shadow splits into ground-hugging liquid tails and still reads as a contact plane rather than a single suspended true-position ribbon.",
+      "revisionDirection": "Regenerate the canonical Brackish Mimic with the false shoreline and one moving tide line embedded only in its back skin, the tide travelling viewer-right. From the rear edges of both raised webbed feet, attach two short flat black connectors that immediately merge into exactly one broad near-black ribbon. Hold that single ribbon horizontally at ankle-to-calf height and extend it clearly viewer-left, opposite the skin tide. Every part of the ribbon must be visibly suspended with black clearance below; it cannot touch a floor, form a cast shadow, split after merging or resemble water. Pose both feet lifted or crossing in retreat so no ground is implied. No extra shadow, shield, coast, scene, map, text or crop."
+    }
+  ]
+}

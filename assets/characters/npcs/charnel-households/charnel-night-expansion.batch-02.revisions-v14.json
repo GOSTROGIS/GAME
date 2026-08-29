@@ -1,0 +1,20 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v14",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "e385ff46ce8c0e80173814e42c3976bef6106bb6f663e55fbadc7b3a3cc8e0d0",
+  "policy": "Technical correction of the remaining single rank-one measurement defect. Preserve exact topology and every other pixel as closely as possible; no generator may approve its own output.",
+  "assets": [
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v13-rejected.png",
+      "referenceSha256": "0fe50f99330bdf6763be1a0dcecff464bb45e039e7b01a2ad7be8469eac9c6c1",
+      "outputFile": "throat-orchard-concept-master-v14.png",
+      "reason": "The thirteenth candidate shrinks the lower-right cyclic rank-one cuff but it remains visibly wider than the far lower-left rank-two cuff, so the first transition still decreases.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact-count identity anchor. Further shrink only the same lower-right closed bud; preserve its countable closed seam, stalk and all other pixels.",
+      "revisionDirection": "Faithfully preserve exactly one body, every root, exactly TWELVE total attached cuffs, exactly ELEVEN closed and exactly ONE open lower-right ring, all other cuffs and ranks, all attachments, materials, lighting, opaque background and landscape framing. Identify the small CLOSED bud immediately above the open lower-right ring on the thin near-horizontal stalk. Change ONLY this bud. Uniformly reduce it until its OUTER bud height and width are each approximately ONE THIRD (33%) of the far lower-left closed rank-two bud and no greater than forty pixels, while keeping a clearly visible fully shut central seam and a direct flesh attachment to the unchanged stalk. It must be unmistakably the unique smallest closed cuff. Preserve its center, orientation and stalk. Do not change the far lower-left rank-two bud or any of the progressively larger ten-cuff arc. Do not add, remove, merge, move, duplicate, open or close any cuff. Preserve the sole open ring unchanged, shallow, empty and contrary-facing. No tree, branch, stem, pod, fruit, head, extra throat, second opening, mouth behind open ring, floor, scene, notation, text, logo, watermark, transparency or crop. Opaque RGB master, landscape 1536x1024."
+    }
+  ]
+}

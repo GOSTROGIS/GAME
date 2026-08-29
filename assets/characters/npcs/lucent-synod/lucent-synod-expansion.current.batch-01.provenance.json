@@ -1,0 +1,188 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-lucent-synod-expansion-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "promptPackets": [
+    {
+      "path": "assets/characters/npcs/lucent-synod/lucent-synod-expansion.batch-01.prompt.json",
+      "sha256": "4268c9426396d0ed81e2aa81e56ca42a4be4112c736b3eaff376c4ff5f2cfeb5"
+    },
+    {
+      "path": "assets/characters/npcs/lucent-synod/lucent-synod-expansion.batch-01.revisions-v2.json",
+      "sha256": "518459ed161bda8ff7873f93665271708f16bd56b41651137a616a5841f7e3ea"
+    },
+    {
+      "path": "assets/characters/npcs/lucent-synod/lucent-synod-expansion.batch-01.revisions-v3.json",
+      "sha256": "421963ea1272b205fba789c3f5aca9f368bdea272a2c485afe42f28d1c7413a2"
+    },
+    {
+      "path": "assets/characters/npcs/lucent-synod/lucent-synod-expansion.batch-01.revisions-v4.json",
+      "sha256": "8b9008c8f31522919a6b8c410ed21b44dde305bbd17ba01d3d8ca61102bf6373"
+    }
+  ],
+  "records": [
+    {
+      "id": "concept_master.arch_lumen_seraphel_orr",
+      "subjectId": "arch_lumen_seraphel_orr",
+      "familyId": "lucent_procession",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/lucent-synod/arch-lumen-seraphel-orr-v1.png",
+      "sha256": "734211d497574ad74bc2e3cb4c09ecd4bb2d2133b5bed383b26018a4b2c18c96",
+      "bytes": 2049752,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "d3863f929d3d5973cd5962f2febfa769ef104f356b9c6ebc56699693f5f13d2a",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "generate",
+        "outputSha256": "734211d497574ad74bc2e3cb4c09ecd4bb2d2133b5bed383b26018a4b2c18c96"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.canoness_vael_kindly_knife",
+      "subjectId": "canoness_vael_kindly_knife",
+      "familyId": "lucent_procession",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/lucent-synod/canoness-vael-kindly-knife-v2.png",
+      "sha256": "82968872a1f807d516f3c456ad1b02711385d8a26e89648d57279ed153326ee4",
+      "bytes": 1997138,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "4e0264caa1fc9e831678267045821aae9bd98a3020938596d8bfe3c96a114048",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "82968872a1f807d516f3c456ad1b02711385d8a26e89648d57279ed153326ee4"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.deacon_halix_bell_of_noon",
+      "subjectId": "deacon_halix_bell_of_noon",
+      "familyId": "lucent_procession",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/lucent-synod/deacon-halix-bell-of-noon-v2.png",
+      "sha256": "3b7091626930f5485fbbe1012716ecbd04ece652d1532ae8e828bfa7ea4b7a33",
+      "bytes": 2005352,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "2da5d050c8fa6a6fc1c4e8a0e5bbff486099c41f7056b34b8f8e6fa7d254d752",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "3b7091626930f5485fbbe1012716ecbd04ece652d1532ae8e828bfa7ea4b7a33"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.saint_vespera_second_shadow",
+      "subjectId": "saint_vespera_second_shadow",
+      "familyId": "lucent_procession",
+      "rank": "principal",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/lucent-synod/saint-vespera-second-shadow-v3.png",
+      "sha256": "8a6ced889dcc05396904aac859f502c3e8ef134fa145a350e768deb0f2a58381",
+      "bytes": 1462270,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "d128f12186887a0ea69d79a5599c887e8124d28495c72fa2e6907fc16a14ecaa",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "8a6ced889dcc05396904aac859f502c3e8ef134fa145a350e768deb0f2a58381"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.apse_seraph",
+      "subjectId": "apse_seraph",
+      "familyId": "lucent_procession",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/lucent-procession/apse-seraph-v2.png",
+      "sha256": "e40701d605da6662e1c06227620281a9d290c53e08e01f2a229443595f9584c9",
+      "bytes": 1510290,
+      "dimensions": { "width": 1024, "height": 1535 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "e7b9ba4dd85c6e31c705cba58e8be6bf2fa73e7ec42378217891e9f4abdca0a7",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "e40701d605da6662e1c06227620281a9d290c53e08e01f2a229443595f9584c9"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.misericord_of_borrowed_pain",
+      "subjectId": "misericord_of_borrowed_pain",
+      "familyId": "lucent_procession",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/lucent-procession/misericord-of-borrowed-pain-v1.png",
+      "sha256": "ba7ae9663cc5586d9bd331ea30bf918862cdd4ee66d57d792bb0bfbe6cbf16a1",
+      "bytes": 1985745,
+      "dimensions": { "width": 1122, "height": 1402 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "d6765787bdad75aeb369822b5da07fb1fb7ce996c6817158d66265fcf05e5966",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "generate",
+        "outputSha256": "ba7ae9663cc5586d9bd331ea30bf918862cdd4ee66d57d792bb0bfbe6cbf16a1"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

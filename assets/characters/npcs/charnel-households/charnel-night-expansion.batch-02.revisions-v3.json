@@ -1,0 +1,31 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-02-revision-v3",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "947f38e8c51f49419fdad3bd5455334fbfb3cca4df4190c19cfcac3c7ce45683",
+  "previousRevisionSha256": "85ac24546420a24b743814acef002cc68b379d709366720e5055d0baf58efbe5",
+  "assets": [
+    {
+      "id": "ilyen_doorborn_outer_age",
+      "reference": "ilyen-doorborn-outer-age-concept-master-v2-rejected.png",
+      "outputFile": "ilyen-doorborn-outer-age-concept-master-v3.png",
+      "reason": "The small scale is now correct, but the second candidate depicts a closed constructed brass door leaf rather than one open living rib-door with a near-black anatomical aperture and lintel wear.",
+      "revisionDirection": "Revise the supplied Ilyen Doorborn source while preserving her exact identity, dark skin, hair, composed three-quarter civic posture, formal black coat, two empty hands, full-body framing, and the current small sternum scale. Remove the entire constructed brass door leaf, panel, handle, rivets, lock, ordinary hinge hardware, and badge-like frame. In the same high-sternum location create exactly one SMALL OPEN LIVING RIB-DOOR grown through her coat and body: two or three restrained black-nacre rib segments on each side curve into a shallow anatomical arch, with a complete inner lintel and one empty near-black aperture. The entire rib-door remains no more than one fifth of torso height; the rest of the coat and body stay intact. Place the canonical generations of hand-height evidence only on the inner lintel as a sparse group of clearly separate short plain scratch notches with unequal heights and spacing. The scratches must not form dense rows, letters, numerals, words, calendar marks, decorative script, or symbols. Keep no other Charnel mutation. No physical door, extra aperture, resident, village, room, architecture, paper, banner, floor, text, logo, or watermark. Opaque RGB master, portrait 1024x1536."
+    },
+    {
+      "id": "throat_orchard",
+      "reference": "throat-orchard-concept-master-v2-rejected.png",
+      "outputFile": "throat-orchard-concept-master-v3.png",
+      "reason": "The second candidate is lower and more anatomical but contains only nine closed forms plus one open form, and its remaining ovoid pods still read botanically.",
+      "revisionDirection": "Revise the supplied Throat Orchard source while preserving exactly one low broad rooted black-nacre body, suspended anatomical roots, landscape framing, cold raking light, and near-black isolation. Rebuild and RECOUNT the canonical total as exactly TWELVE throat-fruits: exactly ELEVEN closed throat cuffs plus exactly ONE open breathless cuff. For reliable counting, arrange the eleven closed cuffs in one clean shallow perimeter arc as exactly five on the viewer-left, exactly one at the center apex, and exactly five on the viewer-right; place the one open cuff lower at the viewer-right as the twelfth and only exception. None may be hidden or overlap another. Every closed form must be a short thick laryngeal neck/collar growing directly from the shared body, ending in soft pinched glottal folds; do not use an oval pod, fruit skin, seed seam, woody stem, branch, bud, or tree shape. Across the eleven closed cuffs, show one clockwise inhale sequence through progressively increasing neck distension while every glottal fold remains shut. The open twelfth is motionless, faces contrary to the sequence, and contains only shallow black absence with no mouth behind it, teeth, tongue, face, or head. All roots remain inside canvas and touch no floor. No thirteenth form, botanical anatomy, human head, text, notation, scene, logo, or watermark. Opaque RGB master, landscape 1536x1024."
+    },
+    {
+      "id": "corridor_maw",
+      "reference": "corridor-maw-concept-master-v2-rejected.png",
+      "outputFile": "corridor-maw-concept-master-v3.png",
+      "reason": "The second candidate removes the limbs and extra aperture, but both large cue panels remain attached to the near outer frame while the distant exit lacks its own attached cue; a pointed black shape also occupies the exit.",
+      "revisionDirection": "Revise the supplied Corridor Maw source while preserving the exact single vertical living doorframe body, one deep contained ribbed corridor, one near entrance, one distant exit, all-black clearance, cold raking light, and opaque portrait composition. Remove both current large smooth crescent panels and remove the pointed black occupant/silhouette from inside the distant exit. Add exactly TWO and only two organic attached shadow-angle cues with no other marker: (1) one SHORT ragged matte-black ribbon fused directly into the viewer-left exterior edge of the NEAR ENTRANCE frame, its irregular free end flowing diagonally up-left; (2) one much smaller SHORT ragged matte-black ribbon fused directly into the viewer-right edge of the DISTANT EXIT frame deep inside the corridor, its irregular free end flowing diagonally down-right. The two bound ribbons must visibly occupy opposite attached angles and must have torn asymmetric edges; neither may be a smooth panel, triangle, arrow, chevron, crescent emblem, letter, numeral, sign, icon, detached object, floor shadow, or humanoid silhouette. Keep only restrained closed nacre tooth ridges around the distant exit edge. No second corridor, extra aperture, limbs, hands, hallway scene, floor, fortress, soldiers, entrails, text, logo, or watermark. Opaque RGB master, portrait 1024x1536."
+    }
+  ]
+}

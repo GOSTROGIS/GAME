@@ -1,0 +1,129 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "veil-coast-kin-masters-batch-01",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast",
+  "formsInCanonicalOrder": [
+    "coral_knuckle",
+    "moonless_netling",
+    "lantern_gilled_raider",
+    "undertow_harpooner",
+    "reefwife_karra"
+  ],
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/veil-coast-plate.png"
+  ],
+  "referenceImage": {
+    "path": "assets/bestiary/veil-coast-plate.png",
+    "sha256": "663b25f11699b99d995ecfbbc767e24d0c8302fbeb4dbd749e3e480f818b1ac9",
+    "width": 1024,
+    "height": 1536
+  },
+  "referencePolicy": "The inspected plate controls only the shared Veil-Coast Kin silhouette, palette, materials, lantern-organ construction, finish, and lighting. Each canonical form controls its own anatomy and mechanic evidence. Do not copy the plate subject's exact pose, staff, handheld lantern, hood, or other props unless the form record requires them.",
+  "promptCompilation": "For each asset, the exact generation prompt is commonDirection followed by two newline characters followed by masterDirection. Neither field may change after the first generation call; corrections require a separate immutable revision packet and a versioned candidate.",
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical individual bestiary production concept master for later 3D design. Use the inspected Veil-Coast Kin plate only as shared family reference. Render exactly one complete original Veil-Coast Kin subject in polished stylized 3D dark-fantasy MMORPG production quality. Preserve the family's tide-born amphibious, asymmetrical swaying silhouette; slick deep-blue skin and webbed extremities where the form's anatomy permits them; layered wet black-coral armor; restrained coral-red branching growths; pearl-gray shell and barnacle nodes; ragged water-dark textile and cord; and cold pale-cyan lantern organs caged into the body. A non-humanoid form keeps its canonical body plan while carrying this same material and palette language. Three-quarter production view, mature narrow anatomy, grounded tactile material density, all extremities and every required mechanic cue visible, centered with generous silhouette clearance. Flat near-black neutral opaque studio backdrop, cold raking studio light, ungraded neutral presentation. Any cue evidence must remain self-contained and visually bound to the subject in empty air rather than becoming an environment. No coast, sea, room, ship deck, floor, ground plane, water plane, terrain, pedestal, cast floor shadow, scene, extra creature, extra person, duplicate subject, caption, UI, text, readable symbol, rune, real religious mark, logo, watermark, franchise resemblance, ordinary pirate, generic fish-person, mermaid, glossy plastic, cute proportions, bright saturation, aura, gore, or exposed entrails. Do not copy the plate's staff, handheld lantern, exact hood, pose, or prop loadout.",
+  "assets": [
+    {
+      "id": "coral_knuckle",
+      "name": "Coral Knuckle",
+      "rank": "regular",
+      "role": "bruiser",
+      "orientation": "portrait-2:3",
+      "masterFile": "coral-knuckle-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/veil-coast/coral-knuckle-v1.png",
+      "canonical": {
+        "anatomy": "A tide scavenger with coral growing over its hands into blunt red hammers. The missing anatomy briefly outlines itself when coral polyps close from wrist to knuckle.",
+        "locomotion": "It crosses ground in one committed weight transfer, then must reassemble its balance; the permission cue is coral polyps close from wrist to knuckle.",
+        "sound": "black coral produces a load-bearing groan, one blunt beat, and a long settling scrape; Reef Pound commits on the first strike/water sound after the gap.",
+        "purpose": "A future frontier hook: tide-born raiders follow a moonless current inland, searching for the Bell's missing echo. This form serves the niche expressed by a tide scavenger with coral growing over its hands into blunt red hammers.",
+        "origin": "A tide scavenger with coral growing over its hands into blunt red hammers.",
+        "mechanic": "Reef Pound",
+        "cue": "Coral polyps close from wrist to knuckle.",
+        "counterplay": "Dodge behind the arm and strike the living coral while compressed."
+      },
+      "masterDirection": "Create one Coral Knuckle in a committed full-body weight transfer that will visibly need recovery. Both real arms terminate in oversized blunt red living-coral hammer hands, with no ordinary fingers protruding beyond either hammer. On the foremost hammer, make the cue legible as a single wrist-to-knuckle sequence of coral polyps progressively closing and compressing toward the knuckle; the compressed living coral remains clearly strikeable from behind the arm. Keep the two hammer hands, webbed feet, caged lantern organs, armor silhouette, and every coral branch fully inside frame. No carried weapon, open human hand, impact scene, opponent, detached coral, extra limb, or floor contact effect."
+    },
+    {
+      "id": "moonless_netling",
+      "name": "Moonless Netling",
+      "rank": "regular",
+      "role": "swarm",
+      "orientation": "portrait-2:3",
+      "masterFile": "moonless-netling-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/veil-coast/moonless-netling-v1.png",
+      "canonical": {
+        "anatomy": "A small amphibian that weaves discarded fishing line into nets for shadows. The impossible structure becomes clearest when knotted lines appear first across your shadow.",
+        "locomotion": "Its bodies move by passing one impulse through the whole colony; the permission cue is knotted lines appear first across your shadow.",
+        "sound": "black coral produces many dry contacts resolving into a single synchronized beat; Shadow Net commits on the first root/hex sound after the gap.",
+        "purpose": "A future frontier hook: tide-born raiders follow a moonless current inland, searching for the Bell's missing echo. This form serves the niche expressed by a small amphibian that weaves discarded fishing line into nets for shadows.",
+        "origin": "A small amphibian that weaves discarded fishing line into nets for shadows.",
+        "mechanic": "Shadow Net",
+        "cue": "Knotted lines appear first across your shadow.",
+        "counterplay": "Step into darkness or burn the knot nearest your feet."
+      },
+      "masterDirection": "Create one small Moonless Netling as a compact amphibian subject, not an insect or ordinary frog, with family black-coral plates, cold caged lantern organs, webbed limbs, and discarded wet fishing line actively controlled by its limbs. Directly beneath and attached to the subject, show one flat near-black subject-shaped shadow token suspended in empty air, not on a floor. A taut fishing-line net must appear across that shadow before it reaches the physical body; make the knot nearest the feet uniquely exposed and breakable. The net and shadow are subordinate subject-bound mechanic evidence, not a second creature or environment. Keep the complete body, every webbed extremity, all loose line ends, shadow edge, and nearest knot fully framed. No boat, fishing scene, water plane, extra netling, ordinary cast floor shadow, text, hook, or bright magic."
+    },
+    {
+      "id": "lantern_gilled_raider",
+      "name": "Lantern-Gilled Raider",
+      "rank": "specialist",
+      "role": "support",
+      "orientation": "portrait-2:3",
+      "masterFile": "lantern-gilled-raider-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/veil-coast/lantern-gilled-raider-v1.png",
+      "canonical": {
+        "anatomy": "Its glowing gills lure blackwater creatures through puddles far too small to hold them. The impossible structure becomes clearest when gill lights pulse while nearby puddles deepen to black.",
+        "locomotion": "It moves by exchanging places with the nearest allied ritual position; the permission cue is gill lights pulse while nearby puddles deepen to black.",
+        "sound": "black coral produces a call-and-response in which the answering voice comes from an ally; Puddle Call commits on the first summon/water sound after the gap.",
+        "purpose": "A future frontier hook: tide-born raiders follow a moonless current inland, searching for the Bell's missing echo. This form serves the niche expressed by its glowing gills lure blackwater creatures through puddles far too small to hold them.",
+        "origin": "Its glowing gills lure blackwater creatures through puddles far too small to hold them.",
+        "mechanic": "Puddle Call",
+        "cue": "Gill lights pulse while nearby puddles deepen to black.",
+        "counterplay": "Extinguish the gills with a close strike or ignite the puddles."
+      },
+      "masterDirection": "Create one Lantern-Gilled Raider whose most legible anatomy is a set of exposed strikeable gill lanterns integrated along neck and upper ribs. Show a single pulse snapshot: alternating gill sacs brighten in restrained cold cyan while multiple shallow blackwater apertures immediately around and bound to the lower silhouette deepen to absolute black despite being far thinner than any creature. Use only incomplete bodyless pressure notches inside those apertures to imply a response; never depict or add summoned creatures. Hold the raider in a poised exchange step with one position subtly vacated by a thin amphibious after-outline, not a duplicate body. Keep all gills, hands, webbed feet, black apertures, and coral armor inside frame. No handheld lantern, puddle scene, ally, extra creature, floor, flame, or cyan aura."
+    },
+    {
+      "id": "undertow_harpooner",
+      "name": "Undertow Harpooner",
+      "rank": "elite",
+      "role": "hunter",
+      "orientation": "portrait-2:3",
+      "masterFile": "undertow-harpooner-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/veil-coast/undertow-harpooner-v1.png",
+      "canonical": {
+        "anatomy": "A hunter whose line is tied to a current rather than a boat. Its body can sustain that arrangement only because the harpoon points aside while a current aligns behind the target.",
+        "locomotion": "It follows the last disturbed trace rather than the target's present body; the permission cue is the harpoon points aside while a current aligns behind the target.",
+        "sound": "black coral produces one testing sound repeated closer whenever its quarry disturbs the ground; Current Harpoon commits on the first pierce/pull/water sound after the gap.",
+        "purpose": "A future frontier hook: tide-born raiders follow a moonless current inland, searching for the Bell's missing echo. This form serves the niche expressed by a hunter whose line is tied to a current rather than a boat.",
+        "origin": "A hunter whose line is tied to a current rather than a boat.",
+        "mechanic": "Current Harpoon",
+        "cue": "The harpoon points aside while a current aligns behind the target.",
+        "counterplay": "Dodge toward the line anchor and cut it during retrieval."
+      },
+      "masterDirection": "Create one Undertow Harpooner with exactly one complete harpoon held visibly off-axis, pointing aside rather than along the attack line. Its retrieval line must run continuously from the harpoon to one clearly exposed cuttable anchor knot embedded in a self-contained shipless blackwater current ribbon that aligns in a different direction behind the subject. The current ribbon is the line's load-bearing anchor and remains suspended in empty air around the silhouette; it is not a boat, wave scene, water plane, animal, or extra figure. Pose the hunter following a disturbed trace with a restrained lateral lean. Keep both hands, webbed feet, harpoon tip, entire line, anchor knot, current ribbon, coral plates, and lantern organs fully visible. No second harpoon, boat, target, shoreline, floor, tangled unreadable line, or crop."
+    },
+    {
+      "id": "reefwife_karra",
+      "name": "Reefwife Karra",
+      "rank": "miniboss",
+      "role": "controller",
+      "orientation": "portrait-2:3",
+      "masterFile": "reefwife-karra-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/veil-coast/reefwife-karra-v1.png",
+      "canonical": {
+        "anatomy": "Karra wears the living reef where her drowned village continues building new rooms. The missing anatomy briefly outlines itself when tiny windows light across the coral on her back.",
+        "locomotion": "It advances only while the surrounding escape geometry is changing; the permission cue is tiny windows light across the coral on her back.",
+        "sound": "black coral produces three spaced warnings, a held absence, then one enclosing note; The Village Grows commits on the first earth/water/trap sound after the gap.",
+        "purpose": "A future frontier hook: tide-born raiders follow a moonless current inland, searching for the Bell's missing echo. This form serves the niche expressed by karra wears the living reef where her drowned village continues building new rooms.",
+        "origin": "Karra wears the living reef where her drowned village continues building new rooms.",
+        "mechanic": "The Village Grows",
+        "cue": "Tiny windows light across the coral on her back.",
+        "counterplay": "Destroy lit rooms to stop matching reef walls from rising in the arena."
+      },
+      "masterDirection": "Create one Reefwife Karra in a back-revealing three-quarter advance. Her back and missing torso anatomy are physically replaced by one integrated living red-and-black coral reef that resembles a compact drowned village only through many small room cavities grown into the carapace; it must not become a separate town or landscape. Multiple tiny window apertures light across distinct breakable room growths in restrained cold cyan, visibly outlining the absent anatomy inside. Show three spaced rows of warning windows, one deliberate unlit interval, then one larger enclosing outer room band to echo the controller cadence without adding text or symbols. Keep Karra's face, two arms, webbed feet, full reef carapace, every lit room edge, and lantern organs visible with generous clearance. No detached buildings, human villagers, wall scene, house text, carried prop, floor, or crop."
+    }
+  ]
+}

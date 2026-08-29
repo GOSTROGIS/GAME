@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-02",
+  "policy": "The frozen packet remains authoritative. V16 preserves exact body/count topology and now carries six ordinary contour matches. This revision edits one receiver void only: the bottom viewer-right hourglass pair.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-02/prompt-packet.json",
+    "sha256": "16ffd058dbfd73609fed27836f475873696282f6eb29e4acd2dc2c9793d9d2bc"
+  },
+  "revisions": {
+    "borrowed-saint-v17": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/borrowed-saint-concept-master-v16.png",
+      "sourceSha256": "77316d8d9c29f3c56b6dab6e4a8a7b44e8ae7dfcf97ee5b0ef516fc472afaf20",
+      "reason": "The bottom viewer-right receiver remains a straight rectangular opening instead of copying the adjacent tag's strong waist and flared ends.",
+      "prompt": "ONE-HOLE SURGICAL EDIT on this exact Borrowed Saint v16. Freeze every pixel and design element except the single black receiver void on the BOTTOM MODULE AT VIEWER-RIGHT, immediately viewer-left of the blank strongly waisted hourglass tag. Do not touch the tag. Reshape ONLY that one current plain vertical black rectangular void so its perimeter exactly copies the adjacent tag: broad flat top, sides curving deeply inward to one narrow central waist, then curving outward to a broad flat bottom. The left and right sides must both be strongly concave; top and bottom must be visibly wider than the midpoint. Black backdrop remains visible through the complete opening; surrounding bone is the rim. No rectangle, rounded capsule, side notch, octagon, plaque or internal mark. Preserve the other seven voids, all eight tags/modules, seven folded paths, pelvis mismatch, materials, lighting, canvas and framing unchanged. No extra hole, tag, limb, text, floor, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    }
+  }
+}

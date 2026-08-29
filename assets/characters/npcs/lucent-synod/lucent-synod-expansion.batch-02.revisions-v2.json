@@ -1,0 +1,38 @@
+{
+  "schema": "SableReachExpansionConceptPromptRevisionV1",
+  "batchId": "lucent-synod-expansion-batch-02-revision-v2",
+  "familyId": "lucent_procession",
+  "status": "immutable-before-generation",
+  "basePacketSha256": "6f50d6ec17ceca3f68b08a7b069a8b9a09410ec3fe76aa966c5890f9675c07ca",
+  "policy": "Preserve every accepted identity, topology and family feature. Correct only owner-preflight defects. Earlier candidate bytes remain immutable; each correction uses a new versioned filename and only its exact staged source as the edit target.",
+  "promptCompilation": "For each revision, the exact built-in edit prompt is inputRole followed by two newline characters followed by revisionDirection.",
+  "revisions": [
+    {
+      "id": "noon_bailiff",
+      "source": "noon-bailiff-concept-master-v1.png",
+      "sourceSha256": "3a9a6f2a84ebfca0f75f07cdfbb4ad8d67612fc8505788b5775259001089b2e2",
+      "outputFile": "noon-bailiff-concept-master-v2.png",
+      "reason": "V1 establishes the one solid officer, one integrated gavel-limb, one fused advanced shadow and full framing, but copied Saint Vespera's closed door-and-latch recesses into the shadow and added a noncanonical halo behind the Bailiff.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only the independently identified noncanonical shadow decoration and halo; preserve every other visible feature.",
+      "revisionDirection": "Faithfully preserve the exact narrow bronze-white Noon Bailiff, mouthless featureless judicial veil, empty hands, neutral solid-body phase, EXACTLY ONE integrated vertical gavel-limb and transverse gavel-head foot, EXACTLY ONE attached flat near-black prophetic shadow, its broad fused isthmus, complete turn-and-reaching gesture half an action ahead, canvas, scale, materials, cold light and full portrait clearance. Remove the entire gold circular halo and every radial halo spoke behind the solid head, replacing them with clean near-black backdrop. Remove every door-shaped recess, latch, inset, outline, hardware mark and pictorial decoration from the shadow. The shadow must become one uninterrupted matte near-black human-derived silhouette with only restrained sunless-gold wear along its outer edge and joint boundaries; its interior remains featureless and unmarked. Preserve the shadow's exact pose, body proportions, attachment and advanced-facing cue. Do not add or remove a body, limb, foot, gavel part or isthmus. No halo, door, latch, symbol, text, warrant, weapon, rope, floor, cast shadow, second shadow, aura, scene, logo or watermark."
+    },
+    {
+      "id": "unbroken_note_engine",
+      "source": "unbroken-note-engine-concept-master-v1.png",
+      "sourceSha256": "dcfdba8571ffe71a15d3169568d439be77e686035db9fda8db4a26a3363d6d47",
+      "outputFile": "unbroken-note-engine-concept-master-v2.png",
+      "reason": "V1 contains thirteen pale pipes plus one black pipe, fourteen total, instead of the canonical total of thirteen: twelve sounding pale pipes and one black silent exception. The twelve-pipe frost cue is also not explicit.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only the exact pipe count and frost-state cue; preserve every other visible feature.",
+      "revisionDirection": "Faithfully preserve the complete hovering organ-engine, black pressure manifold, gold braces, all existing machinery, the one separate matte-black open-bore silent pipe, portrait canvas, scale, materials, cold light and full clearance. DELETE ONLY the single shortest outermost pale pipe at the extreme viewer-left edge and close only its vacated manifold connection with matching black-glass structure. Do not move, merge, duplicate or resize any other pipe. Final subject must have EXACTLY THIRTEEN total pipes: EXACTLY TWELVE pale sounding pipes in the main organ and EXACTLY ONE matte-black silent pipe. Add one restrained physically crystalline cold frost rim around the open mouth of EACH of the twelve remaining pale pipes, twelve frosted mouths total; keep the single black pipe visibly warm, dry and completely free of frost. Preserve the black pipe's open bore and isolation from the pressure manifold. No fourteenth pipe, mini-pipe, notation, keyboard, performer, text, symbol, ice floor, sound ring, aura, scene, logo or watermark."
+    },
+    {
+      "id": "gold_shutter_penitent",
+      "source": "gold-shutter-penitent-concept-master-v1.png",
+      "sourceSha256": "1d98c4d190fab733a2fcc613f8a249ba7ba2522a6a7f9a1ee6280a68d96c2cb0",
+      "outputFile": "gold-shutter-penitent-concept-master-v2.png",
+      "reason": "V1 passes the hollow kneeling armor, stacked shutters, exactly one narrow opening seam and visibly raised lowest counterweight, but its knees and rear foot sit on an implied studio floor with a broad contact shadow.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only floor/contact isolation; preserve every other visible feature.",
+      "revisionDirection": "Surgical isolation correction of this exact Gold-Shutter Penitent. Freeze the complete hollow ivory-gold armored body, committed kneeling pose, two lower limbs, every stacked torso shutter, EXACTLY ONE lowest shutter beginning to open, EXACTLY ONE narrow confined sunrise seam, all other shutters closed, the exposed lowest counterweight visibly raised above its stop, every pulley and linkage, canvas, materials, light, scale and framing. Remove ONLY every floor, ground plane, contact shadow, horizontal haze and dark surface band beneath the knees, rear foot and weight assembly. Lift the complete subject slightly upward into empty near-black studio space so black clearance is visible below both knees, every toe/heel edge, and all hanging counterweight hardware; no element touches an implied baseline. Do not add, remove, open, close, duplicate or redesign any shutter, weight, limb or light seam except the minimal whole-subject lift needed for clearance. No occupant, second open shutter, second light seam, wing, floor, aura, scene, logo or watermark."
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "pallid-root-communion-batch-01",
+  "status": "generation",
+  "familyId": "pallid_root_communion",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/pallid-root-communion-plate.png"
+  ],
+  "commonDirection": "Use the Pallid Root Communion family plate only as the authoritative family-style and material reference: pale grave roots, mold-gold fungus, grave-black rot, canopy-pulled posture, exposed root nerves, restrained fungal eyes, shared memory, and quiet collective dread. Produce an original canonical form, not a copy of the plate subject. Highly polished stylized 3D dark-fantasy MMORPG production concept render, mature restrained anatomy and material density, one complete subject in three-quarter view, all extremities visible, centered with generous silhouette clearance. Flat near-black neutral opaque studio backdrop, no environment or ground plane. Cold raking light from one side, ungraded neutral. No extra unrelated figures, text, readable symbols, runes, real religious marks, logos, watermark, franchise resemblance, glossy plastic, cute proportions, bright saturation, exposed entrails, or disability shorthand.",
+  "assets": [
+    {
+      "id": "root_fingerling",
+      "rank": "regular",
+      "orientation": "landscape",
+      "masterFile": "root-fingerling-v1.png",
+      "canonical": {
+        "anatomy": "Five pale roots wear a single fingernail and move as one hand.",
+        "locomotion": "It crawls beneath leaf litter and surfaces only at recent footprints.",
+        "sound": "Soil scratches from the inside of each print.",
+        "purpose": "It samples travelers and carries chemical memory to the grave network.",
+        "origin": "A grave root learned the shape of hands from generations of burial gestures.",
+        "mechanic": "Print Sampling",
+        "cue": "The newest footprint sprouts five pale tips.",
+        "counterplay": "Step onto stone or burn the sampled print before emergence."
+      }
+    },
+    {
+      "id": "grave_cap",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "grave-cap-v1.png",
+      "canonical": {
+        "anatomy": "A walking mushroom bears a translucent face inverted beneath its cap.",
+        "locomotion": "It hops toward shadows that have not moved for a full breath.",
+        "sound": "Spores recite soil temperatures in a child's whisper.",
+        "purpose": "It finds stable shade for new communion nodes.",
+        "origin": "A mourner slept against one grave so often that the fungus copied the waiting face.",
+        "mechanic": "Patient Shade",
+        "cue": "The inverted face opens its eyes beneath a motionless shadow.",
+        "counterplay": "Keep shadows moving with light or strike during its rooted hop preparation."
+      }
+    },
+    {
+      "id": "nerve_gardener",
+      "rank": "specialist",
+      "orientation": "portrait",
+      "masterFile": "nerve-gardener-v1.png",
+      "canonical": {
+        "anatomy": "Fine roots emerge from its fingertips and enter the ground as exposed nerves.",
+        "locomotion": "It is reeled forward by impulses traveling through buried root lines.",
+        "sound": "Leaves shiver in patterns resembling whispered questions.",
+        "purpose": "It repairs severed communication roots and reroutes the communion around fire.",
+        "origin": "An abbey gardener grafted grave roots by touch until the signals began pruning him.",
+        "mechanic": "Nerve Graft",
+        "cue": "Two severed root ends pulse toward its extended hands.",
+        "counterplay": "Cross the pulse line or apply fire before the graft closes."
+      }
+    },
+    {
+      "id": "communion_walker",
+      "rank": "elite",
+      "orientation": "landscape",
+      "masterFile": "communion-walker-v1.png",
+      "canonical": {
+        "anatomy": "Several bodies hang like fruit from one inverted walking root crown.",
+        "locomotion": "The crown plants a new limb wherever a hanging body looks.",
+        "sound": "Different mouths complete one sentence in branching order.",
+        "purpose": "It transports mature fungal minds between isolated grave groves.",
+        "origin": "A funeral procession sheltered beneath one tree and was incorporated without interrupting the hymn.",
+        "mechanic": "Gaze Planting",
+        "cue": "One hanging face turns and the overhead root above it hardens.",
+        "counterplay": "Blind that face or move behind the crown before the limb plants."
+      }
+    },
+    {
+      "id": "pallid_sexton",
+      "rank": "miniboss",
+      "orientation": "portrait",
+      "masterFile": "pallid-sexton-v1.png",
+      "canonical": {
+        "anatomy": "A shovel-shaped trunk grows through the torso and branches into coffin-sized roots.",
+        "locomotion": "It digs itself down and rises from graves in age order.",
+        "sound": "Tree rings creak while dates are whispered from newest to oldest.",
+        "purpose": "It integrates new burials and removes remains resistant to communion.",
+        "origin": "A sexton planted one pale root in every grave to remember where the ground had opened.",
+        "mechanic": "Chronological Grave",
+        "cue": "Headstones illuminate from newest date backward.",
+        "counterplay": "Stand at the oldest grave and interrupt the final emergence."
+      }
+    },
+    {
+      "id": "orchard_below",
+      "rank": "boss",
+      "orientation": "landscape",
+      "masterFile": "orchard-below-v1.png",
+      "canonical": {
+        "anatomy": "An underground canopy walks upside down, dangling grave plots as fruit above it.",
+        "locomotion": "It moves by transferring roots between every burial site in the arena.",
+        "sound": "A whole forest exhales from beneath sealed stone.",
+        "purpose": "It seeks to merge every cemetery into one continuous remembering organism.",
+        "origin": "The first grave grove discovered that names decay slower when shared through roots.",
+        "mechanic": "Cemetery Canopy",
+        "cue": "Burial plots lift slightly as pale roots exchange their shadows.",
+        "counterplay": "Sever the three root grafts crossing unconsecrated ground to isolate the canopy."
+      }
+    }
+  ],
+  "cutoutDirection": "After the master receives two independent passes, create a cutout by editing that exact master. Preserve canvas dimensions, pose, design, materials, lighting, scale, placement and silhouette. Remove only the background. Output a real RGBA PNG with alpha 0 outside the subject and at all four corners; do not depict checkerboard, ground, shadow, backdrop, text, logo or watermark."
+}

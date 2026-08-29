@@ -26,7 +26,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:58855fae038aa319a3eea6c612a93a325b256dc0dbc895771b528218cb29cb8f"
+      "generation": {
+        "outputSha256": "58855fae038aa319a3eea6c612a93a325b256dc0dbc895771b528218cb29cb8f",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.mott_vane.cutout.game",
@@ -42,7 +47,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:78b5e26a84c3b3191a4cf722c04add5745c33f4626f7b00ab491e651fd75b9be"
+      "generation": {
+        "outputSha256": "78b5e26a84c3b3191a4cf722c04add5745c33f4626f7b00ab491e651fd75b9be",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.ilse_crow.cutout.game",
@@ -58,7 +68,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:17ab43bf5079436f7d78da7ca31428cd8a7092f99f2cac8f61ad78122fd0385e"
+      "generation": {
+        "outputSha256": "17ab43bf5079436f7d78da7ca31428cd8a7092f99f2cac8f61ad78122fd0385e",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.garran_low.cutout.game",
@@ -74,7 +89,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:5ed242f6356eaf9ce9e401462cef6b43e022a93c13e0d78b3bbeff4a50091295"
+      "generation": {
+        "outputSha256": "5ed242f6356eaf9ce9e401462cef6b43e022a93c13e0d78b3bbeff4a50091295",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.netta_aster.cutout.game",
@@ -90,7 +110,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:9be8409bc155df3823a36e901af54eb65489a2ca56ff3c75ffa90ceba66900d6"
+      "generation": {
+        "outputSha256": "9be8409bc155df3823a36e901af54eb65489a2ca56ff3c75ffa90ceba66900d6",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.orris_pale.cutout.game",
@@ -106,7 +131,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:d98af250d8ef3c0058298875ce3c316a7d14a3d8fa033b5966d8985424e43e00"
+      "generation": {
+        "outputSha256": "d98af250d8ef3c0058298875ce3c316a7d14a3d8fa033b5966d8985424e43e00",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.vellin_the_unwritten.cutout.game",
@@ -122,7 +152,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:8e001af3b3ef743d7c893f4c4d4659f7858ea44b2b0ed8396bb6500ffac4eb76"
+      "generation": {
+        "outputSha256": "8e001af3b3ef743d7c893f4c4d4659f7858ea44b2b0ed8396bb6500ffac4eb76",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.kora_path.cutout.game",
@@ -138,7 +173,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:d030a1ad3d8fd1486d894c826f6cedbab0fab27f35513b5e3cd5dbb98505a751"
+      "generation": {
+        "outputSha256": "d030a1ad3d8fd1486d894c826f6cedbab0fab27f35513b5e3cd5dbb98505a751",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.marn_upland.cutout.game",
@@ -154,7 +194,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:7f92052695e5872cf7ad352c637d5fe5b7002c1c87a7cdb79efec78c11b2cf34"
+      "generation": {
+        "outputSha256": "7f92052695e5872cf7ad352c637d5fe5b7002c1c87a7cdb79efec78c11b2cf34",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.iri_north.cutout.game",
@@ -170,7 +215,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:0a04a6a8801ddf1e1bc1adbb5e281e41823d745bbbb78a2accedabed2f1c3909"
+      "generation": {
+        "outputSha256": "0a04a6a8801ddf1e1bc1adbb5e281e41823d745bbbb78a2accedabed2f1c3909",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.rin_waymark.cutout.game",
@@ -186,7 +236,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:071e29186366940069b62a5a0a2b2a8de043295d0e51839b7a8b1fc7b4a4a58e"
+      "generation": {
+        "outputSha256": "071e29186366940069b62a5a0a2b2a8de043295d0e51839b7a8b1fc7b4a4a58e",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.elo_veer.cutout.game",
@@ -202,7 +257,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:8ad86a17be42f613ca5251e3efabb3bdd65d1e5f942ad1ddee193f93850276c4"
+      "generation": {
+        "outputSha256": "8ad86a17be42f613ca5251e3efabb3bdd65d1e5f942ad1ddee193f93850276c4",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.gatewarden_nhal.cutout.game",
@@ -211,14 +271,19 @@
       "regionId": "hollow_abbey",
       "role": "transparent_cutout",
       "path": "assets/characters/nhal-without-shadow-v1-cutout.png",
-      "sha256": "3722d89895fa354d347c053da67efd64831e271a341729b26bfc5b05b0fffdb6",
-      "bytes": 1939777,
+      "sha256": "2662b627ca7ed879978f12301b66913dd4c298ac747243f35e80e52794625dde",
+      "bytes": 1916168,
       "dimensions": {
         "width": 1024,
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:3722d89895fa354d347c053da67efd64831e271a341729b26bfc5b05b0fffdb6"
+      "generation": {
+        "outputSha256": "2662b627ca7ed879978f12301b66913dd4c298ac747243f35e80e52794625dde",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.moira_quiet.cutout.game",
@@ -234,7 +299,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:088933b5b31f2e27894db714fecfe7c7a465cf7af6cb2b8c744b6f071fde2e15"
+      "generation": {
+        "outputSha256": "088933b5b31f2e27894db714fecfe7c7a465cf7af6cb2b8c744b6f071fde2e15",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.seln_clause.cutout.game",
@@ -250,7 +320,12 @@
         "height": 1536
       },
       "alphaPolicy": "transparent",
-      "sourceImageId": "repository-copy:sha256:b5b2e7f30058c8c02065b5df8dc72f8e182cae0b2a5b6cd721f2fe0f5c62648d"
+      "generation": {
+        "outputSha256": "b5b2e7f30058c8c02065b5df8dc72f8e182cae0b2a5b6cd721f2fe0f5c62648d",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.brother_iven.master.game",
@@ -259,14 +334,19 @@
       "regionId": "hollow_abbey",
       "role": "concept_master",
       "path": "assets/characters/brother-iven-v1.png",
-      "sha256": "200aeaed5657fe773e5df2e640818381341e5f2e38bcbf331c1c55236ccb90d1",
-      "bytes": 2255663,
+      "sha256": "004097c0ef36c82cadf6a56c2f5e77d868e0e87258446839f0a6e2c40f2f5a70",
+      "bytes": 2233827,
       "dimensions": {
         "width": 1024,
         "height": 1536
       },
       "alphaPolicy": "opaque",
-      "sourceImageId": "repository-copy:sha256:200aeaed5657fe773e5df2e640818381341e5f2e38bcbf331c1c55236ccb90d1"
+      "generation": {
+        "outputSha256": "004097c0ef36c82cadf6a56c2f5e77d868e0e87258446839f0a6e2c40f2f5a70",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.aven_tongueless.master.game",
@@ -275,14 +355,19 @@
       "regionId": "hollow_abbey",
       "role": "concept_master",
       "path": "assets/characters/aven-tongueless-v1.png",
-      "sha256": "f7e49fe8915e54e966da9977f9cafb0dff3e3ad8544764a0d892a26bba508446",
-      "bytes": 2162755,
+      "sha256": "105e4c01e21301ab526778bdd5b3d2ea21b8acf1e89e0d6fd1509878cd836369",
+      "bytes": 2140919,
       "dimensions": {
         "width": 1024,
         "height": 1536
       },
       "alphaPolicy": "opaque",
-      "sourceImageId": "repository-copy:sha256:f7e49fe8915e54e966da9977f9cafb0dff3e3ad8544764a0d892a26bba508446"
+      "generation": {
+        "outputSha256": "105e4c01e21301ab526778bdd5b3d2ea21b8acf1e89e0d6fd1509878cd836369",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.teth_varo.master.game",
@@ -291,14 +376,19 @@
       "regionId": "cinderward",
       "role": "concept_master",
       "path": "assets/characters/teth-varo-v1.png",
-      "sha256": "3e65db08ce81314c6b0091d685e388c8ae64d31c2fe1a81ecde43afdb4b0d16f",
-      "bytes": 1885291,
+      "sha256": "9bd3394e1de9819e01e743330b6ea9ca2c692741cc0fadae1e18178ac056b462",
+      "bytes": 1861682,
       "dimensions": {
         "width": 1024,
         "height": 1536
       },
       "alphaPolicy": "opaque",
-      "sourceImageId": "repository-copy:sha256:3e65db08ce81314c6b0091d685e388c8ae64d31c2fe1a81ecde43afdb4b0d16f"
+      "generation": {
+        "outputSha256": "9bd3394e1de9819e01e743330b6ea9ca2c692741cc0fadae1e18178ac056b462",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.maela_voss.cutout.game_unreviewed",
@@ -315,7 +405,12 @@
       },
       "alphaPolicy": "transparent",
       "reviewStatus": "unreviewed",
-      "sourceImageId": "repository-copy:sha256:231bb00e2684615e5d5421537a558de9c09c059c9776b9579f6437ca649ca0ff"
+      "generation": {
+        "outputSha256": "231bb00e2684615e5d5421537a558de9c09c059c9776b9579f6437ca649ca0ff",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     },
     {
       "id": "named_character.bera_claymother.cutout.game_unreviewed",
@@ -332,8 +427,12 @@
       },
       "alphaPolicy": "transparent",
       "reviewStatus": "unreviewed",
-      "sourceImageId": "repository-copy:sha256:3e73338c451c3a905a2611be6fec55e48dfa97c2d7842928a615cbc34d8dce3f"
+      "generation": {
+        "outputSha256": "3e73338c451c3a905a2611be6fec55e48dfa97c2d7842928a615cbc34d8dce3f",
+        "tool": {
+          "name": "built-in image generation"
+        }
+      }
     }
-  ],
-  "externalSourceIdentifiers": "redacted_for_public_repository"
+  ]
 }

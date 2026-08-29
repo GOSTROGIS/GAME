@@ -1,0 +1,17 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "veil-coast-kin-masters-batch-01-revision-v5",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast_kin",
+  "basePacketSha256": "eb97a1a39e7554f1e351d3d9a1e2c23eebd25316ea57b0e7049bd0b00297dc2e",
+  "previousRevisionSha256": "c09bd02fd8eb521abaa52f5860cb0cde63f205fb49eda875fb6432af210d25e6",
+  "assets": [
+    {
+      "id": "lantern_gilled_raider",
+      "reference": "lantern-gilled-raider-concept-master-v4.png",
+      "outputFile": "lantern-gilled-raider-concept-master-v5.png",
+      "reason": "Independent review confirms the count/gills/after-contour but rejects the three glossy horizontal floor-pool apertures.",
+      "revisionDirection": "Faithfully preserve the exact inspected v4 raider, integrated pulsing gills, empty hands, poised step, after-contour, family design, lighting and framing. Remove the three horizontal glossy pools and all long vertical tethers. Replace them with EXACTLY THREE matte-black, paper-thin vertical water-film apertures suspended in empty air at calf-to-knee height: one left of the rear leg, one between the legs, one right of the forward leg. Each is a narrow upright irregular oval seen edge-on, with one small inward pressure dent and no content, reflection, rim glow, base, drip, tether or thing emerging. Leave obvious near-black backdrop clearance below every aperture. No floor, puddle, ground, prop, fish, extra creature, extra aperture or crop."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-01-revision-v5",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "aaa954173a043e9b10637fcd18b2c058425612869d3abfbafe83aff3dc2aa4bb",
+  "previousRevisionSha256": "4fcb64ac8f981aec2f1f4af8ee64d18b35ae6916a6de14854ec8911eb6dff66d",
+  "assets": [
+    {
+      "id": "wound_scribe_keth",
+      "reference": "wound-scribe-keth-concept-master-v3.png",
+      "outputFile": "wound-scribe-keth-concept-master-v4.png",
+      "reason": "Independent review passes the non-book, non-insect body and four separate differently oriented scar flaps, but all four reliefs resolve into readable pictures or symbols: figures/animal, radial sunburst, crowd/heads, and spiral/snail.",
+      "revisionDirection": "Faithfully preserve Keth v3's exact low asymmetric many-jointed scar-tissue body, blind folded front, black quills, landscape silhouette, all extremities, and exactly FOUR separate differently oriented scar flaps with no shared spine. Replace only the raised content inside all four flaps. Each flap must contain one shallow non-pictorial tissue-depth event made from irregular asymmetric tension ridges, broken compression wakes, and interrupted nonconcentric pressure contours. Every relief must remain visibly different in deformation direction yet wholly nonsemantic. Remove every face, head, body, person, animal, shell, spiral, starburst, sun, radial rosette, crowd, scene, icon, pictogram, letter, number, rune and readable symbol. Do not add ink, text or color. Preserve the four clean flap hinges, black gaps, material, cold light, near-black opaque backdrop and full framing. No book, insect, blood, floor or crop."
+    }
+  ]
+}

@@ -1,0 +1,1058 @@
+{
+  "schema": "LfsForwardRepairManifestV1",
+  "auditedOn": "2026-08-29",
+  "scope": "current tracked historical LFS pointer claims and verified repair state",
+  "summary": {
+    "pointerClaims": 125,
+    "exactPayloadsRecovered": 125,
+    "unresolved": 0,
+    "expectedBytes": 69461419,
+    "byClass": {
+      "bridge_runtime": 96,
+      "bridge_seed": 24,
+      "worldgen_source": 5
+    }
+  },
+  "sourceAudits": [
+    {
+      "source": "local authority workspace",
+      "relevantPayloadCandidates": 0,
+      "exactMatches": 0,
+      "evidence": "The supplied GAME workspace contains no GLB, TIF, TIFF, GPKG, KTX2, BLEND, WAV, or FLAC files."
+    },
+    {
+      "source": "older repository exports",
+      "relevantPayloadCandidates": 250,
+      "pointerPlaceholders": 250,
+      "exactPayloadCandidates": 0,
+      "exactMatches": 0,
+      "evidence": "Both available exports contain only 129-133 byte LFS pointer text for the relevant paths."
+    },
+    {
+      "source": "owner-supplied concept-art inventory",
+      "pngFiles": 169,
+      "relevantPayloadCandidates": 0,
+      "exactMatches": 0,
+      "evidence": "The connected owner folder is a raster concept-art recovery source and contains no candidate payload types for these claims."
+    },
+    {
+      "source": "local LFS object cache",
+      "pointerClaimsChecked": 125,
+      "exactMatches": 125,
+      "evidence": "The pinned bridge-runtime generator reproduced all 96 runtime GLBs, the canonical primitive-scene catalogue reproduced all 24 representative seed GLBs, and the pinned GIS generator reproduced all five world-generation sources byte-for-byte. Every payload matched its tracked SHA-256 and byte count before Git LFS cached it."
+    },
+    {
+      "source": "repository LFS store",
+      "pointerClaimsChecked": 125,
+      "exactMatches": 0,
+      "evidence": "The preceding authenticated remote audit returned not-found responses for all current object claims."
+    }
+  ],
+  "policy": {
+    "exactRestoration": "Copy a candidate into LFS storage only after its complete bytes hash to the declared oidSha256 and its length equals bytes.",
+    "mismatchHandling": "Never relabel or fabricate an object. Keep the historical pointer claim, publish any rebuilt payload under a new versioned path and OID, and update active catalog references forward.",
+    "claimRetention": "Do not delete unresolved claims or rewrite Git history."
+  },
+  "records": [
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-ashcloth-awning.glb",
+      "oidSha256": "e2a5ce99d69f9c9d3ca99f8533346d60663d3da13440b19c513471ccfd0e0f05",
+      "bytes": 36636,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-bonewhite-rope-coil.glb",
+      "oidSha256": "dae732da39d9c20dd0fccd2b5be5ef11739a6f2be6539d762fdf66cf46a49550",
+      "bytes": 36632,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-burial-timber-bay.glb",
+      "oidSha256": "a6c1fbdcfc799e8dd44c756c3b0417e027ca9b3a75e1544ea0fa61b4f5f89378",
+      "bytes": 30980,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-crooked-pine-spray.glb",
+      "oidSha256": "21da983506128a5b21b6f8d957420d949fa2c140337995f979482f14945aa67a",
+      "bytes": 51080,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-grave-thyme-clump.glb",
+      "oidSha256": "3894599d15c22c1761d78829ec7ec2aae580f9496bf994c4aac8c7639c4361d3",
+      "bytes": 51084,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-market-cairn-wall.glb",
+      "oidSha256": "0ffa7e79aa0ca9dac5905ed74d603e41aa43294bd3965572b8b3c0a3e677b145",
+      "bytes": 31332,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-mourners-water-trough.glb",
+      "oidSha256": "73622d72ebcf9e19f0b44ae1a6bfb8b1f1bc7296493f065a986456655b96ff1a",
+      "bytes": 47152,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-procession-switchback.glb",
+      "oidSha256": "9d149f24031a12668b5a9c54cdc0ac3fc371e2d6c5875b30ea48c8a56a0dfb03",
+      "bytes": 31704,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-ridge-road-shelter.glb",
+      "oidSha256": "42200605e52d330a14e8a3ee785c8e5f1645e5311d97a4fd4085fa3650b75aeb",
+      "bytes": 31020,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-stone-weight-stall.glb",
+      "oidSha256": "f29ae43132378a3716c52b5354bca3fa4a13bdbf2021345871a1601b8f94b57f",
+      "bytes": 36256,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-unread-tally-post.glb",
+      "oidSha256": "04e56f17d07fbb5a2f4c17fc6440f33f0006f4a6a37e8ba125d2c0df7c630943",
+      "bytes": 43456,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/cairnmarket/cairn-wind-heather-crown.glb",
+      "oidSha256": "4bfdaed9916b4ea0680d72e10663892c55fe29648fc8ed54133f8f7b916394b4",
+      "bytes": 47904,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-ash-mask-stand.glb",
+      "oidSha256": "f20a1bec0f35ea24022e0edadc7842bf1a43a048a030db149e3da33c00d635f4",
+      "bytes": 36600,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-breath-kiln-shell.glb",
+      "oidSha256": "dab615ad49ed629de3a54addb55fca37b7ae18ba9e11eae21c6685f0117b97be",
+      "bytes": 47260,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-breathless-conveyor-rise.glb",
+      "oidSha256": "9fe8c45cd293f4ac3449daaf367a3d706b580736212f3977ad8ab7d52ac5a846",
+      "bytes": 32604,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-cinder-measure-bin.glb",
+      "oidSha256": "40013ee0a10697d5e6ce64faa6a2775429c6148c0e7e8733e0d389f2cf69811e",
+      "bytes": 35972,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-ember-thistle-knot.glb",
+      "oidSha256": "847f9e9383502f7cdfe91b25a9938d0a00cadb9c7bef18858172add0cc30b5ef",
+      "bytes": 51056,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-mineral-hoist-frame.glb",
+      "oidSha256": "b676796ff496cd9f9796c124c28f0a872743f500e1d76e35a8582e3126df5c99",
+      "bytes": 31688,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-mute-bellows-cradle.glb",
+      "oidSha256": "be08b7c763f898c797c92ecd2cac43f30778c3061c9df0f315be22c51c401cd9",
+      "bytes": 36284,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-sealed-ore-casket.glb",
+      "oidSha256": "38f205f8ba01e335fb18548dc5565629682956fd0dc080ddf658d4f106d843f6",
+      "bytes": 36348,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-slag-channel-bay.glb",
+      "oidSha256": "dd843840543c4217c5e6a2cfcbd09ccd4e164491f562880d3cded3f39d9f0c21",
+      "bytes": 30976,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-slag-reed-clump.glb",
+      "oidSha256": "a6a6081305963e97197526a20109c328881466da9d5cd1d97fee393228963dd9",
+      "bytes": 51112,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-smoke-lichen-fan.glb",
+      "oidSha256": "122e54f0f12bd123fa32b0cfb8f01ab38425be19837b5695484dbb82af728717",
+      "bytes": 54240,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/ember-gate/ember-soot-tithe-rack.glb",
+      "oidSha256": "942f8787927d3efdb348163acdea0c4aca5123e8e35f7cf03fadc2184b9a7f3b",
+      "bytes": 36320,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-anchor-shadow-post.glb",
+      "oidSha256": "b180e49ba8986a7cb34679c134491469a5b1f8c04e52bb7d2e5abd4aa8ac1bf7",
+      "bytes": 48472,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-bell-rope-davit.glb",
+      "oidSha256": "7ed3711dce4bea8e4e051e98f0a3b0fd7913c32de619f46011f800b90af78f2a",
+      "bytes": 48468,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-brine-censer.glb",
+      "oidSha256": "dcaa25014606c357e7d4fc063f81b6fce6785241325b1c261e0925d4e3f56acc",
+      "bytes": 36044,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-inward-anchor-walk.glb",
+      "oidSha256": "082dfaabf8fcbccdb6d0d6e96eebc14c7e14b328a043d2b8888d600df6c39e20",
+      "bytes": 32248,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-kelp-rope-tangle.glb",
+      "oidSha256": "9fa4c64c1d6c5908563e202afb782773117655d317644c71594d647b59cc764e",
+      "bytes": 51112,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-quarantine-pier.glb",
+      "oidSha256": "5a8ba4b89aadd52ba645a41d7b814123223f248f96cb8adb10eccb2b74963cf2",
+      "bytes": 31084,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-saltgrass-whorl.glb",
+      "oidSha256": "137adf20fedaa3da4c13ecb32a67d585abcf0de6e093eef340fc9e17a738096f",
+      "bytes": 54276,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-sealed-cargo-cradle.glb",
+      "oidSha256": "09e6272d196a35bb4a0e16487fb8bcb3f0b7c2c5059a270a60a67360d7f55e2f",
+      "bytes": 35932,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-shuttered-store-bay.glb",
+      "oidSha256": "fd74762f54c80f890a7ee3bd3d9264bedd0c204fe0f35eeef072b38f87fac2b4",
+      "bytes": 31664,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-tide-ledger-stone.glb",
+      "oidSha256": "de0ea28b7d28c0a2011954cb70a3b3cb3f6c0ec04b28a07f37a82e1c41f75f95",
+      "bytes": 36404,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-tidewall-breach.glb",
+      "oidSha256": "a004f080df7f7f263f09aa4c56a28af68ee5d507563b05d1bc89fbf6bf98ca8b",
+      "bytes": 31028,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/gloamharbor/gloam-windthorn-clump.glb",
+      "oidSha256": "1e1c3fa9a749e8427b925db364ce6e154d1de0a7dc9b8dd96f306c13ae020ab8",
+      "bytes": 54316,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/ashmoss-braid.glb",
+      "oidSha256": "8c5084b4540e0ac1077284f8403770bb4973414255789e433dab6c8e73a5c87a",
+      "bytes": 51076,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/banked-ember-court.glb",
+      "oidSha256": "215b552e43080e5be70ec9696fe13bcfc9c62458904df71c5cac0a91887e7892",
+      "bytes": 32284,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/blackpine-hook-clump.glb",
+      "oidSha256": "a853ca77a04bf4adb52888fca4b6f7c95509c92b747cd249f82e835234ff78a8",
+      "bytes": 47920,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/broken-name-arch.glb",
+      "oidSha256": "7b72386210fd2d05ebbfad6124b48d54df94acc2024d864aa2c1f357b90c236a",
+      "bytes": 39048,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/chainless-lantern-perch.glb",
+      "oidSha256": "a77ea87a54e384f555723ebd85c5052bcef4576334c565db368481145eaa3f1a",
+      "bytes": 48084,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/cinder-wattle-corner.glb",
+      "oidSha256": "b1824244e2e28e0cee0d37adbceac894c7840fd67f4043bc2b2dd9d3d648f97d",
+      "bytes": 31648,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/cold-reed-knot.glb",
+      "oidSha256": "d9d3817f7b089991135c4522f7021c2600cc5aabcea8098519a13095d8cff702",
+      "bytes": 51096,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/crooked-hold-frame.glb",
+      "oidSha256": "a54bc1c4551124240163c2f05da6ff06b41367d47917876b8bb3594fa09c215a",
+      "bytes": 31668,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/hush-bell-yoke.glb",
+      "oidSha256": "43c9250aaaa24797055ee0b3bb653e195db8dfc8469725b02b8c51caa6f5cb08",
+      "bytes": 36608,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/leaning-gate-bent.glb",
+      "oidSha256": "9d22d03335867ab912d52a2735840be28e1518f5a36f3d89d779f60fc1d59bfe",
+      "bytes": 39064,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/oathless-well.glb",
+      "oidSha256": "374063c3128c6077e2113fcdfb9d1e4aa1a62696a88e721a7ca684f076178a92",
+      "bytes": 47160,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/patched-palisade-run.glb",
+      "oidSha256": "5bd0a2e08052e18e6777cc2f3b13197bad36a181af613d4d758671fd946b5b3e",
+      "bytes": 31304,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/peat-drying-rack.glb",
+      "oidSha256": "6e14c5115639943ea10365e43f92303ac3dd1f8fe51942b47da5108982fb13d2",
+      "bytes": 36052,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/rainwood-stack.glb",
+      "oidSha256": "3111430560e02f8f7e554aa6b723f71f4654a5094464d6be2525364fd03663e4",
+      "bytes": 36292,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/ridge-heather-fan.glb",
+      "oidSha256": "bf5c0e067ed3c79bf0f594c9d8772831b5987f33c56bb73ac49227444f4ef250",
+      "bytes": 51048,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/slate-switchback.glb",
+      "oidSha256": "651e22c64c5540c6294b404fa448b44227776b4526cc44236f323f235b9d9c81",
+      "bytes": 32276,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/split-slate-tally.glb",
+      "oidSha256": "cf033519609dc606a301817ebeec7d1065329627bce6bed75ca3ecfa70949740",
+      "bytes": 35908,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/spring-cup-plinth.glb",
+      "oidSha256": "5c8d5cb8d6fb162962e812f33330bc714bf6c77177df2b08a5e197dc2347963b",
+      "bytes": 47148,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/spring-rill-crossing.glb",
+      "oidSha256": "79eb33cf010443c14d8d04e430ca5f71d837633d3504bd3779ce671fc3166555",
+      "bytes": 32592,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/springcut-lintel.glb",
+      "oidSha256": "14dc054556be44562f303da17acbef97e3f457e31376e82f3f1e983c81ad4ce3",
+      "bytes": 39072,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/travellers-splint-bench.glb",
+      "oidSha256": "ef85c037458cc1b4a1c645a47afa1a8d8db5c7bd0c1af75c9dd862c05a8b214b",
+      "bytes": 35996,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/wall-lichen-shroud.glb",
+      "oidSha256": "cb3af1859bf052c281308245ab2910c40efb953cb865b61f14c8185e6dda6cbe",
+      "bytes": 31676,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/watchers-timber-step.glb",
+      "oidSha256": "4e8fb9685dcfa84a7e0b51de50aadccc824e4e893dd8f8cba2fd59cd5deae3b8",
+      "bytes": 32312,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hearthmere/weathered-slate-bay.glb",
+      "oidSha256": "356aea2a14e5f3e83855bbdc26907549c7b4e1f45928a1a803eae755e65d39f2",
+      "bytes": 31300,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-bone-dust-sieve.glb",
+      "oidSha256": "af9821e1e03dd7c65f5ca0633723e5fa259282ee5b00948551cef55fff532038",
+      "bytes": 36660,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-cave-fern-wheel.glb",
+      "oidSha256": "64f4b8c7f5c08e24d299233ed1cdc244ac23bbc2f19caaa1d6b86d64823fa66a",
+      "bytes": 51148,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-echo-vault-descent.glb",
+      "oidSha256": "4ca696d35f34ecfd5d3c98a4eba62793c4da43151788b0bea513853217e6ed60",
+      "bytes": 32284,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-fungal-thread-cluster.glb",
+      "oidSha256": "b5a2766f253476f8543566688a6ce4c700df9c3e71f2929271f14135a179b359",
+      "bytes": 51128,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-gravewax-stand.glb",
+      "oidSha256": "c13b4f4c196a549587a85ca752e80ea9ef2f59da6a0b6c4e20164d039deec89c",
+      "bytes": 35924,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-ossuary-column.glb",
+      "oidSha256": "b83e466f812530a83a61b6c28db20d62f258805315f359a3947a464ff2c249a3",
+      "bytes": 43436,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-pallid-root-mat.glb",
+      "oidSha256": "84d0d758e67b41c853787c7219b46b1dd7f072259078c85d1b2cf74309f5fd10",
+      "bytes": 54308,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-root-signal-basin.glb",
+      "oidSha256": "70f3b8a232a922b2b9919d15e838f9fd2dd62058c5ccea56a594c90e455d85a2",
+      "bytes": 47168,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-rootbound-arch.glb",
+      "oidSha256": "e9be7b9a428f96f9454bf99d8f496a49f6ac68db180f7fb97791f5efc01ac6fa",
+      "bytes": 37540,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-sealed-name-shelf.glb",
+      "oidSha256": "11a08ba057f9c7a38c017ad8ed47b9c01d1aa4d398a542f44d6a8f9eec15c2c4",
+      "bytes": 35968,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-silent-reliquary-box.glb",
+      "oidSha256": "482672321b398f134d13007abe7c2413a26782b29232d60915b95a7f642fb059",
+      "bytes": 36432,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/hollow-abbey/hollow-sunken-stair-vault.glb",
+      "oidSha256": "a67ff166b28424610aaf05dd63027d4696c34965289cfdfdc078b1122b44b5c4",
+      "bytes": 31060,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-ague-direction-vane.glb",
+      "oidSha256": "a283627ceaaa768f7c78a04ff04dc6ffe880620c4e7d7db5a40e298463386f08",
+      "bytes": 35952,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-brine-dry-basin.glb",
+      "oidSha256": "1c0d14c02bfd0c03d00bf848098bd888eeeb493dfd92f3dc1742baeba7173e72",
+      "bytes": 47244,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-crusted-watch-shelf.glb",
+      "oidSha256": "19d5b962380b37d15fd34682866101547b82b91befa0efbd91127f66f4cda1d0",
+      "bytes": 31676,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-dry-lichen-scroll.glb",
+      "oidSha256": "745eb8163a7a544e39fa020f773c200d36e78a4fd3eda96ab15a71a490dece0e",
+      "bytes": 51112,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-false-horizon-wall.glb",
+      "oidSha256": "9bfcafb209efd8614e12742881b93e878051d88dc528f44e7ed2029c8920a859",
+      "bytes": 31640,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-glasswort-spine.glb",
+      "oidSha256": "4a4788a675b4ff30565b29acf501e02cce587943a3f16d94f5d6e52be9fcc891",
+      "bytes": 54300,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-horizon-measure-stone.glb",
+      "oidSha256": "2537715265d5261dba7cb52e14d9b969d0d1a03aa4dbd5b9802be7bd7f26958d",
+      "bytes": 36016,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-saltbound-pack-cradle.glb",
+      "oidSha256": "5cb585ec0e8b5d23f1c713eedfd9bc56ad02e867d6435e2f8fd7ab7f2e8af820",
+      "bytes": 36780,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-vanishing-causeway.glb",
+      "oidSha256": "c4207ecc78f2caa678b5dbd68040fca4db0c949805e9b15a659e345ee0a07ae4",
+      "bytes": 31384,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-veiled-signal-frame.glb",
+      "oidSha256": "87d0a0899b8c64ae9cd442156b884a4ba4ea3a3867fd0b3fec0d82443e548cea",
+      "bytes": 36308,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-white-thorn-cage.glb",
+      "oidSha256": "7652702bb1c166d08f4e8109bbf953b7395c7ece1b5f5a35213fd9c3c272419c",
+      "bytes": 51008,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/salt-watch/salt-wind-hollow-buttress.glb",
+      "oidSha256": "1025cd6a422059f7ec7f721ec81e00809f59d47d06557491ab5cbd3e96ba1700",
+      "bytes": 31340,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-black-fern-fan.glb",
+      "oidSha256": "cbc5be6543c0be40b0fcc0843519668a89b6f884e23f46b1c8ccede1a56ffd7c",
+      "bytes": 51048,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-drainage-clapper.glb",
+      "oidSha256": "0056e6c173e885066cc9880f249c38582c4cf0e5b0885af2238eea018a8075e1",
+      "bytes": 35928,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-drowned-bridge-turn.glb",
+      "oidSha256": "30abef7d036592ebf58f46f090fb093e278005327b858d34300a840da1e3f20e",
+      "bytes": 32300,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-flood-mark-table.glb",
+      "oidSha256": "72d20319b14c5cd0e31a39577f5b696f6a5037d32a0c5945994ccd5e9e8611aa",
+      "bytes": 36596,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-ghost-reed-sheaf.glb",
+      "oidSha256": "ecfc604f5e24db83e988b3253dd70bbb8581ca6593ece26ceeb0089137efe349",
+      "bytes": 47848,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-mire-lantern-cradle.glb",
+      "oidSha256": "92b74592bd7f9390b67e0ecbed7111b1225b0e93a42a8c683d2a63c6f65ac580",
+      "bytes": 35940,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-pond-depth-stake.glb",
+      "oidSha256": "83acd89734624fa17bb59fa8883cd0e4f7135874029738be73ee5004eb8c77d0",
+      "bytes": 43456,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-reedward-platform.glb",
+      "oidSha256": "d578fb5c6744be6a3cb24684d0b2cdad4264d129002b741a664f866cca82583d",
+      "bytes": 31668,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-sealed-physic-chest.glb",
+      "oidSha256": "6128253301d8d085c186a916009ff8a82a0d4e5af88540b5f0c1df580b484c62",
+      "bytes": 35944,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-sedge-crown.glb",
+      "oidSha256": "5b7f60392e9b92f24e0ea044af8dfc4f4235bac44fe2d351793a143f3f99ec92",
+      "bytes": 51128,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-sluice-house-shell.glb",
+      "oidSha256": "48e4566b0423a45d8a7ba18cd3dbb5984274a894d5bac987b9877ccf85087976",
+      "bytes": 31636,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/runtime/bridge/warden-reed/reed-sunk-walkway.glb",
+      "oidSha256": "7c92acf8f78acd8b512874629bac07135c6b8a3c402ba2d18e940000dccab3f1",
+      "bytes": 31716,
+      "assetClass": "bridge_runtime",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.atm.0205.glb",
+      "oidSha256": "d9c9a4a411403fe994edc62343b8482b539d2d697a7b3b5d2322fb28e443e791",
+      "bytes": 1288,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.bench-0.0194.glb",
+      "oidSha256": "134523db12590631bad4363e9a05698a96df7e8841be62d137d7227e1e8055e1",
+      "bytes": 1696,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.bollard-0.0197.glb",
+      "oidSha256": "300042417db5a728f283a7de48597b9e94330d8dfd95923738cc37aea4bd7668",
+      "bytes": 3104,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.box-truck-blue.0186.glb",
+      "oidSha256": "cdfc27bd3e51797fb826660cf05241de4826a14e35d68422ac8933f152d92d2d",
+      "bytes": 5236,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.bridge-span-0.0224.glb",
+      "oidSha256": "42246b4e0db0734e1f536b4b2951e916a81250b099a4b06ea64260fc94556948",
+      "bytes": 3624,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.bus-shelter-0.0209.glb",
+      "oidSha256": "483b3844f6d9eebb6eb4d46fb046b81980bb5de94ad3ac508a0a04d952957508",
+      "bytes": 2184,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.bush-0.0216.glb",
+      "oidSha256": "bc83417c5c3f07a4f5613ca4bd58a5362bfef3837186cc3bea347314a2c26a53",
+      "bytes": 4280,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.city-bus-blue.0184.glb",
+      "oidSha256": "be8562d6c5d87620e728bcbb8ff4248a89993cd361a762aff3132498292434ad",
+      "bytes": 4084,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.crosswalk.0221.glb",
+      "oidSha256": "9941151591c5fd82c81480d74bfe12c8fd331388d67ac1b4573b8b677bad0314",
+      "bytes": 1172,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.fire-hydrant-0.0196.glb",
+      "oidSha256": "807b8bf4ac34a5affa94a853f6b7a4ac76e82d190943753f9dbf30c7c6e786d0",
+      "bytes": 4512,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.gate-0.0235.glb",
+      "oidSha256": "34ce11852432fc9099a9e6cb36ea2c722e6f8f1f7180fe80100bfa7631f740db",
+      "bytes": 3624,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.kiosk-0.0203.glb",
+      "oidSha256": "4b4e3ed960e572acc3fc451893eff504077659d411e2bb0e82ca380954a2feea",
+      "bytes": 1536,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.litter-bin-0.0195.glb",
+      "oidSha256": "796e8d2dbec6f921deba5f2fc44433bdc228c02350b232828ed86e98fa257c73",
+      "bytes": 4280,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.mailbox-0.0212.glb",
+      "oidSha256": "bcb2000ff10c3ba8ff35fe4fc1c927bbf905b9cfeceb1e99622eee074bce7f85",
+      "bytes": 2160,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.parking-meter.0199.glb",
+      "oidSha256": "9582b4942aa3a0d0dd3675bec6ea7e14d1158e8c19f1d7725dc60888cfe1d648",
+      "bytes": 2232,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.phone-box-0.0206.glb",
+      "oidSha256": "f897d0c1959b82025931ecec1addcc7295ed76c83de61091758f518e4b65a3db",
+      "bytes": 1300,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.post-box-0.0198.glb",
+      "oidSha256": "3dd8e029944ada9516b9d02d410b9d13d6f86c52da4aeae4fc1fcce4397102f5",
+      "bytes": 3344,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.rail-fence-0.0234.glb",
+      "oidSha256": "11a9938a4eed7d844256bea2d3963c26dfd3b48203ee1cdf7655e7dd216dd696",
+      "bytes": 3384,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.sedan-blue.0181.glb",
+      "oidSha256": "cef5af9cfec70b8f01fcaa94c35771a378fd0bb0c9c19e9e4ffe4c95beb7ece4",
+      "bytes": 3816,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.stairs-0.0225.glb",
+      "oidSha256": "a13c286898ac34ba79457b8412ce7cdfd8ce6c49034437f84307ad89062176e9",
+      "bytes": 2180,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.substation-0.0230.glb",
+      "oidSha256": "cbc4afa890247670f53460926fc5c232b4080fb39956bd74de859ee479273891",
+      "bytes": 2176,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.taxi-blue.0182.glb",
+      "oidSha256": "2f9d626412e11bf3cab85e84ded9482924a6db5f604f6fe0f9f75211aa90e489",
+      "bytes": 4060,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.tower-8-storey-sandstone-grid-clear.0178.glb",
+      "oidSha256": "12a39137ed4be89c91fc2c2612ea55d03e9e2b499c6e46786a0ffa8b0dac4aa8",
+      "bytes": 8144,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "assets/3d/seeds/slipcurve/slipcurve-seed.city.vending-machine-0.0204.glb",
+      "oidSha256": "f530e87fea4eb07d891881d086661956fa774cfa886d2cc2f301051f0234cd89",
+      "bytes": 1292,
+      "assetClass": "bridge_seed",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "tools/worldgen/generated/source/dtm-conditioned.tif",
+      "oidSha256": "4ee5308d557f1dc26a1c41d9ee3cfa089d92f3a1a1d70d64c641fab688a3cb9e",
+      "bytes": 6727313,
+      "assetClass": "worldgen_source",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "tools/worldgen/generated/source/dtm-raw.tif",
+      "oidSha256": "a2dc5d9e39d20a2eb75be3eab0f34aaf13cd8510d0ae139db0e6ee63d721d6cf",
+      "bytes": 6826871,
+      "assetClass": "worldgen_source",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "tools/worldgen/generated/source/hydrology-derivatives.tif",
+      "oidSha256": "e56e7a43593f109c0be718a9ac489a40363600596915addc41ef88afc65e60d2",
+      "bytes": 785195,
+      "assetClass": "worldgen_source",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "tools/worldgen/generated/source/sable-reach.gpkg",
+      "oidSha256": "05bf1c9982d015ea4ca8d6d4e0c263b66353abe8b477150dfe53dbd2a9356fe0",
+      "bytes": 266240,
+      "assetClass": "worldgen_source",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    },
+    {
+      "path": "tools/worldgen/generated/source/terrain-derivatives.tif",
+      "oidSha256": "f98cb85bfb551de773cab8ccc0f2364a17be7a3e7ccc8a86ca6bdd36561a404b",
+      "bytes": 50972692,
+      "assetClass": "worldgen_source",
+      "status": "recovered_exact_payload",
+      "forwardAction": "preserve the verified exact payload and require authenticated upload plus clean-clone checkout before release"
+    }
+  ]
+}

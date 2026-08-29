@@ -1,0 +1,26 @@
+{
+  "schema": "SableReachConceptPromptRevisionPacketV1",
+  "batchId": "echo-choir-masters-batch-02",
+  "status": "frozen-before-generation",
+  "revisions": [
+    {
+      "id": "urn_moth",
+      "version": 2,
+      "supersedesAttempt": "urn-moth-concept-master-v1.png",
+      "blockers": [
+        "The first attempt omitted the required target-shoulder landing cue.",
+        "Its two oval wings read primarily as shallow bowls rather than complete thin funeral urns viewed from above."
+      ],
+      "prompt": "Use Image 1 only as the inspected Echo Choir family style/material reference and generate a new Urn Moth master from scratch; do not reproduce an earlier failed candidate. Highly polished stylized 3D dark-fantasy MMORPG production concept on a flat near-black neutral opaque studio backdrop, cold raking light, ungraded, no floor or ground. One complete broad-flying Urn Moth, centered with generous clearance, landscape 1536 by 1024. STRICT ANATOMY: exactly two wings, and each entire wing is visibly one complete thin funeral urn viewed from above in foreshortening, with a countable rim opening, intact tapered ceramic vessel body, narrow foot, and cracks all belonging to that single urn-wing. Do not render ordinary membrane wings, bowls, dishes, or extra wing lobes. The narrow central body is burial-cloth fiber, powdered ceramic, and resonant dust rather than an ordinary insect. NAMED LANDING CUE: directly beneath the moth, include one isolated empty shoulder-shaped landing contour made only from compressed black negative space; one dense pale nonletter name-dust cluster is visibly condensed onto that shoulder contour. It is a cue token, not a person, bust, head, or extra figure. COUNTERPLAY: one second discovered-name dust cluster of a different muted bronze-violet tone pulls the moth's flight path sideways away from that shoulder contour. No written names, epitaphs, letters, numbers, symbols, glyphs, or text. Sparse lateral broken pressure crescents trail behind with large black gaps. No room, reliquary scene, portal, conventional insect, crop, logo, or watermark."
+    },
+    {
+      "id": "breathless_note",
+      "version": 2,
+      "supersedesAttempt": "breathless-note-concept-master-v1.png",
+      "blockers": [
+        "The first attempt's host mark formed a giant question-mark or S-shaped punctuation silhouette."
+      ],
+      "prompt": "Use Image 1 only as the inspected Echo Choir family style/material reference and generate a new Breathless Note master from scratch; do not reproduce the earlier failed candidate. Highly polished stylized 3D dark-fantasy MMORPG production concept on a flat near-black neutral opaque studio backdrop, cold raking light, ungraded, no floor or ground. Exactly one bodyless violet mouth stretches vertically through one floating musical mark. The mouth is a single shallow violet-black chamber with a tarnished bronze lip and no face, head, throat, body, or second mouth. STRICT NON-GLYPH HOST: the floating musical mark is one broad asymmetric vertical resonant-dust scar with an irregular torn perimeter, three unequal blunt side lobes, and several embedded broken ceramic flecks. It must be an amorphous acoustic material shape, not a thin line or curved stroke. It must not resemble an S, question mark, exclamation mark, comma, colon, treble clef, conventional note, staff notation, letter, numeral, rune, icon, logo, or any readable symbol; include no detached dot beneath or above it. AFTERTONE CUE: one thin violet decay trail begins at one compact nonsemantic loud-impact knot and travels in reverse toward the mouth, with one conspicuous empty black interval separating an old dim echo front from the newly bright mouth-front. One smaller quieter decoy knot sits clearly offset and pulls a short subordinate dust branch sideways. Sparse pressure fronts remain incomplete and lateral, never a ring, tunnel, or portal. One isolated complete vertical subject centered with generous clearance, portrait 1024 by 1536. No text, glyph, punctuation, extra figure, scenery, crop, watermark, or floor."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "familyId": "salt_waste",
+  "batchId": "salt-waste-pilgrims-batch-01",
+  "revisionWave": 4,
+  "status": "immutable-before-generation",
+  "policy": "Earlier candidate bytes and revision packets remain immutable; every correction uses a new filename.",
+  "revisions": {
+    "caravan-of-one-concept-master-v4": {
+      "source": "caravan-of-one-concept-master-v3.png",
+      "reason": "The far-right rain-black memory figure remained suspended directly from the shared top crossbar instead of attaching to a specific dangerous pack.",
+      "append": "Preserve exactly one bent pilgrim, the continuous bone-spar frame, all differentiated packs, one compact localized impact dent on every pack, the already direct pack-shadow pairs, at least two clean shadowless packs, family materials, lighting, scale and framing. Remove ONLY the far-right rain-black human figure and its chain from the shared top crossbar, plus any other remaining shadow or tether that originates on a frame bar rather than a pack. Do not replace the removed figure. Treat the adjacent upper-right pack as an additional clean shadowless cut target: no shadow or tether touches it and black backdrop outlines its complete perimeter. Every surviving memory shadow must still attach directly by one short taut tether to its own dangerous pack seam. No frame-hung shadow, new shadow, solid person, extra traveler, cart, floor, text or transparency."
+    }
+  }
+}

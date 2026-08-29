@@ -1,0 +1,328 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-veil-coast-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.admiral_of_the_inland_tide",
+      "subjectId": "admiral_of_the_inland_tide",
+      "familyId": "veil_coast",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/veil-coast/admiral-of-the-inland-tide-v1.png",
+      "sha256": "a0d24c9db0ea021715fce13310ffacc73f5e46cb713c495ffad842d41172e57d",
+      "bytes": 1745138,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a0d24c9db0ea021715fce13310ffacc73f5e46cb713c495ffad842d41172e57d"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.brackish_mimic",
+      "subjectId": "brackish_mimic",
+      "familyId": "veil_coast",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/veil-coast/brackish-mimic-v1.png",
+      "sha256": "4cddc68149bc2ced1684d3fe64cd0f7823bddea4a682688b9b15e9e1a3d35193",
+      "bytes": 1725142,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "4cddc68149bc2ced1684d3fe64cd0f7823bddea4a682688b9b15e9e1a3d35193"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.coral_knuckle",
+      "subjectId": "coral_knuckle",
+      "familyId": "veil_coast",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/veil-coast/coral-knuckle-v1.png",
+      "sha256": "59a6c49fd1e0e245ce413413c39930f35b23a2320f7ad7835007cd30f6f6a38e",
+      "bytes": 1658337,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "59a6c49fd1e0e245ce413413c39930f35b23a2320f7ad7835007cd30f6f6a38e"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.coral_reeve",
+      "subjectId": "coral_reeve",
+      "familyId": "veil_coast",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/veil-coast/coral-reeve-v1.png",
+      "sha256": "8c6f0642d1bf851a16ce1a8c91971981b2ba2049789c567dc5b2055196685f59",
+      "bytes": 2068165,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "8c6f0642d1bf851a16ce1a8c91971981b2ba2049789c567dc5b2055196685f59"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.keel_crawler",
+      "subjectId": "keel_crawler",
+      "familyId": "veil_coast",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/veil-coast/keel-crawler-v1.png",
+      "sha256": "050cd13d44e931dcf445e34d83eb17ee9f5f3af87a353dbe5016cbba80b8f19f",
+      "bytes": 1647829,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "050cd13d44e931dcf445e34d83eb17ee9f5f3af87a353dbe5016cbba80b8f19f"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.lantern_gilled_raider",
+      "subjectId": "lantern_gilled_raider",
+      "familyId": "veil_coast",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/veil-coast/lantern-gilled-raider-v1.png",
+      "sha256": "11a9ddb3c2eaaae573869591d7e54830ecb3679ed37c72d4c1cea0f0786ec270",
+      "bytes": 1913745,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "11a9ddb3c2eaaae573869591d7e54830ecb3679ed37c72d4c1cea0f0786ec270"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.moonless_netling",
+      "subjectId": "moonless_netling",
+      "familyId": "veil_coast",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/veil-coast/moonless-netling-v1.png",
+      "sha256": "6f599a5c93b51233a37b699a27daf656c62fd673f85b4d7ece2662de60778978",
+      "bytes": 1621092,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "6f599a5c93b51233a37b699a27daf656c62fd673f85b4d7ece2662de60778978"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.pearl_lamprey",
+      "subjectId": "pearl_lamprey",
+      "familyId": "veil_coast",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/veil-coast/pearl-lamprey-v1.png",
+      "sha256": "fb5cc80f9210847c876dbe0a8728c77b39beb14489a3b56ebe0706712095ace4",
+      "bytes": 1311387,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "fb5cc80f9210847c876dbe0a8728c77b39beb14489a3b56ebe0706712095ace4"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.reefwife_karra",
+      "subjectId": "reefwife_karra",
+      "familyId": "veil_coast",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/veil-coast/reefwife-karra-v1.png",
+      "sha256": "f4d281ea0156360a8267a4430fc1b99798c05c2aabe18b578a8240cceab93adc",
+      "bytes": 1871908,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "f4d281ea0156360a8267a4430fc1b99798c05c2aabe18b578a8240cceab93adc"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.undertow_harpooner",
+      "subjectId": "undertow_harpooner",
+      "familyId": "veil_coast",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/veil-coast/undertow-harpooner-v1.png",
+      "sha256": "0558281028306808ef8365aed6ce02f91bce9f5606a9f0457b573864fcd80257",
+      "bytes": 914455,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "0558281028306808ef8365aed6ce02f91bce9f5606a9f0457b573864fcd80257"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

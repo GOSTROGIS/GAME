@@ -1,0 +1,13 @@
+export const NARRATIVE_TARGETS: Readonly<Record<string, unknown>>;
+export const QUEST_AUTHORING_LAW: Readonly<Record<string, unknown>>;
+export const WORLD_PREMISE: Readonly<Record<string, unknown>>;
+export const COSMIC_FACTIONS: readonly unknown[];
+export const EXPANSION_PRINCIPALS: readonly unknown[];
+export const QUEST_SUPPORT_CHARACTERS: readonly unknown[];
+export const EXPANSION_CHARACTERS: readonly unknown[];
+export const EXPANSION_CREATURES: readonly unknown[];
+export const ALIGNMENT_HOOKS: readonly unknown[];
+export const EXPANSION_ITEMS: readonly unknown[];
+export const EXPANSION_QUESTS: readonly unknown[];
+export function questSimilarity(left: unknown, right: unknown): number;
+export function validateNarrativeExpansion(input?: Readonly<Record<string, readonly unknown[]>>): unknown;

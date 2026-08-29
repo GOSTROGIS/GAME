@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "familyId": "ossuary_vermin",
+  "batchId": "ossuary-vermin-masters-batch-02",
+  "policy": "The frozen packet remains authoritative. V15 has exact body/count topology and five ordinary contour matches. This revision edits one receiver void only: the viewer-right chamfered-rectangle pair, third module down.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/ossuary-vermin/batch-02/prompt-packet.json",
+    "sha256": "16ffd058dbfd73609fed27836f475873696282f6eb29e4acd2dc2c9793d9d2bc"
+  },
+  "revisions": {
+    "borrowed-saint-v16": {
+      "source": "work/concept-art-production/ossuary-vermin/batch-02/borrowed-saint-concept-master-v15.png",
+      "sourceSha256": "1494949504b514531724bd7bef2103d0ee3f24fa33f406d00a29fa3d80a6d032",
+      "reason": "The receiver beside the viewer-right chamfered rectangular tag remains a plain rectangle instead of copying the tag's four clipped corners.",
+      "prompt": "ONE-HOLE SURGICAL EDIT on this exact Borrowed Saint v15. Freeze every pixel and design element except the single black receiver void on the THIRD MODULE DOWN AT VIEWER-RIGHT, immediately below the now-correct one-side-notched pair and immediately viewer-left of the blank tall tag with four diagonally clipped corners. Do not touch the tag. Reshape ONLY that one current plain black rectangular void so its perimeter exactly copies the adjacent tag: a tall chamfered rectangle with straight top, bottom, left and right segments and exactly FOUR clearly diagonal clipped corners, producing an eight-edge outline. Black backdrop remains visible through the opening; surrounding bone is the rim. No rounded corners, no side notch, no hourglass waist, no octagon, no plaque or internal mark. Preserve the other seven voids, all eight tags/modules, seven folded paths, pelvis mismatch, materials, lighting, canvas and framing unchanged. No extra hole, tag, limb, text, floor, logo or watermark.",
+      "expectedTechnical": {
+        "width": 1024,
+        "height": 1536,
+        "alphaPolicy": "opaque"
+      }
+    }
+  }
+}

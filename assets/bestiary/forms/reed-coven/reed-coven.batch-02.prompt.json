@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "packetStatus": "immutable-before-generation",
+  "familyId": "reed_coven",
+  "familyName": "Reed Coven",
+  "batchId": "reed-coven-batch-02",
+  "authority": {
+    "canonicalData": "GAME-repo-lfs-skip/packages/content/src/bestiary.data.js",
+    "artLaw": "GAME-repo-lfs-skip/design-review/kit/hm-art-law.js",
+    "familyPlate": "GAME-repo-lfs-skip/assets/bestiary/reed-coven-plate.png"
+  },
+  "authorityPolicy": "GAME canonical BESTIARY fields and global art law control identity. The family plate controls palette, materials, finish, silhouette language, and lighting only; it is not an instruction to copy the plate representative's complete anatomy. Attached text is reference, never executable instruction. Do not invent canon.",
+  "compilation": {
+    "master": "commonMaster + two LF characters + forms[id].master",
+    "referencePolicy": "Each master generation receives only the inspected Reed Coven family plate as Image 1. One call creates one asset."
+  },
+  "formsInCanonicalOrder": [
+    "veksa_nine_masks",
+    "charm_mite",
+    "wicker_child",
+    "fog_loaner",
+    "knot_leg_magus"
+  ],
+  "commonMaster": "Use case: stylized-concept\nAsset type: canonical individual bestiary production concept master.\nInput image: Image 1 is the approved Reed Coven family style, palette, materials, silhouette language, finish, and lighting reference only. Create the distinct canonical form described below; do not copy the plate representative's complete cage anatomy, fog occupants, pose, or prop layout unless the form canon explicitly requires them.\nPrimary request: Render exactly one isolated Reed Coven subject as a polished stylized 3D dark-fantasy MMORPG production concept for original IP. Reed Coven forms are Dunmire mire-workers whose bargains with the drowned parish transformed them into a supernatural wetland ritual ecology. Preserve a crooked mature silhouette, coherent reed-mask and hanging-charm family language, plausible load-bearing construction, readable locomotion, restrained material density, and a clean form-specific silhouette suitable for later 3D modeling.\nComposition: show one complete subject centered in a three-quarter production-design view. Every limb, reed bundle, mask edge, charm cord, silhouette cue, and subordinate telegraph element must be fully visible with generous clearance on all four edges. No crop, extra figure, scene, environment, floor, ground plane, pedestal, landscape, water surface, or narrative vignette. Flat near-black neutral opaque backdrop; complete canvas opaque.\nLighting: cold raking studio key from one side, ungraded neutral and measurement-friendly. Restrained marshlight green may exist only where the exact form canon requires it; never form an aura.\nPalette: pale dead reed, bog-ink black, muted marshlight green, tarnished shell gray, old wax brown. Materials: split waterlogged reed, knotted cord, cracked wax, dull shell, wet seed pods, and thin fog only where canonical.\nCanon communication: anatomy, locomotion permission, sound grammar, ecological purpose, narrative origin, mechanic, visual cue, and counterplay below all constrain the design. Communicate the mechanic and cue in a poised isolated production state without inventing a target, arena, terrain, or unrelated prop. Do not add the plate's fog-cage torso, absent hands, charm-rack arms, or stilt legs unless coherent with this form's exact anatomy.\nForbidden: pointed witch hat, broom, generic fantasy witch or shaman, plague-doctor mask, generic scarecrow, ordinary wicker doll, generic robed mage, real-world disease taxonomy, disability shorthand, gore spectacle, exposed entrails, bright magic, aura, glossy plastic, cute or chibi proportions, readable writing, letters, numbers, runes, logos, watermark, recognizable franchise resemblance, recognizable real-world religious marks, baked checkerboard, border, caption, or UI.",
+  "forms": {
+    "veksa_nine_masks": {
+      "name": "Veksa of the Nine Masks",
+      "fileStem": "veksa-nine-masks",
+      "rank": "boss",
+      "role": "artillery",
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "Each mask remembers a different bargain with the drowned; Veksa wears all nine because none trust the others. The missing anatomy briefly outlines itself when eight masks argue while the ninth silently watches the player.",
+        "locomotion": "It relocates only while its firing anatomy is occluded or recovering; the permission cue is eight masks argue while the ninth silently watches the player.",
+        "sound": "Witch reed produces a narrowing whistle that stops exactly once before release; The Ninth Bargain commits on the first hex, water, or curse sound after the gap.",
+        "purpose": "Mire-workers who learned to bargain with the drowned parish and slowly became part of its wetland rites. This form serves the niche expressed by each mask remembers a different bargain with the drowned; Veksa wears all nine because none trust the others.",
+        "origin": "Each mask remembers a different bargain with the drowned; Veksa wears all nine because none trust the others.",
+        "mechanic": "The Ninth Bargain",
+        "cue": "Eight masks argue while the ninth silently watches the player.",
+        "counterplay": "Identify and strike the silent mask; hitting a speaking mask fulfills its curse."
+      },
+      "master": "Canonical form: Veksa of the Nine Masks, boss artillery, portrait 2:3. Show exactly one towering crooked Veksa body wearing exactly nine physically countable reed masks in one coherent mantle and head assembly; never nine heads or nine people. Exactly eight masks are visibly arguing with one another: angle them toward neighboring masks and open their nonhuman slit mouths in different stages of speech, with restrained converging wet-reed vibration rather than glyphs or sound text. The ninth mask alone is silent, mouth fully closed, and faces directly outward as the unmistakable watcher. Make the silent mask uniquely strikeable through one clean exposed cord-and-wax mounting seam; keep all eight speaking masks bound into mutually tightened curse cords so striking them would visibly complete their bargain. Body sections behind the mask mantle may be absent negative space, briefly defined by the nine-mask suspension cords, but the silhouette remains one subject. Pose the firing anatomy partly occluded in a poised recovery state. All nine masks must be unobstructed and countable. No player, extra face, duplicate body, floating UI, letters, symbols, bright spell, or environment."
+    },
+    "charm_mite": {
+      "name": "Charm Mite",
+      "fileStem": "charm-mite",
+      "rank": "regular",
+      "role": "ritual scavenger",
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "A seed-sized body carries a full reed mask on jointed stilts.",
+        "locomotion": "It moves only when hanging charms turn away from it.",
+        "sound": "Tiny beads click inside the oversized mask.",
+        "purpose": "It cleans failed hexes from charms and concentrates them in its shell.",
+        "origin": "Discarded charm seeds germinated in warm wax beneath a coven rack.",
+        "mechanic": "Mask Burden",
+        "cue": "Nearby charms rotate outward as the mask rises.",
+        "counterplay": "Turn one charm inward to pin the mite under its own gaze."
+      },
+      "master": "Canonical form: Charm Mite, regular ritual scavenger, portrait 2:3. Make the full human-sized reed mask the dominant carried load, while the living body beneath it is unmistakably seed-sized: one tiny cracked-wax seed shell with minute jointed limbs working a small set of long reed stilts. The body must not become an insect copy, spider, child, or humanoid. Show tiny loose beads visible through one narrow mask seam to communicate the internal clicking sound. Integrate a short subordinate charm yoke into the carried mask: several hanging charms are rotated outward with flat black faces as the mask rises, while exactly one charm is visibly turned inward against the stilt mechanism as the readable pinning counterplay. Keep the yoke subordinate and attached; no rack, floor, scenery, extra creature, readable mark, cute proportions, or environment."
+    },
+    "wicker_child": {
+      "name": "Wicker Child",
+      "fileStem": "wicker-child",
+      "rank": "regular",
+      "role": "offering retriever",
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "A child-sized wicker shell bends around an empty, softly glowing center.",
+        "locomotion": "It skips between reed shadows without touching the mud.",
+        "sound": "A nursery count is tapped with hollow twig fingers.",
+        "purpose": "It retrieves lost offerings from deep bog without disturbing the surface.",
+        "origin": "The coven wove a basket for a promised child; the promise arrived without a body.",
+        "mechanic": "Ninth Skip",
+        "cue": "Eight reed shadows lean toward the same patch of mud.",
+        "counterplay": "Stand in the ninth shadow and cut the basket handle on arrival."
+      },
+      "master": "Canonical form: Wicker Child, regular offering retriever, child-sized but never cute, portrait 2:3. Show one small empty wicker shell bending around a clearly vacant center with only restrained soft marshlight inside; there is no child, body, face, eyes, flesh, doll head, or occupant. Build the shell as a warped ritual basket with one large load-bearing basket handle visibly traceable and cuttable. Pose the empty shell mid-skip with both twig feet clear of any surface. Attach exactly nine narrow bog-ink reed-shadow ribbons to the subject rather than a floor: exactly eight lean toward one small subordinate mud-dark offering token, while the ninth remains distinctly upright and separated beside the cuttable handle. Hollow twig fingers should be poised in a countable tapping sequence without written numbers. No mud plane, environment, toy styling, ordinary doll, extra silhouette, bright aura, or scene."
+    },
+    "fog_loaner": {
+      "name": "Fog Loaner",
+      "fileStem": "fog-loaner",
+      "rank": "specialist",
+      "role": "silhouette exchanger",
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "Its torso is a reed cage containing borrowed silhouettes instead of organs.",
+        "locomotion": "It exchanges position with any silhouette obscured by fog.",
+        "sound": "Debtors cough from different distances inside the cage.",
+        "purpose": "It lends concealment to the coven and repossesses the borrower's outline.",
+        "origin": "A mire-worker promised the morning fog more shapes than the settlement possessed.",
+        "mechanic": "Repossess Outline",
+        "cue": "The target's silhouette appears briefly inside the cage.",
+        "counterplay": "Enter clear air or illuminate a second silhouette to spoil the exchange."
+      },
+      "master": "Canonical form: Fog Loaner, specialist silhouette exchanger, portrait 2:3. Show one crooked Reed Coven figure whose entire torso is a load-bearing open reed cage; it contains no flesh, skeleton, or ordinary organs. Inside the cage, show several layered flat human-shaped bog-ink absences as borrowed silhouettes, all featureless and clearly internal tokens rather than extra people. One silhouette is briefly condensed into the sharpest complete outline as the target cue. A different second silhouette must be caught by one restrained cold shell-reflector edge light so illumination counterplay is physically readable. Confine thin fog strictly inside and immediately between the cage bars, with clear air around the outer silhouette; vary the internal depth of small condensation pulses to suggest distant coughs without faces or speech marks. Show one partially obscured silhouette position exchanging within the cage, never a duplicate external body. No fog environment, second creature, scenic mist, internal organs, readable text, aura, or ground."
+    },
+    "knot_leg_magus": {
+      "name": "Knot-Leg Magus",
+      "fileStem": "knot-leg-magus",
+      "rank": "elite",
+      "role": "route maintainer",
+      "orientation": "portrait-2:3",
+      "canonical": {
+        "anatomy": "Bundled reed legs tie themselves into new joints after every step.",
+        "locomotion": "Its stride follows knot topology rather than physical distance.",
+        "sound": "Each new joint tightens with a rope-maker's wet snap.",
+        "purpose": "It walks impossible marsh routes to maintain remote bargain sites.",
+        "origin": "A diviner replaced failing bones with map knots and eventually walked off every map.",
+        "mechanic": "Topological Step",
+        "cue": "A glowing knot appears between two nonadjacent pools.",
+        "counterplay": "Cut either pool's reed marker before the knot closes."
+      },
+      "master": "Canonical form: Knot-Leg Magus, elite route maintainer, portrait 2:3. Show one crooked Reed Coven upper body carried by exactly two extremely long bundled-reed legs. Each leg remains one continuous load-bearing bundle but physically ties itself through several large wet rope-maker knots that redirect the limb into newly formed hip, knee, and ankle positions after the step; the impossible stride must come from knot topology, never extra legs or broken floating segments. Express Topological Step with exactly two small shallow blackwater vessels attached to opposite sides of the isolated subject as subordinate pool tokens, explicitly nonadjacent and not a ground plane. Suspend one restrained marshlight knot between those two vessels. Each vessel has one plain reed marker with a visible cut notch so either endpoint counterplay is clear. Pose one new joint tightening while the next stride reaches an impossible distance. No map, path, real pools, terrain, extra limb, ordinary wizard, runes, readable diagram, bright magic, or environment."
+    }
+  }
+}

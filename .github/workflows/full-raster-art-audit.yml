@@ -1,0 +1,44 @@
+name: Full raster-art audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 8 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: full-raster-art-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  full-raster-art:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out raster catalog
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - name: Fetch concept-art LFS payloads
+        run: git lfs pull --include="assets/characters/npcs/grave-tithe/**,assets/characters/npcs/unwritten-roads/**,assets/characters/npcs/exact-word/**,assets/bestiary/forms/**" --exclude=""
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install workspace dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: Validate all raster payloads and published provenance
+        run: pnpm test:raster-art

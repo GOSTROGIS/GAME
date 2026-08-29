@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "policy": "Each accepted revision direction is appended to the immutable pre-generation packet. Earlier candidates remain untracked and are never overwritten.",
+  "revisions": {
+    "ropewalker-v2": {
+      "source": "ropewalker-v1.png",
+      "reason": "The first candidate cropped the taut upper rope at the canvas edge.",
+      "append": "Preserve the exact two callused memory-bronze hands, one continuous weather-black pendulum rope, small hollow junction bell, materials, lighting and pose. Extend and reframe only the taut upper rope so its complete visible end is fully inside the portrait canvas with generous top clearance while still pointing toward an unseen attachment. Keep the full lower curved segment and exposed lowest cut point. No head, torso, legs, extra hands, beam, room, floor, shadow, text or transparency."
+    },
+    "memory-carillonneur-v2": {
+      "source": "memory-carillonneur-v1.png",
+      "reason": "The first candidate added bells outside the open ribs and projected the weapon shadow from a handheld bell.",
+      "append": "Preserve the elite ceremonial frame and open rib cage, but make the total bell count in the entire image exactly six, all six separated and suspended inside the ribs. Remove every head, handheld and decorative bell. Exactly one inner bell swings and alone projects exactly one flat rain-black weapon-shaped memory shadow into empty backdrop space. No solid weapon, seventh bell, extra figure, floor, text or transparency."
+    },
+    "dusk-toll-collector-v2": {
+      "source": "dusk-toll-collector-v1.png",
+      "reason": "The first chest memory contained recognizable human figures.",
+      "append": "Preserve the Collector body, open chest bell, incomplete rain-black missing-anatomy outline, materials, lighting and pose. Replace only the chest image with exactly one flat ember-gold nonfigurative memory tableau made from abstract warm shapes, diffuse nested arcs and broken light patches. It must not resemble a person, face, body, animal, object, place, text or event. No additional memory, scene, floor or transparency."
+    },
+    "verdigris-ringer-v2": {
+      "source": "verdigris-ringer-v1.png",
+      "reason": "Independent review found a large separate handheld bell in addition to the canonical chest cavity.",
+      "append": "Preserve the exact Ringer frame, open chest bell cavity and clapper, asymmetrical cold-green growth, narrow upward-rising flake stream, pose, materials, lighting and framing. Remove only the large separate bell and its cords from the right hand; leave that hand empty with no replacement object or new anatomy. No separate handheld bell-body, scene, floor, text or transparency."
+    }
+  }
+}

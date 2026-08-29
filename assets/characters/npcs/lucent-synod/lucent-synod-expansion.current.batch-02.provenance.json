@@ -1,0 +1,130 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-lucent-synod-expansion-batch-02",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "promptPackets": [
+    {
+      "path": "assets/characters/npcs/lucent-synod/lucent-synod-expansion.batch-02.prompt.json",
+      "sha256": "6f50d6ec17ceca3f68b08a7b069a8b9a09410ec3fe76aa966c5890f9675c07ca"
+    },
+    {
+      "path": "assets/characters/npcs/lucent-synod/lucent-synod-expansion.batch-02.revisions-v2.json",
+      "sha256": "19970ed2728f0f532717266c7c5bb5830eda350b6c8bef9ee40d50797688bdbb"
+    },
+    {
+      "path": "assets/characters/npcs/lucent-synod/lucent-synod-expansion.batch-02.revisions-v3.json",
+      "sha256": "56ee854bc7b9e65ab0a4e1ca4265861f044bcb6ba8f4a0836289c79caef06b0f"
+    }
+  ],
+  "records": [
+    {
+      "id": "concept_master.noon_bailiff",
+      "subjectId": "noon_bailiff",
+      "familyId": "lucent_procession",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/lucent-procession/noon-bailiff-v2.png",
+      "sha256": "cdc28e242a72cf0de88d49ad492971ec4f4b85d3836ce8bdc8bdb03d0430c9c5",
+      "bytes": 1091411,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "876227865e98b733ffbb9a4c09fafc43e9d56327b2a125ada81dc8dc90f3b7d9",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "cdc28e242a72cf0de88d49ad492971ec4f4b85d3836ce8bdc8bdb03d0430c9c5"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.unbroken_note_engine",
+      "subjectId": "unbroken_note_engine",
+      "familyId": "lucent_procession",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/lucent-procession/unbroken-note-engine-v3.png",
+      "sha256": "8a89f398ada604b889e488258feea079c383cf6d9a18784edf864fb890780d8d",
+      "bytes": 1963368,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "9a285a556d42c0910fa3ccee37968a2c8fb9c243ba742186291d5d81cf8ab3d2",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "8a89f398ada604b889e488258feea079c383cf6d9a18784edf864fb890780d8d"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.reliquary_of_the_last_breath",
+      "subjectId": "reliquary_of_the_last_breath",
+      "familyId": "lucent_procession",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/lucent-procession/reliquary-of-the-last-breath-v1.png",
+      "sha256": "e6b9188d0b49cec226ad72ac8e649a61f47c8835db699261528a5ef10c2bff1d",
+      "bytes": 2109780,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "27d6fc9c6b0dafac79979d69764b4ae058b094312e8eb56a484cc1cb63e864b3",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "generate",
+        "outputSha256": "e6b9188d0b49cec226ad72ac8e649a61f47c8835db699261528a5ef10c2bff1d"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.gold_shutter_penitent",
+      "subjectId": "gold_shutter_penitent",
+      "familyId": "lucent_procession",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/lucent-procession/gold-shutter-penitent-v2.png",
+      "sha256": "b2d1d60086b2d474715935a6598989f3255e4c55ff8d07901b3c8840e7961fc4",
+      "bytes": 1440262,
+      "dimensions": { "width": 1024, "height": 1536 },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "8cede13543714207801c960e2ac819e9d8e67be30c6355d37756fc066e64b5bf",
+      "generation": {
+        "tool": { "name": "built-in image generation" },
+        "mode": "reference edit",
+        "outputSha256": "b2d1d60086b2d474715935a6598989f3255e4c55ff8d07901b3c8840e7961fc4"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

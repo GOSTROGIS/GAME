@@ -1,0 +1,125 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "hush-order-masters-batch-02",
+  "status": "immutable-before-generation",
+  "familyId": "hush_order",
+  "formsInCanonicalOrder": [
+    "abbot_of_exact_words",
+    "dust_novice",
+    "mute_porter",
+    "pause_inquisitor",
+    "comma_blade"
+  ],
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/hush-order-plate.png"
+  ],
+  "referencePolicy": "The inspected Hush Order plate controls family palette, materials, finish, restrained silhouette language, and lighting. Canonical GAME data and the global art law control anatomy and mechanic cues. The plate representative's branched or obscured cord geometry must not be copied. Each generation receives only that inspected plate as its visual reference.",
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical individual bestiary production concept master for later 3D design. Render exactly one complete original Hush Order subject in polished stylized 3D dark-fantasy MMORPG production style, three-quarter view, centered with generous clearance. Flat near-black neutral opaque studio backdrop; cold raking studio light; ungraded measurement-friendly presentation; no environment, abbey, floor, ground plane, pedestal, cast floor shadow, scene, extra creature, extra full-size person, caption, UI, logo, watermark, franchise resemblance, bright magic, aura, gore, exposed entrails, generic evil monk, mummy, wearable mask over a head, ordinary skeleton, or ordinary body under cloth. The family skeleton is ONE AND ONLY ONE uninterrupted thick braided CLOSED prayer cord shaped as a single perimeter curve. Every point of the braid has exactly two neighbours. The same physical cord is fully traceable without occlusion: inside one unmistakably empty stitched linen head shell, down a short throat/spine, bending into the viewer-left shoulder with no central torso continuation, along the left arm, visibly through and past the left wrist, immediately down the left outer leg, around the left foot, across one low front bridge, around the right foot, up the right outer leg, visibly through and past the right wrist, along the right arm and shoulder, then closing through exactly one upper return knot onto the short throat/spine. Hands are threaded at wrist pass-through points and never terminate the braid. No branch, endpoint, fork, T/Y/X junction, crossing, separate limb rope, waist cord, pelvis cord, parallel second cord, or hidden join. Linen is absent from chest, abdomen, shoulders and inner arms, leaving broad black negative-space gaps. Restrained frayed linen and worn verdigris panels hang from sparse knots without hiding any route. The head is an empty stitched shell opened widely across its lower half into pure black vacancy; there is no face-like volume behind it. Palette: chalk linen, worn verdigris, bloodless gray where form canon requires it. Materials: grounded frayed linen, salt-stiff cord, worn verdigris strips and dry wax stitching. Absolute quiet; no magical glow. Readable writing is forbidden unless canon explicitly requires word evidence; even then show only blank word-shaped evidence with no real language, alphabet, rune, number, symbol or legible punctuation.",
+  "assets": [
+    {
+      "id": "abbot_of_exact_words",
+      "name": "Abbot of Exact Words",
+      "rank": "boss",
+      "role": "duelist",
+      "orientation": "portrait-2:3",
+      "masterFile": "abbot-of-exact-words-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/hush-order/abbot-of-exact-words-v1.png",
+      "canonical": {
+        "description": "The abbot reduced his identity to a single flawless sentence and imprisoned it behind his teeth.",
+        "mechanic": "Sentence of Ending",
+        "tags": [
+          "command",
+          "radiance",
+          "curse"
+        ],
+        "cue": "Words appear one by one around the arena rim.",
+        "counterplay": "Interrupt the grammar by standing on the wrong word, changing the sentence's effect.",
+        "phaseText": "Arena words alter his command as the sentence nears completion.",
+        "drop": "abbots_final_clause"
+      },
+      "masterDirection": "Create one distinct Abbot of Exact Words on the mandatory one-cord perimeter anatomy. Preserve the empty linen head shell, but suspend one sealed dry ivory tooth gate across its black lower opening; behind that gate, imprison exactly one narrow flawless blank sentence-strip as a single continuous raised rhythm with no letters, language, glyphs or readable marks. Do not add a skull, lips, face, second sentence or flesh. Around the outer silhouette, attach one shallow incomplete arc of separate blank wax word-blocks as subordinate phase evidence, each block unlettered and nonalphabetic; make exactly one block visibly misaligned and physically reachable as the wrong-word interruption point. The blocks are subject-bound tokens in empty air, never an arena, floor or caption. Hold the boss in a restrained duelist commitment while keeping the one-cord route, wrist pass-throughs, low bridge, upper return knot, tooth gate, sentence-strip, tokens and every extremity fully readable. No actual word, letter, rune, number, punctuation glyph, mouth volume, book, weapon, arena rim, command beam or scene."
+    },
+    {
+      "id": "dust_novice",
+      "name": "Dust Novice",
+      "rank": "regular",
+      "role": "unassigned",
+      "orientation": "portrait-2:3",
+      "masterFile": "dust-novice-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/hush-order/dust-novice-v1.png",
+      "canonical": {
+        "anatomy": "Its joints are gaps held apart by compact rings of prayer dust.",
+        "locomotion": "It completes movements only while no one speaks.",
+        "sound": "The gaps emit the faint noise of a page being turned underwater.",
+        "purpose": "It collects footprints from forbidden abbey passages.",
+        "origin": "A novice vowed to leave no trace and eventually became the absence between traces.",
+        "mechanic": "Silent Completion",
+        "cue": "Dust rings tighten around every separated joint.",
+        "counterplay": "Use a shout or bell to interrupt the motion before contact."
+      },
+      "masterDirection": "Create one distinct Dust Novice using the mandatory one-cord perimeter anatomy. At every anatomical turn that functions as a joint, bend the continuous cord around a compact ring of dry chalk prayer dust so each joint contains a clean black central gap while the same cord remains unbroken around the ring. Every compact dust ring is visibly tightening, with one narrow open seam remaining as the interruptible motion state. The rings are powdery subject-bound structures, never glowing halos. Show the novice midway through one otherwise incomplete silent step, with one heel suspended. Attach a few tiny blank footprint-shaped dust impressions to the lower linen hem as collected evidence; they are not on a floor and contain no toes from an extra figure. Keep all joint gaps, rings, one-cord route, hands, feet, upper return knot and low bridge visible. No bell, speaker, sound glyph, underwater scene, ground footprints, text or extra body."
+    },
+    {
+      "id": "mute_porter",
+      "name": "Mute Porter",
+      "rank": "regular",
+      "role": "unassigned",
+      "orientation": "portrait-2:3",
+      "masterFile": "mute-porter-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/hush-order/mute-porter-v1.png",
+      "canonical": {
+        "anatomy": "A stone doorway hangs from its shoulders where the torso should be.",
+        "locomotion": "It sidesteps so the doorway always faces the nearest trespasser.",
+        "sound": "Footfalls sound on the far side of the empty frame.",
+        "purpose": "It relocates sealed thresholds within the abbey after dark.",
+        "origin": "The porter carried a forbidden door until the wall forgot where it belonged.",
+        "mechanic": "Wrong Threshold",
+        "cue": "A corridor appears for an instant inside its empty torso.",
+        "counterplay": "Pass through during the glimpse to emerge behind it."
+      },
+      "masterDirection": "Create one distinct Mute Porter using the mandatory one-cord perimeter anatomy. Hang exactly one narrow weathered stone doorway from the two cord shoulders in the otherwise empty torso gap. It is an open load-bearing frame, not a wall, building or carried prop, and it never covers the one-cord route. Inside the doorway's black vacancy, use exactly three shallow diminishing blank threshold edges to imply one instant corridor glimpse without floor, room, wall perspective, destination or scenery; leave the opening visibly passable. Turn the entire subject into one committed lateral sidestep while keeping the doorway squarely facing the viewer. Both hands stay empty and threaded on the cord. Keep the full frame, route, wrist pass-throughs, low bridge, upper return knot, doorway and both feet visible. No door slab, key, architecture scene, human beyond the opening, lettering, symbol, glow or ground."
+    },
+    {
+      "id": "pause_inquisitor",
+      "name": "Pause Inquisitor",
+      "rank": "specialist",
+      "role": "unassigned",
+      "orientation": "portrait-2:3",
+      "masterFile": "pause-inquisitor-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/hush-order/pause-inquisitor-v1.png",
+      "canonical": {
+        "anatomy": "The upper and lower body are separated by a hovering punctuation mark.",
+        "locomotion": "It moves during the pause between any two repeated actions.",
+        "sound": "A held breath ends with one dry ink drop.",
+        "purpose": "It detects broken ritual cadence and removes its source.",
+        "origin": "An inquisitor edited every testimony until only the pauses seemed truthful.",
+        "mechanic": "Intervening Mark",
+        "cue": "A black stroke appears between the player's repeated inputs.",
+        "counterplay": "Change action before the stroke closes into punctuation."
+      },
+      "masterDirection": "Create one distinct Pause Inquisitor using the mandatory one-cord perimeter anatomy. The broad empty torso gap naturally separates upper and lower visual masses without breaking the cord. In the exact center of that black gap, suspend one and only one thick matte-black dry-ink stroke with a small open break so it is visibly still incomplete and cannot be read as any punctuation, letter, rune, number or symbol. A single dry ink bead hangs at the open break; nothing touches the floor. Pose the two hands as two near-identical repeated restrained motions on either side of the unfinished stroke, with the second hand just beginning to differ as the counterplay window; they remain the only two hands and are threaded onto wrist pass-throughs. Keep the complete one-cord route, empty head, upper return knot, low bridge and feet visible. No readable punctuation, testimony page, pen, book, breath cloud, text, glow, scene or extra hand."
+    },
+    {
+      "id": "comma_blade",
+      "name": "Comma-Blade Ascetic",
+      "rank": "elite",
+      "role": "unassigned",
+      "orientation": "portrait-2:3",
+      "masterFile": "comma-blade-ascetic-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/hush-order/comma-blade-ascetic-v1.png",
+      "canonical": {
+        "anatomy": "Its curved body bends around an empty clause of air.",
+        "locomotion": "It circles attacks and lands only after the attacker stops.",
+        "sound": "A soft throat click divides every exchange into clauses.",
+        "purpose": "It preserves unfinished vows by preventing decisive endings.",
+        "origin": "An ascetic refused the final word of a death sentence and became its delay.",
+        "mechanic": "Dependent Clause",
+        "cue": "A curved shadow hangs after the player's final swing.",
+        "counterplay": "Continue with a different cadence or step inside the curve before it falls."
+      },
+      "masterDirection": "Create one distinct Comma-Blade Ascetic using the mandatory one-cord perimeter anatomy, but bend the entire uninterrupted humanoid loop into one strong asymmetrical crescent around one large empty clause-shaped volume of black air. Do not make the body or cord a literal comma glyph. Both feet and both hands remain complete, separate and threaded on the one traceable cord. Attach one single flat curved shadow-violet ribbon behind the outer bend as the delayed final-swing shadow; it hangs in empty air, has one clearly open inner entry gap and is not a floor shadow, weapon, second body or punctuation symbol. Pose the ascetic circling inward while withholding its landing. Keep the whole one-cord route, upper return knot, low bridge, inner gap, shadow curve and every extremity fully framed. No blade prop, sword, executed victim, readable clause, punctuation mark, letter, text, glow, ground or scene."
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-unwritten-roads-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "transparent_cutout.elo_veer",
+      "subjectId": "elo_veer",
+      "factionId": "unwritten_roads",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/unwritten-roads/elo-veer-v1-cutout.png",
+      "sha256": "8ad86a17be42f613ca5251e3efabb3bdd65d1e5f942ad1ddee193f93850276c4",
+      "bytes": 1710258,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "8ad86a17be42f613ca5251e3efabb3bdd65d1e5f942ad1ddee193f93850276c4"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/unwritten-roads/elo-veer-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.elo_veer",
+      "subjectId": "elo_veer",
+      "factionId": "unwritten_roads",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/unwritten-roads/elo-veer-v1.png",
+      "sha256": "e249d77d4739faad8b4307cc528a1b5583884ed40bf80a5312b5bfd2e6fe7b4f",
+      "bytes": 1757670,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "e249d77d4739faad8b4307cc528a1b5583884ed40bf80a5312b5bfd2e6fe7b4f"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.iri_north",
+      "subjectId": "iri_north",
+      "factionId": "unwritten_roads",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/unwritten-roads/iri-north-v1-cutout.png",
+      "sha256": "0a04a6a8801ddf1e1bc1adbb5e281e41823d745bbbb78a2accedabed2f1c3909",
+      "bytes": 1676487,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "0a04a6a8801ddf1e1bc1adbb5e281e41823d745bbbb78a2accedabed2f1c3909"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/unwritten-roads/iri-north-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.iri_north",
+      "subjectId": "iri_north",
+      "factionId": "unwritten_roads",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/unwritten-roads/iri-north-v1.png",
+      "sha256": "f04e98cfabe4ff81852c409836c08ca5f9accbe900b9ececca00db6e55a06548",
+      "bytes": 1731398,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "f04e98cfabe4ff81852c409836c08ca5f9accbe900b9ececca00db6e55a06548"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.kora_path",
+      "subjectId": "kora_path",
+      "factionId": "unwritten_roads",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/unwritten-roads/kora-path-v1-cutout.png",
+      "sha256": "d030a1ad3d8fd1486d894c826f6cedbab0fab27f35513b5e3cd5dbb98505a751",
+      "bytes": 1879944,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "d030a1ad3d8fd1486d894c826f6cedbab0fab27f35513b5e3cd5dbb98505a751"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/unwritten-roads/kora-path-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.kora_path",
+      "subjectId": "kora_path",
+      "factionId": "unwritten_roads",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/unwritten-roads/kora-path-v1.png",
+      "sha256": "f257425ae55b22e0bee9ea83b9b54ff8afd80c6720009d7a866184554fe5b741",
+      "bytes": 1870054,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "f257425ae55b22e0bee9ea83b9b54ff8afd80c6720009d7a866184554fe5b741"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.marn_upland",
+      "subjectId": "marn_upland",
+      "factionId": "unwritten_roads",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/unwritten-roads/marn-upland-v1-cutout.png",
+      "sha256": "7f92052695e5872cf7ad352c637d5fe5b7002c1c87a7cdb79efec78c11b2cf34",
+      "bytes": 1287441,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "7f92052695e5872cf7ad352c637d5fe5b7002c1c87a7cdb79efec78c11b2cf34"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/unwritten-roads/marn-upland-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.marn_upland",
+      "subjectId": "marn_upland",
+      "factionId": "unwritten_roads",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/unwritten-roads/marn-upland-v1.png",
+      "sha256": "9c29cbcd66d49afdb1cc2edc4383ca8315efa65801cd437110193cc851a0d888",
+      "bytes": 1953096,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "9c29cbcd66d49afdb1cc2edc4383ca8315efa65801cd437110193cc851a0d888"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.rin_waymark",
+      "subjectId": "rin_waymark",
+      "factionId": "unwritten_roads",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/unwritten-roads/rin-waymark-v1-cutout.png",
+      "sha256": "071e29186366940069b62a5a0a2b2a8de043295d0e51839b7a8b1fc7b4a4a58e",
+      "bytes": 1734993,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "071e29186366940069b62a5a0a2b2a8de043295d0e51839b7a8b1fc7b4a4a58e"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/unwritten-roads/rin-waymark-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.rin_waymark",
+      "subjectId": "rin_waymark",
+      "factionId": "unwritten_roads",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/unwritten-roads/rin-waymark-v1.png",
+      "sha256": "76206d8ee81ce8fa42f696823761e5d4ebbcb0d70b6cde25831c1ca3ee109757",
+      "bytes": 1795078,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "76206d8ee81ce8fa42f696823761e5d4ebbcb0d70b6cde25831c1ca3ee109757"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "transparent_cutout.vellin_the_unwritten",
+      "subjectId": "vellin_the_unwritten",
+      "factionId": "unwritten_roads",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/unwritten-roads/vellin-the-unwritten-v1-cutout.png",
+      "sha256": "8e001af3b3ef743d7c893f4c4d4659f7858ea44b2b0ed8396bb6500ffac4eb76",
+      "bytes": 1849193,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "11c76c4cfbe56cb675a985da28be8e3a194b9b666d260d65fe0871af90e592d8",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "8e001af3b3ef743d7c893f4c4d4659f7858ea44b2b0ed8396bb6500ffac4eb76"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/unwritten-roads/vellin-the-unwritten-v1.png"
+      ],
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "alpha_validated_concept_reference",
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.vellin_the_unwritten",
+      "subjectId": "vellin_the_unwritten",
+      "factionId": "unwritten_roads",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/unwritten-roads/vellin-the-unwritten-v1.png",
+      "sha256": "d4e47a5aaae1d0bb2fa5cfa290aa5b276c1e1d2b36da498520e0989886b5440b",
+      "bytes": 2071686,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "recovered owner-authorized project original; original prompt packet unavailable",
+      "promptSha256": "c765abd2250ae47c15c661517d8e1f6263dd5837c4141493d5f9b6179b5c03c1",
+      "generation": {
+        "tool": {
+          "name": "project asset recovery"
+        },
+        "mode": "content-addressed project recovery",
+        "outputSha256": "d4e47a5aaae1d0bb2fa5cfa290aa5b276c1e1d2b36da498520e0989886b5440b"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "recovered_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

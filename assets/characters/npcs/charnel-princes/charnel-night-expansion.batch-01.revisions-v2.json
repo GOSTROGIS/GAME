@@ -1,0 +1,30 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-night-expansion-masters-batch-01-revision-v2",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "basePacketSha256": "aaa954173a043e9b10637fcd18b2c058425612869d3abfbafe83aff3dc2aa4bb",
+  "assets": [
+    {
+      "id": "prince_thirteen_throats",
+      "reference": "prince-thirteen-throats-concept-master-v1-rejected.png",
+      "outputFile": "prince-thirteen-throats-concept-master-v2.png",
+      "reason": "Owner preflight counted fourteen throat apertures instead of the canonical thirteen, and the unsupported literal crown competes with the required headless absence.",
+      "revisionDirection": "Faithfully preserve the v1 central near-black body absence, long regal silhouette, two physical arms and feet, broken matte voting-circle halo, wet black-nacre material, cold studio light, backdrop, and framing. Remove exactly the lowest far-right outer throat and its entire articulated collar, leaving exactly THIRTEEN complete wet throat apertures total. Re-space only as needed so every one of the thirteen remains separately countable and each retains its own distinct jointed collar root; preserve one deliberate wider empty interval in their cadence. Remove the literal metal crown completely and close no ordinary head or face into the resulting space: the crown area must remain a headless black absence within the broken halo. Add nothing else. No fourteenth throat, hidden throat, merged throat, crown, face, central mouth, text, floor, or crop."
+    },
+    {
+      "id": "wound_scribe_keth",
+      "reference": "wound-scribe-keth-concept-master-v1-rejected.png",
+      "outputFile": "wound-scribe-keth-concept-master-v2.png",
+      "reason": "The four page-like wound margins and reliefs are correct, but the carrier reads as a symmetrical insect with a beaked head and conventional arthropod legs, explicitly forbidden by the frozen prompt.",
+      "revisionDirection": "Faithfully preserve exactly FOUR and only four separately countable clean page-like wound layers, their tissue bas-reliefs without text, pale folded scar-tissue material, structural black quills, cold studio light, landscape canvas, and full clearance. Rebuild the carrier beneath them as one irregular low demon made entirely from folded scar-tissue planes with many staggered unequal backward-bending support joints, not bilateral insect anatomy. Remove the beaked head, mandibles, exoskeletal thorax, paired bug-leg silhouette, and every insect cue. The front must terminate as one blind folded scar flap with embedded quill roots, with no ordinary head or face. The page layers remain anatomical hinges grown through the asymmetric tissue mass rather than a book stacked on a creature. Keep every joint and quill inside frame. No insect, spider, bird beak, book, desk, loose paper, blood, text, floor, or crop."
+    },
+    {
+      "id": "reverse_rib_bride",
+      "reference": "reverse-rib-bride-concept-master-v1-rejected.png",
+      "outputFile": "reverse-rib-bride-concept-master-v2.png",
+      "reason": "The v1 reads as a literal crowned and veiled bride, its two pointers are ordinary arm-hands rather than released rib-hands, and the central void is a generic vertical hollow rather than a spouse-shaped absence.",
+      "revisionDirection": "Rebuild v1 as the same single tall black-nacre ceremonial horror while removing the crown, veil, bridal dress cues, and both ornate ring markers. The central empty anatomy must become one unmistakable complete adult spouse-shaped pure-black negative space with readable empty head, shoulders, torso, two arms and two legs, but no rendered person, face, clothing, contour figure, or glow. Many outward ribs must continue ending in hand-like clasps around that absent silhouette. Exactly TWO and only two hands from those rib termini—not the subject's ordinary arms—must release and extend outward as pointer-ribs. Each released rib-hand points to one of exactly two small plain irregular matte position apertures suspended separately in empty air, with no rings, borders, symbols, floor or glow. All other rib-hands remain clasped. Keep the single physical subject, complete absence, two pointer-ribs, two apertures, and all feet fully framed. No bride realism, crown, veil, spouse figure, extra body, weapon, text, gore, floor, or crop."
+    }
+  ]
+}

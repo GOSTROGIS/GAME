@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "familyId": "hush_order",
+  "batchId": "hush-order-masters-batch-01",
+  "policy": "The frozen batch packet remains unchanged. These are constrained forward revisions after independent v5 review and owner preflight. Prior versions remain immutable.",
+  "frozenPacket": {
+    "path": "work/concept-art-production/hush-order/batch-01/prompt-packet.json",
+    "sha256": "2cf8301b2e98cbd4c4bf2a37040c3a94bb48aaa9c483ab66a17c9669f3354bab"
+  },
+  "revisions": {
+    "prior-cord-v6-edit": {
+      "source": "work/concept-art-production/hush-order/batch-01/prior-cord-concept-master-v5.png",
+      "sourceSha256": "7197c08a4025e1401dcee2309041190c4bb9c88f45618ef4cb76c7040e7b249c",
+      "reason": "Both independent reviewers passed the full cord topology and all other cues but counted only twelve knots total, one fewer than canon.",
+      "prompt": "Surgical exact-count edit of this exact Prior Cord. Preserve EVERY existing pixel-level design choice except the one requested addition: same canvas, silhouette, one accepted serial branchless closed cord route through the hollow crown and two-ended pale return knot, pose, empty shell, hands, feet, materials, lighting, scale, framing, and all twelve existing knots. Add EXACTLY ONE new small tight DARK knot centered on the currently bare lowest horizontal cord bridge between the two feet. Do not move, remove, recolor, enlarge, or duplicate any other knot. The final image contains EXACTLY THIRTEEN visible countable knots total: the same one pale loose upper-right return knot, the same eleven existing dark knots, plus this one new dark bottom-center knot = twelve dark and one pale. No fourteenth knot, topology change, new branch, body, object, floor, shadow, text, symbol, glow, scene, logo, or watermark. Opaque near-black studio backdrop."
+    },
+    "inkless-lector-v6-edit": {
+      "source": "work/concept-art-production/hush-order/batch-01/inkless-lector-concept-master-v4.png",
+      "sourceSha256": "ee4c67977459be859f51cb41f3260090da916a84663d53046280955b55ff46c9",
+      "topologyReference": "work/concept-art-production/hush-order/batch-01/hush-monk-concept-master-v5.png",
+      "topologyReferenceSha256": "a2a6071d07b2dc56e6b0ef7a8b13f765ccfe04050b81678b1e9900cdbec8cd72",
+      "reason": "The first v5 Inkless edit failed owner preflight by deleting the head cord and retaining a central multiway knot. The accepted Hush Monk v5 supplies only the required serial crown-route geometry.",
+      "prompt": "Image 1 is the exact Inkless Lector identity to preserve. Image 2 is ONLY a geometry reference for the accepted Hush Order serial crown closure; do not copy Image 2's pose, hands, gesture impressions, linen panels, or other form cues. Rebuild Image 1 as the same Inkless Lector with its exact attacking arm, blank opposite side, exactly two hands, one unparseable blind-relief vellum, long asymmetrical sleeves, complete two rope legs/feet/low bridge, materials, lighting, canvas, scale, and framing. Replace Image 1's upper central junction with the literal one-rope geometry demonstrated by Image 2: viewer-left shoulder continues upward along viewer-left empty throat, visibly around the inside hollow crown, visibly down the viewer-right hood edge, through exactly one compact two-ended return knot, then directly to viewer-right shoulder. There is no horizontal shoulder bar, center head stem, T/Y/X, third connection, second rope, or hidden join. Keep broad pure-black empty air between shoulders. The full route remains one branchless closed perimeter through both arms, wrists, legs, feet and low bridge. Preserve Inkless identity only: no wax impressions, tongue, hem effigies, broom, readable letters/words/symbols, body, bones, extra hand, glow, floor, scenery, logo, or watermark. Opaque near-black neutral studio backdrop."
+    }
+  }
+}

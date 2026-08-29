@@ -1,0 +1,27 @@
+{
+  "schema": "SableReachExpansionConceptPromptRevisionV1",
+  "batchId": "lucent-synod-expansion-batch-01-revision-v2",
+  "familyId": "lucent_procession",
+  "status": "immutable-before-generation",
+  "basePacketSha256": "4268c9426396d0ed81e2aa81e56ca42a4be4112c736b3eaff376c4ff5f2cfeb5",
+  "policy": "Preserve all accepted identity and family features. Correct only independently identified defects. Earlier candidate bytes remain immutable; each correction uses a new versioned filename.",
+  "promptCompilation": "For each revision, the exact built-in edit prompt is inputRole followed by two newline characters followed by revisionDirection.",
+  "revisions": [
+    {
+      "id": "canoness_vael_kindly_knife",
+      "source": "canoness-vael-kindly-knife-concept-master-v1.png",
+      "outputFile": "canoness-vael-kindly-knife-concept-master-v2.png",
+      "reason": "Exactly six scalpel-wings were present, but they deployed radially rather than folding into one devotional-screen silhouette, and only one complete foot was visibly countable.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only the independently identified wing pose and foot visibility defects; preserve every other visible feature.",
+      "revisionDirection": "Faithfully preserve the exact mature Vael identity, featureless porcelain veil, ivory cathedral plate, black seams, six original scalpel-wing designs, restrained dawn beneath joints, scorched inward faces, empty hands, palette, materials and cold neutral studio lighting. Change only wing pose and lower-body framing. Fold EXACTLY SIX separately countable long narrow scalpel-wings behind her into one tall devotional-screen silhouette: three stacked on viewer-left and three stacked on viewer-right, their long axes nearly vertical, their inner black-glass faces turned toward one another, and each blade's complete outer edge still visible so none merge or disappear. No wing may radiate horizontally or diagonally away from the screen. Repose the lower body into a calm narrow two-foot stance and show EXACTLY TWO complete armored feet with separated black clearance around both toe and heel silhouettes; neither foot may hide behind robe panels. Preserve both empty hands and full portrait clearance. No extra wing, feather, handheld blade, patient, floor, shadow, text, cross, glow, transparency, or crop."
+    },
+    {
+      "id": "saint_vespera_second_shadow",
+      "source": "saint-vespera-second-shadow-concept-master-v1.png",
+      "outputFile": "saint-vespera-second-shadow-concept-master-v2.png",
+      "reason": "The one door-filled shadow read beside the saint rather than demonstrably attached by an unbroken route, and the lower studio treatment implied floor contact.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only the independently identified shadow attachment and floor/contact defects; preserve every other visible feature.",
+      "revisionDirection": "Faithfully preserve the exact tranquil Vespera identity, one white-gold veiled saint, one asymmetrical incomplete black-gold halo, exactly one flat human-derived articulated shadow half a hand-gesture and half a step ahead, all closed doorway recesses and plain latches, family materials, pose scale and cold neutral lighting. Add one unmistakable continuous flat black-gold attachment ligament that grows directly from the saint's viewer-left rear ankle and lower robe seam, remains fully visible in black clearance, and enters the shadow's viewer-right ankle and hip as one unbroken subject-bound route. The ligament must be part of both silhouettes, not a floor shadow, tether prop, separate rope, or ground contact. Lift both the saint and shadow edges into empty black space with visible clearance beneath every foot/hem and remove every contact shadow, floor gradient, ground plane or pedestal cue. Keep exactly one physical saint and exactly one flat shadow; the shadow remains half a gesture ahead rather than beside or behind. Preserve all locked door recesses closed and unoccupied. No second shadow, solid duplicate, demon, key, room, open door, floor, text, cross, aura, transparency, or crop."
+    }
+  ]
+}

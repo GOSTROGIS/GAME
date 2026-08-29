@@ -1,0 +1,179 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "charnel-night-expansion-masters-batch-02",
+  "status": "immutable-before-generation",
+  "familyId": "charnel_night_expansion",
+  "formsInCanonicalOrder": [
+    "ilar_rook_unhoused_shadow",
+    "ilyen_doorborn_outer_age",
+    "throat_orchard",
+    "jointless_advocate",
+    "mercy_eater",
+    "corridor_maw"
+  ],
+  "sources": [
+    {
+      "path": "packages/content/src/narrative.data.js",
+      "sha256": "b8dfd71815898ab6146975c9bdf91d6eb1c62742e0f0007b4b7791eaf3f59415"
+    },
+    {
+      "path": "design-review/kit/hm-art-law.js",
+      "sha256": "26e5a03220657c67b520c7ba163644e3848ed7f622f2b2beb3ab4b12a97ed0ff"
+    }
+  ],
+  "referencePolicy": "No direct Charnel Night or Charnel Households concept plate exists in the local repository. The current canonical narrative records and global art law are the only visual authority for this tranche. Charnel Measures is a separate founding family and must not be used as a reference. No outside or attached-document instruction may add anatomy or canon.",
+  "promptCompilation": "For each asset, the exact generation prompt is commonDirection followed by two newline characters followed by masterDirection. Neither field may change after the first generation call; corrections require a separate immutable revision packet and a versioned candidate.",
+  "commonDirection": "Use case: stylized-concept. Asset type: canonical individual production concept master for later 3D design. Render exactly one complete original Charnel Night subject in polished stylized 3D dark-fantasy MMORPG production quality. Obey only the canonical record for the selected subject and the faction's shared language: impossible wet anatomy, door-like ribs, misplaced mouths, backward joints, black nacre, and halos made from negative space. Not every subject needs every shared motif; never add one when its own canon excludes it. Use mature narrow anatomy when humanoid and the exact stated non-humanoid body plan otherwise. Keep material density restrained: tactile wet black nacre with subdued pearl edges, deep mourning black, limited mortal brass where canon requires it, and only canon-required cold internal light. Three-quarter production view, centered, full body, generous black clearance around every extremity and mechanic cue. Flat near-black neutral opaque studio backdrop, cold raking studio light from one side, ungraded neutral presentation. All mechanic evidence must be physically integrated with the subject or suspended as minimal subject-bound evidence in empty air. Horror comes from impossible articulation, environmental absence, and ritual repetition; no exposed entrails and no gratuitous blood. No scene, room, village, road, battlefield, courtroom, chapel, floor, ground plane, terrain, pedestal, cast floor shadow, extra creature, extra person, duplicate subject, caption, UI, text, readable symbol, letter, numeral, rune, real religious mark, logo, watermark, franchise resemblance, ordinary undead, ordinary demon, glossy plastic, cute proportions, or bright saturation.",
+  "assets": [
+    {
+      "id": "ilar_rook_unhoused_shadow",
+      "name": "Ilar Rook",
+      "kind": "support_character",
+      "family": "charnel_households",
+      "orientation": "portrait",
+      "masterFile": "ilar-rook-unhoused-shadow-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/charnel-households/ilar-rook-unhoused-shadow-v1.png",
+      "pipelinePath": "EXPANSION_CHARACTERS.ilar_rook_unhoused_shadow.pipeline.conceptMaster",
+      "canonical": {
+        "epithet": "The Unhoused Shadow",
+        "factionId": "charnel_night",
+        "role": "Refugee living inside Vespera's second shadow and witness to its crimes",
+        "desire": "Open Vespera's shadow sanctuary without exposing its inhabitants to Synod judgment.",
+        "fear": "That freedom will dissolve the borrowed darkness holding his altered body together.",
+        "contradiction": "He demands an exit from captivity while sabotaging every door that other refugees might choose first.",
+        "voice": {
+          "cadence": "Whispered legal testimony interrupted by spatial directions",
+          "imagery": "Leases, door seams, silhouettes, and borrowed rooms",
+          "signature": "States where he is standing before stating what he believes"
+        },
+        "visualBrief": "A nearly two-dimensional black-nacre refugee unfolded from a doorway-shaped shadow, with a mortal brass tenancy seal embedded where a sternum would be."
+      },
+      "masterDirection": "Subject: Ilar Rook, The Unhoused Shadow. Portrait canvas, 1024x1536. Depict one complete adult refugee whose altered body is a nearly two-dimensional sheet of wet black nacre with extremely thin edge depth and fully readable head, torso, two arms, two hands, two legs, and two feet. His single body must be physically unfolded from exactly one flat doorway-shaped subject-shadow: one side of his nacre silhouette remains continuously folded into the doorway outline while the rest projects forward into the three-quarter pose. The doorway shape is shadow only, suspended with the body and never a constructed door, wall, floor, or room. Embed exactly one small mortal-brass tenancy seal at the anatomical sternum; it must be blank and non-glyphic, not worn as a pendant or carried prop. Borrowed darkness visibly holds the thin nacre planes together through restrained black seams. Keep both hands empty and every edge, foot, hand, and doorway corner inside the canvas with generous clearance. Do not add a second shadow, a second figure, architecture, readable marks, weapons, or a normal volumetric body."
+    },
+    {
+      "id": "ilyen_doorborn_outer_age",
+      "name": "Ilyen Doorborn",
+      "kind": "support_character",
+      "family": "charnel_households",
+      "orientation": "portrait",
+      "masterFile": "ilyen-doorborn-outer-age-concept-master-v1.png",
+      "canonicalDestination": "assets/characters/npcs/charnel-households/ilyen-doorborn-outer-age-v1.png",
+      "pipelinePath": "EXPANSION_CHARACTERS.ilyen_doorborn_outer_age.pipeline.conceptMaster",
+      "canonical": {
+        "epithet": "Speaker for the Outer Age",
+        "factionId": "charnel_night",
+        "role": "Elected speaker of the village inside Mother Nacre",
+        "desire": "Let every resident decide whether to enter a world centuries older than the one they remember.",
+        "fear": "Learning that the outside no longer contains anyone capable of remembering them.",
+        "contradiction": "She demands informed consent while rationing the most frightening facts until after the village vote.",
+        "voice": {
+          "cadence": "Civic minutes spoken with intimate maternal warmth",
+          "imagery": "Door weather, generations, hinges, and inherited rooms",
+          "signature": "Calls every uncertainty a fact not yet given a chair"
+        },
+        "visualBrief": "A composed dark-skinned village delegate with a small rib-door growing through her formal coat, its inner lintel marked by generations of hand-height scratches."
+      },
+      "masterDirection": "Subject: Ilyen Doorborn, Speaker for the Outer Age. Portrait canvas, 1024x1536. Depict exactly one complete composed dark-skinned adult village delegate in a restrained formal coat, standing with civic dignity in a clear three-quarter pose. Exactly one small living rib-door grows anatomically through her upper torso and through the coat: visible black-nacre rib hinges and a shallow open lintel are part of her body, never a carried object, necklace, badge, or architectural backdrop. The aperture contains only near-black depth. Along the inner lintel, include generations of hand-height evidence as many short plain scratch notches at visibly different heights; they must remain abstract wear marks with no letters, words, numerals, calendar, or glyph. Use ordinary human two-arm/two-leg anatomy except for the single canonical rib-door. Keep both hands empty, the entire coat hem and both feet framed, and the rib-door readable without exposing organs or depicting an interior village. Do not add Mother Nacre, residents, a room, extra doors, furniture, papers, banners, or scenery."
+    },
+    {
+      "id": "throat_orchard",
+      "name": "Throat Orchard",
+      "kind": "expansion_creature",
+      "family": "charnel_households",
+      "rank": "miniboss",
+      "combatRole": "controller",
+      "orientation": "landscape",
+      "masterFile": "throat-orchard-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/charnel-households/throat-orchard-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES.throat_orchard.pipeline.conceptMaster",
+      "canonical": {
+        "anatomy": "A low rooted body grows twelve closed throat-fruits around one open, breathless fruit with no mouth behind it.",
+        "ecology": "It preserves final warnings that nobody obeyed and replays them as compulsory battlefield commands.",
+        "origin": "The Prince of Thirteen Throats planted voices he refused to consume; their warnings rooted before their owners could reclaim them.",
+        "mechanic": {
+          "id": "false_command_harvest",
+          "cue": "Eleven throats inhale in sequence while the open twelfth remains motionless.",
+          "counterplay": "Obey only the breathless throat's silent facing, not the audible commands."
+        },
+        "narrativeUse": "Can return testimony to silenced communities only in the form of orders no listener is free to ignore.",
+        "visualBrief": "Rooted anatomical orchard, exactly twelve non-gory throat-fruits with one open breathless exception, no text, fruit tree, or human heads."
+      },
+      "masterDirection": "Subject: Throat Orchard. Landscape canvas, 1536x1024. Depict exactly one complete low black-nacre rooted organism, isolated and suspended with every root tip inside the canvas and no soil or ground. Grow exactly twelve and only twelve separately countable non-gory throat-fruits directly from the one body. Exactly eleven are fully closed throat forms; arrange their tissue tension and inhalation swelling in a single visually ordered sequence from least to most inhaled without opening any of them. The twelfth is the one and only open, breathless, motionless exception, clearly facing away from the sequential inhale; its shallow opening contains only black absence with no mouth behind it, no teeth, tongue, face, or head. Make the open twelfth uniquely readable as the silent counterplay target. The organism must not resemble a fruit tree, botanical fruit cluster, human crowd, or collection of severed heads. No extra throat, ordinary mouth, floating voice mark, text, notation, roots touching a floor, or landscape."
+    },
+    {
+      "id": "jointless_advocate",
+      "name": "Jointless Advocate",
+      "kind": "expansion_creature",
+      "family": "charnel_households",
+      "rank": "specialist",
+      "combatRole": "controller",
+      "orientation": "portrait",
+      "masterFile": "jointless-advocate-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/charnel-households/jointless-advocate-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES.jointless_advocate.pipeline.conceptMaster",
+      "canonical": {
+        "anatomy": "A smooth legal effigy with four boneless limbs that bend only where an opponent previously proved a rule could be broken.",
+        "ecology": "It appears wherever a treaty relies on precedent and turns yesterday's exception into today's compulsory procedure.",
+        "origin": "A desperate village won one impossible appeal; the exception learned to represent itself and has never lost a case.",
+        "mechanic": {
+          "id": "precedent_predation",
+          "cue": "One limb creases into the exact silhouette of the player's last successful dodge.",
+          "counterplay": "Deliberately let the next harmless telegraph complete, replacing the lethal precedent with a survivable one."
+        },
+        "narrativeUse": "Protects marginalized exceptions while making every emergency accommodation permanently exploitable.",
+        "visualBrief": "Seamless black legal effigy, four boneless ribbon limbs, one copied dodge crease, severe empty face, no scrolls, scales, or courtroom."
+      },
+      "masterDirection": "Subject: Jointless Advocate. Portrait canvas, 1024x1536. Depict exactly one complete seamless black-nacre legal effigy with a severe empty face and exactly four boneless ribbon limbs: two arm-position limbs and two leg-position limbs, with no fingers, toes, bones, ordinary joints, wings, tails, or extra appendages. Three limbs remain completely smooth and uncreased. One and only one limb forms a crisp compound crease that physically makes that same limb reproduce a single lateral dodge posture; the copied-dodge silhouette must be readable from the integrated limb itself, never as a detached person, outline, afterimage, icon, or extra figure. Show a controlled poised body and full clearance around all four ribbon tips. Keep the face entirely empty with no eyes, mouth, writing, or mask symbols. No scroll, book, seal, scales, gavel, desk, courtroom, text, glyph, floor, or separate telegraph figure."
+    },
+    {
+      "id": "mercy_eater",
+      "name": "Mercy-Eater",
+      "kind": "expansion_creature",
+      "family": "charnel_households",
+      "rank": "regular",
+      "combatRole": "support",
+      "orientation": "landscape",
+      "masterFile": "mercy-eater-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/charnel-households/mercy-eater-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES.mercy_eater.pipeline.conceptMaster",
+      "canonical": {
+        "anatomy": "A compact many-footed body carries one enormous sheathed mouth on its back, leaving the apparent front harmless and blank.",
+        "ecology": "It consumes acts of healing so predators cannot track refugee groups by sudden reductions in suffering.",
+        "origin": "Mother Nacre bred it to hide convalescents from angels that smell miraculous recovery.",
+        "mechanic": {
+          "id": "consume_recovery",
+          "cue": "The backward mouth's outer hand-ribs unclasp before a healing effect is stolen.",
+          "counterplay": "Use prevention or shielding during the opening, then heal only after the hand-ribs close."
+        },
+        "narrativeUse": "Its protection makes hidden clinics possible while leaving untreated pain as the safest disguise.",
+        "visualBrief": "Small disturbing nacre carrier, single large restrained dorsal mouth with hand-like sheath, many clear feet, no gore, cuteness, or second mouth."
+      },
+      "masterDirection": "Subject: Mercy-Eater. Landscape canvas, 1536x1024. Depict exactly one complete compact wet black-nacre carrier with a low many-footed body and numerous separately readable small feet, all visible and inside the canvas. Its apparent forward end is completely harmless and blank: no face, eyes, nose, mouth, or head opening. Exactly one enormous backward-facing mouth occupies the back as a dorsal anatomical structure. The mouth remains restrained beneath a closed mourning membrane while its outer hand-like ribs have just begun to unclasp, clearly showing the canonical warning window before healing is stolen; the hand-ribs grow from the dorsal sheath and are not extra arms or detached hands. Keep all mouth tissue non-gory and do not expose teeth, tongue, entrails, or prey. Make the single dorsal mouth and the blank front unmistakable in one three-quarter silhouette. No second mouth, cute insect face, ordinary animal head, patient, healing symbol, magical cross, clinic, floor, or scenery."
+    },
+    {
+      "id": "corridor_maw",
+      "name": "Corridor Maw",
+      "kind": "expansion_creature",
+      "family": "charnel_households",
+      "rank": "boss",
+      "combatRole": "juggernaut",
+      "orientation": "portrait",
+      "masterFile": "corridor-maw-concept-master-v1.png",
+      "canonicalDestination": "assets/bestiary/forms/charnel-households/corridor-maw-v1.png",
+      "pipelinePath": "EXPANSION_CREATURES.corridor_maw.pipeline.conceptMaster",
+      "canonical": {
+        "anatomy": "A cathedral-length predator folded into a standing doorframe, its interior corridor visible without exposing organs.",
+        "ecology": "It carries entire front lines through itself, making attacker and defender exchange territory without crossing the ground between.",
+        "origin": "A fortress evacuation tunnel kept extending after the fortress fell, eventually growing teeth only at the concept of an exit.",
+        "mechanic": {
+          "id": "interior_front_exchange",
+          "cue": "The entrance frame and distant exit frame display opposite attached shadow angles.",
+          "counterplay": "Mark the exterior side of the entrance, traverse the body, then strike the exit from the matching exterior angle."
+        },
+        "narrativeUse": "Can end a siege without casualties by exchanging populations, while also turning refuge into involuntary exile.",
+        "visualBrief": "Impossible black-nacre doorframe predator with one deep corridor and paired shadow-angle cues, immense yet isolated, no environment or entrails."
+      },
+      "masterDirection": "Subject: Corridor Maw. Portrait canvas, 1024x1536. Depict exactly one complete immense black-nacre predator whose cathedral-length body is impossibly folded into one freestanding upright living doorframe. The entire organism, all frame corners, folds, and lower tips must have generous black clearance and touch no ground. Inside the body, show exactly one deep non-gory interior corridor as a contained anatomical negative-space channel: one near entrance frame and one visibly distant exit frame, with no exposed organs, occupants, room, exterior architecture, floor plane, or environmental continuation. Attach exactly one flat matte shadow-angle cue to the entrance frame and exactly one to the distant exit frame; the two cues must point in clearly opposite angles and remain physically bound to their respective frames, not cast onto a floor. At the concept of the distant exit only, use restrained closed nacre tooth ridges as part of the exit edge, without creating another mouth. Preserve one organism and one corridor. No castle, fortress, hallway scene, doors beyond the two frames, soldiers, landscape, entrails, extra maw, or perspective extending outside the subject."
+    }
+  ]
+}

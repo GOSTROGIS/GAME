@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "familyId": "salt_waste",
+  "batchId": "salt-waste-pilgrims-batch-01",
+  "revisionWave": 3,
+  "status": "immutable-before-generation",
+  "policy": "Earlier candidate bytes and revision packets remain immutable; every correction uses a new filename.",
+  "revisions": {
+    "sealed-mirror-bearer-concept-master-v3": {
+      "source": "sealed-mirror-bearer-concept-master-v2.png",
+      "reason": "The four unobscured fixtures and unique lift became countable, but all four still read as engraved sunless-gold metal bosses rather than plain wax seals.",
+      "append": "Preserve the one face-replacing mirror plate, hollow robe, exact four-corner layout, two empty clear hands, unique upper-outer lifted position, family materials, lighting, scale and framing. Replace ONLY the four circular engraved gold bosses with EXACTLY FOUR visibly matte plain WAX seal plaques: dull salt-ivory wax, irregular hand-pressed edges, shallow natural cracks, no engraving, emblem, spokes, metal face or readable mark. Three wax plaques lie flat and fully close their corners. The fourth upper-outer wax plaque alone peels upward as one cracked wax flap, exposing one thin empty near-black gap. Keep all four plaques fully separated, unobscured and distinct from the narrow sunless-gold mirror frame. No fifth seal, metal seal face, creature behind mirror, carried mirror, floor, text or transparency."
+    },
+    "caravan-of-one-concept-master-v3": {
+      "source": "caravan-of-one-concept-master-v2.png",
+      "reason": "Localized impact dents passed, but several memory figures still hung from the shared top frame or frame chains instead of mapping directly one-to-one from dangerous packs.",
+      "append": "Preserve exactly one bent pilgrim, one bone-spar pack frame, differentiated packs, one compact impact dent on every pack, both feet, materials, lighting, scale and framing. Remove every memory-shadow chain or tether from the top bar and all shared frame members. For each dangerous pack, attach exactly one flat rain-black human-shaped shadow DIRECTLY from that same pack's own outer seam by one short taut tether no longer than the pack's radius; the tether origin must visibly touch pack fabric and nothing else. Separate each dangerous pack and its one shadow as an unmistakable local pair. Designate at least two packs as shadowless cut targets: no shadow or tether may touch them, and a clean continuous black backdrop gap must outline their complete perimeter. No free-hanging frame shadow, ambiguous shared tether, solid person, extra traveler, cart, floor, text or transparency."
+    }
+  }
+}

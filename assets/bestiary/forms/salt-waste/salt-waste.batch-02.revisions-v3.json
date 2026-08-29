@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "familyId": "salt_waste",
+  "batchId": "salt-waste-pilgrims-batch-02",
+  "revisionWave": 3,
+  "status": "immutable-before-generation",
+  "policy": "Earlier candidate bytes and revision packets remain immutable; every correction uses a new filename.",
+  "revisions": {
+    "needle-pilgrim-concept-master-v3": {
+      "source": "needle-pilgrim-concept-master-v2.png",
+      "reason": "The no-head single route passed, but independent review found the body still read as a broad tapered spear or lance rather than uniformly hair-thin from tip to tip.",
+      "append": "Preserve the one viewer-right falling robe, sharply lifted viewer-right outer edge, lower opposite edge, westward passage, one-direction salt scrape, family materials, lighting, scale and full portrait framing. Replace only the broad spear-like core with exactly ONE unbroken mirror-blue NEEDLE FILAMENT: a very thin straight line of constant 6-to-8-pixel apparent width everywhere from immediately below its tiny upper sharp endpoint through the full robe center to immediately above its tiny lower sharp endpoint. Only the final few pixels at each extreme may sharpen to a point; there must be no broad blade, collar widening, shaft taper, spearhead, rod, face, mask, head or hidden ordinary anatomy. Keep the filament visibly exposed through multiple robe gaps so its same width is verifiable end-to-end. No second line, torso, limbs, feet, weapon, floor, text or transparency."
+    },
+    "compass-slug-concept-master-v3": {
+      "source": "compass-slug-concept-master-v2.png",
+      "reason": "The unmatched V-shaped trail token remained and still had no eye-slot counterpart, so the required shape-for-shape repeat failed.",
+      "append": "Preserve one slug, exactly four eyestalks, one blank backward-bent eye, one suspended four-slot trail ribbon, matching blank erased trail socket, survey chain, family materials, lighting, scale and framing. Replace all six marked tokens as a controlled exact set. The three marked eye slots must contain, once each: (A) one plain solid round DOT, (B) one short plain HORIZONTAL BAR, and (C) one smooth open CRESCENT. The three marked trail slots must repeat those exact same three forms once each: the same round dot, the same horizontal bar and the same open crescent. Keep the fourth eye and fourth trail socket completely blank. Remove every V, arrow, vertical bar, chevron or unmatched symbol. No letters, compass rose, extra token, extra eye, floor, map, text or transparency."
+    },
+    "eastward-witness-concept-master-v3": {
+      "source": "eastward-witness-concept-master-v2.png",
+      "reason": "The carried mirror removal and attached sliver passed, but the compressed profile still exposed only one countable eye and did not expose two complete distinct ears.",
+      "append": "Preserve one body, one smooth oval head with completely blank mirror-blue viewer-left two-thirds, both empty hands, one thin attached abstract mirage sliver, family materials, lighting, scale and framing. Rebuild only the shallow-relief feature cluster on the viewer-right third in a near-frontal overlapping arrangement rather than a side profile. Make all EXACTLY SIX required parts simultaneously complete and countable: TWO separate open eyes with full lids and pupils, ONE nose, ONE closed mouth, and TWO separate complete ear shells. Confine every feature wholly inside the right third; no feature may touch the blank left two-thirds. Do not fuse, hide or crop either eye or either ear. No carried mirror, shield, second face, seventh feature, detached sliver, floor, text or transparency."
+    },
+    "latitude-abductor-concept-master-v3": {
+      "source": "latitude-abductor-concept-master-v2.png",
+      "reason": "Five bands and lines passed, but scale and foreshortening still read as ordinary anatomical width and the lower-middle gold rim was not uniquely visibly broken.",
+      "append": "Preserve exactly five complete horizontal bands of the same one body, one perfectly horizontal attached line per band, wide black counter-gaps, one sealed mirror face, exactly two complete feet, family materials, lighting and landscape framing. Force unmistakable depth parallax: scale and foreshorten the five bands to visibly different widths in alternating foreground/background order—head band narrow and far, shoulder band very wide and near, hand/chest band medium and farther, lower-middle skirt band narrowest and farthest, foot band broad and near—while each remains one anatomical slice of the same body. Shift their centers slightly left/right to reinforce separate east-west positions without duplicating anatomy. The LOWER-MIDDLE SKIRT BAND alone must lag behind all others and alone carry one thick sunless-gold rim with a large missing wedge and two exposed broken ends. No gold rim on any other band. No sixth band, duplicate body, floor, beam, text or transparency."
+    }
+  }
+}

@@ -11,122 +11,512 @@
     "productionAssets": false
   },
   "promptSource": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
-  "deliveryEncoding": { "format": "PNG", "bitDepth": 8, "colorType": "indexed", "paletteColorsMaximum": 256, "cutoutAlpha": "tRNS" },
+  "deliveryEncoding": {
+    "format": "PNG",
+    "bitDepth": 8,
+    "colorType": "indexed",
+    "paletteColorsMaximum": 256,
+    "cutoutAlpha": "tRNS"
+  },
   "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
   "records": [
     {
-      "id": "named_character.torren_vale.master", "characterId": "torren_vale", "factionId": "bell_wardens", "regionId": "hearthmere", "role": "concept_master",
-      "path": "assets/characters/npcs/bell-wardens/torren-vale-v1.png", "sha256": "847eef83071d2a818e50902594600e055bd25c235985190421a399f94c151fbf", "bytes": 616393,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Torren Vale" },
-      "generation": { "sourceImageId": "exec-30fff8f9-c80b-4d5f-abc8-61861a987e64.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.torren_vale.master",
+      "characterId": "torren_vale",
+      "factionId": "bell_wardens",
+      "regionId": "hearthmere",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/bell-wardens/torren-vale-v1.png",
+      "sha256": "847eef83071d2a818e50902594600e055bd25c235985190421a399f94c151fbf",
+      "bytes": 616393,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Torren Vale"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "847eef83071d2a818e50902594600e055bd25c235985190421a399f94c151fbf"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.torren_vale.cutout", "characterId": "torren_vale", "factionId": "bell_wardens", "regionId": "hearthmere", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/bell-wardens/torren-vale-v1-cutout.png", "sha256": "01b5aa47e19a833da2eee7b4950f65049546fd637aa7a6419c7727a05ac78e02", "bytes": 384986,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-a337bd62-3468-404e-a16c-ff5c27be00e2.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/bell-wardens/torren-vale-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.667751, "visibleRatio": 0.332249, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.torren_vale.cutout",
+      "characterId": "torren_vale",
+      "factionId": "bell_wardens",
+      "regionId": "hearthmere",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/bell-wardens/torren-vale-v1-cutout.png",
+      "sha256": "01b5aa47e19a833da2eee7b4950f65049546fd637aa7a6419c7727a05ac78e02",
+      "bytes": 384986,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "01b5aa47e19a833da2eee7b4950f65049546fd637aa7a6419c7727a05ac78e02"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/bell-wardens/torren-vale-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.667751,
+        "visibleRatio": 0.332249,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.alda_rime.master", "characterId": "alda_rime", "factionId": "bell_wardens", "regionId": "hearthmere", "role": "concept_master",
-      "path": "assets/characters/npcs/bell-wardens/alda-rime-v1.png", "sha256": "14e2f2b11e71014edb1dcacaaa4a5da72cbb15fb690a896059671dd04758ad90", "bytes": 655918,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Alda Rime" },
-      "generation": { "sourceImageId": "exec-30e8c40e-81e0-4754-9581-217898630276.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.alda_rime.master",
+      "characterId": "alda_rime",
+      "factionId": "bell_wardens",
+      "regionId": "hearthmere",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/bell-wardens/alda-rime-v1.png",
+      "sha256": "14e2f2b11e71014edb1dcacaaa4a5da72cbb15fb690a896059671dd04758ad90",
+      "bytes": 655918,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Alda Rime"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "14e2f2b11e71014edb1dcacaaa4a5da72cbb15fb690a896059671dd04758ad90"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.alda_rime.cutout", "characterId": "alda_rime", "factionId": "bell_wardens", "regionId": "hearthmere", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/bell-wardens/alda-rime-v1-cutout.png", "sha256": "a5ee257ccbb543388626930331d16f012cd9ff4473cf0ee564dba0dfbf899c6b", "bytes": 323678,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-4dc581d3-25be-434f-9cd9-2a028f3770ce.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/bell-wardens/alda-rime-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.72191, "visibleRatio": 0.27809, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.alda_rime.cutout",
+      "characterId": "alda_rime",
+      "factionId": "bell_wardens",
+      "regionId": "hearthmere",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/bell-wardens/alda-rime-v1-cutout.png",
+      "sha256": "a5ee257ccbb543388626930331d16f012cd9ff4473cf0ee564dba0dfbf899c6b",
+      "bytes": 323678,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "a5ee257ccbb543388626930331d16f012cd9ff4473cf0ee564dba0dfbf899c6b"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/bell-wardens/alda-rime-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.72191,
+        "visibleRatio": 0.27809,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.neris_thorn.master", "characterId": "neris_thorn", "factionId": "bell_wardens", "regionId": "dunmire", "role": "concept_master",
-      "path": "assets/characters/npcs/bell-wardens/neris-thorn-v1.png", "sha256": "e28b70fe0dd6a7daaa8c6a55228a51eceba88c7ac54678b7c03d583a8f399020", "bytes": 613244,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Neris Thorn" },
-      "generation": { "sourceImageId": "exec-776670a5-5c20-4b5e-87fe-ff5ae171b02d.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.neris_thorn.master",
+      "characterId": "neris_thorn",
+      "factionId": "bell_wardens",
+      "regionId": "dunmire",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/bell-wardens/neris-thorn-v1.png",
+      "sha256": "e28b70fe0dd6a7daaa8c6a55228a51eceba88c7ac54678b7c03d583a8f399020",
+      "bytes": 613244,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Neris Thorn"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "e28b70fe0dd6a7daaa8c6a55228a51eceba88c7ac54678b7c03d583a8f399020"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.neris_thorn.cutout", "characterId": "neris_thorn", "factionId": "bell_wardens", "regionId": "dunmire", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/bell-wardens/neris-thorn-v1-cutout.png", "sha256": "f0798378ab943a8cadf671406f47c9b6df510bf13e33ecbe3f5eee428a077386", "bytes": 357869,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-f4b93faf-ea46-42a1-80f0-76bd49e5af17.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/bell-wardens/neris-thorn-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.669886, "visibleRatio": 0.330114, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.neris_thorn.cutout",
+      "characterId": "neris_thorn",
+      "factionId": "bell_wardens",
+      "regionId": "dunmire",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/bell-wardens/neris-thorn-v1-cutout.png",
+      "sha256": "f0798378ab943a8cadf671406f47c9b6df510bf13e33ecbe3f5eee428a077386",
+      "bytes": 357869,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "f0798378ab943a8cadf671406f47c9b6df510bf13e33ecbe3f5eee428a077386"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/bell-wardens/neris-thorn-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.669886,
+        "visibleRatio": 0.330114,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.edda_quill.master", "characterId": "edda_quill", "factionId": "bell_wardens", "regionId": "cinderward", "role": "concept_master",
-      "path": "assets/characters/npcs/bell-wardens/edda-quill-v1.png", "sha256": "3a19565faf0dfcccf0001fcf312430d336e9cd9f2344aa6fce44ffbd84c27160", "bytes": 690160,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Edda Quill" },
-      "generation": { "sourceImageId": "exec-f0336abe-45c9-474c-8b38-f7c8db86df3c.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.edda_quill.master",
+      "characterId": "edda_quill",
+      "factionId": "bell_wardens",
+      "regionId": "cinderward",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/bell-wardens/edda-quill-v1.png",
+      "sha256": "3a19565faf0dfcccf0001fcf312430d336e9cd9f2344aa6fce44ffbd84c27160",
+      "bytes": 690160,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Edda Quill"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "3a19565faf0dfcccf0001fcf312430d336e9cd9f2344aa6fce44ffbd84c27160"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.edda_quill.cutout", "characterId": "edda_quill", "factionId": "bell_wardens", "regionId": "cinderward", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/bell-wardens/edda-quill-v1-cutout.png", "sha256": "44e863122f190c6b53d8fd8aa3e3310de5b1f7666b7c41e63fc8a17a65e67d9f", "bytes": 324132,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-d03a4755-1e87-41e8-aca7-d42d13ebf9fe.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/bell-wardens/edda-quill-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.709402, "visibleRatio": 0.290598, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.edda_quill.cutout",
+      "characterId": "edda_quill",
+      "factionId": "bell_wardens",
+      "regionId": "cinderward",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/bell-wardens/edda-quill-v1-cutout.png",
+      "sha256": "44e863122f190c6b53d8fd8aa3e3310de5b1f7666b7c41e63fc8a17a65e67d9f",
+      "bytes": 324132,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "44e863122f190c6b53d8fd8aa3e3310de5b1f7666b7c41e63fc8a17a65e67d9f"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/bell-wardens/edda-quill-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.709402,
+        "visibleRatio": 0.290598,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.bram_caul.master", "characterId": "bram_caul", "factionId": "bell_wardens", "regionId": "graven_march", "role": "concept_master",
-      "path": "assets/characters/npcs/bell-wardens/bram-caul-v1.png", "sha256": "0029afd0253b21330292ab2bca9614f7f45aae929146af4bd2a498fec3c6cadd", "bytes": 618888,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Bram Caul" },
-      "generation": { "sourceImageId": "exec-437b5f93-add0-43b1-a50a-6d0db1eec07e.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.bram_caul.master",
+      "characterId": "bram_caul",
+      "factionId": "bell_wardens",
+      "regionId": "graven_march",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/bell-wardens/bram-caul-v1.png",
+      "sha256": "0029afd0253b21330292ab2bca9614f7f45aae929146af4bd2a498fec3c6cadd",
+      "bytes": 618888,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Bram Caul"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "0029afd0253b21330292ab2bca9614f7f45aae929146af4bd2a498fec3c6cadd"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.bram_caul.cutout", "characterId": "bram_caul", "factionId": "bell_wardens", "regionId": "graven_march", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/bell-wardens/bram-caul-v1-cutout.png", "sha256": "e421526f3585daaabf7fe1a135d6e67759b49e0cd49a5cce90abd002fd35c73a", "bytes": 306756,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-5487067b-942b-4db6-a761-58ddd8ee4346.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/bell-wardens/bram-caul-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.716262, "visibleRatio": 0.283738, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.bram_caul.cutout",
+      "characterId": "bram_caul",
+      "factionId": "bell_wardens",
+      "regionId": "graven_march",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/bell-wardens/bram-caul-v1-cutout.png",
+      "sha256": "e421526f3585daaabf7fe1a135d6e67759b49e0cd49a5cce90abd002fd35c73a",
+      "bytes": 306756,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "e421526f3585daaabf7fe1a135d6e67759b49e0cd49a5cce90abd002fd35c73a"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/bell-wardens/bram-caul-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.716262,
+        "visibleRatio": 0.283738,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.olan_vey.master", "characterId": "olan_vey", "factionId": "bell_wardens", "regionId": "graven_march", "role": "concept_master",
-      "path": "assets/characters/npcs/bell-wardens/olan-vey-v1.png", "sha256": "29338c7e86e0da2b309bda40f58432fa0607d252cb1e089e909f4ba63401d9e3", "bytes": 640416,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "opaque",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Olan Vey" },
-      "generation": { "sourceImageId": "exec-b843f638-9dfd-4f7c-84fb-8b410089ac02.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "maturity": { "concept_master": "authored_and_reviewed", "prototype_billboard": false, "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.olan_vey.master",
+      "characterId": "olan_vey",
+      "factionId": "bell_wardens",
+      "regionId": "graven_march",
+      "role": "concept_master",
+      "path": "assets/characters/npcs/bell-wardens/olan-vey-v1.png",
+      "sha256": "29338c7e86e0da2b309bda40f58432fa0607d252cb1e089e909f4ba63401d9e3",
+      "bytes": 640416,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Olan Vey"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "29338c7e86e0da2b309bda40f58432fa0607d252cb1e089e909f4ba63401d9e3"
+      },
+      "maturity": {
+        "concept_master": "authored_and_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     },
     {
-      "id": "named_character.olan_vey.cutout", "characterId": "olan_vey", "factionId": "bell_wardens", "regionId": "graven_march", "role": "transparent_cutout",
-      "path": "assets/characters/npcs/bell-wardens/olan-vey-v1-cutout.png", "sha256": "e6c7dd008e18c29dd4d934d8e33b9743a4a00a7cdaa61bdfba2409f7962057a4", "bytes": 367146,
-      "dimensions": { "width": 1024, "height": 1536 }, "colorSpace": "sRGB", "alphaPolicy": "transparent",
-      "prompt": { "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md", "section": "Cutout extraction and repair" },
-      "generation": { "sourceImageId": "exec-bbd3239f-25b2-4d76-a4f8-9dece0f38874.png", "tool": { "name": "OpenAI built-in image generation", "version": "not_exposed_by_tool" } },
-      "sourceReferences": ["assets/characters/npcs/bell-wardens/olan-vey-v1.png"],
-      "postprocess": { "script": "scripts/repair_checker_alpha.py", "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance" },
-      "alphaValidation": { "transparentRatio": 0.643252, "visibleRatio": 0.356748, "cornerAlpha": [0, 0, 0, 0] },
-      "maturity": { "concept_master": false, "prototype_billboard": "authored_and_alpha_validated", "runtime_integrated": false, "production_asset": false }
+      "id": "named_character.olan_vey.cutout",
+      "characterId": "olan_vey",
+      "factionId": "bell_wardens",
+      "regionId": "graven_march",
+      "role": "transparent_cutout",
+      "path": "assets/characters/npcs/bell-wardens/olan-vey-v1-cutout.png",
+      "sha256": "e6c7dd008e18c29dd4d934d8e33b9743a4a00a7cdaa61bdfba2409f7962057a4",
+      "bytes": 367146,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "transparent",
+      "prompt": {
+        "file": "assets/characters/npcs/bell-wardens/named-npcs-bell-wardens-batch-01.md",
+        "section": "Cutout extraction and repair"
+      },
+      "generation": {
+        "tool": {
+          "name": "built-in image generation",
+          "version": "not_exposed_by_tool"
+        },
+        "outputSha256": "e6c7dd008e18c29dd4d934d8e33b9743a4a00a7cdaa61bdfba2409f7962057a4"
+      },
+      "sourceReferences": [
+        "assets/characters/npcs/bell-wardens/olan-vey-v1.png"
+      ],
+      "postprocess": {
+        "script": "scripts/repair_checker_alpha.py",
+        "policy": "boundary_connected_pale_low_chroma_only_then_master_canvas_conformance"
+      },
+      "alphaValidation": {
+        "transparentRatio": 0.643252,
+        "visibleRatio": 0.356748,
+        "cornerAlpha": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "maturity": {
+        "concept_master": false,
+        "prototype_billboard": "authored_and_alpha_validated",
+        "runtime_integrated": false,
+        "production_asset": false
+      }
     }
   ]
 }

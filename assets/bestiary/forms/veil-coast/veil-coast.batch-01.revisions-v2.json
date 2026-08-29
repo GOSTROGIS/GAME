@@ -1,0 +1,38 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "veil-coast-kin-masters-batch-01-revision-v2",
+  "status": "immutable-before-generation",
+  "familyId": "veil_coast_kin",
+  "basePacketSha256": "eb97a1a39e7554f1e351d3d9a1e2c23eebd25316ea57b0e7049bd0b00297dc2e",
+  "referencePolicy": "Use only the inspected canonical Veil-Coast family plate as visual reference. Preserve the frozen base packet's global direction and all canonical fields. These revisions constrain only the recorded v1 blockers and add no canon.",
+  "assets": [
+    {
+      "id": "coral_knuckle",
+      "sourceCandidate": "coral-knuckle-concept-master-v1.png",
+      "outputFile": "coral-knuckle-concept-master-v2.png",
+      "reason": "The v1 hammer silhouette passes, but the wrist-to-knuckle closure cue is not sequentially readable.",
+      "revisionDirection": "Regenerate the same canonical Coral Knuckle concept from the family plate. Preserve exactly two real arms ending in oversized blunt red living-coral hammer hands with no ordinary fingers. On the foremost hammer only, make one continuous wrist-to-knuckle polyp sequence unmistakable: wrist polyps are fully open with visible radial mouths, mid-forearm polyps are half folded, and knuckle polyps are tightly compressed into closed slits. Keep the compressed knuckle coral exposed behind the arm as the strike target. Show a committed weight transfer with both complete webbed feet suspended against the near-black studio backdrop. No impact, ground, floor shadow, weapon, extra limb, detached coral, text, or scene. Full-body portrait with generous clearance."
+    },
+    {
+      "id": "moonless_netling",
+      "sourceCandidate": "moonless-netling-concept-master-v1.png",
+      "outputFile": "moonless-netling-concept-master-v2.png",
+      "reason": "The v1 net passes, but the mechanic token does not clearly reproduce the subject silhouette and the nearest-foot knot is not uniquely exposed.",
+      "revisionDirection": "Regenerate one compact original amphibian Moonless Netling from the family plate. Beneath but not touching it, suspend one flat near-black token whose outer contour unmistakably matches this exact netling's head crest, torso, two arms, two legs and webbed feet. It is a single flat subject-shaped shadow token in empty air, never a cast floor shadow or second creature. Stretch the wet fishing-line net across that token before any line reaches the physical body. At the token's nearest webbed foot, isolate exactly one visibly larger exposed breakable knot with clear black clearance on all sides; all other knots remain smaller and subordinate. Keep body, token, net edges, exposed knot, loose ends and every extremity fully framed. No floor, boat, water plane, hook, extra netling, text, glow or scene."
+    },
+    {
+      "id": "lantern_gilled_raider",
+      "sourceCandidate": "lantern-gilled-raider-concept-master-v1.png",
+      "outputFile": "lantern-gilled-raider-concept-master-v2.png",
+      "reason": "The v1 gills pass, but the required shallow blackwater apertures are absent and its lower after-outline reads as an extra creature.",
+      "revisionDirection": "Regenerate one original Lantern-Gilled Raider from the family plate. Expose integrated strikeable gill lanterns along neck and upper ribs, with alternating sacs in one restrained cold-cyan pulse snapshot. Around the lower silhouette, suspend exactly three separate shallow blackwater apertures: flat near-black oval cuts each far thinner than any creature and each fully detached from any floor or water plane. Inside each aperture show only one incomplete bodyless pressure notch, never a head, eye, limb, skeleton or creature. Indicate the vacated exchange position with one very thin partial amphibious contour immediately beside the raider, deliberately incomplete and subordinate, not a duplicate body. Pose one poised exchange step. Keep all gills, hands, webbed feet, three apertures and contour fully framed. No puddle scene, ally, summoned creature, handheld lantern, floor, flame, aura, text or crop."
+    },
+    {
+      "id": "undertow_harpooner",
+      "sourceCandidate": "undertow-harpooner-concept-master-v1.png",
+      "outputFile": "undertow-harpooner-concept-master-v2.png",
+      "reason": "The v1 harpoon and line pass, but the anchored current reads as a second armored sea creature and a contact plane is visible.",
+      "revisionDirection": "Regenerate one original Undertow Harpooner from the family plate. Give it exactly one complete harpoon held clearly off-axis. Trace one continuous retrieval line from that harpoon to exactly one exposed cuttable anchor knot embedded in a single shipless blackwater current ribbon behind the subject. The ribbon must be a smooth abstract flowing band with no head, face, eyes, mouth, shell nodes, lantern organs, fins, limbs or animal silhouette; align it in a visibly different direction from the harpoon. Suspend the full current ribbon, line and subject in empty air with no contact shadow or ground. Preserve both hands, webbed feet, lateral tracking lean, coral plates and caged lantern organs. Keep tip, whole line, knot and ribbon fully framed. No second harpoon, target, boat, shoreline, wave scene, water plane, floor, text or crop."
+    }
+  ]
+}

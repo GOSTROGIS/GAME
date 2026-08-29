@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "familyId": "white_ague",
+  "batchId": "white-ague-complete",
+  "policy": "The frozen six-form packet remains unchanged. Each entry records a constrained forward edit from the named sanitized v1 source. No v1 is overwritten. The accepted source pixels control all unchanged design decisions.",
+  "frozenPacket": {
+    "path": "concept-art-production/white-ague/prompt-packet.json",
+    "sha256": "b77195ec6936ec49b09ae44f05e24eba7cf169b89f8a46c183f80e27eaad5e8f"
+  },
+  "revisions": {
+    "horizon-kneeler-v2": {
+      "source": "concept-art-production/white-ague/horizon-kneeler-concept-master-v1.png",
+      "sourceSha256": "774726af082b590e1303148a51208b5a0991eb7fd953f08801eebfdac745cf6a",
+      "reason": "The two canonical shoulder-knees, long lower legs and level arc read, but two additional ordinary short legs or stumps descend from the pelvis, creating four lower limbs.",
+      "prompt": "Preserve the exact canvas, White Ague identity, featureless salt face, eroded horizon-salt materials, cold raking light, horizon-bent bow, exactly two prominent knee joints at the shoulders, exactly two long limbs ending in complete feet, and the single attached level salt-white arc. Remove only the two short ordinary leg-like stumps descending from the pelvis. Replace that lower central area with one clean tapered, legless pelvis termination and open black negative space. Final subject has exactly two lower limbs total, both emerging as shoulder-knee-to-foot chains; there are no ordinary legs below the pelvis, no arms or hands, and no extra stumps. Preserve full portrait framing, near-black opaque backdrop, and no ground, scene, text, logo, or watermark."
+    },
+    "meridian-widow-v2": {
+      "source": "concept-art-production/white-ague/meridian-widow-concept-master-v1.png",
+      "sourceSha256": "4e04196183add9042d5f9b090ff755af5a99e5eb9c51a034dedcacde2f318cd2",
+      "reason": "The subject reads as two separate complete twin women with two heads, torsos and pelvises rather than exactly one figure split by one continuous black crown-to-joined-feet meridian.",
+      "prompt": "Preserve the exact canvas, White Ague salt materials, palette, cold raking light, height, elegant opposed twist, full framing, and exactly two distinct shadow-violet arcs that rotate oppositely and overlap once. Rebuild the body as exactly one tall mature figure with exactly one featureless head, one torso, one pelvis, two legs and one joined foot base. A single continuous near-black meridian must visibly divide that one shared silhouette from crown through the center of the one head, face, torso, pelvis, both touching inner leg edges, and joined feet. The two half-surfaces twist in opposite circumferential directions while remaining physically joined everywhere along the same seam; there is no open gap and no duplicate head, neck, torso, pelvis, or body. Anchor both shadow arcs at the one joined foot base and make them overlap exactly once on the black meridian. No twin, clone, detached half, extra limb, ground, scene, text, logo, or watermark."
+    },
+    "meridian-widow-v3": {
+      "source": "concept-art-production/white-ague/meridian-widow-concept-master-v2.png",
+      "sourceSha256": "0694ed11f8b93921c0505c0348991cf8d414148e554dd3e4c6d1c652dc9e8ac9",
+      "reason": "The v2 one-body meridian anatomy passes, but its shadow cue reads as one continuous helical ribbon rather than exactly two separately terminated opposed arcs overlapping once.",
+      "prompt": "Preserve the v2 figure exactly. Remove the entire continuous helical ribbon. Replace it with exactly two separate open shadow-violet crescent arcs around the joined foot base. Each arc has exactly two clearly visible tapered free endpoints, for four endpoints total. Arc A starts at the viewer-left side of the joined feet and curves clockwise upward; Arc B starts at the viewer-right side and curves counterclockwise upward. They cross and overlap at exactly one small point on the black meridian just above the joined feet and remain separated everywhere else. Neither arc closes into a loop or continues into the other. No third arc, helix, floor shadow, ground, or body change."
+    },
+    "eastmost-penitent-v2": {
+      "source": "concept-art-production/white-ague/eastmost-penitent-concept-master-v1.png",
+      "sourceSha256": "ef9314bb69507598acd15ea268dc43c970b9caa05440473a00cb1c00fcc87b00",
+      "reason": "The one-body/one-finger taper, two knees, fixed shadow and westward fragments pass, but the prominent nearest joint is a smooth ring with no clean severance notch.",
+      "prompt": "Preserve the exact landscape canvas, one continuous kneeling White Ague body tapering into exactly one endless east-pointing finger, two stationary knees, salt materials, cold studio light, fixed narrow pointing-shadow ribbon, westward horizon fragments, pose, scale, silhouette, and all framing. Change only the prominent first circumferential joint immediately east of the broad torso: cut one clean, unmistakable V-shaped severance notch through the outer salt collar at that nearest joint, exposing a narrow shadow-violet gap as the unique counterplay target. Keep every more distant diminishing joint smooth and unnotched. Do not add a hand, fingertip, extra finger, limb, tool, blood, gore, ground, text, logo, or scene."
+    },
+    "eastmost-penitent-v3": {
+      "source": "concept-art-production/white-ague/eastmost-penitent-concept-master-v2.png",
+      "sourceSha256": "5373452ca0e9c179c992182be0b5e283430f5f350a250172b283cceeb9fbaaee",
+      "reason": "The v2 nearest joint remains a smooth violet circumferential collar; it changes color but does not expose the required physical V-shaped severance notch.",
+      "prompt": "Preserve v2 exactly except at the first violet collar east of the broad torso. Physically remove one large triangular wedge from the viewer-facing upper rim of that collar so two straight broken salt faces meet at a deep V apex. The near-black backdrop must be visible through the missing wedge; this is actual open negative space through the collar, not violet paint, a groove, a crack, or a smooth ring. Keep the remaining collar violet and every distant joint smooth. Do not change any other anatomy, cue, material, pose, scale, framing, or background."
+    },
+    "destination-without-land-v2": {
+      "source": "concept-art-production/white-ague/destination-without-land-concept-master-v1.png",
+      "sourceSha256": "b0638cd899f8321f37fc1e15456b5025c4a3223671359b32704e34df9c7e3ccd",
+      "reason": "The internal absence contains modeled towers, windows and deep relief rather than one empty city silhouette; repeated gates become shell doors; the three process cues are not separately readable.",
+      "prompt": "Preserve the exact portrait canvas, towering two-legged White Ague silhouette, horizon-bent pose, eroded translucent salt-mirage outer shell, cold raking light, palette, scale, full framing, and near-black opaque backdrop. Replace only the internal city and cue treatment. Inside the shell, make one flat pure near-black EMPTY city-shaped negative-space silhouette with a simple roof-and-tower skyline edge and two leg channels; no modeled towers, buildings, windows, rooms, doors, stairs, masonry, occupants, interior depth, or architectural relief. Remove every arched doorway from the outer salt shell. Within the black city absence, suspend four small abstract flat blank landmark fragments, each bearing the exact same simple gate-shaped cutout; all four are internal silhouettes, not doors on buildings or portals. Along the outer salt shell, add exactly three separate, subordinate, unlettered terrain-process indicators: one thin curved flow groove, one small stepped slope edge, and one flat shadow-violet strip. Keep them physically integrated, non-glowing, distinct, and readable without becoming a map or UI. No city scene, extra creature, traveler, crowd, text, logo, watermark, floor, landscape, or bright aura."
+    },
+    "destination-without-land-v3": {
+      "source": "concept-art-production/white-ague/destination-without-land-concept-master-v2.png",
+      "sourceSha256": "a51a89191a66c1a22b76e16bd96c35ab0a53f4685d5869208d32c7ee0bdc9241",
+      "reason": "The flat empty city and repeated gates pass, but only the stepped slope is unmistakable; the flow curve and cast-shadow strip are not distinct, and the four gate fragments appear detached like UI tokens.",
+      "prompt": "Preserve v2 outer body, flat empty city negative, two shared leg channels, exactly four identical gate-cutout fragments, and existing stepped slope edge. Attach each of the four gate fragments visibly within the mirage using two thin taut salt filaments from its top corners to the surrounding inner shell or skyline edge; they remain flat internal tokens, not UI or buildings. Add exactly one thin shallow S-shaped flow groove along the viewer-left outer salt shell from upper flank toward hip. Add exactly one separate flat narrow shadow-violet cast-shadow strip physically embedded along the viewer-right outer calf. Make the flow groove, existing stepped slope edge, and cast-shadow strip visually distinct and subordinate. No extra process mark, gate, architecture, map, ground, scene, text, or body change."
+    }
+  }
+}

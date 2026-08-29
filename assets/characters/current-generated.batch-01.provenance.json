@@ -1,0 +1,38 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-characters-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.gloamfarer",
+      "subjectId": "gloamfarer",
+      "role": "concept_master",
+      "path": "assets/characters/gloamfarer-v3.png",
+      "sha256": "12c1dbb0318261f9dc8876e426064bedcfab9eb85c0176c528080834d9267335",
+      "bytes": 1518830,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "12c1dbb0318261f9dc8876e426064bedcfab9eb85c0176c528080834d9267335"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

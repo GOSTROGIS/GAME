@@ -1,0 +1,21 @@
+{
+  "schema": "SableReachExpansionConceptPromptRevisionV1",
+  "batchId": "lucent-synod-expansion-batch-01-revision-v3",
+  "familyId": "lucent_procession",
+  "status": "immutable-before-generation",
+  "basePacketSha256": "4268c9426396d0ed81e2aa81e56ca42a4be4112c736b3eaff376c4ff5f2cfeb5",
+  "priorRevisionPacketSha256": "518459ed161bda8ff7873f93665271708f16bd56b41651137a616a5841f7e3ea",
+  "policy": "Preserve all accepted identity and family features. Correct only the independently identified silhouette-attachment and foot-visibility defects. Earlier candidate bytes remain immutable; the correction uses a new versioned filename.",
+  "promptCompilation": "The exact built-in edit prompt is inputRole followed by two newline characters followed by revisionDirection.",
+  "revisions": [
+    {
+      "id": "saint_vespera_second_shadow",
+      "source": "saint-vespera-second-shadow-concept-master-v2.png",
+      "sourceSha256": "96cfe3cbaf054365b312aae30a946f8fc1b27dd37a1198a64855aecc7a72d23c",
+      "outputFile": "saint-vespera-second-shadow-concept-master-v3.png",
+      "reason": "The shadow identity, door recesses and floor isolation passed, but the narrow gold connection read as a separate rope whose saint-side endpoint disappeared behind the robe rather than merging visibly into both silhouettes; only one complete saint foot remained visible.",
+      "inputRole": "Use case: precise-object-edit. Image 1 is the exact local edit target and accepted identity anchor. Change only the independently identified silhouette-isthmus and second-foot visibility defects; preserve every other visible feature.",
+      "revisionDirection": "Faithfully preserve the exact tranquil Vespera identity, one white-gold veiled saint, one asymmetrical incomplete black-gold halo, exactly one flat human-derived articulated shadow half a hand-gesture and half a step ahead, every closed doorway recess and plain latch, pose, scale, palette, materials, black studio isolation and cold neutral lighting. Remove the existing narrow gold rope-like tether completely. Replace it with exactly ONE short, broad, flat near-black silhouette isthmus that is visibly fused into the saint's viewer-left lower-robe and rear-ankle silhouette at one fully exposed endpoint, crosses clean black clearance without touching any floor, and visibly fuses into the shadow's viewer-right hip-and-ankle silhouette at the other fully exposed endpoint. The isthmus is continuous opaque shadow material, wide enough to read as a shared silhouette bridge rather than a rope or cable; use only one restrained sunless-gold rim along its OUTER edge. Neither endpoint may disappear behind cloth or a limb. Restore and expose EXACTLY TWO complete saint feet beneath separated robe panels, with both full toe and heel silhouettes surrounded by black clearance; keep the shadow's feet fully visible too. Keep saint, shadow and isthmus floating with no contact shadow, floor, ground plane, pedestal or horizontal haze. Keep exactly one physical saint and exactly one flat shadow; the shadow remains ahead, not beside or behind. No rope, cable, chain, second shadow, solid duplicate, demon, key, room, open door, text, cross, aura, transparency, checkerboard, or crop."
+    }
+  ]
+}

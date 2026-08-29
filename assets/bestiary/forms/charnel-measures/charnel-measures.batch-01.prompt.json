@@ -1,0 +1,59 @@
+{
+  "schema": "SableReachConceptPromptPacketV1",
+  "batchId": "charnel-measures-batch-01",
+  "status": "accepted-masters-cutouts-pending",
+  "familyId": "charnel_measures",
+  "sources": [
+    "packages/content/src/bestiary.data.js",
+    "design-review/kit/hm-art-law.js",
+    "assets/bestiary/charnel-measures-plate.png"
+  ],
+  "commonDirection": "Use the Charnel Measures family plate only as the authoritative family-style and material reference: chalk bone, ink brown, crypt blue, right-angled mortuary geometry, measuring limbs, drawer ribs, and precise clerical posture. Produce an original canonical form, not a copy of the plate subject. Highly polished stylized 3D dark-fantasy MMORPG production concept render, mature restrained anatomy and material density, single full-body subject in three-quarter view, all extremities visible, centered with generous silhouette clearance. Flat near-black neutral opaque studio backdrop, no environment or ground plane. Cold raking light from one side, ungraded neutral. No extra figures, text, readable symbols, runes, real religious marks, logos, watermark, franchise resemblance, glossy plastic, cute proportions, bright saturation, exposed entrails, or disability shorthand.",
+  "assets": [
+    {
+      "id": "drawerling",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "drawerling-v1.png",
+      "masterPrompt": "A small corpse drawer runs on finger bones like cabinet rollers. It slides along exact grid lines and cannot rotate between intersections. Labels flutter inside the closed drawer. It transports unsorted remains to larger measure forms. An unclaimed drawer was inventoried as occupied for so long that the error acquired weight. Grid Slide cue: chalk axes extend from its four corners. Counterplay: stand off-axis and strike when it locks at an intersection."
+    },
+    {
+      "id": "tally_corpse",
+      "rank": "regular",
+      "orientation": "portrait",
+      "masterFile": "tally-corpse-v2.png",
+      "masterPrompt": "Hash marks cut through the body and detach one limb at every fifth stroke. It repeats four short steps and one long displacement. A bone stylus scratches counts against its sternum. It counts remains crossing territorial grave boundaries. A mortuary clerk counted the same unnamed casualty until both count and corpse became indivisible. Fifth Mark cue: four shallow cuts brighten before a deep fifth line appears. Counterplay: interrupt on the fourth count or dodge across the fifth line."
+    },
+    {
+      "id": "plumb_line_butcher",
+      "rank": "specialist",
+      "orientation": "portrait",
+      "masterFile": "plumb-line-butcher-v2.png",
+      "masterPrompt": "A weighted cord hangs through its skull and keeps the split body perfectly vertical. It falls upright along any surface regardless of orientation. The plumb weight taps a hollow point before every descent. It corrects bodies that violate the mortuary's storage angles. Absolute Down cue: the cord points toward a wall while loose objects remain still. Counterplay: move opposite the cord and attack the body left hanging from the old down.",
+      "revisionDirection": "Show one taut complete weighted cord on a single absolute vertical through the skull and split body, with both upper anchor and lower plumb weight fully visible and clear of frame edges."
+    },
+    {
+      "id": "folded_registrar",
+      "rank": "elite",
+      "orientation": "portrait",
+      "masterFile": "folded-registrar-v4.png",
+      "masterPrompt": "Its body is creased into a cube with a face on every inward surface. It unfolds across rooms and refolds one corner nearer. Six mouths recite dimensions that exceed the chamber. It compresses overcrowded dead into portable spatial records. Room Fold cue: six chalk squares hinge upward around the target. Counterplay: break the square missing a face before the cube closes.",
+      "revisionDirection": "Show exactly six and only six distinct inward-facing face panels—top, bottom, left, right, rear/center, and front-hinged—inside one continuous open cubic frame, never a flat ring or separate props."
+    },
+    {
+      "id": "master_cubit",
+      "rank": "miniboss",
+      "orientation": "portrait",
+      "masterFile": "master-cubit-v1.png",
+      "masterPrompt": "An elongated forearm serves as its spine and measures every other limb. It advances by laying its own body down as a measuring rod. Knuckles announce fractions in descending order. It standardizes all bodies entering the charnel geometry. Living Measure cue: a bone-white unit repeats along its own measuring silhouette. Counterplay: occupy the partial final unit where its body cannot fit exactly."
+    },
+    {
+      "id": "warehouse_one_body",
+      "rank": "boss",
+      "orientation": "portrait",
+      "masterFile": "warehouse-one-body-v1.png",
+      "masterPrompt": "Thousands of articulated drawers occupy the volume of one walking silhouette. It exchanges internal distance with the arena, making steps longer inside than outside. Drawer runners pass from impossible depths. It seeks to store every Reach death within one perfectly indexed body. Infinite Inventory cue: abstractly indexed drawers open into impossible internal locations without readable numbers. Counterplay: enter one low-order drawer and exit through its matching high-order contradiction."
+    }
+  ],
+  "cutoutDirection": "After the master receives two independent passes, create a cutout by editing that exact master. Preserve canvas dimensions, pose, design, materials, lighting, scale, placement and silhouette. Remove only the background. Output a real RGBA PNG with alpha 0 outside the subject and at all four corners; do not depict checkerboard, ground, shadow, backdrop, text, logo or watermark."
+}

@@ -1,0 +1,328 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-glasswood-batch-01",
+  "recordedOn": "2026-08-29",
+  "rightsDeclaration": "owner-authorized original project art; no third-party or franchise source imagery; concept reference and prototype billboard use",
+  "records": [
+    {
+      "id": "concept_master.cathedral_stag",
+      "subjectId": "cathedral_stag",
+      "familyId": "glasswood",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/glasswood/cathedral-stag-v4.png",
+      "sha256": "a55ea7f589465efb2f6401508517a5072071c14bd51fd4ea9906d83058aa54c7",
+      "bytes": 1991771,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "a55ea7f589465efb2f6401508517a5072071c14bd51fd4ea9906d83058aa54c7"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.glasswood_hart",
+      "subjectId": "glasswood_hart",
+      "familyId": "glasswood",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/glasswood/glasswood-hart-v1.png",
+      "sha256": "2e2a8306eda7dd0005419484ef3c6c13d69b57394c5e651bbcda10db16f0b037",
+      "bytes": 1804172,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "2e2a8306eda7dd0005419484ef3c6c13d69b57394c5e651bbcda10db16f0b037"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.ironroot_auroch",
+      "subjectId": "ironroot_auroch",
+      "familyId": "glasswood",
+      "rank": "miniboss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/glasswood/ironroot-auroch-v5.png",
+      "sha256": "510dc64be56a37dae47ad2c6b890ebd7a26fa879911fb331a0987de72acc5f09",
+      "bytes": 1941089,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "510dc64be56a37dae47ad2c6b890ebd7a26fa879911fb331a0987de72acc5f09"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.prism_larva",
+      "subjectId": "prism_larva",
+      "familyId": "glasswood",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/glasswood/prism-larva-v7.png",
+      "sha256": "e7de80ca80c3d491e813572fc87f4513bbad98a32a22ab16c9fa09355211803d",
+      "bytes": 1797125,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "e7de80ca80c3d491e813572fc87f4513bbad98a32a22ab16c9fa09355211803d"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.razorwing_moth",
+      "subjectId": "razorwing_moth",
+      "familyId": "glasswood",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/glasswood/razorwing-moth-v1.png",
+      "sha256": "150c6be021e3e619d21a413e1fa510fba6dce3fd8f28bb3d71c4e8397ddca343",
+      "bytes": 1992438,
+      "dimensions": {
+        "width": 1023,
+        "height": 1537
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "150c6be021e3e619d21a413e1fa510fba6dce3fd8f28bb3d71c4e8397ddca343"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.reflection_finch",
+      "subjectId": "reflection_finch",
+      "familyId": "glasswood",
+      "rank": "specialist",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/glasswood/reflection-finch-v3.png",
+      "sha256": "fa5b55ca06a00b6c97e545294f1514ab96caac85ce4d8c3a633af7d29a2ffa0a",
+      "bytes": 1298468,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "fa5b55ca06a00b6c97e545294f1514ab96caac85ce4d8c3a633af7d29a2ffa0a"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.sapmirror_lynx",
+      "subjectId": "sapmirror_lynx",
+      "familyId": "glasswood",
+      "rank": "elite",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/glasswood/sapmirror-lynx-v4.png",
+      "sha256": "4d37966b8a9a8a20b208917ec7362b3632a7941c4153fcd9dcb69c8deba161c4",
+      "bytes": 2081934,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "4d37966b8a9a8a20b208917ec7362b3632a7941c4153fcd9dcb69c8deba161c4"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.shard_tick",
+      "subjectId": "shard_tick",
+      "familyId": "glasswood",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/glasswood/shard-tick-v1.png",
+      "sha256": "78eaaa680e90d285231ec42ec3ab90f30300a746a6fc3a222c54c72f06790664",
+      "bytes": 1249293,
+      "dimensions": {
+        "width": 1023,
+        "height": 1537
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "78eaaa680e90d285231ec42ec3ab90f30300a746a6fc3a222c54c72f06790664"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.splinter_doe",
+      "subjectId": "splinter_doe",
+      "familyId": "glasswood",
+      "rank": "regular",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/glasswood/splinter-doe-v4.png",
+      "sha256": "01342d05b22d1b6835742981153becf732be6041fd88c7d5c4973775dd3e8c58",
+      "bytes": 786481,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "01342d05b22d1b6835742981153becf732be6041fd88c7d5c4973775dd3e8c58"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    },
+    {
+      "id": "concept_master.widow_in_the_glass",
+      "subjectId": "widow_in_the_glass",
+      "familyId": "glasswood",
+      "rank": "boss",
+      "role": "concept_master",
+      "path": "assets/bestiary/forms/glasswood/widow-in-the-glass-v2.png",
+      "sha256": "ccfb9269f26103d1f2fd55700a3a996119473f791c5d95c7d41564a4d58a047e",
+      "bytes": 2060571,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "canonical public direction hash retained; private execution context omitted",
+      "promptSha256": "cb656538cb59b2f0f7bc94dfd1dc5d55db7ee5a29df1e487e55e1e59a411f083",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference edit",
+        "outputSha256": "ccfb9269f26103d1f2fd55700a3a996119473f791c5d95c7d41564a4d58a047e"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "concept_master": "authored_and_independently_reviewed",
+        "prototype_billboard": false,
+        "runtime_integrated": true,
+        "production_asset": false
+      }
+    }
+  ]
+}

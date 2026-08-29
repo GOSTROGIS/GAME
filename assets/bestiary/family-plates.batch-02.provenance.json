@@ -2,7 +2,7 @@
   "schema": "FamilyPlateBatchProvenanceV1",
   "batchId": "family-plates-batch-02",
   "generatedOn": "2026-08-25",
-  "tool": "OpenAI built-in image generation",
+  "tool": "built-in image generation",
   "promptAvailability": "exact_prompt_not_present_in_concurrent_handoff",
   "rightsDeclaration": "owner-directed-original-project-art; no third-party or franchise source imagery; provider account terms apply",
   "records": [
@@ -12,14 +12,19 @@
       "familyName": "Bell Revenants",
       "role": "family_plate",
       "path": "assets/bestiary/bell-revenants-plate.png",
-      "sha256": "4ec05c53c1ca81bb3b1d8d2e57b7b757bd2f4a776461954e564b6f816adc6cad",
-      "bytes": 2014820,
-      "dimensions": { "width": 1024, "height": 1536 },
+      "sha256": "8a628bea35d70072746c7b0876dcbbd8964152567f6d87c8448b15b48689679b",
+      "bytes": 1992984,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
       "colorSpace": "sRGB",
       "alphaPolicy": "opaque",
       "generation": {
-        "callId": "not_exposed_by_tool",
-        "sourceImageId": "exec-c33e33a3-57da-4bdd-b11a-4935c0d49ac7.png"
+        "outputSha256": "8a628bea35d70072746c7b0876dcbbd8964152567f6d87c8448b15b48689679b",
+        "tool": {
+          "name": "built-in image generation"
+        }
       },
       "maturity": {
         "concept_master": "authored",
@@ -34,14 +39,19 @@
       "familyName": "Glasswood Brood",
       "role": "alternate_family_plate",
       "path": "assets/bestiary/glasswood-brood-plate.png",
-      "sha256": "bd2278f98abfb81d995b0045c923c9531da015f2400ed0002fe951f2dc83aa62",
-      "bytes": 2156030,
-      "dimensions": { "width": 1023, "height": 1537 },
+      "sha256": "aad55aae7a4c331faf1b120213f9abcfa8de7776e04e78e86144b6753d73ac4c",
+      "bytes": 2132421,
+      "dimensions": {
+        "width": 1023,
+        "height": 1537
+      },
       "colorSpace": "sRGB",
       "alphaPolicy": "opaque",
       "generation": {
-        "callId": "not_exposed_by_tool",
-        "sourceImageId": "exec-88274df3-2f94-4390-af47-fc36915b05d4.png"
+        "outputSha256": "aad55aae7a4c331faf1b120213f9abcfa8de7776e04e78e86144b6753d73ac4c",
+        "tool": {
+          "name": "built-in image generation"
+        }
       },
       "maturity": {
         "concept_master": "alternate",
