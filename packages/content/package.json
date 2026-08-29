@@ -58,6 +58,10 @@
       "types": "./src/siteScenes.ts",
       "import": "./dist/siteScenes.js"
     },
+    "./world-spatial": {
+      "types": "./src/world-spatial.data.d.ts",
+      "import": "./dist/world-spatial.data.js"
+    },
     "./bridge-runtime": {
       "types": "./src/bridgeRuntime.ts",
       "import": "./dist/bridgeRuntime.js"

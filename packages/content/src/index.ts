@@ -206,3 +206,4 @@ export function legacyTileToWorld(x: number, y: number): WorldTransform {
 export * from "./runtime.js";
 export * from "./turnCombatContent.js";
 export * from "./narrative.js";
+export * from "./world-spatial.data.js";
