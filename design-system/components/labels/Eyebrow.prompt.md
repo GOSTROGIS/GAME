@@ -6,3 +6,7 @@ Gold uppercase kicker above a heading — the most recognisable mark in the syst
 ```
 
 Three words maximum. Never use it for reading copy, and never in bone or white.
+
+## Accessibility
+
+The default paragraph is not a heading; retain a real heading immediately after it.

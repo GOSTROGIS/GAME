@@ -12,6 +12,8 @@ export interface ItemSlotProps {
   /** Item name, shown in the tooltip. */
   name?: React.ReactNode;
   detail?: React.ReactNode;
+  /** Required when `name` is not plain text. */
+  accessibleName?: string;
   onClick?: () => void;
   style?: React.CSSProperties;
 }

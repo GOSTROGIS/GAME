@@ -4,7 +4,7 @@ import * as React from "react";
  *  feature of a person, not a setting. Laid out in a two-column morph grid. */
 export interface MorphRowProps {
   id?: string;
-  label?: React.ReactNode;
+  label: React.ReactNode;
   /** 0–1. */
   value?: number;
   onChange?: (value: number) => void;

@@ -4,10 +4,12 @@ import { Icon } from "../icons/Icon.jsx";
 
 export function SkillTile({ name, level, icon, xpPct = 0, onClick, style, ...rest }) {
   const [hot, setHot] = React.useState(false);
+  const pct = Math.max(0, Math.min(100, Number(xpPct) || 0));
   return (
     <button
       type="button"
       onClick={onClick}
+      aria-label={name + ", level " + level + ", " + Math.round(pct) + " percent to next level"}
       onMouseEnter={() => setHot(true)}
       onMouseLeave={() => setHot(false)}
       style={{
@@ -23,6 +25,7 @@ export function SkillTile({ name, level, icon, xpPct = 0, onClick, style, ...res
       {...rest}
     >
       <span
+        aria-hidden="true"
         style={{
           float: "left",
           display: "grid",
@@ -39,8 +42,8 @@ export function SkillTile({ name, level, icon, xpPct = 0, onClick, style, ...res
       <strong style={{ display: "block", font: "500 11px var(--display)", color: "var(--bone)" }}>{name}</strong>
       <b style={{ color: "var(--gold-bright)", font: "18px var(--display)" }}>{level}</b>
       <small style={{ display: "block", color: "#7f8581", fontSize: 8 }}>of 99</small>
-      <span style={{ display: "block", height: 2, marginTop: 8, background: "#252b2c" }}>
-        <i style={{ display: "block", height: "100%", width: Math.max(0, Math.min(100, xpPct)) + "%", background: "var(--gold)" }} />
+      <span aria-hidden="true" style={{ display: "block", height: 2, marginTop: 8, background: "#252b2c" }}>
+        <i style={{ display: "block", height: "100%", width: pct + "%", background: "var(--gold)" }} />
       </span>
     </button>
   );

@@ -14,7 +14,7 @@ styles.css              <- entry point (import lines only)
 README.md               <- the design guide
 SKILL.md                <- Agent Skills wrapper
 tokens/                 <- colors, typography, spacing, effects
-components/             <- 59 reference primitives in 11 groups
+components/             <- 60 reference primitives in 12 groups
 guidelines/             <- 20 foundation specimen cards
 ui_kits/game-client/    <- click-through recreation
 _ds_fallback.js         <- REQUIRED by standalone cards; dev/reference only

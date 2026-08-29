@@ -6,15 +6,13 @@ import * as React from "react";
  *
  * @startingPoint section="Progression" subtitle="Discipline tile with level and XP" viewport="700x150"
  */
-export interface SkillTileProps {
+export interface SkillTileProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "name"> {
   name?: React.ReactNode;
   level?: number;
-  /** Unicode glyph, e.g. "\u2694" for Swordsmanship. */
-  glyph?: string;
+  /** Canonical Icon name for the discipline. */
+  icon?: string;
   /** Progress to next level, 0–100. */
   xpPct?: number;
-  onClick?: () => void;
-  style?: React.CSSProperties;
 }
 
 export function SkillTile(props: SkillTileProps): React.JSX.Element;

@@ -27,7 +27,7 @@ export { loadPlate };
 
 export const SUBJECT = {
   id: 'enemy.smoke-notary', name: 'Smoke Notary', family: 'Ashbound', rank: null,
-  plate: './assets/enemies/smoke-notary-v1.png',
+  plate: '../assets/enemies/smoke-notary-v1.png',
   promptCall: 'call_nIgtNVLVAaxYFQ2Pt3fXba2w',
   targetHeightMeters: 1.90,
 };

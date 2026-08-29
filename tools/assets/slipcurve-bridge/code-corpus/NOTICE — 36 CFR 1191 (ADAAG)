@@ -1,0 +1,51 @@
+36 CFR Part 1191 — Americans with Disabilities Act Accessibility Guidelines
+US Architectural and Transportation Barriers Compliance Board (Access Board)
+
+RIGHTS
+  Edicts of government. As a work of the United States Government, this text is
+  not subject to copyright protection in the United States (17 U.S.C. 105).
+  No licence is required to reproduce it, and none has been sought.
+
+PROVENANCE
+  Retrieved 2026-08-28 from the Electronic Code of Federal Regulations:
+  https://www.ecfr.gov/api/versioner/v1/full/2026-08-01/title-36.xml?chapter=XI&part=1191
+  Edition: eCFR as amended through 2026-08-01.
+  SHA-256 (uncompressed):
+  fc2a01eb47cda1b2f076978985678a382426b0246060738b8ddb32aa075c95ff
+
+WHAT IS USED FROM IT
+  ADAAG 307.2    protrusion limits, and the handrail exception
+  ADAAG 307.4    vertical clearance over an accessible route
+  ADAAG 304.3.1  circular turning space
+  ADAAG 305.3    clear floor or ground space
+  ADAAG 405.2    ramp running slope
+  ADAAG 502.5    vertical clearance over a van route
+
+  EVERY ADAAG DIMENSION IS PRINTED IN BOTH INCHES AND MILLIMETRES, AND EVERY
+  PAIR IS A SOFT CONVERSION. 60 in is 1524 mm and the document prints 1525;
+  30 in is 762 mm and it prints 760; 80 in is 2032 mm and it prints 2030; 4 in
+  is 101.6 mm and it prints 100. Both figures are carried exactly as printed and
+  nothing converts one into the other; tools/citecheck.py bans the six
+  arithmetic products outright, because none of them appears in the document.
+
+  That 762 is worth noticing on its own: it is the figure 29 CFR
+  1910.303(g)(1)(i)(B) prints for the same 30 inches. Two documents, two
+  published values for one length, and taking one for the other is exactly the
+  confusion the audit exists to prevent.
+
+  The handrail limit is printed as a vulgar fraction — "4 1/2 inches (115 mm)" —
+  marked up in the source as 4<FR>1/2</FR>. The engine carries 4.5, and the
+  audit checks the fraction in the clause and the decimal at the declaration
+  site, requiring both.
+
+  Table 405.2, which permits steeper ramp slopes in existing facilities, is NOT
+  transcribed. 304.3.2, the T-shaped turning space, is NOT transcribed; only the
+  circular form is reported.
+
+  These are UNITED STATES requirements. CSA B651 governs accessible design in
+  Canada and its dimensions differ; engine/mc-clearance.js names that gap rather
+  than applying one country's figure under the other's label.
+
+  The eCFR is an unofficial editorial compilation. It is not the official legal
+  edition of the CFR, and nothing here is a substitute for the Federal Register
+  or for the judgement of an authority having jurisdiction.

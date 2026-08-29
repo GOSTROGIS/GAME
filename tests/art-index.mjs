@@ -32,7 +32,7 @@ for (const character of index.namedCharacters) {
   const canonical = canonicalCharacters.get(character.id);
   assert.ok(canonical, `named character ${character.id} must exist in CHARACTERS`);
   assert.equal(character.factionId, canonical.factionId, `${character.id} faction must match CHARACTERS`);
-  assert.equal(character.regionId, canonical.regionId, `${character.id} region must match CHARACTERS`);
+  assert.equal(character.regionId, canonical.region, `${character.id} region must match CHARACTERS`);
 }
 
 for (const origin of index.playableOrigins) {

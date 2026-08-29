@@ -6,7 +6,7 @@ import * as React from "react";
  *
  * @startingPoint section="Narrative" subtitle="Speaker, line and player choices" viewport="700x240"
  */
-export interface DialogueProps {
+export interface DialogueProps extends React.HTMLAttributes<HTMLElement> {
   /** The speaker's faction, shown as a gold micro label. */
   faction?: React.ReactNode;
   speaker?: React.ReactNode;

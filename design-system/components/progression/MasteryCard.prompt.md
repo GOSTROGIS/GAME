@@ -6,3 +6,7 @@ The capstone trial at the end of a discipline tree.
 ```
 
 One per discipline. Note that the milestone/mastery evaluator is a production contract, not a live runtime feature — label accordingly.
+
+## Accessibility
+
+Use it under a section heading and state requirements in text instead of relying on the gold border.

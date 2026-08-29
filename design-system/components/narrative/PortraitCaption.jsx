@@ -2,7 +2,7 @@ import React from "react";
 
 export function PortraitCaption({ name, note, style, ...rest }) {
   return (
-    <div
+    <figcaption
       style={{
         position: "absolute",
         left: 28,
@@ -20,6 +20,6 @@ export function PortraitCaption({ name, note, style, ...rest }) {
     >
       <strong style={{ font: "var(--type-h3-location)", color: "var(--bone)" }}>{name}</strong>
       <span style={{ color: "var(--muted)", font: "var(--type-caption)" }}>{note}</span>
-    </div>
+    </figcaption>
   );
 }

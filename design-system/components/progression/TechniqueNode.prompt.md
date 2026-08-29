@@ -6,3 +6,7 @@ A purchasable technique in a discipline tree. Grid is three columns.
 ```
 
 Dim locked nodes to 55%; never hide them. When an exclusive pair is resolved, the sibling becomes `locked`.
+
+## Accessibility
+
+State is written in text, disabled controls use native `disabled`, and the 44px action names its cost.

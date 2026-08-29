@@ -1,8 +1,8 @@
 import React from "react";
 
-export function GlassPanel({ children, style, ...rest }) {
+export function GlassPanel({ as: Element = "div", children, style, ...rest }) {
   return (
-    <div
+    <Element
       style={{
         background: "var(--glass-bg)",
         border: "1px solid var(--line)",
@@ -13,6 +13,6 @@ export function GlassPanel({ children, style, ...rest }) {
       {...rest}
     >
       {children}
-    </div>
+    </Element>
   );
 }

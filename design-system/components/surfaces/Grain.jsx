@@ -3,6 +3,7 @@ import React from "react";
 export function Grain({ style, ...rest }) {
   return (
     <div
+      {...rest}
       aria-hidden="true"
       style={{
         position: "absolute",
@@ -14,7 +15,6 @@ export function Grain({ style, ...rest }) {
         animation: "grain var(--grain-step) steps(2) infinite",
         ...style
       }}
-      {...rest}
     />
   );
 }

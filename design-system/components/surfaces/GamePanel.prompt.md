@@ -7,3 +7,7 @@ The in-world content panel for skills, inventory, journal, bestiary and atlas.
 ```
 
 Reuse the committed anchor (left 98 / top 120 / bottom 115) rather than positioning it yourself. Header height is fixed — don't grow it to fit a longer title; shorten the title.
+
+## Accessibility
+
+The title labels the section. When `onClose` is present the 44px control has the accessible name “Close panel”.

@@ -2,14 +2,24 @@ import React from "react";
 
 import { Icon } from "../icons/Icon.jsx";
 
-export function ItemSlot({ icon, count, name, detail, onClick, style, ...rest }) {
+export function ItemSlot({ icon, count, name, detail, accessibleName, onClick, style, ...rest }) {
   const [hot, setHot] = React.useState(false);
+  const tooltipId = React.useId();
+  const empty = name == null && icon == null;
+  const itemName = accessibleName || (typeof name === "string" || typeof name === "number" ? String(name) : "Inventory item");
+  const label = empty ? "Empty inventory slot" : itemName + (count != null ? `, quantity ${count}` : "");
   return (
     <button
+      {...rest}
       type="button"
       onClick={onClick}
       onMouseEnter={() => setHot(true)}
       onMouseLeave={() => setHot(false)}
+      onFocus={() => setHot(true)}
+      onBlur={() => setHot(false)}
+      aria-label={label}
+      aria-describedby={hot && detail ? tooltipId : undefined}
+      disabled={empty}
       style={{
         aspectRatio: "1",
         padding: 6,
@@ -21,12 +31,13 @@ export function ItemSlot({ icon, count, name, detail, onClick, style, ...rest })
         cursor: "pointer",
         ...style
       }}
-      {...rest}
     >
       <Icon name={icon} size={26} style={{ filter: "drop-shadow(0 3px 5px #000)" }} />
       {count != null ? <b style={{ position: "absolute", right: 5, bottom: 3, fontSize: 9, color: "var(--bone)" }}>{count}</b> : null}
       {hot && name ? (
         <small
+          id={tooltipId}
+          role="tooltip"
           style={{
             position: "absolute",
             left: "50%",

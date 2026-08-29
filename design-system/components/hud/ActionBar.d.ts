@@ -9,6 +9,8 @@ export interface ActionSlot {
   key?: string;
   /** Charge or stack count shown top-right in gold. */
   count?: number;
+  /** Unavailable commands remain visible but are removed from keyboard use. */
+  disabled?: boolean;
 }
 
 /** Bottom-centre action rail, 76x61 per slot.

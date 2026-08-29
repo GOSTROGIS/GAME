@@ -50,7 +50,7 @@
  * here to prevent.
  */
 import * as THREE from 'three';
-import { MAT, rnd, part, ico, jitter, cnt } from './hm-core.js';
+import { MAT, rnd, part, ico, jitter, cnt } from '../../world/hearthmere/hm-core.js';
 import {
   VFX_ENV, pal, gpuPoints, softVolume, lightPool, axesOf, measureFx,
   terminalVelocity, NOISE_GLSL, FOG_GLSL, vfxTexture,

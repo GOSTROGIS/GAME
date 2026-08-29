@@ -83,7 +83,7 @@ test("every runtime instance resolves to an honest stable-ID asset recipe", () =
   }
 
   const house = resolveAssetRuntimeRecipe("hm.structure.hold-house-small");
-  assert.equal(house?.generatorId, "structure.graybox");
+  assert.equal(house?.generatorId, "structure.procedural.v1");
   assert.equal(house?.status, "prototype_geometry");
   assert.deepEqual(house?.parameters.footprint, [9, 7]);
   assert.equal(resolveAssetRuntimeRecipe("hm.missing"), null);

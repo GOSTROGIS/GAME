@@ -15,8 +15,10 @@ that stops that.
 
 It is designed to be a **drop-in superset** of the game's stylesheet. The
 thirteen canonical tokens use the game's own names (`--ink`, `--gold`,
-`--line`), so `styles.css` in the repo could eventually delete its `:root`
-block and import `tokens/colors.css` instead, with no visual change.
+`--line`). Production imports these four sheets from the root `styles.css`:
+`tokens/colors.css`, `tokens/typography.css`, `tokens/spacing.css`, and
+`tokens/effects.css`. The standalone reference cards continue to enter through
+`design-system/styles.css`.
 
 ## Sources
 
@@ -212,7 +214,7 @@ title treatment is type: "The Hollow" in `--bone-bright` with "March" in
 | `tokens/typography.css` | Three families, composite scale, tracking |
 | `tokens/spacing.css` | Space scale, HUD/modal/dialogue anchors, touch floor |
 | `tokens/effects.css` | Fills, shadows, texture, grading, motion, keyframes |
-| `components/` | 45 primitives in 11 groups |
+| `components/` | 60 reference primitives in 12 groups |
 | `guidelines/` | 20 foundation specimen cards |
 | `ui_kits/game-client/` | Click-through recreation of the five real surfaces |
 | `assets/` | 9 original renders — 4 world keyframes, 4 origins, 1 title |
@@ -233,6 +235,7 @@ title treatment is type: "The Hollow" in `--bone-bright` with "March" in
 | `codex/` | EnemyCodexCard, CharacterCodexCard, FactionCard, FamilyStripItem, RelationshipRow, JournalEntry, WorldCard |
 | `inventory/` | ItemSlot, PaperDoll, SheetStat |
 | `narrative/` | Dialogue, SpeakerMark, PortraitStage, PortraitCaption, DeathScreen |
+| `turn/` | TurnPhaseBar, ResourcePips, IntentQueue, IntentTelegraph, PartyReadiness, ResolutionLog |
 
 Runtime namespace: `window.HollowMarch`.
 
@@ -256,25 +259,23 @@ No component was invented for a pattern the stylesheet does not define.
 
 ---
 
-## Direction change in flight
+## Turn-combat vocabulary
 
-The stylesheet was authored for a **real-time** action game. The project is
-moving to **turn-based**. Three components encode real-time assumptions and are
-marked *under revision* in their `.d.ts`:
+The shared world remains real-time outside encounters. Encounter participants
+plan two action beats, reserve one reaction, commit readiness, and then observe
+an authoritative ordered resolution.
 
-- **Meter** `kind="stamina"` — a continuously draining resource presumes
-  real-time commitment.
-- **ActionBar** — the `1`/`2`/`Space` bindings are light/heavy/dodge, i.e.
-  timing windows.
-- **CombatText** — floating numbers assume continuous resolution.
+- **TurnPhaseBar** exposes round and state without deriving authority.
+- **ResourcePips** represents small discrete AP and reservation budgets.
+- **IntentTelegraph** writes actor, action, target, resolution band, sensory cue,
+  and interruption rule without relying on icons or colour alone.
+- **IntentQueue** preserves authoritative ordering.
+- **PartyReadiness** distinguishes participants, spectators, and reconnection.
+- **ResolutionLog** preserves the complete ordered outcome while announcing one
+  concise band summary.
 
-Turn-based will need vocabulary that does not exist yet: a turn-order or
-initiative rail, per-turn action economy, committed-intent preview, and a
-resolution log. When those are designed they belong here first, then in the
-game.
-
-Everything else — palette, type, surfaces, panels, all cards, all forms, the ten
-encounter roles — is mechanic-neutral and survives the change.
+The real-time **Meter**, **ActionBar**, and **CombatText** remain legacy reference
+surfaces; encounter work uses the dedicated turn primitives above.
 
 ---
 

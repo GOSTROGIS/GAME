@@ -1,5 +1,7 @@
 import React from "react";
 
+const STATE_LABELS = { learned: "Learned", available: "Available", locked: "Locked" };
+
 export function TechniqueNode({ tier, name, description, state = "available", cost, onPurchase, style, ...rest }) {
   const [hot, setHot] = React.useState(false);
   const learned = state === "learned";
@@ -19,7 +21,7 @@ export function TechniqueNode({ tier, name, description, state = "available", co
       }}
       {...rest}
     >
-      <span style={{ color: "var(--gold)", font: "var(--type-micro)", letterSpacing: "var(--track-nano)", textTransform: "uppercase" }}>{tier}</span>
+      <span style={{ color: "var(--gold)", font: "var(--type-micro)", letterSpacing: "var(--track-nano)", textTransform: "uppercase" }}>{tier}{tier ? " · " : ""}{STATE_LABELS[state] || state}</span>
       <h3 style={{ margin: "7px 0 5px", font: "var(--type-h3-node)", color: "var(--bone)" }}>{name}</h3>
       <p style={{ margin: "0 0 11px", color: "#989e98", font: "13px/1.35 var(--serif)" }}>{description}</p>
       <button
@@ -30,7 +32,7 @@ export function TechniqueNode({ tier, name, description, state = "available", co
         onMouseLeave={() => setHot(false)}
         style={{
           marginTop: "auto",
-          minHeight: 30,
+          minHeight: 44,
           color: learned || locked ? "#777" : hot ? "var(--gold-bright)" : "#c2bba9",
           background: "#111719",
           border: "1px solid " + (!learned && !locked && hot ? "var(--gold)" : "var(--line)"),
@@ -41,7 +43,7 @@ export function TechniqueNode({ tier, name, description, state = "available", co
           cursor: learned || locked ? "default" : "pointer"
         }}
       >
-        {learned ? "Learned" : locked ? "Locked" : cost != null ? "Purchase &middot; " + cost : "Purchase"}
+        {learned ? "Learned" : locked ? "Locked" : cost != null ? "Purchase · " + cost : "Purchase"}
       </button>
     </article>
   );

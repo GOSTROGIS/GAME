@@ -22,7 +22,7 @@
  * gauges and stacks, and this is what comes out of them.
  */
 import * as THREE from 'three';
-import { MAT, rnd, part, ico, cyl, lathe, torus, jitter, cnt } from './hm-core.js';
+import { MAT, rnd, part, ico, cyl, lathe, torus, jitter, cnt } from '../../world/hearthmere/hm-core.js';
 import {
   VFX_ENV, pal, gpuPoints, softVolume, lightPool, vfxTexture,
   axesOf, measureFx, flicker, NOISE_GLSL, FOG_GLSL,

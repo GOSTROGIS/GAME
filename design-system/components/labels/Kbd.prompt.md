@@ -5,3 +5,7 @@ A keycap for bindings and hints.
 ```
 
 Set in Inter, not Cinzel. Keep the 2px radius — it is intentional and one of only three radii in the system.
+
+## Accessibility
+
+`Kbd` is supplemental text, never the only name or instruction for an action.

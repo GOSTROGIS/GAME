@@ -1,0 +1,178 @@
+# Cited clauses — verbatim
+
+Every paragraph and table figure that `engine/mc-clearance.js` relies on, lifted
+verbatim from the vaulted source. `tools/citecheck.py` re-derives all of it from
+the source bytes on every build; if the engine ever states a number that is not
+below, the build fails.
+
+---
+
+## 29 CFR Part 1910 Subpart S — Electrical
+
+- **Publisher** US Occupational Safety and Health Administration
+- **Rights** Work of the US Government. Not subject to copyright in the United States (17 U.S.C. 105).
+- **Retrieved** 2026-08-28
+- **Source** https://www.ecfr.gov/api/versioner/v1/full/2026-08-01/title-29.xml?part=1910&subpart=S
+- **SHA-256** `5685c850f9593245d4ca56bd9fbc9432f422cdcffcb40e186ef482e0ec1a1b51`
+
+### Clauses
+
+#### 29 CFR 1910.303(g)(1)(i)(A)
+
+> (A) The depth of the working space in the direction of access to live parts may not be less than indicated in Table S-1. Distances shall be measured from the live parts if they are exposed or from the enclosure front or opening if they are enclosed;
+
+#### 29 CFR 1910.303(g)(1)(i)(B)
+
+> (B) The width of working space in front of the electric equipment shall be the width of the equipment or 762 mm (30 in.), whichever is greater. In all cases, the working space shall permit at least a 90-degree opening of equipment doors or hinged panels; and
+
+#### 29 CFR 1910.303(g)(1)(i)(C)
+
+> (C) The work space shall be clear and extend from the grade, floor, or platform to the height required by paragraph (g)(1)(vi) of this section. However, other equipment associated with the electrical installation and located above or below the electric equipment may extend not more than 153 mm (6 in.) beyond the front of the electric equipment.
+
+#### 29 CFR 1910.303(h)(5)(i)
+
+> (5) Working space and guarding. (i) Except as elsewhere required or permitted in this subpart, the minimum clear working space in the direction of access to live parts of electric equipment may not be less than specified in Table S-2. Distances shall be measured from the live parts, if they are exposed, or from the enclosure front or opening, if they are enclosed.
+
+#### 29 CFR 1910.303(h)(5)(vi)
+
+> (vi) Pipes or ducts that are foreign to the electrical installation and that require periodic maintenance or whose malfunction would endanger the operation of the electrical system may not be located in the vicinity of service equipment, metal-enclosed power switchgear, or industrial control assemblies. Protection shall be provided where necessary to avoid damage from condensation leaks and breaks in such foreign systems.
+
+#### 29 CFR 1910.303(g)(1)(ii)
+
+> (ii) Working space required by this standard may not be used for storage. When normally enclosed live parts are exposed for inspection or servicing, the working space, if in a passageway or general open space, shall be suitably guarded.
+
+#### 29 CFR 1910.303(g)(1)(vi)(A)
+
+> (A) For installations built before August 13, 2007, 1.91 m (6.25 ft); and
+
+#### 29 CFR 1910.303(g)(1)(vi)(B)
+
+> (B) For installations built on or after August 13, 2007, 1.98 m (6.5 ft), except that where the electrical equipment exceeds 1.98 m (6.5 ft) in height, the minimum headroom may not be less than the height of the equipment.
+
+#### 29 CFR 1910.303(g)(1)(vii)(A)(1)
+
+> ( 1 ) The space equal to the width and depth of the equipment and extending from the floor to a height of 1.83 m (6.0 ft) above the equipment or to the structural ceiling, whichever is lower, shall be dedicated to the electrical installation. Unless isolated from equipment by height or physical enclosures or covers that will afford adequate mechanical protection from vehicular traffic or accidental contact by unauthorized personnel or that complies with paragraph (g)(1)(vii)(A)(2) of this section, piping, ducts, or equipment foreign to the electrical installation may not be located in this area;
+
+#### 29 CFR 1910.303(g)(1)(vii)(A)(2)
+
+> ( 2 ) The space equal to the width and depth of the equipment shall be kept clear of foreign systems unless protection is provided to avoid damage from condensation, leaks, or breaks in such foreign systems. This area shall extend from the top of the electric equipment to the structural ceiling;
+
+#### 29 CFR 1910.303(g)(1)(vii)(A)(3)
+
+> ( 3 ) Sprinkler protection is permitted for the dedicated space where the piping complies with this section; and
+
+#### 29 CFR 1910.303(g)(1)(vii)(A) note
+
+> A dropped, suspended, or similar ceiling that does not add strength to the building structure is not considered a structural ceiling.
+
+### Tables
+
+#### 29 CFR 1910.303(g)(1)(i)(A) — Table S-1, 600 V or less
+
+Minimum depth of clear working space. The leading `1` in some cells is footnote
+marker 1, not part of the figure.
+
+| Nominal voltage to ground | Condition A (m) | Condition A (ft) | Condition B (m) | Condition B (ft) | Condition C (m) | Condition C (ft) |
+|---|---|---|---|---|---|---|
+| 0-150 | 0.9 | 3.0 | 0.9 | 3.0 | 0.9 | 3.0 |
+| 151-600 | 0.9 | 3.0 | 1.0 | 3.5 | 1.2 | 4.0 |
+
+Notes to Table S-1:
+
+1. Minimum clear distances may be 0.7 m (2.5 ft) for installations built before April 16, 1981.
+2. Conditions A, B, and C are as follows:
+   - **Condition A** — Exposed live parts on one side and no live or grounded parts on the other side of the working space, or exposed live parts on both sides effectively guarded by suitable wood or other insulating material. Insulated wire or insulated busbars operating at not over 300 volts are not considered live parts.
+   - **Condition B** — Exposed live parts on one side and grounded parts on the other side.
+   - **Condition C** — Exposed live parts on both sides of the work space (not guarded as provided in Condition A) with the operator between.
+3. Working space is not required in back of assemblies such as dead-front switchboards or motor control centers where there are no renewable or adjustable parts (such as fuses or switches) on the back and where all connections are accessible from locations other than the back. Where rear access is required to work on deenergized parts on the back of enclosed equipment, a minimum working space of 762 mm (30 in.) horizontally shall be provided.
+
+#### 29 CFR 1910.303(h)(5)(i) — Table S-2, over 600 V
+
+| Nominal voltage to ground | Condition A (m) | Condition A (ft) | Condition B (m) | Condition B (ft) | Condition C (m) | Condition C (ft) |
+|---|---|---|---|---|---|---|
+| 601-2500 V | 0.9 | 3.0 | 1.2 | 4.0 | 1.5 | 5.0 |
+| 2501-9000 V | 1.2 | 4.0 | 1.5 | 5.0 | 1.8 | 6.0 |
+| 9001 V-25 kV | 1.5 | 5.0 | 1.8 | 6.0 | 2.8 | 9.0 |
+| Over 25-75 kV | 1.8 | 6.0 | 2.5 | 8.0 | 3.0 | 10.0 |
+| Above 75 kV | 2.5 | 8.0 | 3.0 | 10.0 | 3.7 | 12.0 |
+
+Notes to Table S-2:
+
+1. Minimum depth of clear working space in front of electric equipment with a nominal voltage to ground above 25,000 volts may be the same as that for 25,000 volts under Conditions A, B, and C for installations built before April 16, 1981.
+2. Conditions A, B, and C are as for Table S-1, except that under **Condition B** concrete, brick, and tile walls are considered as grounded surfaces.
+3. Working space is not required in back of equipment such as dead-front switchboards or control assemblies that has no renewable or adjustable parts (such as fuses or switches) on the back and where all connections are accessible from locations other than the back. Where rear access is required to work on the deenergized parts on the back of enclosed equipment, a minimum working space 762 mm (30 in.) horizontally shall be provided.
+
+---
+
+## 29 CFR Part 1926 — Safety and Health Regulations for Construction
+
+- **Publisher** US Occupational Safety and Health Administration
+- **Rights** Work of the US Government. Not subject to copyright in the United States (17 U.S.C. 105).
+- **Retrieved** 2026-08-28
+- **Source** https://www.ecfr.gov/api/versioner/v1/full/2026-08-01/title-29.xml?chapter=XVII&subchapter=R&part=1926
+- **SHA-256** `57d0fc9eff96b2ce8ba66532d0a7362d96203daa89ca883960ceb169aa4187b5`
+
+### Clauses
+
+#### 29 CFR 1926.652(a)(1)(i)
+
+> (i) Excavations are made entirely in stable rock; or
+
+#### 29 CFR 1926.652(a)(1)(ii)
+
+> (ii) Excavations are less than 5 feet (1.52m) in depth and examination of the ground by a competent person provides no indication of a potential cave-in.
+
+#### 29 CFR 1926.652(b)(1)(i)
+
+> (1) Option (1)—Allowable configurations and slopes. (i) Excavations shall be sloped at an angle not steeper than one and one-half horizontal to one vertical (34 degrees measured from the horizontal), unless the employer uses one of the other options listed below.
+
+#### 29 CFR 1926.652(b)(2)
+
+> (2) Option (2)—Determination of slopes and configurations using Appendices A and B. Maximum allowable slopes, and allowable configurations for sloping and benching systems, shall be determined in accordance with the conditions and requirements set forth in appendices A and B to this subpart.
+
+#### 29 CFR 1926.651(c)(2)
+
+> (2) Means of egress from trench excavations. A stairway, ladder, ramp or other safe means of egress shall be located in trench excavations that are 4 feet (1.22 m) or more in depth so as to require no more than 25 feet (7.62 m) of lateral travel for employees.
+
+#### 29 CFR 1926.651(j)(2)
+
+> (2) Employees shall be protected from excavated or other materials or equipment that could pose a hazard by falling or rolling into excavations. Protection shall be provided by placing and keeping such materials or equipment at least 2 feet (.61 m) from the edge of excavations, or by the use of retaining devices that are sufficient to prevent materials or equipment from falling or rolling into excavations, or by a combination of both if necessary.
+
+#### 29 CFR 1926.501(b)(1)
+
+> (b)(1) Unprotected sides and edges. Each employee on a walking/working surface (horizontal and vertical surface) with an unprotected side or edge which is 6 feet (1.8 m) or more above a lower level shall be protected from falling by the use of guardrail systems, safety net systems, or personal fall arrest systems.
+
+#### 29 CFR 1926.502(b)(1)
+
+> (1) Top edge height of top rails, or equivalent guardrail system members, shall be 42 inches (1.1 m) plus or minus 3 inches (8 cm) above the walking/working level. When conditions warrant, the height of the top edge may exceed the 45-inch height, provided the guardrail system meets all other criteria of this paragraph.
+
+#### 29 CFR 1926.502(b)(2)
+
+> (2) Midrails, screens, mesh, intermediate vertical members, or equivalent intermediate structural members shall be installed between the top edge of the guardrail system and the walking/working surface when there is no wall or parapet wall at least 21 inches (53 cm) high.
+
+#### 29 CFR 1926.502(b)(2)(iv)
+
+> (iv) Other structural members (such as additional midrails and architectural panels) shall be installed such that there are no openings in the guardrail system that are more than 19 inches (.5 m) wide.
+
+### Tables
+
+#### 29 CFR 1926.1408 — Table A, minimum clearance distances
+
+Crane and derrick clearance to energised power lines. Published in feet only;
+no metric equivalent is stated in the source and none is invented.
+
+| Voltage (nominal, kV, AC) | Minimum clearance distance (feet) |
+|---|---|
+| up to 50 | 10 |
+| over 50 to 200 | 15 |
+| over 200 to 350 | 20 |
+| over 350 to 500 | 25 |
+| over 500 to 750 | 35 |
+| over 750 to 1,000 | 45 |
+| over 1,000 | as established by the utility owner/operator or registered professional engineer who is a qualified person with respect to electrical power transmission and distribution |
+
+Note: The value that follows "to" is up to and includes that value. For example,
+over 50 to 200 means up to and including 200 kV.
+
+The final row is the regulation declining to give a number. The engine refuses
+there too, rather than inventing one the source deliberately withholds.

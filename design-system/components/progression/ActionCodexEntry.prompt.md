@@ -5,3 +5,7 @@ A single XP-granting action within a discipline.
 ```
 
 Mention anti-grind behaviour (rested charges, diversity, repetition decay) in `detail` where it applies.
+
+## Accessibility
+
+Keep name, classification, and rule readable in DOM order; do not encode `kind` only through a glyph.

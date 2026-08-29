@@ -6,7 +6,7 @@ import * as React from "react";
  *
  * @startingPoint section="Surfaces" subtitle="In-world content panel with header" viewport="700x300"
  */
-export interface GamePanelProps extends React.HTMLAttributes<HTMLElement> {
+export interface GamePanelProps extends Omit<React.HTMLAttributes<HTMLElement>, "title"> {
   title?: React.ReactNode;
   /** Omit to render a panel with no close affordance. */
   onClose?: () => void;

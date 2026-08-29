@@ -27,7 +27,7 @@
  * with a front or sits still, which is behaviour.
  */
 import * as THREE from 'three';
-import { MAT, rnd, part, cnt } from './hm-core.js';
+import { MAT, rnd, part, cnt } from '../../world/hearthmere/hm-core.js';
 import {
   VFX_ENV, pal, gpuPoints, softVolume, lightPool, axesOf, measureFx,
   NOISE_GLSL, FOG_GLSL, vfxTexture, flicker,

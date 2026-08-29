@@ -2,19 +2,25 @@ import React from "react";
 
 export function WorldCard({ image, alt, label, name, description, onClick, style, ...rest }) {
   const [hot, setHot] = React.useState(false);
+  const Element = onClick ? "button" : "article";
   return (
-    <div
-      role={onClick ? "button" : undefined}
-      onClick={onClick}
+    <Element
+      {...(onClick ? { type: "button", onClick } : {})}
       onMouseEnter={() => setHot(true)}
       onMouseLeave={() => setHot(false)}
+      onFocus={() => setHot(true)}
+      onBlur={() => setHot(false)}
       style={{
+        width: "100%",
         position: "relative",
         minHeight: "var(--world-card-h)",
         overflow: "hidden",
         border: "1px solid var(--line)",
         background: "var(--ink)",
         cursor: onClick ? "pointer" : "default",
+        padding: 0,
+        color: "inherit",
+        textAlign: "left",
         ...style
       }}
       {...rest}
@@ -37,6 +43,6 @@ export function WorldCard({ image, alt, label, name, description, onClick, style
         <h3 style={{ margin: "4px 0", font: "var(--type-h3-world)", color: "var(--bone)" }}>{name}</h3>
         <p style={{ margin: 0, color: "#a8ada7", font: "13px/1.35 var(--serif)" }}>{description}</p>
       </div>
-    </div>
+    </Element>
   );
 }

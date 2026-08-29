@@ -16,15 +16,16 @@ const expected = Object.freeze({
   forms: ["TextField", "SelectBox", "OptionCard", "Swatch", "StatStepper", "MorphRow", "StepDots", "AttributeRow"],
   progression: ["SkillTile", "TechniqueSummary", "TechniqueNode", "MasteryCard", "ActionCodexEntry"],
   codex: ["EnemyCodexCard", "CharacterCodexCard", "FactionCard", "FamilyStripItem", "RelationshipRow", "JournalEntry", "WorldCard"],
+  icons: ["Icon"],
   inventory: ["ItemSlot", "PaperDoll", "SheetStat"],
   narrative: ["Dialogue", "SpeakerMark", "PortraitStage", "PortraitCaption", "DeathScreen"],
   turn: ["TurnPhaseBar", "ResourcePips", "IntentQueue", "IntentTelegraph", "PartyReadiness", "ResolutionLog"],
 });
 
 const expectedNames = Object.values(expected).flat();
-assert.equal(Object.keys(expected).length, 11, "design system must have exactly 11 component groups");
-assert.equal(expectedNames.length, 59, "design system must declare exactly 59 components");
-assert.equal(new Set(expectedNames).size, 59, "component names must be globally unique");
+assert.equal(Object.keys(expected).length, 12, "design system must have exactly 12 component groups");
+assert.equal(expectedNames.length, 60, "design system must declare exactly 60 components");
+assert.equal(new Set(expectedNames).size, 60, "component names must be globally unique");
 
 const actualGroups = readdirSync(componentsRoot, { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
@@ -58,8 +59,8 @@ for (const [group, names] of Object.entries(expected)) {
 const fallback = readFileSync(join(designRoot, "_ds_fallback.js"), "utf8");
 const fallbackEntries = [...fallback.matchAll(/"(components\/[^"]+\.jsx)"/g)].map((match) => match[1]);
 const expectedFallbackEntries = Object.entries(expected).flatMap(([group, names]) => names.map((name) => `components/${group}/${name}.jsx`));
-assert.equal(fallbackEntries.length, 59, "dev shim must list exactly 59 component sources");
-assert.equal(new Set(fallbackEntries).size, 59, "dev shim source paths must be unique");
+assert.equal(fallbackEntries.length, 60, "dev shim must list exactly 60 component sources");
+assert.equal(new Set(fallbackEntries).size, 60, "dev shim source paths must be unique");
 assert.deepEqual([...fallbackEntries].sort(), expectedFallbackEntries.sort(), "dev shim sources must match the canonical inventory");
 
 const rootEntries = readdirSync(designRoot);
@@ -142,6 +143,34 @@ const accessibilityContracts = [
   ["components/turn/ResourcePips.jsx", /aria-valuetext=\{summary\}/, "ResourcePips must announce reservation context"],
   ["components/hud/ActionBar.jsx", /disabled=\{s\.disabled\}/, "ActionBar must use native disabled semantics"],
   ["components/narrative/Dialogue.jsx", /firstChoiceRef\.current\?\.focus\(\)/, "Dialogue must move focus to its first choice"],
+  ["components/narrative/Dialogue.jsx", /minHeight: 44/, "Dialogue choices must retain a 44px target"],
+  ["components/surfaces/Modal.jsx", /role="dialog"/, "Modal must expose dialog semantics"],
+  ["components/surfaces/Modal.jsx", /aria-modal=\{modal \? "true" : undefined\}/, "Modal must expose its blocking state"],
+  ["components/surfaces/Modal.jsx", /aria-labelledby=\{labelledBy\}/, "Modal must accept a visible accessible heading"],
+  ["components/narrative/DeathScreen.jsx", /role="dialog"/, "DeathScreen must expose dialog semantics"],
+  ["components/narrative/DeathScreen.jsx", /aria-labelledby=\{headingId\}/, "DeathScreen heading must label the dialog"],
+  ["components/narrative/PortraitStage.jsx", /<figure\b/, "PortraitStage must expose native figure semantics"],
+  ["components/narrative/PortraitStage.jsx", /No portrait available/, "PortraitStage must label a missing default image"],
+  ["components/narrative/PortraitCaption.jsx", /<figcaption\b/, "PortraitCaption must preserve its native figure relationship"],
+  ["components/narrative/SpeakerMark.jsx", /decorative = true/, "SpeakerMark must default to decorative"],
+  ["components/narrative/SpeakerMark.jsx", /aria-label=\{decorative \? undefined : label\}/, "standalone SpeakerMarks must accept an accessible label"],
+  ["components/surfaces/GamePanel.jsx", /aria-labelledby=\{labelledBy\}/, "GamePanel title must label its section"],
+  ["components/surfaces/GamePanel.jsx", /aria-label="Close panel"/, "GamePanel close control must have a specific name"],
+  ["components/surfaces/GamePanel.jsx", /width: 44,[\s\S]*height: 44/, "GamePanel close control must retain a 44px target"],
+  ["components/surfaces/GlassPanel.jsx", /as: Element = "div"/, "GlassPanel must allow callers to choose a semantic element"],
+  ["components/surfaces/BudgetBar.jsx", /role="status"/, "BudgetBar updates must expose status semantics"],
+  ["components/surfaces/BudgetBar.jsx", /value \+ " of " \+ max \+ " assigned"/, "BudgetBar must render assigned and maximum values"],
+  ["components/progression/SkillTile.jsx", /aria-label=\{name \+ ", level "/, "SkillTile must name discipline, level, and progress"],
+  ["components/progression/SkillTile.jsx", /<span aria-hidden="true" style=\{\{ display: "block", height: 2/, "SkillTile visual XP bar must remain decorative"],
+  ["components/progression/TechniqueNode.jsx", /STATE_LABELS\[state\]/, "TechniqueNode must write its state"],
+  ["components/progression/TechniqueNode.jsx", /minHeight: 44/, "TechniqueNode actions must retain a 44px target"],
+  ["components/progression/TechniqueNode.jsx", /"Purchase · " \+ cost/, "TechniqueNode purchase action must name its cost"],
+  ["components/surfaces/Grain.jsx", /\{\.\.\.rest\}[\s\S]*aria-hidden="true"/, "Grain callers must not override its decorative state"],
+  ["components/surfaces/Vignette.jsx", /\{\.\.\.rest\}[\s\S]*aria-hidden="true"/, "Vignette callers must not override its decorative state"],
+  ["components/codex/FamilyStripItem.jsx", /const Element = onClick \? "button" : "article"/, "interactive FamilyStripItems must use native buttons"],
+  ["components/codex/FamilyStripItem.jsx", /"aria-pressed": selected/, "interactive FamilyStripItems must expose selection"],
+  ["components/forms/MorphRow.jsx", /const inputId = id \|\| generatedId/, "MorphRow must generate a bound input ID"],
+  ["components/forms/Swatch.jsx", /aria-label=\{label\}/, "Swatch must use its written colour name"],
 ];
 for (const [file, pattern, message] of accessibilityContracts) {
   assert.match(readFileSync(join(designRoot, file), "utf8"), pattern, message);
@@ -166,6 +195,44 @@ assert.match(readFileSync(join(designRoot, "components/forms/AttributeRow.prompt
 
 const actionBarTypes = readFileSync(join(designRoot, "components/hud/ActionBar.d.ts"), "utf8");
 assert.match(actionBarTypes, /^\s*disabled\?: boolean;$/m, "ActionBar slots must contract disabled state");
+
+const modalTypes = readFileSync(join(designRoot, "components/surfaces/Modal.d.ts"), "utf8");
+for (const field of ["label", "labelledBy", "modal"]) {
+  assert.match(modalTypes, new RegExp(`^\\s*${field}\\?: (?:string|boolean);$`, "m"), `Modal must contract ${field}`);
+}
+
+const glassPanelTypes = readFileSync(join(designRoot, "components/surfaces/GlassPanel.d.ts"), "utf8");
+assert.match(glassPanelTypes, /^\s*as\?: React\.ElementType;$/m, "GlassPanel must contract its semantic element");
+
+const budgetBarTypes = readFileSync(join(designRoot, "components/surfaces/BudgetBar.d.ts"), "utf8");
+assert.match(budgetBarTypes, /^\s*value\?: number;$/m, "BudgetBar must contract its assigned value");
+assert.match(budgetBarTypes, /^\s*max\?: number;$/m, "BudgetBar must contract its maximum value");
+
+const speakerMarkTypes = readFileSync(join(designRoot, "components/narrative/SpeakerMark.d.ts"), "utf8");
+assert.match(speakerMarkTypes, /^\s*decorative\?: boolean;$/m, "SpeakerMark must contract its decorative state");
+assert.match(speakerMarkTypes, /^\s*label\?: string;$/m, "SpeakerMark must contract its standalone label");
+
+for (const file of ["components/narrative/PortraitStage.d.ts", "components/narrative/PortraitCaption.d.ts"]) {
+  const types = readFileSync(join(designRoot, file), "utf8");
+  assert.match(types, /extends React\.HTMLAttributes<HTMLElement>/, `${file} must accept native figure attributes`);
+}
+
+const skillTileTypes = readFileSync(join(designRoot, "components/progression/SkillTile.d.ts"), "utf8");
+assert.match(skillTileTypes, /^\s*icon\?: string;$/m, "SkillTile must contract the GAME Icon name API");
+assert.doesNotMatch(skillTileTypes, /^\s*glyph\?:/m, "SkillTile must not retain the superseded glyph API");
+
+const morphRowTypes = readFileSync(join(designRoot, "components/forms/MorphRow.d.ts"), "utf8");
+assert.match(morphRowTypes, /^\s*label: React\.ReactNode;$/m, "MorphRow must require its visible label");
+const swatchTypes = readFileSync(join(designRoot, "components/forms/Swatch.d.ts"), "utf8");
+assert.match(swatchTypes, /^\s*label: string;$/m, "Swatch must require a written colour name");
+const fieldLabelTypes = readFileSync(join(designRoot, "components/labels/FieldLabel.d.ts"), "utf8");
+assert.match(fieldLabelTypes, /extends React\.LabelHTMLAttributes<HTMLLabelElement>/, "FieldLabel must accept native label attributes");
+assert.match(fieldLabelTypes, /^\s*htmlFor: string;$/m, "FieldLabel must require an owned control ID");
+const textFieldTypes = readFileSync(join(designRoot, "components/forms/TextField.d.ts"), "utf8");
+assert.match(textFieldTypes, /extends Omit<React\.InputHTMLAttributes<HTMLInputElement>, "value" \| "onChange">/, "TextField must forward native input and ARIA attributes");
+const selectBoxTypes = readFileSync(join(designRoot, "components/forms/SelectBox.d.ts"), "utf8");
+assert.match(selectBoxTypes, /extends Omit<React\.SelectHTMLAttributes<HTMLSelectElement>, "value" \| "onChange">/, "SelectBox must forward native select and ARIA attributes");
+assert.match(readFileSync(join(designRoot, "components/forms/SelectBox.prompt.md"), "utf8"), /<FieldLabel htmlFor="hair">[\s\S]*<SelectBox id="hair"/, "SelectBox example must bind its visible label");
 
 const turnPhaseSource = readFileSync(join(designRoot, "components/turn/TurnPhaseBar.jsx"), "utf8");
 const turnPhaseTypes = readFileSync(join(designRoot, "components/turn/TurnPhaseBar.d.ts"), "utf8");
@@ -236,7 +303,7 @@ const productionTokenImports = [...productionStyles.matchAll(/@import\s+["']\.\/
 assert.deepEqual(productionTokenImports, ["colors.css", "typography.css", "spacing.css", "effects.css"], "production must import the four canonical token sheets once and in dependency order");
 
 const docs = ["README.md", "INSTALL-IN-REPO.md", "ui_kits/game-client/README.md"].map((file) => readFileSync(join(designRoot, file), "utf8")).join("\n");
-assert.match(docs, /59 reference primitives in 11 groups/, "documentation must state the canonical 59/11 inventory");
+assert.match(docs, /60 reference primitives in 12 groups/, "documentation must state the canonical 60/12 inventory");
 assert.doesNotMatch(docs, /under revision|44 primitives in 10 groups/i, "obsolete component-count and revision language must be absent");
 assert.doesNotMatch(docs, /59 runtime assets/i, "the reference primitive count must not be presented as runtime-asset maturity");
 const installGuide = readFileSync(join(designRoot, "INSTALL-IN-REPO.md"), "utf8");

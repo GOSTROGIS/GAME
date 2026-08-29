@@ -1,8 +1,12 @@
 import React from "react";
 
 export function GamePanel({ title, onClose, children, style, ...rest }) {
+  const headingId = React.useId();
+  const labelledBy = [headingId, rest["aria-labelledby"]].filter(Boolean).join(" ");
   return (
     <section
+      {...rest}
+      aria-labelledby={labelledBy}
       style={{
         overflow: "hidden",
         background: "var(--glass-bg)",
@@ -11,7 +15,6 @@ export function GamePanel({ title, onClose, children, style, ...rest }) {
         backdropFilter: "blur(var(--blur-glass))",
         ...style
       }}
-      {...rest}
     >
       <header
         style={{
@@ -23,15 +26,15 @@ export function GamePanel({ title, onClose, children, style, ...rest }) {
           borderBottom: "1px solid var(--line)"
         }}
       >
-        <h2 style={{ margin: 0, font: "var(--type-h2-panel)", color: "var(--bone)" }}>{title}</h2>
+        <h2 id={headingId} style={{ margin: 0, font: "var(--type-h2-panel)", color: "var(--bone)" }}>{title}</h2>
         {onClose ? (
           <button
             type="button"
             onClick={onClose}
-            aria-label="Close"
+            aria-label="Close panel"
             style={{
-              width: 34,
-              height: 34,
+              width: 44,
+              height: 44,
               border: "1px solid var(--line)",
               background: "transparent",
               color: "#999",

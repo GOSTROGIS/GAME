@@ -1,8 +1,13 @@
 import React from "react";
 
-export function Modal({ children, style, ...rest }) {
+export function Modal({ children, label, labelledBy, modal = true, style, ...rest }) {
   return (
-    <div
+    <section
+      {...rest}
+      role="dialog"
+      aria-modal={modal ? "true" : undefined}
+      aria-label={labelledBy ? undefined : label}
+      aria-labelledby={labelledBy}
       style={{
         position: "absolute",
         zIndex: 30,
@@ -14,9 +19,8 @@ export function Modal({ children, style, ...rest }) {
         boxShadow: "var(--shadow-modal)",
         ...style
       }}
-      {...rest}
     >
       {children}
-    </div>
+    </section>
   );
 }

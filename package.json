@@ -13,7 +13,7 @@
     "dev:client": "pnpm --filter @hollow-march/shared build && pnpm --filter @hearthmere/content build && pnpm --filter @hollow-march/client dev",
     "dev:server": "pnpm --filter @hollow-march/server dev",
     "build": "pnpm -r --if-present build",
-    "test": "node tests/art-index.mjs && node tests/data.mjs && node tests/smoke.mjs",
+    "test": "pnpm test:integration-paths && node tests/art-index.mjs && node tests/data.mjs && node tests/smoke.mjs",
     "test:legacy": "node tests/data.mjs && node tests/smoke.mjs",
     "test:assets": "node tests/raster-art-validator.mjs && node tools/assets/validate-raster-art.mjs && node tools/assets/validate.mjs && node tools/assets/validate-prototypes.mjs && node tests/assets3d.mjs",
     "bridge:refresh": "node tools/assets/slipcurve-bridge/refresh.mjs",
@@ -35,11 +35,12 @@
     "test:network": "pnpm --filter @hollow-march/shared build && pnpm --filter @hearthmere/content build && pnpm --filter @hollow-march/server build && node apps/client/test/network-smoke.mjs",
     "test:browser-network": "pnpm --filter @hollow-march/shared build && pnpm --filter @hearthmere/content build && pnpm --filter @hollow-march/server build && pnpm --filter @hollow-march/client build && node apps/client/test/browser-network-smoke.mjs",
     "test:design-system": "node design-system/validate.mjs",
+    "test:integration-paths": "node tests/integration-relative-paths.mjs",
     "test:shared": "pnpm --filter @hollow-march/shared test",
     "test:server": "pnpm --filter @hollow-march/shared build && pnpm --filter @hollow-march/server test",
     "typecheck": "pnpm -r --if-present typecheck",
-    "test:ci": "pnpm test:design-system && pnpm typecheck && pnpm test:worldgen && pnpm test:bridge:metadata && pnpm test:assets && pnpm test:content && pnpm test:showcases && pnpm test:turn-ui && pnpm test:shared && pnpm test:server && pnpm test:network && pnpm test:browser-network && pnpm test:legacy",
-    "test:all": "pnpm test:design-system && pnpm typecheck && pnpm test:worldgen && pnpm test:bridge && pnpm test:assets && pnpm test:content && pnpm test:showcases && pnpm test:turn-ui && pnpm test:shared && pnpm test:server && pnpm test:network && pnpm test:browser-network && pnpm test:legacy && pnpm test:webgl",
+    "test:ci": "pnpm test:integration-paths && pnpm test:design-system && pnpm typecheck && pnpm test:worldgen && pnpm test:bridge:metadata && pnpm test:assets && pnpm test:content && pnpm test:showcases && pnpm test:turn-ui && pnpm test:shared && pnpm test:server && pnpm test:network && pnpm test:browser-network && pnpm test:legacy",
+    "test:all": "pnpm test:integration-paths && pnpm test:design-system && pnpm typecheck && pnpm test:worldgen && pnpm test:bridge && pnpm test:assets && pnpm test:content && pnpm test:showcases && pnpm test:turn-ui && pnpm test:shared && pnpm test:server && pnpm test:network && pnpm test:browser-network && pnpm test:legacy && pnpm test:webgl",
     "test:raster-art": "node tests/raster-art-validator.mjs && node tools/assets/validate-raster-art.mjs"
   },
   "devDependencies": {
