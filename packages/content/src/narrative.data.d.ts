@@ -9,5 +9,6 @@ export const EXPANSION_CREATURES: readonly unknown[];
 export const ALIGNMENT_HOOKS: readonly unknown[];
 export const EXPANSION_ITEMS: readonly unknown[];
 export const EXPANSION_QUESTS: readonly unknown[];
+export const COMPANION_QUEST_CONTRACTS: readonly unknown[];
 export function questSimilarity(left: unknown, right: unknown): number;
 export function validateNarrativeExpansion(input?: Readonly<Record<string, readonly unknown[]>>): unknown;

@@ -129,3 +129,9 @@ Wave 02 expands three consequences from the campaign rather than introducing dis
 - the ownership and failure politics of the dawn-engine off-switch.
 
 Those arcs consume actual outcome keys from the first tranche and create their own exclusive cast, relics, ecologies, visual setpieces, and permanent world-state changes. Their twelve machine-readable records are now canonical, bringing the authored corpus to 25 quests, 37 expansion characters, 24 expansion creatures, and 25 signature items. This is progress toward the release target, not completion evidence.
+
+## Accepted Wave 03 v2
+
+Wave 03 was admitted only from the immutable v2 packet and its normative machine annex after independent state/machine and semantic-collision reviewers passed the exact content hashes recorded in batch evidence. The rejected v1 packet remains outside the repository.
+
+The accepted slice adds twelve quests, twelve quest-exclusive support characters, nine authored creature forms, twelve schema-v2 artifacts, and two autonomous companion contracts. The canonical corpus now contains 37 quests, 49 expansion characters, 33 expansion creatures, 37 signature items, and two companion contracts. Batch 0003 closes with the final Wave 02 quest plus the first eleven Wave 03 quests; the twelfth Wave 03 quest opens batch 0004. This remains progress toward 5,000 accepted quests, not completion evidence.

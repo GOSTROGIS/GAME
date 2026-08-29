@@ -1,0 +1,638 @@
+{
+  "schemaVersion": 1,
+  "kind": "state-reachability-report",
+  "batchId": "quest-batch-0003",
+  "packetSha256": "5cd44a8f6e66c4dfa47d2c5db0952973e8ac843208bdbeccc00f5333aa1e80f9",
+  "verdict": "PASS",
+  "quests": [
+    {
+      "id": "aftermath_cost_that_learned_to_vote",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "dawn_control_identity",
+          "mode": "all-values",
+          "values": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ]
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "dawn_inherited_maintenance_cost",
+          "values": [
+            "maintenance_cost_individually_appealable",
+            "institutional_cost_expires_and_revotes",
+            "benefit_and_cost_return_to_engine"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "dawn_control_identity",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_three_hands_one_lever",
+          "writerValues": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ],
+          "admittedValues": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_maintenance_window_miracle",
+          "writerValues": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ],
+          "admittedValues": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "reaction_orchard_casts_legal_shadow",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "hearthmere_absence_citizenship",
+          "mode": "all-values",
+          "values": [
+            "shadows_gain_separate_seats",
+            "shadows_are_protected_dependants",
+            "mobile_absence_district_created"
+          ]
+        },
+        {
+          "key": "hearthmere_purity_ecology",
+          "mode": "all-values",
+          "values": [
+            "resident_cultivator_liability",
+            "public_seed_licensing",
+            "sterile_last_generation"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "hearthmere_shadow_seed_descent",
+          "values": [
+            "shadow_children_are_separate_lineage",
+            "embodied_guardians_hold_appealable_parenthood",
+            "future_shadow_births_prohibited_child_survives"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "hearthmere_absence_citizenship",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_census_of_absences",
+          "writerValues": [
+            "shadows_gain_separate_seats",
+            "shadows_are_protected_dependants",
+            "mobile_absence_district_created"
+          ],
+          "admittedValues": [
+            "shadows_gain_separate_seats",
+            "shadows_are_protected_dependants",
+            "mobile_absence_district_created"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "hearthmere_purity_ecology",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_purity_blooms_at_dusk",
+          "writerValues": [
+            "resident_cultivator_liability",
+            "public_seed_licensing",
+            "sterile_last_generation"
+          ],
+          "admittedValues": [
+            "resident_cultivator_liability",
+            "public_seed_licensing",
+            "sterile_last_generation"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "reaction_rain_owes_door_answer",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "nacre_exit_rights",
+          "mode": "all-values",
+          "values": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ]
+        },
+        {
+          "key": "nacre_weather_custody",
+          "mode": "all-values",
+          "values": [
+            "village_private_storm_rationed",
+            "farms_hold_weather_priority",
+            "watershed_council_governs_roof"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "nacre_forecast_authority",
+          "values": [
+            "residents_hold_personal_forecast_appeal",
+            "watershed_jury_rotates_weather_precedent",
+            "official_forecasts_lose_coercive_force"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "nacre_exit_rights",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_every_door_mothers_voice",
+          "writerValues": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ],
+          "admittedValues": [
+            "summons_individually_revocable",
+            "civic_override_of_mother",
+            "unconditional_protection_named_captivity"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "nacre_weather_custody",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_roof_made_of_weather",
+          "writerValues": [
+            "village_private_storm_rationed",
+            "farms_hold_weather_priority",
+            "watershed_council_governs_roof"
+          ],
+          "admittedValues": [
+            "village_private_storm_rationed",
+            "farms_hold_weather_priority",
+            "watershed_council_governs_roof"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "reaction_machine_widowed_minute",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "dawn_control_identity",
+          "mode": "all-values",
+          "values": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ]
+        },
+        {
+          "key": "dawn_inherited_maintenance_cost",
+          "mode": "all-values",
+          "values": [
+            "maintenance_cost_individually_appealable",
+            "institutional_cost_expires_and_revotes",
+            "benefit_and_cost_return_to_engine"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "dawn_time_debt_custody",
+          "values": [
+            "missing_minute_completed_wear_becomes_public",
+            "unelapsed_district_recognized_and_sealed",
+            "time_debt_rotates_across_beneficiaries"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "dawn_control_identity",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_three_hands_one_lever",
+          "writerValues": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ],
+          "admittedValues": [
+            "authority_tracks_named_operator",
+            "authority_tracks_continuing_institution",
+            "authority_tracks_exposure_to_harm"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "dawn_inherited_maintenance_cost",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_cost_that_learned_to_vote",
+          "writerValues": [
+            "maintenance_cost_individually_appealable",
+            "institutional_cost_expires_and_revotes",
+            "benefit_and_cost_return_to_engine"
+          ],
+          "admittedValues": [
+            "maintenance_cost_individually_appealable",
+            "institutional_cost_expires_and_revotes",
+            "benefit_and_cost_return_to_engine"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "faction_heresy_gentle_horizon",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "campaign_cosmology_ending",
+          "mode": "all-values",
+          "values": [
+            "mortal_dawn",
+            "synod_full_restoration",
+            "negotiated_dusk",
+            "sun_refused_world_continues_dying"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "synod_imperfect_miracle_sainthood",
+          "values": [
+            "refusal_canonized_as_law_of_light",
+            "gentle_horizon_abolished_liora_freed",
+            "restoration_discharged_into_consenting_chapter"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "campaign_cosmology_ending",
+          "mode": "all-values",
+          "writerQuestId": "main_a_sun_small_enough",
+          "writerValues": [
+            "mortal_dawn",
+            "synod_full_restoration",
+            "negotiated_dusk",
+            "sun_refused_world_continues_dying"
+          ],
+          "admittedValues": [
+            "mortal_dawn",
+            "synod_full_restoration",
+            "negotiated_dusk",
+            "sun_refused_world_continues_dying"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "faction_hunger_asked_taxed",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "values": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "charnel_appetite_levy",
+          "values": [
+            "licensed_feeding_requires_embodied_reparation",
+            "fear_commons_worker_owned_and_revocable",
+            "appetite_law_refused_each_hunt_personally_answerable"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "writerQuestId": "main_parliament_of_one_mouth",
+          "writerValues": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ],
+          "admittedValues": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "character_saint_cannot_inherit_body",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "vespera_shadow_relation",
+          "mode": "all-values",
+          "values": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "vespera_mortal_estate",
+          "values": [
+            "vespera_accepts_source_rights_and_debts",
+            "source_and_saint_legally_distinct_dependants_protected",
+            "saint_source_estates_become_public_restitution_trust"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "vespera_shadow_relation",
+          "mode": "all-values",
+          "writerQuestId": "main_the_saint_cast_two_shadows",
+          "writerValues": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ],
+          "admittedValues": [
+            "second_shadow_freed",
+            "shadow_refuge_preserved",
+            "vespera_reintegrated"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "character_thirteen_pilgrims_one_feet",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "values": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "prince_traveling_quorum",
+          "values": [
+            "polity_admitted_as_one_revocable_traveler",
+            "each_voice_holds_independent_border_exit",
+            "destinations_appoint_temporary_throats"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "charnel_diplomatic_status",
+          "mode": "all-values",
+          "writerQuestId": "main_parliament_of_one_mouth",
+          "writerValues": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ],
+          "admittedValues": [
+            "treaty_ratified_with_dissent",
+            "stolen_voices_released",
+            "sun_voice_given_casting_vote"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "regional_cairns_keep_winter",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "dead_settlement_claims",
+          "mode": "all-values",
+          "values": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "ecology",
+          "key": "graven_cairn_winter",
+          "values": [
+            "unused_road_corridor_preserves_cairn_breeding",
+            "march_villages_share_seasonal_hibernation",
+            "artificial_grave_warmth_ends_herd_disperses"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "dead_settlement_claims",
+          "mode": "all-values",
+          "writerQuestId": "side_the_dead_vote_no",
+          "writerValues": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ],
+          "admittedValues": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "regional_flood_learned_last_name",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "dunmire_reflection_kinship",
+          "values": [
+            "sluice_son_admitted_as_heir_with_duties",
+            "reflection_classed_as_public_flood_body",
+            "surname_released_reverse_estuary_unowned"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "writerQuestId": "main_the_bell_that_forgot_you",
+          "writerValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "admittedValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "settlement_street_must_burn_once",
+      "verdict": "PASS",
+      "stateReads": [],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "cinderward_sacrificial_address",
+          "values": [
+            "archive_burns_pressure_released_history_displaced",
+            "all_streets_share_permanent_fire_scar",
+            "civic_office_burns_district_self_governs"
+          ]
+        }
+      ],
+      "readProofs": []
+    },
+    {
+      "id": "profession_bell_paid_in_silence",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "abbey_silence_labor",
+          "values": [
+            "future_silence_individually_paid_and_revocable",
+            "quiet_collectivized_as_labor_commons",
+            "bell_refused_halix_carries_erased_names"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "writerQuestId": "main_the_bell_that_forgot_you",
+          "writerValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "admittedValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "writerQuestId": "aftermath_maintenance_window_miracle",
+          "writerValues": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ],
+          "admittedValues": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    }
+  ]
+}

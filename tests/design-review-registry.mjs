@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 
 import { BESTIARY } from '../packages/content/src/bestiary.data.js';
 import { CHARACTERS } from '../src/data/characters.js';
-import { EXPANSION_CHARACTERS, EXPANSION_CREATURES, EXPANSION_ITEMS, EXPANSION_QUESTS, NARRATIVE_TARGETS } from '../packages/content/src/narrative.data.js';
+import { COMPANION_QUEST_CONTRACTS, EXPANSION_CHARACTERS, EXPANSION_CREATURES, EXPANSION_ITEMS, EXPANSION_QUESTS, NARRATIVE_TARGETS } from '../packages/content/src/narrative.data.js';
 import {
   ART_INDEX,
   CONCEPT_ART,
@@ -82,13 +82,15 @@ assert.equal(registry.namedCast.length, 42);
 assert.equal(registry.origins.length, 8);
 assert.equal(registry.expansionCharacters.length, EXPANSION_CHARACTERS.length);
 assert.equal(registry.expansionCreatures.length, EXPANSION_CREATURES.length);
-assert.equal(registry.expansionCharacters.length, 37);
-assert.equal(registry.expansionCreatures.length, 24);
+assert.equal(registry.expansionCharacters.length, 49);
+assert.equal(registry.expansionCreatures.length, 33);
+assert.deepEqual(registry.companionContracts, COMPANION_QUEST_CONTRACTS);
 assert.equal(counts.total, 228);
 assert.equal(counts.foundingTotal, 228);
-assert.equal(counts.grandTotal, 289);
-assert.equal(counts.expansionItems, 25);
-assert.equal(counts.expansionQuests, 25);
+assert.equal(counts.grandTotal, 310);
+assert.equal(counts.expansionItems, 37);
+assert.equal(counts.expansionQuests, 37);
+assert.equal(counts.companionContracts, 2);
 assert.equal(counts.expansionItems, EXPANSION_ITEMS.length);
 assert.equal(counts.expansionQuests, EXPANSION_QUESTS.length);
 assert.equal(counts.authoredQuestTarget, NARRATIVE_TARGETS.authoredQuestTarget);

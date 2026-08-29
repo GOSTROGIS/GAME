@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "kind": "semantic-collision-report",
+  "batchId": "quest-batch-0003",
+  "packetSha256": "5cd44a8f6e66c4dfa47d2c5db0952973e8ac843208bdbeccc00f5333aa1e80f9",
+  "verdict": "PASS",
+  "corpusQuestCount": 37,
+  "machineChecks": {
+    "canonicalNarrativeValidator": "PASS",
+    "maxPairwiseShingleSimilarity": {
+      "score": 0.0030303030303030303,
+      "left": "character_thirteen_pilgrims_one_feet",
+      "right": "main_parliament_of_one_mouth"
+    },
+    "note": "Shingle similarity is warning evidence only; the listed non-author semantic attestations control admission."
+  },
+  "reviewerAttestations": [
+    {
+      "reviewerRole": "wave-02-state-reachability-reviewer",
+      "reviewedPayloadSha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a",
+      "questIds": [
+        "aftermath_cost_that_learned_to_vote"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave-02-semantic-collision-reviewer",
+      "reviewedPayloadSha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a",
+      "questIds": [
+        "aftermath_cost_that_learned_to_vote"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave03-v2-state-and-machine-reviewer",
+      "reviewedPayloadSha256": "d369e3634448af588d8f1b3e2f59f9570ab6c032a74a3654c5be89a772ff6622",
+      "reviewedSourceSha256s": {
+        "markdown": "b48792836ca06130e701efbd38e189aeb0e7ceba30009c122d77ff98d3300844",
+        "machineAnnex": "d369e3634448af588d8f1b3e2f59f9570ab6c032a74a3654c5be89a772ff6622"
+      },
+      "questIds": [
+        "reaction_orchard_casts_legal_shadow",
+        "reaction_rain_owes_door_answer",
+        "reaction_machine_widowed_minute",
+        "faction_heresy_gentle_horizon",
+        "faction_hunger_asked_taxed",
+        "character_saint_cannot_inherit_body",
+        "character_thirteen_pilgrims_one_feet",
+        "regional_cairns_keep_winter",
+        "regional_flood_learned_last_name",
+        "settlement_street_must_burn_once",
+        "profession_bell_paid_in_silence"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave03-v2-semantic-collision-reviewer",
+      "reviewedPayloadSha256": "d369e3634448af588d8f1b3e2f59f9570ab6c032a74a3654c5be89a772ff6622",
+      "reviewedSourceSha256s": {
+        "markdown": "b48792836ca06130e701efbd38e189aeb0e7ceba30009c122d77ff98d3300844",
+        "machineAnnex": "d369e3634448af588d8f1b3e2f59f9570ab6c032a74a3654c5be89a772ff6622"
+      },
+      "questIds": [
+        "reaction_orchard_casts_legal_shadow",
+        "reaction_rain_owes_door_answer",
+        "reaction_machine_widowed_minute",
+        "faction_heresy_gentle_horizon",
+        "faction_hunger_asked_taxed",
+        "character_saint_cannot_inherit_body",
+        "character_thirteen_pilgrims_one_feet",
+        "regional_cairns_keep_winter",
+        "regional_flood_learned_last_name",
+        "settlement_street_must_burn_once",
+        "profession_bell_paid_in_silence"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    }
+  ],
+  "quests": [
+    {
+      "id": "aftermath_cost_that_learned_to_vote",
+      "verdict": "PASS",
+      "authorRole": "wave-02-aftermath-author",
+      "reviewerRoles": [
+        "wave-02-state-reachability-reviewer",
+        "wave-02-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Cannot become a corrupt-election investigation because the benefit remains active, the new political claimant owes its existence to the cost, and standing determines who keeps the system alive.",
+      "canonicalForbiddenSubstitution": "Cannot become a corrupt-election investigation because the benefit remains active, the new political claimant owes its existence to the cost, and standing determines who keeps the system alive."
+    },
+    {
+      "id": "reaction_orchard_casts_legal_shadow",
+      "verdict": "PASS",
+      "authorRole": "wave-03-v2-revision-author",
+      "reviewerRoles": [
+        "wave03-v2-state-and-machine-reviewer",
+        "wave03-v2-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Counting absences or assigning seed liability cannot substitute; play delivers anatomy while jurisdiction changes inside an irreversible labor sequence.",
+      "canonicalForbiddenSubstitution": "Counting absences or assigning seed liability cannot substitute; play delivers anatomy while jurisdiction changes inside an irreversible labor sequence."
+    },
+    {
+      "id": "reaction_rain_owes_door_answer",
+      "verdict": "PASS",
+      "authorRole": "wave-03-v2-revision-author",
+      "reviewerRoles": [
+        "wave03-v2-state-and-machine-reviewer",
+        "wave03-v2-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "No body carries weather, no door routes pressure, no burden is redirected, and no interior relocates; the verb is adversarial testing of future public knowledge.",
+      "canonicalForbiddenSubstitution": "No body carries weather, no door routes pressure, no burden is redirected, and no interior relocates; the verb is adversarial testing of future public knowledge."
+    },
+    {
+      "id": "reaction_machine_widowed_minute",
+      "verdict": "PASS",
+      "authorRole": "wave-03-v2-revision-author",
+      "reviewerRoles": [
+        "wave03-v2-state-and-machine-reviewer",
+        "wave03-v2-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Maintenance schedules and cost appeals are settled inputs; the playable space is accumulated missing duration and every advance ages another society.",
+      "canonicalForbiddenSubstitution": "Maintenance schedules and cost appeals are settled inputs; the playable space is accumulated missing duration and every advance ages another society."
+    },
+    {
+      "id": "faction_heresy_gentle_horizon",
+      "verdict": "PASS",
+      "authorRole": "wave-03-v2-revision-author",
+      "reviewerRoles": [
+        "wave03-v2-state-and-machine-reviewer",
+        "wave03-v2-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "The cosmic regime is already fixed; this quest tests institutional reproduction of restraint rather than selecting or assembling a sun.",
+      "canonicalForbiddenSubstitution": "The cosmic regime is already fixed; this quest tests institutional reproduction of restraint rather than selecting or assembling a sun."
+    },
+    {
+      "id": "faction_hunger_asked_taxed",
+      "verdict": "PASS",
+      "authorRole": "wave-03-v2-revision-author",
+      "reviewerRoles": [
+        "wave03-v2-state-and-machine-reviewer",
+        "wave03-v2-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "No treaty mapping or ordinary market can substitute because value is created only by voluntary restraint at the final readable instant before a real meal.",
+      "canonicalForbiddenSubstitution": "No treaty mapping or ordinary market can substitute because value is created only by voluntary restraint at the final readable instant before a real meal."
+    },
+    {
+      "id": "character_saint_cannot_inherit_body",
+      "verdict": "PASS",
+      "authorRole": "wave-03-v2-revision-author",
+      "reviewerRoles": [
+        "wave03-v2-state-and-machine-reviewer",
+        "wave03-v2-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "The earlier two-shadow inquiry settles identity relation; this quest partitions autonomous perception to allocate predecessor rights and executable duties.",
+      "canonicalForbiddenSubstitution": "The earlier two-shadow inquiry settles identity relation; this quest partitions autonomous perception to allocate predecessor rights and executable duties."
+    },
+    {
+      "id": "character_thirteen_pilgrims_one_feet",
+      "verdict": "PASS",
+      "authorRole": "wave-03-v2-revision-author",
+      "reviewerRoles": [
+        "wave03-v2-state-and-machine-reviewer",
+        "wave03-v2-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "A stationary vote or escort cannot substitute because votes are locomotion, dissent creates geography, and the companion autonomously resolves every step.",
+      "canonicalForbiddenSubstitution": "A stationary vote or escort cannot substitute because votes are locomotion, dissent creates geography, and the companion autonomously resolves every step."
+    },
+    {
+      "id": "regional_cairns_keep_winter",
+      "verdict": "PASS",
+      "authorRole": "wave-03-v2-revision-author",
+      "reviewerRoles": [
+        "wave03-v2-state-and-machine-reviewer",
+        "wave03-v2-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "No burial, corpse, descendant, speaking authority, host, organ, heat transfer, or custody hearing performs the dramatic work; the player authors winter through deliberate public absence.",
+      "canonicalForbiddenSubstitution": "No burial, corpse, descendant, speaking authority, host, organ, heat transfer, or custody hearing performs the dramatic work; the player authors winter through deliberate public absence."
+    },
+    {
+      "id": "regional_flood_learned_last_name",
+      "verdict": "PASS",
+      "authorRole": "wave-03-v2-revision-author",
+      "reviewerRoles": [
+        "wave03-v2-state-and-machine-reviewer",
+        "wave03-v2-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Genealogical investigation or flood control cannot substitute because relationship evidence physically raises water uphill and dispossesses memory rooms on false proof.",
+      "canonicalForbiddenSubstitution": "Genealogical investigation or flood control cannot substitute because relationship evidence physically raises water uphill and dispossesses memory rooms on false proof."
+    },
+    {
+      "id": "settlement_street_must_burn_once",
+      "verdict": "PASS",
+      "authorRole": "wave-03-v2-revision-author",
+      "reviewerRoles": [
+        "wave03-v2-state-and-machine-reviewer",
+        "wave03-v2-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Evacuation or choosing a building cannot substitute because addresses, reputation, civic functions, and physical streets move independently.",
+      "canonicalForbiddenSubstitution": "Evacuation or choosing a building cannot substitute because addresses, reputation, civic functions, and physical streets move independently."
+    },
+    {
+      "id": "profession_bell_paid_in_silence",
+      "verdict": "PASS",
+      "authorRole": "wave-03-v2-revision-author",
+      "reviewerRoles": [
+        "wave03-v2-state-and-machine-reviewer",
+        "wave03-v2-semantic-collision-reviewer"
+      ],
+      "distinctDramaticWork": "Resource gathering, rhythm play, and ordinary crafting cannot substitute because wages are future social events and failure spends one immediately.",
+      "canonicalForbiddenSubstitution": "Resource gathering, rhythm play, and ordinary crafting cannot substitute because wages are future social events and failure spends one immediately."
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "batchId": "quest-batch-0003",
+  "questIds": [
+    "aftermath_cost_that_learned_to_vote",
+    "reaction_orchard_casts_legal_shadow",
+    "reaction_rain_owes_door_answer",
+    "reaction_machine_widowed_minute",
+    "faction_heresy_gentle_horizon",
+    "faction_hunger_asked_taxed",
+    "character_saint_cannot_inherit_body",
+    "character_thirteen_pilgrims_one_feet",
+    "regional_cairns_keep_winter",
+    "regional_flood_learned_last_name",
+    "settlement_street_must_burn_once",
+    "profession_bell_paid_in_silence"
+  ],
+  "sourceReviewPayloads": [
+    {
+      "id": "wave-02-revision-2",
+      "serialization": "immutable reviewed Wave 02 revision-2 payload",
+      "sha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a"
+    },
+    {
+      "id": "wave-03-v2-markdown",
+      "path": "design-review/SABLE-REACH-QUEST-WAVE-03-v2.md",
+      "serialization": "exact immutable reviewed UTF-8 source bytes",
+      "byteLength": 19182,
+      "sha256": "b48792836ca06130e701efbd38e189aeb0e7ceba30009c122d77ff98d3300844"
+    },
+    {
+      "id": "wave-03-v2-machine-annex",
+      "path": "design-review/SABLE-REACH-QUEST-WAVE-03-v2.machine.json",
+      "serialization": "exact immutable reviewed UTF-8 machine-annex bytes",
+      "byteLength": 105234,
+      "sha256": "d369e3634448af588d8f1b3e2f59f9570ab6c032a74a3654c5be89a772ff6622"
+    }
+  ],
+  "reviewerAttestations": [
+    {
+      "reviewerRole": "wave-02-state-reachability-reviewer",
+      "reviewedPayloadSha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a",
+      "questIds": ["aftermath_cost_that_learned_to_vote"],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave-02-semantic-collision-reviewer",
+      "reviewedPayloadSha256": "0996f349d0c74393f82abaed102aead95c56a639ed12c560e6b2d5e8903c653a",
+      "questIds": ["aftermath_cost_that_learned_to_vote"],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave03-v2-state-and-machine-reviewer",
+      "reviewedPayloadSha256": "d369e3634448af588d8f1b3e2f59f9570ab6c032a74a3654c5be89a772ff6622",
+      "reviewedSourceSha256s": {
+        "markdown": "b48792836ca06130e701efbd38e189aeb0e7ceba30009c122d77ff98d3300844",
+        "machineAnnex": "d369e3634448af588d8f1b3e2f59f9570ab6c032a74a3654c5be89a772ff6622"
+      },
+      "questIds": [
+        "reaction_orchard_casts_legal_shadow",
+        "reaction_rain_owes_door_answer",
+        "reaction_machine_widowed_minute",
+        "faction_heresy_gentle_horizon",
+        "faction_hunger_asked_taxed",
+        "character_saint_cannot_inherit_body",
+        "character_thirteen_pilgrims_one_feet",
+        "regional_cairns_keep_winter",
+        "regional_flood_learned_last_name",
+        "settlement_street_must_burn_once",
+        "profession_bell_paid_in_silence"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave03-v2-semantic-collision-reviewer",
+      "reviewedPayloadSha256": "d369e3634448af588d8f1b3e2f59f9570ab6c032a74a3654c5be89a772ff6622",
+      "reviewedSourceSha256s": {
+        "markdown": "b48792836ca06130e701efbd38e189aeb0e7ceba30009c122d77ff98d3300844",
+        "machineAnnex": "d369e3634448af588d8f1b3e2f59f9570ab6c032a74a3654c5be89a772ff6622"
+      },
+      "questIds": [
+        "reaction_orchard_casts_legal_shadow",
+        "reaction_rain_owes_door_answer",
+        "reaction_machine_widowed_minute",
+        "faction_heresy_gentle_horizon",
+        "faction_hunger_asked_taxed",
+        "character_saint_cannot_inherit_body",
+        "character_thirteen_pilgrims_one_feet",
+        "regional_cairns_keep_winter",
+        "regional_flood_learned_last_name",
+        "settlement_street_must_burn_once",
+        "profession_bell_paid_in_silence"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    }
+  ],
+  "questReviews": [
+    {"id":"aftermath_cost_that_learned_to_vote","verdict":"PASS","authorRole":"wave-02-aftermath-author","reviewerRoles":["wave-02-state-reachability-reviewer","wave-02-semantic-collision-reviewer"]},
+    {"id":"reaction_orchard_casts_legal_shadow","verdict":"PASS","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+    {"id":"reaction_rain_owes_door_answer","verdict":"PASS","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+    {"id":"reaction_machine_widowed_minute","verdict":"PASS","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+    {"id":"faction_heresy_gentle_horizon","verdict":"PASS","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+    {"id":"faction_hunger_asked_taxed","verdict":"PASS","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+    {"id":"character_saint_cannot_inherit_body","verdict":"PASS","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+    {"id":"character_thirteen_pilgrims_one_feet","verdict":"PASS","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+    {"id":"regional_cairns_keep_winter","verdict":"PASS","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+    {"id":"regional_flood_learned_last_name","verdict":"PASS","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+    {"id":"settlement_street_must_burn_once","verdict":"PASS","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
+    {"id":"profession_bell_paid_in_silence","verdict":"PASS","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]}
+  ]
+}

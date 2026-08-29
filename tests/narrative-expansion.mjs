@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 
 import {
+  COMPANION_QUEST_CONTRACTS,
   COSMIC_FACTIONS,
   EXPANSION_CHARACTERS,
   EXPANSION_CREATURES,
@@ -20,10 +21,11 @@ assert.equal(NARRATIVE_TARGETS.expansionCreatureLimit, null);
 assert.equal(QUEST_AUTHORING_LAW.authorMayApproveOwnQuest, false);
 assert.equal(QUEST_AUTHORING_LAW.independentReviewers, 2);
 assert.equal(COSMIC_FACTIONS.length, 3);
-assert.equal(EXPANSION_CHARACTERS.length, 37);
-assert.equal(EXPANSION_CREATURES.length, 24);
-assert.equal(EXPANSION_QUESTS.length, 25);
-assert.equal(EXPANSION_ITEMS.length, 25);
+assert.equal(EXPANSION_CHARACTERS.length, 49);
+assert.equal(EXPANSION_CREATURES.length, 33);
+assert.equal(EXPANSION_QUESTS.length, 37);
+assert.equal(EXPANSION_ITEMS.length, 37);
+assert.equal(COMPANION_QUEST_CONTRACTS.length, 2);
 assert.equal(EXPANSION_ITEMS.length, EXPANSION_QUESTS.length);
 
 const acceptedExpansionMasters = new Map([
@@ -80,6 +82,30 @@ for (const creature of EXPANSION_CREATURES) {
   assert.ok(creature.pipeline && Object.hasOwn(creature.pipeline, 'animatedModel'));
 }
 
+for (const creature of EXPANSION_CREATURES.slice(-9)) {
+  assert.ok(creature.sound);
+  assert.ok(creature.purpose);
+}
+
+for (const artifact of EXPANSION_ITEMS.slice(-12)) {
+  assert.equal(artifact.schemaVersion, 2);
+  assert.ok(artifact.custody.defaultHolderId && artifact.custody.transferRule);
+  assert.ok(artifact.activation.evidence.length && artifact.activation.procedure);
+  assert.ok(artifact.cost.limitation && artifact.cost.worldDebt);
+  assert.ok(artifact.laterContest.triggerStateKey && artifact.laterContest.contestedQuestion && artifact.laterContest.venue);
+}
+
+assert.equal(new Set(COMPANION_QUEST_CONTRACTS.map(({ questId, companionId }) => `${questId}|${companionId}`)).size, 2);
+for (const contract of COMPANION_QUEST_CONTRACTS) {
+  const companion = EXPANSION_CHARACTERS.find(({ id }) => id === contract.companionId);
+  const quest = EXPANSION_QUESTS.find(({ id }) => id === contract.questId);
+  assert.ok(companion && quest);
+  assert.equal(contract.independentAction.playerOverride, false);
+  assert.ok(contract.refusalActionIds.length >= 1);
+  assert.deepEqual(contract.pipeline, companion.pipeline);
+  assert.ok(quest.outcomes.includes(contract.exit.forcedOutcomeLock));
+}
+
 for (const [id, conceptMaster] of acceptedExpansionMasters) {
   const subject = [...EXPANSION_CHARACTERS, ...EXPANSION_CREATURES].find((candidate) => candidate.id === id);
   assert.ok(subject, `${id} is missing from narrative expansion data`);
@@ -112,6 +138,19 @@ const genericCreature = { ...EXPANSION_CREATURES[0], id: 'generic_enemy', generi
 const genericResult = validateNarrativeExpansion({ creatures: [...EXPANSION_CREATURES, genericCreature] });
 assert.equal(genericResult.valid, false);
 assert.ok(genericResult.errors.some(({ code }) => code === 'generic_enemy'));
+
+const brokenArtifact = { ...EXPANSION_ITEMS.at(-1), custody: null };
+const brokenArtifactResult = validateNarrativeExpansion({ items: [...EXPANSION_ITEMS.slice(0, -1), brokenArtifact] });
+assert.equal(brokenArtifactResult.valid, false);
+assert.ok(brokenArtifactResult.errors.some(({ code }) => code === 'missing_artifact_custody'));
+
+const brokenCompanion = {
+  ...COMPANION_QUEST_CONTRACTS[0],
+  independentAction: { ...COMPANION_QUEST_CONTRACTS[0].independentAction, playerOverride: true },
+};
+const brokenCompanionResult = validateNarrativeExpansion({ companionContracts: [brokenCompanion, COMPANION_QUEST_CONTRACTS[1]] });
+assert.equal(brokenCompanionResult.valid, false);
+assert.ok(brokenCompanionResult.errors.some(({ code }) => code === 'non_autonomous_companion_action'));
 
 const contractedQuestIndex = EXPANSION_QUESTS.findIndex(({ stateReads }) => stateReads.some(({ mode }) => mode === 'all-values'));
 const contractedQuest = EXPANSION_QUESTS[contractedQuestIndex];
