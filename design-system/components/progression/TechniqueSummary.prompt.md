@@ -6,3 +6,7 @@ Header for a discipline's technique tree.
 ```
 
 Sits under CodexBack, above the technique grid.
+
+## Accessibility
+
+The glyph is decorative. Place the component under a real discipline heading supplied by the page.

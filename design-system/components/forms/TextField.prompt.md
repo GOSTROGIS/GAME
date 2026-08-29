@@ -6,3 +6,7 @@ Text input for names and player-authored strings.
 ```
 
 Serif at 19px is deliberate — the player is writing into the world. Don't switch it to sans.
+
+## Accessibility
+
+Use a bound `FieldLabel`, surface validation through `aria-invalid` and `aria-describedby`, and never rely on placeholder text as the label.

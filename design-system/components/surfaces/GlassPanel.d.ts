@@ -6,7 +6,9 @@ import * as React from "react";
  *
  * @startingPoint section="Surfaces" subtitle="The default raised surface" viewport="700x200"
  */
-export interface GlassPanelProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface GlassPanelProps extends React.HTMLAttributes<HTMLElement> {
+  /** Semantic element used for the surface. @default "div" */
+  as?: React.ElementType;
   children?: React.ReactNode;
   style?: React.CSSProperties;
 }

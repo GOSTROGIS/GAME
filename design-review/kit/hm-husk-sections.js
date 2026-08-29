@@ -40,7 +40,7 @@ import {
    Heights are metres above the sole. `px` keeps the row the number came from
    so a reviewer can re-measure rather than trust this table. */
 export const PLATE = {
-  file: './assets/enemies/ash-husk-v1.png',
+  file: '../assets/enemies/ash-husk-v1.png',
   scale: { crownPx: 82, solePx: 1441, centrePx: 509.8, mmPerPx: 1.28, height: 1.74 },
 
   crown: 1.740,            // px 82

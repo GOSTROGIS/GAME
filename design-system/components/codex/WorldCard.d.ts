@@ -7,8 +7,8 @@ import * as React from "react";
  * @startingPoint section="Codex" subtitle="Region tile over a keyframe" viewport="700x260"
  */
 export interface WorldCardProps {
-  image?: string;
-  alt?: string;
+  image: string;
+  alt: string;
   /** Level band and role, e.g. "Levels 5&ndash;14 &middot; Gathering". */
   label?: React.ReactNode;
   name?: React.ReactNode;

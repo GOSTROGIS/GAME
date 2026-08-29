@@ -6,3 +6,7 @@ Right-hand quest panel.
 ```
 
 Strike completed objectives through; don't remove them.
+
+## Accessibility
+
+Completion is written and marked in addition to strike-through. Use a labelled region and avoid live announcements for routine progress ticks.

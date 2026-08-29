@@ -1,8 +1,12 @@
 import React from "react";
 
 export function AttributeRow({ abbr, name, description, children, style, ...rest }) {
+  const nameId = React.useId();
+  const descriptionId = React.useId();
   return (
     <div
+      role="group"
+      aria-labelledby={`${nameId} ${descriptionId}`}
       style={{
         display: "grid",
         gridTemplateColumns: "56px 150px 1fr auto",
@@ -14,9 +18,9 @@ export function AttributeRow({ abbr, name, description, children, style, ...rest
       }}
       {...rest}
     >
-      <b style={{ color: "var(--gold)", font: "500 11px var(--display)" }}>{abbr}</b>
-      <strong style={{ font: "500 13px var(--display)", color: "var(--bone)" }}>{name}</strong>
-      <span style={{ color: "#8f9692", font: "13px var(--serif)" }}>{description}</span>
+      <b aria-hidden="true" style={{ color: "var(--gold)", font: "500 11px var(--display)" }}>{abbr}</b>
+      <strong id={nameId} style={{ font: "500 13px var(--display)", color: "var(--bone)" }}>{name}</strong>
+      <span id={descriptionId} style={{ color: "#8f9692", font: "13px var(--serif)" }}>{description}</span>
       {children}
     </div>
   );

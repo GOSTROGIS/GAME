@@ -1,0 +1,60 @@
+# SlipCurve code corpus — Drive mirror
+
+This folder mirrors the text artefacts of `corpus/` in the SlipCurve repository.
+It is a **reading copy**. The repository is the source of truth, and the build
+gates run against the bytes there, not against these files.
+
+## What is here
+
+| file | what it is |
+|---|---|
+| `Cited clauses — verbatim` | every paragraph and table figure the clearance engine relies on, lifted verbatim from the source XML |
+| `NOTICE — 29 CFR 1910 Subpart S` | rights, provenance, retrieval date, source SHA-256 |
+| `NOTICE — 29 CFR 1926` | rights, provenance, retrieval date, source SHA-256 |
+| `corpus directory README` | why `corpus/` exists, how it differs from `vendor/` and `codes/`, and how a document is added |
+
+## What is NOT here, and why
+
+The source XML itself is not mirrored. It is 3.5 MB and 286 KB respectively, it
+already lives in the repository at `corpus/<id>/source.xml.gz`, and it is
+re-fetchable at any time from the URL recorded in each NOTICE. Keeping a third
+copy in a place no gate checks would create a document that can drift from the
+one the build actually verifies against — which is precisely the failure the
+SHA-256 records exist to prevent.
+
+To re-fetch either original:
+
+    curl -o osha-1926.xml \
+      "https://www.ecfr.gov/api/versioner/v1/full/2026-08-01/title-29.xml?chapter=XVII&subchapter=R&part=1926"
+
+    curl -o osha-1910S.xml \
+      "https://www.ecfr.gov/api/versioner/v1/full/2026-08-01/title-29.xml?part=1910&subpart=S"
+
+Then check it against the SHA-256 in the matching NOTICE.
+
+## Rights
+
+Both documents are works of the United States Government and are not subject to
+copyright in the United States (17 U.S.C. 105). No licence was required and none
+was sought. The eCFR is an unofficial editorial compilation; it is not the
+official legal edition of the CFR, and nothing here substitutes for the Federal
+Register or for the judgement of an authority having jurisdiction.
+
+**Nothing under a publisher's licence belongs in this folder.** Free to read is
+not free to redistribute: the NFPA, ASHRAE and ICC free-access editions are the
+former only. Those belong behind the entitlement gate in `codes/`, which is
+absent from version control by design.
+
+## How this corpus is verified
+
+`tools/corpus_extract.py` lifts the cited paragraphs out of the vaulted bytes.
+`tools/citecheck.py` then audits the engine against them, and the two share no
+extraction code — a checker that can regenerate what it is checking reproduces
+its own bug on both sides and agrees with itself.
+
+281 checks run on every build, across four fronts: the vault hashes as recorded,
+every citation resolves to a transcribed clause whose own paragraph designator
+matches the citation, every published figure appears in the text of the clause
+cited *for it*, and any span the engine wraps in curly quotes is verbatim in the
+source. `py tools/citecheck.py --selftest` mutates the engine and the vault six
+ways and requires each to be caught.

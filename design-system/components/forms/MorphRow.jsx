@@ -1,11 +1,13 @@
 import React from "react";
 
 export function MorphRow({ label, value = 0.5, onChange, id, style, ...rest }) {
+  const generatedId = React.useId();
+  const inputId = id || generatedId;
   return (
     <div style={{ display: "grid", gridTemplateColumns: "1fr 85px", gap: 12, alignItems: "center", ...style }} {...rest}>
-      <label htmlFor={id} style={{ font: "13px var(--serif)", color: "var(--bone)" }}>{label}</label>
+      <label htmlFor={inputId} style={{ font: "13px var(--serif)", color: "var(--bone)" }}>{label}</label>
       <input
-        id={id}
+        id={inputId}
         type="range"
         min={0}
         max={1}

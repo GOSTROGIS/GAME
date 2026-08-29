@@ -13,3 +13,7 @@ A bestiary entry. Two-column grid.
 ```
 
 Description is horror language about the body — never a stat block. The maturity strip is mandatory.
+
+## Accessibility
+
+Use a real heading for the creature name and definition-list semantics for facts. Maturity and locked knowledge must be written, not colour-coded alone.

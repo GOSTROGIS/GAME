@@ -3,7 +3,7 @@ import * as React from "react";
 /** Defeat overlay. The only place --death (#a65c51) is used. Fades in over
  *  1.4s — slow on purpose. Copy should state the consequence plainly:
  *  return to the last wayshrine, flask charges restored, 10% Sable Mark loss. */
-export interface DeathScreenProps {
+export interface DeathScreenProps extends Omit<React.HTMLAttributes<HTMLElement>, "title"> {
   eyebrow?: React.ReactNode;
   title?: React.ReactNode;
   /** Italic serif consequence line. */

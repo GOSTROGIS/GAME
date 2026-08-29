@@ -20,6 +20,7 @@ export function ActionBar({ slots = [], onUse, style, ...rest }) {
         <button
           key={s.id || i}
           type="button"
+          disabled={s.disabled}
           onClick={() => onUse && onUse(s.id)}
           style={{
             position: "relative",
@@ -29,8 +30,9 @@ export function ActionBar({ slots = [], onUse, style, ...rest }) {
             border: 0,
             borderRight: "1px solid var(--line)",
             background: "transparent",
-            color: "var(--bone)",
-            cursor: "pointer"
+            color: s.disabled ? "var(--muted)" : "var(--bone)",
+            cursor: s.disabled ? "not-allowed" : "pointer",
+            opacity: s.disabled ? 0.55 : 1
           }}
         >
           {s.key ? <kbd style={{ position: "absolute", left: 6, top: 5, color: "#7e8580", fontSize: 8, background: "none", border: 0, boxShadow: "none" }}>{s.key}</kbd> : null}

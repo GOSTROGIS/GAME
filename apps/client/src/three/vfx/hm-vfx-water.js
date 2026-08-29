@@ -35,7 +35,7 @@
  * stand-in in the same shader, so the two halves match in palette.
  */
 import * as THREE from 'three';
-import { MAT, rnd, part, ico, cyl, lathe, jitter, cnt, torus } from './hm-core.js';
+import { MAT, rnd, part, ico, cyl, lathe, jitter, cnt, torus } from '../../world/hearthmere/hm-core.js';
 import {
   VFX_ENV, pal, gpuPoints, softVolume, lightPool, waterSurface,
   curtainGeometry, fallMaterial, axesOf, measureFx, NOISE_GLSL, FOG_GLSL,

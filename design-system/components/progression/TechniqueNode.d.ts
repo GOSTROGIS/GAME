@@ -9,7 +9,7 @@ import * as React from "react";
  *
  * @startingPoint section="Progression" subtitle="Learned, available and locked states" viewport="700x220"
  */
-export interface TechniqueNodeProps {
+export interface TechniqueNodeProps extends Omit<React.HTMLAttributes<HTMLElement>, "onSelect"> {
   /** Novice | Adept | Expert | Master, optionally with a state suffix. */
   tier?: React.ReactNode;
   name?: React.ReactNode;

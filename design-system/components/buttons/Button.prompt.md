@@ -7,3 +7,7 @@ The system's only button — gold `primary` for the one committing action on a s
 ```
 
 Variants: `primary` | `ghost`, plus `ornate` for the chamfered silhouette and `disabled`. Never place two primaries in one view. Minimum height is locked to `--touch-min` (44px); don't override it.
+
+## Accessibility
+
+Use native button semantics, a visible action label, and native `disabled`. The gold treatment never replaces focus or state text.

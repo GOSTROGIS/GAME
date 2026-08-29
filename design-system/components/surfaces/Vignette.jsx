@@ -3,6 +3,7 @@ import React from "react";
 export function Vignette({ style, ...rest }) {
   return (
     <div
+      {...rest}
       aria-hidden="true"
       style={{
         position: "absolute",
@@ -12,7 +13,6 @@ export function Vignette({ style, ...rest }) {
         boxShadow: "var(--vignette)",
         ...style
       }}
-      {...rest}
     />
   );
 }

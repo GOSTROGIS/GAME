@@ -27,7 +27,12 @@ function Demo(){
   return (
     <div style={{display:'grid',gap:12}}>
       <div><Eyebrow>Ember Ledger</Eyebrow><MicroMeta>Levels 5&ndash;14 &middot; Gathering</MicroMeta></div>
-      <FieldLabel style={{margin:0}}>Chosen Origin</FieldLabel>
+      <div>
+        <FieldLabel htmlFor="origin-preview" style={{margin:0}}>Chosen Origin</FieldLabel>
+        <select id="origin-preview" defaultValue="Gloamfarer" style={{marginTop:6,background:'#111719',color:'var(--bone)',border:'1px solid var(--line)'}}>
+          <option>Gloamfarer</option>
+        </select>
+      </div>
       <div className="row">
         <StatusPill>Authored</StatusPill>
         <StatusPill tone="valid">Habitat valid</StatusPill>

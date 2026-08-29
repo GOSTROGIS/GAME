@@ -8,3 +8,7 @@ The player's HUD anchor — top-left, 315px column.
 ```
 
 Height is fixed at 78px. Pass `portrait` only with a graded render (`--grade-character`); an ungraded image will read as too bright against the HUD.
+
+## Accessibility
+
+Expose the character name and numeric health, stamina, and focus values. The rune or portrait is decorative when the name is adjacent.

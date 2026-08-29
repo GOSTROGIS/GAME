@@ -5,3 +5,7 @@ The 8px tracked label above a card title or beside a region name.
 ```
 
 Two or three words. If it needs more, it isn't MicroMeta — use Eyebrow.
+
+## Accessibility
+
+Do not use the 8px treatment for required prose; expand abbreviations in an accessible label where needed.

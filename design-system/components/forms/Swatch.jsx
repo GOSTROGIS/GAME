@@ -5,7 +5,7 @@ export function Swatch({ color, selected = false, onClick, label, style, ...rest
     <button
       type="button"
       onClick={onClick}
-      aria-label={label || color}
+      aria-label={label}
       aria-pressed={selected}
       style={{
         width: 34,

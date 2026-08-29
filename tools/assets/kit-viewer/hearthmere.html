@@ -204,10 +204,10 @@
   </main>
 </div>
 
-<script src="./three-d-stage.js"></script>
+<script src="../../../design-review/three-d-stage.js"></script>
 <script type="module">
-  import { measure, setLod, applyTextures } from './kit/hm-core.js';
-  import { CATALOG, GROUPS } from './kit/hm-catalog.js';
+  import { measure, setLod, applyTextures } from '../../../design-review/kit/hm-core.js';
+  import { CATALOG, GROUPS } from '../../../design-review/kit/hm-catalog.js';
 
   const stage = document.getElementById('stage');
   const rail = document.getElementById('rail');
@@ -275,7 +275,7 @@
   foot.innerHTML =
     '<p class="micro" style="color:#d4855f">Prototype geometry &middot; not production</p>' +
     '<p class="gn">No sockets, morphs or clips. No collision. Textures survive the GLB export but not OBJ, which carries per-material colour only. Four regions still have no asset manifest at all.</p>' +
-    '<p class="gn" style="margin-top:10px;color:var(--muted)">Insertion steps and the amendments: <code style="color:var(--gold);font:11px ui-monospace,Menlo,monospace">INSTALL-IN-REPO-hearthmere-3d.md</code>. Scatter and motion: <a href="./Hearthmere Living World.html">Hearthmere Living World</a>.</p>';
+    '<p class="gn" style="margin-top:10px;color:var(--muted)">Insertion steps and the amendments: <code style="color:var(--gold);font:11px ui-monospace,Menlo,monospace">INSTALL-IN-REPO-hearthmere-3d.md</code>. Scatter and motion: <a href="../../../design-review/Hearthmere Living World.html">Hearthmere Living World</a>.</p>';
   rail.append(foot);
 
   /* ---- spec panel ---- */

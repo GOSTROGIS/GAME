@@ -18,9 +18,9 @@
   "budgets": {
     "character": { "lodTriangles": [80000, 25000, 7000], "maxTextureDimension": 2048, "maxMaterialSlots": 6 },
     "enemy": { "lodTriangles": [80000, 25000, 7000], "maxTextureDimension": 2048, "maxMaterialSlots": 6 },
-    "hero": { "lodTriangles": [48000, 16000, 5000], "maxTextureDimension": 2048, "maxMaterialSlots": 4 },
+    "hero": { "lodTriangles": [48000, 17000, 5800], "maxTextureDimension": 2048, "maxMaterialSlots": 4 },
     "standard": { "lodTriangles": [12000, 5000, 1800], "maxTextureDimension": 2048, "maxMaterialSlots": 3 },
-    "minor": { "lodTriangles": [2800, 1200, 500], "maxTextureDimension": 1024, "maxMaterialSlots": 2 },
+    "minor": { "lodTriangles": [2800, 1200, 500], "maxTextureDimension": 1024, "maxMaterialSlots": 3 },
     "material": { "lodTriangles": [0, 0, 0], "maxTextureDimension": 2048, "maxMaterialSlots": 1 },
     "atmosphere": { "lodTriangles": [1200, 600, 200], "maxTextureDimension": 1024, "maxMaterialSlots": 2 }
   },
@@ -36,8 +36,11 @@
   "generators": [
     { "id": "surface.pbr-prototype", "kind": "shader_material", "description": "Flat authored color/roughness/wetness material with no production texture claim." },
     { "id": "structure.graybox", "kind": "primitive_mesh", "description": "Box, wedge, cylinder, and arch composition matching declared footprint and sockets." },
+    { "id": "structure.procedural.v1", "kind": "procedural_mesh", "description": "Deterministic Hearthmere structure builders from apps/client/src/world/hearthmere/hm-structures.js." },
     { "id": "prop.graybox", "kind": "primitive_mesh", "description": "Primitive narrative-prop silhouette with declared interaction socket." },
+    { "id": "prop.procedural.v1", "kind": "procedural_mesh", "description": "Deterministic Hearthmere prop builders from apps/client/src/world/hearthmere/hm-props.js." },
     { "id": "foliage.instanced", "kind": "instanced_mesh", "description": "Low-poly crossed-card or branch-cluster prototype." },
+    { "id": "foliage.procedural.v1", "kind": "instanced_mesh", "description": "Deterministic Hearthmere foliage builders from apps/client/src/world/hearthmere/hm-flora.js; placement remains instanced." },
     { "id": "decal.projected", "kind": "projected_material", "description": "Procedural mask projected onto declared receiver surfaces." },
     { "id": "humanoid.gaunt", "kind": "skinned_procedural", "description": "Original narrow humanoid prototype with parameter-driven appearance; not a production Blender rig." },
     { "id": "enemy.ash-husk", "kind": "skinned_procedural", "description": "Original ash-collapsed humanoid combat prototype." },

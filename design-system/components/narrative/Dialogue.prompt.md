@@ -7,3 +7,7 @@ The conversation box.
 ```
 
 Choices are serif because the player is speaking. Full dialogue presentation is still open production work.
+
+## Accessibility
+
+The speaker heading labels the section, choice buttons are at least 44px high, focus enters the first choice, and the integration restores focus when dialogue closes.

@@ -23,7 +23,7 @@ export { loadPlate };
 
 export const SUBJECT = {
   id: 'enemy.wicket-eater', name: 'Wicket Eater', family: 'Ashbound', rank: null,
-  plate: './assets/enemies/wicket-eater-v1.png',
+  plate: '../assets/enemies/wicket-eater-v1.png',
   promptCall: 'call_nIgtNVLVAaxYFQ2Pt3fXba2w',
   targetHeightMeters: 1.78,
 };

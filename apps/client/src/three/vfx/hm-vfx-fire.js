@@ -16,7 +16,7 @@
  * and bell-coloured is the fiction the repo already carries.
  */
 import * as THREE from 'three';
-import { MAT, rnd, part, ico, cyl, torus, lathe, jitter, cnt } from './hm-core.js';
+import { MAT, rnd, part, ico, cyl, torus, lathe, jitter, cnt } from '../../world/hearthmere/hm-core.js';
 import {
   VFX_ENV, pal, flameColumn, gpuPoints, softVolume, lightPool, vfxTexture,
   axesOf, spaceOf, measureFx, flicker, fallMaterial, curtainGeometry, vfxQuality,

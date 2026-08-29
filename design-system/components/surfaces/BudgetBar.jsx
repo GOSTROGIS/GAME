@@ -1,8 +1,12 @@
 import React from "react";
 
-export function BudgetBar({ children, style, ...rest }) {
+export function BudgetBar({ children, value, max, style, ...rest }) {
+  const text = children != null ? children : value != null && max != null ? value + " of " + max + " assigned" : null;
   return (
     <div
+      {...rest}
+      role="status"
+      aria-atomic="true"
       style={{
         position: "sticky",
         top: -34,
@@ -17,9 +21,8 @@ export function BudgetBar({ children, style, ...rest }) {
         textTransform: "uppercase",
         ...style
       }}
-      {...rest}
     >
-      {children}
+      {text}
     </div>
   );
 }

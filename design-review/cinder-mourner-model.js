@@ -40,7 +40,7 @@ export { loadPlate };
 
 export const SUBJECT = {
   id: 'enemy.cinder-mourner', name: 'Cinder Mourner', family: 'Ashbound', rank: null,
-  plate: './assets/enemies/cinder-mourner-v1.png',
+  plate: '../assets/enemies/cinder-mourner-v1.png',
   promptCall: 'call_nIgtNVLVAaxYFQ2Pt3fXba2w',
   targetHeightMeters: 1.76,
 };

@@ -2,10 +2,11 @@ import React from "react";
 
 export function PortraitStage({ image, alt, children, style, ...rest }) {
   return (
-    <div
+    <figure
       style={{
         position: "relative",
         minHeight: 0,
+        margin: 0,
         display: "grid",
         placeItems: "center",
         overflow: "hidden",
@@ -29,8 +30,10 @@ export function PortraitStage({ image, alt, children, style, ...rest }) {
             filter: "var(--grade-character)"
           }}
         />
+      ) : children == null ? (
+        <span style={{ color: "var(--muted)", font: "var(--type-body-sm)" }}>No portrait available</span>
       ) : null}
       {children}
-    </div>
+    </figure>
   );
 }

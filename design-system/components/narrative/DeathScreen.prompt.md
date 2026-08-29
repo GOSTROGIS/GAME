@@ -7,3 +7,7 @@ The defeat overlay.
 ```
 
 State the real consequence. One action only — this is not a menu.
+
+## Accessibility
+
+The heading labels the modal dialog. Move focus to the recovery action and restore world focus after dismissal; do not use the red treatment as the only defeat signal.

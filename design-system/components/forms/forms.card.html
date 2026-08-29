@@ -33,12 +33,12 @@ function Demo(){
       <StepDots count={6} active={2}/>
       <div className="grid2">
         <div>
-          <FieldLabel style={{margin:'0 0 8px'}}>Pilgrim's Name</FieldLabel>
-          <TextField value="Aszelin" onChange={()=>{}}/>
+          <FieldLabel htmlFor="demo-name" style={{margin:'0 0 8px'}}>Pilgrim's Name</FieldLabel>
+          <TextField id="demo-name" value="Aszelin" onChange={()=>{}}/>
         </div>
         <div>
-          <FieldLabel style={{margin:'0 0 8px'}}>Hair</FieldLabel>
-          <SelectBox options={['Cropped','Shorn','Bound']} onChange={()=>{}}/>
+          <FieldLabel htmlFor="demo-hair" style={{margin:'0 0 8px'}}>Hair</FieldLabel>
+          <SelectBox id="demo-hair" options={['Cropped','Shorn','Bound']} onChange={()=>{}}/>
         </div>
       </div>
       <div className="grid2">
@@ -48,11 +48,16 @@ function Demo(){
           description="You treated the drowned parish through three floods." note="+2 ALCHEMY"/>
       </div>
       <div className="row">
-        {['#6b5847','#3f4a44','#8d7f6a','#2b2f33'].map(x=>
-          <Swatch key={x} color={x} label={x} selected={c===x} onClick={()=>setC(x)}/>)}
+        {[
+          {color:'#6b5847',label:'Ash brown'},
+          {color:'#3f4a44',label:'Moss grey'},
+          {color:'#8d7f6a',label:'Sable tan'},
+          {color:'#2b2f33',label:'Charcoal'}
+        ].map(x=>
+          <Swatch key={x.color} color={x.color} label={x.label} selected={c===x.color} onClick={()=>setC(x.color)}/>)}
       </div>
       <AttributeRow abbr="VIG" name="Vigor" description="Raises health and resistance to bleed.">
-        <StatStepper value={v} min={8} max={20} onChange={setV}/>
+        <StatStepper label="Vigor" value={v} min={8} max={20} onChange={setV}/>
       </AttributeRow>
       <MorphRow id="cheek" label="Cheek hollow" value={m} onChange={setM}/>
     </div>

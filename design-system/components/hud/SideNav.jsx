@@ -25,6 +25,7 @@ export function SideNav({ items = [], active, onSelect, style, ...rest }) {
             key={it.id}
             type="button"
             onClick={() => onSelect && onSelect(it.id)}
+            aria-current={on ? "page" : undefined}
             title={it.label + (it.key ? " (" + it.key + ")" : "")}
             style={{
               display: "grid",

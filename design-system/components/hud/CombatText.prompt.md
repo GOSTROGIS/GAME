@@ -5,3 +5,7 @@ Floating outcome text over the world.
 ```
 
 Under revision for turn-based — prefer a resolution log for new work.
+
+## Accessibility
+
+Keep this decorative with `aria-hidden`. Send meaningful encounter outcomes to the ordered resolution log and its concise live summary.

@@ -1,9 +1,11 @@
 import React from "react";
 
-export function SpeakerMark({ initial, size = "var(--speaker-mark)", style, ...rest }) {
+export function SpeakerMark({ initial, size = "var(--speaker-mark)", decorative = true, label, style, ...rest }) {
   return (
     <div
-      aria-hidden="true"
+      {...rest}
+      aria-hidden={decorative ? "true" : undefined}
+      aria-label={decorative ? undefined : label}
       style={{
         display: "grid",
         placeItems: "center",
@@ -17,7 +19,6 @@ export function SpeakerMark({ initial, size = "var(--speaker-mark)", style, ...r
         font: "32px var(--display)",
         ...style
       }}
-      {...rest}
     >
       {initial}
     </div>

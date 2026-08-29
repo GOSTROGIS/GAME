@@ -6,3 +6,7 @@ Resource bar for health, stamina, focus or an enemy.
 ```
 
 Health is deliberately taller (10px) than the others (7px) — it is the only meter with weight. Enemy is flat, never gradient. `stamina` is under revision for turn-based.
+
+## Accessibility
+
+Provide an accessible label and numeric value/max wherever the meter carries information. The fill width and colour are redundant visuals.

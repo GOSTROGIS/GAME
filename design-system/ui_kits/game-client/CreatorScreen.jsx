@@ -7,27 +7,31 @@ window.HMKit.CreatorScreen = function CreatorScreen({ onDone, onBack }) {
   } = window.HollowMarch;
 
   const origins = [
-    { id: "gloam", title: "Gloamfarer", art: "../../../assets/characters/gloamfarer-v2.png",
-      description: "You walked the dark roads before they had names. Wayfaring comes easily; company does not.", note: "+2 WAYFARING" },
-    { id: "bell", title: "Bell-Warden", art: "../../../assets/characters/bell-warden-v2.png",
-      description: "You kept the names in the tower. The bells still wake you.", note: "+2 PRESENCE" },
-    { id: "mire", title: "Mire-Physicker", art: "../../../assets/characters/mire-physicker-v2.png",
-      description: "You treated the drowned parish through three floods.", note: "+2 ALCHEMY" },
-    { id: "scion", title: "Oathless Scion", art: "../../../assets/characters/oathless-scion-v2.png",
-      description: "Your house swore nothing and kept nothing. You inherited the debt anyway.", note: "+2 WILL" },
-    { id: "ash", title: "Ash-Reckoner", art: null,
-      description: "You counted what the foundry burned. No keyframe exists for this origin.", note: "ART PENDING" },
-    { id: "salt", title: "Salt-Widow", art: null,
-      description: "You buried a household under the waste. No keyframe exists for this origin.", note: "ART PENDING" }
+    { id: "gloamfarer", title: "Gloamfarer", art: "../../../assets/characters/gloamfarer-v2.png",
+      description: "You carried letters between settlements after the old roads learned to move. You know which milestones lie and which fires welcome no guest.", note: "+3 WAYFINDING · +2 FORAGING · +2 CAMPCRAFT" },
+    { id: "bell_warden", title: "Bell Warden", art: "../../../assets/characters/bell-warden-v2.png",
+      description: "You kept a plague bell ringing until there was nobody left to count its tolls. Its rope burned your palms, but its rhythm still steadies your heart.", note: "+3 MACES · +2 WARDING · +2 FIRST AID" },
+    { id: "grave_tithe_runner", title: "Grave-Tithe Runner", art: null,
+      description: "You smuggled names off the burial rolls so poor families could keep their dead. The Tithe remembers your face even if the law does not.", note: "+3 LIGHT BLADES · +2 SKULDUGGERY · +2 BARGAINING" },
+    { id: "mire_physicker", title: "Mire Physicker", art: "../../../assets/characters/mire-physicker-v2.png",
+      description: "The black fen taught you that poison and medicine differ mostly in patience. Your remedies work, though sensible folk dislike watching them work.", note: "+3 ALCHEMY · +3 HERBALISM · +1 FIRST AID" },
+    { id: "oathless_scion", title: "Oathless Scion", art: "../../../assets/characters/oathless-scion-v2.png",
+      description: "Your house purchased loyalty with beautiful promises and uglier collateral. You left the signet behind, but courtly habits cling more tightly than rings.", note: "+3 DUELING · +3 RHETORIC · +1 LORE" },
+    { id: "cinder_mason", title: "Cinder Mason", art: null,
+      description: "You repaired the foundations of a city that was burning from below. Stone speaks under a hammer; you heard it beg and kept working.", note: "+3 HEAVY ARMS · +2 SMITHING · +2 MASONRY" },
+    { id: "starved_seer", title: "Starved Seer", art: null,
+      description: "You fasted for a revelation and something answered from the space where a god should have been. Hunger keeps the memory sharp.", note: "+3 DIVINATION · +3 RITES · +1 LORE" },
+    { id: "thorn_poacher", title: "Thorn Poacher", art: null,
+      description: "When winter law forbade hunting, you fed a village from a forest that hunted back. Some nights you still hear antlers scraping at the shutters.", note: "+3 ARCHERY · +2 TRAPPING · +2 TRACKING" }
   ];
 
-  const [pick, setPick] = React.useState("gloam");
+  const [pick, setPick] = React.useState("gloamfarer");
   const chosen = origins.find(function (o) { return o.id === pick; });
 
   return (
-    <Modal style={{ display: "grid", gridTemplateRows: "var(--modal-header-h) 1fr var(--modal-footer-h)" }}>
+    <Modal labelledBy="creator-title" style={{ display: "grid", gridTemplateRows: "var(--modal-header-h) 1fr var(--modal-footer-h)" }}>
       <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 34px", borderBottom: "1px solid var(--line)" }}>
-        <h2 style={{ margin: 0, font: "var(--type-h2-modal)", letterSpacing: ".02em", color: "var(--bone)" }}>Forge a Pilgrim</h2>
+        <h2 id="creator-title" style={{ margin: 0, font: "var(--type-h2-modal)", letterSpacing: ".02em", color: "var(--bone)" }}>Forge a Pilgrim</h2>
         <StepDots count={6} active={0} />
       </header>
 
@@ -52,7 +56,8 @@ window.HMKit.CreatorScreen = function CreatorScreen({ onDone, onBack }) {
           <FieldLabel htmlFor="pilgrim-name">Pilgrim&rsquo;s Name</FieldLabel>
           <TextField id="pilgrim-name" value="Aszelin" onChange={function () {}} />
 
-          <FieldLabel>Chosen Origin</FieldLabel>
+          <fieldset style={{ minWidth: 0, margin: "18px 0 0", padding: 0, border: 0 }}>
+          <legend style={{ marginBottom: 8, color: "var(--gold)", font: "var(--type-micro)", letterSpacing: "var(--track-micro)", textTransform: "uppercase" }}>Chosen Origin</legend>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(210px, 1fr))", gap: 10 }}>
             {origins.map(function (o) {
               return (
@@ -67,6 +72,7 @@ window.HMKit.CreatorScreen = function CreatorScreen({ onDone, onBack }) {
               );
             })}
           </div>
+          </fieldset>
         </div>
       </div>
 

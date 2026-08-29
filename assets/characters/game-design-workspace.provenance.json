@@ -1,0 +1,339 @@
+{
+  "schema": "NamedCharacterBatchProvenanceV1",
+  "batchId": "game-design-workspace-vendored-characters",
+  "vendoredOn": "2026-08-27",
+  "sourceWorkspace": "GAME",
+  "sourceManifest": "design-review/kit/hm-concept-art.js",
+  "rightsAvailability": "not_recorded_in_source_workspace",
+  "colorSpaceAvailability": "not_declared_in_source_workspace",
+  "maturity": {
+    "prototype_asset": true,
+    "runtime_integrated": false,
+    "production_asset": false
+  },
+  "records": [
+    {
+      "id": "named_character.sera_dusk.cutout.game",
+      "characterId": "sera_dusk",
+      "factionId": "grave_tithe",
+      "regionId": "graven_march",
+      "role": "transparent_cutout",
+      "path": "assets/characters/sera-dusk-v1-cutout.png",
+      "sha256": "58855fae038aa319a3eea6c612a93a325b256dc0dbc895771b528218cb29cb8f",
+      "bytes": 1784493,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:58855fae038aa319a3eea6c612a93a325b256dc0dbc895771b528218cb29cb8f"
+    },
+    {
+      "id": "named_character.mott_vane.cutout.game",
+      "characterId": "mott_vane",
+      "factionId": "grave_tithe",
+      "regionId": "hollow_abbey",
+      "role": "transparent_cutout",
+      "path": "assets/characters/mott-vane-v1-cutout.png",
+      "sha256": "78b5e26a84c3b3191a4cf722c04add5745c33f4626f7b00ab491e651fd75b9be",
+      "bytes": 1625585,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:78b5e26a84c3b3191a4cf722c04add5745c33f4626f7b00ab491e651fd75b9be"
+    },
+    {
+      "id": "named_character.ilse_crow.cutout.game",
+      "characterId": "ilse_crow",
+      "factionId": "grave_tithe",
+      "regionId": "hearthmere",
+      "role": "transparent_cutout",
+      "path": "assets/characters/ilse-crow-v1-cutout.png",
+      "sha256": "17ab43bf5079436f7d78da7ca31428cd8a7092f99f2cac8f61ad78122fd0385e",
+      "bytes": 1501308,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:17ab43bf5079436f7d78da7ca31428cd8a7092f99f2cac8f61ad78122fd0385e"
+    },
+    {
+      "id": "named_character.garran_low.cutout.game",
+      "characterId": "garran_low",
+      "factionId": "grave_tithe",
+      "regionId": "graven_march",
+      "role": "transparent_cutout",
+      "path": "assets/characters/garran-low-v1-cutout.png",
+      "sha256": "5ed242f6356eaf9ce9e401462cef6b43e022a93c13e0d78b3bbeff4a50091295",
+      "bytes": 1512782,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:5ed242f6356eaf9ce9e401462cef6b43e022a93c13e0d78b3bbeff4a50091295"
+    },
+    {
+      "id": "named_character.netta_aster.cutout.game",
+      "characterId": "netta_aster",
+      "factionId": "grave_tithe",
+      "regionId": "hollow_abbey",
+      "role": "transparent_cutout",
+      "path": "assets/characters/netta-aster-v1-cutout.png",
+      "sha256": "9be8409bc155df3823a36e901af54eb65489a2ca56ff3c75ffa90ceba66900d6",
+      "bytes": 1545769,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:9be8409bc155df3823a36e901af54eb65489a2ca56ff3c75ffa90ceba66900d6"
+    },
+    {
+      "id": "named_character.orris_pale.cutout.game",
+      "characterId": "orris_pale",
+      "factionId": "grave_tithe",
+      "regionId": "cinderward",
+      "role": "transparent_cutout",
+      "path": "assets/characters/orris-pale-v1-cutout.png",
+      "sha256": "d98af250d8ef3c0058298875ce3c316a7d14a3d8fa033b5966d8985424e43e00",
+      "bytes": 1635553,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:d98af250d8ef3c0058298875ce3c316a7d14a3d8fa033b5966d8985424e43e00"
+    },
+    {
+      "id": "named_character.vellin_the_unwritten.cutout.game",
+      "characterId": "vellin_the_unwritten",
+      "factionId": "unwritten_roads",
+      "regionId": "graven_march",
+      "role": "transparent_cutout",
+      "path": "assets/characters/vellin-the-unwritten-v1-cutout.png",
+      "sha256": "8e001af3b3ef743d7c893f4c4d4659f7858ea44b2b0ed8396bb6500ffac4eb76",
+      "bytes": 1849193,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:8e001af3b3ef743d7c893f4c4d4659f7858ea44b2b0ed8396bb6500ffac4eb76"
+    },
+    {
+      "id": "named_character.kora_path.cutout.game",
+      "characterId": "kora_path",
+      "factionId": "unwritten_roads",
+      "regionId": "graven_march",
+      "role": "transparent_cutout",
+      "path": "assets/characters/kora-path-v1-cutout.png",
+      "sha256": "d030a1ad3d8fd1486d894c826f6cedbab0fab27f35513b5e3cd5dbb98505a751",
+      "bytes": 1879944,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:d030a1ad3d8fd1486d894c826f6cedbab0fab27f35513b5e3cd5dbb98505a751"
+    },
+    {
+      "id": "named_character.marn_upland.cutout.game",
+      "characterId": "marn_upland",
+      "factionId": "unwritten_roads",
+      "regionId": "graven_march",
+      "role": "transparent_cutout",
+      "path": "assets/characters/marn-upland-v1-cutout.png",
+      "sha256": "7f92052695e5872cf7ad352c637d5fe5b7002c1c87a7cdb79efec78c11b2cf34",
+      "bytes": 1287441,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:7f92052695e5872cf7ad352c637d5fe5b7002c1c87a7cdb79efec78c11b2cf34"
+    },
+    {
+      "id": "named_character.iri_north.cutout.game",
+      "characterId": "iri_north",
+      "factionId": "unwritten_roads",
+      "regionId": "cinderward",
+      "role": "transparent_cutout",
+      "path": "assets/characters/iri-north-v1-cutout.png",
+      "sha256": "0a04a6a8801ddf1e1bc1adbb5e281e41823d745bbbb78a2accedabed2f1c3909",
+      "bytes": 1676487,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:0a04a6a8801ddf1e1bc1adbb5e281e41823d745bbbb78a2accedabed2f1c3909"
+    },
+    {
+      "id": "named_character.rin_waymark.cutout.game",
+      "characterId": "rin_waymark",
+      "factionId": "unwritten_roads",
+      "regionId": "dunmire",
+      "role": "transparent_cutout",
+      "path": "assets/characters/rin-waymark-v1-cutout.png",
+      "sha256": "071e29186366940069b62a5a0a2b2a8de043295d0e51839b7a8b1fc7b4a4a58e",
+      "bytes": 1734993,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:071e29186366940069b62a5a0a2b2a8de043295d0e51839b7a8b1fc7b4a4a58e"
+    },
+    {
+      "id": "named_character.elo_veer.cutout.game",
+      "characterId": "elo_veer",
+      "factionId": "unwritten_roads",
+      "regionId": "hollow_abbey",
+      "role": "transparent_cutout",
+      "path": "assets/characters/elo-veer-v1-cutout.png",
+      "sha256": "8ad86a17be42f613ca5251e3efabb3bdd65d1e5f942ad1ddee193f93850276c4",
+      "bytes": 1710258,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:8ad86a17be42f613ca5251e3efabb3bdd65d1e5f942ad1ddee193f93850276c4"
+    },
+    {
+      "id": "named_character.gatewarden_nhal.cutout.game",
+      "characterId": "gatewarden_nhal",
+      "factionId": "exact_word",
+      "regionId": "hollow_abbey",
+      "role": "transparent_cutout",
+      "path": "assets/characters/nhal-without-shadow-v1-cutout.png",
+      "sha256": "3722d89895fa354d347c053da67efd64831e271a341729b26bfc5b05b0fffdb6",
+      "bytes": 1939777,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:3722d89895fa354d347c053da67efd64831e271a341729b26bfc5b05b0fffdb6"
+    },
+    {
+      "id": "named_character.moira_quiet.cutout.game",
+      "characterId": "moira_quiet",
+      "factionId": "exact_word",
+      "regionId": "hollow_abbey",
+      "role": "transparent_cutout",
+      "path": "assets/characters/moira-quiet-v1-cutout.png",
+      "sha256": "088933b5b31f2e27894db714fecfe7c7a465cf7af6cb2b8c744b6f071fde2e15",
+      "bytes": 1609740,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:088933b5b31f2e27894db714fecfe7c7a465cf7af6cb2b8c744b6f071fde2e15"
+    },
+    {
+      "id": "named_character.seln_clause.cutout.game",
+      "characterId": "seln_clause",
+      "factionId": "exact_word",
+      "regionId": "hollow_abbey",
+      "role": "transparent_cutout",
+      "path": "assets/characters/seln-clause-v1-cutout.png",
+      "sha256": "b5b2e7f30058c8c02065b5df8dc72f8e182cae0b2a5b6cd721f2fe0f5c62648d",
+      "bytes": 1582440,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "transparent",
+      "sourceImageId": "repository-copy:sha256:b5b2e7f30058c8c02065b5df8dc72f8e182cae0b2a5b6cd721f2fe0f5c62648d"
+    },
+    {
+      "id": "named_character.brother_iven.master.game",
+      "characterId": "brother_iven",
+      "factionId": "exact_word",
+      "regionId": "hollow_abbey",
+      "role": "concept_master",
+      "path": "assets/characters/brother-iven-v1.png",
+      "sha256": "200aeaed5657fe773e5df2e640818381341e5f2e38bcbf331c1c55236ccb90d1",
+      "bytes": 2255663,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "opaque",
+      "sourceImageId": "repository-copy:sha256:200aeaed5657fe773e5df2e640818381341e5f2e38bcbf331c1c55236ccb90d1"
+    },
+    {
+      "id": "named_character.aven_tongueless.master.game",
+      "characterId": "aven_tongueless",
+      "factionId": "exact_word",
+      "regionId": "hollow_abbey",
+      "role": "concept_master",
+      "path": "assets/characters/aven-tongueless-v1.png",
+      "sha256": "f7e49fe8915e54e966da9977f9cafb0dff3e3ad8544764a0d892a26bba508446",
+      "bytes": 2162755,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "opaque",
+      "sourceImageId": "repository-copy:sha256:f7e49fe8915e54e966da9977f9cafb0dff3e3ad8544764a0d892a26bba508446"
+    },
+    {
+      "id": "named_character.teth_varo.master.game",
+      "characterId": "teth_varo",
+      "factionId": "exact_word",
+      "regionId": "cinderward",
+      "role": "concept_master",
+      "path": "assets/characters/teth-varo-v1.png",
+      "sha256": "3e65db08ce81314c6b0091d685e388c8ae64d31c2fe1a81ecde43afdb4b0d16f",
+      "bytes": 1885291,
+      "dimensions": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaPolicy": "opaque",
+      "sourceImageId": "repository-copy:sha256:3e65db08ce81314c6b0091d685e388c8ae64d31c2fe1a81ecde43afdb4b0d16f"
+    },
+    {
+      "id": "named_character.maela_voss.cutout.game_unreviewed",
+      "characterId": "maela_voss",
+      "factionId": "ember_ledger",
+      "regionId": "hearthmere",
+      "role": "alternate_transparent_cutout",
+      "path": "assets/characters/maela-voss-v1-cutout.png",
+      "sha256": "231bb00e2684615e5d5421537a558de9c09c059c9776b9579f6437ca649ca0ff",
+      "bytes": 1681301,
+      "dimensions": {
+        "width": 887,
+        "height": 1774
+      },
+      "alphaPolicy": "transparent",
+      "reviewStatus": "unreviewed",
+      "sourceImageId": "repository-copy:sha256:231bb00e2684615e5d5421537a558de9c09c059c9776b9579f6437ca649ca0ff"
+    },
+    {
+      "id": "named_character.bera_claymother.cutout.game_unreviewed",
+      "characterId": "bera_claymother",
+      "factionId": "ember_ledger",
+      "regionId": "hearthmere",
+      "role": "alternate_transparent_cutout",
+      "path": "assets/characters/bera-claymother-v1-cutout.png",
+      "sha256": "3e73338c451c3a905a2611be6fec55e48dfa97c2d7842928a615cbc34d8dce3f",
+      "bytes": 1795112,
+      "dimensions": {
+        "width": 906,
+        "height": 1736
+      },
+      "alphaPolicy": "transparent",
+      "reviewStatus": "unreviewed",
+      "sourceImageId": "repository-copy:sha256:3e73338c451c3a905a2611be6fec55e48dfa97c2d7842928a615cbc34d8dce3f"
+    }
+  ],
+  "externalSourceIdentifiers": "redacted_for_public_repository"
+}

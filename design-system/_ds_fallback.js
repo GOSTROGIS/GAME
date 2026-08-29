@@ -68,7 +68,13 @@
     "components/narrative/Dialogue.jsx",
     "components/narrative/PortraitStage.jsx",
     "components/narrative/PortraitCaption.jsx",
-    "components/narrative/DeathScreen.jsx"
+    "components/narrative/DeathScreen.jsx",
+    "components/turn/TurnPhaseBar.jsx",
+    "components/turn/ResourcePips.jsx",
+    "components/turn/IntentTelegraph.jsx",
+    "components/turn/IntentQueue.jsx",
+    "components/turn/PartyReadiness.jsx",
+    "components/turn/ResolutionLog.jsx"
   ];
 
   function loaded() {

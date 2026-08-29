@@ -4,6 +4,10 @@ import { Kbd } from "../labels/Kbd.jsx";
 export function InteractionPrompt({ keyLabel = "E", children, style, ...rest }) {
   return (
     <div
+      {...rest}
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
       style={{
         padding: "9px 14px",
         background: "rgba(5,8,9,.9)",
@@ -15,7 +19,6 @@ export function InteractionPrompt({ keyLabel = "E", children, style, ...rest }) 
         gap: 8,
         ...style
       }}
-      {...rest}
     >
       <Kbd style={{ minWidth: 0, padding: "2px 6px" }}>{keyLabel}</Kbd>
       {children}

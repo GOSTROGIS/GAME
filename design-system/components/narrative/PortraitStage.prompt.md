@@ -7,3 +7,7 @@ The creator's portrait alcove.
 ```
 
 Four of eight origins have art. For the rest, omit `image` and say so in the caption.
+
+## Accessibility
+
+Provide useful `alt` when the image conveys identity; use empty alt only when adjacent content fully duplicates it. Missing art remains textually labelled.

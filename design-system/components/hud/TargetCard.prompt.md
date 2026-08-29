@@ -6,3 +6,7 @@ Centred target readout at the top of the HUD.
 ```
 
 Use the encounter role, not a creature family. The flat enemy meter is intentional — don't give it a gradient.
+
+## Accessibility
+
+Expose target name, role, current health, and maximum health as text. Do not announce every minor health animation.

@@ -1,0 +1,32 @@
+29 CFR Part 1926 — Safety and Health Regulations for Construction
+US Occupational Safety and Health Administration
+
+RIGHTS
+  Edicts of government. As a work of the United States Government, this text is
+  not subject to copyright protection in the United States (17 U.S.C. 105).
+  No licence is required to reproduce it, and none has been sought.
+
+PROVENANCE
+  Retrieved 2026-08-28 from the Electronic Code of Federal Regulations:
+  https://www.ecfr.gov/api/versioner/v1/full/2026-08-01/title-29.xml?chapter=XVII&subchapter=R&part=1926
+  Edition: eCFR as amended through 2026-08-01.
+  SHA-256 (uncompressed):
+  57d0fc9eff96b2ce8ba66532d0a7362d96203daa89ca883960ceb169aa4187b5
+
+WHAT IS USED FROM IT
+  1926.501(b)(1)      fall protection threshold
+  1926.502(b)         guardrail geometry
+  1926.651(c)(2)      trench egress
+  1926.651(j)(2)      spoil setback
+  1926.652(a)(1)(i)   stable rock exception
+  1926.652(a)(1)(ii)  the five-foot exception
+  1926.652(b)(1)      allowable slope, Type C configuration
+  1926.1408           Table A, crane clearance to energised power lines
+
+  Appendices A and B to subpart P — the maximum allowable slopes for Type A and
+  Type B soil — are NOT transcribed. engine/mc-clearance.js refuses those soil
+  types by name rather than reporting the Type C figure under their label.
+
+  The eCFR is an unofficial editorial compilation. It is not the official legal
+  edition of the CFR, and nothing here is a substitute for the Federal Register
+  or for the judgement of an authority having jurisdiction.

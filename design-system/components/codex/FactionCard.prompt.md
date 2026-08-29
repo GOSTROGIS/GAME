@@ -7,3 +7,7 @@ A faction entry in the lore codex.
 ```
 
 Faction-state consequences are open production work — don't imply live reputation unless it is wired.
+
+## Accessibility
+
+Use a heading for the faction name and keep relationship notes as readable text; colour cannot imply favour or hostility by itself.

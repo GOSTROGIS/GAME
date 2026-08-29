@@ -8,7 +8,7 @@ export interface SwatchProps {
   selected?: boolean;
   onClick?: () => void;
   /** Accessible name, e.g. "Ash grey". */
-  label?: string;
+  label: string;
   style?: React.CSSProperties;
 }
 

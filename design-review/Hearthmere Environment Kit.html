@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hearthmere Hold — Environment Kit</title>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.184.0/build/three.module.js",
+    "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js",
+    "three/addons/exporters/OBJExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js",
+    "three/addons/exporters/GLTFExporter.js": "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js"
+  },
+  "integrity": {
+    "https://unpkg.com/three@0.184.0/build/three.module.js": "sha384-8FCZ1eVO6it4+pbec2aDtnTrwjWXZLJRC+MAGCIPDgsYnUrl/E0A2YlF8ioMKI/J",
+    "https://unpkg.com/three@0.184.0/build/three.core.js": "sha384-dw2ooPewaEIrAgl6oFDBmmBWCE9oW9LxRGcfwZ0hLvEprzo202wXl7vCYHRlSnOT",
+    "https://unpkg.com/three@0.184.0/examples/jsm/controls/OrbitControls.js": "sha384-4rziNxOBZKQ69i+w+f89KJ55TCYquwchVbByQwmaOeIOXdOU2PLDn3kOfXHwIJC9",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/OBJExporter.js": "sha384-nbwtoZENJD3Vq+ACK0CuGQdPMuDWHkamC2KJD70EV5nfg6jQjfppKOea07YJN+N3",
+    "https://unpkg.com/three@0.184.0/examples/jsm/exporters/GLTFExporter.js": "sha384-VofkvpG6HERhFCYbsUOHeNXBCqID2nfqkQqnVzE1jc/oPcz+qJ13ADdXH08hE+cQ"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* Tokens transcribed from tokens/colors.css and the hearthmere kit palette
+     in src/data/worldAssets.js. No value here is eyeballed. */
+  :root {
+    --ink: #080b0d; --ink-2: #101619; --slate: #1a2427;
+    --bone: #d8d0bd; --bone-bright: #e1dbca; --bone-dim: #b7b6ad; --muted: #8e928b;
+    --gold: #b99552; --gold-bright: #e4c77e;
+    --ember: #bd6135; --blood: #6e2525; --moss: #52665c; --focus: #658e9e;
+    --line: rgba(216,208,189,.18); --line-soft: rgba(216,208,189,.1);
+    --glass: linear-gradient(140deg, rgba(20,27,29,.91), rgba(7,10,12,.88));
+    --selected: linear-gradient(135deg, rgba(185,149,82,.13), rgba(19,27,29,.8));
+    --hm-shadow: #0b1113;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; height: 100%;
+    background: var(--ink); color: var(--bone);
+    font-family: Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+  a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(185,149,82,.35); }
+  a:hover { color: var(--gold-bright); border-bottom-color: var(--gold-bright); }
+
+  /* The two always-on texture layers. */
+  #grain {
+    position: fixed; inset: -50%; z-index: 90; pointer-events: none; opacity: .08;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    animation: grain .28s steps(2, end) infinite;
+  }
+  #vignette { position: fixed; inset: 0; z-index: 89; pointer-events: none; box-shadow: inset 0 0 180px 35px rgba(0,0,0,.85); }
+  @keyframes grain { 0%{transform:translate(0)} 25%{transform:translate(2%,-1%)} 50%{transform:translate(-1%,2%)} 75%{transform:translate(1%,1%)} }
+  @media (prefers-reduced-motion: reduce) { #grain { animation: none; } }
+
+  /* Type roles: Cinzel is the interface, IM Fell is the world, Inter counts. */
+  .eyebrow { margin: 0; color: var(--gold); font: 500 10px/1.3 Cinzel, Georgia, serif; letter-spacing: .28em; text-transform: uppercase; }
+  .micro { margin: 0; color: var(--muted); font: 500 8px/1.3 Cinzel, Georgia, serif; letter-spacing: .18em; text-transform: uppercase; }
+  .voice { color: var(--bone-dim); font: italic 15px/1.55 'IM Fell English', Georgia, serif; }
+  .num { font-family: Inter, system-ui, sans-serif; font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+
+  #shell { position: relative; z-index: 2; display: grid; grid-template-rows: auto minmax(0,1fr); height: 100%; }
+
+  header {
+    display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;
+    padding: 20px 26px 18px; border-bottom: 1px solid var(--line);
+  }
+  header h1 { margin: 8px 0 0; color: var(--bone-bright); font: 500 27px/1 Cinzel, Georgia, serif; letter-spacing: -.02em; }
+  header h1 em { color: var(--gold-bright); font-style: normal; font-weight: 400; }
+  #tally { display: flex; gap: 26px; flex-shrink: 0; }
+  #tally div { text-align: right; }
+  #tally b { display: block; margin-top: 4px; color: var(--bone); font: 400 20px Cinzel, Georgia, serif; }
+  #tally b.flag { color: var(--gold-bright); }
+
+  main { display: grid; grid-template-columns: 298px minmax(0,1fr) 340px; min-height: 0; }
+
+  /* ---- rail ---- */
+  #rail { border-right: 1px solid var(--line); overflow-y: auto; }
+  .group-head { padding: 20px 20px 10px; }
+  .group-head p.micro { color: var(--gold); }
+  .group-head .gn { margin: 7px 0 0; color: var(--muted); font: italic 13px/1.4 'IM Fell English', Georgia, serif; }
+  .item {
+    display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px;
+    width: 100%; padding: 11px 20px; min-height: 46px;
+    background: transparent; border: 0; border-top: 1px solid var(--line-soft);
+    color: inherit; text-align: left; cursor: pointer; font: inherit;
+    transition: background .2s ease, color .2s ease;
+  }
+  .item:hover { background: rgba(31,39,40,.5); }
+  .item:hover .nm { color: var(--gold-bright); }
+  .item[aria-selected="true"] { background: var(--selected); box-shadow: inset 3px 0 var(--gold); }
+  .item[aria-selected="true"] .nm { color: var(--gold-bright); }
+  .item .nm { display: block; color: var(--bone); font: 400 14px Cinzel, Georgia, serif; }
+  .item .sub { display: block; margin-top: 3px; color: var(--muted); font: 400 9px Inter, system-ui, sans-serif; letter-spacing: .09em; text-transform: uppercase; }
+  .item .tri { color: var(--bone-dim); font: 500 11px Inter, system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+  .item .tri.over { color: var(--ember); }
+  .item[data-proposed="1"] .nm::after {
+    content: 'proposed'; margin-left: 8px; padding: 2px 5px; vertical-align: 2px;
+    color: var(--gold); background: rgba(185,149,82,.12); border: 1px solid rgba(185,149,82,.34);
+    font: 500 7px Cinzel, Georgia, serif; letter-spacing: .14em; text-transform: uppercase;
+  }
+  .item:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: -3px; }
+
+  /* ---- stage ---- */
+  #viewer { position: relative; display: grid; grid-template-rows: auto minmax(0,1fr); min-width: 0; background: var(--hm-shadow); }
+  #viewbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; row-gap: 8px; flex-wrap: wrap; padding: 10px 16px; border-bottom: 1px solid var(--line); background: rgba(7,10,12,.6); }
+  #viewbar .who { display: flex; align-items: baseline; gap: 12px; min-width: 0; flex: 1 1 220px; }
+  #viewbar .who h2 { margin: 0; color: var(--bone-bright); font: 400 17px Cinzel, Georgia, serif; white-space: nowrap; }
+  #viewbar .who code { color: var(--gold); font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .seg { display: flex; gap: 0; flex-shrink: 0; }
+  .seg button {
+    appearance: none; padding: 7px 9px; min-height: 32px;
+    background: rgba(5,8,9,.55); border: 1px solid var(--line); border-right-width: 0;
+    color: var(--muted); font: 500 8.5px Cinzel, Georgia, serif; letter-spacing: .13em; text-transform: uppercase;
+    white-space: nowrap; cursor: pointer; transition: color .2s ease, border-color .2s ease;
+  }
+  .seg button:last-child { border-right-width: 1px; }
+  .seg button:hover { color: var(--gold-bright); }
+  .seg button[aria-pressed="true"] { color: var(--gold-bright); background: rgba(185,149,82,.13); border-color: var(--gold); }
+  .seg button:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+  three-d-stage { display: block; width: 100%; height: 100%; min-height: 0; }
+
+  /* ---- spec ---- */
+  #spec { border-left: 1px solid var(--line); overflow-y: auto; padding: 20px; }
+  .card { padding: 15px 16px; margin-bottom: 8px; background: var(--glass); border: 1px solid var(--line); }
+  .card.amend { background: linear-gradient(135deg, rgba(189,97,53,.12), rgba(8,12,14,.86)); border-color: rgba(189,97,53,.45); }
+  .card.why { background: linear-gradient(135deg, rgba(185,149,82,.1), rgba(8,12,14,.86)); border-color: rgba(185,149,82,.38); }
+  .card p { margin: 9px 0 0; }
+  .card p.body { color: var(--bone-dim); font: 15px/1.55 'IM Fell English', Georgia, serif; }
+  .card p.sys { color: #a7aaa4; font: 12.5px/1.6 Inter, system-ui, sans-serif; }
+  table { width: 100%; border-collapse: collapse; }
+  table th { padding: 0 0 8px; color: var(--muted); font: 500 8px Cinzel, Georgia, serif; letter-spacing: .16em; text-transform: uppercase; text-align: right; }
+  table th:first-child { text-align: left; }
+  table td { padding: 6px 0; border-top: 1px solid var(--line-soft); font: 400 12px Inter, system-ui, sans-serif; font-variant-numeric: tabular-nums; text-align: right; color: var(--bone-dim); }
+  table td:first-child { color: var(--muted); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; text-align: left; }
+  td.ok { color: var(--moss); } td.over { color: var(--ember); } td.dec { color: var(--bone); }
+  .pill { display: inline-block; padding: 3px 7px; font: 500 8px Cinzel, Georgia, serif; letter-spacing: .14em; text-transform: uppercase; border: 1px solid; }
+  .pill.ok { color: #7f9b8c; background: rgba(82,102,92,.14); border-color: rgba(82,102,92,.5); }
+  .pill.warn { color: #d4855f; background: rgba(189,97,53,.14); border-color: rgba(189,97,53,.45); }
+  .pill.gold { color: var(--gold-bright); background: rgba(185,149,82,.12); border-color: rgba(185,149,82,.4); }
+  .matrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .sw { display: flex; align-items: center; gap: 6px; padding: 4px 7px 4px 4px; background: rgba(0,0,0,.3); border: 1px solid var(--line-soft); }
+  .sw i { width: 12px; height: 12px; display: block; }
+  .sw span { color: var(--bone-dim); font: 400 9px Inter, system-ui, sans-serif; letter-spacing: .05em; }
+
+  @media (max-width: 1180px) {
+    main { grid-template-columns: 250px minmax(0,1fr); }
+    #spec { display: none; }
+  }
+</style>
+</head>
+<body>
+<div id="grain"></div>
+<div id="vignette"></div>
+
+<div id="shell">
+  <header>
+    <div>
+      <p class="eyebrow">Sable Reach &middot; Hearthmere Hold &middot; Pass one</p>
+      <h1>Thirty-seven assets, <em>built</em></h1>
+    </div>
+    <div id="tally">
+      <div><p class="micro">Manifest rows</p><b class="num">34</b></div>
+      <div><p class="micro">Proposed</p><b class="num flag">3</b></div>
+      <div><p class="micro">Amendments</p><b class="num flag">9</b></div>
+      <div><p class="micro">Triangles, LOD0</p><b class="num" id="totalTris">&mdash;</b></div>
+    </div>
+  </header>
+
+  <main>
+    <nav id="rail" aria-label="Asset list"></nav>
+
+    <section id="viewer">
+      <div id="viewbar">
+        <div class="who"><h2 id="vName">&mdash;</h2><code id="vId"></code></div>
+        <div style="display:flex;gap:9px;flex-shrink:0">
+          <div class="seg" role="group" aria-label="Level of detail">
+            <button id="lod0" aria-pressed="true">LOD 0</button>
+            <button id="lod1" aria-pressed="false">LOD 1</button>
+            <button id="lod2" aria-pressed="false">LOD 2</button>
+          </div>
+          <div class="seg" role="group" aria-label="Texturing">
+            <button id="texOn" aria-pressed="true">Textured</button>
+            <button id="texOff" aria-pressed="false">Flat</button>
+          </div>
+          <div class="seg" role="group" aria-label="Lighting">
+            <button id="lightRegion" aria-pressed="true">Region</button>
+            <button id="lightStudio" aria-pressed="false">Studio</button>
+          </div>
+        </div>
+      </div>
+      <three-d-stage id="stage" name="hearthmere-asset" light="region"></three-d-stage>
+    </section>
+
+    <aside id="spec" aria-label="Asset specification"></aside>
+  </main>
+</div>
+
+<script src="./three-d-stage.js"></script>
+<script type="module">
+  import { measure, setLod, applyTextures } from './kit/hm-core.js';
+  import { CATALOG, GROUPS } from './kit/hm-catalog.js';
+
+  const stage = document.getElementById('stage');
+  const rail = document.getElementById('rail');
+  const spec = document.getElementById('spec');
+  await stage.ready;
+
+  applyTextures(true);
+
+  /* Levels of detail are REBUILT at lower parameters, not decimated off the
+     finished mesh — so every number the panel shows is a measurement. Cached
+     because the structures are expensive to build. */
+  const cache = new Map();
+  function at(a, lod) {
+    const key = a.id + '|' + lod;
+    if (!cache.has(key)) {
+      setLod(lod);
+      let object;
+      try { object = a.build(); } finally { setLod(0); }
+      cache.set(key, { object, m: measure(object) });
+    }
+    return cache.get(key);
+  }
+
+  let LOD = 0;
+  let current = null;
+
+  const base = CATALOG.map((a) => ({ ...a, m: at(a, 0).m }));
+  document.getElementById('totalTris').textContent =
+    base.reduce((n, a) => n + a.m.tris, 0).toLocaleString();
+
+  const budget = (a) => a.declared || a.proposed;
+  const isMaterial = (a) => budget(a).lod[0] === 0;
+  const fmt = (n) => n.toLocaleString();
+  const dim = (v) => v.map((x) => x.toFixed(2)).join(' \u00d7 ');
+
+  /* ---- rail ---- */
+  GROUPS.forEach((g) => {
+    const rows = base.filter((a) => a.group === g.key);
+    const head = document.createElement('div');
+    head.className = 'group-head';
+    head.innerHTML =
+      '<p class="micro">' + g.label + ' &middot; ' + rows.length + '</p>' +
+      '<p class="gn">' + g.note + '</p>';
+    rail.append(head);
+
+    rows.forEach((a) => {
+      const b = document.createElement('button');
+      b.className = 'item';
+      b.type = 'button';
+      b.dataset.id = a.id;
+      if (!a.manifest) b.dataset.proposed = '1';
+      b.setAttribute('aria-selected', 'false');
+      b.innerHTML =
+        '<span><span class="nm">' + a.name + '</span>' +
+        '<span class="sub">' + a.budgetClass + ' &middot; ' + a.m.meshes + ' meshes &middot; ' + a.m.materials + ' mat</span></span>' +
+        '<span class="tri">' + (isMaterial(a) ? 'material' : fmt(a.m.tris)) + '</span>';
+      b.addEventListener('click', () => select(a.id));
+      rail.append(b);
+    });
+  });
+
+  const foot = document.createElement('div');
+  foot.className = 'group-head';
+  foot.style.cssText = 'border-top:1px solid var(--line);margin-top:14px;padding-bottom:28px';
+  foot.innerHTML =
+    '<p class="micro" style="color:#d4855f">Prototype geometry &middot; not production</p>' +
+    '<p class="gn">No sockets, morphs or clips. No collision. Textures survive the GLB export but not OBJ, which carries per-material colour only. Four regions still have no asset manifest at all.</p>' +
+    '<p class="gn" style="margin-top:10px;color:var(--muted)">Insertion steps and the amendments: <code style="color:var(--gold);font:11px ui-monospace,Menlo,monospace">INSTALL-IN-REPO-hearthmere-3d.md</code>. Scatter and motion: <a href="./Hearthmere Living World.html">Hearthmere Living World</a>.</p>';
+  rail.append(foot);
+
+  /* ---- spec panel ---- */
+  function renderSpec(a) {
+    const bd = budget(a);
+    const label = a.declared ? 'Declared' : 'Proposed';
+    const lods = [0, 1, 2].map((l) => at(a, l).m);
+    const m = lods[LOD];
+    const slotVerdict = m.materials > bd.slots ? 'warn' : 'ok';
+    const triVerdict = !isMaterial(a) && m.tris > bd.lod[LOD] ? 'warn' : 'ok';
+    const src = a.manifest
+      ? 'packages/content/manifests/hearthmere.assets.json'
+      : 'proposed \u2014 no manifest row';
+
+    let html = '';
+
+    if (isMaterial(a)) {
+      html += '<div class="card"><p class="micro">' + label + ' in manifest</p>' +
+        '<table><tbody>' +
+        '<tr><td>Class</td><td>material \u2014 lodTriangles [0, 0, 0]</td></tr>' +
+        '<tr><td>Parameters</td><td style="font-size:11px">' + bd.params + '</td></tr>' +
+        '</tbody></table></div>';
+    } else {
+      html += '<div class="card"><p class="micro">Measured against the ' + label.toLowerCase() + ' LOD chain</p>' +
+        '<table><thead><tr><th>Level</th><th>Built</th><th>' + label + '</th></tr></thead><tbody>' +
+        [0, 1, 2].map((l) => {
+          const v = lods[l].tris > bd.lod[l] ? 'over' : 'ok';
+          return '<tr><td>LOD ' + l + (l === LOD ? ' \u00b7 shown' : '') + '</td><td class="' + v + '">' + fmt(lods[l].tris) + '</td><td class="dec">' + fmt(bd.lod[l]) + '</td></tr>';
+        }).join('') +
+        '<tr><td>Material slots</td><td class="' + slotVerdict + '">' + m.materials + '</td><td class="dec">' + bd.slots + '</td></tr>' +
+        '<tr><td>Meshes</td><td>' + m.meshes + '</td><td class="dec">&mdash;</td></tr>' +
+        '<tr><td>Bounds, metres</td><td>' + dim(m.size) + '</td><td class="dec">' + (bd.size ? dim(bd.size) : '\u2014') + '</td></tr>' +
+        '</tbody></table>' +
+        '<p style="margin:12px 0 0"><span class="pill ' + triVerdict + '">' + (triVerdict === 'ok' ? 'within budget at LOD ' + LOD : 'over budget at LOD ' + LOD) + '</span></p>' +
+        '</div>';
+    }
+
+    if (a.amendment) {
+      html += '<div class="card amend"><p class="micro" style="color:#d4855f">Manifest amendment</p><p class="sys">' + a.amendment + '</p></div>';
+    }
+    if (a.why) {
+      html += '<div class="card why"><p class="micro" style="color:var(--gold-bright)">Why this asset exists</p><p class="sys">' + a.why + '</p></div>';
+    }
+
+    html += '<div class="card"><p class="micro">World voice</p><p class="body">' + a.fiction + '</p></div>';
+    html += '<div class="card"><p class="micro">Construction</p><p class="sys">' + a.spec + '</p></div>';
+
+    const used = new Map();
+    at(a, LOD).object.traverse((o) => { if (o.isMesh) used.set(o.material.name, '#' + o.material.color.getHexString()); });
+    html += '<div class="card"><p class="micro">Slots used</p><div class="matrow">' +
+      [...used].map((e) => '<span class="sw"><i style="background:' + e[1] + '"></i><span>' + e[0] + '</span></span>').join('') +
+      '</div></div>';
+
+    html += '<div class="card"><p class="micro">Record</p>' +
+      '<table><tbody>' +
+      '<tr><td>Generator</td><td>' + a.generator + '</td></tr>' +
+      '<tr><td>Budget class</td><td>' + a.budgetClass + '</td></tr>' +
+      '<tr><td>Pipeline status</td><td><span class="pill gold">prototype geometry</span></td></tr>' +
+      '</tbody></table>' +
+      '<p class="sys" style="color:var(--muted);font-size:11px">Source: <code style="color:var(--gold);font:11px ui-monospace,Menlo,monospace">' + src + '</code>. Original procedural geometry, delivered the way the repo already delivers it (<code style="color:var(--gold);font:11px ui-monospace,Menlo,monospace">runtime-procedural-threejs</code>).</p>' +
+      '</div>';
+
+    spec.innerHTML = html;
+    spec.scrollTop = 0;
+  }
+
+  function select(id) {
+    const a = base.find((x) => x.id === id);
+    if (!a) return;
+    current = a;
+    rail.querySelectorAll('.item').forEach((el) =>
+      el.setAttribute('aria-selected', String(el.dataset.id === id)));
+    document.getElementById('vName').textContent = a.name;
+    document.getElementById('vId').textContent = a.id;
+    stage.setAttribute('name', a.slug + (LOD ? '-lod' + LOD : ''));
+    stage.setObject(at(a, LOD).object);
+    renderSpec(a);
+  }
+
+  /* ---- controls ---- */
+  const lodBtns = [0, 1, 2].map((i) => document.getElementById('lod' + i));
+  lodBtns.forEach((b, i) => b.addEventListener('click', () => {
+    LOD = i;
+    lodBtns.forEach((x, j) => x.setAttribute('aria-pressed', String(i === j)));
+    if (current) select(current.id);
+  }));
+
+  const tOn = document.getElementById('texOn');
+  const tOff = document.getElementById('texOff');
+  const setTex = (on) => {
+    applyTextures(on);
+    tOn.setAttribute('aria-pressed', String(on));
+    tOff.setAttribute('aria-pressed', String(!on));
+  };
+  tOn.addEventListener('click', () => setTex(true));
+  tOff.addEventListener('click', () => setTex(false));
+
+  const bR = document.getElementById('lightRegion');
+  const bS = document.getElementById('lightStudio');
+  const setLight = (mode) => {
+    stage.setLightMode(mode);
+    bR.setAttribute('aria-pressed', String(mode === 'region'));
+    bS.setAttribute('aria-pressed', String(mode !== 'region'));
+    document.getElementById('viewer').style.background = mode === 'region' ? '#0b1113' : '#171f21';
+  };
+  bR.addEventListener('click', () => setLight('region'));
+  bS.addEventListener('click', () => setLight('studio'));
+  setLight('region');
+
+  select('hm.structure.bell-tower-timber');
+</script>
+</body>
+</html>
