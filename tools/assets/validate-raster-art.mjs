@@ -221,6 +221,7 @@ async function changedRasterPaths(rootDir, baseRef) {
     "--",
     "assets/characters",
     "assets/bestiary",
+    "assets/world",
   ], { cwd: rootDir, windowsHide: true });
   return stdout.split(/\r?\n/).map((item) => item.trim().replaceAll("\\", "/")).filter((item) => item.endsWith(".png"));
 }
@@ -245,6 +246,7 @@ async function loadProvenance(rootDir, errors) {
   const files = (await Promise.all([
     walkFiles(path.join(rootDir, "assets/characters")),
     walkFiles(path.join(rootDir, "assets/bestiary")),
+    walkFiles(path.join(rootDir, "assets/world")),
   ])).flat().filter((item) => item.endsWith(".provenance.json"));
   const byPath = new Map();
   for (const file of files) {

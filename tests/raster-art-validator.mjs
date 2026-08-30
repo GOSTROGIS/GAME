@@ -83,6 +83,7 @@ function indexedPng(width, height, indexAt) {
 const root = await mkdtemp(path.join(os.tmpdir(), "sable-raster-test-"));
 await mkdir(path.join(root, "assets/characters"), { recursive: true });
 await mkdir(path.join(root, "assets/bestiary"), { recursive: true });
+await mkdir(path.join(root, "assets/world"), { recursive: true });
 
 const master = png(16, 24, 2, () => [35, 29, 25]);
 const cutout = png(16, 24, 6, (x, y) => {
@@ -116,8 +117,10 @@ assert.equal(indexedInspection.cornerAlpha.every((alpha) => alpha === 0), true);
 
 const masterPath = "assets/characters/test-origin-v2.png";
 const cutoutPath = "assets/characters/test-origin-v2-cutout.png";
+const worldPath = "assets/world/test-environment.png";
 await writeFile(path.join(root, masterPath), master);
 await writeFile(path.join(root, cutoutPath), cutout);
+await writeFile(path.join(root, worldPath), master);
 await writeFile(path.join(root, "assets/art-index.json"), JSON.stringify({
   schema: "SableReachArtIndexV1",
   playableOrigins: [{ id: "test_origin", conceptMaster: masterPath, transparentCutout: cutoutPath }],
@@ -140,6 +143,10 @@ await writeFile(path.join(root, "assets/characters/test.provenance.json"), JSON.
   rightsDeclaration: "test fixture only",
   records: [entry(masterPath, "concept_master", master, "opaque"), entry(cutoutPath, "transparent_cutout", cutout, "transparent")],
 }));
+await writeFile(path.join(root, "assets/world/test.provenance.json"), JSON.stringify({
+  rightsDeclaration: "test fixture only",
+  records: [entry(worldPath, "environment_keyframe", master, "opaque")],
+}));
 
 const accepted = await validateRasterArt({ rootDir: root, minShortSide: 1, maxLongSide: 64, maxBytes: 100000 });
 assert.equal(accepted.valid, true, JSON.stringify(accepted.errors));
@@ -149,6 +156,9 @@ assert.equal(metadataOnly.summary.inspectedFiles, 0);
 const changedOnly = await validateRasterArt({ rootDir: root, minShortSide: 1, maxLongSide: 64, maxBytes: 100000, strictProvenance: true, changedPaths: [cutoutPath] });
 assert.equal(changedOnly.valid, true, JSON.stringify(changedOnly.errors));
 assert.equal(changedOnly.summary.inspectedFiles, 1);
+const changedWorld = await validateRasterArt({ rootDir: root, minShortSide: 1, maxLongSide: 64, maxBytes: 100000, strictProvenance: true, changedPaths: [worldPath] });
+assert.equal(changedWorld.valid, true, JSON.stringify(changedWorld.errors));
+assert.equal(changedWorld.summary.inspectedFiles, 1);
 
 const provenancePath = path.join(root, "assets/characters/test.provenance.json");
 const privateProvenance = JSON.parse(await readFile(provenancePath, "utf8"));
@@ -167,4 +177,4 @@ const rejected = await validateRasterArt({ rootDir: root, minShortSide: 1, maxLo
 assert.equal(rejected.valid, false);
 assert.equal(rejected.errors.some(({ code }) => code === "invalid_png"), true);
 
-console.log("raster-art-validator: payload, metadata-only, changed-path, privacy, and PNG metadata gates pass");
+console.log("raster-art-validator: character, bestiary, world, metadata-only, changed-path, privacy, and PNG metadata gates pass");

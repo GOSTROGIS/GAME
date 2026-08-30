@@ -46,21 +46,22 @@ missing authority produces a stated refusal, never a plausible invention.
 
 ---
 
-## Known Drive anchors
+## Private recovery anchors (redacted)
 
-Stable ids, verified 2026-08-26. Resolve everything else by listing rather
-than trusting a hardcoded table.
+External storage locators are deliberately omitted from the published repository.
+Resolve them only inside the private recovery quarantine, then publish repository-
+relative paths and content hashes rather than copying locators into source control.
 
 ```
-working root            1DQnahPT5zXLEaWPW07F6Ffx4I_48SxA6
-unsynced images         1LrZfJKQ0kQjxKJIYFJB4r3hwUhJRwSRU
+working root            [private locator omitted]
+unsynced images         [private locator omitted]
   └─ sable-reach-unsynced-images-2026-08-26
-prompts/                1LwNbBt3bEGiY6tSOgAL6GgAqqi2qmQxU
-  ├─ family-plates-batch-01.md            1xCRXop9F0ZeR120x42x179e_2UTv1_xi
-  └─ family-plates-batch-01-recovery.md   12ZDiXdCl2rKd73Sdl60btNAauQ6TMbXy
+prompts/                [private locator omitted]
+  ├─ family-plates-batch-01.md            [private locator omitted]
+  └─ family-plates-batch-01-recovery.md   [private locator omitted]
 ```
 
-**The file-id → subject mapping already exists** in
+**The recovered-file → subject mapping already exists** in
 `kit/hm-concept-art.js` (`CONCEPT_ART`): 18 named characters and 24 enemy
 forms, each with `master`, `cutout`, `file` and `set`. Read it rather than
 re-deriving the mapping from folder listings — and if a listing disagrees with
@@ -94,21 +95,21 @@ it, that disagreement is the finding.
 > 4. Write a sidecar `assets/characters/<file>.provenance.json` per file:
 >    ```json
 >    {
->      "subject": "npc.gatewarden-nhal",
->      "driveId": "1aJxNT6x0yYufy-CxkkCiMQUoSnE4DyhF",
->      "driveFolder": "<resolved folder name>",
->      "kind": "cutout",
+>      "subjectId": "npc.gatewarden-nhal",
+>      "path": "assets/characters/nhal-without-shadow-v1-cutout.png",
+>      "role": "transparent_cutout",
 >      "sha256": "<hash of the bytes written>",
 >      "bytes": 0,
->      "pixels": [0, 0],
->      "downloadedAt": "<ISO 8601, real clock>",
->      "graded": false,
->      "promptCall": null,
->      "promptFile": null
+>      "dimensions": { "width": 0, "height": 0 },
+>      "colorSpace": "sRGB",
+>      "alphaPolicy": "transparent",
+>      "promptAvailability": "Private recovery direction omitted",
+>      "rightsDeclaration": "Owner-authorized original project art",
+>      "maturity": { "runtimeIntegrated": false, "productionAsset": false }
 >    }
 >    ```
->    `promptCall` and `promptFile` stay `null` until Prompt 03 supplies them.
->    A null there is an honest gap; a guess is a law violation.
+>    A missing prompt hash stays explicitly unavailable until Prompt 03 supplies
+>    content-addressed evidence. A gap is honest; a guess is a law violation.
 > 5. Update `kit/hm-concept-art.js`: add `local: 'assets/characters/<file>.png'`
 >    to each vendored entry. `artFor()` already prefers `local` and reports
 >    `vendored: true`, so the surface switches over with no further change.
@@ -117,9 +118,9 @@ it, that disagreement is the finding.
 > - `ls assets/characters/*.png` returns the 4 existing plates plus 18 new.
 > - Every new PNG has a sidecar, and every sidecar's `sha256` matches its file.
 > - Loading `Hollow March Art Bible.dc.html` **offline** shows all 18 plates.
-> - No file in `assets/` has been re-encoded: byte size matches Drive's.
+> - No file in `assets/` has been re-encoded: byte size matches the private recovery source.
 >
-> **Refuse and report if.** A Drive id 404s; two entries resolve to the same
+> **Refuse and report if.** A private recovery object is unavailable; two entries resolve to the same
 > filename; a downloaded file is not a PNG; or `CONCEPT_ART` names a subject
 > that does not exist in `kit/hm-actor-cast.js`.
 
@@ -128,7 +129,7 @@ it, that disagreement is the finding.
 ## Prompt 02 — Read and reconcile the recovery file
 
 > **Goal.** `prompts/family-plates-batch-01-recovery.md`
-> (`12ZDiXdCl2rKd73Sdl60btNAauQ6TMbXy`, 6.8 KB) has **never been read** by the
+> (private locator omitted, 6.8 KB) has **never been read** by the
 > design process. `kit/hm-art-law.js` → `LAW_SOURCE.recovery.read` is `false`.
 > Read it and reconcile.
 >
@@ -152,7 +153,7 @@ it, that disagreement is the finding.
 
 ## Prompt 03 — Build the provenance manifest
 
-> **Goal.** One machine-readable record tying every image in Drive to the
+> **Goal.** One machine-readable record tying every recovered image to the
 > prompt that produced it. `family-plates-batch-01.md` says reference lineage
 > "is recorded separately in the provenance manifest" — that manifest is not
 > in the `prompts/` folder. Either locate it or create it.
@@ -163,34 +164,32 @@ it, that disagreement is the finding.
 > 2. Otherwise create `prompts/provenance.json`:
 >    ```json
 >    {
->      "version": 1,
->      "updatedAt": "<ISO 8601>",
+>      "schema": "SableReachPublishedArtProvenanceV1",
+>      "rightsDeclaration": "Owner-authorized original project art",
 >      "entries": [
 >        {
->          "driveId": "...",
->          "filename": "ash-husk-v1.png",
->          "folder": "ashbound-individual-concept-masters-2026-08-26",
->          "subject": "enemy.ash-husk",
->          "family": "ashbound",
->          "promptFile": "prompts/family-plates-batch-01.md",
->          "promptCall": null,
->          "generator": "chatgpt",
->          "status": "approved",
->          "supersedes": null,
->          "graded": false
+>          "path": "assets/bestiary/forms/ashbound/ash-husk-v1.png",
+>          "subjectId": "enemy.ash-husk",
+>          "familyId": "ashbound",
+>          "sha256": "<content hash>",
+>          "bytes": 0,
+>          "dimensions": { "width": 0, "height": 0 },
+>          "promptSha256": "<prompt hash or omitted when unavailable>",
+>          "generation": { "tool": { "name": "built-in image generation" }, "mode": "recovery" },
+>          "maturity": { "conceptMaster": true, "runtimeIntegrated": false, "productionAsset": false }
 >        }
 >      ]
 >    }
 >    ```
 > 3. External generation identifiers stay redacted in published files. Keep
->    `promptCall` null and use the repository-local prompt file plus content
->    hash for traceability; family inheritance is explicit, not inferred.
+>    private locators outside Git and use repository paths, prompt hashes, and
+>    content hashes for traceability; family inheritance is explicit, not inferred.
 > 4. `status` ∈ `approved` | `rejected` | `superseded` | `unreviewed`.
 >    Default to `unreviewed`. Never assume `approved`.
 >
 > **Acceptance.** Every image file under the unsynced-images tree has exactly
-> one entry. Counts by folder match a fresh listing. No `promptCall` exists
-> that is absent from a prompt file.
+> one entry. Counts by private recovery group match a fresh listing. No prompt
+> hash exists that is absent from a prompt record.
 >
 > **Refuse and report if.** An image cannot be attributed to any family — an
 > orphan image is a finding, not a row to invent.
@@ -203,7 +202,7 @@ it, that disagreement is the finding.
 > covers bestiary families only. Create the file that will hold their prompts.
 >
 > **This prompt does not author prompt text.** Claude design writes the prompt
-> strings; ChatGPT generates from them; you create the container and enforce
+> strings; the approved image-generation workflow renders them; you create the container and enforce
 > its form.
 >
 > **Steps.**
@@ -218,7 +217,7 @@ it, that disagreement is the finding.
 >    ```
 >    ## <Name>
 >
->    Generation call: `TBD`
+>    Prompt hash: `TBD`
 >
 >    ```text
 >    PENDING — awaiting prompt from design authority.
@@ -319,7 +318,7 @@ Stop and report rather than proceed:
 - Writing or editing any prompt string, or filling a `PENDING` block from prose
 - Applying `--grade-character`, or any grade, to a stored file
 - Overwriting or deleting an approved master
-- Inventing a `promptCall`, or attributing an image to a family on resemblance
+- Inventing a prompt hash, or attributing an image to a family on resemblance
 - Renaming without updating `kit/hm-concept-art.js` in the same change
 - Recording `approved` status that no prompt file or reviewer states
 - Marking `recovery.read = true` without having read it

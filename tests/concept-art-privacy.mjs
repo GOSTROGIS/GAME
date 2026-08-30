@@ -8,11 +8,18 @@ import { validateConceptArtPrivacy } from "../tools/assets/validate-concept-art-
 const root = await mkdtemp(path.join(os.tmpdir(), "concept-art-privacy-"));
 await mkdir(path.join(root, "assets/characters"), { recursive: true });
 await mkdir(path.join(root, "assets/bestiary"), { recursive: true });
+await mkdir(path.join(root, "assets/world"), { recursive: true });
 await mkdir(path.join(root, "design-review"), { recursive: true });
 await writeFile(path.join(root, "assets/characters/clean.provenance.json"), JSON.stringify({ sha256: "a".repeat(64), path: "assets/characters/clean.png" }));
 
 const clean = await validateConceptArtPrivacy({ rootDir: root });
 assert.equal(clean.valid, true, JSON.stringify(clean.errors));
+
+await writeFile(path.join(root, "assets/world/private.json"), JSON.stringify({ sessionId: "private" }));
+const worldLeak = await validateConceptArtPrivacy({ rootDir: root });
+assert.equal(worldLeak.valid, false);
+assert.equal(worldLeak.errors.some(({ code, path: filePath }) => code === "private_identifier_key" && filePath === "assets/world/private.json"), true);
+await rm(path.join(root, "assets/world/private.json"));
 
 await writeFile(path.join(root, "design-review/leak.js"), "export const source = 'call_abcdefghijklmnop';\n");
 const leaked = await validateConceptArtPrivacy({ rootDir: root });

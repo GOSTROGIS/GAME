@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 const TEXT_FILE = /\.(?:cjs|html|js|json|jsx|md|mjs|ts|tsx|txt|ya?ml)$/i;
 const RULES = [
   ["provider_execution_id", /\b(?:call_[a-z0-9]{12,}|exec-[0-9a-f-]{20,})(?:\.[a-z0-9]+)?\b/gi],
-  ["private_identifier_key", /\b(?:accountId|callId|driveId|externalId|folderId|providerAccountId|sessionId|signedUrl|sourceImageId|supersedesSourceImageId|supersedesRejectedSource|userName)\b\s*[:=]/gi],
+  ["private_identifier_key", /\b(?:accountId|callId|driveId|externalId|folderId|providerAccountId|sessionId|signedUrl|sourceImageId|supersedesSourceImageId|supersedesRejectedSource|userName)\b["']?\s*[:=]/gi],
   ["drive_url", /https?:\/\/(?:(?:drive|docs)\.google\.com|[\w.-]*googleusercontent\.com)\/[\w?&=./%-]+/gi],
   ["signed_url", /[?&](?:x-amz-[\w-]+|x-goog-[\w-]+|credential|expires|key|sig|signature|token)=[^\s"'<>]+/gi],
   ["email_address", /\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b/gi],
@@ -33,6 +33,7 @@ export async function validateConceptArtPrivacy({ rootDir } = {}) {
   const roots = [
     path.join(workspace, "assets", "characters"),
     path.join(workspace, "assets", "bestiary"),
+    path.join(workspace, "assets", "world"),
     path.join(workspace, "design-review"),
   ];
   const errors = [];

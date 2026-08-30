@@ -131,12 +131,24 @@ for (const source of WORLD_SPATIAL_SOURCE_LEDGER) {
 }
 
 const visualReferences = ENVIRONMENT_ART_DIRECTION.acceptedVisualReferences;
-assert.equal(visualReferences.length, 4);
+assert.equal(visualReferences.length, 6);
 for (const reference of visualReferences) {
   const bytes = readFileSync(`${repositoryRoot}${reference.path}`);
   assert.equal(createHash('sha256').update(bytes).digest('hex'), reference.sha256, `${reference.id} hash changed`);
   assert.equal(reference.status, 'approved_direction');
 }
+const gravenReference = visualReferences.find(({ id }) => id === 'concept_graven_march_black_pine_occlusion_basin');
+const cathedralReference = visualReferences.find(({ id }) => id === 'concept_cathedral_six_rehearsed_dawns');
+assert.equal(gravenReference?.referenceScope, 'regional_quest_location');
+assert.equal(gravenReference?.locationId, 'graven_march_black_pine_occlusion_basin');
+assert.equal(gravenReference?.exactCoordinate, null);
+assert.equal(gravenReference?.runtimeBackdrop, true);
+assert.equal(gravenReference?.productionAsset, false);
+assert.equal(cathedralReference?.referenceScope, 'quest_location');
+assert.equal(cathedralReference?.locationId, 'cathedral_of_six_rehearsed_dawns');
+assert.equal(cathedralReference?.exactCoordinate, null);
+assert.equal(cathedralReference?.runtimeBackdrop, false);
+assert.equal(cathedralReference?.productionAsset, false);
 
 const publishedSurface = JSON.stringify(WORLD_SPATIAL_FOUNDATION);
 assert.doesNotMatch(publishedSurface, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);
