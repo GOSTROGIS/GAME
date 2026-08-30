@@ -634,7 +634,10 @@ export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
     alignmentOptions: ["charnel_night", "league_of_remaining_hands", "lucent_synod"],
     visualBrief: "Sixteen-year-old ancestor wearing domestic objects from three centuries as unresolved inheritance, without royal or child-savior styling.",
     questArcIds: ["aftermath_village_arrives_before_dead"],
-    pipeline: artPipeline("charnel_households"),
+    pipeline: artPipeline("charnel_households", {
+      conceptMaster: "assets/characters/npcs/charnel-households/tima-vale-twice-born-v1.png",
+      artStatus: "accepted",
+    }),
   },
   {
     id: "parn_exit_law",
@@ -650,7 +653,10 @@ export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
     alignmentOptions: ["charnel_night", "league_of_remaining_hands", "lucent_synod"],
     visualBrief: "Young jurist with one small outward-opening rib door and garments fastened entirely by revocable latches.",
     questArcIds: ["aftermath_every_door_mothers_voice"],
-    pipeline: artPipeline("charnel_households"),
+    pipeline: artPipeline("charnel_households", {
+      conceptMaster: "assets/characters/npcs/charnel-households/parn-exit-law-v1.png",
+      artStatus: "accepted",
+    }),
   },
   {
     id: "orra_rain_in_ribs",
@@ -666,7 +672,10 @@ export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
     alignmentOptions: ["charnel_night", "league_of_remaining_hands", "lucent_synod"],
     visualBrief: "Roofer with two translucent forecast lungs and folding eave tools grown from shoulder ribs.",
     questArcIds: ["aftermath_roof_made_of_weather"],
-    pipeline: artPipeline("charnel_households"),
+    pipeline: artPipeline("charnel_households", {
+      conceptMaster: "assets/characters/npcs/charnel-households/orra-rain-in-ribs-v1.png",
+      artStatus: "accepted",
+    }),
   },
   {
     id: "pell_nacreyear_road_witness",
@@ -682,7 +691,10 @@ export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
     alignmentOptions: ["league_of_remaining_hands", "charnel_night", "lucent_synod"],
     visualBrief: "Child-sized elder whose limbs bend into remembered turns; no map, compass, travel pack, or cute adventurer silhouette.",
     questArcIds: ["aftermath_child_older_than_road"],
-    pipeline: artPipeline("remaining_hands"),
+    pipeline: artPipeline("remaining_hands", {
+      conceptMaster: "assets/characters/npcs/remaining-hands/pell-nacreyear-road-witness-v1.png",
+      artStatus: "accepted",
+    }),
   },
   {
     id: "gannet_triune_veto_clerk",
@@ -1474,6 +1486,10 @@ export const EXPANSION_CREATURES = deepFreeze([
     mechanic: { id: "misaddressed_return", cue: "Every nearby latch inhales at once before one backward rib selects the destination resident.", counterplay: "Revoke the destination door before inviting the creature across the origin threshold, forcing it to return through its own passage." },
     narrativeUse: "Can prove that a sanctuary exit is operational while violating a different resident's bodily consent in the same act.",
     visualBrief: "Small unsettling hinge-and-backward-rib organism with one empty passage, explicitly non-ovine and woolless; no cute lamb face, pasture, gore, or extra creature.",
+    pipeline: artPipeline("charnel_households", {
+      conceptMaster: "assets/bestiary/forms/charnel-households/threshold-lamb-v1.png",
+      artStatus: "accepted",
+    }),
   }),
   creature({
     id: "eave_lung", name: "Eave Lung", familyId: "charnel_weather", factionAffinityIds: ["charnel_night", "league_of_remaining_hands"], rank: "elite", combatRole: "artillery",
@@ -1484,6 +1500,10 @@ export const EXPANSION_CREATURES = deepFreeze([
     mechanic: { id: "accountable_rain_current", cue: "Rafters breathe before clouds change direction and the single leak-valve turns away from an unnamed drought.", counterplay: "Give the lung a named leak with an accountable recipient, allowing pressure to leave without transferring the whole storm." },
     narrativeUse: "Makes weather debt a negotiable being: destroying it returns rain abruptly, while housing it requires an enduring downstream obligation.",
     visualBrief: "One translucent floating lung-roof organ with branching rafter bronchi and a single deliberate leak, uncanny civic anatomy without gore, clouds, village scenery, or second lung.",
+    pipeline: artPipeline("charnel_weather", {
+      conceptMaster: "assets/bestiary/forms/charnel-weather/eave-lung-v1.png",
+      artStatus: "accepted",
+    }),
   }),
   creature({
     id: "veto_gasket_choir", name: "Veto-Gasket Choir", familyId: "dawn_engine_symbionts", factionAffinityIds: ["league_of_remaining_hands", "lucent_synod", "charnel_night"], rank: "miniboss", combatRole: "controller",

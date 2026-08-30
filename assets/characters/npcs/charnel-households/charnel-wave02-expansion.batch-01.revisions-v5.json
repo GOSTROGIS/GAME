@@ -1,0 +1,30 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-wave02-concept-masters-batch-01",
+  "revision": 5,
+  "status": "immutable-before-generation",
+  "reason": "Independent reviewers identified three narrow topology defects. Preserve all accepted identity, material, lighting, framing, and canon; correct only the stated anatomy or mechanism.",
+  "assets": [
+    {
+      "id": "parn_exit_law",
+      "sourceCandidate": "candidates/parn-exit-law-concept-master-v4.png",
+      "sourceCandidateStatus": "rejected-by-independent-review",
+      "masterFile": "parn-exit-law-concept-master-v5.png",
+      "editDirection": "Use the supplied Parn v4 image as the edit target. Preserve Parn's exact identity, face, hair, gaze, pose, ordinary two-arm/two-leg anatomy, long black coat, lighting, framing, opaque near-black backdrop, and the COMPLETE small upper-torso mechanism at its existing <=20 percent torso-height scale. Edit only the mechanism topology and visible footwear closures. The mechanism must be exactly one unmistakable miniature outward-opening living rib door: one empty near-black aperture with complete jambs and sill, plus exactly one matching complete rib door leaf visibly hinged along one side and displaced outward toward the viewer, leaving the aperture clearly open. It must not read as a closed symmetric ribcage, brooch, grille, badge, pendant, or ornament. Preserve exactly one door and one aperture; add no second flap or opening. Replace every ordinary strap buckle visible on either shoe with the same revocable latch language used on the coat, so every visible closure is a latch. Preserve every existing coat latch. No new anatomy, props, text, scenery, transparency, or alpha cutout. Opaque concept master only."
+    },
+    {
+      "id": "orra_rain_in_ribs",
+      "sourceCandidate": "candidates/orra-rain-in-ribs-concept-master-v2.png",
+      "sourceCandidateStatus": "rejected-by-independent-review",
+      "masterFile": "orra-rain-in-ribs-concept-master-v3.png",
+      "editDirection": "Use the supplied Orra v2 image as the edit target. Preserve Orra's exact identity, face, hair, gaze, ordinary mortal body with exactly two arms, two hands, two legs and two feet, empty hands, grounded dark clothing, exactly two translucent chest lungs, lighting, framing, and opaque near-black backdrop. Edit only the shoulder-grown tool system. Fold and repose every long pointed appendage tightly backward against and just above the shoulders into two compact, layered, load-bearing eave-and-rafter assemblies that visibly grow from the shoulder ribs. Their silhouette must read as folded structural carpentry tools and short roof overhangs supported by the shoulders—not spider legs, extra arms, claws, wings, feathers, a halo, or a separate building. Remove every free claw-like distal tip and every long lateral limb silhouette. Keep the paired shoulder assemblies visibly mechanical, jointed for folding, attached to the body, and compact enough that Orra's normal arms remain the only arm-like limbs. Do not alter the two lungs or person. No new anatomy, props, text, scenery, transparency, or alpha cutout. Opaque concept master only."
+    },
+    {
+      "id": "pell_nacreyear_road_witness",
+      "sourceCandidate": "candidates/pell-nacreyear-road-witness-concept-master-v2.png",
+      "sourceCandidateStatus": "rejected-by-independent-review",
+      "masterFile": "pell-nacreyear-road-witness-concept-master-v3.png",
+      "editDirection": "Use the supplied Pell v2 image as the edit target. Preserve Pell's exact elderly identity, face, very-short adult proportions, weathered Remaining Hands clothing, empty hands, materials, lighting, framing, and opaque near-black backdrop. Reconstruct only the four limbs into ordinary continuous anatomy with exactly two arms ending in exactly two hands and exactly two legs ending in exactly two feet—no extra limb, extra endpoint, duplicated boot, fused limb, serpentine bone, or added joint. Keep the pose expressive but physically traceable. Make exactly seven deliberate major route turns readable across the four normal limbs: left elbow, right elbow, left wrist, right wrist, left knee, right knee, and exactly one turned ankle on the forward foot. Each turn must occur at its normal anatomical joint; all other joints remain ordinary and unstressed. Both hands stay visibly empty. Do not turn limbs into literal roads and add no travel prop. No text, scenery, transparency, or alpha cutout. Opaque concept master only."
+    }
+  ]
+}

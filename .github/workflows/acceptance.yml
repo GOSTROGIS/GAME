@@ -30,6 +30,9 @@ jobs:
       - name: Fetch repaired historical and changed concept-art LFS payloads
         shell: pwsh
         run: |
+          git lfs fsck --pointers HEAD
+          if ($LASTEXITCODE -ne 0) { throw "Git LFS pointer verification failed" }
+
           git lfs pull --include="assets/3d/runtime/bridge/**,assets/3d/seeds/slipcurve/**,tools/worldgen/generated/source/**" --exclude=""
           if ($LASTEXITCODE -ne 0) { throw "Unable to fetch the repaired historical LFS payloads" }
           $base = $env:RASTER_ART_BASE_SHA
@@ -40,10 +43,36 @@ jobs:
             git lfs pull --include="$asset" --exclude=""
             if ($LASTEXITCODE -ne 0) { throw "Unable to fetch changed LFS payload: $asset" }
           }
-          git lfs fsck
-          if ($LASTEXITCODE -ne 0) { throw "Git LFS object verification failed" }
-          git lfs fsck --pointers HEAD
-          if ($LASTEXITCODE -ne 0) { throw "Git LFS pointer verification failed" }
+
+          $lfsPaths = @(git lfs ls-files --name-only)
+          if ($LASTEXITCODE -ne 0) { throw "Unable to enumerate Git LFS paths" }
+          $historical = @($lfsPaths | Where-Object {
+            $_ -like 'assets/3d/runtime/bridge/*' -or
+            $_ -like 'assets/3d/seeds/slipcurve/*' -or
+            $_ -like 'tools/worldgen/generated/source/*'
+          })
+          $changedLfs = @($changed | Where-Object { $lfsPaths -contains $_ })
+          $required = @($historical + $changedLfs | Sort-Object -Unique)
+
+          foreach ($asset in $required) {
+            $pointer = (git cat-file -p "HEAD:$asset") -join "`n"
+            if ($LASTEXITCODE -ne 0) { throw "Unable to read LFS pointer: $asset" }
+            $oidMatch = [regex]::Match($pointer, '(?m)^oid sha256:([0-9a-f]{64})$')
+            $sizeMatch = [regex]::Match($pointer, '(?m)^size ([0-9]+)$')
+            if (-not $oidMatch.Success -or -not $sizeMatch.Success) {
+              throw "Malformed LFS pointer: $asset"
+            }
+            $payload = Get-Item -LiteralPath $asset -ErrorAction Stop
+            $expectedSize = [int64]$sizeMatch.Groups[1].Value
+            if ($payload.Length -ne $expectedSize) {
+              throw "LFS payload size mismatch: $asset"
+            }
+            $actualOid = (Get-FileHash -LiteralPath $asset -Algorithm SHA256).Hash.ToLowerInvariant()
+            if ($actualOid -ne $oidMatch.Groups[1].Value) {
+              throw "LFS payload hash mismatch: $asset"
+            }
+          }
+          Write-Output "Verified $($required.Count) hydrated LFS payloads against canonical pointers"
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4

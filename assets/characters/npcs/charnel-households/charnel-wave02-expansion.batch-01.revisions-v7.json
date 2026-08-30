@@ -1,0 +1,30 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-wave02-concept-masters-batch-01",
+  "revision": 7,
+  "status": "immutable-before-generation",
+  "reason": "A fresh independent six-asset audit found three unresolved visual ambiguities: Tima's three eras merged, Parn's fixture scale and non-latch placket remained disputable, and Eave Lung read as a wing canopy. Correct only those findings.",
+  "assets": [
+    {
+      "id": "tima_vale_twice_born",
+      "sourceCandidate": "candidates/tima-vale-twice-born-concept-master-v2.png",
+      "sourceCandidateStatus": "rejected-by-independent-review",
+      "masterFile": "tima-vale-twice-born-concept-master-v3.png",
+      "editDirection": "Use the supplied Tima v2 image as the edit target. Preserve Tima's exact fully clothed young identity, face, hair, gaze, dignified non-heroic stance, ordinary two-arm/two-empty-hand/two-leg/two-foot anatomy, lighting, framing, and opaque near-black backdrop. Edit only the inherited clothing system so EXACTLY THREE visually incompatible domestic historical periods are unmistakable and separately traceable from construction alone. Era one, closest to the body: an antique cream handspun household-linen shift with broad hand-gathered seams, irregular visible hand stitching, and simple bone or wooden toggles. Era two, fitted across the middle: a distinctly later russet-and-brown checked wool hearth apron-bodice with woven tape edging, brass hook-and-eye construction, and coarse period repairs. Era three, outermost: a much newer deep-indigo machine-woven chore wrap and blanket-shawl with straight uniform machine seams, stamped plain metal snaps, and rectangular utility mending patches. Keep those three groups spatially distinct; do not blend their seam language, fasteners, weave, or repair method, and add no fourth era. Every piece remains an ordinary intimate household textile or garment in practical use, never regalia, armor, costume, relic, crown, halo, or sacred-child styling. No handheld prop, weapon, text, scenery, mutation, or other person. Opaque concept master only."
+    },
+    {
+      "id": "parn_exit_law",
+      "sourceCandidate": "candidates/parn-exit-law-concept-master-v5.png",
+      "sourceCandidateStatus": "rejected-by-independent-review",
+      "masterFile": "parn-exit-law-concept-master-v6.png",
+      "editDirection": "Use the supplied Parn v5 image as the edit target. Preserve Parn's exact identity, face, hair, gaze, pose, ordinary two-arm/two-leg anatomy, empty hands, long black coat, lighting, framing, opaque near-black backdrop, and the existing one outward-open rib-door topology. Make only two technical corrections. First, uniformly reduce the COMPLETE existing door assembly—one near-black aperture, complete jambs and sill, hinge, and single outward-swung rib leaf—to exactly 50 percent of its current v5 height and width while keeping all parts together at the same upper-torso anchor. The complete reduced assembly must remain clearly readable and no more than 20 percent of the visible shoulder-to-waist torso height. Reconstruct plain coat where the larger fixture was removed. Second, remove every small round placket button beneath the collar and every other ordinary button, zipper, knot, pin, or conventional buckle anywhere on visible garments or footwear. Replace any required visible closure with the same unmistakable bar-and-catch revocable latch construction used across the coat; otherwise reconstruct seamless plain cloth or leather. Every visible closure must be a latch. Preserve one door, one aperture, one outward leaf, all existing coat latches, person, clothing, and all unrelated pixels as closely as possible. No second door, badge, pendant, new anatomy, props, text, scenery, transparency, or alpha cutout. Opaque concept master only."
+    },
+    {
+      "id": "eave_lung",
+      "sourceCandidate": "candidates/eave-lung-concept-master-v2.png",
+      "sourceCandidateStatus": "rejected-by-independent-review",
+      "masterFile": "eave-lung-concept-master-v3.png",
+      "editDirection": "Use the supplied Eave Lung v2 image as the edit target. Preserve the landscape canvas, cold translucent respiratory material, opaque near-black backdrop, exactly one bodyless floating organ, and exactly one mechanically turnable lower-edge leak valve. Reconstruct the organ silhouette and internal bronchi so it is unmistakably ONE closed, thick, asymmetrical lung-like respiratory sac volume—rounded bean/pear anatomy with visible depth and a continuous outer membrane—not a broad triangular sheet, canopy, roof plane, bat wing, pair of wings, or paired lungs. Remove every stretched webbed membrane panel, radial wing spar, repeated hooked distal tip, scalloped wing edge, and lateral pointed endpoint. Inside the single closed sac, route one attached bronchial tree whose short blunt branches fold into compact structural rafter and eave angles along the lower interior edge; the bronchi remain contained within or immediately supported by the sac and never form a separate roof, building, tree, ribs, or wing. Integrate exactly one and only one unique turn valve at the lower eave edge, visibly turned away, with no second valve or detached hardware. Keep the complete organ and valve inside generous black clearance. No body, face, mouth, heart, second lung, cloud, storm, rain, village, recipient, text, scene, gore, transparency, or alpha cutout. Opaque concept master only."
+    }
+  ]
+}

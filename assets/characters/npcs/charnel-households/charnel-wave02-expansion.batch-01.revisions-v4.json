@@ -1,0 +1,14 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-wave02-concept-masters-batch-01",
+  "revision": 4,
+  "status": "immutable-before-generation",
+  "reason": "Parn v3 remains too large under the explicit <=20% torso-height gate. Technical scale correction only.",
+  "sourceCandidate": "candidates/parn-exit-law-concept-master-v3-rejected.png",
+  "sourceCandidateStatus": "rejected-before-external-review",
+  "asset": {
+    "id": "parn_exit_law",
+    "masterFile": "parn-exit-law-concept-master-v4.png",
+    "editDirection": "Use the supplied Parn v3 image as the edit target. Preserve the entire image pixel-faithfully except for one localized scale correction to the existing one living rib-door assembly and the immediately reconstructed coat beneath it. Uniformly reduce the COMPLETE existing door assembly—including the one near-black aperture, rib jambs, hinges, and outward-open rib flap—to exactly 50 percent of its current v3 height and width. Keep all components together at the same upper-torso anchor and preserve their current proportions and outward-only opening direction. Do not reduce Parn or any garment latch. Preserve exactly one door, one aperture, the same identity, face, hair, gaze, pose, proportions, hands, feet, coat length, every visible revocable garment latch, colors, materials, lighting, opaque near-black backdrop, framing, and all other pixels as closely as possible. Reconstruct plain coat only where the larger assembly was removed. No new anatomy, props, text, scenery, transparency, or alpha cutout."
+  }
+}

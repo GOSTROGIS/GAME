@@ -1,0 +1,81 @@
+{
+  "schema": "SableReachAcceptedConceptHandoffV1",
+  "batchId": "charnel-wave02-expansion-masters-batch-01",
+  "status": "accepted-after-two-independent-non-generator-full-manifest-reviews",
+  "candidateManifestSha256": "588bc28e24ebaaeb57bad19aaeed575f0257475b7078e3df430f5afa1e0f2cce",
+  "accepted": [
+    {
+      "id": "tima_vale_twice_born",
+      "candidate": "tima-vale-twice-born-concept-master-v3.png",
+      "sha256": "39854eeb3f6cd7d0de8e35f96d39a63604966890d2ab5ce6e70faa7201599956",
+      "destination": "assets/characters/npcs/charnel-households/tima-vale-twice-born-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-independent-canon-topology-review", "decision": "PASS", "evidence": "Exactly one fully clothed young person with normal two-arm, two-hand, two-leg and two-foot anatomy; exactly three spatially traceable domestic construction eras remain distinct: hand-gathered cream linen, checked fitted hearth bodice, and straight-seamed indigo chore wrap and shawl." },
+        { "reviewerRole": "independent-wave02-topology-review", "decision": "PASS", "evidence": "Original-resolution review confirms three incompatible weave, seam, fastening and repair systems, no fourth era, empty hands, full framing and no regalia, mutation, scene or extra person." }
+      ]
+    },
+    {
+      "id": "parn_exit_law",
+      "candidate": "parn-exit-law-concept-master-v8.png",
+      "sha256": "2a746133437545c89be8bf05c541ba71a917f83ba3ab8366502ef4826be8678c",
+      "destination": "assets/characters/npcs/charnel-households/parn-exit-law-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-independent-canon-topology-review", "decision": "PASS", "evidence": "One empty upper-torso aperture and one connected image-right leaf visibly swing outward; the complete ear-height fixture is plainly below 20 percent of shoulder-to-waist height and every visible functional closure uses latch language." },
+        { "reviewerRole": "independent-wave02-topology-review", "decision": "PASS", "evidence": "Original-resolution measurement finds the full fixture about 54 pixels tall; exactly one framed aperture and one foreshortened outward leaf remain distinct, with no second opening or non-latch closure." }
+      ]
+    },
+    {
+      "id": "orra_rain_in_ribs",
+      "candidate": "orra-rain-in-ribs-concept-master-v4.png",
+      "sha256": "435031c8e9c0538ee785c3562f14d7227901f7ff1455de0483b2dd2d8311a8fa",
+      "destination": "assets/characters/npcs/charnel-households/orra-rain-in-ribs-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-independent-canon-topology-review", "decision": "PASS", "evidence": "Exactly two translucent lungs and ordinary mortal limbs remain; short asymmetric shoulder-rooted rafter stacks fold backward close to the torso with no wing, extra limb or third lung." },
+        { "reviewerRole": "independent-wave02-topology-review", "decision": "PASS", "evidence": "Original-resolution review confirms two compact differently folded bracket systems with visible load paths into the shoulder roots, no long lateral endpoint, claw, halo or separate roof." }
+      ]
+    },
+    {
+      "id": "pell_nacreyear_road_witness",
+      "candidate": "pell-nacreyear-road-witness-concept-master-v3.png",
+      "sha256": "60dc0542bf2f3f05e421e49caa02472ff367d6325bb4357401c193b3cacad787",
+      "destination": "assets/characters/npcs/remaining-hands/pell-nacreyear-road-witness-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-independent-canon-topology-review", "decision": "PASS", "evidence": "One unmistakably elderly short adult has exactly two continuous arms, two empty hands, two legs and two feet; seven normal-joint route turns are readable at both elbows, wrists, knees and the forward ankle." },
+        { "reviewerRole": "independent-wave02-topology-review", "decision": "PASS", "evidence": "Original-resolution review confirms seven deliberate turns without extra limb, endpoint, duplicated boot, broken anatomy, map, compass, road sign or travel pack." }
+      ]
+    },
+    {
+      "id": "threshold_lamb",
+      "candidate": "threshold-lamb-concept-master-v2.png",
+      "sha256": "47b2059d383a68ddc2d490c902013ed08c675740a7f4c6ce8504f00f8d9b4c8b",
+      "destination": "assets/bestiary/forms/charnel-households/threshold-lamb-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-independent-canon-topology-review", "decision": "PASS", "evidence": "Exactly one non-ovine hinge-and-backward-rib organism surrounds one empty passage; several latches point inward and exactly one attached image-right selector rib extends while all others remain nested." },
+        { "reviewerRole": "independent-wave02-topology-review", "decision": "PASS", "evidence": "Original-resolution review confirms one passage, one rooted selector, no livestock anatomy, resident, second doorway or extra creature, and full landscape framing." }
+      ]
+    },
+    {
+      "id": "eave_lung",
+      "candidate": "eave-lung-concept-master-v3.png",
+      "sha256": "bc5804d2774ac7fad20d2bbf71fd2a6f80790c6e787568201ddc32bcae8ce010",
+      "destination": "assets/bestiary/forms/charnel-weather/eave-lung-v1.png",
+      "reviews": [
+        { "reviewerRole": "coordinator-independent-canon-topology-review", "decision": "PASS", "evidence": "Exactly one thick closed asymmetrical respiratory sac contains one attached bronchial tree forming compact interior rafter and eave angles and exactly one lower-edge turn valve, with no wing or second lung." },
+        { "reviewerRole": "independent-wave02-topology-review", "decision": "PASS", "evidence": "Original-resolution review confirms continuous closed volume, contained blunt rafter bronchi, one sole valve, generous clearance and no canopy, building, body, storm, scene or detached hardware." }
+      ]
+    }
+  ],
+  "supersededOrRejected": [
+    "tima-vale-twice-born-concept-master-v2-rejected.png",
+    "parn-exit-law-concept-master-v2-rejected.png",
+    "parn-exit-law-concept-master-v3-rejected.png",
+    "parn-exit-law-concept-master-v4-rejected.png",
+    "parn-exit-law-concept-master-v5-rejected.png",
+    "parn-exit-law-concept-master-v6-rejected.png",
+    "parn-exit-law-concept-master-v7-rejected.png",
+    "orra-rain-in-ribs-concept-master-v2-rejected.png",
+    "orra-rain-in-ribs-concept-master-v3-rejected.png",
+    "pell-nacreyear-road-witness-concept-master-v2-rejected.png",
+    "eave-lung-concept-master-v2-rejected.png"
+  ]
+}

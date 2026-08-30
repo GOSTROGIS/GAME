@@ -1,0 +1,31 @@
+{
+  "schema": "SableReachConceptPromptRevisionV1",
+  "batchId": "charnel-wave02-concept-masters-batch-01",
+  "revision": 2,
+  "status": "immutable-before-generation",
+  "reason": "Technical input-safety sanitization only. The original common negative used a phrase that caused the first Tima request to be rejected before image generation. Canon, anatomy, composition, style, and forbidden visual content are unchanged.",
+  "supersedesPromptPacketSha256": "a239bd245cb05f024abd4dacdacc7c15e4971187180bdabeac2f0810b0d446ab",
+  "failedCalls": [
+    {
+      "id": "tima_vale_twice_born",
+      "version": 1,
+      "result": "input-moderation-blocked-before-render",
+      "candidateProduced": false
+    }
+  ],
+  "candidateVersion": 2,
+  "promptCompilation": "For each asset, submit exactly commonDirectionV2, two newline characters, then its effective master direction. Tima uses masterDirectionV2; every other asset retains the immutable packet masterDirection byte-for-byte.",
+  "commonDirectionV2": "Use case: stylized-concept. Asset type: canonical individual opaque production concept master for later 3D design. Render exactly one complete original Sable Reach subject in polished stylized 3D dark-fantasy MMORPG production quality. Obey the selected canonical record and only the reference images explicitly named for style/material continuity; never copy a reference subject's identity, pose, props, or anatomy. Charnel subjects use restrained tactile wet black nacre, subdued pearl edges, deep mourning black, and canon-required translucent tissue or mortal fabric only. Remaining Hands subjects use grounded worn mortal textiles, weathered leather, and restrained old metal without heroic styling. Three-quarter production view, centered, full body, generous near-black clearance around every extremity and mechanic cue. Flat near-black neutral fully opaque studio backdrop, cold raking studio light from one side, ungraded neutral presentation. No transparency and no alpha-cutout request. Horror comes from impossible articulation, environmental absence, and ritual repetition; no exposed entrails and no gratuitous blood. No scene, room, village, road, landscape, weather scene, battlefield, courtroom, floor, ground plane, terrain, pedestal, cast floor shadow, extra creature, extra person, duplicate subject, caption, UI, text, readable symbol, letter, numeral, rune, real religious mark, logo, watermark, franchise resemblance, ordinary undead, ordinary demon, glossy plastic, cute or chibi proportions, exploitative styling, or bright saturation. Do not add anatomy or props absent from the selected canonical record.",
+  "assetOverrides": [
+    {
+      "id": "tima_vale_twice_born",
+      "masterFile": "tima-vale-twice-born-concept-master-v2.png",
+      "masterDirectionV2": "Subject: Tima Vale Twice-Born, The Sixteen-Year Ancestor. Portrait canvas, 1024x1536. Depict exactly one fully clothed sixteen-year-old sanctuary resident in practical modest clothing and a dignified, neutral, non-heroic three-quarter stance. She is clearly young, while her gaze and bearing carry ancestral responsibility without giving her artificially aged features. She wears layered ordinary domestic objects and household garments from exactly three visibly different historical periods at once; keep the three material eras readable through incompatible construction, repair, and wear, but make every element practical, intimate, and non-ceremonial. The inherited layers must remain unresolved rather than becoming royal regalia, armor, a costume, or a sacred-child halo. Use normal human anatomy, two arms, two hands, two legs, and two feet, with both hands empty and no rib door or added mutation. Keep every garment edge and both feet inside frame. No crown, throne, weapon, staff, relic aura, child-savior pose, glamour pose, other family member, grave, meal table, doorway, text, or scenery."
+    },
+    { "id": "parn_exit_law", "masterFile": "parn-exit-law-concept-master-v2.png", "masterDirection": "unchanged-from-prompt-packet" },
+    { "id": "orra_rain_in_ribs", "masterFile": "orra-rain-in-ribs-concept-master-v2.png", "masterDirection": "unchanged-from-prompt-packet" },
+    { "id": "pell_nacreyear_road_witness", "masterFile": "pell-nacreyear-road-witness-concept-master-v2.png", "masterDirection": "unchanged-from-prompt-packet" },
+    { "id": "threshold_lamb", "masterFile": "threshold-lamb-concept-master-v2.png", "masterDirection": "unchanged-from-prompt-packet" },
+    { "id": "eave_lung", "masterFile": "eave-lung-concept-master-v2.png", "masterDirection": "unchanged-from-prompt-packet" }
+  ]
+}
