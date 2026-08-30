@@ -26,7 +26,7 @@ jobs:
         run: git lfs pull --include="assets/characters/npcs/grave-tithe/**,assets/characters/npcs/unwritten-roads/**,assets/characters/npcs/exact-word/**,assets/bestiary/forms/**" --exclude=""
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 11.19.0
           run_install: false
