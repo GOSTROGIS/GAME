@@ -8,11 +8,14 @@ const kit = (id, name, reference, palette, lighting, surfaces, structures, props
   id, name, reference, palette, lighting, surfaces, structures, props, foliage, decals, vfx, audio,
 });
 
-const GENERATED_ASSET_METADATA = Object.freeze({
+const PROJECT_ART_METADATA = Object.freeze({
   revision: 1,
-  dimensions: Object.freeze({ width: 1672, height: 941 }),
-  provenance: "Generated for this project with OpenAI's built-in image-generation model on 2026-08-22.",
-  rightsNote: "Project-local generated reference; usage remains subject to the applicable OpenAI service terms.",
+  provenance: "Owner-authorized original project art; public records retain repository-relative, content-addressed evidence only.",
+  rightsNote: "Owner-authorized original project art for environment direction and blockout reference.",
+  maturity: "approved_environment_direction_and_legacy_runtime_backdrop_not_production",
+  runtimeBackdrop: true,
+  runtimeIntegrated: true,
+  productionAsset: false,
   approvalStatus: "approved_direction",
 });
 
@@ -21,7 +24,11 @@ export const WORLD_CONCEPT_ASSETS = Object.freeze([
     id: "concept_hearthmere_hold",
     regionId: "hearthmere",
     path: "./assets/world/hearthmere-hold.png",
-    ...GENERATED_ASSET_METADATA,
+    ...PROJECT_ART_METADATA,
+    dimensions: Object.freeze({ width: 1672, height: 941 }),
+    referenceScope: "regional",
+    generationTool: "built_in_image_generation",
+    generationMode: "new_image",
     sha256: "7f17a219ef090f7d3c20e22ab24275a9c39483c4d3c89a8297ef4ef006258b3c",
     type: "environment_keyframe",
     use: ["hub_layout", "material_reference", "lighting_reference", "architecture_language"],
@@ -31,7 +38,11 @@ export const WORLD_CONCEPT_ASSETS = Object.freeze([
     id: "concept_dunmire_causeway",
     regionId: "dunmire",
     path: "./assets/world/dunmire-causeway.png",
-    ...GENERATED_ASSET_METADATA,
+    ...PROJECT_ART_METADATA,
+    dimensions: Object.freeze({ width: 1672, height: 941 }),
+    referenceScope: "regional",
+    generationTool: "built_in_image_generation",
+    generationMode: "new_image",
     sha256: "f5f7d5c22da1cb175bfc9da6777ba05c9092f60d6c813b92c4c46b6633f99702",
     type: "environment_keyframe",
     use: ["route_composition", "water_material", "ambush_readability", "gathering_ecology"],
@@ -41,7 +52,11 @@ export const WORLD_CONCEPT_ASSETS = Object.freeze([
     id: "concept_cinderward_foundry",
     regionId: "cinderward",
     path: "./assets/world/cinderward-foundry.png",
-    ...GENERATED_ASSET_METADATA,
+    ...PROJECT_ART_METADATA,
+    dimensions: Object.freeze({ width: 1672, height: 941 }),
+    referenceScope: "regional",
+    generationTool: "built_in_image_generation",
+    generationMode: "versioned_reference_edit",
     sha256: "37de3ab742e5368998d6a215ebaa4b96fccfe1d15aeb73e02e5a8b4936c077fa",
     type: "environment_keyframe",
     use: ["industrial_kit", "boss_arena", "vertical_traversal", "shortcut_language"],
@@ -51,11 +66,52 @@ export const WORLD_CONCEPT_ASSETS = Object.freeze([
     id: "concept_hollow_abbey_nave",
     regionId: "hollow_abbey",
     path: "./assets/world/hollow-abbey-nave.png",
-    ...GENERATED_ASSET_METADATA,
+    ...PROJECT_ART_METADATA,
+    dimensions: Object.freeze({ width: 1672, height: 941 }),
+    referenceScope: "regional",
+    generationTool: "built_in_image_generation",
+    generationMode: "new_image",
     sha256: "d79488872142049443b55ef98532470d632dba9bd9ae5e90ba02bd8403e7bc3b",
     type: "environment_keyframe",
     use: ["interior_kit", "combat_lanes", "resonant_urn_mechanic", "eclipse_lighting"],
     promptSummary: "Rain-open mute nave with delayed echoes, burial urns, side aisles, upper traversal, eclipse shafts, and the route to the Last Bell crypt.",
+  },
+  {
+    id: "concept_graven_march_black_pine_occlusion_basin",
+    regionId: "graven_march",
+    locationId: "graven_march_black_pine_occlusion_basin",
+    questId: "regional_cairns_keep_winter",
+    path: "./assets/world/graven-march-black-pine-occlusion-basin-v5.png",
+    ...PROJECT_ART_METADATA,
+    dimensions: Object.freeze({ width: 1536, height: 1024 }),
+    referenceScope: "regional_quest_location",
+    generationTool: "built_in_image_generation",
+    generationMode: "versioned_reference_edit",
+    promptSha256: "f25da864676be53b357135c8b9fc2ecd153352244745c97ced067d32c04fbb0a",
+    sha256: "8b756803451bbd6893c445a36303c9a7b0b4c0736b98c0d64e4204f777ab9b76",
+    type: "environment_keyframe",
+    use: ["basin_topology", "winter_road_closure", "cairn_beast_ecology", "black_pine_occlusion"],
+    promptSummary: "Black-pine winter basin with twelve dormant cairn bodies, three failed dens, five shadow intervals, a closed public road, and a readable trade detour.",
+  },
+  {
+    id: "concept_cathedral_six_rehearsed_dawns",
+    regionId: "hollow_abbey",
+    locationId: "cathedral_of_six_rehearsed_dawns",
+    questId: "faction_heresy_gentle_horizon",
+    path: "./assets/world/cathedral-six-rehearsed-dawns-v2.png",
+    ...PROJECT_ART_METADATA,
+    dimensions: Object.freeze({ width: 1536, height: 1024 }),
+    referenceScope: "quest_location",
+    maturity: "approved_environment_direction_not_runtime_or_production",
+    runtimeBackdrop: false,
+    runtimeIntegrated: false,
+    generationTool: "built_in_image_generation",
+    generationMode: "versioned_reference_edit",
+    promptSha256: "14ff3a3f05e2a2963e48ce7ecc4e5acb8a718dcb7606b7646884df9221a32913",
+    sha256: "5c2ab84059a4e62234f5c63fdfaffa9eb226ebe1d3ea11d53a2dea26cd11221c",
+    type: "environment_keyframe",
+    use: ["six_refusal_bays", "arrested_contact_geometry", "lucent_material_law", "service_release_route"],
+    promptSummary: "Lucent doctrinal interior with six distinct refusal bays, a central pressure vessel, a restrained hand canopy stopped one finger-width away, and a dark service-release route.",
   },
 ]);
 
@@ -64,9 +120,10 @@ export const WORLD_SOURCE_ASSETS = Object.freeze([
     id: "source_cinderward_foundry_annotated_draft",
     path: "./assets/world/cinderward-foundry-draft.png",
     type: "rejected_generation_draft",
-    dimensions: GENERATED_ASSET_METADATA.dimensions,
-    provenance: GENERATED_ASSET_METADATA.provenance,
-    rightsNote: GENERATED_ASSET_METADATA.rightsNote,
+    dimensions: Object.freeze({ width: 1672, height: 941 }),
+    provenance: PROJECT_ART_METADATA.provenance,
+    rightsNote: PROJECT_ART_METADATA.rightsNote,
+    maturity: "rejected_source_not_for_runtime_or_direction",
     approvalStatus: "rejected_text_overlay",
     replacedBy: "concept_cinderward_foundry",
     sha256: "b3a0c42f2f71f9cbc238d9801224412bd4e41b06220d5ba08c7acd9f55a194df",
@@ -87,7 +144,7 @@ export const REGION_ASSET_KITS = Object.freeze([
     ["hearthmere_rain_roof", "spring_water_close", "braziers_low", "timber_creak_safe", "bell_false_double", "hub_murmur_sparse"],
   ),
   kit(
-    "graven_march", "The Graven March", null,
+    "graven_march", "The Graven March", "concept_graven_march_black_pine_occlusion_basin",
     { shadow: "#090d0d", stone: "#3a4140", timber: "#242927", cloth: "#4a4038", accent: "#a78d5e", fog: "#77847f" },
     { key: "ash_filtered_moon", fill: "ground_fog", practicals: "cairn_candles", contrast: 0.7, wetness: 0.48 },
     ["ash_road_packed", "flint_shingle", "cairn_stone_warm", "pine_needles_black", "old_road_blocks", "grave_loam"],
@@ -150,21 +207,25 @@ export const getRegionAssetKit = (regionId) => REGION_ASSET_KITS.find(({ id }) =
 
 export function validateWorldAssets() {
   const errors = [];
-  const ids = new Set();
+  const regionIds = new Set();
   for (const region of REGION_ASSET_KITS) {
-    if (ids.has(region.id)) errors.push(`Duplicate region kit: ${region.id}`);
-    ids.add(region.id);
+    if (regionIds.has(region.id)) errors.push(`Duplicate region kit: ${region.id}`);
+    regionIds.add(region.id);
     for (const field of ["surfaces", "structures", "props", "foliage", "decals", "vfx", "audio"]) {
       if (!Array.isArray(region[field]) || region[field].length < 4) errors.push(`${region.id}.${field} is underspecified`);
       if (new Set(region[field]).size !== region[field].length) errors.push(`${region.id}.${field} has duplicates`);
     }
   }
+  const conceptIds = new Set();
   for (const concept of WORLD_CONCEPT_ASSETS) {
-    if (!ids.has(concept.regionId)) errors.push(`Concept ${concept.id} has unknown region ${concept.regionId}`);
-    if (!concept.path || !concept.sha256 || !concept.provenance || !concept.rightsNote) errors.push(`Concept ${concept.id} lacks production provenance`);
-    if (concept.dimensions?.width !== 1672 || concept.dimensions?.height !== 941) errors.push(`Concept ${concept.id} has unexpected dimensions`);
+    if (conceptIds.has(concept.id)) errors.push(`Duplicate concept asset: ${concept.id}`);
+    conceptIds.add(concept.id);
+    if (!regionIds.has(concept.regionId)) errors.push(`Concept ${concept.id} has unknown region ${concept.regionId}`);
+    if (!concept.path || !concept.sha256 || !concept.provenance || !concept.rightsNote || !concept.maturity) errors.push(`Concept ${concept.id} lacks production provenance`);
+    const { width, height } = concept.dimensions ?? {};
+    if (!Number.isInteger(width) || !Number.isInteger(height) || Math.min(width, height) < 768 || Math.max(width, height) > 4096) errors.push(`Concept ${concept.id} has unexpected dimensions`);
+    if (concept.referenceScope === "quest_location" && (!concept.locationId || !concept.questId)) errors.push(`Quest-location concept ${concept.id} lacks canonical links`);
   }
-  const conceptIds = new Set(WORLD_CONCEPT_ASSETS.map(({ id }) => id));
   for (const source of WORLD_SOURCE_ASSETS) if (!conceptIds.has(source.replacedBy)) errors.push(`Source ${source.id} has unresolved replacement ${source.replacedBy}`);
   return { valid: errors.length === 0, errors };
 }

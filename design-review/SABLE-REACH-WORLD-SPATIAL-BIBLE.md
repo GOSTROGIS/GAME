@@ -350,7 +350,7 @@ Repairs are additive. New work never erases the silhouette of the harm it addres
 - One to three landmarks; primary, service, and return routes; human doors, stairs, beds, rails, and workers as scale evidence.
 - No purposeless spikes, floating debris, impossible stairs, decorative machinery, generic castle language, unexplained monumentality, readable text, labels, arrows, UI, logos, watermarks, frames, or presentation boards.
 
-Accepted regional visual direction is indexed by repository-relative paths and content hashes in the machine module. Four accepted keyframes cover Hearthmere, Dunmire, Cinderward, and Hollow Abbey. Graven March, Veil Coast, and Mirror-Salt still need independently reviewed keyframes; their data and art laws exist, but no image is claimed as accepted here.
+Accepted visual direction is indexed by repository-relative paths and content hashes in the machine module. Six accepted keyframes cover Hearthmere, Dunmire, Cinderward, Hollow Abbey, and the Graven March, plus the Cathedral of Six Rehearsed Dawns as quest-location direction. The Cathedral does not replace Hollow Abbey's regional keyframe or claim production geometry. Veil Coast and Mirror-Salt still need independently reviewed standalone keyframes; their data and art laws exist, but no image is claimed as accepted here.
 
 ## Streaming and LOD
 
@@ -384,7 +384,7 @@ For any region, site, creature, building, or quest:
 
 - No exact atlas coordinates exist yet for the 37 expansion quest locations.
 - Site influence radii are production envelopes, not final settlement boundaries.
-- Graven March, Veil Coast, and Mirror-Salt lack accepted standalone environment keyframes.
+- Veil Coast and Mirror-Salt lack accepted standalone environment keyframes.
 - Local terrain, bridge geometry, navmesh, crowd schedules, scent simulation, and room meshes outside existing prototypes are not production-ready.
 - Mobile Charnel interiors require a runtime ingress/egress transform contract before seamless streaming can be claimed.
 - Population ranges require simulation and performance validation before becoming spawn schedules.

@@ -1,0 +1,71 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-world-environments-batch-01",
+  "rightsDeclaration": "Owner-authorized original project art; no third-party or franchise source imagery; environment concept and blockout reference use.",
+  "records": [
+    {
+      "id": "environment_keyframe.graven_march_black_pine_occlusion_basin",
+      "subjectId": "graven_march_black_pine_occlusion_basin",
+      "familyId": "world_environments",
+      "rank": "quest_location",
+      "role": "environment_keyframe",
+      "path": "assets/world/graven-march-black-pine-occlusion-basin-v5.png",
+      "sha256": "8b756803451bbd6893c445a36303c9a7b0b4c0736b98c0d64e4204f777ab9b76",
+      "bytes": 2784310,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Canonical public direction hash retained; private execution context omitted.",
+      "promptSha256": "f25da864676be53b357135c8b9fc2ecd153352244745c97ced067d32c04fbb0a",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "versioned reference edit",
+        "outputSha256": "8b756803451bbd6893c445a36303c9a7b0b4c0736b98c0d64e4204f777ab9b76"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "environmentDirection": "authored_and_independently_reviewed",
+        "runtimeBackdrop": true,
+        "runtimeIntegrated": true,
+        "productionAsset": false
+      }
+    },
+    {
+      "id": "environment_keyframe.cathedral_six_rehearsed_dawns",
+      "subjectId": "cathedral_of_six_rehearsed_dawns",
+      "familyId": "world_environments",
+      "rank": "quest_location",
+      "role": "environment_keyframe",
+      "path": "assets/world/cathedral-six-rehearsed-dawns-v2.png",
+      "sha256": "5c2ab84059a4e62234f5c63fdfaffa9eb226ebe1d3ea11d53a2dea26cd11221c",
+      "bytes": 3058922,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Canonical public direction hash retained; private execution context omitted.",
+      "promptSha256": "14ff3a3f05e2a2963e48ce7ecc4e5acb8a718dcb7606b7646884df9221a32913",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "versioned reference edit",
+        "outputSha256": "5c2ab84059a4e62234f5c63fdfaffa9eb226ebe1d3ea11d53a2dea26cd11221c"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "environmentDirection": "authored_and_independently_reviewed",
+        "runtimeBackdrop": false,
+        "runtimeIntegrated": false,
+        "productionAsset": false
+      }
+    }
+  ]
+}

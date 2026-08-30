@@ -59,6 +59,7 @@ for(const path of new Set(Object.values(ORIGIN_ART))){
 }
 const REGION_BACKDROP_PATHS = Object.freeze({
   hearthmere: "./assets/world/hearthmere-hold.png",
+  graven_march: "./assets/world/graven-march-black-pine-occlusion-basin-v5.png",
   dunmire: "./assets/world/dunmire-causeway.png",
   cinderward: "./assets/world/cinderward-foundry.png",
   hollow_abbey: "./assets/world/hollow-abbey-nave.png",

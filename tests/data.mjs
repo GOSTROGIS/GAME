@@ -82,6 +82,13 @@ check(Object.keys(ITEM_REGISTRY).length >= 200, "Canonical item registry is unex
 for (const asset of [...WORLD_CONCEPT_ASSETS, ...WORLD_SOURCE_ASSETS]) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset.path)), `Missing world asset ${asset.path}`);
 for (const asset of CHARACTER_RENDER_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset)), `Missing character render ${asset}`);
 check(REGION_ASSET_KITS.length === 5, "Expected five production regional asset kits");
+check(new Set(WORLD_CONCEPT_ASSETS.map(({ id }) => id)).size === WORLD_CONCEPT_ASSETS.length, "World concept IDs must be unique");
+check(WORLD_CONCEPT_ASSETS.length === 6, "Expected six accepted world concept references");
+check(REGION_ASSET_KITS.find(({ id }) => id === "graven_march")?.reference === "concept_graven_march_black_pine_occlusion_basin", "Graven March must resolve its accepted regional keyframe");
+check(WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_graven_march_black_pine_occlusion_basin")?.runtimeBackdrop === true, "Graven March keyframe must declare its legacy runtime use");
+check(REGION_ASSET_KITS.find(({ id }) => id === "hollow_abbey")?.reference === "concept_hollow_abbey_nave", "Cathedral quest art must not replace Hollow Abbey's regional keyframe");
+check(WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_cathedral_six_rehearsed_dawns")?.referenceScope === "quest_location", "Cathedral art must remain quest-location direction");
+check(WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_cathedral_six_rehearsed_dawns")?.runtimeIntegrated === false, "Cathedral direction must not claim runtime integration");
 
 const migration = migrateSave({
   version: 1,
