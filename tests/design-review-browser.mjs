@@ -164,8 +164,9 @@ page.on('request', (request) => {
 let testFailure = null;
 try {
   await page.goto(`${baseUrl}/design-review/__registry-browser-test__.html`, { waitUntil: 'domcontentloaded' });
-  await page.waitForFunction(() => globalThis.__DESIGN_REVIEW_TEST__?.ready === true, null, { timeout: 30_000 });
+  await page.waitForFunction(() => globalThis.__DESIGN_REVIEW_TEST__ !== undefined, null, { timeout: 30_000 });
   const result = await page.evaluate(() => globalThis.__DESIGN_REVIEW_TEST__);
+  assert.equal(result.ready, true, result.error || 'Design-review browser fixture did not become ready');
 
   assert.equal(result.subjectCount, result.counts.grandTotal);
   assert.equal(result.uniqueSubjectCount, result.subjectCount);
