@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "id": "world-spatial-wave-03c",
+  "title": "World Spatial Wave 03C Hearthmere machine packet",
+  "status": "independently_reviewed_noncanonical_reference",
+  "claims": {
+    "canonical": false,
+    "exactPlacement": false,
+    "surveyedGeometry": false,
+    "atlasExportEligible": false,
+    "runtimeIntegrated": false,
+    "runtimeNavigation": false,
+    "runtimeCollision": false,
+    "constructionReady": false,
+    "productionGeometry": false,
+    "productionAsset": false,
+    "staticModels": false,
+    "animatedModels": false,
+    "releaseReady": false,
+    "authorSelfApproval": false,
+    "integrationAuthorized": false
+  },
+  "schemaPath": "assets/world/spatial/site-blockout-reference-v2.schema.json",
+  "provenancePath": "assets/world/spatial/wave-03c/provenance.json",
+  "validatorPath": "tools/worldgen/validate-world-spatial-wave-03c.mjs",
+  "testPath": "tests/world-spatial-wave-03c.mjs",
+  "sites": [
+    {
+      "id": "site-blockout.wave-03c.hearthmere",
+      "siteId": "site.hearthmere",
+      "path": "assets/world/spatial/wave-03c/hearthmere.site.json",
+      "sha256": "b2d46282e15d7db4753eb64ab39221b8482503d7b6eebef5eec9b62b1633cfe1",
+      "canonicalRecordSha256": "7c54089a9bd8a6001f830752ecaf99b3a4a1e306c08f16abadf3a057e99abde6",
+      "bytes": 214988,
+      "counts": {
+        "zones": 4,
+        "spaces": 32,
+        "nodes": 37,
+        "traversableNodes": 35,
+        "overlayProxyNodes": 2,
+        "links": 41,
+        "derivedDirectedArcs": 82,
+        "safeCells": 6,
+        "stateMachines": 11,
+        "activityPhases": 5,
+        "hydrologySystems": 6,
+        "habitats": 11,
+        "actorSlots": 26,
+        "encounterSlots": 4,
+        "routePrograms": 21,
+        "overlayBindings": 10,
+        "questBindings": 10,
+        "questObjectives": 35,
+        "sourceBindings": 28,
+        "canonicalClaims": 0,
+        "runtimeClaims": 0,
+        "constructionClaims": 0,
+        "modelClaims": 0
+      }
+    }
+  ]
+}

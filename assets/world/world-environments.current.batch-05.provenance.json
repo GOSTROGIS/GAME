@@ -1,0 +1,51 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-world-environments-batch-05",
+  "rightsDeclaration": "Owner-authorized original project art; no third-party or franchise source imagery; environment concept and blockout reference use.",
+  "promptSource": "assets/world/prompts/world-environments.current.batch-05.prompt-packets.json",
+  "records": [
+    {
+      "id": "environment_keyframe.hearthmere_civic_spring_spine",
+      "subjectId": "hearthmere_civic_spring_spine",
+      "familyId": "world_environments",
+      "rank": "site_civic_exterior",
+      "role": "environment_keyframe",
+      "regionId": "hearthmere",
+      "siteId": "site.hearthmere",
+      "locationId": "hearthmere_civic_spring_spine",
+      "path": "assets/world/hearthmere-civic-spring-spine-v1.png",
+      "sha256": "d8f74db7b7bb138475b15d64d0ee86f779804bafa6b6054afbc0adb46e310a79",
+      "bytes": 3207738,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Exact generator-revised prompt bodies for the base generation, corrective revision, and accepted surgical revision are retained; private execution context and superseded input locators are omitted.",
+      "promptRecordId": "prompt.environment.hearthmere_civic_spring_spine",
+      "promptSha256": "ea8266cdf3984dee3a11da727515d69ae1f5287575780243f46ea17a791c639e",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference-guided revision",
+        "outputSha256": "d8f74db7b7bb138475b15d64d0ee86f779804bafa6b6054afbc0adb46e310a79"
+      },
+      "sourceReferences": [
+        "assets/world/hearthmere-hold.png"
+      ],
+      "reviewEvidence": {
+        "reviewMode": "two independent read-only visual reviews plus coordinator verification",
+        "accepted": true,
+        "boundary": "Approved inhabited civic-spring composition, exactly eight ordinary residents, one timber tower, one open square, one masonry spring arch, three distinct connected route roles, visible shortcut reconnection, spring-versus-runoff separation, working civic artifacts, wet-slate and repaired-timber material continuity, player scale, framing, and forbidden-content direction only; exact atlas or GIS placement, surveyed coordinates, boundaries, dimensions, topology, adjacency, hydrology capacity, structure, construction, accessibility, fire code, collision, navigation, streaming, runtime integration, static or animated scene readiness, production geometry, and production-asset status remain illustrative and unapproved."
+      },
+      "maturity": {
+        "environmentDirection": "authored_and_independently_reviewed",
+        "runtimeBackdrop": false,
+        "runtimeIntegrated": false,
+        "productionAsset": false
+      }
+    }
+  ]
+}

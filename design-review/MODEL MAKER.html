@@ -637,7 +637,7 @@ function mountEnvironment(environment) {
         </p>
       </article>`).join('')}</div>
     <p class="eyebrow" style="margin:24px 0 8px">Content bindings</p>
-    <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Site <code>${environment.siteId}</code>${environment.routeId ? ` \u00b7 route <code>${environment.routeId}</code>` : ''} \u00b7 location <code>${environment.locationId}</code> \u00b7 quest <code>${environment.questId}</code></p>
+    <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Site <code>${environment.siteId}</code>${environment.routeId ? ` \u00b7 route <code>${environment.routeId}</code>` : ''} \u00b7 location <code>${environment.locationId}</code>${environment.questId ? ` \u00b7 quest <code>${environment.questId}</code>` : ''}</p>
     <p class="eyebrow" style="margin:24px 0 8px">Authority boundary</p>
     <ul style="margin:0;padding-left:18px;color:#9fa59f;font:var(--type-body-sm)">${environment.limitations.map((item) => `<li style="margin:0 0 7px">${item}</li>`).join('')}</ul>
   `;

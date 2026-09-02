@@ -17,6 +17,7 @@ const spatialPayloadSuffixes = Object.freeze([
   '/assets/world/spatial/world-spatial-wave-02-v9.annex.json',
   '/assets/world/spatial/wave-03a/warden-reed.site.json',
   '/assets/world/spatial/wave-03b/hollow-abbey.site.json',
+  '/assets/world/spatial/wave-03c/hearthmere.site.json',
 ]);
 
 const fixture = String.raw`<!doctype html>
@@ -134,6 +135,8 @@ const fixture = String.raw`<!doctype html>
     if (!wardenEnvironment) throw new Error('Warden Reed environment is missing from the registry');
     const hollowEnvironment = environments.find(({ id }) => id === 'environment.hollow-abbey-processional-and-mute-nave');
     if (!hollowEnvironment) throw new Error('Hollow Abbey environment is missing from the registry');
+    const hearthmereEnvironment = environments.find(({ id }) => id === 'environment.hearthmere-hold-civic-spring-spine');
+    if (!hearthmereEnvironment) throw new Error('Hearthmere Civic Spring environment is missing from the registry');
     const images = await Promise.all([
       loadArt('npc.sera-dusk'),
       loadArt('enemy.ash-husk'),
@@ -178,6 +181,27 @@ const fixture = String.raw`<!doctype html>
         runtimeIntegrated: hollowEnvironment.runtimeIntegrated,
         productionAsset: hollowEnvironment.productionAsset,
         blockoutIds: hollowEnvironment.blockoutReferences.map(({ id }) => id),
+      },
+      hearthmereEnvironment: {
+        id: hearthmereEnvironment.id,
+        contentId: hearthmereEnvironment.contentId,
+        siteId: hearthmereEnvironment.siteId,
+        routeId: hearthmereEnvironment.routeId,
+        locationId: hearthmereEnvironment.locationId,
+        questId: hearthmereEnvironment.questId,
+        conceptIds: hearthmereEnvironment.concepts.map(({ id }) => id),
+        exteriorSrc: hearthmereEnvironment.exteriorSrc,
+        interiorConcept: hearthmereEnvironment.interiorConcept,
+        interiorSrc: hearthmereEnvironment.interiorSrc,
+        staticScene: hearthmereEnvironment.staticScene,
+        staticSceneStatus: hearthmereEnvironment.staticSceneStatus,
+        animatedScene: hearthmereEnvironment.animatedScene,
+        animatedSceneStatus: hearthmereEnvironment.animatedSceneStatus,
+        motionSystems: hearthmereEnvironment.motionSystems,
+        runtimeBackdrop: hearthmereEnvironment.runtimeBackdrop,
+        runtimeIntegrated: hearthmereEnvironment.runtimeIntegrated,
+        productionAsset: hearthmereEnvironment.productionAsset,
+        blockoutIds: hearthmereEnvironment.blockoutReferences.map(({ id }) => id),
       },
       acceptedCharnel: acceptedCharnel.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
       acceptedRemaining: acceptedRemaining.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
@@ -250,9 +274,9 @@ try {
   assert.equal(result.counts.total, 228);
   assert.equal(result.counts.foundingTotal, 228);
   assert.equal(result.counts.grandTotal, 337);
-  assert.equal(result.counts.environments, 2);
-  assert.equal(result.counts.spatialBlockouts, 2);
-  assert.equal(result.environmentCount, 2);
+  assert.equal(result.counts.environments, 3);
+  assert.equal(result.counts.spatialBlockouts, 3);
+  assert.equal(result.environmentCount, 3);
   assert.equal(result.uniqueEnvironmentCount, result.environmentCount);
   assert.equal(result.counts.expansionCharacters, 70);
   assert.equal(result.counts.expansionCreatures, 39);
@@ -264,7 +288,7 @@ try {
   const rosterText = await page.locator('#roster').textContent();
   assert.match(rosterText, /69 expansion awaiting art/);
   assert.match(rosterText, /0 founding bestiary awaiting art/);
-  assert.match(rosterText, /2 spatial blockouts/);
+  assert.match(rosterText, /3 spatial blockouts/);
   assert.equal(await page.locator('[data-subject-id]').count(), result.subjectCount);
   assert.equal(await page.locator('[data-environment-id]').count(), result.environmentCount);
   assert.equal(result.acceptedCharnel.length, 17);
@@ -308,6 +332,27 @@ try {
     productionAsset: false,
     blockoutIds: ['spatial_blockout.wave-03b.hollow-abbey'],
   });
+  assert.deepEqual(result.hearthmereEnvironment, {
+    id: 'environment.hearthmere-hold-civic-spring-spine',
+    contentId: 'hearthmere_civic_spring_spine',
+    siteId: 'site.hearthmere',
+    routeId: null,
+    locationId: 'hearthmere_civic_spring_spine',
+    questId: null,
+    conceptIds: ['concept_hearthmere_civic_spring_spine'],
+    exteriorSrc: '../assets/world/hearthmere-civic-spring-spine-v1.png',
+    interiorConcept: null,
+    interiorSrc: null,
+    staticScene: null,
+    staticSceneStatus: 'awaiting-model',
+    animatedScene: null,
+    animatedSceneStatus: 'unassessed',
+    motionSystems: ['spring_channel_flow', 'roof_runoff_rain_chains', 'civic_service_handcarts', 'ration_and_ledger_queues', 'bell_yoke_service'],
+    runtimeBackdrop: false,
+    runtimeIntegrated: false,
+    productionAsset: false,
+    blockoutIds: ['spatial_blockout.wave-03c.hearthmere'],
+  });
   assert.deepEqual(result.environmentImages.map(({ id, width, height }) => ({ id, width, height })), [
     { id: 'concept_warden_reed_four_bank_visibility_exterior', width: 1536, height: 1024 },
     { id: 'concept_warden_reed_stilt_service_house_interior', width: 1536, height: 1024 },
@@ -315,6 +360,7 @@ try {
     { id: 'concept_hollow_abbey_mute_nave_route_read', width: 1536, height: 1024 },
     { id: 'concept_hollow_abbey_rain_court_work_nexus', width: 1536, height: 1024 },
     { id: 'concept_hollow_abbey_foundry_operational_chain', width: 1536, height: 1024 },
+    { id: 'concept_hearthmere_civic_spring_spine', width: 1536, height: 1024 },
   ]);
   for (const image of result.environmentImages) {
     assert.ok(image.src.startsWith(`${baseUrl}/assets/world/`), `${image.id} did not load from repository world assets`);
@@ -322,6 +368,7 @@ try {
   assert.deepEqual(result.blockoutPayloads.map(({ id, schemaVersion, payloadId }) => ({ id, schemaVersion, payloadId })), [
     { id: 'spatial_blockout.wave-03a.warden-reed', schemaVersion: 1, payloadId: 'site-blockout.wave-03a.warden-reed' },
     { id: 'spatial_blockout.wave-03b.hollow-abbey', schemaVersion: 2, payloadId: 'site-blockout.wave-03b.hollow-abbey' },
+    { id: 'spatial_blockout.wave-03c.hearthmere', schemaVersion: 2, payloadId: 'site-blockout.wave-03c.hearthmere' },
   ]);
   for (const payload of result.blockoutPayloads) {
     assert.ok(payload.bytes > 0, `${payload.id} loaded an empty JSON payload`);
@@ -414,6 +461,17 @@ try {
         '/assets/world/spatial/site-blockout-reference-v2.schema.json',
       ],
     },
+    {
+      environmentId: 'environment.hearthmere-hold-civic-spring-spine',
+      blockoutId: 'spatial_blockout.wave-03c.hearthmere',
+      schemaVersion: 2,
+      paths: [
+        '/assets/world/spatial/wave-03c/hearthmere.site.json',
+        '/assets/world/spatial/wave-03c/index.json',
+        '/assets/world/spatial/wave-03c/provenance.json',
+        '/assets/world/spatial/site-blockout-reference-v2.schema.json',
+      ],
+    },
   ];
   for (const expected of modelMakerBlockouts) {
     await page.locator('#selectorBtn').click();
@@ -426,13 +484,16 @@ try {
     }));
     assert.match(rendered.text, new RegExp(`schema v${expected.schemaVersion}`, 'i'));
     assert.deepEqual(rendered.hrefs, expected.paths.map((path) => `${baseUrl}${path}`));
+    if (expected.environmentId === 'environment.hearthmere-hold-civic-spring-spine') {
+      assert.doesNotMatch(await page.locator('#tierBody').textContent(), /quest\s+null/i);
+    }
   }
   await page.waitForTimeout(250);
   trackedRealSurface = null;
   assert.deepEqual(
     eagerSpatialPayloadRequests.filter(({ surface }) => surface === 'MODEL MAKER'),
     [],
-    'MODEL MAKER must expose local spatial links without eagerly fetching a Wave 02, 03A, or 03B payload',
+    'MODEL MAKER must expose local spatial links without eagerly fetching a Wave 02, 03A, 03B, or 03C payload',
   );
 
   trackedRealSurface = 'Hollow March Art Bible';
@@ -452,6 +513,7 @@ try {
     '/assets/world/spatial/world-spatial-wave-02-v9.annex.json',
     '/assets/world/spatial/wave-03a/warden-reed.site.json',
     '/assets/world/spatial/wave-03b/hollow-abbey.site.json',
+    '/assets/world/spatial/wave-03c/hearthmere.site.json',
   ].every((suffix) => [...document.links].some(({ href }) => href.endsWith(suffix))), null, { timeout: 30_000 });
 
   const integratedSpatialReference = await page.evaluate(() => {
@@ -477,6 +539,7 @@ try {
   const integratedSiteBlockouts = await page.evaluate(() => [
     '/assets/world/spatial/wave-03a/warden-reed.site.json',
     '/assets/world/spatial/wave-03b/hollow-abbey.site.json',
+    '/assets/world/spatial/wave-03c/hearthmere.site.json',
   ].map((suffix) => {
     const link = [...document.links].find(({ href }) => href.endsWith(suffix));
     const article = link?.closest('article');
@@ -490,11 +553,14 @@ try {
   assert.deepEqual(integratedSiteBlockouts.map(({ href }) => href), [
     `${baseUrl}/assets/world/spatial/wave-03a/warden-reed.site.json`,
     `${baseUrl}/assets/world/spatial/wave-03b/hollow-abbey.site.json`,
+    `${baseUrl}/assets/world/spatial/wave-03c/hearthmere.site.json`,
   ]);
   assert.match(integratedSiteBlockouts[0].text, /Warden Reed/);
   assert.match(integratedSiteBlockouts[0].text, /schema v1/i);
   assert.match(integratedSiteBlockouts[1].text, /Hollow Abbey/);
   assert.match(integratedSiteBlockouts[1].text, /schema v2/i);
+  assert.match(integratedSiteBlockouts[2].text, /Hearthmere/);
+  assert.match(integratedSiteBlockouts[2].text, /schema v2/i);
   assert.deepEqual(integratedSiteBlockouts.map(({ hrefs }) => hrefs), [
     [
       `${baseUrl}/assets/world/spatial/wave-03a/warden-reed.site.json`,
@@ -503,6 +569,10 @@ try {
     [
       `${baseUrl}/assets/world/spatial/wave-03b/hollow-abbey.site.json`,
       `${baseUrl}/assets/world/spatial/wave-03b/provenance.json`,
+    ],
+    [
+      `${baseUrl}/assets/world/spatial/wave-03c/hearthmere.site.json`,
+      `${baseUrl}/assets/world/spatial/wave-03c/provenance.json`,
     ],
   ]);
   const spatialCardLayout = await page.evaluate(() => {
@@ -515,13 +585,13 @@ try {
       separatedCards: cards.filter((card) => Number.parseFloat(getComputedStyle(card).borderTopWidth) > 0).length,
     };
   });
-  assert.deepEqual(spatialCardLayout, { count: 3, rowGap: 10, separatedCards: 3 });
+  assert.deepEqual(spatialCardLayout, { count: 4, rowGap: 10, separatedCards: 4 });
   await page.waitForTimeout(250);
   trackedRealSurface = null;
   assert.deepEqual(
     eagerSpatialPayloadRequests.filter(({ surface }) => surface === 'Hollow March Art Bible'),
     [],
-    'The Art Bible must expose local spatial links without eagerly fetching a Wave 02, 03A, or 03B payload',
+    'The Art Bible must expose local spatial links without eagerly fetching a Wave 02, 03A, 03B, or 03C payload',
   );
 
   const responsivePage = await browser.newPage({ viewport: { width: 375, height: 812 } });

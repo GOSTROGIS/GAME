@@ -1,0 +1,44 @@
+{
+  "schema": "SableReachSpatialReviewManifestV1",
+  "id": "review.world-spatial-wave-03c.b",
+  "subject": {
+    "schemaPath": "assets/world/spatial/site-blockout-reference-v2.schema.json",
+    "schemaSha256": "5373aae5aa4b69b34a0a17ae24f61cc6c3ff62a0d99feb36b2e6e039b863434a",
+    "indexPath": "assets/world/spatial/wave-03c/index.json",
+    "indexSha256": "bdbe5fae526a37f62e9f5d495df3b12536f436146ff8d2089340f62e6e3aedf2",
+    "sitePath": "assets/world/spatial/wave-03c/hearthmere.site.json",
+    "siteSha256": "b2d46282e15d7db4753eb64ab39221b8482503d7b6eebef5eec9b62b1633cfe1",
+    "validatorPath": "tools/worldgen/validate-world-spatial-wave-03c.mjs",
+    "validatorSha256": "d914104be151ba9dfaacf337f95451b5cfb4a8f579ab4f44a7b0bc9ebf1be630",
+    "testPath": "tests/world-spatial-wave-03c.mjs",
+    "testSha256": "83d0595b9ae7d1b0bbb8f9f5db2c7b476d4a54d2feac51865acca0c318ce65b2"
+  },
+  "review": {
+    "role": "independent_living_world_and_quest_environment_reviewer",
+    "mode": "independent_read_only_frozen_artifact_review",
+    "independent": true,
+    "mutationDuringReview": false,
+    "disposition": "accept_noncanonical_reference",
+    "verified": [
+      "twenty_six_actor_roster_and_three_scene_backed_spawn_limits",
+      "eleven_habitats_and_four_encounters_exclude_all_six_safe_cells",
+      "clean_and_contaminated_hydrology_and_regional_stream_nonconnection",
+      "ten_quest_crosswalks_thirty_five_ordered_objectives_and_state_writes",
+      "twenty_one_routes_ten_overlays_and_two_hash_only_external_graphs",
+      "founding_and_expansion_creature_affinity_without_model_claims",
+      "strict_release_evidence_privacy_and_nonclaim_boundaries",
+      "index_site_validator_and_test_frozen_hash_binding"
+    ],
+    "rejectedFixtureCount": 73,
+    "limitations": [
+      "noncanonical_site_local_reference_only",
+      "no_exact_or_surveyed_atlas_placement_claim",
+      "no_runtime_navigation_collision_or_streaming_claim",
+      "no_construction_engineering_or_production_geometry_claim",
+      "no_static_or_animated_model_claim",
+      "no_integration_or_release_authority_claim",
+      "review_roles_are_workflow_separation_not_legal_identity_proof",
+      "bound_records_do_not_expand_upstream_canonical_authority"
+    ]
+  }
+}
