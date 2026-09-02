@@ -42,7 +42,7 @@ When a row combines existing truth with a new layout response, its `Authority` c
 | Art registry | `assets/art-index.json` | Canonical art paths and coverage status |
 | Model registry | `design-review/kit/hm-model-registry.js` | Current art/model readiness and environment motion-system handoff |
 | Prototype bridge pack | `packages/content/manifests/sable-reach.bridge-runtime.json` | Existing proxy geometry inventory and its own prototype LOD metadata |
-| Accepted world-image records | `assets/world/world-environments.current.batch-03.provenance.json`; `assets/world/prompts/world-environments.current.batch-03.prompt-packets.json` | Redacted acceptance, hashes, and image-specific limits |
+| Accepted world-image records | `assets/world/world-environments.current.batch-03.provenance.json`; `assets/world/prompts/world-environments.current.batch-03.prompt-packets.json`; `assets/world/world-environments.current.batch-04a.provenance.json`; `assets/world/prompts/world-environments.current.batch-04a.prompt-packets.json` | Redacted acceptance, hashes, and image-specific limits |
 
 ## 2. Precinct thesis and blockout acceptance
 
@@ -733,8 +733,9 @@ No route may depend on hue alone. Avoid floating arrows, repeated braziers at in
 | `assets/world/hollow-abbey-nave.png` | 1672 × 941; SHA-256 `d79488872142049443b55ef98532470d632dba9bd9ae5e90ba02bd8403e7bc3b` | Regional palette, wet material, weather, axial nave grandeur, urn mass, upper-gallery and black-descent mood | Exact layout, apparent dimensions, figures, route collision, final architecture |
 | `assets/world/hollow-abbey-processional-west-arrival-v1.png` | 1536 × 1024; SHA-256 `e10cf6c4e1469d23f49f0fc38ebb49d0dad51f490b1f8bf23c1c2e82ced72e29` | Supplemental west arrival; central gate stair; high loop/rejoin; lower onward read; dry-karst/no-stream policy | Facade, circular opening, towers, stair count, exact terrain, dimensions, production geometry |
 | `assets/world/hollow-abbey-mute-nave-route-read-v1.png` | 1536 × 1024; SHA-256 `2e5582779702fed33fef3ee092f109a0c39403431752f11c22bbad95b7288826` | Player-height off-axis route accountability; central spine; both side loops; upper ascent/return; urn-edge cover; distinct black crypt descent | Exact stair/pit/inlay layout, dimensions, topology beyond documented goals, collision, final props |
+| `assets/world/hollow-abbey-rain-court-work-nexus-v1.png` | 1536 × 1024; SHA-256 `a5e5ae1dfe2ec15a7f17f649356404f4f276ba8db89bcdd07bc2273cd555b074` | Player-height deep-gate view; four-way Rain Court route hierarchy; nonblocking Nhal staging; shallow local drainage; maintenance evidence | Exact architecture, measurements, GIS placement, drain behavior, final Nhal construction/VFX, collision, runtime integration, production geometry |
 
-**[ART REFERENCE]** The two supplemental images are accepted and registered in the current world records. Their redacted prompt/provenance packet is `assets/world/prompts/world-environments.current.batch-03.prompt-packets.json` plus `assets/world/world-environments.current.batch-03.provenance.json`.
+**[ART REFERENCE]** The three supplemental images are accepted and registered in the current world records. Their redacted prompt/provenance packets are `assets/world/prompts/world-environments.current.batch-03.prompt-packets.json` with `assets/world/world-environments.current.batch-03.provenance.json`, and `assets/world/prompts/world-environments.current.batch-04a.prompt-packets.json` with `assets/world/world-environments.current.batch-04a.provenance.json`.
 
 ### 18.2 Family silhouette references
 

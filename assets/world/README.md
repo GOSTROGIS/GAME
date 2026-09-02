@@ -25,12 +25,12 @@ Wave 03A is an independently reviewed noncanonical machine reference. Its site-l
 - Generic mode: new image generation for Hearthmere, Dunmire, and Hollow Abbey.
 - Generic revision mode: precise reference edit for the accepted Cinderward, Graven March, and Cathedral images.
 - Generic reference-guided mode: new image generation for the Warden Reed four-bank exterior and occupied stilt-service-house interior, using accepted repository images only for same-world material and identity continuity.
-- Generic reference-guided revision mode: targeted revisions for the Hollow Abbey west arrival and player-height Mute Nave route read, with accepted repository art as palette, material, weather, and family-silhouette authority.
+- Generic reference-guided revision mode: targeted revisions for the Hollow Abbey west arrival, player-height Mute Nave route read, and Rain Court work nexus, with accepted repository art as palette, material, weather, family-silhouette, and Gatewarden identity authority.
 - Shared art direction: production environment concept, readable third-person action-RPG traversal and combat routes, grounded dark fantasy materials, cold desaturated atmosphere with restrained warm accents, no logos, captions, UI, or watermarks.
 
-All ten accepted world concepts are direction and blockout references. The five regional references are also used as legacy 2D runtime backdrops; the Cathedral, both Warden Reed concepts, and both supplemental Hollow Abbey concepts remain direction-only. The separate Veil technical reference is topology-only, and Wave 03A is an independently reviewed noncanonical machine reference. None claims final coordinates, collision, navigation, meshes, animation, LOD, construction validity, or production readiness.
+All eleven accepted world concepts are direction and blockout references. The five regional references are also used as legacy 2D runtime backdrops; the Cathedral, both Warden Reed concepts, and all three supplemental Hollow Abbey concepts remain direction-only. The separate Veil technical reference is topology-only, and Wave 03A is an independently reviewed noncanonical machine reference. None claims final coordinates, collision, navigation, meshes, animation, LOD, construction validity, or production readiness.
 
-Public art provenance is split by release scope: `world-environments.current.batch-01.provenance.json` covers Graven March and the Cathedral; `world-environments.current.batch-02.provenance.json` binds the four legacy keyframes and both Warden Reed concepts; and `world-environments.current.batch-03.provenance.json` binds the two supplemental Hollow Abbey concepts. The exact accepted Hollow Abbey revision prompts are content-addressed in `prompts/world-environments.current.batch-03.prompt-packets.json`; no execution locator, superseded private input locator, or private session metadata is published.
+Public art provenance is split by release scope: `world-environments.current.batch-01.provenance.json` covers Graven March and the Cathedral; `world-environments.current.batch-02.provenance.json` binds the four legacy keyframes and both Warden Reed concepts; `world-environments.current.batch-03.provenance.json` binds the first two supplemental Hollow Abbey concepts; and `world-environments.current.batch-04a.provenance.json` binds the Rain Court work nexus. Exact accepted Hollow Abbey revision prompts are content-addressed in the matching batch-03 and batch-04a prompt packets; no execution locator, superseded private input locator, or private session metadata is published.
 
 ## Prompt records
 
@@ -93,6 +93,12 @@ West Processional Steps arrival for `main_a_litany_unspoken`: a central stair es
 SHA-256 `2e5582779702fed33fef3ee092f109a0c39403431752f11c22bbad95b7288826`; 1536×1024; prompt SHA-256 `436ea290791c6001a7c2a709d3e0abf07e46bf7520ff0127ced7010a00b188fb`; two independent visual passes; approved supplemental site-interior direction.
 
 Off-axis, player-height Mute Nave circulation study for `main_a_litany_unspoken`: a central quest spine, lateral aisle loops, an upper-cloister ascent and separated return, deliberate urn-field edge occlusion, combat recovery space, and a materially black crypt descent. It complements rather than replaces `hollow-abbey-nave.png`. The stairs, pits, radial inlay, exact room graph, proportions, and dimensions are illustrative; no visible sculpture establishes a named person or creature anatomy, and no hydraulic connection to Abbey Sink is implied.
+
+### `hollow-abbey-rain-court-work-nexus-v1.png`
+
+SHA-256 `a5e5ae1dfe2ec15a7f17f649356404f4f276ba8db89bcdd07bc2273cd555b074`; 1536×1024; prompt SHA-256 `2f5f5b0207448f1c253c5fa240094798fd0511233e06e695bb0638bdf5718c9c`; two independent visual passes; approved supplemental site-court direction.
+
+Player-height Rain Court work nexus for `main_a_litany_unspoken`: a deep Gate of Exact Words volume, a clear party-regroup floor, four materially distinct destinations, one laterally staged Gatewarden Nhal with rain traversing the absence, shallow local karst drainage, and visible maintenance evidence. Approval covers composition, route hierarchy, Nhal staging and supernatural rain cue, local water language, and material continuity only. Architecture, measurements, GIS placement, drainage behavior, collision, final Nhal construction and VFX, runtime integration, and production geometry remain illustrative and unapproved.
 
 ### `cinderward-foundry-draft.png`
 

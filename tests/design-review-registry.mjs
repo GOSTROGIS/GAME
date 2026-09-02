@@ -175,6 +175,10 @@ assert.deepEqual(wardenEnvironment.interiorConcept, {
 });
 assert.equal(wardenEnvironment.exteriorSrc, wardenEnvironment.exteriorConcept.src);
 assert.equal(wardenEnvironment.interiorSrc, wardenEnvironment.interiorConcept.src);
+assert.equal(Object.isFrozen(wardenEnvironment.concepts), true);
+assert.equal(wardenEnvironment.concepts.length, 2);
+assert.equal(wardenEnvironment.concepts[0], wardenEnvironment.exteriorConcept);
+assert.equal(wardenEnvironment.concepts[1], wardenEnvironment.interiorConcept);
 assert.equal(/^https?:/i.test(wardenEnvironment.exteriorSrc), false);
 assert.equal(/^https?:/i.test(wardenEnvironment.interiorSrc), false);
 
@@ -236,8 +240,29 @@ assert.deepEqual(hollowEnvironment.interiorConcept, {
 });
 assert.equal(hollowEnvironment.exteriorSrc, hollowEnvironment.exteriorConcept.src);
 assert.equal(hollowEnvironment.interiorSrc, hollowEnvironment.interiorConcept.src);
+assert.equal(Object.isFrozen(hollowEnvironment.concepts), true);
+assert.equal(hollowEnvironment.concepts.length, 3);
+assert.equal(hollowEnvironment.concepts[0], hollowEnvironment.exteriorConcept);
+assert.equal(hollowEnvironment.concepts[1], hollowEnvironment.interiorConcept);
+assert.deepEqual(hollowEnvironment.concepts[2], {
+  id: 'concept_hollow_abbey_rain_court_work_nexus',
+  path: 'assets/world/hollow-abbey-rain-court-work-nexus-v1.png',
+  src: '../assets/world/hollow-abbey-rain-court-work-nexus-v1.png',
+  sha256: 'a5e5ae1dfe2ec15a7f17f649356404f4f276ba8db89bcdd07bc2273cd555b074',
+  bytes: 3200004,
+  dimensions: { width: 1536, height: 1024 },
+  colorSpace: 'sRGB',
+  alphaPolicy: 'opaque',
+  referenceScope: 'site_court_work_nexus',
+  approvalStatus: 'approved_direction',
+  maturity: 'approved_environment_direction_not_runtime_or_production',
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+});
 assert.equal(/^https?:/i.test(hollowEnvironment.exteriorSrc), false);
 assert.equal(/^https?:/i.test(hollowEnvironment.interiorSrc), false);
+assert.equal(/^https?:/i.test(hollowEnvironment.concepts[2].src), false);
 
 const expansionRows = [...registry.expansionCharacters, ...registry.expansionCreatures];
 for (const [contentId, masterSrc] of acceptedExpansionMasters) {

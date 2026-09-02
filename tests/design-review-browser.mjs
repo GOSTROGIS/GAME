@@ -126,10 +126,9 @@ const fixture = String.raw`<!doctype html>
       ...acceptedCharnel.map(loadSubjectArt),
       ...acceptedRemaining.map(loadSubjectArt),
     ]);
-    const environmentImages = await Promise.all(environments.flatMap((environment) => [
-      loadRepositoryImage(environment.exteriorConcept.id, environment.exteriorSrc),
-      loadRepositoryImage(environment.interiorConcept.id, environment.interiorSrc),
-    ]));
+    const environmentImages = await Promise.all(environments.flatMap((environment) => environment.concepts.map((concept) =>
+      loadRepositoryImage(concept.id, concept.src)
+    )));
     globalThis.__DESIGN_REVIEW_TEST__ = {
       ready: true,
       counts,
@@ -288,6 +287,7 @@ try {
     { id: 'concept_warden_reed_stilt_service_house_interior', width: 1536, height: 1024 },
     { id: 'concept_hollow_abbey_processional_west_arrival', width: 1536, height: 1024 },
     { id: 'concept_hollow_abbey_mute_nave_route_read', width: 1536, height: 1024 },
+    { id: 'concept_hollow_abbey_rain_court_work_nexus', width: 1536, height: 1024 },
   ]);
   for (const image of result.environmentImages) {
     assert.ok(image.src.startsWith(`${baseUrl}/assets/world/`), `${image.id} did not load from repository world assets`);
@@ -318,6 +318,9 @@ try {
   assert.match(surfaces[0].text, /expansion awaiting art/);
   assert.match(surfaces[0].text, /founding bestiary awaiting art/);
   assert.match(surfaces[0].text, /REG\.environments/);
+  assert.match(surfaces[0].text, /environment\.concepts\.map/);
+  assert.match(surfaces[0].text, /environment\.concepts\.length/);
+  assert.doesNotMatch(surfaces[0].text, /2 accepted concept references|exterior \+ interior/);
   assert.match(surfaces[0].text, /Motion systems to author/);
   assert.match(surfaces[0].text, /No static scene artifact is linked/);
   assert.match(surfaces[0].text, /Visual brief \\u2014 not authored/);

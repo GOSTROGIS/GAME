@@ -130,7 +130,7 @@
 
   <p style="margin:40px 0 14px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Environment keyframes &mdash; moved here from the Theme Reference so the art lives in one place</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:12px">
-    <sc-for list="{{ keyframes }}" as="k" hint-placeholder-count="10">
+    <sc-for list="{{ keyframes }}" as="k" hint-placeholder-count="11">
       <div style="position:relative;overflow:hidden;border:1px solid var(--line);background:var(--ink)">
         <img src="{{ k.file }}" alt="{{ k.alt }}" loading="lazy" decoding="async" style="display:block;width:100%;height:240px;object-fit:cover;opacity:.78">
         <div style="position:absolute;inset:auto 0 0;padding:44px 18px 15px;background:linear-gradient(transparent,rgba(4,7,8,.96))">
@@ -858,6 +858,11 @@ class Component extends DCLogic {
         note: 'Off-axis third-person scale, central quest spine, side-aisle loops, upper ascent and return, open recovery space, and a black crypt descent.',
         boundary: 'Approved supplemental direction only; it does not replace the regional keyframe or canonize stairs, pits, inlay, dimensions, topology, or creature anatomy.',
         provenance: '../assets/world/world-environments.current.batch-03.provenance.json' },
+      { file: '../assets/world/hollow-abbey-rain-court-work-nexus-v1.png', name: 'Hollow Abbey · Rain Court Work Nexus', band: 'MAIN QUEST · GATE AND FOUR-WAY COURT',
+        alt: 'Hollow Abbey rain court work nexus from inside the Gate of Exact Words',
+        note: 'Deep Exact-Word threshold, clear regroup floor, four materially distinct destinations, one lateral Gatewarden Nhal, local rain capture, and maintained work evidence.',
+        boundary: 'Approved supplemental direction only; architecture, measurements, GIS placement, drainage behavior, final Nhal construction and VFX, collision, runtime integration, and production geometry remain illustrative and unapproved.',
+        provenance: '../assets/world/world-environments.current.batch-04a.provenance.json' },
     ];
 
     const technicalReferences = [
