@@ -96,14 +96,14 @@ assert.equal(registry.expansionCharacters.length, EXPANSION_CHARACTERS.length);
 assert.equal(registry.expansionCreatures.length, EXPANSION_CREATURES.length);
 assert.equal(registry.expansionCharacters.length, 70);
 assert.equal(registry.expansionCreatures.length, 39);
-assert.equal(registry.environments.length, 1);
+assert.equal(registry.environments.length, 2);
 assert.deepEqual(registry.companionContracts, COMPANION_QUEST_CONTRACTS);
 assert.deepEqual(registry.agencyContracts, COMPANION_AGENCY_CONTRACTS);
 assert.deepEqual(registry.actorContracts, QUEST_ACTOR_CONTRACTS);
 assert.equal(counts.total, 228);
 assert.equal(counts.foundingTotal, 228);
 assert.equal(counts.grandTotal, 337);
-assert.equal(counts.environments, 1);
+assert.equal(counts.environments, 2);
 assert.equal(counts.expansionItems, 67);
 assert.equal(counts.expansionQuests, 49);
 assert.equal(counts.companionContracts, 4);
@@ -117,12 +117,15 @@ assert.equal(registry.queuedBestiary.length, 174);
 
 const subjectRows = [...registry.bestiary, ...registry.namedCast, ...registry.origins, ...registry.expansionCharacters, ...registry.expansionCreatures];
 assert.equal(subjectRows.length, counts.grandTotal, 'Environment references must not alter the 337-subject total');
-const wardenEnvironment = registry.environments[0];
+const wardenEnvironment = registry.environments.find(({ id }) => id === 'environment.warden-reed-four-bank-visibility');
+assert.ok(wardenEnvironment);
 assert.equal(wardenEnvironment.id, 'environment.warden-reed-four-bank-visibility');
 assert.equal(wardenEnvironment.contentId, 'warden_reed_four_bank_visibility');
 assert.equal(wardenEnvironment.siteId, 'site.warden-reed');
 assert.equal(wardenEnvironment.locationId, 'warden_reed_four_bank_visibility');
 assert.equal(wardenEnvironment.questId, 'regional_the_fog_came_to_collect_our_outlines');
+assert.equal(wardenEnvironment.routeId, null);
+assert.deepEqual(wardenEnvironment.landmarkIds, []);
 assert.equal(wardenEnvironment.staticScene, null);
 assert.equal(wardenEnvironment.staticSceneStatus, 'awaiting-model');
 assert.equal(wardenEnvironment.animatedScene, null);
@@ -174,6 +177,67 @@ assert.equal(wardenEnvironment.exteriorSrc, wardenEnvironment.exteriorConcept.sr
 assert.equal(wardenEnvironment.interiorSrc, wardenEnvironment.interiorConcept.src);
 assert.equal(/^https?:/i.test(wardenEnvironment.exteriorSrc), false);
 assert.equal(/^https?:/i.test(wardenEnvironment.interiorSrc), false);
+
+const hollowEnvironment = registry.environments.find(({ id }) => id === 'environment.hollow-abbey-processional-and-mute-nave');
+assert.ok(hollowEnvironment);
+assert.equal(hollowEnvironment.contentId, 'hollow_abbey_processional_and_mute_nave');
+assert.equal(hollowEnvironment.siteId, 'site.hollow-abbey');
+assert.equal(hollowEnvironment.routeId, 'route.processional-steps');
+assert.equal(hollowEnvironment.locationId, 'hollow_abbey_processional_and_mute_nave');
+assert.equal(hollowEnvironment.questId, 'main_a_litany_unspoken');
+assert.deepEqual(hollowEnvironment.landmarkIds, ['abbey_gate', 'mute_nave', 'last_bell_crypt']);
+assert.equal(hollowEnvironment.staticScene, null);
+assert.equal(hollowEnvironment.staticSceneStatus, 'awaiting-model');
+assert.equal(hollowEnvironment.animatedScene, null);
+assert.equal(hollowEnvironment.animatedSceneStatus, 'unassessed');
+assert.deepEqual(hollowEnvironment.motionSystems, [
+  'roof_rain_now',
+  'delayed_rain_returns',
+  'eclipse_light_shafts',
+  'urn_resonance_fields',
+  'silence_pressure_zones',
+  'upper_cloister_route_state',
+]);
+assert.equal(hollowEnvironment.runtimeBackdrop, false);
+assert.equal(hollowEnvironment.runtimeIntegrated, false);
+assert.equal(hollowEnvironment.productionAsset, false);
+assert.ok(hollowEnvironment.limitations.some((line) => /Not GIS, construction, structural, collision, navigation, or production-geometry authority/.test(line)));
+assert.deepEqual(hollowEnvironment.exteriorConcept, {
+  id: 'concept_hollow_abbey_processional_west_arrival',
+  path: 'assets/world/hollow-abbey-processional-west-arrival-v1.png',
+  src: '../assets/world/hollow-abbey-processional-west-arrival-v1.png',
+  sha256: 'e10cf6c4e1469d23f49f0fc38ebb49d0dad51f490b1f8bf23c1c2e82ced72e29',
+  bytes: 2762634,
+  dimensions: { width: 1536, height: 1024 },
+  colorSpace: 'sRGB',
+  alphaPolicy: 'opaque',
+  referenceScope: 'site_arrival_exterior',
+  approvalStatus: 'approved_direction',
+  maturity: 'approved_environment_direction_not_runtime_or_production',
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+});
+assert.deepEqual(hollowEnvironment.interiorConcept, {
+  id: 'concept_hollow_abbey_mute_nave_route_read',
+  path: 'assets/world/hollow-abbey-mute-nave-route-read-v1.png',
+  src: '../assets/world/hollow-abbey-mute-nave-route-read-v1.png',
+  sha256: '2e5582779702fed33fef3ee092f109a0c39403431752f11c22bbad95b7288826',
+  bytes: 2715661,
+  dimensions: { width: 1536, height: 1024 },
+  colorSpace: 'sRGB',
+  alphaPolicy: 'opaque',
+  referenceScope: 'site_interior_route_read',
+  approvalStatus: 'approved_direction',
+  maturity: 'approved_environment_direction_not_runtime_or_production',
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+});
+assert.equal(hollowEnvironment.exteriorSrc, hollowEnvironment.exteriorConcept.src);
+assert.equal(hollowEnvironment.interiorSrc, hollowEnvironment.interiorConcept.src);
+assert.equal(/^https?:/i.test(hollowEnvironment.exteriorSrc), false);
+assert.equal(/^https?:/i.test(hollowEnvironment.interiorSrc), false);
 
 const expansionRows = [...registry.expansionCharacters, ...registry.expansionCreatures];
 for (const [contentId, masterSrc] of acceptedExpansionMasters) {

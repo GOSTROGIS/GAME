@@ -56,6 +56,27 @@ const ENVIRONMENT_DEFINITIONS = Object.freeze([
       'water_surface',
     ]),
   }),
+  Object.freeze({
+    id: 'environment.hollow-abbey-processional-and-mute-nave',
+    contentId: 'hollow_abbey_processional_and_mute_nave',
+    name: 'Hollow Abbey Processional and Mute Nave',
+    regionId: 'hollow_abbey',
+    siteId: 'site.hollow-abbey',
+    routeId: 'route.processional-steps',
+    locationId: 'hollow_abbey_processional_and_mute_nave',
+    questId: 'main_a_litany_unspoken',
+    landmarkIds: Object.freeze(['abbey_gate', 'mute_nave', 'last_bell_crypt']),
+    exteriorConceptId: 'concept_hollow_abbey_processional_west_arrival',
+    interiorConceptId: 'concept_hollow_abbey_mute_nave_route_read',
+    motionSystems: Object.freeze([
+      'roof_rain_now',
+      'delayed_rain_returns',
+      'eclipse_light_shafts',
+      'urn_resonance_fields',
+      'silence_pressure_zones',
+      'upper_cloister_route_state',
+    ]),
+  }),
 ]);
 
 // The canonical content id is `glasswood`; the older prompt-law key includes
@@ -335,8 +356,10 @@ function environmentList() {
       name: definition.name,
       regionId: definition.regionId,
       siteId: definition.siteId,
+      routeId: definition.routeId ?? null,
       locationId: definition.locationId,
       questId: definition.questId,
+      landmarkIds: definition.landmarkIds ?? Object.freeze([]),
       tier: 'reference',
       directionStatus: 'approved_direction',
       exteriorConcept,

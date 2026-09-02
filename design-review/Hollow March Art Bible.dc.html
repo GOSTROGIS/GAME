@@ -95,7 +95,7 @@
       <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--line)">
         <p style="margin:0 0 6px;color:#8aa596;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">Bound</p>
         <h4 style="margin:0 0 7px;color:var(--bone);font:500 15px var(--display)">Public provenance is content-addressed</h4>
-        <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Environment sidecars now record repository paths, hashes, byte sizes, dimensions, prompt-direction hashes, rights, and honest maturity. Private execution locators are omitted; Warden Reed remains approved visual direction, not runtime or production geometry.</p>
+        <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Environment sidecars now record repository paths, hashes, byte sizes, dimensions, prompt-direction hashes, rights, and honest maturity. Private execution locators are omitted; Warden Reed and the supplemental Hollow Abbey frames remain approved visual direction, not runtime or production geometry.</p>
       </div>
     </div>
   </div>
@@ -130,7 +130,7 @@
 
   <p style="margin:40px 0 14px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Environment keyframes &mdash; moved here from the Theme Reference so the art lives in one place</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:12px">
-    <sc-for list="{{ keyframes }}" as="k" hint-placeholder-count="8">
+    <sc-for list="{{ keyframes }}" as="k" hint-placeholder-count="10">
       <div style="position:relative;overflow:hidden;border:1px solid var(--line);background:var(--ink)">
         <img src="{{ k.file }}" alt="{{ k.alt }}" loading="lazy" decoding="async" style="display:block;width:100%;height:240px;object-fit:cover;opacity:.78">
         <div style="position:absolute;inset:auto 0 0;padding:44px 18px 15px;background:linear-gradient(transparent,rgba(4,7,8,.96))">
@@ -848,6 +848,16 @@ class Component extends DCLogic {
         note: 'Wet entry, occupied family room, cistern loft, separate causeway and boat exits, ledger work, and maintainable household utilities.',
         boundary: 'Approved visual direction only; not certified dimensions, egress, runtime, construction, or production geometry.',
         provenance: '../assets/world/world-environments.current.batch-02.provenance.json' },
+      { file: '../assets/world/hollow-abbey-processional-west-arrival-v1.png', name: 'Hollow Abbey · West Processional Arrival', band: 'MAIN QUEST · ARRIVAL AND ONWARD ROUTE',
+        alt: 'Hollow Abbey west Processional Steps arrival concept',
+        note: 'Primary Exact-Word gate stair, optional high-shelf loop with visible rejoin, and the lower Processional Steps continuation toward Salt Watch.',
+        boundary: 'Approved supplemental direction only; facade massing, rose ornament, towers, stairs, lamps, measurements, and topology remain illustrative. Rain runoff is not Abbey Sink.',
+        provenance: '../assets/world/world-environments.current.batch-03.provenance.json' },
+      { file: '../assets/world/hollow-abbey-mute-nave-route-read-v1.png', name: 'Hollow Abbey · Mute Nave Route Read', band: 'MAIN QUEST · PLAYABLE-CAMERA INTERIOR',
+        alt: 'Hollow Abbey Mute Nave player-height circulation concept',
+        note: 'Off-axis third-person scale, central quest spine, side-aisle loops, upper ascent and return, open recovery space, and a black crypt descent.',
+        boundary: 'Approved supplemental direction only; it does not replace the regional keyframe or canonize stairs, pits, inlay, dimensions, topology, or creature anatomy.',
+        provenance: '../assets/world/world-environments.current.batch-03.provenance.json' },
     ];
 
     const technicalReferences = [
