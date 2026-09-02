@@ -19,6 +19,7 @@ const fixture = String.raw`<!doctype html>
 <title>Design review registry browser test</title>
 <p id="roster"></p>
 <main id="subjects"></main>
+<section id="environments"></section>
 <script type="module">
   import { artFor } from './kit/hm-concept-art.js';
   import { buildRegistry, tally } from './kit/hm-model-registry.js';
@@ -26,6 +27,7 @@ const fixture = String.raw`<!doctype html>
   const registry = buildRegistry();
   const counts = tally(registry);
   const subjects = [...registry.bestiary, ...registry.namedCast, ...registry.origins, ...registry.expansionCharacters, ...registry.expansionCreatures];
+  const environments = registry.environments;
   document.querySelector('#roster').textContent = counts.expansionAwaitingArt + ' expansion awaiting art · ' + counts.awaitingArt + ' founding bestiary awaiting art';
   const host = document.querySelector('#subjects');
   for (const subject of subjects) {
@@ -33,6 +35,13 @@ const fixture = String.raw`<!doctype html>
     row.dataset.subjectId = subject.id;
     row.textContent = subject.name;
     host.append(row);
+  }
+  const environmentHost = document.querySelector('#environments');
+  for (const environment of environments) {
+    const row = document.createElement('button');
+    row.dataset.environmentId = environment.id;
+    row.textContent = environment.name;
+    environmentHost.append(row);
   }
 
   const loadArt = (id) => new Promise((resolve, reject) => {
@@ -60,6 +69,14 @@ const fixture = String.raw`<!doctype html>
     });
     image.onerror = () => reject(new Error(subject.id + ' failed to load ' + subject.plate));
     image.src = subject.plate;
+  });
+
+  const loadRepositoryImage = (id, src) => new Promise((resolve, reject) => {
+    if (!src) return reject(new Error(id + ' has no repository image'));
+    const image = new Image();
+    image.onload = () => resolve({ id, src: image.currentSrc || image.src, width: image.naturalWidth, height: image.naturalHeight });
+    image.onerror = () => reject(new Error(id + ' failed to load ' + src));
+    image.src = src;
   });
 
   try {
@@ -99,23 +116,43 @@ const fixture = String.raw`<!doctype html>
       'pell_nacreyear_road_witness',
     ]);
     const acceptedRemaining = subjects.filter(({ contentId }) => acceptedRemainingIds.has(contentId));
+    const wardenEnvironment = environments.find(({ id }) => id === 'environment.warden-reed-four-bank-visibility');
+    if (!wardenEnvironment) throw new Error('Warden Reed environment is missing from the registry');
     const images = await Promise.all([
       loadArt('npc.sera-dusk'),
       loadArt('enemy.ash-husk'),
       ...acceptedCharnel.map(loadSubjectArt),
       ...acceptedRemaining.map(loadSubjectArt),
     ]);
+    const environmentImages = await Promise.all([
+      loadRepositoryImage(wardenEnvironment.exteriorConcept.id, wardenEnvironment.exteriorSrc),
+      loadRepositoryImage(wardenEnvironment.interiorConcept.id, wardenEnvironment.interiorSrc),
+    ]);
     globalThis.__DESIGN_REVIEW_TEST__ = {
       ready: true,
       counts,
       subjectCount: subjects.length,
       uniqueSubjectCount: new Set(subjects.map(({ id }) => id)).size,
+      environmentCount: environments.length,
+      uniqueEnvironmentCount: new Set(environments.map(({ id }) => id)).size,
+      wardenEnvironment: {
+        id: wardenEnvironment.id,
+        staticScene: wardenEnvironment.staticScene,
+        staticSceneStatus: wardenEnvironment.staticSceneStatus,
+        animatedScene: wardenEnvironment.animatedScene,
+        animatedSceneStatus: wardenEnvironment.animatedSceneStatus,
+        motionSystems: wardenEnvironment.motionSystems,
+        runtimeBackdrop: wardenEnvironment.runtimeBackdrop,
+        runtimeIntegrated: wardenEnvironment.runtimeIntegrated,
+        productionAsset: wardenEnvironment.productionAsset,
+      },
       acceptedCharnel: acceptedCharnel.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
       acceptedRemaining: acceptedRemaining.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
       missingVisualBriefs: registry.expansionCharacters
         .filter(({ visualBriefStatus }) => visualBriefStatus === 'not-authored')
         .map(({ contentId, visualBrief, visualBriefStatus, conceptGenerationBlocked, conceptGenerationBlocker, reason }) => ({ contentId, visualBrief, visualBriefStatus, conceptGenerationBlocked, conceptGenerationBlocker, reason })),
       images,
+      environmentImages,
     };
   } catch (error) {
     globalThis.__DESIGN_REVIEW_TEST__ = { ready: false, error: String(error) };
@@ -177,6 +214,9 @@ try {
   assert.equal(result.counts.total, 228);
   assert.equal(result.counts.foundingTotal, 228);
   assert.equal(result.counts.grandTotal, 337);
+  assert.equal(result.counts.environments, 1);
+  assert.equal(result.environmentCount, 1);
+  assert.equal(result.uniqueEnvironmentCount, result.environmentCount);
   assert.equal(result.counts.expansionCharacters, 70);
   assert.equal(result.counts.expansionCreatures, 39);
   assert.equal(result.counts.expansionItems, 67);
@@ -188,6 +228,7 @@ try {
   assert.match(rosterText, /69 expansion awaiting art/);
   assert.match(rosterText, /0 founding bestiary awaiting art/);
   assert.equal(await page.locator('[data-subject-id]').count(), result.subjectCount);
+  assert.equal(await page.locator('[data-environment-id]').count(), result.environmentCount);
   assert.equal(result.acceptedCharnel.length, 17);
   assert.equal(result.acceptedRemaining.length, 13);
   assert.equal(new Set(result.images.map(({ id }) => id)).size, 32);
@@ -202,6 +243,24 @@ try {
   for (const image of result.images) {
     assert.ok(image.width > 0 && image.height > 0, `${image.id} loaded with zero dimensions`);
     assert.ok(image.src.startsWith(`${baseUrl}/assets/`), `${image.id} did not load from repository assets`);
+  }
+  assert.deepEqual(result.wardenEnvironment, {
+    id: 'environment.warden-reed-four-bank-visibility',
+    staticScene: null,
+    staticSceneStatus: 'awaiting-model',
+    animatedScene: null,
+    animatedSceneStatus: 'unassessed',
+    motionSystems: ['fog_density_bands', 'ferry_positions', 'guide_lanterns', 'high_rope_return', 'water_surface'],
+    runtimeBackdrop: false,
+    runtimeIntegrated: false,
+    productionAsset: false,
+  });
+  assert.deepEqual(result.environmentImages.map(({ id, width, height }) => ({ id, width, height })), [
+    { id: 'concept_warden_reed_four_bank_visibility_exterior', width: 1536, height: 1024 },
+    { id: 'concept_warden_reed_stilt_service_house_interior', width: 1536, height: 1024 },
+  ]);
+  for (const image of result.environmentImages) {
+    assert.ok(image.src.startsWith(`${baseUrl}/assets/world/`), `${image.id} did not load from repository world assets`);
   }
 
   assert.deepEqual(result.missingVisualBriefs.map(({ contentId }) => contentId).sort(), [
@@ -228,7 +287,14 @@ try {
   assert.match(surfaces[0].text, /COUNTS\.expansionAwaitingArt/);
   assert.match(surfaces[0].text, /expansion awaiting art/);
   assert.match(surfaces[0].text, /founding bestiary awaiting art/);
+  assert.match(surfaces[0].text, /REG\.environments/);
+  assert.match(surfaces[0].text, /Motion systems to author/);
+  assert.match(surfaces[0].text, /No static scene artifact is linked/);
   assert.match(surfaces[0].text, /Visual brief \\u2014 not authored/);
+  assert.match(surfaces[0].text, /id="selectorBtn"[^>]+aria-expanded="false"[^>]+aria-controls="selPanel"/);
+  assert.match(surfaces[0].text, /id="selPanel"[^>]+role="region"[^>]+aria-label="Subject selector"/);
+  assert.match(surfaces[0].text, /<label[^>]+for="selSearch"[^>]*>Filter subjects<\/label>/);
+  assert.match(surfaces[0].text, /closeSelector\(\{ restoreFocus: true \}\)/);
   assert.match(surfaces[1].text, /hm-concept-art\.js/);
   assert.match(surfaces[1].text, /technicalReferences/);
   assert.match(surfaces[1].text, /veil-coast-gloamharbor-tide-refuge-blueprint-v14\.png/);
@@ -236,6 +302,9 @@ try {
   assert.match(surfaces[1].text, /world-spatial-wave-02-v9\.annex\.json/);
   assert.match(surfaces[1].text, /Reviewed noncanonical blockout data only/);
   assert.match(surfaces[1].text, /Not accepted art, production geometry, runtime navigation\/collision\/streaming evidence/);
+  assert.match(surfaces[1].text, /<html lang="en">/);
+  assert.match(surfaces[1].text, /<title>Hollow March Art Bible — Sable Reach<\/title>/);
+  assert.match(surfaces[1].text, /<div role="main" style="position:relative;background:#080b0d;min-height:100vh">/);
   for (const surface of surfaces) {
     assert.doesNotMatch(surface.text, /googleusercontent|drive\.google|thumbnail\?id=/i);
   }
@@ -275,6 +344,38 @@ try {
   assert.match(integratedSpatialReference.text, /site-local fictional meters are not atlas coordinates/i);
   assert.match(integratedSpatialReference.text, /Not accepted art/);
   assert.equal(integratedSpatialReference.imageCount, 0);
+
+  const responsivePage = await browser.newPage({ viewport: { width: 375, height: 812 } });
+  try {
+    await responsivePage.route(/^https?:\/\//, (route) => route.abort());
+    const withoutScripts = (html) => html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '');
+
+    await responsivePage.setContent(withoutScripts(surfaces[0].text), { waitUntil: 'domcontentloaded' });
+    const modelMakerNarrow = await responsivePage.evaluate(() => {
+      const shell = document.querySelector('.model-maker-shell');
+      const viewport = document.querySelector('#viewport');
+      const rail = shell?.querySelector(':scope > aside');
+      return {
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        columns: shell ? getComputedStyle(shell).gridTemplateColumns : null,
+        viewportBottom: viewport?.getBoundingClientRect().bottom ?? null,
+        railTop: rail?.getBoundingClientRect().top ?? null,
+      };
+    });
+    assert.ok(modelMakerNarrow.overflow <= 1, `MODEL MAKER overflows 375px by ${modelMakerNarrow.overflow}px`);
+    assert.match(modelMakerNarrow.columns ?? '', /^375px$/);
+    assert.ok(modelMakerNarrow.railTop >= modelMakerNarrow.viewportBottom - 1, 'MODEL MAKER detail rail must stack below its viewport');
+
+    await responsivePage.setContent(withoutScripts(surfaces[1].text), { waitUntil: 'domcontentloaded' });
+    const artBibleNarrow = await responsivePage.evaluate(() => ({
+      overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      fluidGrids: document.querySelectorAll('[style*="minmax(min(100%"]' ).length,
+    }));
+    assert.ok(artBibleNarrow.fluidGrids >= 12, 'Art Bible must keep every auto-fit card grid fluid');
+    assert.ok(artBibleNarrow.overflow <= 1, `Art Bible overflows 375px by ${artBibleNarrow.overflow}px`);
+  } finally {
+    await responsivePage.close({ runBeforeUnload: false });
+  }
 
   assert.deepEqual(providerRequests, []);
   assert.deepEqual(spatialAnnexRequests, [], 'The 49 MB spatial annex must remain on demand and must not be fetched during Art Bible hydration');

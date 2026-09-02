@@ -1,0 +1,97 @@
+{
+  "schema": "SableReachPublicPromptPacketV1",
+  "batchId": "current-world-environments-batch-02",
+  "publication": {
+    "scope": "repository_relative_prompt_direction",
+    "privateExecutionContextPublished": false,
+    "externalProviderIdentifiersPublished": false
+  },
+  "rightsDeclaration": "Owner-authorized original project art direction for environment concept and blockout reference use.",
+  "records": [
+    {
+      "id": "prompt.environment.hearthmere_hold",
+      "assetPath": "assets/world/hearthmere-hold.png",
+      "bodyStatus": "canonical_public_direction_from_world_manifest_not_execution_prompt",
+      "canonicalPublicDirection": "Stylized production environment reference for Hearthmere Hold: the last warm-spring refuge, wet slate streets, banked braziers, clay name tablets, a repaired palisade and bell tower, with layered routes readable for level design. Cold rainy blue dusk contrasted by ember warmth; 16:9; no text, labels, interface, or watermark.",
+      "promptSha256": "19d9e517172e47d0addd4cb50fdc5f4220a02110bd5812098a49bb6683618513",
+      "sourceReferences": [
+        {
+          "path": "assets/world/README.md",
+          "role": "canonical_public_direction_evidence"
+        }
+      ]
+    },
+    {
+      "id": "prompt.environment.dunmire_causeway",
+      "assetPath": "assets/world/dunmire-causeway.png",
+      "bodyStatus": "canonical_public_direction_from_world_manifest_not_execution_prompt",
+      "canonicalPublicDirection": "Stylized production environment reference for the Dunmire Causeway over a drowned parish: broken raised road, submerged rooftops and vestry, blackwater, reeds, salt shelves, guide lanterns, ambush pockets, gathering routes, and a clear distant landmark. Teal-gray marsh atmosphere; 16:9; no text, labels, interface, or watermark.",
+      "promptSha256": "337dda2242db96636f841b9a17014bee7e2d04f49e251290d8335a8c24b56a62",
+      "sourceReferences": [
+        {
+          "path": "assets/world/README.md",
+          "role": "canonical_public_direction_evidence"
+        }
+      ]
+    },
+    {
+      "id": "prompt.environment.cinderward_foundry",
+      "assetPath": "assets/world/cinderward-foundry.png",
+      "bodyStatus": "canonical_public_direction_from_world_manifest_not_execution_prompt",
+      "canonicalPublicDirection": "Stylized production environment reference for a breathing royal bell-metal foundry overtaken by glasswood: furnace arena, slag canals, chain lifts, gantries, cisterns, mining routes, and readable shortcut loops. Ash blue and furnace orange; 16:9; no text, labels, interface, or watermark. Final edit removed every overlay, inset diagram, label, arrow, border, and text while preserving the environment.",
+      "promptSha256": "59683b0bb33684e8bbc7554e55d9ed98bcb827e6e8f7a660755d8100eba3ac80",
+      "sourceReferences": [
+        {
+          "path": "assets/world/README.md",
+          "role": "canonical_public_direction_evidence"
+        }
+      ]
+    },
+    {
+      "id": "prompt.environment.hollow_abbey_nave",
+      "assetPath": "assets/world/hollow-abbey-nave.png",
+      "bodyStatus": "canonical_public_direction_from_world_manifest_not_execution_prompt",
+      "canonicalPublicDirection": "Stylized production environment reference for Hollow Abbey's Mute Nave: tongueless saint carvings, rain falling through the roof, resonant burial urns, side aisles, upper traversal, a crypt route, and eclipse light. Readable encounter lanes; 16:9; no text, labels, interface, or watermark.",
+      "promptSha256": "ac1db89011f80183dda6b4ed9ce4eb1e989c262faeda120c25d4147194ea4b4f",
+      "sourceReferences": [
+        {
+          "path": "assets/world/README.md",
+          "role": "canonical_public_direction_evidence"
+        }
+      ]
+    },
+    {
+      "id": "prompt.environment.warden_reed_four_bank_visibility_exterior",
+      "assetPath": "assets/world/warden-reed-four-bank-visibility-exterior-v1.png",
+      "bodyStatus": "exact_generation_prompt_body",
+      "canonicalPublicDirection": "Create one new original environment concept image for the Sable Reach game, not an edit of the reference composition.\n\nSUBJECT: Warden Reed at fog-fall — the four-bank visibility exchange exterior. A stunning, polished stylized 3D dark-fantasy production environment concept for a third-person action RPG and Claude Design blockout reference. Cinematic 16:9 landscape, intended output 1536×1024, opaque sRGB.\n\nCANONICAL SPATIAL READ:\n- Show four clearly distinguishable inhabited banks around blackwater channels, readable in one wide three-quarter view without labels.\n- An oak-and-reed causeway reaches the settlement but must not dominate the image like the bridge in the reference.\n- A modest four-bank exchange tower stands above the reed roofs; it is civic wetland infrastructure, not a grand cathedral.\n- A small cable-ferry route and boat return are visibly separate from the dry causeway route.\n- A raised clear refuge sits visibly outside the fog exchange, with an independent dry egress.\n- Include stilt dwellings, the roof and belfry of a partly submerged vestry, raised rain cisterns, boat hatches, work balconies, lamp-oil guide lights, sluice hardware, and high-rope emergency signal lines.\n- Include one low escrow framework standing on exactly four structural stilt legs at the marked exchange edge. It is an uncanny civic apparatus, not a creature and not a quadruped animal.\n- Preserve negative space for a Fog Loaner habitat at the dark bank, but do not invent or depict the creature's anatomy.\n- Small distant human figures may establish scale and daily life; no hero portrait or combat tableau.\n\nART DIRECTION:\n- Use the supplied Dunmire Causeway image only for the same-world material quality, blackwater/reed palette, cold teal-gray atmosphere, wet stone and timber, and restrained amber guide-light language.\n- Create a distinctly different settlement layout, skyline, camera position, and landmark hierarchy.\n- Waterlogged oak piles, woven reed screens, patched slate and tarred cloth, peat-dark water, pale fog moving in bands, damp rope, oxidized iron, muted bone-gray masonry.\n- Cold fog-fall light with a few accountable warm lamps. Readable silhouettes, traversable routes, maintenance access, and lived-in utilities. Beautiful, ominous, grounded, and specific rather than generic fantasy.\n\nFORBIDDEN:\nNo text, numbers, runes used as labels, captions, logos, UI, arrows, map overlays, callouts, borders, inset diagrams, watermarks, checkerboards, or split panels.\nNo gigantic stone bridge, antlered humanoids, copied cathedral silhouette, generic castle skyline, modern materials, clean theme-park walkways, or anonymous decorative ruins.\nDo not present this as surveyed GIS, construction documentation, or final production geometry.",
+      "promptSha256": "8d89ba54f8b163ebba951bfd60d279a818d2501a01151c2c1f4e8722ddfaff34",
+      "sourceReferences": [
+        {
+          "path": "assets/world/dunmire-causeway.png",
+          "sha256": "f5f7d5c22da1cb175bfc9da6777ba05c9092f60d6c813b92c4c46b6633f99702",
+          "role": "same_world_material_reference_only"
+        }
+      ]
+    },
+    {
+      "id": "prompt.environment.warden_reed_stilt_service_house_interior",
+      "assetPath": "assets/world/warden-reed-stilt-service-house-interior-v1.png",
+      "bodyStatus": "exact_generation_prompt_body",
+      "canonicalPublicDirection": "Create one new original environment interior concept image for the Sable Reach game. Use the first reference as the exact Warden Reed exterior identity and the second only for broader same-world Dunmire material language. Do not edit or copy either composition.\n\nSUBJECT: The occupied Warden Reed stilt service house and living visibility-ledger room during fog fall. A polished grounded stylized 3D dark-fantasy production interior for a third-person action RPG and Claude Design blockout reference. Cinematic 16:9 landscape, intended output 1536×1024, opaque sRGB.\n\nARCHITECTURE AND CIRCULATION:\n- A deliberately leaning one-to-two-story oak-and-reed stilt house above blackwater, plausibly within a compact 6×14 meter envelope.\n- Three-quarter cutaway-feel view from ordinary human third-person height, still a believable cinematic room rather than a diagram.\n- Make the route graph legible in one view: causeway step enters a wet mud room, then an occupied family room; the family room separately reaches a raised cistern loft, an unobstructed boat-hatch rescue exit down to a moored skiff, and a reed-work balcony.\n- Causeway and boat exits form an unmistakable loop and remain physically independent.\n- Household privacy is screened from the staffed ledger workspace by woven reed partitions, but a practical emergency-knock hatch connects them.\n- The road/causeway threshold and occupied floor remain visibly above the algae ordinary-flood line.\n\nOPERATION AND LIVED-IN UTILITIES:\n- Show residents, a ferry worker, and a warden actively continuing daily work, not posing.\n- A finite living-borrower ledger is represented only by tactile wooden or bone tokens and blank silhouette pieces; absolutely no readable writing or numbers.\n- Include a staffed ledger task lamp, raised rain cistern with visible overflow route, covered peat-box stove with nearby fire-response water, guide-lantern hooks, reed-grain bin, mudfish creel, peat rack, rope tools, and a blank family-route board with no marks resembling text.\n- Keep potable water, sanitation/waste-to-day-boat, ferry-winch/rope service, clear-air refuge, lamp oil, and fire response visually distinct and maintainable.\n- The boat hatch must be fully unobstructed. Show damp exterior fog and blackwater below through it.\n\nART DIRECTION:\n- Match the accepted Warden Reed exterior's wet oak, dark reed/thatch, slate, pitch cloth, pale wicker repairs, oxidized iron, amber staffed lamps, teal-gray fog, scale, wear, and specific structural identity.\n- Inhabited, repaired, economical, slightly ominous, and beautiful. Not abandoned, not luxurious, not a generic tavern.\n- Cold fog light enters through openings. Only the staffed ledger lamp, covered peat stove, and one guide lamp provide restrained warm accents.\n- The clear-air refuge reads physically cleaner and better ventilated, never magically glowing.\n- Doors, ladder, railings, tools, cistern hardware, and ordinary people establish scale.\n\nFORBIDDEN:\nNo readable text, numbers, labels, arrows, UI, floor-plan overlay, presentation board, split panel, cutaway labels, logo, watermark, frame, checkerboard, electronic screens, holograms, ornate fantasy tavern décor, luxury, decorative nonfunctional pipes, invented chapel iconography, gore, monster centerpiece, or magical technology.\nNo dollhouse symmetry, giant chamber, blocked boat hatch, merged exits, impossible dry lower supports, or generic clean fantasy interior.\nThis is visual direction only, not surveyed GIS, construction documentation, runtime geometry, or final engineering.",
+      "promptSha256": "1212c644108de56d6331494c633916fa0b48f6c51b1b7ce6a7f6f4190ede0de0",
+      "sourceReferences": [
+        {
+          "path": "assets/world/warden-reed-four-bank-visibility-exterior-v1.png",
+          "sha256": "52d94e5252c7f4935772daaa970b58668ea82746491a969d0cad616403eaf17e",
+          "role": "accepted_site_identity_reference"
+        },
+        {
+          "path": "assets/world/dunmire-causeway.png",
+          "sha256": "f5f7d5c22da1cb175bfc9da6777ba05c9092f60d6c813b92c4c46b6633f99702",
+          "role": "same_world_material_reference_only"
+        }
+      ]
+    }
+  ]
+}

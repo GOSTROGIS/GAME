@@ -20,6 +20,7 @@ import {
   QUEST_ACTOR_CONTRACTS,
 } from '../../packages/content/src/narrative.data.js';
 import { CHARACTERS, FACTIONS } from '../../src/data/characters.js';
+import { WORLD_CONCEPT_ASSETS } from '../../src/data/worldAssets.js';
 import { artFor, url } from './hm-concept-art.js';
 import { FAMILY_LAW, CHASSIS_STATUS } from './hm-art-law.js';
 
@@ -34,6 +35,28 @@ const sculptedById = new Map(SCULPTED.map((row) => [row.id, row]));
 const familyById = new Map(ENEMY_FAMILIES.map((row) => [row.id, row]));
 const factionById = new Map(FACTIONS.map((row) => [row.id, row]));
 const cosmicFactionById = new Map(COSMIC_FACTIONS.map((row) => [row.id, row]));
+const worldConceptById = new Map(WORLD_CONCEPT_ASSETS.map((row) => [row.id, row]));
+
+const ENVIRONMENT_DEFINITIONS = Object.freeze([
+  Object.freeze({
+    id: 'environment.warden-reed-four-bank-visibility',
+    contentId: 'warden_reed_four_bank_visibility',
+    name: 'Warden Reed Four-Bank Visibility',
+    regionId: 'dunmire',
+    siteId: 'site.warden-reed',
+    locationId: 'warden_reed_four_bank_visibility',
+    questId: 'regional_the_fog_came_to_collect_our_outlines',
+    exteriorConceptId: 'concept_warden_reed_four_bank_visibility_exterior',
+    interiorConceptId: 'concept_warden_reed_stilt_service_house_interior',
+    motionSystems: Object.freeze([
+      'fog_density_bands',
+      'ferry_positions',
+      'guide_lanterns',
+      'high_rope_return',
+      'water_surface',
+    ]),
+  }),
+]);
 
 // The canonical content id is `glasswood`; the older prompt-law key includes
 // the family-name suffix. Keep that translation isolated and explicit.
@@ -278,6 +301,66 @@ function expansionCreatureList() {
   });
 }
 
+function environmentConcept(id, expectedEnvironmentId) {
+  const asset = worldConceptById.get(id);
+  if (!asset || asset.environmentId !== expectedEnvironmentId) {
+    throw new Error(`Environment concept ${id} is missing or bound to the wrong environment`);
+  }
+  return Object.freeze({
+    id: asset.id,
+    path: asset.path.replace(/^\.\//, ''),
+    src: url(asset.path),
+    sha256: asset.sha256,
+    bytes: asset.bytes,
+    dimensions: asset.dimensions,
+    colorSpace: asset.colorSpace,
+    alphaPolicy: asset.alphaPolicy,
+    referenceScope: asset.referenceScope,
+    approvalStatus: asset.approvalStatus,
+    maturity: asset.maturity,
+    runtimeBackdrop: asset.runtimeBackdrop,
+    runtimeIntegrated: asset.runtimeIntegrated,
+    productionAsset: asset.productionAsset,
+  });
+}
+
+function environmentList() {
+  return ENVIRONMENT_DEFINITIONS.map((definition) => {
+    const exteriorConcept = environmentConcept(definition.exteriorConceptId, definition.id);
+    const interiorConcept = environmentConcept(definition.interiorConceptId, definition.id);
+    return Object.freeze({
+      id: definition.id,
+      contentId: definition.contentId,
+      kind: 'environment',
+      name: definition.name,
+      regionId: definition.regionId,
+      siteId: definition.siteId,
+      locationId: definition.locationId,
+      questId: definition.questId,
+      tier: 'reference',
+      directionStatus: 'approved_direction',
+      exteriorConcept,
+      interiorConcept,
+      exteriorSrc: exteriorConcept.src,
+      interiorSrc: interiorConcept.src,
+      staticScene: null,
+      staticSceneStatus: 'awaiting-model',
+      animatedScene: null,
+      animatedSceneStatus: 'unassessed',
+      motionSystems: definition.motionSystems,
+      runtimeBackdrop: false,
+      runtimeIntegrated: false,
+      productionAsset: false,
+      limitations: Object.freeze([
+        'Concept direction only; not a runtime backdrop or integrated game asset.',
+        'No static or animated 3D scene has been accepted.',
+        'Not GIS, construction, structural, collision, navigation, or production-geometry authority.',
+      ]),
+      reason: 'Accepted exterior and interior direction is linked for scene authoring. Static and animated environment readiness remain independently unclaimed.',
+    });
+  });
+}
+
 export function buildRegistry() {
   const bestiary = bestiaryList();
   const sculpted = bestiary.filter((row) => row.tier === 'sculpted');
@@ -290,6 +373,7 @@ export function buildRegistry() {
     origins: Object.freeze(originsList()),
     expansionCharacters: Object.freeze(expansionCharacterList()),
     expansionCreatures: Object.freeze(expansionCreatureList()),
+    environments: Object.freeze(environmentList()),
     companionContracts: Object.freeze([...COMPANION_QUEST_CONTRACTS]),
     agencyContracts: Object.freeze([...COMPANION_AGENCY_CONTRACTS]),
     actorContracts: Object.freeze([...QUEST_ACTOR_CONTRACTS]),
@@ -319,6 +403,7 @@ export function tally(registry) {
     companionContracts: registry.companionContracts.length,
     agencyContracts: registry.agencyContracts.length,
     actorContracts: registry.actorContracts.length,
+    environments: registry.environments.length,
     expansionAwaitingArt: expansionRows.filter((row) => row.tier === 'awaiting-art').length,
     expansionStaticModels: expansionRows.filter((row) => row.tier === 'static-model').length,
     expansionAnimatedModels: expansionRows.filter((row) => row.tier === 'animated-model').length,
