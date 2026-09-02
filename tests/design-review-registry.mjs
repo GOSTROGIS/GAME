@@ -251,7 +251,7 @@ assert.deepEqual(hollowEnvironment.interiorConcept, {
 assert.equal(hollowEnvironment.exteriorSrc, hollowEnvironment.exteriorConcept.src);
 assert.equal(hollowEnvironment.interiorSrc, hollowEnvironment.interiorConcept.src);
 assert.equal(Object.isFrozen(hollowEnvironment.concepts), true);
-assert.equal(hollowEnvironment.concepts.length, 3);
+assert.equal(hollowEnvironment.concepts.length, 4);
 assert.equal(hollowEnvironment.concepts[0], hollowEnvironment.exteriorConcept);
 assert.equal(hollowEnvironment.concepts[1], hollowEnvironment.interiorConcept);
 assert.deepEqual(hollowEnvironment.concepts[2], {
@@ -270,9 +270,30 @@ assert.deepEqual(hollowEnvironment.concepts[2], {
   runtimeIntegrated: false,
   productionAsset: false,
 });
+assert.deepEqual(hollowEnvironment.concepts[3], {
+  id: 'concept_hollow_abbey_foundry_operational_chain',
+  path: 'assets/world/hollow-abbey-foundry-operational-chain-v1.png',
+  src: '../assets/world/hollow-abbey-foundry-operational-chain-v1.png',
+  sha256: 'a4b6c7ee808befc1ac6b1adfefa1a801c4e5d5fe48e71e42e1820c789a48b1bc',
+  bytes: 2656904,
+  dimensions: { width: 1536, height: 1024 },
+  colorSpace: 'sRGB',
+  alphaPolicy: 'opaque',
+  referenceScope: 'site_foundry_operational_interior',
+  approvalStatus: 'approved_direction',
+  maturity: 'approved_environment_direction_not_runtime_or_production',
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+});
 assert.equal(/^https?:/i.test(hollowEnvironment.exteriorSrc), false);
 assert.equal(/^https?:/i.test(hollowEnvironment.interiorSrc), false);
 assert.equal(/^https?:/i.test(hollowEnvironment.concepts[2].src), false);
+assert.equal(/^https?:/i.test(hollowEnvironment.concepts[3].src), false);
+assert.equal(hollowEnvironment.staticScene, null);
+assert.equal(hollowEnvironment.staticSceneStatus, 'awaiting-model');
+assert.equal(hollowEnvironment.animatedScene, null);
+assert.equal(hollowEnvironment.animatedSceneStatus, 'unassessed');
 assert.equal(Object.isFrozen(hollowEnvironment.blockoutReferences), true);
 assert.equal(hollowEnvironment.blockoutReferences.length, 1);
 assert.equal(hollowEnvironment.blockoutReferences[0].id, 'spatial_blockout.wave-03b.hollow-abbey');

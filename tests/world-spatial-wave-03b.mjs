@@ -79,6 +79,11 @@ assert.deepEqual(site.artDirection.acceptedReferenceIds, [
   "concept_hollow_abbey_mute_nave_route_read",
   "concept_hollow_abbey_rain_court_work_nexus",
 ]);
+assert.equal(
+  site.sourceBindings.find(({ id }) => id === "source.art.hollow-abbey-accepted").selector,
+  "ENVIRONMENT_ART_DIRECTION.acceptedVisualReferences[id in concept_hollow_abbey_nave,concept_hollow_abbey_processional_west_arrival,concept_hollow_abbey_mute_nave_route_read,concept_hollow_abbey_rain_court_work_nexus]",
+  "The accepted Foundry direction must not be retroactively inserted into the frozen Wave 03B art-input selector",
+);
 
 let rejectedFixtures = 0;
 

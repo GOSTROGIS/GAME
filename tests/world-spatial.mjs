@@ -98,7 +98,7 @@ for (const requiredContract of [
 }
 const hollowAbbeyRepositoryReferences = [...hollowAbbeyDossierSource.matchAll(/`((?:assets|design-review|packages|src|tests|tools)\/[^`\r\n]+)`/g)]
   .flatMap(([, paths]) => paths.split(/;\s*/));
-assert.equal(new Set(hollowAbbeyRepositoryReferences).size, 60);
+assert.equal(new Set(hollowAbbeyRepositoryReferences).size, 63);
 for (const referencedPath of new Set(hollowAbbeyRepositoryReferences)) {
   assert.equal(existsSync(`${repositoryRoot}${referencedPath}`), true, `Hollow Abbey dossier path does not resolve: ${referencedPath}`);
 }
@@ -217,7 +217,7 @@ for (const reference of WORLD_SPATIAL_BLOCKOUT_ASSETS) {
 }
 
 const visualReferences = ENVIRONMENT_ART_DIRECTION.acceptedVisualReferences;
-assert.equal(visualReferences.length, 11);
+assert.equal(visualReferences.length, 12);
 for (const reference of visualReferences) {
   const bytes = readFileSync(`${repositoryRoot}${reference.path}`);
   assert.equal(sha256(bytes), reference.sha256, `${reference.id} hash changed`);
@@ -231,6 +231,7 @@ const wardenInteriorReference = visualReferences.find(({ id }) => id === 'concep
 const hollowArrivalReference = visualReferences.find(({ id }) => id === 'concept_hollow_abbey_processional_west_arrival');
 const hollowInteriorReference = visualReferences.find(({ id }) => id === 'concept_hollow_abbey_mute_nave_route_read');
 const hollowRainCourtReference = visualReferences.find(({ id }) => id === 'concept_hollow_abbey_rain_court_work_nexus');
+const hollowFoundryReference = visualReferences.find(({ id }) => id === 'concept_hollow_abbey_foundry_operational_chain');
 assert.equal(gravenReference?.referenceScope, 'regional_quest_location');
 assert.equal(gravenReference?.locationId, 'graven_march_black_pine_occlusion_basin');
 assert.equal(gravenReference?.exactCoordinate, null);
@@ -283,8 +284,20 @@ assert.equal(hollowRainCourtReference?.productionAsset, false);
 assert.equal(hollowRainCourtReference?.provenancePath, 'assets/world/world-environments.current.batch-04a.provenance.json');
 assert.equal(hollowRainCourtReference?.promptPacketPath, 'assets/world/prompts/world-environments.current.batch-04a.prompt-packets.json');
 assert.match(hollowRainCourtReference?.visualReviewBoundary ?? '', /illustrative and unapproved/i);
+assert.equal(hollowFoundryReference?.referenceScope, 'site_foundry_operational_interior');
+assert.equal(hollowFoundryReference?.siteId, 'site.hollow-abbey');
+assert.equal(hollowFoundryReference?.locationId, 'hollow_abbey_foundry_of_borrowed_quiet');
+assert.equal(hollowFoundryReference?.questId, 'profession_bell_paid_in_silence');
+assert.equal(hollowFoundryReference?.exactCoordinate, null);
+assert.equal(hollowFoundryReference?.runtimeBackdrop, false);
+assert.equal(hollowFoundryReference?.runtimeIntegrated, false);
+assert.equal(hollowFoundryReference?.productionAsset, false);
+assert.equal(hollowFoundryReference?.provenancePath, 'assets/world/world-environments.current.batch-04b.provenance.json');
+assert.equal(hollowFoundryReference?.promptPacketPath, 'assets/world/prompts/world-environments.current.batch-04b.prompt-packets.json');
+assert.deepEqual(hollowFoundryReference?.use, ['f01_f08_operational_chain', 'seven_silence_rooms_simultaneous_read', 'deaf_worker_blackwater_ripple_sightline', 'funeral_route_bypasses_molten_floor', 'rain_open_casting_lantern_seven_baffles', 'worker_egress_clearance_repair_and_weathering']);
+assert.match(hollowFoundryReference?.visualReviewBoundary ?? '', /static or animated scene readiness/);
 assert.doesNotMatch(artBibleSource, /No provenance sidecars|Vendored, and still without provenance/);
-assert.match(artBibleSource, /list="\{\{ keyframes \}\}" as="k" hint-placeholder-count="11"/);
+assert.match(artBibleSource, /list="\{\{ keyframes \}\}" as="k" hint-placeholder-count="12"/);
 
 const worldPromptPacketPath = 'assets/world/prompts/world-environments.current.batch-02.prompt-packets.json';
 const worldProvenancePath = 'assets/world/world-environments.current.batch-02.provenance.json';
@@ -528,6 +541,78 @@ assert.equal(rainCourtRecord.maturity.runtimeIntegrated, false);
 assert.equal(rainCourtRecord.maturity.productionAsset, false);
 assert.deepEqual(rainCourtRecord.sourceReferences, rainCourtPrompt.sourceReferences);
 for (const publishedValue of stringLeaves({ rainCourtPromptPacket, rainCourtProvenance })) {
+  assert.doesNotMatch(publishedValue, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);
+}
+
+const foundryPromptPacketPath = 'assets/world/prompts/world-environments.current.batch-04b.prompt-packets.json';
+const foundryProvenancePath = 'assets/world/world-environments.current.batch-04b.provenance.json';
+const foundryPromptPacket = JSON.parse(readFileSync(`${repositoryRoot}${foundryPromptPacketPath}`, 'utf8'));
+const foundryProvenance = JSON.parse(readFileSync(`${repositoryRoot}${foundryProvenancePath}`, 'utf8'));
+assert.equal(foundryPromptPacket.schema, 'SableReachPublicPromptPacketV1');
+assert.equal(foundryPromptPacket.records.length, 1);
+assert.equal(foundryProvenance.schema, 'SableReachPublishedArtProvenanceV1');
+assert.equal(foundryProvenance.records.length, 1);
+assert.equal(foundryProvenance.promptSource, foundryPromptPacketPath);
+assert.equal(foundryPromptPacket.publication.supersededRevisionInputsPublished, false);
+const foundryPrompt = foundryPromptPacket.records[0];
+const foundryRecord = foundryProvenance.records[0];
+assert.equal(foundryPrompt.id, 'prompt.environment.hollow_abbey_foundry_operational_chain');
+assert.equal(foundryPrompt.assetPath, hollowFoundryReference.path);
+assert.equal(foundryPrompt.bodyStatus, 'exact_accepted_revision_prompt_body');
+assert.equal(foundryPrompt.canonicalPublicDirection.length, 1832);
+assert.match(foundryPrompt.canonicalPublicDirection, /^Literal localized addition to this exact 1536×1024 image\./);
+assert.equal(sha256(foundryPrompt.canonicalPublicDirection), foundryPrompt.promptSha256);
+assert.equal(foundryPrompt.promptSha256, 'edc49b7f065a5ef4ec45a9976e8120c3b6ba238f59e7d76f18ffa294cb121ec6');
+assert.equal(foundryPrompt.unpublishedInput.count, 1);
+assert.equal(foundryPrompt.unpublishedInput.role, 'superseded_private_revision_source');
+assert.deepEqual(foundryPrompt.sourceReferences, []);
+assert.equal(foundryRecord.id, 'environment_keyframe.hollow_abbey_foundry_operational_chain');
+assert.equal(foundryRecord.promptRecordId, foundryPrompt.id);
+assert.equal(foundryRecord.promptSha256, foundryPrompt.promptSha256);
+assert.equal(foundryRecord.path, hollowFoundryReference.path);
+const foundryBytes = readFileSync(`${repositoryRoot}${foundryRecord.path}`);
+assert.equal(foundryBytes.length, 2656904);
+assert.equal(foundryBytes.length, foundryRecord.bytes);
+assert.ok(foundryBytes.length <= 8 * 1024 * 1024);
+assert.equal(sha256(foundryBytes), foundryRecord.sha256);
+assert.equal(foundryRecord.sha256, hollowFoundryReference.sha256);
+assert.deepEqual(pngDimensions(foundryBytes), { width: 1536, height: 1024 });
+const foundryRaster = inspectPng(foundryBytes);
+assert.deepEqual(
+  {
+    width: foundryRaster.width,
+    height: foundryRaster.height,
+    bitDepth: foundryRaster.bitDepth,
+    colorType: foundryRaster.colorType,
+    interlace: foundryRaster.interlace,
+    hasAlphaChannel: foundryRaster.hasAlphaChannel,
+    chunkTypes: foundryRaster.chunkTypes,
+  },
+  {
+    width: 1536,
+    height: 1024,
+    bitDepth: 8,
+    colorType: 2,
+    interlace: 0,
+    hasAlphaChannel: false,
+    chunkTypes: ['IHDR', 'IDAT', 'IEND'],
+  },
+);
+assert.equal(foundryRecord.colorSpace, 'sRGB');
+assert.equal(foundryRecord.alphaPolicy, 'opaque');
+assert.equal(foundryRecord.regionId, 'hollow_abbey');
+assert.equal(foundryRecord.siteId, 'site.hollow-abbey');
+assert.equal(foundryRecord.locationId, 'hollow_abbey_foundry_of_borrowed_quiet');
+assert.equal(foundryRecord.questId, 'profession_bell_paid_in_silence');
+assert.equal(foundryRecord.generation.outputSha256, foundryRecord.sha256);
+assert.equal(foundryRecord.reviewEvidence.reviewMode, 'three independent read-only visual reviews');
+assert.equal(foundryRecord.reviewEvidence.accepted, true);
+assert.match(foundryRecord.reviewEvidence.boundary, /static or animated scene readiness/);
+assert.equal(foundryRecord.maturity.runtimeBackdrop, false);
+assert.equal(foundryRecord.maturity.runtimeIntegrated, false);
+assert.equal(foundryRecord.maturity.productionAsset, false);
+assert.deepEqual(foundryRecord.sourceReferences, foundryPrompt.sourceReferences);
+for (const publishedValue of stringLeaves({ foundryPromptPacket, foundryProvenance })) {
   assert.doesNotMatch(publishedValue, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);
 }
 

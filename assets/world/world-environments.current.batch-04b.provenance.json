@@ -1,0 +1,50 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-world-environments-batch-04b",
+  "rightsDeclaration": "Owner-authorized original project art; no third-party or franchise source imagery; environment concept and blockout reference use.",
+  "promptSource": "assets/world/prompts/world-environments.current.batch-04b.prompt-packets.json",
+  "records": [
+    {
+      "id": "environment_keyframe.hollow_abbey_foundry_operational_chain",
+      "subjectId": "hollow_abbey_foundry_operational_chain",
+      "familyId": "world_environments",
+      "rank": "site_foundry_interior",
+      "role": "environment_interior_keyframe",
+      "regionId": "hollow_abbey",
+      "siteId": "site.hollow-abbey",
+      "locationId": "hollow_abbey_foundry_of_borrowed_quiet",
+      "questId": "profession_bell_paid_in_silence",
+      "path": "assets/world/hollow-abbey-foundry-operational-chain-v1.png",
+      "sha256": "a4b6c7ee808befc1ac6b1adfefa1a801c4e5d5fe48e71e42e1820c789a48b1bc",
+      "bytes": 2656904,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Exact accepted revision prompt body retained; private execution context and superseded input locator omitted.",
+      "promptRecordId": "prompt.environment.hollow_abbey_foundry_operational_chain",
+      "promptSha256": "edc49b7f065a5ef4ec45a9976e8120c3b6ba238f59e7d76f18ffa294cb121ec6",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference-guided revision",
+        "outputSha256": "a4b6c7ee808befc1ac6b1adfefa1a801c4e5d5fe48e71e42e1820c789a48b1bc"
+      },
+      "sourceReferences": [],
+      "reviewEvidence": {
+        "reviewMode": "three independent read-only visual reviews",
+        "accepted": true,
+        "boundary": "Approved player-height industrial composition, F01–F08 operational-sequence readability, seven simultaneously legible non-musical silence-room bays, blackwater ripple sightline, rain-open casting-lantern and seven-baffle silhouette, worker egress and carrying-route clearance, material continuity, repair, weathering, framing, and forbidden-content direction only; exact room geometry or adjacency, measurements, GIS or atlas placement, hydrology behavior or capacity, furnace or quench safety, structural or construction validity, collision, navigation, lighting or VFX implementation, runtime integration, static or animated scene readiness, and production geometry remain illustrative and unapproved."
+      },
+      "maturity": {
+        "environmentDirection": "authored_and_independently_reviewed",
+        "runtimeBackdrop": false,
+        "runtimeIntegrated": false,
+        "productionAsset": false
+      }
+    }
+  ]
+}

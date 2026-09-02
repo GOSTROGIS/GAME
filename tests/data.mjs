@@ -87,7 +87,7 @@ for (const asset of WORLD_TECHNICAL_ASSETS) check(existsSync(resolve(new URL("..
 for (const asset of CHARACTER_RENDER_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset)), `Missing character render ${asset}`);
 check(REGION_ASSET_KITS.length === 5, "Expected five production regional asset kits");
 check(new Set(WORLD_CONCEPT_ASSETS.map(({ id }) => id)).size === WORLD_CONCEPT_ASSETS.length, "World concept IDs must be unique");
-check(WORLD_CONCEPT_ASSETS.length === 11, "Expected eleven accepted world concept references");
+check(WORLD_CONCEPT_ASSETS.length === 12, "Expected twelve accepted world concept references");
 check(WORLD_TECHNICAL_ASSETS.length === 1, "Expected one accepted world technical reference");
 check(WORLD_SPATIAL_BLOCKOUT_ASSETS.length === 3, "Expected three reviewed world spatial blockout references");
 check(new Set(WORLD_SPATIAL_BLOCKOUT_ASSETS.map(({ id }) => id)).size === WORLD_SPATIAL_BLOCKOUT_ASSETS.length, "World spatial blockout IDs must be unique");
@@ -107,7 +107,8 @@ for (const [asset, expected] of [
 const hollowArrival = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_hollow_abbey_processional_west_arrival");
 const hollowInterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_hollow_abbey_mute_nave_route_read");
 const hollowRainCourt = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_hollow_abbey_rain_court_work_nexus");
-check(Boolean(hollowArrival && hollowInterior && hollowRainCourt), "Hollow Abbey supplemental direction set is incomplete");
+const hollowFoundry = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_hollow_abbey_foundry_operational_chain");
+check(Boolean(hollowArrival && hollowInterior && hollowRainCourt && hollowFoundry), "Hollow Abbey supplemental direction set is incomplete");
 for (const [asset, expected] of [
   [hollowArrival, { path: "./assets/world/hollow-abbey-processional-west-arrival-v1.png", sha256: "e10cf6c4e1469d23f49f0fc38ebb49d0dad51f490b1f8bf23c1c2e82ced72e29", bytes: 2762634, scope: "site_arrival_exterior", landmarks: ["abbey_gate"] }],
   [hollowInterior, { path: "./assets/world/hollow-abbey-mute-nave-route-read-v1.png", sha256: "2e5582779702fed33fef3ee092f109a0c39403431752f11c22bbad95b7288826", bytes: 2715661, scope: "site_interior_route_read", landmarks: ["mute_nave", "last_bell_crypt"] }],
@@ -119,6 +120,11 @@ for (const [asset, expected] of [
   check(JSON.stringify(asset?.landmarkIds) === JSON.stringify(expected.landmarks), `Hollow Abbey ${expected.scope} landmark binding changed`);
   check(asset?.referenceScope === expected.scope && asset?.runtimeBackdrop === false && asset?.runtimeIntegrated === false && asset?.productionAsset === false, `Hollow Abbey ${expected.scope} overstated implementation readiness`);
 }
+check(hollowFoundry?.path === "./assets/world/hollow-abbey-foundry-operational-chain-v1.png" && hollowFoundry?.sha256 === "a4b6c7ee808befc1ac6b1adfefa1a801c4e5d5fe48e71e42e1820c789a48b1bc" && hollowFoundry?.bytes === 2656904, "Hollow Abbey foundry content-addressed evidence changed");
+check(hollowFoundry?.dimensions?.width === 1536 && hollowFoundry?.dimensions?.height === 1024 && hollowFoundry?.colorSpace === "sRGB" && hollowFoundry?.alphaPolicy === "opaque", "Hollow Abbey foundry raster contract changed");
+check(hollowFoundry?.environmentId === "environment.hollow-abbey-processional-and-mute-nave" && hollowFoundry?.siteId === "site.hollow-abbey" && hollowFoundry?.locationId === "hollow_abbey_foundry_of_borrowed_quiet" && hollowFoundry?.questId === "profession_bell_paid_in_silence", "Hollow Abbey foundry canonical binding changed");
+check(hollowFoundry?.referenceScope === "site_foundry_operational_interior" && hollowFoundry?.runtimeBackdrop === false && hollowFoundry?.runtimeIntegrated === false && hollowFoundry?.productionAsset === false, "Hollow Abbey foundry overstated implementation readiness");
+check(JSON.stringify(hollowFoundry?.use) === JSON.stringify(["f01_f08_operational_chain", "seven_silence_rooms_simultaneous_read", "deaf_worker_blackwater_ripple_sightline", "funeral_route_bypasses_molten_floor", "rain_open_casting_lantern_seven_baffles", "worker_egress_clearance_repair_and_weathering"]), "Hollow Abbey foundry accepted-use boundary changed");
 const veilTechnicalReference = WORLD_TECHNICAL_ASSETS.find(({ id }) => id === "technical_veil_coast_gloamharbor_tide_refuge");
 check(veilTechnicalReference?.approvalStatus === "approved_2d_topology_reference", "Veil technical reference must retain its reviewed 2D-only status");
 check(veilTechnicalReference?.claims?.cells === 5 && veilTechnicalReference?.claims?.internalOpenings === 4, "Veil technical reference lost reviewed cell topology");

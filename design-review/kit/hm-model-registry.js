@@ -74,6 +74,7 @@ const ENVIRONMENT_DEFINITIONS = Object.freeze([
       'concept_hollow_abbey_processional_west_arrival',
       'concept_hollow_abbey_mute_nave_route_read',
       'concept_hollow_abbey_rain_court_work_nexus',
+      'concept_hollow_abbey_foundry_operational_chain',
     ]),
     blockoutReferenceIds: Object.freeze(['spatial_blockout.wave-03b.hollow-abbey']),
     motionSystems: Object.freeze([

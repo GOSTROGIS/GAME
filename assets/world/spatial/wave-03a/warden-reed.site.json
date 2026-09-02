@@ -55,8 +55,8 @@
     {
       "id": "source.world-spatial.warden-reed-envelope",
       "path": "packages/content/src/world-spatial.data.js",
-      "sha256": "0eda59236dfd30faa5925886a2702caca26586d2cef4b8c7e4ae08f8b86a6da1",
-      "bytes": 141553,
+      "sha256": "d1f6fbc0025c5ea8cac0a6841847689dfa24ff37b91ee074de8e4085024fc55c",
+      "bytes": 143333,
       "selector": "SITE_SPATIAL_ENVELOPES[id=site.warden-reed]",
       "recordSha256": "795d8edfe50d9cf8b980fc48a5f78cb31f53e38245b86381aa250eae44111c9a",
       "authority": "authored_design_constraint"
@@ -64,8 +64,8 @@
     {
       "id": "source.world-spatial.warden-reed-activity",
       "path": "packages/content/src/world-spatial.data.js",
-      "sha256": "0eda59236dfd30faa5925886a2702caca26586d2cef4b8c7e4ae08f8b86a6da1",
-      "bytes": 141553,
+      "sha256": "d1f6fbc0025c5ea8cac0a6841847689dfa24ff37b91ee074de8e4085024fc55c",
+      "bytes": 143333,
       "selector": "SITE_ACTIVITY_CYCLES[siteId=site.warden-reed]",
       "recordSha256": "74c904740d6dad228a90c59f082ed82aa579b15a165f35dd3c0558cc695d672f",
       "authority": "authored_design_constraint"
@@ -73,8 +73,8 @@
     {
       "id": "source.world-spatial.dunmire-stilt-house",
       "path": "packages/content/src/world-spatial.data.js",
-      "sha256": "0eda59236dfd30faa5925886a2702caca26586d2cef4b8c7e4ae08f8b86a6da1",
-      "bytes": 141553,
+      "sha256": "d1f6fbc0025c5ea8cac0a6841847689dfa24ff37b91ee074de8e4085024fc55c",
+      "bytes": 143333,
       "selector": "BUILDING_TYPOLOGIES[id=dunmire_stilt_house]",
       "recordSha256": "30a733fde057bc806a9fc712947bd8b554799f1af3fb2917ba8718fb040fa4ee",
       "authority": "authored_design_constraint"

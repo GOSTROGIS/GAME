@@ -36,10 +36,10 @@
     {
       "id": "source.reference.hollow-abbey-dossier",
       "path": "design-review/world-sites/HOLLOW-ABBEY-PRECINCT-BIBLE.md",
-      "sha256": "f2a8b5e24c6a42a759b8ee8306ea89aaec46f52a5b5a3484e2291a3d3706cff6",
-      "bytes": 115234,
+      "sha256": "de23786ac3336cdea34405c77c5862f948054feb90ab71502339f1c8f3864e6a",
+      "bytes": 116132,
       "selector": "$file",
-      "recordSha256": "f2a8b5e24c6a42a759b8ee8306ea89aaec46f52a5b5a3484e2291a3d3706cff6",
+      "recordSha256": "de23786ac3336cdea34405c77c5862f948054feb90ab71502339f1c8f3864e6a",
       "bindingKind": "whole_file",
       "authority": "noncanonical_reference",
       "purpose": "Precinct topology labels, proposal geometry, architecture, routines, exclusions, and explicit open questions."
@@ -80,8 +80,8 @@
     {
       "id": "source.spatial.hollow-abbey-envelope",
       "path": "packages/content/src/world-spatial.data.js",
-      "sha256": "0eda59236dfd30faa5925886a2702caca26586d2cef4b8c7e4ae08f8b86a6da1",
-      "bytes": 141553,
+      "sha256": "d1f6fbc0025c5ea8cac0a6841847689dfa24ff37b91ee074de8e4085024fc55c",
+      "bytes": 143333,
       "selector": "SITE_SPATIAL_ENVELOPES[id=site.hollow-abbey]",
       "recordSha256": "88ed93cb0895b1c6f0662e9bf0488b496b1a7da0ff17550bdd4e391175f87983",
       "bindingKind": "selected_record",
@@ -91,8 +91,8 @@
     {
       "id": "source.spatial.hollow-abbey-activity",
       "path": "packages/content/src/world-spatial.data.js",
-      "sha256": "0eda59236dfd30faa5925886a2702caca26586d2cef4b8c7e4ae08f8b86a6da1",
-      "bytes": 141553,
+      "sha256": "d1f6fbc0025c5ea8cac0a6841847689dfa24ff37b91ee074de8e4085024fc55c",
+      "bytes": 143333,
       "selector": "SITE_ACTIVITY_CYCLES[siteId=site.hollow-abbey]",
       "recordSha256": "84e32e47dbb9877a6a90a65a74f70c472ebe43e8e9c20c1601c629164e7b085a",
       "bindingKind": "selected_record",
@@ -102,8 +102,8 @@
     {
       "id": "source.spatial.hollow-abbey-nave",
       "path": "packages/content/src/world-spatial.data.js",
-      "sha256": "0eda59236dfd30faa5925886a2702caca26586d2cef4b8c7e4ae08f8b86a6da1",
-      "bytes": 141553,
+      "sha256": "d1f6fbc0025c5ea8cac0a6841847689dfa24ff37b91ee074de8e4085024fc55c",
+      "bytes": 143333,
       "selector": "BUILDING_TYPOLOGIES[id=hollow_abbey_nave]",
       "recordSha256": "63986c687f827aed9fef84584f238870d0f9ccea7f07d60a24fa7895e48de81f",
       "bindingKind": "selected_record",
@@ -113,8 +113,8 @@
     {
       "id": "source.spatial.hollow-abbey-foundry",
       "path": "packages/content/src/world-spatial.data.js",
-      "sha256": "0eda59236dfd30faa5925886a2702caca26586d2cef4b8c7e4ae08f8b86a6da1",
-      "bytes": 141553,
+      "sha256": "d1f6fbc0025c5ea8cac0a6841847689dfa24ff37b91ee074de8e4085024fc55c",
+      "bytes": 143333,
       "selector": "BUILDING_TYPOLOGIES[id=hollow_abbey_foundry]",
       "recordSha256": "aca363708811303fdd478fff627cb4fa8c215c9ba60c4681bf24b295ed4a1f34",
       "bindingKind": "selected_record",
@@ -190,8 +190,8 @@
     {
       "id": "source.art.hollow-abbey-accepted",
       "path": "packages/content/src/world-spatial.data.js",
-      "sha256": "0eda59236dfd30faa5925886a2702caca26586d2cef4b8c7e4ae08f8b86a6da1",
-      "bytes": 141553,
+      "sha256": "d1f6fbc0025c5ea8cac0a6841847689dfa24ff37b91ee074de8e4085024fc55c",
+      "bytes": 143333,
       "selector": "ENVIRONMENT_ART_DIRECTION.acceptedVisualReferences[id in concept_hollow_abbey_nave,concept_hollow_abbey_processional_west_arrival,concept_hollow_abbey_mute_nave_route_read,concept_hollow_abbey_rain_court_work_nexus]",
       "recordSha256": "e65cd01077f067ac224a4a9a33f045416046fa1d7b4d45fc1fe91db889799c8d",
       "bindingKind": "selected_record_set",
