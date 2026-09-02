@@ -1,0 +1,517 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "assets/world/spatial/site-blockout-reference-v2.schema.json",
+  "title": "Sable Reach generic site-local blockout reference v2",
+  "description": "A variable-count, noncanonical site-local graph that binds authoritative sources without claiming atlas, runtime, construction, model, or production readiness.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "siteId",
+    "title",
+    "claims",
+    "authority",
+    "sourceBindings",
+    "spatialReference",
+    "zones",
+    "spaces",
+    "nodes",
+    "links",
+    "safeCells",
+    "stateMachines",
+    "activityPhases",
+    "hydrologySystems",
+    "habitats",
+    "actorSlots",
+    "encounterSlots",
+    "routePrograms",
+    "overlayBindings",
+    "questCrosswalk",
+    "artDirection",
+    "consumerHandoff"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 2 },
+    "id": { "type": "string", "pattern": "^site-blockout\\." },
+    "siteId": { "type": "string", "pattern": "^site\\." },
+    "title": { "type": "string", "minLength": 1 },
+    "claims": { "$ref": "#/$defs/claims" },
+    "authority": { "$ref": "#/$defs/authority" },
+    "sourceBindings": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/sourceBinding" } },
+    "spatialReference": { "$ref": "#/$defs/spatialReference" },
+    "zones": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/zone" } },
+    "spaces": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/space" } },
+    "nodes": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/node" } },
+    "links": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/link" } },
+    "safeCells": { "type": "array", "items": { "$ref": "#/$defs/safeCell" } },
+    "stateMachines": { "type": "array", "items": { "$ref": "#/$defs/stateMachine" } },
+    "activityPhases": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/activityPhase" } },
+    "hydrologySystems": { "type": "array", "items": { "$ref": "#/$defs/hydrologySystem" } },
+    "habitats": { "type": "array", "items": { "$ref": "#/$defs/habitat" } },
+    "actorSlots": { "type": "array", "items": { "$ref": "#/$defs/actorSlot" } },
+    "encounterSlots": { "type": "array", "items": { "$ref": "#/$defs/encounterSlot" } },
+    "routePrograms": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/routeProgram" } },
+    "overlayBindings": { "type": "array", "items": { "$ref": "#/$defs/overlayBinding" } },
+    "questCrosswalk": { "type": "array", "items": { "$ref": "#/$defs/questBinding" } },
+    "artDirection": { "$ref": "#/$defs/artDirection" },
+    "consumerHandoff": { "$ref": "#/$defs/consumerHandoff" }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "repoPath": { "type": "string", "pattern": "^(?![A-Za-z]:|/|.*\\\\|.*(?:^|/)\\.\\.(?:/|$)).+$" },
+    "vector3": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "number" } },
+    "stringList": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "claims": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical",
+        "exactPlacement",
+        "surveyedGeometry",
+        "atlasExportEligible",
+        "runtimeIntegrated",
+        "runtimeNavigation",
+        "runtimeCollision",
+        "constructionReady",
+        "productionGeometry",
+        "productionAsset",
+        "staticModels",
+        "animatedModels",
+        "releaseReady",
+        "authorSelfApproval",
+        "integrationAuthorized"
+      ],
+      "properties": {
+        "canonical": { "const": false },
+        "exactPlacement": { "const": false },
+        "surveyedGeometry": { "const": false },
+        "atlasExportEligible": { "const": false },
+        "runtimeIntegrated": { "const": false },
+        "runtimeNavigation": { "const": false },
+        "runtimeCollision": { "const": false },
+        "constructionReady": { "const": false },
+        "productionGeometry": { "const": false },
+        "productionAsset": { "const": false },
+        "staticModels": { "const": false },
+        "animatedModels": { "const": false },
+        "releaseReady": { "const": false },
+        "authorSelfApproval": { "const": false },
+        "integrationAuthorized": { "const": false }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["classification", "precedence", "consumer", "relocationRule"],
+      "properties": {
+        "classification": { "const": "noncanonical_site_local_reference" },
+        "precedence": { "type": "array", "minItems": 3, "items": { "type": "string", "minLength": 1 } },
+        "consumer": { "type": "string", "minLength": 1 },
+        "relocationRule": { "type": "string", "minLength": 1 }
+      }
+    },
+    "sourceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path", "sha256", "bytes", "selector", "recordSha256", "bindingKind", "authority", "purpose"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^source\\." },
+        "path": { "$ref": "#/$defs/repoPath" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "selector": { "type": "string", "minLength": 1 },
+        "recordSha256": { "$ref": "#/$defs/sha256" },
+        "bindingKind": { "enum": ["whole_file", "selected_record", "selected_record_set"] },
+        "authority": { "enum": ["canon", "authored_design_constraint", "accepted_quest_contract", "accepted_art_direction", "noncanonical_reference"] },
+        "purpose": { "type": "string", "minLength": 1 }
+      }
+    },
+    "bounds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum", "maximum"],
+      "properties": {
+        "minimum": { "$ref": "#/$defs/vector3" },
+        "maximum": { "$ref": "#/$defs/vector3" }
+      }
+    },
+    "spatialReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["coordinateSpaceId", "coordinateSemantics", "axes", "unit", "atlasSiteAnchor", "atlasAnchorToLocalOriginOffsetMeters", "localOriginAtlasCoordinate", "localBoundsMeters", "placementStatus", "precisionNotice"],
+      "properties": {
+        "coordinateSpaceId": { "const": "veyl_local_grid_v1" },
+        "coordinateSemantics": { "const": "candidate_site_local_fictional_meters" },
+        "axes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["x", "y", "z"],
+          "properties": {
+            "x": { "type": "string", "minLength": 1 },
+            "y": { "type": "string", "minLength": 1 },
+            "z": { "const": "local up" }
+          }
+        },
+        "unit": { "const": "meter" },
+        "atlasSiteAnchor": { "$ref": "#/$defs/vector3" },
+        "atlasAnchorToLocalOriginOffsetMeters": { "$ref": "#/$defs/vector3" },
+        "localOriginAtlasCoordinate": { "$ref": "#/$defs/vector3" },
+        "localBoundsMeters": { "$ref": "#/$defs/bounds" },
+        "placementStatus": { "const": "candidate_relocatable_not_atlas_geometry" },
+        "precisionNotice": { "type": "string", "minLength": 1 }
+      }
+    },
+    "zone": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "kind", "typologyBindingId", "boundsLocalMeters", "spaceIds", "sourceBindingIds"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^zone\\." },
+        "name": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string", "minLength": 1 },
+        "typologyBindingId": { "type": ["string", "null"] },
+        "boundsLocalMeters": { "$ref": "#/$defs/bounds" },
+        "spaceIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "sourceBindingIds": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "space": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "code", "name", "zoneId", "kind", "localCentroidMeters", "boundsLocalMeters", "level", "capacity", "authority", "designTags", "sourceBindingIds"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^space\\." },
+        "code": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "zoneId": { "type": "string" },
+        "kind": { "type": "string", "minLength": 1 },
+        "localCentroidMeters": { "$ref": "#/$defs/vector3" },
+        "boundsLocalMeters": { "$ref": "#/$defs/bounds" },
+        "level": { "type": "string", "minLength": 1 },
+        "capacity": { "type": "integer", "minimum": 0 },
+        "authority": { "enum": ["canon_identity_proposal_geometry", "authored_design_constraint_proposal_geometry", "proposal_only"] },
+        "designTags": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 } },
+        "sourceBindingIds": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "spaceId", "localCoordinateMeters", "traversable", "sourceBindingIds"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^node\\." },
+        "kind": { "enum": ["space_centroid", "external_route_port", "overlay_proxy"] },
+        "spaceId": { "type": ["string", "null"] },
+        "localCoordinateMeters": { "$ref": "#/$defs/vector3" },
+        "traversable": { "type": "boolean" },
+        "sourceBindingIds": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "fromNodeId", "toNodeId", "bidirectional", "kind", "clearWidthMeters", "clearHeightMeters", "maximumSlope", "surface", "stateMachineId", "phaseIds", "authority", "sourceBindingIds"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^link\\." },
+        "fromNodeId": { "type": "string" },
+        "toNodeId": { "type": "string" },
+        "bidirectional": { "type": "boolean" },
+        "kind": { "type": "string", "minLength": 1 },
+        "clearWidthMeters": { "type": "number", "exclusiveMinimum": 0 },
+        "clearHeightMeters": { "type": "number", "exclusiveMinimum": 0 },
+        "maximumSlope": { "type": "number", "minimum": 0 },
+        "surface": { "type": "string", "minLength": 1 },
+        "stateMachineId": { "type": ["string", "null"] },
+        "phaseIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "authority": { "enum": ["canon_route_binding", "authored_design_constraint", "proposal_only", "open_relation"] },
+        "sourceBindingIds": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "safeCell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "spaceId", "capacity", "phaseIds", "exclusionRule"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^safe-cell\\." },
+        "spaceId": { "type": "string" },
+        "capacity": { "type": "integer", "minimum": 1 },
+        "phaseIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "exclusionRule": { "type": "string", "minLength": 1 }
+      }
+    },
+    "transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to", "trigger", "irreversible"],
+      "properties": {
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "trigger": { "type": "string", "minLength": 1 },
+        "irreversible": { "type": "boolean" }
+      }
+    },
+    "stateRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["targetId", "state", "behavior", "linkTraversal"],
+      "properties": {
+        "targetId": { "type": "string" },
+        "state": { "type": "string" },
+        "behavior": { "type": "string", "minLength": 1 },
+        "linkTraversal": { "enum": ["open", "closed", null] }
+      }
+    },
+    "stateMachine": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "initialState", "states", "transitions", "rules", "ruleSemantics", "unruledTargetBehavior", "affectedSpaceIds", "affectedLinkIds", "affectedActorSlotIds", "persistence", "sourceBindingIds"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^state\\." },
+        "initialState": { "type": "string" },
+        "states": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "transitions": { "type": "array", "items": { "$ref": "#/$defs/transition" } },
+        "rules": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/stateRule" } },
+        "ruleSemantics": { "const": "state_local_nonpersistent_override" },
+        "unruledTargetBehavior": { "const": "base_record_behavior" },
+        "affectedSpaceIds": { "type": "array", "items": { "type": "string" } },
+        "affectedLinkIds": { "type": "array", "items": { "type": "string" } },
+        "affectedActorSlotIds": { "type": "array", "items": { "type": "string" } },
+        "persistence": { "type": "string", "minLength": 1 },
+        "sourceBindingIds": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "activityPhase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "canonicalPhaseId", "density", "activities", "activeRouteProgramIds", "staffedSpaceIds", "visualState", "acousticState"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^phase\\." },
+        "canonicalPhaseId": { "type": "string" },
+        "density": { "type": "string", "minLength": 1 },
+        "activities": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "activeRouteProgramIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "staffedSpaceIds": { "type": "array", "items": { "type": "string" } },
+        "visualState": { "type": "string", "minLength": 1 },
+        "acousticState": { "type": "string", "minLength": 1 }
+      }
+    },
+    "hydrologySystem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "scope", "spaceIds", "sourceNodeIds", "terminalNodeIds", "maintenanceRouteProgramIds", "connectionPolicy", "scopedConnectionHydrologyIds", "prohibitedHydrologyIds", "stateMachineId", "sourceBindingIds", "nonclaim"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^hydrology\\." },
+        "kind": { "type": "string", "minLength": 1 },
+        "scope": { "enum": ["local_open_surface", "local_carried_supply", "local_closed_loop", "quest_bounded_receptor", "off_precinct_excluded"] },
+        "spaceIds": { "type": "array", "items": { "type": "string" } },
+        "sourceNodeIds": { "type": "array", "items": { "type": "string" } },
+        "terminalNodeIds": { "type": "array", "items": { "type": "string" } },
+        "maintenanceRouteProgramIds": { "type": "array", "items": { "type": "string" } },
+        "connectionPolicy": { "type": "string", "minLength": 1 },
+        "scopedConnectionHydrologyIds": { "type": "array", "items": { "type": "string" } },
+        "prohibitedHydrologyIds": { "type": "array", "items": { "type": "string" } },
+        "stateMachineId": { "type": ["string", "null"] },
+        "sourceBindingIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "nonclaim": { "type": "string", "minLength": 1 }
+      }
+    },
+    "population": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum", "maximum", "rule"],
+      "properties": {
+        "minimum": { "type": "integer", "minimum": 0 },
+        "maximum": { "type": "integer", "minimum": 0 },
+        "rule": { "type": "string", "minLength": 1 }
+      }
+    },
+    "habitat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "sourceHabitatId", "familyId", "creatureIds", "role", "spaceIds", "phaseIds", "population", "safeCellExclusionIds", "overlayBindingId", "environmentCues", "counterplay", "sourceBindingIds"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^habitat\\." },
+        "sourceHabitatId": { "type": ["string", "null"] },
+        "familyId": { "type": ["string", "null"] },
+        "creatureIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "role": { "enum": ["primary", "conditional_revisit", "quest_bound"] },
+        "spaceIds": { "type": "array", "items": { "type": "string" } },
+        "phaseIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "population": { "$ref": "#/$defs/population" },
+        "safeCellExclusionIds": { "type": "array", "items": { "type": "string" } },
+        "overlayBindingId": { "type": ["string", "null"] },
+        "environmentCues": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+        "counterplay": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "sourceBindingIds": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "actorAssetMaturity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["conceptMasterPath", "transparentCutoutPath", "staticModelPath", "animatedModelPath", "status"],
+      "properties": {
+        "conceptMasterPath": { "type": ["string", "null"] },
+        "transparentCutoutPath": { "type": ["string", "null"] },
+        "staticModelPath": { "const": null },
+        "animatedModelPath": { "const": null },
+        "status": { "enum": ["concept_pair_only", "concept_master_only", "awaiting_art"] }
+      }
+    },
+    "scheduleEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["phaseId", "primarySpaceId", "routeProgramIds", "activity"],
+      "properties": {
+        "phaseId": { "type": "string" },
+        "primarySpaceId": { "type": ["string", "null"] },
+        "routeProgramIds": { "type": "array", "items": { "type": "string" } },
+        "activity": { "type": "string", "minLength": 1 }
+      }
+    },
+    "actorSlot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "actorId", "slotKind", "homeSpaceId", "conversationSpaceIds", "schedule", "questIds", "spawnPolicy", "spawnAuthorized", "assetMaturity", "sourceBindingIds"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^actor-slot\\." },
+        "actorId": { "type": "string", "minLength": 1 },
+        "slotKind": { "enum": ["founding_schedule", "quest_bound", "off_site_marker"] },
+        "homeSpaceId": { "type": ["string", "null"] },
+        "conversationSpaceIds": { "type": "array", "items": { "type": "string" } },
+        "schedule": { "type": "array", "items": { "$ref": "#/$defs/scheduleEntry" } },
+        "questIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "spawnPolicy": { "type": "string", "minLength": 1 },
+        "spawnAuthorized": { "type": "boolean" },
+        "assetMaturity": { "$ref": "#/$defs/actorAssetMaturity" },
+        "sourceBindingIds": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "encounterSlot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "actorOrCreatureId", "spaceIds", "requiredCount", "stateMachineId", "overlayBindingId", "safeCellExclusionIds", "sourceBindingIds"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^encounter-slot\\." },
+        "actorOrCreatureId": { "type": "string", "minLength": 1 },
+        "spaceIds": { "type": "array", "items": { "type": "string" } },
+        "requiredCount": { "type": "integer", "minimum": 1 },
+        "stateMachineId": { "type": ["string", "null"] },
+        "overlayBindingId": { "type": ["string", "null"] },
+        "safeCellExclusionIds": { "type": "array", "items": { "type": "string" } },
+        "sourceBindingIds": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "routeProgram": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "role", "topologyMode", "nodeIds", "linkIds", "phaseIds", "stateMachineId", "minimumClearWidthMeters", "accessibility", "sourceBindingIds"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^route-program\\." },
+        "role": { "type": "string", "minLength": 1 },
+        "topologyMode": { "enum": ["ordered_local_trace", "local_network", "external_overlay_reference"] },
+        "nodeIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "linkIds": { "type": "array", "items": { "type": "string" } },
+        "phaseIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "stateMachineId": { "type": ["string", "null"] },
+        "minimumClearWidthMeters": { "type": "number", "exclusiveMinimum": 0 },
+        "accessibility": { "type": "string", "minLength": 1 },
+        "sourceBindingIds": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "interfaceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceAnchorId", "localNodeId", "role"],
+      "properties": {
+        "sourceAnchorId": { "type": "string" },
+        "localNodeId": { "type": "string" },
+        "role": { "type": "string", "minLength": 1 }
+      }
+    },
+    "overlayCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nodes", "directedEdges", "safeCells", "utilityEndpoints", "egressPaths", "objectiveEndpoints", "habitats"],
+      "properties": {
+        "nodes": { "type": "integer", "minimum": 0 },
+        "directedEdges": { "type": "integer", "minimum": 0 },
+        "safeCells": { "type": "integer", "minimum": 0 },
+        "utilityEndpoints": { "type": "integer", "minimum": 0 },
+        "egressPaths": { "type": "integer", "minimum": 0 },
+        "objectiveEndpoints": { "type": "integer", "minimum": 0 },
+        "habitats": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "overlayBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "questId", "localProxyNodeId", "sourceGraphId", "sourceGraphRecordSha256", "expectedCounts", "interfaceBindings", "stateMachineId", "bindingMode", "sourceBindingIds"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^overlay\\." },
+        "kind": { "enum": ["local_stateful_cell", "accepted_external_graph"] },
+        "questId": { "type": "string" },
+        "localProxyNodeId": { "type": ["string", "null"] },
+        "sourceGraphId": { "type": ["string", "null"] },
+        "sourceGraphRecordSha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+        "expectedCounts": { "$ref": "#/$defs/overlayCounts" },
+        "interfaceBindings": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/interfaceBinding" } },
+        "stateMachineId": { "type": "string" },
+        "bindingMode": { "enum": ["local_overlay_no_base_space", "id_and_canonical_json_hash_no_contract_copy"] },
+        "sourceBindingIds": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "objectiveBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["objectiveIndex", "target", "spaceIds", "routeProgramIds", "encounterSlotIds"],
+      "properties": {
+        "objectiveIndex": { "type": "integer", "minimum": 0 },
+        "target": { "type": "string", "minLength": 1 },
+        "spaceIds": { "type": "array", "items": { "type": "string" } },
+        "routeProgramIds": { "type": "array", "items": { "type": "string" } },
+        "encounterSlotIds": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "questBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["questId", "questRecordSha256", "bindingMode", "overlayBindingId", "objectives", "sourceBindingId"],
+      "properties": {
+        "questId": { "type": "string" },
+        "questRecordSha256": { "$ref": "#/$defs/sha256" },
+        "bindingMode": { "const": "id_and_canonical_json_hash_no_contract_copy" },
+        "overlayBindingId": { "type": ["string", "null"] },
+        "objectives": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/objectiveBinding" } },
+        "sourceBindingId": { "type": "string" }
+      }
+    },
+    "artDirection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["acceptedReferenceIds", "referenceBoundary", "exteriorRead", "interiorRead", "light", "weather", "materials", "forbidden"],
+      "properties": {
+        "acceptedReferenceIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "referenceBoundary": { "type": "string", "minLength": 1 },
+        "exteriorRead": { "type": "array", "minItems": 3, "items": { "type": "string" } },
+        "interiorRead": { "type": "array", "minItems": 3, "items": { "type": "string" } },
+        "light": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+        "weather": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+        "materials": { "type": "array", "minItems": 4, "items": { "type": "string" } },
+        "forbidden": { "type": "array", "minItems": 4, "items": { "type": "string" } }
+      }
+    },
+    "consumerHandoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["consumer", "intendedUses", "requiredIndependentReviews", "immutableAcceptanceRule", "limitations"],
+      "properties": {
+        "consumer": { "type": "string", "minLength": 1 },
+        "intendedUses": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "requiredIndependentReviews": { "type": "integer", "minimum": 1 },
+        "immutableAcceptanceRule": { "type": "string", "minLength": 1 },
+        "limitations": { "type": "array", "minItems": 4, "items": { "type": "string" } }
+      }
+    }
+  }
+}

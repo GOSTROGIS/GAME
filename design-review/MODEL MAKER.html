@@ -199,7 +199,7 @@ const BY_ID = new Map(ALL.map((s) => [s.id, s]));
 const FRONT_VIEW = { 'enemy.ash-husk': { pos: [1.35, 1.06, 2.35], target: [0, 0.90, 0] } };
 
 document.getElementById('roster').textContent =
-  `${COUNTS.grandTotal} subjects catalogued \u00b7 ${COUNTS.environments} environment reference${COUNTS.environments === 1 ? '' : 's'} tracked separately \u00b7 ${COUNTS.foundingTotal} founding \u00b7 ${COUNTS.expansionTotal} expansion \u00b7 `
+  `${COUNTS.grandTotal} subjects catalogued \u00b7 ${COUNTS.environments} environment reference${COUNTS.environments === 1 ? '' : 's'} and ${COUNTS.spatialBlockouts} reviewed spatial blockout${COUNTS.spatialBlockouts === 1 ? '' : 's'} tracked separately \u00b7 ${COUNTS.foundingTotal} founding \u00b7 ${COUNTS.expansionTotal} expansion \u00b7 `
   + `${REG.bestiary.length} founding bestiary \u00b7 ${COUNTS.namedCast} named \u00b7 ${COUNTS.origins} origins \u00b7 `
   + `${COUNTS.expansionCharacters} new characters \u00b7 ${COUNTS.expansionCreatures} new creatures \u00b7 ${COUNTS.expansionItems} signature items \u00b7 ${COUNTS.expansionQuests} quests \u00b7 `
   + `${COUNTS.companionContracts} autonomous companion contracts \u00b7 ${COUNTS.agencyContracts} bounded agency contracts \u00b7 ${COUNTS.actorContracts} aggregate actor contracts \u00b7 `
@@ -232,6 +232,9 @@ function setHeader({ eyebrow, title, idTag, stat }) {
 }
 
 function titleCase(id) { return id.length ? id[0].toUpperCase() + id.slice(1) : id; }
+function humanizeCountKey(id) {
+  return titleCase(id.replace(/([a-z0-9])([A-Z])/g, '$1 $2').replaceAll('_', ' '));
+}
 
 /* ------------------------------------------------------------- clip bar */
 function renderClipBar(items) {
@@ -603,7 +606,7 @@ function mountEnvironment(environment) {
     eyebrow: 'Sable Reach \u00b7 environment reference \u00b7 direction only',
     title: environment.name,
     idTag: environment.id,
-    stat: `${environment.concepts.length} accepted concept reference${environment.concepts.length === 1 ? '' : 's'} \u00b7 static scene ${environment.staticSceneStatus} \u00b7 animated scene ${environment.animatedSceneStatus}`,
+    stat: `${environment.concepts.length} accepted concept reference${environment.concepts.length === 1 ? '' : 's'} \u00b7 ${environment.blockoutReferences.length} reviewed blockout reference${environment.blockoutReferences.length === 1 ? '' : 's'} \u00b7 static scene ${environment.staticSceneStatus} \u00b7 animated scene ${environment.animatedSceneStatus}`,
   });
   renderEnvironmentConcepts(environment);
   tierBody.innerHTML = `
@@ -620,6 +623,19 @@ function mountEnvironment(environment) {
     </div>
     <p class="eyebrow" style="margin:24px 0 10px">Motion systems to author</p>
     <ul class="motion-systems">${environment.motionSystems.map((system) => `<li>${system}</li>`).join('')}</ul>
+    <p class="eyebrow" style="margin:24px 0 10px">Spatial blockout data \u00b7 loaded on demand</p>
+    <div class="environment-status">${environment.blockoutReferences.map((reference) => `
+      <article data-environment-blockout="${reference.id}">
+        <p class="nano" style="margin:0 0 6px;color:#8aa596">${reference.name} \u00b7 schema v${reference.schemaVersion}</p>
+        <p style="margin:0 0 8px;color:#a7aaa4;font:var(--type-body-xs)">${Object.entries(reference.counts).map(([key, value]) => `${value} ${humanizeCountKey(key)}`).join(' \u00b7 ')}</p>
+        <p style="margin:0 0 9px;color:#777f7a;font:var(--type-nano)">${reference.limitations.join(' ')}</p>
+        <p style="display:flex;flex-wrap:wrap;gap:8px 16px;margin:0;font:var(--type-nano)">
+          <a href="${reference.payloadSrc}" style="color:#d9bd82">Open blockout JSON</a>
+          <a href="${reference.indexSrc}" style="color:#9ba7a1">Index</a>
+          <a href="${reference.provenanceSrc}" style="color:#9ba7a1">Provenance</a>
+          <a href="${reference.schemaSrc}" style="color:#9ba7a1">Schema</a>
+        </p>
+      </article>`).join('')}</div>
     <p class="eyebrow" style="margin:24px 0 8px">Content bindings</p>
     <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Site <code>${environment.siteId}</code>${environment.routeId ? ` \u00b7 route <code>${environment.routeId}</code>` : ''} \u00b7 location <code>${environment.locationId}</code> \u00b7 quest <code>${environment.questId}</code></p>
     <p class="eyebrow" style="margin:24px 0 8px">Authority boundary</p>
@@ -736,7 +752,7 @@ function buildGroups(filter) {
   const f = filter.trim().toLowerCase();
   const match = (s, extra) => !f || s.name.toLowerCase().includes(f) || (extra || '').toLowerCase().includes(f);
   const groups = [
-    { label: `Environments \u2014 direction and scene pipeline (${REG.environments.length})`, rows: REG.environments.filter((s) => match(s, `${s.regionId} ${s.siteId} ${s.locationId} ${s.questId}`)).map((s) => rowHtml(s, `${s.siteId} \u00b7 ${s.concepts.length} accepted concepts`)) },
+    { label: `Environments \u2014 direction and scene pipeline (${REG.environments.length})`, rows: REG.environments.filter((s) => match(s, `${s.regionId} ${s.siteId} ${s.locationId} ${s.questId}`)).map((s) => rowHtml(s, `${s.siteId} \u00b7 ${s.concepts.length} accepted concepts \u00b7 ${s.blockoutReferences.length} reviewed blockout`)) },
     { label: `Bestiary \u2014 sculpted (${REG.sculpted.length})`, rows: REG.sculpted.filter((s) => match(s, s.family)).map((s) => rowHtml(s, s.family)) },
     { label: `Named characters \u2014 generic rig (${REG.namedCast.length})`, rows: REG.namedCast.filter((s) => match(s, s.role + ' ' + s.faction)).map((s) => rowHtml(s, s.role)) },
     { label: `Expansion characters \u2014 lore and production pipeline (${REG.expansionCharacters.length})`, rows: REG.expansionCharacters.filter((s) => match(s, s.role + ' ' + s.faction + ' ' + s.epithet)).map((s) => rowHtml(s, `${s.faction} \u00b7 ${s.epithet}`)) },

@@ -11,6 +11,7 @@ import {
   url,
 } from '../design-review/kit/hm-concept-art.js';
 import { buildRegistry, tally } from '../design-review/kit/hm-model-registry.js';
+import { WORLD_SPATIAL_BLOCKOUT_ASSETS } from '../src/data/worldAssets.js';
 
 const toViewId = (prefix, id) => `${prefix}.${id.replaceAll('_', '-')}`;
 
@@ -104,6 +105,7 @@ assert.equal(counts.total, 228);
 assert.equal(counts.foundingTotal, 228);
 assert.equal(counts.grandTotal, 337);
 assert.equal(counts.environments, 2);
+assert.equal(counts.spatialBlockouts, 2);
 assert.equal(counts.expansionItems, 67);
 assert.equal(counts.expansionQuests, 49);
 assert.equal(counts.companionContracts, 4);
@@ -181,6 +183,14 @@ assert.equal(wardenEnvironment.concepts[0], wardenEnvironment.exteriorConcept);
 assert.equal(wardenEnvironment.concepts[1], wardenEnvironment.interiorConcept);
 assert.equal(/^https?:/i.test(wardenEnvironment.exteriorSrc), false);
 assert.equal(/^https?:/i.test(wardenEnvironment.interiorSrc), false);
+assert.equal(Object.isFrozen(wardenEnvironment.blockoutReferences), true);
+assert.equal(wardenEnvironment.blockoutReferences.length, 1);
+assert.equal(wardenEnvironment.blockoutReferences[0].id, 'spatial_blockout.wave-03a.warden-reed');
+assert.equal(wardenEnvironment.blockoutReferences[0].schemaVersion, 1);
+assert.equal(wardenEnvironment.blockoutReferences[0].payloadSrc, '../assets/world/spatial/wave-03a/warden-reed.site.json');
+assert.equal(wardenEnvironment.blockoutReferences[0].runtimeIntegrated, false);
+assert.equal(wardenEnvironment.blockoutReferences[0].staticScene, false);
+assert.equal(wardenEnvironment.blockoutReferences[0].animatedScene, false);
 
 const hollowEnvironment = registry.environments.find(({ id }) => id === 'environment.hollow-abbey-processional-and-mute-nave');
 assert.ok(hollowEnvironment);
@@ -263,6 +273,20 @@ assert.deepEqual(hollowEnvironment.concepts[2], {
 assert.equal(/^https?:/i.test(hollowEnvironment.exteriorSrc), false);
 assert.equal(/^https?:/i.test(hollowEnvironment.interiorSrc), false);
 assert.equal(/^https?:/i.test(hollowEnvironment.concepts[2].src), false);
+assert.equal(Object.isFrozen(hollowEnvironment.blockoutReferences), true);
+assert.equal(hollowEnvironment.blockoutReferences.length, 1);
+assert.equal(hollowEnvironment.blockoutReferences[0].id, 'spatial_blockout.wave-03b.hollow-abbey');
+assert.equal(hollowEnvironment.blockoutReferences[0].schemaVersion, 2);
+assert.equal(hollowEnvironment.blockoutReferences[0].payloadSrc, '../assets/world/spatial/wave-03b/hollow-abbey.site.json');
+assert.equal(hollowEnvironment.blockoutReferences[0].runtimeIntegrated, false);
+assert.equal(hollowEnvironment.blockoutReferences[0].constructionReady, false);
+assert.equal(hollowEnvironment.blockoutReferences[0].productionGeometry, false);
+
+const environmentBoundSpatialIds = WORLD_SPATIAL_BLOCKOUT_ASSETS
+  .filter(({ environmentIds }) => environmentIds.length)
+  .map(({ id }) => id)
+  .sort();
+assert.deepEqual(registry.environments.flatMap(({ blockoutReferences }) => blockoutReferences.map(({ id }) => id)).sort(), environmentBoundSpatialIds);
 
 const expansionRows = [...registry.expansionCharacters, ...registry.expansionCreatures];
 for (const [contentId, masterSrc] of acceptedExpansionMasters) {

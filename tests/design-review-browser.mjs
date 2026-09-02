@@ -13,6 +13,11 @@ const mime = {
   '.json': 'application/json',
   '.png': 'image/png',
 };
+const spatialPayloadSuffixes = Object.freeze([
+  '/assets/world/spatial/world-spatial-wave-02-v9.annex.json',
+  '/assets/world/spatial/wave-03a/warden-reed.site.json',
+  '/assets/world/spatial/wave-03b/hollow-abbey.site.json',
+]);
 
 const fixture = String.raw`<!doctype html>
 <meta charset="utf-8">
@@ -28,7 +33,7 @@ const fixture = String.raw`<!doctype html>
   const counts = tally(registry);
   const subjects = [...registry.bestiary, ...registry.namedCast, ...registry.origins, ...registry.expansionCharacters, ...registry.expansionCreatures];
   const environments = registry.environments;
-  document.querySelector('#roster').textContent = counts.expansionAwaitingArt + ' expansion awaiting art · ' + counts.awaitingArt + ' founding bestiary awaiting art';
+  document.querySelector('#roster').textContent = counts.expansionAwaitingArt + ' expansion awaiting art · ' + counts.awaitingArt + ' founding bestiary awaiting art · ' + counts.spatialBlockouts + ' spatial blockouts';
   const host = document.querySelector('#subjects');
   for (const subject of subjects) {
     const row = document.createElement('button');
@@ -78,6 +83,15 @@ const fixture = String.raw`<!doctype html>
     image.onerror = () => reject(new Error(id + ' failed to load ' + src));
     image.src = src;
   });
+
+  const loadRepositoryJson = async (id, src) => {
+    if (!src) throw new Error(id + ' has no repository JSON');
+    const response = await fetch(src);
+    if (!response.ok) throw new Error(id + ' failed to load ' + src + ' (' + response.status + ')');
+    const text = await response.text();
+    const value = JSON.parse(text);
+    return { id, src: response.url, bytes: new TextEncoder().encode(text).length, schemaVersion: value.schemaVersion ?? null, payloadId: value.id ?? value.batchId ?? null };
+  };
 
   try {
     const acceptedCharnelIds = new Set([
@@ -129,6 +143,9 @@ const fixture = String.raw`<!doctype html>
     const environmentImages = await Promise.all(environments.flatMap((environment) => environment.concepts.map((concept) =>
       loadRepositoryImage(concept.id, concept.src)
     )));
+    const blockoutPayloads = await Promise.all(environments.flatMap((environment) => environment.blockoutReferences.map((reference) =>
+      loadRepositoryJson(reference.id, reference.payloadSrc)
+    )));
     globalThis.__DESIGN_REVIEW_TEST__ = {
       ready: true,
       counts,
@@ -146,6 +163,7 @@ const fixture = String.raw`<!doctype html>
         runtimeBackdrop: wardenEnvironment.runtimeBackdrop,
         runtimeIntegrated: wardenEnvironment.runtimeIntegrated,
         productionAsset: wardenEnvironment.productionAsset,
+        blockoutIds: wardenEnvironment.blockoutReferences.map(({ id }) => id),
       },
       hollowEnvironment: {
         id: hollowEnvironment.id,
@@ -159,6 +177,7 @@ const fixture = String.raw`<!doctype html>
         runtimeBackdrop: hollowEnvironment.runtimeBackdrop,
         runtimeIntegrated: hollowEnvironment.runtimeIntegrated,
         productionAsset: hollowEnvironment.productionAsset,
+        blockoutIds: hollowEnvironment.blockoutReferences.map(({ id }) => id),
       },
       acceptedCharnel: acceptedCharnel.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
       acceptedRemaining: acceptedRemaining.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
@@ -167,6 +186,7 @@ const fixture = String.raw`<!doctype html>
         .map(({ contentId, visualBrief, visualBriefStatus, conceptGenerationBlocked, conceptGenerationBlocker, reason }) => ({ contentId, visualBrief, visualBriefStatus, conceptGenerationBlocked, conceptGenerationBlocker, reason })),
       images,
       environmentImages,
+      blockoutPayloads,
     };
   } catch (error) {
     globalThis.__DESIGN_REVIEW_TEST__ = { ready: false, error: String(error) };
@@ -205,14 +225,16 @@ const browser = await chromium.launch({
 const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
 const pageErrors = [];
 const providerRequests = [];
-const spatialAnnexRequests = [];
+const eagerSpatialPayloadRequests = [];
+let trackedRealSurface = null;
 page.on('pageerror', (error) => pageErrors.push(error.message));
 page.on('request', (request) => {
   if (/googleusercontent|drive\.google|\/thumbnail\?id=/i.test(request.url())) {
     providerRequests.push(request.url());
   }
-  if (/world-spatial-wave-02-v9\.annex\.json/i.test(request.url())) {
-    spatialAnnexRequests.push(request.url());
+  const requestPath = new URL(request.url()).pathname;
+  if (trackedRealSurface && spatialPayloadSuffixes.includes(requestPath)) {
+    eagerSpatialPayloadRequests.push({ surface: trackedRealSurface, url: request.url() });
   }
 });
 
@@ -229,6 +251,7 @@ try {
   assert.equal(result.counts.foundingTotal, 228);
   assert.equal(result.counts.grandTotal, 337);
   assert.equal(result.counts.environments, 2);
+  assert.equal(result.counts.spatialBlockouts, 2);
   assert.equal(result.environmentCount, 2);
   assert.equal(result.uniqueEnvironmentCount, result.environmentCount);
   assert.equal(result.counts.expansionCharacters, 70);
@@ -241,6 +264,7 @@ try {
   const rosterText = await page.locator('#roster').textContent();
   assert.match(rosterText, /69 expansion awaiting art/);
   assert.match(rosterText, /0 founding bestiary awaiting art/);
+  assert.match(rosterText, /2 spatial blockouts/);
   assert.equal(await page.locator('[data-subject-id]').count(), result.subjectCount);
   assert.equal(await page.locator('[data-environment-id]').count(), result.environmentCount);
   assert.equal(result.acceptedCharnel.length, 17);
@@ -268,6 +292,7 @@ try {
     runtimeBackdrop: false,
     runtimeIntegrated: false,
     productionAsset: false,
+    blockoutIds: ['spatial_blockout.wave-03a.warden-reed'],
   });
   assert.deepEqual(result.hollowEnvironment, {
     id: 'environment.hollow-abbey-processional-and-mute-nave',
@@ -281,6 +306,7 @@ try {
     runtimeBackdrop: false,
     runtimeIntegrated: false,
     productionAsset: false,
+    blockoutIds: ['spatial_blockout.wave-03b.hollow-abbey'],
   });
   assert.deepEqual(result.environmentImages.map(({ id, width, height }) => ({ id, width, height })), [
     { id: 'concept_warden_reed_four_bank_visibility_exterior', width: 1536, height: 1024 },
@@ -291,6 +317,14 @@ try {
   ]);
   for (const image of result.environmentImages) {
     assert.ok(image.src.startsWith(`${baseUrl}/assets/world/`), `${image.id} did not load from repository world assets`);
+  }
+  assert.deepEqual(result.blockoutPayloads.map(({ id, schemaVersion, payloadId }) => ({ id, schemaVersion, payloadId })), [
+    { id: 'spatial_blockout.wave-03a.warden-reed', schemaVersion: 1, payloadId: 'site-blockout.wave-03a.warden-reed' },
+    { id: 'spatial_blockout.wave-03b.hollow-abbey', schemaVersion: 2, payloadId: 'site-blockout.wave-03b.hollow-abbey' },
+  ]);
+  for (const payload of result.blockoutPayloads) {
+    assert.ok(payload.bytes > 0, `${payload.id} loaded an empty JSON payload`);
+    assert.ok(payload.src.startsWith(`${baseUrl}/assets/world/spatial/`), `${payload.id} did not load from repository spatial assets`);
   }
 
   assert.deepEqual(result.missingVisualBriefs.map(({ contentId }) => contentId).sort(), [
@@ -320,6 +354,9 @@ try {
   assert.match(surfaces[0].text, /REG\.environments/);
   assert.match(surfaces[0].text, /environment\.concepts\.map/);
   assert.match(surfaces[0].text, /environment\.concepts\.length/);
+  assert.match(surfaces[0].text, /environment\.blockoutReferences/);
+  assert.match(surfaces[0].text, /Spatial blockout data/);
+  assert.match(surfaces[0].text, /loaded on demand/);
   assert.doesNotMatch(surfaces[0].text, /2 accepted concept references|exterior \+ interior/);
   assert.match(surfaces[0].text, /Motion systems to author/);
   assert.match(surfaces[0].text, /No static scene artifact is linked/);
@@ -332,9 +369,8 @@ try {
   assert.match(surfaces[1].text, /technicalReferences/);
   assert.match(surfaces[1].text, /veil-coast-gloamharbor-tide-refuge-blueprint-v14\.png/);
   assert.match(surfaces[1].text, /spatialReferences/);
-  assert.match(surfaces[1].text, /world-spatial-wave-02-v9\.annex\.json/);
-  assert.match(surfaces[1].text, /Reviewed noncanonical blockout data only/);
-  assert.match(surfaces[1].text, /Not accepted art, production geometry, runtime navigation\/collision\/streaming evidence/);
+  assert.match(surfaces[1].text, /WORLD_SPATIAL_BLOCKOUT_ASSETS/);
+  assert.match(surfaces[1].text, /Open spatial payload/);
   assert.match(surfaces[1].text, /<html lang="en">/);
   assert.match(surfaces[1].text, /<title>Hollow March Art Bible — Sable Reach<\/title>/);
   assert.match(surfaces[1].text, /<div role="main" style="position:relative;background:#080b0d;min-height:100vh">/);
@@ -351,6 +387,54 @@ try {
   assert.deepEqual({ width: technicalReferenceImage.width, height: technicalReferenceImage.height }, { width: 1536, height: 1024 });
   assert.ok(technicalReferenceImage.src.startsWith(`${baseUrl}/assets/world/technical/`));
 
+  trackedRealSurface = 'MODEL MAKER';
+  await page.goto(`${baseUrl}/design-review/MODEL%20MAKER.html`, { waitUntil: 'domcontentloaded' });
+  await page.waitForSelector('#rvList', { timeout: 30_000 });
+  const modelMakerBlockouts = [
+    {
+      environmentId: 'environment.warden-reed-four-bank-visibility',
+      blockoutId: 'spatial_blockout.wave-03a.warden-reed',
+      schemaVersion: 1,
+      paths: [
+        '/assets/world/spatial/wave-03a/warden-reed.site.json',
+        '/assets/world/spatial/wave-03a/index.json',
+        '/assets/world/spatial/wave-03a/provenance.json',
+        '/assets/world/spatial/site-blockout-reference-v1.schema.json',
+      ],
+    },
+    {
+      environmentId: 'environment.hollow-abbey-processional-and-mute-nave',
+      blockoutId: 'spatial_blockout.wave-03b.hollow-abbey',
+      schemaVersion: 2,
+      paths: [
+        '/assets/world/spatial/wave-03b/hollow-abbey.site.json',
+        '/assets/world/spatial/wave-03b/index.json',
+        '/assets/world/spatial/wave-03b/provenance.json',
+        '/assets/world/spatial/site-blockout-reference-v2.schema.json',
+      ],
+    },
+  ];
+  for (const expected of modelMakerBlockouts) {
+    await page.locator('#selectorBtn').click();
+    await page.locator(`.selrow[data-id="${expected.environmentId}"]`).click();
+    const article = page.locator(`[data-environment-blockout="${expected.blockoutId}"]`);
+    await article.waitFor({ state: 'visible', timeout: 30_000 });
+    const rendered = await article.evaluate((node) => ({
+      text: node.textContent ?? '',
+      hrefs: [...node.querySelectorAll('a')].map(({ href }) => href),
+    }));
+    assert.match(rendered.text, new RegExp(`schema v${expected.schemaVersion}`, 'i'));
+    assert.deepEqual(rendered.hrefs, expected.paths.map((path) => `${baseUrl}${path}`));
+  }
+  await page.waitForTimeout(250);
+  trackedRealSurface = null;
+  assert.deepEqual(
+    eagerSpatialPayloadRequests.filter(({ surface }) => surface === 'MODEL MAKER'),
+    [],
+    'MODEL MAKER must expose local spatial links without eagerly fetching a Wave 02, 03A, or 03B payload',
+  );
+
+  trackedRealSurface = 'Hollow March Art Bible';
   await page.goto(`${baseUrl}/design-review/Hollow%20March%20Art%20Bible.dc.html`, { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => {
     const image = [...document.images].find(({ alt }) => alt === 'Gloamharbor tide-refuge five-cell topology blueprint');
@@ -363,6 +447,12 @@ try {
   assert.deepEqual({ width: integratedTechnicalReference.width, height: integratedTechnicalReference.height }, { width: 1536, height: 1024 });
   assert.ok(integratedTechnicalReference.src.startsWith(`${baseUrl}/assets/world/technical/`));
 
+  await page.waitForFunction(() => [
+    '/assets/world/spatial/world-spatial-wave-02-v9.annex.json',
+    '/assets/world/spatial/wave-03a/warden-reed.site.json',
+    '/assets/world/spatial/wave-03b/hollow-abbey.site.json',
+  ].every((suffix) => [...document.links].some(({ href }) => href.endsWith(suffix))), null, { timeout: 30_000 });
+
   const integratedSpatialReference = await page.evaluate(() => {
     const link = [...document.links].find(({ href }) => href.endsWith('/assets/world/spatial/world-spatial-wave-02-v9.annex.json'));
     const article = link?.closest('article');
@@ -370,13 +460,68 @@ try {
       href: link?.href ?? null,
       text: article?.textContent ?? '',
       imageCount: article?.querySelectorAll('img').length ?? -1,
+      hrefs: [...(article?.querySelectorAll('a') ?? [])].map(({ href }) => href),
     };
   });
   assert.equal(integratedSpatialReference.href, `${baseUrl}/assets/world/spatial/world-spatial-wave-02-v9.annex.json`);
+  assert.deepEqual(integratedSpatialReference.hrefs, [
+    `${baseUrl}/assets/world/spatial/world-spatial-wave-02-v9.annex.json`,
+    `${baseUrl}/assets/world/spatial/world-spatial-wave-02-v9.provenance.json`,
+  ]);
   assert.match(integratedSpatialReference.text, /Six-Site Deep Blockout/);
   assert.match(integratedSpatialReference.text, /site-local fictional meters are not atlas coordinates/i);
-  assert.match(integratedSpatialReference.text, /Not accepted art/);
+  assert.match(integratedSpatialReference.text, /not accepted art/i);
   assert.equal(integratedSpatialReference.imageCount, 0);
+
+  const integratedSiteBlockouts = await page.evaluate(() => [
+    '/assets/world/spatial/wave-03a/warden-reed.site.json',
+    '/assets/world/spatial/wave-03b/hollow-abbey.site.json',
+  ].map((suffix) => {
+    const link = [...document.links].find(({ href }) => href.endsWith(suffix));
+    const article = link?.closest('article');
+    return {
+      suffix,
+      href: link?.href ?? null,
+      hrefs: [...(article?.querySelectorAll('a') ?? [])].map(({ href }) => href),
+      text: article?.textContent ?? '',
+    };
+  }));
+  assert.deepEqual(integratedSiteBlockouts.map(({ href }) => href), [
+    `${baseUrl}/assets/world/spatial/wave-03a/warden-reed.site.json`,
+    `${baseUrl}/assets/world/spatial/wave-03b/hollow-abbey.site.json`,
+  ]);
+  assert.match(integratedSiteBlockouts[0].text, /Warden Reed/);
+  assert.match(integratedSiteBlockouts[0].text, /schema v1/i);
+  assert.match(integratedSiteBlockouts[1].text, /Hollow Abbey/);
+  assert.match(integratedSiteBlockouts[1].text, /schema v2/i);
+  assert.deepEqual(integratedSiteBlockouts.map(({ hrefs }) => hrefs), [
+    [
+      `${baseUrl}/assets/world/spatial/wave-03a/warden-reed.site.json`,
+      `${baseUrl}/assets/world/spatial/wave-03a/provenance.json`,
+    ],
+    [
+      `${baseUrl}/assets/world/spatial/wave-03b/hollow-abbey.site.json`,
+      `${baseUrl}/assets/world/spatial/wave-03b/provenance.json`,
+    ],
+  ]);
+  const spatialCardLayout = await page.evaluate(() => {
+    const firstLink = [...document.links].find(({ href }) => href.endsWith('/assets/world/spatial/world-spatial-wave-02-v9.annex.json'));
+    const container = firstLink?.closest('article')?.parentElement;
+    const cards = container ? [...container.querySelectorAll(':scope > article')] : [];
+    return {
+      count: cards.length,
+      rowGap: container ? Number.parseFloat(getComputedStyle(container).rowGap) : 0,
+      separatedCards: cards.filter((card) => Number.parseFloat(getComputedStyle(card).borderTopWidth) > 0).length,
+    };
+  });
+  assert.deepEqual(spatialCardLayout, { count: 3, rowGap: 10, separatedCards: 3 });
+  await page.waitForTimeout(250);
+  trackedRealSurface = null;
+  assert.deepEqual(
+    eagerSpatialPayloadRequests.filter(({ surface }) => surface === 'Hollow March Art Bible'),
+    [],
+    'The Art Bible must expose local spatial links without eagerly fetching a Wave 02, 03A, or 03B payload',
+  );
 
   const responsivePage = await browser.newPage({ viewport: { width: 375, height: 812 } });
   try {
@@ -411,9 +556,9 @@ try {
   }
 
   assert.deepEqual(providerRequests, []);
-  assert.deepEqual(spatialAnnexRequests, [], 'The 49 MB spatial annex must remain on demand and must not be fetched during Art Bible hydration');
+  assert.deepEqual(eagerSpatialPayloadRequests, []);
   assert.deepEqual(pageErrors, []);
-  console.log(JSON.stringify({ valid: true, ...result, providerRequests, spatialAnnexRequests, pageErrors }, null, 2));
+  console.log(JSON.stringify({ valid: true, ...result, providerRequests, eagerSpatialPayloadRequests, pageErrors }, null, 2));
 } catch (error) {
   testFailure = error;
   throw error;
