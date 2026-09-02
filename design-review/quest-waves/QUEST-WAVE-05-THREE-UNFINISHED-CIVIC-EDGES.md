@@ -1,8 +1,8 @@
 # Quest Wave 05 Candidate — Three Unfinished Civic Edges
 
-Status: **noncanonical authored candidate**  
-Candidate ID: `quest-wave-05-three-unfinished-civic-edges-candidate-v1`  
-Scope: 12 quests, 12 exclusive supporting characters, 12 signature items, 12 environment briefs, and 18 previously quest-unused expansion creatures  
+Status: **noncanonical authored candidate**
+Candidate ID: `quest-wave-05-three-unfinished-civic-edges-candidate-v1`
+Scope: 12 quests, 12 exclusive supporting characters, 12 signature items, 12 environment briefs, and 18 previously quest-unused expansion creatures
 Acceptance: **not reviewed, not accepted, not release-attested, and not integrated**
 
 ## 1. Authority and nonclaim legend
