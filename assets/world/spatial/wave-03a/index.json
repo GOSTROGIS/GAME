@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "world-spatial-wave-03a",
+  "title": "World Spatial Wave 03A site-local references",
+  "status": "independently_reviewed_noncanonical_reference",
+  "claims": {
+    "canonical": false,
+    "runtimeIntegrated": false,
+    "constructionReady": false,
+    "productionGeometry": false,
+    "atlasExportEligible": false,
+    "releaseReady": false,
+    "authorSelfApproval": false,
+    "integrationAuthorized": false
+  },
+  "schemaPath": "assets/world/spatial/site-blockout-reference-v1.schema.json",
+  "provenancePath": "assets/world/spatial/wave-03a/provenance.json",
+  "sites": [
+    {
+      "id": "site-blockout.wave-03a.warden-reed",
+      "siteId": "site.warden-reed",
+      "path": "assets/world/spatial/wave-03a/warden-reed.site.json",
+      "sha256": "8a383f69d493c23837297ed2223f5826eab1041122fd752c1cb6e76c3fe65f09",
+      "bytes": 76805,
+      "counts": {
+        "structures": 2,
+        "rooms": 12,
+        "thresholds": 15,
+        "egressPaths": 2,
+        "utilities": 6,
+        "hazards": 5,
+        "habitats": 4,
+        "routes": 8,
+        "activityPhases": 4,
+        "questObjectives": 4
+      }
+    }
+  ]
+}

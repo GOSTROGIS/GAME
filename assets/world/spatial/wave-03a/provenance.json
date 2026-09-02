@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "provenance.world-spatial-wave-03a",
+  "publication": {
+    "privacy": "repository_relative_redacted",
+    "externalProviderIdentifiers": false,
+    "workstationPaths": false,
+    "usernames": false,
+    "emails": false,
+    "signedUrls": false
+  },
+  "tool": {
+    "name": "built_in_code_workflow",
+    "mode": "site_local_reference_authoring"
+  },
+  "rights": "original_project_owned_authorized_for_repository",
+  "maturity": "independently_reviewed_noncanonical_reference",
+  "direction": {
+    "text": "Bind Warden Reed to atlas, world-spatial, and accepted Wave 04 records; author exactly two structures and twelve room roles plus eighteen exact anchor ports, explicit directed-edge orientation, two independent 2.2 meter egress domains, six utilities, five hazards, four habitats, eight route networks, four activity phases, and four quest-objective crosswalks, with no canonical, runtime, or construction claim.",
+    "sha256": "50a10333c7631e2547088d4d1262b3a4d0322b98618e2fea6af75a8cdfaef06a"
+  },
+  "records": [
+    {
+      "path": "assets/world/spatial/site-blockout-reference-v1.schema.json",
+      "sha256": "b0401475ff635c2b20ad489b5dcac6ddc637fab26d4a1f7a1c9dcc1149771189",
+      "bytes": 18519,
+      "role": "machine_contract",
+      "rights": "original_project_owned_authorized_for_repository",
+      "maturity": "reference_schema_v1"
+    },
+    {
+      "path": "assets/world/spatial/wave-03a/index.json",
+      "sha256": "e24b681ce896cda90fbb8690ff2d87a9c0ca61d8ac7ae0113811c8d5a94daab8",
+      "bytes": 1159,
+      "role": "release_index",
+      "rights": "original_project_owned_authorized_for_repository",
+      "maturity": "independently_reviewed_noncanonical_reference"
+    },
+    {
+      "path": "assets/world/spatial/wave-03a/warden-reed.site.json",
+      "sha256": "8a383f69d493c23837297ed2223f5826eab1041122fd752c1cb6e76c3fe65f09",
+      "bytes": 76805,
+      "role": "site_local_spatial_reference",
+      "rights": "original_project_owned_authorized_for_repository",
+      "maturity": "independently_reviewed_noncanonical_reference"
+    }
+  ]
+}

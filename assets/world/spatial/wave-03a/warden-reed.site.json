@@ -1,0 +1,1115 @@
+{
+  "schemaVersion": 1,
+  "id": "site-blockout.wave-03a.warden-reed",
+  "siteId": "site.warden-reed",
+  "title": "Warden Reed service house and four-bank visibility exchange",
+  "claims": {
+    "canonical": false,
+    "runtimeIntegrated": false,
+    "constructionReady": false,
+    "productionGeometry": false,
+    "atlasExportEligible": false,
+    "releaseReady": false,
+    "authorSelfApproval": false,
+    "integrationAuthorized": false
+  },
+  "authority": {
+    "classification": "noncanonical_site_local_reference",
+    "precedence": [
+      "The atlas owns the Warden Reed site anchor, Dunmire containment, Reedward Causeway alignment, and drowned-mire habitat envelope.",
+      "world-spatial.data.js owns the site envelope, Dunmire stilt-house language, activity cycle, environmental law, and authored design constraints.",
+      "the accepted Wave 04 quest and environment records own quest identity, semantic anchors, directed edges, objective endpoints, creature counts, and failure semantics.",
+      "this record owns only a relocatable two-structure site-local interpretation for review and may not mutate upstream authority."
+    ],
+    "consumer": "downstream world blockout planning after coordinator and independent spatial review",
+    "relocationRule": "The complete local frame may translate or rotate within the authored site envelope; room IDs, source bindings, two independent egress domains, and quest crosswalk hashes must survive unchanged."
+  },
+  "sourceBindings": [
+    {
+      "id": "source.atlas.warden-reed",
+      "path": "packages/content/manifests/sable-reach.atlas-runtime.json",
+      "sha256": "a55f59a7ec10d1e8485e4d3f0cdec058698508a4ba89804038c087a1b0b3671b",
+      "bytes": 198431,
+      "selector": "sites[id=site.warden-reed]",
+      "recordSha256": "ee9b7c244661b4817464e5a029988e8dae3b5655d775d52b71117356ec8ef3e7",
+      "authority": "canon"
+    },
+    {
+      "id": "source.atlas.reedward-causeway",
+      "path": "packages/content/manifests/sable-reach.atlas-runtime.json",
+      "sha256": "a55f59a7ec10d1e8485e4d3f0cdec058698508a4ba89804038c087a1b0b3671b",
+      "bytes": 198431,
+      "selector": "routes[id=route.reedward-causeway]",
+      "recordSha256": "c7f384d7dab08da7baa2ace417d950bc9d7722f7d7679847945073f90b4739f7",
+      "authority": "canon"
+    },
+    {
+      "id": "source.atlas.drowned-mire",
+      "path": "packages/content/manifests/sable-reach.atlas-runtime.json",
+      "sha256": "a55f59a7ec10d1e8485e4d3f0cdec058698508a4ba89804038c087a1b0b3671b",
+      "bytes": 198431,
+      "selector": "habitats[id=habitat.drowned-mire]",
+      "recordSha256": "f9f4c623b0d1ce2b3a18256d5228319876229ca6caffe1f1470a3a5e1c8ef554",
+      "authority": "canon"
+    },
+    {
+      "id": "source.world-spatial.warden-reed-envelope",
+      "path": "packages/content/src/world-spatial.data.js",
+      "sha256": "0193b797b0c441cfcf4cd357116f355ee878972d861108860d59608569a1f850",
+      "bytes": 136180,
+      "selector": "SITE_SPATIAL_ENVELOPES[id=site.warden-reed]",
+      "recordSha256": "795d8edfe50d9cf8b980fc48a5f78cb31f53e38245b86381aa250eae44111c9a",
+      "authority": "authored_design_constraint"
+    },
+    {
+      "id": "source.world-spatial.warden-reed-activity",
+      "path": "packages/content/src/world-spatial.data.js",
+      "sha256": "0193b797b0c441cfcf4cd357116f355ee878972d861108860d59608569a1f850",
+      "bytes": 136180,
+      "selector": "SITE_ACTIVITY_CYCLES[siteId=site.warden-reed]",
+      "recordSha256": "74c904740d6dad228a90c59f082ed82aa579b15a165f35dd3c0558cc695d672f",
+      "authority": "authored_design_constraint"
+    },
+    {
+      "id": "source.world-spatial.dunmire-stilt-house",
+      "path": "packages/content/src/world-spatial.data.js",
+      "sha256": "0193b797b0c441cfcf4cd357116f355ee878972d861108860d59608569a1f850",
+      "bytes": 136180,
+      "selector": "BUILDING_TYPOLOGIES[id=dunmire_stilt_house]",
+      "recordSha256": "30a733fde057bc806a9fc712947bd8b554799f1af3fb2917ba8718fb040fa4ee",
+      "authority": "authored_design_constraint"
+    },
+    {
+      "id": "source.quest-wave-04.warden-reed-quest",
+      "path": "design-review/quest-release-evidence/quest-wave-04-v11.machine-annex.json",
+      "sha256": "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962",
+      "bytes": 4245855,
+      "selector": "quests[id=regional_the_fog_came_to_collect_our_outlines]",
+      "recordSha256": "920d2976af13e05d6caa2cd532e3f0ae2fa50a982f838a8e50fecbf73429ed95",
+      "authority": "accepted_quest_contract"
+    },
+    {
+      "id": "source.quest-wave-04.warden-reed-environment",
+      "path": "design-review/quest-release-evidence/quest-wave-04-v11.machine-annex.json",
+      "sha256": "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962",
+      "bytes": 4245855,
+      "selector": "environmentPrograms[locationId=warden_reed_four_bank_visibility]",
+      "recordSha256": "0c56265b4f7bfa3845f14ef573d050bea7335dce0792db7084979fa196fb52ac",
+      "authority": "accepted_quest_contract"
+    }
+  ],
+  "spatialReference": {
+    "coordinateSpaceId": "veyl_local_grid_v1",
+    "coordinateSemantics": "candidate_site_local_fictional_meters",
+    "axes": {
+      "x": "local east",
+      "y": "local north",
+      "z": "local up"
+    },
+    "unit": "meter",
+    "atlasSiteAnchor": [4864, 4352, 68],
+    "localOriginAtlasCoordinate": [4940, 4266, 72],
+    "localBoundsMeters": {
+      "minimum": [-160, -108, -1],
+      "maximum": [160, 102, 14]
+    },
+    "placementStatus": "candidate_relocatable_not_atlas_geometry",
+    "precisionNotice": "Coordinates describe a fictional candidate blockout derived from the accepted quest reservation; they are neither surveyed data nor an exact atlas placement claim."
+  },
+  "anchorPlacements": [
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.bank_a", "portId": "port.warden-reed.bank-a", "localCoordinateMeters": [-132, -74, 4], "macroRoomId": "room.warden-reed.exchange.bank-a-deck", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.bank_b", "portId": "port.warden-reed.bank-b", "localCoordinateMeters": [-40, -28, 2], "macroRoomId": "room.warden-reed.exchange.bank-b-ferry-deck", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.bank_c", "portId": "port.warden-reed.bank-c", "localCoordinateMeters": [46, 16, 5], "macroRoomId": "room.warden-reed.exchange.bank-c-household-deck", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.bank_d", "portId": "port.warden-reed.bank-d", "localCoordinateMeters": [132, 68, 7], "macroRoomId": "room.warden-reed.exchange.bank-d-dark-watch", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.causeway", "portId": "port.warden-reed.causeway", "localCoordinateMeters": [70, -58, 1], "macroRoomId": "room.warden-reed.exchange.bank-c-household-deck", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.dark_bank", "portId": "port.warden-reed.dark-bank", "localCoordinateMeters": [124, -20, 4], "macroRoomId": "room.warden-reed.exchange.bank-d-dark-watch", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.delivery", "portId": "port.warden-reed.delivery", "localCoordinateMeters": [-118, -104, 0], "macroRoomId": "room.warden-reed.exchange.bank-b-ferry-deck", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.egress_a", "portId": "port.warden-reed.egress-a", "localCoordinateMeters": [-158, 94, 7], "macroRoomId": null, "placementKind": "external_destination" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.egress_b", "portId": "port.warden-reed.egress-b", "localCoordinateMeters": [158, -92, 1], "macroRoomId": null, "placementKind": "external_destination" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.egress_domain_a", "portId": "port.warden-reed.egress-domain-a", "localCoordinateMeters": [-49.2, 99.1, 8.95], "macroRoomId": null, "placementKind": "interior_egress_vertex" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.egress_domain_b", "portId": "port.warden-reed.egress-domain-b", "localCoordinateMeters": [53.5, 27.7, 6.85], "macroRoomId": null, "placementKind": "interior_egress_vertex" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.ferry", "portId": "port.warden-reed.ferry", "localCoordinateMeters": [-18, -100, 0], "macroRoomId": "room.warden-reed.exchange.bank-b-ferry-deck", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.frame_ab", "portId": "port.warden-reed.frame-ab", "localCoordinateMeters": [-84, -50, 3], "macroRoomId": "room.warden-reed.exchange.ledger-frame-gallery", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.frame_cd", "portId": "port.warden-reed.frame-cd", "localCoordinateMeters": [88, 42, 6], "macroRoomId": "room.warden-reed.exchange.ledger-frame-gallery", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.ledger", "portId": "port.warden-reed.ledger", "localCoordinateMeters": [0, 52, 7], "macroRoomId": "room.warden-reed.exchange.ledger-frame-gallery", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.maintenance", "portId": "port.warden-reed.maintenance", "localCoordinateMeters": [18, -60, -1], "macroRoomId": "room.warden-reed.service-house.boat-hatch", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.refuge", "portId": "port.warden-reed.refuge", "localCoordinateMeters": [4, 96, 10], "macroRoomId": "room.warden-reed.exchange.raised-refuge", "placementKind": "room_port" },
+    { "anchorId": "anchor.warden_reed_four_bank_visibility.service", "portId": "port.warden-reed.service", "localCoordinateMeters": [-92, 62, 8], "macroRoomId": "room.warden-reed.service-house.causeway-step", "placementKind": "room_port" }
+  ],
+  "structures": [
+    {
+      "id": "structure.warden-reed.service-house",
+      "name": "Section Warden service house",
+      "classification": "occupied_stilt_service_house",
+      "typologyBindingId": "dunmire_stilt_house",
+      "boundsLocalMeters": {
+        "minimum": [-100, 55, 0],
+        "maximum": [-82, 72, 14]
+      },
+      "structure": "Wet-oak post-and-beam frame on mismatched drowned-limestone blocks and driven piles, with replaceable reed lattice bracing and a visibly maintained pile-collar route below.",
+      "exterior": [
+        "low reed roof tied with sacrificial flood-release cords",
+        "pitch-cloth storm skirt stopping above the ordinary flood mark",
+        "new pale wicker repairs against older blackened oak",
+        "raised rain cistern and crooked guide-lantern hook visible from the causeway",
+        "two materially distinct exits: dry causeway step and low rescue boat hatch"
+      ],
+      "weathering": [
+        "pile settlement creates a legible lean without collapsing door clearances",
+        "algae and lamp-oil rainbow record a continuous historic waterline",
+        "handled thresholds polish while windward reed faces gray and split",
+        "fresh wicker stays pale enough to show which family route is maintained"
+      ],
+      "rooms": [
+        {
+          "id": "room.warden-reed.service-house.causeway-step",
+          "name": "Causeway step",
+          "kind": "raised_public_threshold",
+          "localCentroidMeters": [-98, 58, 8],
+          "level": "causeway",
+          "clearHeightMeters": 3.2,
+          "capacity": 8,
+          "materials": ["sunk chapel slate", "wet oak", "reed cordage"],
+          "uses": ["section ownership inspection", "dry-route muster", "guide-lantern tending"],
+          "sensory": {
+            "visual": "Ownership cuts and replaced planks remain readable beneath one hooded amber guide lamp.",
+            "acoustic": "Each plank gives a different hollow note above blackwater.",
+            "scent": "Rain-dark oak, lamp oil, and cold peat."
+          }
+        },
+        {
+          "id": "room.warden-reed.service-house.mud-room",
+          "name": "Mud room",
+          "kind": "wet_dirty_transition",
+          "localCentroidMeters": [-94, 60, 8.4],
+          "level": "causeway",
+          "clearHeightMeters": 2.7,
+          "capacity": 6,
+          "materials": ["reed mat", "wet oak", "glazed catch tile"],
+          "uses": ["boot and net wash", "peat tool quarantine", "flood-depth reading"],
+          "sensory": {
+            "visual": "A blackwater catch trough divides dirty gear from the pale dry-room mat.",
+            "acoustic": "Drips strike differently marked basins instead of an ambient water loop.",
+            "scent": "Peat, mudfish scales, wet wicker, and lye."
+          }
+        },
+        {
+          "id": "room.warden-reed.service-house.family-room",
+          "name": "Family and service room",
+          "kind": "occupied_domestic_operations_room",
+          "localCentroidMeters": [-91, 64, 8.4],
+          "level": "causeway",
+          "clearHeightMeters": 3.1,
+          "capacity": 12,
+          "materials": ["dark oak boards", "reed wall mat", "peat stove iron", "patched pitch cloth"],
+          "uses": ["household meals", "warden shift handoff", "utility isolation", "living borrower witness assembly"],
+          "sensory": {
+            "visual": "Ordinary bowls, sleeping curtains, valve tags, and a family route board keep the room domestic rather than ceremonial.",
+            "acoustic": "Low peat-stove tick sits beneath ferry cable strain and ledger bell tests.",
+            "scent": "Mudfish broth, peat smoke, damp wool, and bronze valve grease."
+          }
+        },
+        {
+          "id": "room.warden-reed.service-house.cistern-loft",
+          "name": "Cistern loft",
+          "kind": "upper_refuge_and_clean_water_store",
+          "localCentroidMeters": [-91, 66, 12],
+          "level": "loft",
+          "clearHeightMeters": 2.4,
+          "capacity": 14,
+          "materials": ["reed-laminate tank", "wet oak ties", "glazed clay pipe"],
+          "uses": ["rainwater storage", "household flood refuge", "potable-line inspection"],
+          "sensory": {
+            "visual": "The whole household fits around a visibly gauged cistern without blocking the ladder landing.",
+            "acoustic": "Rain enters the tank as a slow measured resonance, not a waterfall roar.",
+            "scent": "Clean rain, reed resin, and cool clay."
+          }
+        },
+        {
+          "id": "room.warden-reed.service-house.boat-hatch",
+          "name": "Boat hatch and pile collar",
+          "kind": "low_rescue_and_maintenance_threshold",
+          "localCentroidMeters": [-96, 66, 2],
+          "level": "waterline",
+          "clearHeightMeters": 2.2,
+          "capacity": 4,
+          "materials": ["tarred oak", "bronze hinge", "reed fender", "blackwater slate"],
+          "uses": ["rescue boat egress", "pile-collar inspection", "sealed waste pickup"],
+          "sensory": {
+            "visual": "A red-banded rescue latch stays unobstructed above a narrow service skiff berth.",
+            "acoustic": "Hull taps, collar creak, and water slap disclose movement below the occupied floor.",
+            "scent": "Tar, blackwater, bronze, and sealed reed cage."
+          }
+        },
+        {
+          "id": "room.warden-reed.service-house.reed-work-balcony",
+          "name": "Reed-work balcony",
+          "kind": "open_craft_and_fire_watch_deck",
+          "localCentroidMeters": [-85, 66, 9],
+          "level": "causeway",
+          "clearHeightMeters": 3,
+          "capacity": 8,
+          "materials": ["pale repair wicker", "wet oak rail", "slate spark tray"],
+          "uses": ["reed mat repair", "peat drying", "lamp and fire watch"],
+          "sensory": {
+            "visual": "Fresh wicker, separated peat racks, and a clear hose sweep make work and hazard states readable.",
+            "acoustic": "Reed knives rasp while crosswind clicks drying stems against the rail.",
+            "scent": "Cut reed, drying peat, wet slate, and lamp oil."
+          }
+        }
+      ]
+    },
+    {
+      "id": "structure.warden-reed.four-bank-exchange",
+      "name": "Four-bank visibility exchange",
+      "classification": "open_landscape_infrastructure",
+      "typologyBindingId": null,
+      "boundsLocalMeters": {
+        "minimum": [-160, -108, -1],
+        "maximum": [160, 102, 14]
+      },
+      "structure": "Four independently braced stilt banks, two paired Escrow frames, a finite living-borrower ledger, a ferry edge, and one raised clear-air refuge joined by narrow accountable causeways.",
+      "exterior": [
+        "four bank silhouettes remain individually readable through ground fog",
+        "paired frames are low horizontal structures and never resemble four separate creatures",
+        "guide lanterns mark ordinary paths while the exchange boundary uses unlit rope and clear-air movement",
+        "the raised refuge is visibly above and outside the exchange envelope",
+        "dry and boat egress depart in different directions with no shared first segment"
+      ],
+      "weathering": [
+        "each bank carries a different settlement lean and repair history",
+        "waterline algae and pile collars disclose seasonal rise",
+        "fog-wet surfaces are dark except where hands polish ledger rails",
+        "the seasonal dark bank carries newer high rope and red-banded fire fittings"
+      ],
+      "rooms": [
+        {
+          "id": "room.warden-reed.exchange.bank-a-deck",
+          "name": "Bank A public deck",
+          "kind": "open_causeway_bank",
+          "localCentroidMeters": [-132, -74, 4],
+          "level": "low_bank",
+          "clearHeightMeters": 4,
+          "capacity": 20,
+          "materials": ["wet oak", "sunk limestone", "reed rope", "bronze leg socket"],
+          "uses": ["public route accounting", "first Escrow leg placement", "ferry-side observation"],
+          "sensory": {
+            "visual": "One numbered-by-form socket, never text, sits beside an ordinary public causeway rail.",
+            "acoustic": "The socket answers with one low timber note only when the other three banks are loaded.",
+            "scent": "Wet oak, cold limestone, and ferry pitch."
+          }
+        },
+        {
+          "id": "room.warden-reed.exchange.bank-b-ferry-deck",
+          "name": "Bank B ferry and delivery deck",
+          "kind": "open_ferry_bank",
+          "localCentroidMeters": [-40, -28, 2],
+          "level": "ferry_bank",
+          "clearHeightMeters": 4,
+          "capacity": 20,
+          "materials": ["tarred oak", "bronze winch", "reed fender", "slate ballast"],
+          "uses": ["ferry account", "second Escrow leg placement", "day delivery", "boat egress transfer"],
+          "sensory": {
+            "visual": "A load-marked ferry cradle and separate rescue berth prevent delivery, quest exchange, and egress from reading as one dock.",
+            "acoustic": "Winch brake, hollow fender knocks, and recalled-boat bells separate operating states.",
+            "scent": "Tar, mudfish water, lamp-oil crates, and wet rope."
+          }
+        },
+        {
+          "id": "room.warden-reed.exchange.ledger-frame-gallery",
+          "name": "Living ledger and paired-frame gallery",
+          "kind": "covered_accounting_spine",
+          "localCentroidMeters": [0, 52, 7],
+          "level": "raised_bank",
+          "clearHeightMeters": 3.6,
+          "capacity": 10,
+          "materials": ["dark oak ledger rail", "paired bronze frame", "hooded task lamp", "reed-laminate wind screen"],
+          "uses": ["single-body verification", "living borrower reconciliation", "paired-frame inspection"],
+          "sensory": {
+            "visual": "Two distant paired frames terminate at one physically finite ledger station; no reflection is given a ledger position.",
+            "acoustic": "One task-light relay clicks after two frame tensions agree, followed by spoken living counts.",
+            "scent": "Lamp oil, wet bronze, reed paper, and clean rain duct air."
+          }
+        },
+        {
+          "id": "room.warden-reed.exchange.bank-c-household-deck",
+          "name": "Bank C household and exchange-edge deck",
+          "kind": "open_household_bank",
+          "localCentroidMeters": [46, 16, 5],
+          "level": "middle_bank",
+          "clearHeightMeters": 4,
+          "capacity": 20,
+          "materials": ["family-repaired wicker", "wet oak", "bronze leg socket", "clear-air reed duct"],
+          "uses": ["household privacy account", "third Escrow leg placement", "marked Loaner boundary watch"],
+          "sensory": {
+            "visual": "Household screens stop before the marked edge so privacy never hides the exchange boundary.",
+            "acoustic": "Clear-air reeds hiss against a sudden absence of ordinary fog-muted sound.",
+            "scent": "Rain, family cooking smoke, clean reed air, and blackwater."
+          }
+        },
+        {
+          "id": "room.warden-reed.exchange.bank-d-dark-watch",
+          "name": "Bank D and seasonal dark watch",
+          "kind": "open_warning_bank_span",
+          "localCentroidMeters": [128, 24, 5.5],
+          "level": "watch_bank",
+          "clearHeightMeters": 4,
+          "capacity": 16,
+          "materials": ["blackened oak", "high rescue rope", "bronze leg socket", "red-banded fire cabinet"],
+          "uses": ["warning account", "fourth Escrow leg placement", "seasonal closure watch", "peat-fire response"],
+          "sensory": {
+            "visual": "The fourth socket, high return rope, and deliberately hooded lantern make ordinary, failure, and fire states distinct.",
+            "acoustic": "Reed crosswind and a single warning clapper replace market noise here.",
+            "scent": "Wet char, cold rope, peat dust, and emergency canvas."
+          }
+        },
+        {
+          "id": "room.warden-reed.exchange.raised-refuge",
+          "name": "Raised clear-air refuge",
+          "kind": "protected_observation_and_muster_cell",
+          "localCentroidMeters": [4, 96, 10],
+          "level": "upper_refuge",
+          "clearHeightMeters": 3.4,
+          "capacity": 32,
+          "materials": ["pale dry oak", "reed-laminate clear-air screen", "glazed water crock", "hooded white task lamp"],
+          "uses": ["continuous clear-air refuge", "living-count witness muster", "two-domain emergency departure"],
+          "sensory": {
+            "visual": "Dry pale boards and an uninterrupted view of all four banks prove the refuge is outside the dark exchange volume.",
+            "acoustic": "Clear-air duct breath remains audible when fog erases sounds below.",
+            "scent": "Clean rain, dry reed, potable water, and no lamp smoke."
+          }
+        }
+      ]
+    }
+  ],
+  "thresholds": [
+    {
+      "id": "threshold.warden-reed.house.road",
+      "fromRoomId": "room.warden-reed.service-house.causeway-step",
+      "to": "room.warden-reed.service-house.mud-room",
+      "fromPortId": null,
+      "toPortId": null,
+      "kind": "raised_flood_door",
+      "clearWidthMeters": 1.4,
+      "sillLocalElevationMeters": 8,
+      "stateRule": "Remain above the modeled ordinary flood and show open, closed, and barred states through physical latch position.",
+      "sourceBindingId": "door.road",
+      "sourceDirectedEdgeBindings": []
+    },
+    {
+      "id": "threshold.warden-reed.house.dry",
+      "fromRoomId": "room.warden-reed.service-house.mud-room",
+      "to": "room.warden-reed.service-house.family-room",
+      "fromPortId": null,
+      "toPortId": null,
+      "kind": "dry_room_door",
+      "clearWidthMeters": 1.2,
+      "sillLocalElevationMeters": 8.4,
+      "stateRule": "Dirty water cannot cross the pale mat line; the door remains operable from both sides.",
+      "sourceBindingId": "door.dry",
+      "sourceDirectedEdgeBindings": []
+    },
+    {
+      "id": "threshold.warden-reed.house.cistern-ladder",
+      "fromRoomId": "room.warden-reed.service-house.family-room",
+      "to": "room.warden-reed.service-house.cistern-loft",
+      "fromPortId": null,
+      "toPortId": null,
+      "kind": "fixed_ladder_and_landing",
+      "clearWidthMeters": 0.9,
+      "sillLocalElevationMeters": 9,
+      "stateRule": "The loft landing stays clear for whole-household refuge and potable maintenance.",
+      "sourceBindingId": "ladder.cistern",
+      "sourceDirectedEdgeBindings": []
+    },
+    {
+      "id": "threshold.warden-reed.house.water-hatch",
+      "fromRoomId": "room.warden-reed.service-house.family-room",
+      "to": "room.warden-reed.service-house.boat-hatch",
+      "fromPortId": null,
+      "toPortId": null,
+      "kind": "counterweighted_rescue_hatch",
+      "clearWidthMeters": 1.3,
+      "sillLocalElevationMeters": 7.6,
+      "stateRule": "Never block with furniture, drying racks, stores, or quest props.",
+      "sourceBindingId": "hatch.water",
+      "sourceDirectedEdgeBindings": []
+    },
+    {
+      "id": "threshold.warden-reed.house.balcony",
+      "fromRoomId": "room.warden-reed.service-house.family-room",
+      "to": "room.warden-reed.service-house.reed-work-balcony",
+      "fromPortId": null,
+      "toPortId": null,
+      "kind": "outward_work_door",
+      "clearWidthMeters": 1.2,
+      "sillLocalElevationMeters": 8.4,
+      "stateRule": "A fire-watch sightline to the peat racks survives every open state.",
+      "sourceBindingId": "door.balcony",
+      "sourceDirectedEdgeBindings": []
+    },
+    {
+      "id": "threshold.warden-reed.exchange.bank-a-frame-ab",
+      "fromRoomId": "room.warden-reed.exchange.bank-a-deck",
+      "to": "room.warden-reed.exchange.ledger-frame-gallery",
+      "fromPortId": "port.warden-reed.bank-a",
+      "toPortId": "port.warden-reed.frame-ab",
+      "kind": "paired_bank_span",
+      "clearWidthMeters": 2,
+      "sillLocalElevationMeters": 3,
+      "stateRule": "Bank A reaches only Frame AB on this span; Frame AB remains a distinct port from the ledger inside the shared macro room.",
+      "sourceBindingId": null,
+      "sourceDirectedEdgeBindings": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.005.bank_pair_ab", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.bank_a", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.frame_ab" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.006.bank_pair_ab_return", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.frame_ab", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.bank_a" }
+      ]
+    },
+    {
+      "id": "threshold.warden-reed.exchange.bank-b-frame-ab",
+      "fromRoomId": "room.warden-reed.exchange.bank-b-ferry-deck",
+      "to": "room.warden-reed.exchange.ledger-frame-gallery",
+      "fromPortId": "port.warden-reed.bank-b",
+      "toPortId": "port.warden-reed.frame-ab",
+      "kind": "paired_bank_span",
+      "clearWidthMeters": 2,
+      "sillLocalElevationMeters": 2,
+      "stateRule": "Bank B joins Bank A only at Frame AB; neither bank connects directly to the other.",
+      "sourceBindingId": null,
+      "sourceDirectedEdgeBindings": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.007.bank_pair_ab", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.bank_b", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.frame_ab" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.008.bank_pair_ab_return", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.frame_ab", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.bank_b" }
+      ]
+    },
+    {
+      "id": "threshold.warden-reed.exchange.frame-ab-ledger",
+      "fromRoomId": "room.warden-reed.exchange.ledger-frame-gallery",
+      "to": "room.warden-reed.exchange.ledger-frame-gallery",
+      "fromPortId": "port.warden-reed.frame-ab",
+      "toPortId": "port.warden-reed.ledger",
+      "kind": "intra_macro_room_accounting_span",
+      "clearWidthMeters": 2,
+      "sillLocalElevationMeters": 3,
+      "stateRule": "Frame AB and the ledger are separate traversable ports inside one macro room; the two-bank join completes before ledger entry.",
+      "sourceBindingId": null,
+      "sourceDirectedEdgeBindings": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.009.living_ledger", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.frame_ab", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.ledger" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.010.living_ledger_return", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.ledger", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.frame_ab" }
+      ]
+    },
+    {
+      "id": "threshold.warden-reed.exchange.ledger-frame-cd",
+      "fromRoomId": "room.warden-reed.exchange.ledger-frame-gallery",
+      "to": "room.warden-reed.exchange.ledger-frame-gallery",
+      "fromPortId": "port.warden-reed.ledger",
+      "toPortId": "port.warden-reed.frame-cd",
+      "kind": "intra_macro_room_accounting_span",
+      "clearWidthMeters": 2,
+      "sillLocalElevationMeters": 6,
+      "stateRule": "The ledger and Frame CD are separate traversable ports; the route leaves the ledger before splitting toward Banks C and D.",
+      "sourceBindingId": null,
+      "sourceDirectedEdgeBindings": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.011.living_ledger", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.ledger", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.frame_cd" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.012.living_ledger_return", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.frame_cd", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.ledger" }
+      ]
+    },
+    {
+      "id": "threshold.warden-reed.exchange.frame-cd-bank-c",
+      "fromRoomId": "room.warden-reed.exchange.ledger-frame-gallery",
+      "to": "room.warden-reed.exchange.bank-c-household-deck",
+      "fromPortId": "port.warden-reed.frame-cd",
+      "toPortId": "port.warden-reed.bank-c",
+      "kind": "paired_bank_span",
+      "clearWidthMeters": 2,
+      "sillLocalElevationMeters": 5,
+      "stateRule": "Frame CD splits toward Bank C without passing through Bank D.",
+      "sourceBindingId": null,
+      "sourceDirectedEdgeBindings": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.013.bank_pair_cd", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.frame_cd", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.bank_c" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.014.bank_pair_cd_return", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.bank_c", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.frame_cd" }
+      ]
+    },
+    {
+      "id": "threshold.warden-reed.exchange.frame-cd-bank-d",
+      "fromRoomId": "room.warden-reed.exchange.ledger-frame-gallery",
+      "to": "room.warden-reed.exchange.bank-d-dark-watch",
+      "fromPortId": "port.warden-reed.frame-cd",
+      "toPortId": "port.warden-reed.bank-d",
+      "kind": "paired_bank_span",
+      "clearWidthMeters": 2,
+      "sillLocalElevationMeters": 6,
+      "stateRule": "Frame CD splits toward Bank D without passing through Bank C or creating a fifth leg position.",
+      "sourceBindingId": null,
+      "sourceDirectedEdgeBindings": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.015.bank_pair_cd", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.frame_cd", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.bank_d" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.016.bank_pair_cd_return", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.bank_d", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.frame_cd" }
+      ]
+    },
+    {
+      "id": "threshold.warden-reed.exchange.refuge-domain-a",
+      "fromRoomId": "room.warden-reed.exchange.raised-refuge",
+      "to": null,
+      "fromPortId": "port.warden-reed.refuge",
+      "toPortId": "port.warden-reed.egress-domain-a",
+      "kind": "protected_egress_span_a_first",
+      "clearWidthMeters": 2.2,
+      "sillLocalElevationMeters": 8.95,
+      "stateRule": "Domain A begins at its own port outside the refuge macro room and shares no first span with Domain B.",
+      "sourceBindingId": null,
+      "sourceDirectedEdgeBindings": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_a_01", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.refuge", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.egress_domain_a" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_a_return_02", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.egress_domain_a", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.refuge" }
+      ]
+    },
+    {
+      "id": "threshold.warden-reed.exchange.domain-a-egress-a",
+      "fromRoomId": null,
+      "to": null,
+      "fromPortId": "port.warden-reed.egress-domain-a",
+      "toPortId": "port.warden-reed.egress-a",
+      "kind": "protected_egress_span_a_destination",
+      "clearWidthMeters": 2.2,
+      "sillLocalElevationMeters": 7,
+      "stateRule": "The dry destination remains an external port rather than being collapsed into the raised refuge.",
+      "sourceBindingId": null,
+      "sourceDirectedEdgeBindings": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_a_02", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.egress_domain_a", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.egress_a" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_a_return_01", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.egress_a", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.egress_domain_a" }
+      ]
+    },
+    {
+      "id": "threshold.warden-reed.exchange.refuge-domain-b",
+      "fromRoomId": "room.warden-reed.exchange.raised-refuge",
+      "to": null,
+      "fromPortId": "port.warden-reed.refuge",
+      "toPortId": "port.warden-reed.egress-domain-b",
+      "kind": "protected_egress_span_b_first",
+      "clearWidthMeters": 2.2,
+      "sillLocalElevationMeters": 6.85,
+      "stateRule": "Domain B begins at its own port outside the refuge macro room and shares no first span with Domain A.",
+      "sourceBindingId": null,
+      "sourceDirectedEdgeBindings": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_b_01", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.refuge", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.egress_domain_b" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_b_return_02", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.egress_domain_b", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.refuge" }
+      ]
+    },
+    {
+      "id": "threshold.warden-reed.exchange.domain-b-egress-b",
+      "fromRoomId": null,
+      "to": null,
+      "fromPortId": "port.warden-reed.egress-domain-b",
+      "toPortId": "port.warden-reed.egress-b",
+      "kind": "protected_egress_span_b_destination",
+      "clearWidthMeters": 2.2,
+      "sillLocalElevationMeters": 1,
+      "stateRule": "The boat destination remains an external port rather than being collapsed into the raised refuge or Bank C.",
+      "sourceBindingId": null,
+      "sourceDirectedEdgeBindings": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_b_02", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.egress_domain_b", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.egress_b" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_b_return_01", "sourceFromAnchorId": "anchor.warden_reed_four_bank_visibility.egress_b", "sourceToAnchorId": "anchor.warden_reed_four_bank_visibility.egress_domain_b" }
+      ]
+    }
+  ],
+  "egress": {
+    "originAnchorId": "anchor.warden_reed_four_bank_visibility.refuge",
+    "paths": [
+      {
+        "id": "egress.warden-reed.dry-a",
+        "destinationAnchorId": "anchor.warden_reed_four_bank_visibility.egress_a",
+        "anchorIds": [
+          "anchor.warden_reed_four_bank_visibility.refuge",
+          "anchor.warden_reed_four_bank_visibility.egress_domain_a",
+          "anchor.warden_reed_four_bank_visibility.egress_a"
+        ],
+        "thresholdIds": [
+          "threshold.warden-reed.exchange.refuge-domain-a",
+          "threshold.warden-reed.exchange.domain-a-egress-a"
+        ],
+        "routeId": "route.warden-reed.egress-a-dry",
+        "failureDomainId": "failure_domain.warden_reed_four_bank_visibility.a",
+        "minimumClearWidthMeters": 2.2,
+        "stepFree": true,
+        "sourcePathId": "egress_path_a",
+        "sourceForwardEdgeIds": [
+          "edge.v6.warden_reed_four_bank_visibility.egress_a_01",
+          "edge.v6.warden_reed_four_bank_visibility.egress_a_02"
+        ],
+        "sourceReturnEdgeIds": [
+          "edge.v6.warden_reed_four_bank_visibility.egress_a_return_01",
+          "edge.v6.warden_reed_four_bank_visibility.egress_a_return_02"
+        ]
+      },
+      {
+        "id": "egress.warden-reed.boat-b",
+        "destinationAnchorId": "anchor.warden_reed_four_bank_visibility.egress_b",
+        "anchorIds": [
+          "anchor.warden_reed_four_bank_visibility.refuge",
+          "anchor.warden_reed_four_bank_visibility.egress_domain_b",
+          "anchor.warden_reed_four_bank_visibility.egress_b"
+        ],
+        "thresholdIds": [
+          "threshold.warden-reed.exchange.refuge-domain-b",
+          "threshold.warden-reed.exchange.domain-b-egress-b"
+        ],
+        "routeId": "route.warden-reed.egress-b-boat",
+        "failureDomainId": "failure_domain.warden_reed_four_bank_visibility.b",
+        "minimumClearWidthMeters": 2.2,
+        "stepFree": true,
+        "sourcePathId": "egress_path_b",
+        "sourceForwardEdgeIds": [
+          "edge.v6.warden_reed_four_bank_visibility.egress_b_01",
+          "edge.v6.warden_reed_four_bank_visibility.egress_b_02"
+        ],
+        "sourceReturnEdgeIds": [
+          "edge.v6.warden_reed_four_bank_visibility.egress_b_return_01",
+          "edge.v6.warden_reed_four_bank_visibility.egress_b_return_02"
+        ]
+      }
+    ],
+    "independenceRule": "The two paths share only the refuge anchor; they use exact distinct interior vertices, exact directed forward and return edges, distinct failure domains, 2.2 meter minimum clear spans, and different protected destinations."
+  },
+  "utilities": [
+    {
+      "id": "utility.warden-reed.potable-water",
+      "type": "potable_water",
+      "sourceRoomId": "room.warden-reed.service-house.causeway-step",
+      "terminalRoomIds": ["room.warden-reed.exchange.raised-refuge"],
+      "maintenanceRouteIds": ["route.warden-reed.maintenance-pile-collar", "route.warden-reed.egress-a-dry"],
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "failureState": "Isolate at the service and refuge ports, log demand, and leave both egress domains physically open.",
+      "sourceEndpointBinding": {
+        "id": "utility.v5.warden_reed_four_bank_visibility.potable_water",
+        "recordSha256": "2743e88eb6fcba4c055a7e14f236e9223f818b7fac5fa944e1dd49e63ff23e3b"
+      }
+    },
+    {
+      "id": "utility.warden-reed.ferry-power",
+      "type": "ferry_power",
+      "sourceRoomId": "room.warden-reed.service-house.causeway-step",
+      "terminalRoomIds": ["room.warden-reed.exchange.bank-b-ferry-deck"],
+      "maintenanceRouteIds": ["route.warden-reed.maintenance-pile-collar", "route.warden-reed.edge-exchange"],
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "failureState": "Brake and isolate the winch; publish a physical recall state without closing boat egress.",
+      "sourceEndpointBinding": {
+        "id": "utility.v5.warden_reed_four_bank_visibility.ferry_power",
+        "recordSha256": "fd95a80aabc5795d3551b88e3dd272f9ab5e8505f44da3baff3e33944dede8ba"
+      }
+    },
+    {
+      "id": "utility.warden-reed.ledger-light",
+      "type": "ledger_light",
+      "sourceRoomId": "room.warden-reed.service-house.causeway-step",
+      "terminalRoomIds": ["room.warden-reed.exchange.ledger-frame-gallery"],
+      "maintenanceRouteIds": ["route.warden-reed.maintenance-pile-collar", "route.warden-reed.edge-exchange", "route.warden-reed.bank-spine"],
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "failureState": "Isolate the dry circuit and continue living counts by hooded hand lamp without admitting reflections.",
+      "sourceEndpointBinding": {
+        "id": "utility.v5.warden_reed_four_bank_visibility.ledger_light",
+        "recordSha256": "759ec396d7d364b01e3253dceecd559a6c8b6d9f3820e5e9f02a3dfb7874e8cd"
+      }
+    },
+    {
+      "id": "utility.warden-reed.clear-air",
+      "type": "clear_air",
+      "sourceRoomId": "room.warden-reed.exchange.raised-refuge",
+      "terminalRoomIds": ["room.warden-reed.exchange.bank-c-household-deck"],
+      "maintenanceRouteIds": ["route.warden-reed.maintenance-pile-collar", "route.warden-reed.egress-a-dry", "route.warden-reed.egress-b-boat"],
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "failureState": "Isolate the named duct only; the refuge remains a dry muster space and the exchange closes before air is borrowed from occupants.",
+      "sourceEndpointBinding": {
+        "id": "utility.v5.warden_reed_four_bank_visibility.clear_air",
+        "recordSha256": "32ac5b13ff4e357b7bac3fafff87c3c8fd9e2da613fff6ba948664cb3463e0f1"
+      }
+    },
+    {
+      "id": "utility.warden-reed.fire-response",
+      "type": "fire_response",
+      "sourceRoomId": "room.warden-reed.service-house.causeway-step",
+      "terminalRoomIds": ["room.warden-reed.exchange.bank-d-dark-watch"],
+      "maintenanceRouteIds": ["route.warden-reed.maintenance-pile-collar", "route.warden-reed.egress-a-dry", "route.warden-reed.refuge-clear-return"],
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "failureState": "Isolate a damaged branch while retaining bucket, canvas, and alternate-bank hose reach.",
+      "sourceEndpointBinding": {
+        "id": "utility.v5.warden_reed_four_bank_visibility.fire_response",
+        "recordSha256": "7c338b8f719d91bbd1f6f077145b3b7401473b3a2076ef0c65010ee1ec8a720b"
+      }
+    },
+    {
+      "id": "utility.warden-reed.sealed-waste",
+      "type": "sealed_waste_collection",
+      "sourceRoomId": "room.warden-reed.service-house.family-room",
+      "terminalRoomIds": ["room.warden-reed.service-house.boat-hatch"],
+      "maintenanceRouteIds": ["route.warden-reed.service-house-loop", "route.warden-reed.ferry-delivery"],
+      "phaseAvailability": ["first_light", "day"],
+      "failureState": "Seal the reed cage above flood, stop collection before fog fall, and keep it outside clean-water and ledger-light paths.",
+      "sourceEndpointBinding": null
+    }
+  ],
+  "hazards": [
+    {
+      "id": "hazard.warden-reed.fog-disorientation",
+      "sourceHazardId": "fog_disorientation",
+      "affectedRoomIds": ["room.warden-reed.exchange.bank-a-deck", "room.warden-reed.exchange.bank-c-household-deck", "room.warden-reed.exchange.bank-d-dark-watch"],
+      "activePhaseIds": ["fog_fall", "night"],
+      "readableCues": ["guide lantern count drops behind the player", "clear-air reed ribbons point toward the raised refuge", "bank rails retain distinct hand textures"],
+      "avoidanceRouteIds": ["route.warden-reed.bank-spine", "route.warden-reed.refuge-clear-return", "route.warden-reed.egress-a-dry", "route.warden-reed.egress-b-boat"],
+      "failureMutation": "Hood exchange lanterns, raise the dark-bank rope, and close the marked edge until first light without moving fog into the refuge."
+    },
+    {
+      "id": "hazard.warden-reed.pile-settlement",
+      "sourceHazardId": "pile_settlement",
+      "affectedRoomIds": ["room.warden-reed.service-house.boat-hatch", "room.warden-reed.exchange.bank-b-ferry-deck", "room.warden-reed.exchange.bank-c-household-deck"],
+      "activePhaseIds": ["first_light", "day", "fog_fall", "night"],
+      "readableCues": ["fresh pale shims interrupt older black pile collars", "waterline gauges disagree across one bank", "load-sounding notes fall flat before visible lean increases"],
+      "avoidanceRouteIds": ["route.warden-reed.maintenance-pile-collar", "route.warden-reed.egress-a-dry", "route.warden-reed.bank-spine"],
+      "failureMutation": "Close the named settled bank domain, move work to its high rope, and leave the independent dry egress usable."
+    },
+    {
+      "id": "hazard.warden-reed.ferry-collision",
+      "sourceHazardId": "ferry_collision",
+      "affectedRoomIds": ["room.warden-reed.service-house.boat-hatch", "room.warden-reed.exchange.bank-b-ferry-deck"],
+      "activePhaseIds": ["first_light", "day", "fog_fall"],
+      "readableCues": ["fender compression and bell cadence reveal an occupied berth", "winch chain angle exposes uncontrolled approach", "recall flags physically bar delivery rather than emergency lanes"],
+      "avoidanceRouteIds": ["route.warden-reed.bank-spine", "route.warden-reed.egress-a-dry", "route.warden-reed.service-house-loop"],
+      "failureMutation": "Brake ferry power, clear the delivery cradle, and preserve the separate rescue berth for boat egress."
+    },
+    {
+      "id": "hazard.warden-reed.outline-debt",
+      "sourceHazardId": "outline_debt",
+      "affectedRoomIds": ["room.warden-reed.exchange.bank-a-deck", "room.warden-reed.exchange.ledger-frame-gallery", "room.warden-reed.exchange.bank-d-dark-watch"],
+      "activePhaseIds": ["fog_fall", "first_light"],
+      "readableCues": ["one bounded absence aligns across all four sockets", "ledger task light changes only after a living verbal count", "reflections remain visually present but lack physical ledger hardware"],
+      "avoidanceRouteIds": ["route.warden-reed.bank-spine", "route.warden-reed.refuge-clear-return", "route.warden-reed.egress-a-dry", "route.warden-reed.egress-b-boat"],
+      "failureMutation": "Freeze the one body on four legs, restore the last verified living count, and close edge exchange for the required seasonal interval."
+    },
+    {
+      "id": "hazard.warden-reed.peat-fire",
+      "sourceHazardId": "peat_fire",
+      "affectedRoomIds": ["room.warden-reed.service-house.family-room", "room.warden-reed.service-house.reed-work-balcony", "room.warden-reed.exchange.bank-d-dark-watch"],
+      "activePhaseIds": ["day", "fog_fall", "night"],
+      "readableCues": ["dry peat is separated on slate spark trays", "lamp-oil rainbow stops before fire-response cabinets", "red-banded hose reach remains visible in fog"],
+      "avoidanceRouteIds": ["route.warden-reed.maintenance-pile-collar", "route.warden-reed.refuge-clear-return", "route.warden-reed.egress-b-boat"],
+      "failureMutation": "Cut lamp fuel, wet the named deck from its dedicated branch, and open the opposite egress without routing smoke into the refuge."
+    }
+  ],
+  "habitats": [
+    {
+      "id": "habitat.warden-reed.drowned-mire-household-edge",
+      "sourceHabitatId": "habitat.drowned-mire",
+      "occupantIds": ["population.warden-reed.mudfish-households", "population.warden-reed.reed-grain-workers"],
+      "roomIds": ["room.warden-reed.service-house.boat-hatch", "room.warden-reed.service-house.reed-work-balcony", "room.warden-reed.exchange.bank-b-ferry-deck"],
+      "phaseIds": ["first_light", "day", "fog_fall"],
+      "environment": ["waterlogged peat edge", "reed cages above ordinary flood", "mudfish channel under working balconies", "maintained boat gaps between private fishing routes"],
+      "exclusionRules": ["Ordinary work ecology never becomes an enemy spawn volume or blocks either emergency destination."]
+    },
+    {
+      "id": "habitat.warden-reed.fog-loaner-edge",
+      "sourceHabitatId": "overlay.fog_loaner.warden_reed_edge_fog_fall",
+      "occupantIds": ["fog_loaner"],
+      "roomIds": ["room.warden-reed.exchange.bank-a-deck", "room.warden-reed.exchange.bank-c-household-deck", "room.warden-reed.exchange.bank-d-dark-watch"],
+      "phaseIds": ["fog_fall"],
+      "environment": ["single causeway-edge fog-fall envelope", "one clear-air break before the raised refuge", "four physically distinct observation banks", "no settled safe-cell overlap"],
+      "exclusionRules": ["The Loaner never occupies the service house or raised refuge.", "The exchange ceases at dawn, after living outlines return, or when the clear-air break is continuous."]
+    },
+    {
+      "id": "habitat.warden-reed.borrowed-silhouette-escrow",
+      "sourceHabitatId": "habitat.borrowed_silhouette_escrow.two_bank_pairs",
+      "occupantIds": ["borrowed_silhouette_escrow"],
+      "roomIds": ["room.warden-reed.exchange.bank-a-deck", "room.warden-reed.exchange.bank-b-ferry-deck", "room.warden-reed.exchange.ledger-frame-gallery", "room.warden-reed.exchange.bank-c-household-deck", "room.warden-reed.exchange.bank-d-dark-watch"],
+      "phaseIds": ["fog_fall", "first_light"],
+      "environment": ["two paired low frames", "exactly four serialized leg sockets", "one finite living-borrower ledger", "four-bank sightline with no reflected hardware"],
+      "exclusionRules": ["Exactly one Escrow body and exactly four legs are permitted.", "No swarm, colony, plural Escrow, extra socket, reflected borrower, or refuge exchange is permitted."]
+    },
+    {
+      "id": "habitat.warden-reed.raised-refuge-clear-air",
+      "sourceHabitatId": "safe_cell.v6.warden_reed_four_bank_visibility.refuge",
+      "occupantIds": ["population.warden-reed.living-borrower-witnesses", "population.warden-reed.safe-cell-keepers"],
+      "roomIds": ["room.warden-reed.exchange.raised-refuge"],
+      "phaseIds": ["first_light", "day", "fog_fall", "night"],
+      "environment": ["continuous clear air", "dry pale boards above fog", "visual command of all four banks", "potable water and two independent departures"],
+      "exclusionRules": ["No Loaner or Escrow exchange enters the refuge.", "Quest props, queues, and witnesses never narrow either first egress segment."]
+    }
+  ],
+  "routes": [
+    {
+      "id": "route.warden-reed.service-house-loop",
+      "role": "domestic_work_and_rescue_loop",
+      "topology": "local_room_loop_with_specialist_vertical_links",
+      "roomIds": ["room.warden-reed.service-house.causeway-step", "room.warden-reed.service-house.mud-room", "room.warden-reed.service-house.family-room", "room.warden-reed.service-house.cistern-loft", "room.warden-reed.service-house.boat-hatch", "room.warden-reed.service-house.reed-work-balcony"],
+      "localRoomSegments": [
+        { "fromRoomId": "room.warden-reed.service-house.causeway-step", "toRoomId": "room.warden-reed.service-house.mud-room" },
+        { "fromRoomId": "room.warden-reed.service-house.mud-room", "toRoomId": "room.warden-reed.service-house.family-room" },
+        { "fromRoomId": "room.warden-reed.service-house.family-room", "toRoomId": "room.warden-reed.service-house.cistern-loft" },
+        { "fromRoomId": "room.warden-reed.service-house.family-room", "toRoomId": "room.warden-reed.service-house.boat-hatch" },
+        { "fromRoomId": "room.warden-reed.service-house.family-room", "toRoomId": "room.warden-reed.service-house.reed-work-balcony" }
+      ],
+      "sourceSegments": [],
+      "widthMeters": 1.2,
+      "surface": "wet_oak_and_reed_mat",
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "accessibility": "The occupied level and balcony use clear 1.2 m thresholds; loft and water-hatch vertical segments are specialist/refuge links and do not substitute for external step-free egress."
+    },
+    {
+      "id": "route.warden-reed.bank-spine",
+      "role": "four_bank_join_ledger_and_split_network",
+      "topology": "bank_a_and_bank_b_join_at_frame_ab_then_ledger_then_frame_cd_splits_to_bank_c_and_bank_d",
+      "roomIds": ["room.warden-reed.exchange.bank-a-deck", "room.warden-reed.exchange.bank-b-ferry-deck", "room.warden-reed.exchange.ledger-frame-gallery", "room.warden-reed.exchange.bank-c-household-deck", "room.warden-reed.exchange.bank-d-dark-watch"],
+      "localRoomSegments": [],
+      "sourceSegments": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.005.bank_pair_ab", "fromPortId": "port.warden-reed.bank-a", "toPortId": "port.warden-reed.frame-ab" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.006.bank_pair_ab_return", "fromPortId": "port.warden-reed.frame-ab", "toPortId": "port.warden-reed.bank-a" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.007.bank_pair_ab", "fromPortId": "port.warden-reed.bank-b", "toPortId": "port.warden-reed.frame-ab" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.008.bank_pair_ab_return", "fromPortId": "port.warden-reed.frame-ab", "toPortId": "port.warden-reed.bank-b" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.009.living_ledger", "fromPortId": "port.warden-reed.frame-ab", "toPortId": "port.warden-reed.ledger" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.010.living_ledger_return", "fromPortId": "port.warden-reed.ledger", "toPortId": "port.warden-reed.frame-ab" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.011.living_ledger", "fromPortId": "port.warden-reed.ledger", "toPortId": "port.warden-reed.frame-cd" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.012.living_ledger_return", "fromPortId": "port.warden-reed.frame-cd", "toPortId": "port.warden-reed.ledger" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.013.bank_pair_cd", "fromPortId": "port.warden-reed.frame-cd", "toPortId": "port.warden-reed.bank-c" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.014.bank_pair_cd_return", "fromPortId": "port.warden-reed.bank-c", "toPortId": "port.warden-reed.frame-cd" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.015.bank_pair_cd", "fromPortId": "port.warden-reed.frame-cd", "toPortId": "port.warden-reed.bank-d" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.016.bank_pair_cd_return", "fromPortId": "port.warden-reed.bank-d", "toPortId": "port.warden-reed.frame-cd" }
+      ],
+      "widthMeters": 2,
+      "surface": "firm_repairable_non_slip_bank_spans",
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "accessibility": "The route is a directed join-and-split network, never a linear bank corridor; distinct intra-room ports preserve Frame AB, ledger, and Frame CD topology."
+    },
+    {
+      "id": "route.warden-reed.ferry-delivery",
+      "role": "bank_a_ferry_and_delivery_network",
+      "topology": "bank_a_and_delivery_share_ferry_as_distinct_join",
+      "roomIds": ["room.warden-reed.exchange.bank-a-deck", "room.warden-reed.exchange.bank-b-ferry-deck"],
+      "localRoomSegments": [],
+      "sourceSegments": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.017.ferry_route", "fromPortId": "port.warden-reed.bank-a", "toPortId": "port.warden-reed.ferry" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.018.ferry_route_return", "fromPortId": "port.warden-reed.ferry", "toPortId": "port.warden-reed.bank-a" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.031.boat_delivery", "fromPortId": "port.warden-reed.delivery", "toPortId": "port.warden-reed.ferry" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.032.boat_delivery_return", "fromPortId": "port.warden-reed.ferry", "toPortId": "port.warden-reed.delivery" }
+      ],
+      "widthMeters": 2,
+      "surface": "firm_repairable_non_slip_ferry_and_delivery_spans",
+      "phaseAvailability": ["first_light", "day", "fog_fall"],
+      "accessibility": "Bank A, ferry, and delivery are three distinct ports; recall state ends supply runs but does not erase protected boat egress."
+    },
+    {
+      "id": "route.warden-reed.edge-exchange",
+      "role": "single_loaner_edge_exchange_network",
+      "topology": "ferry_to_causeway_to_bank_c_with_exact_returns",
+      "roomIds": ["room.warden-reed.exchange.bank-b-ferry-deck", "room.warden-reed.exchange.bank-c-household-deck"],
+      "localRoomSegments": [],
+      "sourceSegments": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.019.edge_exchange", "fromPortId": "port.warden-reed.ferry", "toPortId": "port.warden-reed.causeway" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.020.edge_exchange_return", "fromPortId": "port.warden-reed.causeway", "toPortId": "port.warden-reed.ferry" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.021.edge_exchange", "fromPortId": "port.warden-reed.causeway", "toPortId": "port.warden-reed.bank-c" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.022.edge_exchange_return", "fromPortId": "port.warden-reed.bank-c", "toPortId": "port.warden-reed.causeway" }
+      ],
+      "widthMeters": 2,
+      "surface": "marked_causeway_edge_outside_safe_cells",
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "accessibility": "The physical ferry-causeway-Bank C path stays maintenance-traversable in every phase; the Loaner exchange is staffed only during fog fall, and both protected egress domains remain separate."
+    },
+    {
+      "id": "route.warden-reed.refuge-clear-return",
+      "role": "bank_b_and_bank_d_clear_return_network",
+      "topology": "bank_b_and_bank_d_join_only_at_refuge_with_exact_returns",
+      "roomIds": ["room.warden-reed.exchange.bank-b-ferry-deck", "room.warden-reed.exchange.bank-d-dark-watch", "room.warden-reed.exchange.raised-refuge"],
+      "localRoomSegments": [],
+      "sourceSegments": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.023.clear_return", "fromPortId": "port.warden-reed.bank-b", "toPortId": "port.warden-reed.refuge" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.024.clear_return_return", "fromPortId": "port.warden-reed.refuge", "toPortId": "port.warden-reed.bank-b" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.025.clear_return", "fromPortId": "port.warden-reed.bank-d", "toPortId": "port.warden-reed.refuge" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.026.clear_return_return", "fromPortId": "port.warden-reed.refuge", "toPortId": "port.warden-reed.bank-d" }
+      ],
+      "widthMeters": 2,
+      "surface": "dry_oak_with_clear_air_reed_rail",
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "accessibility": "Two distinct bank returns reach the refuge without using either protected egress interior vertex."
+    },
+    {
+      "id": "route.warden-reed.maintenance-pile-collar",
+      "role": "service_maintenance_causeway_and_seasonal_watch_network",
+      "topology": "service_maintenance_causeway_chain_plus_independent_dark_bank_watch_span",
+      "roomIds": ["room.warden-reed.service-house.causeway-step", "room.warden-reed.service-house.family-room", "room.warden-reed.service-house.boat-hatch", "room.warden-reed.service-house.reed-work-balcony", "room.warden-reed.exchange.bank-c-household-deck", "room.warden-reed.exchange.bank-d-dark-watch"],
+      "localRoomSegments": [
+        { "fromRoomId": "room.warden-reed.service-house.causeway-step", "toRoomId": "room.warden-reed.service-house.family-room" },
+        { "fromRoomId": "room.warden-reed.service-house.family-room", "toRoomId": "room.warden-reed.service-house.boat-hatch" },
+        { "fromRoomId": "room.warden-reed.service-house.family-room", "toRoomId": "room.warden-reed.service-house.reed-work-balcony" }
+      ],
+      "sourceSegments": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.027.stilt_service", "fromPortId": "port.warden-reed.service", "toPortId": "port.warden-reed.maintenance" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.028.stilt_service_return", "fromPortId": "port.warden-reed.maintenance", "toPortId": "port.warden-reed.service" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.029.stilt_service", "fromPortId": "port.warden-reed.maintenance", "toPortId": "port.warden-reed.causeway" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.030.stilt_service_return", "fromPortId": "port.warden-reed.causeway", "toPortId": "port.warden-reed.maintenance" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.033.seasonal_watch", "fromPortId": "port.warden-reed.dark-bank", "toPortId": "port.warden-reed.bank-d" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.034.seasonal_watch_return", "fromPortId": "port.warden-reed.bank-d", "toPortId": "port.warden-reed.dark-bank" }
+      ],
+      "widthMeters": 2,
+      "surface": "pile_collar_service_walk_and_high_rope_watch_span",
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "accessibility": "Source segments preserve the service-maintenance-causeway chain and separate seasonal-watch span; local house segments expose utility and fire-watch rooms."
+    },
+    {
+      "id": "route.warden-reed.egress-a-dry",
+      "role": "independent_dry_egress_domain_a_network",
+      "topology": "direct_refuge_return_detailed_domain_a_and_service_dry_return",
+      "roomIds": ["room.warden-reed.exchange.raised-refuge", "room.warden-reed.service-house.causeway-step"],
+      "localRoomSegments": [],
+      "sourceSegments": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.001.independent_egress_a", "fromPortId": "port.warden-reed.refuge", "toPortId": "port.warden-reed.egress-a" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.002.independent_egress_a_return", "fromPortId": "port.warden-reed.egress-a", "toPortId": "port.warden-reed.refuge" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_a_01", "fromPortId": "port.warden-reed.refuge", "toPortId": "port.warden-reed.egress-domain-a" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_a_02", "fromPortId": "port.warden-reed.egress-domain-a", "toPortId": "port.warden-reed.egress-a" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_a_return_01", "fromPortId": "port.warden-reed.egress-a", "toPortId": "port.warden-reed.egress-domain-a" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_a_return_02", "fromPortId": "port.warden-reed.egress-domain-a", "toPortId": "port.warden-reed.refuge" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.035.dry_egress", "fromPortId": "port.warden-reed.service", "toPortId": "port.warden-reed.egress-a" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.036.dry_egress_return", "fromPortId": "port.warden-reed.egress-a", "toPortId": "port.warden-reed.service" }
+      ],
+      "widthMeters": 2.2,
+      "surface": "tactile_firm_non_slip_dry_egress",
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "accessibility": "The detailed refuge-domain-destination path retains 2.2 meter clear width, while direct refuge and service returns remain distinct accepted edges."
+    },
+    {
+      "id": "route.warden-reed.egress-b-boat",
+      "role": "independent_boat_egress_domain_b_network",
+      "topology": "direct_refuge_return_detailed_domain_b_and_causeway_boat_return",
+      "roomIds": ["room.warden-reed.exchange.raised-refuge", "room.warden-reed.exchange.bank-c-household-deck"],
+      "localRoomSegments": [],
+      "sourceSegments": [
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.003.independent_egress_b", "fromPortId": "port.warden-reed.refuge", "toPortId": "port.warden-reed.egress-b" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.004.independent_egress_b_return", "fromPortId": "port.warden-reed.egress-b", "toPortId": "port.warden-reed.refuge" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_b_01", "fromPortId": "port.warden-reed.refuge", "toPortId": "port.warden-reed.egress-domain-b" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_b_02", "fromPortId": "port.warden-reed.egress-domain-b", "toPortId": "port.warden-reed.egress-b" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_b_return_01", "fromPortId": "port.warden-reed.egress-b", "toPortId": "port.warden-reed.egress-domain-b" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.egress_b_return_02", "fromPortId": "port.warden-reed.egress-domain-b", "toPortId": "port.warden-reed.refuge" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.037.boat_egress", "fromPortId": "port.warden-reed.causeway", "toPortId": "port.warden-reed.egress-b" },
+        { "edgeId": "edge.v6.warden_reed_four_bank_visibility.038.boat_egress_return", "fromPortId": "port.warden-reed.egress-b", "toPortId": "port.warden-reed.causeway" }
+      ],
+      "widthMeters": 2.2,
+      "surface": "tactile_firm_non_slip_boat_egress",
+      "phaseAvailability": ["first_light", "day", "fog_fall", "night"],
+      "accessibility": "The detailed refuge-domain-destination path retains 2.2 meter clear width, while direct refuge and causeway returns remain distinct accepted edges."
+    }
+  ],
+  "activityPhases": [
+    {
+      "id": "activity.warden-reed.first-light",
+      "canonicalPhaseId": "first_light",
+      "density": "route_peak",
+      "activities": ["causeway sections sounded", "rain cisterns opened", "fish cages checked", "living outlines reconciled before ordinary crossings resume"],
+      "activeRouteIds": ["route.warden-reed.service-house-loop", "route.warden-reed.bank-spine", "route.warden-reed.ferry-delivery", "route.warden-reed.refuge-clear-return", "route.warden-reed.egress-a-dry", "route.warden-reed.egress-b-boat"],
+      "staffedRoomIds": ["room.warden-reed.service-house.causeway-step", "room.warden-reed.service-house.cistern-loft", "room.warden-reed.exchange.ledger-frame-gallery", "room.warden-reed.exchange.raised-refuge"],
+      "visualState": "Cold gray light exposes four separate banks, fresh sounding marks, returned outline positions, and pale refuge boards above receding fog.",
+      "acousticState": "Plank notes progress bank by bank, then one ledger relay and spoken living count answer the submerged bell.",
+      "scentState": "Clean rain, opened cistern clay, mudfish water, and cold peat."
+    },
+    {
+      "id": "activity.warden-reed.day",
+      "canonicalPhaseId": "day",
+      "density": "distributed_work",
+      "activities": ["reed cutting", "peat drying", "causeway repair", "ferry delivery and pile-collar maintenance"],
+      "activeRouteIds": ["route.warden-reed.service-house-loop", "route.warden-reed.bank-spine", "route.warden-reed.ferry-delivery", "route.warden-reed.maintenance-pile-collar", "route.warden-reed.refuge-clear-return", "route.warden-reed.egress-a-dry", "route.warden-reed.egress-b-boat"],
+      "staffedRoomIds": ["room.warden-reed.service-house.mud-room", "room.warden-reed.service-house.family-room", "room.warden-reed.service-house.reed-work-balcony", "room.warden-reed.exchange.bank-b-ferry-deck", "room.warden-reed.exchange.ledger-frame-gallery"],
+      "visualState": "Pale new wicker, open peat racks, moving ferries, and differently repaired rails make labor distribution legible without crowd sprites.",
+      "acousticState": "Reed knives, ferry brake, pile sounding, and household work overlap in distinct distances.",
+      "scentState": "Cut reed, drying peat, mudfish broth, tar, and lamp-oil crates."
+    },
+    {
+      "id": "activity.warden-reed.fog-fall",
+      "canonicalPhaseId": "fog_fall",
+      "density": "threshold_peak",
+      "activities": ["guide lanterns lit", "boats recalled", "flood rooms inspected", "one bounded visibility exchange opened at the marked causeway edge"],
+      "activeRouteIds": ["route.warden-reed.service-house-loop", "route.warden-reed.bank-spine", "route.warden-reed.maintenance-pile-collar", "route.warden-reed.refuge-clear-return", "route.warden-reed.egress-a-dry", "route.warden-reed.egress-b-boat", "route.warden-reed.edge-exchange"],
+      "staffedRoomIds": ["room.warden-reed.service-house.causeway-step", "room.warden-reed.service-house.family-room", "room.warden-reed.exchange.bank-a-deck", "room.warden-reed.exchange.ledger-frame-gallery", "room.warden-reed.exchange.bank-d-dark-watch", "room.warden-reed.exchange.raised-refuge"],
+      "visualState": "Warm pin lights reflect in blackwater while four bank silhouettes, one low four-legged Escrow body, and the dry raised refuge remain simultaneously readable.",
+      "acousticState": "Reed whisper and recalled-boat bells narrow toward one exchange hush; clear-air duct breath remains audible above.",
+      "scentState": "Ground fog condensation, wet oak, lamp oil, cold algae, and clean refuge air."
+    },
+    {
+      "id": "activity.warden-reed.night",
+      "canonicalPhaseId": "night",
+      "density": "sparse_watch",
+      "activities": ["sluice watch", "reed-cage funerals", "knock listening", "pile and fire patrol without opening a new exchange"],
+      "activeRouteIds": ["route.warden-reed.service-house-loop", "route.warden-reed.bank-spine", "route.warden-reed.maintenance-pile-collar", "route.warden-reed.refuge-clear-return", "route.warden-reed.egress-a-dry", "route.warden-reed.egress-b-boat"],
+      "staffedRoomIds": ["room.warden-reed.service-house.family-room", "room.warden-reed.service-house.boat-hatch", "room.warden-reed.exchange.bank-d-dark-watch", "room.warden-reed.exchange.raised-refuge"],
+      "visualState": "Most work lamps are hooded; high rope, funeral cages above flood, red-banded fire fittings, and both exit destinations stay readable.",
+      "acousticState": "Submerged bell, knocks below the road, collar creak, and one watch clapper replace daytime tool noise.",
+      "scentState": "Cold algae, grave moss, peat smoke, wet canvas, and lamp-oil rainbow."
+    }
+  ],
+  "questCrosswalk": {
+    "questId": "regional_the_fog_came_to_collect_our_outlines",
+    "locationId": "warden_reed_four_bank_visibility",
+    "questRecordSha256": "920d2976af13e05d6caa2cd532e3f0ae2fa50a982f838a8e50fecbf73429ed95",
+    "environmentProgramSha256": "0c56265b4f7bfa3845f14ef573d050bea7335dce0792db7084979fa196fb52ac",
+    "bindingMode": "id_and_canonical_json_hash_no_contract_copy",
+    "objectives": [
+      {
+        "objectiveId": "regional_the_fog_came_to_collect_our_outlines.objective.01",
+        "sourceEndpointSha256": "a5af5c4881e0bdc2c0e8b43680bf257540007b46b6f90c17304549fde318420c",
+        "localEvidenceRoomIds": ["room.warden-reed.exchange.ledger-frame-gallery"],
+        "requiredLocalRouteIds": ["route.warden-reed.bank-spine"],
+        "phaseId": "first_light"
+      },
+      {
+        "objectiveId": "regional_the_fog_came_to_collect_our_outlines.objective.02",
+        "sourceEndpointSha256": "4e70e907d532b635c8c393c128a1799131d5f861fadf183d9f57596a3b212750",
+        "localEvidenceRoomIds": ["room.warden-reed.exchange.bank-a-deck", "room.warden-reed.exchange.bank-b-ferry-deck", "room.warden-reed.exchange.bank-c-household-deck", "room.warden-reed.exchange.bank-d-dark-watch"],
+        "requiredLocalRouteIds": ["route.warden-reed.bank-spine"],
+        "phaseId": "day"
+      },
+      {
+        "objectiveId": "regional_the_fog_came_to_collect_our_outlines.objective.03",
+        "sourceEndpointSha256": "a4fd7e63fe3b6abd1a1c50c7f40575433c28b85e6e3b174a7538a4d6916019f4",
+        "localEvidenceRoomIds": ["room.warden-reed.exchange.bank-a-deck", "room.warden-reed.exchange.bank-c-household-deck", "room.warden-reed.exchange.bank-d-dark-watch"],
+        "requiredLocalRouteIds": ["route.warden-reed.bank-spine", "route.warden-reed.edge-exchange", "route.warden-reed.ferry-delivery"],
+        "phaseId": "fog_fall"
+      },
+      {
+        "objectiveId": "regional_the_fog_came_to_collect_our_outlines.objective.04",
+        "sourceEndpointSha256": "5d962794217e9ca93ddf8d22e64739637d9fbef632b4c9d0ad754f4ddb8d3cd1",
+        "localEvidenceRoomIds": ["room.warden-reed.exchange.ledger-frame-gallery", "room.warden-reed.exchange.raised-refuge"],
+        "requiredLocalRouteIds": ["route.warden-reed.bank-spine", "route.warden-reed.edge-exchange", "route.warden-reed.refuge-clear-return"],
+        "phaseId": "first_light"
+      }
+    ]
+  },
+  "artDirection": {
+    "exteriorRead": [
+      "Compose Warden Reed as a long inhabited causeway settlement, not a swamp village scattered at random: repeated stilt rhythms break only at family-owned sections, ferry cuts, and the four-bank exchange.",
+      "Keep human domestic scale in the foreground—bowls, wicker repair, fish cages, laundry, tool racks—while fog and the Escrow create ominous depth without turning every surface into horror ornament.",
+      "From any quest approach, show all four distinct bank silhouettes, one low spanning body, and one visibly higher dry refuge in the same navigable composition.",
+      "Let waterline, settlement lean, pale new wicker, ownership cuts, guide-lantern count, and high rope carry state; never use floating labels or glowing UI runes.",
+      "Preserve blackwater reflections as visually persuasive but physically unserviced: reflected doors, people, and lights receive no latch, socket, ledger rail, or collision volume."
+    ],
+    "interiorRead": [
+      "The service house is crowded, warm, patched, and operational; it must feel inhabited before it feels quest-relevant.",
+      "Separate wet/dirty, dry domestic, clean water, fire-watch, and rescue-hatch zones through floor texture, storage discipline, smell, and sound rather than color-coded game rooms.",
+      "The ledger gallery is a sparse working station with reachable mechanisms, visible maintenance access, and exactly one finite counting position for each living borrower.",
+      "The raised refuge uses pale dry material, clear-air movement, drinking water, and two unmistakable departures; no exchange shadow enters its envelope.",
+      "Every threshold exposes its current state through hinges, ropes, latches, rails, shutters, or physical absence; decorative closed doors are forbidden."
+    ],
+    "light": [
+      "Baseline is moonless teal-gray ambient light with cold rain sheen and strong occlusion by reed walls and ground fog.",
+      "Warm practicals are sparse crooked guide lanterns, hooded ledger task light, peat-stove glow, and red-banded fire cabinet reflections.",
+      "The refuge reads by cold clear raking light and dry pale bounce, not holy glow; the exchange reads by silhouette and moving clear air, not magical particles.",
+      "At first light, reveal repair evidence and living-count positions before widening visibility across the mire."
+    ],
+    "weather": [
+      "Steady rain, ground fog, still-water condensation, and low wind dominate; crosswind appears only at causeway gaps and the work balcony.",
+      "Seasonal blackwater may rise one meter in the candidate design storm, but ordinary thresholds, rescue hatches, and refuge relation remain legible.",
+      "Fog-fall is a volumetric boundary event with finite extent at the marked edge; it is not a global post-process covering safe cells.",
+      "Late cold can lock shallow channels, shifting deliveries to the dry causeway while preserving manual rescue craft at the deeper ferry return."
+    ],
+    "materials": ["wet oak with hand-polished rails", "reed wicker in distinct repair ages", "sunk drowned-limestone and chapel slate", "pitch cloth and tarred rescue timber", "restrained bronze sockets, valves, and winch hardware", "glazed clay clean-water fittings and red-banded emergency canvas"],
+    "forbidden": [
+      "no generic fantasy swamp huts, random boardwalk maze, or copy-pasted dock modules",
+      "no glowing runes, text signage, minimap paint, floating quest markers, or color-only state cues",
+      "no cathedral stone, Lucent gold, Charnel anatomy, or unrelated faction spectacle in the ordinary settlement fabric",
+      "no plural Escrow bodies, swarm silhouette, more or fewer than four leg positions, or reflected ledger occupants",
+      "no Fog Loaner volume inside the service house, refuge, or settled safe cells",
+      "no shared first segment or shared failure domain for the two refuge egress paths",
+      "no pristine symmetry: pile settlement and family repair histories must remain specific and structurally readable",
+      "no final structural, accessibility-code, hydrology-engineering, runtime navigation, or atlas-coordinate claim from this reference"
+    ]
+  }
+}
