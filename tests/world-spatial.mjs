@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 import { BESTIARY, ENEMY_FAMILIES } from '../packages/content/src/bestiary.data.js';
 import { EXPANSION_CREATURES, EXPANSION_QUESTS } from '../packages/content/src/narrative.data.js';
+import { WORLD_SPATIAL_BLOCKOUT_ASSETS } from '../src/data/worldAssets.js';
 import { inspectPng } from '../tools/assets/validate-raster-art.mjs';
 import { redactedJsonPointers } from '../tools/worldgen/redact-world-spatial-wave-02-v9.mjs';
 import {
@@ -196,6 +197,23 @@ for (const source of WORLD_SPATIAL_SOURCE_LEDGER) {
   assert.equal(source.path.includes('\\'), false);
   assert.equal(existsSync(`${repositoryRoot}${source.path}`), true, `Missing redacted source-ledger path ${source.path}`);
   assert.equal(spatialAuthorityIds.has(source.authority), true, `Unknown source-ledger authority ${source.authority}`);
+}
+assert.equal(WORLD_SPATIAL_BLOCKOUT_ASSETS.length, 3);
+const sourceLedgerPaths = new Set(WORLD_SPATIAL_SOURCE_LEDGER.map(({ path }) => path));
+for (const reference of WORLD_SPATIAL_BLOCKOUT_ASSETS) {
+  const payload = readFileSync(`${repositoryRoot}${reference.payloadPath}`);
+  assert.equal(payload.length, reference.bytes, `${reference.id} byte count changed`);
+  assert.equal(sha256(payload), reference.sha256, `${reference.id} hash changed`);
+  for (const repositoryPath of [reference.payloadPath, reference.provenancePath, reference.indexPath, reference.schemaPath].filter(Boolean)) {
+    assert.equal(sourceLedgerPaths.has(repositoryPath), true, `${reference.id} is absent from the world-spatial source ledger: ${repositoryPath}`);
+  }
+  assert.equal(reference.authority, 'independently_reviewed_noncanonical_reference');
+  assert.equal(reference.runtimeIntegrated, false);
+  assert.equal(reference.constructionReady, false);
+  assert.equal(reference.productionGeometry, false);
+  assert.equal(reference.staticScene, false);
+  assert.equal(reference.animatedScene, false);
+  assert.equal(reference.releaseReady, false);
 }
 
 const visualReferences = ENVIRONMENT_ART_DIRECTION.acceptedVisualReferences;

@@ -5,7 +5,7 @@ import { DEFAULT_CHARACTER, validateCharacter, characterSilhouette } from "../sr
 import { BESTIARY, ENEMY_FAMILIES, validateBestiary } from "../src/data/bestiary.js";
 import { CHARACTERS, CHARACTER_RELATIONSHIPS, FACTIONS, STORY_STATE_DEFAULTS, validateCharacters } from "../src/data/characters.js";
 import { SKILL_TREES, SKILL_ACTIONS, CROSS_SKILL_SYNERGIES, MASTERY_TRIALS, validateSkillTrees } from "../src/data/skillTrees.js";
-import { WORLD_CONCEPT_ASSETS, WORLD_SOURCE_ASSETS, WORLD_TECHNICAL_ASSETS, REGION_ASSET_KITS, validateWorldAssets } from "../src/data/worldAssets.js";
+import { WORLD_CONCEPT_ASSETS, WORLD_SOURCE_ASSETS, WORLD_SPATIAL_BLOCKOUT_ASSETS, WORLD_TECHNICAL_ASSETS, REGION_ASSET_KITS, validateWorldAssets } from "../src/data/worldAssets.js";
 import { ENCOUNTERS, ENCOUNTER_SPAWNS, validateEncounterSpawns, validateEncounterGroups } from "../src/data/encounters.js";
 import { ENEMY_DEFINITIONS, ENEMY_REGISTRY, ITEM_REGISTRY, CHARACTER_DEFINITIONS, validateRegistries } from "../src/data/registries.js";
 import { validateContentGraph, validatePermanentInteractionLayout } from "../src/data/contentGraph.js";
@@ -80,12 +80,18 @@ check(ENEMY_DEFINITIONS.every(({ runtime }) => runtime?.maxHealth > 0 && runtime
 check(CHARACTER_DEFINITIONS.every(({ regionId }) => typeof regionId === "string"), "A canonical character lacks a region");
 check(Object.keys(ITEM_REGISTRY).length >= 200, "Canonical item registry is unexpectedly small");
 for (const asset of [...WORLD_CONCEPT_ASSETS, ...WORLD_SOURCE_ASSETS, ...WORLD_TECHNICAL_ASSETS]) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset.path)), `Missing world asset ${asset.path}`);
+for (const reference of WORLD_SPATIAL_BLOCKOUT_ASSETS) {
+  for (const repositoryPath of [reference.payloadPath, reference.indexPath, reference.provenancePath, reference.schemaPath].filter(Boolean)) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), repositoryPath)), `Missing spatial blockout asset ${repositoryPath}`);
+}
 for (const asset of WORLD_TECHNICAL_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset.topologyPath)), `Missing world topology source ${asset.topologyPath}`);
 for (const asset of CHARACTER_RENDER_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset)), `Missing character render ${asset}`);
 check(REGION_ASSET_KITS.length === 5, "Expected five production regional asset kits");
 check(new Set(WORLD_CONCEPT_ASSETS.map(({ id }) => id)).size === WORLD_CONCEPT_ASSETS.length, "World concept IDs must be unique");
 check(WORLD_CONCEPT_ASSETS.length === 11, "Expected eleven accepted world concept references");
 check(WORLD_TECHNICAL_ASSETS.length === 1, "Expected one accepted world technical reference");
+check(WORLD_SPATIAL_BLOCKOUT_ASSETS.length === 3, "Expected three reviewed world spatial blockout references");
+check(new Set(WORLD_SPATIAL_BLOCKOUT_ASSETS.map(({ id }) => id)).size === WORLD_SPATIAL_BLOCKOUT_ASSETS.length, "World spatial blockout IDs must be unique");
+check(WORLD_SPATIAL_BLOCKOUT_ASSETS.every(({ authority, runtimeIntegrated, constructionReady, productionGeometry, staticScene, animatedScene, releaseReady }) => authority === "independently_reviewed_noncanonical_reference" && !runtimeIntegrated && !constructionReady && !productionGeometry && !staticScene && !animatedScene && !releaseReady), "Spatial blockout registry overstates authority or implementation readiness");
 const wardenExterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_warden_reed_four_bank_visibility_exterior");
 const wardenInterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_warden_reed_stilt_service_house_interior");
 check(Boolean(wardenExterior && wardenInterior), "Warden Reed exterior/interior direction pair is incomplete");
@@ -313,6 +319,7 @@ const result = {
   encounterGroups: ENCOUNTERS.length,
   worldConcepts: WORLD_CONCEPT_ASSETS.length,
   worldTechnicalReferences: WORLD_TECHNICAL_ASSETS.length,
+  worldSpatialBlockouts: WORLD_SPATIAL_BLOCKOUT_ASSETS.length,
   characterRenders: CHARACTER_RENDER_ASSETS.length,
   contentGraph: graph.summary,
   failures,

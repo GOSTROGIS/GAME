@@ -1495,6 +1495,14 @@ export const WORLD_SPATIAL_SOURCE_LEDGER = deepFreeze([
   { path: "assets/world/technical/veil-coast-gloamharbor-tide-refuge-blueprint-v14.png", role: "independently reviewed Gloamharbor two-dimensional topology visualization", authority: "reference" },
   { path: "assets/world/spatial/world-spatial-wave-02-v9.annex.json", role: "independently reviewed noncanonical six-site spatial blockout reference", authority: "reference" },
   { path: "assets/world/spatial/world-spatial-wave-02-v9.provenance.json", role: "redacted review and maturity record for the six-site spatial blockout reference", authority: "reference" },
+  { path: "assets/world/spatial/site-blockout-reference-v1.schema.json", role: "strict Warden Reed site-local blockout reference contract", authority: "reference" },
+  { path: "assets/world/spatial/wave-03a/warden-reed.site.json", role: "independently reviewed noncanonical Warden Reed site-local blockout reference", authority: "reference" },
+  { path: "assets/world/spatial/wave-03a/index.json", role: "content-addressed Wave 03A release index", authority: "reference" },
+  { path: "assets/world/spatial/wave-03a/provenance.json", role: "redacted review and maturity record for Wave 03A", authority: "reference" },
+  { path: "assets/world/spatial/site-blockout-reference-v2.schema.json", role: "strict Hollow Abbey site-local topology, state, hydrology, and habitat reference contract", authority: "reference" },
+  { path: "assets/world/spatial/wave-03b/hollow-abbey.site.json", role: "independently reviewed noncanonical Hollow Abbey site-local blockout reference", authority: "reference" },
+  { path: "assets/world/spatial/wave-03b/index.json", role: "content-addressed Wave 03B release index", authority: "reference" },
+  { path: "assets/world/spatial/wave-03b/provenance.json", role: "redacted review and maturity record for Wave 03B", authority: "reference" },
 ]);
 
 const idsEqual = (left, right) => left.size === right.size && [...left].every((id) => right.has(id));

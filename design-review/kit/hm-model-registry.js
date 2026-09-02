@@ -20,7 +20,7 @@ import {
   QUEST_ACTOR_CONTRACTS,
 } from '../../packages/content/src/narrative.data.js';
 import { CHARACTERS, FACTIONS } from '../../src/data/characters.js';
-import { WORLD_CONCEPT_ASSETS } from '../../src/data/worldAssets.js';
+import { WORLD_CONCEPT_ASSETS, WORLD_SPATIAL_BLOCKOUT_ASSETS } from '../../src/data/worldAssets.js';
 import { artFor, url } from './hm-concept-art.js';
 import { FAMILY_LAW, CHASSIS_STATUS } from './hm-art-law.js';
 
@@ -36,6 +36,7 @@ const familyById = new Map(ENEMY_FAMILIES.map((row) => [row.id, row]));
 const factionById = new Map(FACTIONS.map((row) => [row.id, row]));
 const cosmicFactionById = new Map(COSMIC_FACTIONS.map((row) => [row.id, row]));
 const worldConceptById = new Map(WORLD_CONCEPT_ASSETS.map((row) => [row.id, row]));
+const spatialBlockoutById = new Map(WORLD_SPATIAL_BLOCKOUT_ASSETS.map((row) => [row.id, row]));
 
 const ENVIRONMENT_DEFINITIONS = Object.freeze([
   Object.freeze({
@@ -50,6 +51,7 @@ const ENVIRONMENT_DEFINITIONS = Object.freeze([
       'concept_warden_reed_four_bank_visibility_exterior',
       'concept_warden_reed_stilt_service_house_interior',
     ]),
+    blockoutReferenceIds: Object.freeze(['spatial_blockout.wave-03a.warden-reed']),
     motionSystems: Object.freeze([
       'fog_density_bands',
       'ferry_positions',
@@ -73,6 +75,7 @@ const ENVIRONMENT_DEFINITIONS = Object.freeze([
       'concept_hollow_abbey_mute_nave_route_read',
       'concept_hollow_abbey_rain_court_work_nexus',
     ]),
+    blockoutReferenceIds: Object.freeze(['spatial_blockout.wave-03b.hollow-abbey']),
     motionSystems: Object.freeze([
       'roof_rain_now',
       'delayed_rain_returns',
@@ -350,9 +353,43 @@ function environmentConcept(id, expectedEnvironmentId) {
   });
 }
 
+function environmentBlockout(id, expectedEnvironmentId) {
+  const asset = spatialBlockoutById.get(id);
+  if (!asset || !asset.environmentIds.includes(expectedEnvironmentId)) {
+    throw new Error(`Spatial blockout ${id} is missing or bound to the wrong environment`);
+  }
+  return Object.freeze({
+    id: asset.id,
+    waveId: asset.waveId,
+    name: asset.name,
+    payloadPath: asset.payloadPath,
+    payloadSrc: url(asset.payloadPath),
+    indexPath: asset.indexPath,
+    indexSrc: url(asset.indexPath),
+    provenancePath: asset.provenancePath,
+    provenanceSrc: url(asset.provenancePath),
+    schemaPath: asset.schemaPath,
+    schemaSrc: url(asset.schemaPath),
+    schemaVersion: asset.schemaVersion,
+    sha256: asset.sha256,
+    bytes: asset.bytes,
+    counts: asset.counts,
+    authority: asset.authority,
+    coordinateSemantics: asset.coordinateSemantics,
+    limitations: asset.limitations,
+    runtimeIntegrated: asset.runtimeIntegrated,
+    constructionReady: asset.constructionReady,
+    productionGeometry: asset.productionGeometry,
+    staticScene: asset.staticScene,
+    animatedScene: asset.animatedScene,
+    releaseReady: asset.releaseReady,
+  });
+}
+
 function environmentList() {
   return ENVIRONMENT_DEFINITIONS.map((definition) => {
     const concepts = Object.freeze(definition.conceptIds.map((id) => environmentConcept(id, definition.id)));
+    const blockoutReferences = Object.freeze(definition.blockoutReferenceIds.map((id) => environmentBlockout(id, definition.id)));
     const [exteriorConcept, interiorConcept] = concepts;
     return Object.freeze({
       id: definition.id,
@@ -368,6 +405,7 @@ function environmentList() {
       tier: 'reference',
       directionStatus: 'approved_direction',
       concepts,
+      blockoutReferences,
       exteriorConcept,
       interiorConcept,
       exteriorSrc: exteriorConcept.src,
@@ -385,7 +423,7 @@ function environmentList() {
         'No static or animated 3D scene has been accepted.',
         'Not GIS, construction, structural, collision, navigation, or production-geometry authority.',
       ]),
-      reason: 'Accepted exterior and interior direction is linked for scene authoring. Static and animated environment readiness remain independently unclaimed.',
+      reason: 'Accepted concept direction and independently reviewed noncanonical blockout data are linked for scene authoring. Static and animated environment readiness remain independently unclaimed.',
     });
   });
 }
@@ -415,6 +453,7 @@ export function tally(registry) {
   const expansionCharacters = registry.expansionCharacters.length;
   const expansionCreatures = registry.expansionCreatures.length;
   const expansionRows = [...registry.expansionCharacters, ...registry.expansionCreatures];
+  const spatialBlockouts = new Set(registry.environments.flatMap((row) => row.blockoutReferences.map(({ id }) => id))).size;
   return {
     sculpted: countTier('sculpted'),
     awaitingArt: countTier('awaiting-art'),
@@ -433,6 +472,7 @@ export function tally(registry) {
     agencyContracts: registry.agencyContracts.length,
     actorContracts: registry.actorContracts.length,
     environments: registry.environments.length,
+    spatialBlockouts,
     expansionAwaitingArt: expansionRows.filter((row) => row.tier === 'awaiting-art').length,
     expansionStaticModels: expansionRows.filter((row) => row.tier === 'static-model').length,
     expansionAnimatedModels: expansionRows.filter((row) => row.tier === 'animated-model').length,

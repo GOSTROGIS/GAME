@@ -313,6 +313,99 @@ export const WORLD_TECHNICAL_ASSETS = Object.freeze([
   },
 ]);
 
+const SPATIAL_BLOCKOUT_REFERENCE_METADATA = Object.freeze({
+  authority: "independently_reviewed_noncanonical_reference",
+  coordinateSemantics: "candidate_site_local_fictional_meters",
+  runtimeIntegrated: false,
+  constructionReady: false,
+  productionGeometry: false,
+  staticScene: false,
+  animatedScene: false,
+  releaseReady: false,
+});
+
+/**
+ * Lightweight, on-demand pointers to reviewed spatial handoffs. The payloads
+ * remain JSON files rather than being imported into MODEL MAKER's default
+ * bundle; Claude Design can inspect them without confusing a blockout with a
+ * static or animated production scene.
+ */
+export const WORLD_SPATIAL_BLOCKOUT_ASSETS = Object.freeze([
+  Object.freeze({
+    id: "spatial_blockout.world-spatial-wave-02-v9",
+    waveId: "world-spatial-wave-02-v9",
+    name: "World Spatial Wave 02 · Six-Site Deep Blockout",
+    sourceType: "multi_site_annex",
+    environmentIds: Object.freeze([]),
+    siteIds: Object.freeze([
+      "site.gloamharbor",
+      "site.sluice-chapel",
+      "site.pale-measure",
+      "site.anchor-field",
+      "site.smothered-kiln",
+      "site.white-meridian",
+    ]),
+    indexPath: null,
+    payloadPath: "assets/world/spatial/world-spatial-wave-02-v9.annex.json",
+    provenancePath: "assets/world/spatial/world-spatial-wave-02-v9.provenance.json",
+    schemaPath: null,
+    schemaVersion: null,
+    sha256: "4ddba07f2e7c74700d021421cbc20dd0ee27e9ccef730e9258fb6cfaebb3ffe4",
+    bytes: 49416945,
+    counts: Object.freeze({ sites: 6, frames: 9, structures: 12, rooms: 67, habitats: 28, utilities: 64, verticalAccess: 36, independentEgress: 36, questCrosswalks: 3 }),
+    summary: "Nine local frames bind twelve structures, sixty-seven rooms, habitat and utility networks, vertical access, independent emergency stairs, and three quest crosswalks across six sites.",
+    limitations: Object.freeze([
+      "Site-local fictional meters are not atlas coordinates or diagram pixels.",
+      "Data-only reference; not accepted art, production geometry, runtime navigation or collision, construction guidance, or engineering certification.",
+    ]),
+    ...SPATIAL_BLOCKOUT_REFERENCE_METADATA,
+  }),
+  Object.freeze({
+    id: "spatial_blockout.wave-03a.warden-reed",
+    waveId: "world-spatial-wave-03a",
+    name: "World Spatial Wave 03A · Warden Reed",
+    sourceType: "site_blockout_reference",
+    environmentIds: Object.freeze(["environment.warden-reed-four-bank-visibility"]),
+    siteIds: Object.freeze(["site.warden-reed"]),
+    indexPath: "assets/world/spatial/wave-03a/index.json",
+    payloadPath: "assets/world/spatial/wave-03a/warden-reed.site.json",
+    provenancePath: "assets/world/spatial/wave-03a/provenance.json",
+    schemaPath: "assets/world/spatial/site-blockout-reference-v1.schema.json",
+    schemaVersion: 1,
+    sha256: "dc3438166e00a0211d050891344194aed61a53e159d3a536b87ef88024a45d3c",
+    bytes: 76805,
+    counts: Object.freeze({ sites: 1, structures: 2, rooms: 12, anchorNodes: 18, thresholds: 15, utilities: 6, hazards: 5, habitats: 4, routes: 8, activityPhases: 4, questObjectives: 4 }),
+    summary: "Two structures and twelve room roles bind eighteen exact anchor ports, independent egress domains, utilities, hazards, habitats, routes, four activity phases, and four objective crosswalks.",
+    limitations: Object.freeze([
+      "The complete local frame is relocatable within the authored Warden Reed site envelope.",
+      "Reference only; not canonical geometry, atlas placement, runtime navigation or collision, construction guidance, or a static or animated production scene.",
+    ]),
+    ...SPATIAL_BLOCKOUT_REFERENCE_METADATA,
+  }),
+  Object.freeze({
+    id: "spatial_blockout.wave-03b.hollow-abbey",
+    waveId: "world-spatial-wave-03b",
+    name: "World Spatial Wave 03B · Hollow Abbey",
+    sourceType: "site_blockout_reference",
+    environmentIds: Object.freeze(["environment.hollow-abbey-processional-and-mute-nave"]),
+    siteIds: Object.freeze(["site.hollow-abbey"]),
+    indexPath: "assets/world/spatial/wave-03b/index.json",
+    payloadPath: "assets/world/spatial/wave-03b/hollow-abbey.site.json",
+    provenancePath: "assets/world/spatial/wave-03b/provenance.json",
+    schemaPath: "assets/world/spatial/site-blockout-reference-v2.schema.json",
+    schemaVersion: 2,
+    sha256: "a05e1b88b5dbafec09beccadfd7abf1486fcd19049d75096a6f8c938d168eddf",
+    bytes: 215770,
+    counts: Object.freeze({ sites: 1, zones: 3, spaces: 45, nodes: 48, links: 60, directedArcs: 120, safeCells: 6, stateMachines: 6, activityPhases: 4, hydrologySystems: 5, habitats: 7, actorSlots: 13, encounterSlots: 3, routePrograms: 15, overlayBindings: 2, questObjectives: 15 }),
+    summary: "Forty-five base spaces and forty-eight nodes bind the court, nave, crypt, foundry, hydrology, habitats, actor schedules, encounters, and three quest crossings while preserving the accepted cause-frame graph as an external overlay.",
+    limitations: Object.freeze([
+      "The Gate-centered local frame is relocatable and subordinate to canonical identities, route order, quest state, and the atlas site anchor.",
+      "Reference only; not surveyed or canonical geometry, runtime navigation or collision, construction guidance, static or animated models, or a production asset.",
+    ]),
+    ...SPATIAL_BLOCKOUT_REFERENCE_METADATA,
+  }),
+]);
+
 export const REGION_ASSET_KITS = Object.freeze([
   kit(
     "hearthmere", "Hearthmere Hold", "concept_hearthmere_hold",
@@ -428,6 +521,23 @@ export function validateWorldAssets() {
     if (reference.coordinateSemantics !== "diagram_pixels_not_meters") errors.push(`Technical reference ${reference.id} obscures diagram-coordinate semantics`);
     if (reference.claims?.cells !== 5 || reference.claims?.internalOpenings !== 4 || reference.claims?.completeSeparateUtilities !== 2) errors.push(`Technical reference ${reference.id} lost reviewed topology claims`);
     if (!Array.isArray(reference.limitations) || reference.limitations.length < 3) errors.push(`Technical reference ${reference.id} lacks explicit non-authority boundaries`);
+  }
+  const spatialBlockoutIds = new Set();
+  for (const reference of WORLD_SPATIAL_BLOCKOUT_ASSETS) {
+    if (spatialBlockoutIds.has(reference.id)) errors.push(`Duplicate spatial blockout reference: ${reference.id}`);
+    spatialBlockoutIds.add(reference.id);
+    if (!/^spatial_blockout\./.test(reference.id) || !reference.waveId) errors.push(`Spatial blockout ${reference.id} lacks stable identity`);
+    if (!Array.isArray(reference.siteIds) || reference.siteIds.length < 1 || new Set(reference.siteIds).size !== reference.siteIds.length) errors.push(`Spatial blockout ${reference.id} has invalid site bindings`);
+    if (!Array.isArray(reference.environmentIds) || new Set(reference.environmentIds).size !== reference.environmentIds.length) errors.push(`Spatial blockout ${reference.id} has invalid environment bindings`);
+    if (!reference.payloadPath || !reference.provenancePath || !/^[a-f0-9]{64}$/.test(reference.sha256) || !Number.isInteger(reference.bytes) || reference.bytes < 1) errors.push(`Spatial blockout ${reference.id} lacks content-addressed payload evidence`);
+    for (const repositoryPath of [reference.indexPath, reference.payloadPath, reference.provenancePath, reference.schemaPath].filter(Boolean)) {
+      if (repositoryPath.startsWith('/') || repositoryPath.includes('\\') || /^[A-Za-z]:/.test(repositoryPath) || repositoryPath.split('/').includes('..')) errors.push(`Spatial blockout ${reference.id} has a non-repository path`);
+    }
+    if (!reference.counts || reference.counts.sites !== reference.siteIds.length) errors.push(`Spatial blockout ${reference.id} has inconsistent site counts`);
+    if (reference.sourceType === 'site_blockout_reference' && (!Number.isInteger(reference.schemaVersion) || !reference.schemaPath || !reference.indexPath)) errors.push(`Spatial blockout ${reference.id} lacks its site contract`);
+    if (reference.authority !== 'independently_reviewed_noncanonical_reference') errors.push(`Spatial blockout ${reference.id} obscures its authority`);
+    if (reference.runtimeIntegrated || reference.constructionReady || reference.productionGeometry || reference.staticScene || reference.animatedScene || reference.releaseReady) errors.push(`Spatial blockout ${reference.id} makes a false implementation claim`);
+    if (!Array.isArray(reference.limitations) || reference.limitations.length < 2) errors.push(`Spatial blockout ${reference.id} lacks explicit nonclaims`);
   }
   return { valid: errors.length === 0, errors };
 }

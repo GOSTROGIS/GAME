@@ -11,12 +11,13 @@
 <helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../design-system/tokens/colors.css">
 <link rel="stylesheet" href="../design-system/tokens/typography.css">
 <link rel="stylesheet" href="../design-system/tokens/spacing.css">
 <link rel="stylesheet" href="../design-system/tokens/effects.css">
 <style>
+  :root { --sans:"IBM Plex Sans", system-ui, sans-serif; }
   html, body { margin:0; padding:0; background:var(--ink); color:var(--bone); -webkit-font-smoothing:antialiased; }
   body { font-family: var(--sans); }
   * { box-sizing: border-box; }
@@ -68,7 +69,6 @@
 <section style="position:relative;z-index:2;max-width:1720px;margin:0 auto;padding:48px clamp(28px,5vw,96px) 0">
   <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:20px">
     <div style="display:flex;align-items:baseline;gap:18px">
-      <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">00</span>
       <div>
         <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">Readable authority</p>
         <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">The art I can actually open</h2>
@@ -159,16 +159,16 @@
     </sc-for>
   </div>
 
-  <p style="margin:40px 0 14px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Executable spatial blockout reference &mdash; data only, loaded on demand</p>
-  <div style="border:1px solid var(--line);background:var(--ink);padding:18px 20px">
+  <p style="margin:40px 0 14px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Executable spatial blockout references &mdash; data only, loaded on demand</p>
+  <div style="display:grid;gap:10px;border:1px solid var(--line);background:var(--ink);padding:18px 20px">
     <sc-for list="{{ spatialReferences }}" as="r" hint-placeholder-count="1">
-      <article>
+      <article style="padding:14px 16px;background:var(--glass-bg);border:1px solid var(--line-soft)">
         <span style="color:var(--gold);font:var(--type-nano);letter-spacing:var(--track-micro)">{{ r.band }}</span>
         <h3 style="margin:5px 0 7px;color:var(--bone);font:500 18px var(--display)">{{ r.name }}</h3>
         <p style="margin:0 0 10px;max-width:920px;color:#a8ada7;font:var(--type-body-xs)">{{ r.note }}</p>
         <p style="margin:0 0 14px;max-width:920px;color:#797f7a;font:var(--type-nano);letter-spacing:.04em">{{ r.boundary }}</p>
         <div style="display:flex;flex-wrap:wrap;gap:9px 18px;align-items:center">
-          <a href="{{ r.file }}" style="color:#d9bd82;font:500 11px var(--display);letter-spacing:.08em;text-underline-offset:3px">Open exact spatial annex</a>
+          <a href="{{ r.file }}" style="color:#d9bd82;font:500 11px var(--display);letter-spacing:.08em;text-underline-offset:3px">Open spatial payload</a>
           <a href="{{ r.provenance }}" style="color:#8aa596;font:var(--type-nano);letter-spacing:.06em;text-underline-offset:3px">Review and maturity record</a>
           <span style="color:#6f7571;font:var(--type-nano)">{{ r.integrity }}</span>
         </div>
@@ -218,7 +218,6 @@
 
 <section style="padding:64px 0 0">
   <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:22px">
-    <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">03</span>
     <div>
       <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">The rule</p>
       <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">Every subject, and which gap it is sitting in</h2>
@@ -251,7 +250,6 @@
 <section style="padding:64px 0 0">
   <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:20px">
     <div style="display:flex;align-items:baseline;gap:18px">
-      <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">04</span>
       <div>
         <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">The cast</p>
         <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">{{ shownLabel }}</h2>
@@ -432,7 +430,6 @@
 <section style="padding:72px 0 0">
   <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:20px">
     <div style="display:flex;align-items:baseline;gap:18px">
-      <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">05</span>
       <div>
         <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">The bestiary</p>
         <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">{{ beastHeading }}</h2>
@@ -464,7 +461,6 @@
 
 <section style="padding:72px 0 0">
   <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:22px">
-    <span style="color:var(--gold);font:500 12px var(--display);letter-spacing:var(--track-micro)">06</span>
     <div>
       <p style="margin:0 0 8px;color:var(--gold);font:var(--type-eyebrow);letter-spacing:var(--track-eyebrow);text-transform:uppercase">Still open</p>
       <h2 style="margin:0;color:var(--bone);font:400 32px var(--display)">What this does not solve</h2>
@@ -553,13 +549,14 @@ class Component extends DCLogic {
 
   async boot() {
     try {
-      const [cast, art, law, obs, prompts, bestiary] = await Promise.all([
+      const [cast, art, law, obs, prompts, bestiary, world] = await Promise.all([
         import('./kit/hm-actor-cast.js?v=9'),
         import('./kit/hm-concept-art.js?v=9'),
         import('./kit/hm-art-law.js?v=1'),
         import('./kit/hm-art-observed.js?v=3'),
         import('./kit/hm-cast-prompts.js?v=1'),
         import('./kit/hm-bestiary-data.js?v=1'),
+        import('../src/data/worldAssets.js?v=2'),
       ]);
       if (this._dead) return;
       this.CAST = cast.CAST;
@@ -573,6 +570,7 @@ class Component extends DCLogic {
       this.OBS = obs;
       this.PROMPTS = prompts;
       this.BEST = bestiary;
+      this.WORLD_SPATIAL_BLOCKOUT_ASSETS = world.WORLD_SPATIAL_BLOCKOUT_ASSETS;
       /* No renderer. This page shows concept art and the prompts that govern
          it; the 3D rig is not presented here, so booting a WebGL context,
          building skeletons and baking stills would all be work for pixels
@@ -876,17 +874,15 @@ class Component extends DCLogic {
       },
     ];
 
-    const spatialReferences = [
-      {
-        file: '../assets/world/spatial/world-spatial-wave-02-v9.annex.json',
-        provenance: '../assets/world/spatial/world-spatial-wave-02-v9.provenance.json',
-        name: 'World Spatial Wave 02 · Six-Site Deep Blockout',
-        band: 'GLOAMHARBOR · SLUICE CHAPEL · PALE MEASURE · ANCHOR FIELD · SMOTHERED KILN · WHITE MERIDIAN',
-        note: 'Reviewed site-local blockout data: nine frames, twelve structures, sixty-seven rooms, twenty-eight habitat placements, sixty-four utility networks, thirty-six vertical-access systems, thirty-six independent emergency stairs, and three quest crosswalks.',
-        boundary: 'Reviewed noncanonical blockout data only. Site-local fictional meters are not atlas coordinates and are never scale-compatible with the Veil diagram. Not accepted art, production geometry, runtime navigation/collision/streaming evidence, construction guidance, or engineering certification.',
-        integrity: '49,416,945 bytes · SHA-256 4ddba07f…ffe4 · 39 private locators removed',
-      },
-    ];
+    const spatialReferences = (this.WORLD_SPATIAL_BLOCKOUT_ASSETS || []).map((reference) => ({
+      file: `../${reference.payloadPath}`,
+      provenance: `../${reference.provenancePath}`,
+      name: reference.name,
+      band: reference.siteIds.map((id) => id.replace(/^site\./, '').replaceAll('-', ' ').toUpperCase()).join(' · '),
+      note: reference.summary,
+      boundary: reference.limitations.join(' '),
+      integrity: `${reference.bytes.toLocaleString('en-US')} bytes · SHA-256 ${reference.sha256.slice(0, 8)}…${reference.sha256.slice(-4)}${reference.schemaVersion ? ` · schema v${reference.schemaVersion}` : ' · multi-site annex'}`,
+    }));
 
     /* Set-level counts are measured off the register, never typed. A typed
        count on this page has already been wrong once. */
@@ -916,7 +912,7 @@ class Component extends DCLogic {
       /* Derived, never typed. A hardcoded count that disagrees with the data
          is the exact failure this page legislates against — it shipped once
          already, as "Four character plates" beside a measured "3". */
-      readableLede: `${NUMWORD[observed.length] || observed.length} character plates, ${NUMWORD[keyframes.length] || keyframes.length} environment keyframes, and ${NUMWORD[technicalReferences.length] || technicalReferences.length} topology blockout reference are vendored as project files, so they are same-origin and readable.`,
+      readableLede: `${NUMWORD[observed.length] || observed.length} character plates, ${NUMWORD[keyframes.length] || keyframes.length} environment keyframes, ${NUMWORD[technicalReferences.length] || technicalReferences.length} topology blueprint, and ${NUMWORD[spatialReferences.length] || spatialReferences.length} spatial blockout datasets are vendored as project files, so they are same-origin and readable.`,
 
       /* ---- rank-1 prompts authored this pass */
       prompts: (this.PROMPTS ? this.PROMPTS.promptList() : []).map((p) => ({

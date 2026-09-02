@@ -30,7 +30,7 @@
     },
     {
       "path": "assets/world/spatial/wave-03a/index.json",
-      "sha256": "c48001dc5ff51818951c506ae212856dd9b520071b64720050ab8a67f5820ff2",
+      "sha256": "51ff22308b09109ef00921ecbd0720cf071a7f98f2c933d937e799f3edc91dbb",
       "bytes": 1159,
       "role": "release_index",
       "rights": "original_project_owned_authorized_for_repository",
@@ -38,7 +38,7 @@
     },
     {
       "path": "assets/world/spatial/wave-03a/warden-reed.site.json",
-      "sha256": "004634fc3bead2fd1804c68fdd3493e01c69f8ae604266760dd8debcdb4ec3da",
+      "sha256": "dc3438166e00a0211d050891344194aed61a53e159d3a536b87ef88024a45d3c",
       "bytes": 76805,
       "role": "site_local_spatial_reference",
       "rights": "original_project_owned_authorized_for_repository",
