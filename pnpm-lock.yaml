@@ -24,8 +24,8 @@ importers:
   apps/client:
     dependencies:
       '@colyseus/sdk':
-        specifier: ^0.17.18
-        version: 0.17.43(@colyseus/core@0.17.50)(typescript@5.9.3)
+        specifier: ^0.18.2
+        version: 0.18.2(typescript@5.9.3)
       '@hearthmere/content':
         specifier: workspace:*
         version: link:../../packages/content
@@ -162,17 +162,30 @@ packages:
       typescript:
         optional: true
 
-  '@colyseus/sdk@0.17.43':
-    resolution: {integrity: sha512-aXefQuh7esEZbtd11TzKMqoLmUjKIfWVDr7ytPR7atV2QgnVyOHof3WIX7B8MDfr9ShyFFVEy2BseCGIfzzvBA==}
+  '@colyseus/schema@5.0.19':
+    resolution: {integrity: sha512-Jh6hy9KXuN1vlqBkq9CFUo+MYbJkMtobr0rvjKHML2EG1dqU6aOqwEqPnqevPe0Hvv0hj77r8Iv5txsomZXlfg==}
+    hasBin: true
+    peerDependencies:
+      typescript: '>=5.0.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  '@colyseus/sdk@0.18.2':
+    resolution: {integrity: sha512-rM3xk0bk48i7fxIdVqCunPTEwI8dzyCYh/PwhYFeV4tabUiulKbg3qY8gvI0zoPCnwslmphMigM10xcGzZvmdA==}
     engines: {node: '>= 12.x'}
     peerDependencies:
-      '@colyseus/core': 0.17.x
+      '@colyseus/core': 0.18.x
     peerDependenciesMeta:
       '@colyseus/core':
         optional: true
 
   '@colyseus/shared-types@0.17.6':
     resolution: {integrity: sha512-GeBB9uNrjG+BWa4/LAVyAHj65ll0WKLNjWDieKiphhmbfGXgQOcmvWVxKQc8KKu+n7f5Hmrwr6IEk9Dm2Y0Qgw==}
+    engines: {node: '>= 22.x'}
+
+  '@colyseus/shared-types@0.18.1':
+    resolution: {integrity: sha512-JAcPox/bopsTGosmZ0O0Tw0OeoaH6EsE5QmTEfSWssSFoHE8/Kzpfr/8DHVTpP8n9thPWc5Wo30kO7Thkt3rvQ==}
     engines: {node: '>= 22.x'}
 
   '@colyseus/timer@2.0.3':
@@ -794,6 +807,9 @@ packages:
     resolution: {integrity: sha512-4kmO/MdyUIkLIvTPr8VHLil4AtoKIoniWPIEk5+CDy0xnWC84azhSFmuJ7PxZdsYtiP5kEeQsORAVIeMgxT+Hw==}
     hasBin: true
 
+  msgpackr@2.0.6:
+    resolution: {integrity: sha512-plGul/tqjt9vqWFR9zyqyLZls6gb5KTLvnsRO2B9+TZ8tNiXiVI/CR8LiDWlAX4IUeVkQ9gsmzKA6voC2QOciw==}
+
   nanoid@3.3.18:
     resolution: {integrity: sha512-DTg4MJbGMWkfi6VZFdNt2/caMbQy4Ou+Op/hJQvGEWcnVfoA1QA+xzRKAzw9jD6+GVOOeYr/mIcuDSdug6F6+w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -1146,16 +1162,18 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  '@colyseus/sdk@0.17.43(@colyseus/core@0.17.50)(typescript@5.9.3)':
+  '@colyseus/schema@5.0.19(typescript@5.9.3)':
+    optionalDependencies:
+      typescript: 5.9.3
+
+  '@colyseus/sdk@0.18.2(typescript@5.9.3)':
     dependencies:
       '@colyseus/better-call': 1.3.3
-      '@colyseus/msgpackr': 1.11.3
-      '@colyseus/schema': 4.0.31(typescript@5.9.3)
-      '@colyseus/shared-types': 0.17.6
+      '@colyseus/schema': 5.0.19(typescript@5.9.3)
+      '@colyseus/shared-types': 0.18.1
+      msgpackr: 2.0.6
       tslib: 2.8.1
       ws: 8.21.3
-    optionalDependencies:
-      '@colyseus/core': 0.17.50(@colyseus/better-call@1.3.3)(@colyseus/schema@4.0.31(typescript@5.9.3))(@colyseus/ws-transport@0.17.13)(express@5.2.1)
     transitivePeerDependencies:
       - bufferutil
       - typescript
@@ -1163,6 +1181,10 @@ snapshots:
       - zod
 
   '@colyseus/shared-types@0.17.6':
+    dependencies:
+      '@standard-schema/spec': 1.1.0
+
+  '@colyseus/shared-types@0.18.1':
     dependencies:
       '@standard-schema/spec': 1.1.0
 
@@ -1682,6 +1704,10 @@ snapshots:
       '@msgpackr-extract/msgpackr-extract-linux-x64': 3.0.4
       '@msgpackr-extract/msgpackr-extract-win32-x64': 3.0.4
     optional: true
+
+  msgpackr@2.0.6:
+    optionalDependencies:
+      msgpackr-extract: 3.0.4
 
   nanoid@3.3.18: {}
 
