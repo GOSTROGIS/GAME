@@ -16,6 +16,8 @@ import {
 export const WAVE_03B_INDEX_PATH = "assets/world/spatial/wave-03b/index.json";
 export const WAVE_03B_SITE_PATH = "assets/world/spatial/wave-03b/hollow-abbey.site.json";
 export const WAVE_03B_PROVENANCE_PATH = "assets/world/spatial/wave-03b/provenance.json";
+export const WAVE_03B_REVIEW_A_PATH = "assets/world/spatial/wave-03b/review-a.manifest.json";
+export const WAVE_03B_REVIEW_B_PATH = "assets/world/spatial/wave-03b/review-b.manifest.json";
 
 const ATLAS_PATH = "packages/content/manifests/sable-reach.atlas-runtime.json";
 const WORLD_SPATIAL_PATH = "packages/content/src/world-spatial.data.js";
@@ -218,6 +220,8 @@ export async function validateWorldSpatialWave03b({
   indexOverride = null,
   siteOverride = null,
   provenanceOverride = null,
+  reviewAOverride = null,
+  reviewBOverride = null,
 } = {}) {
   const errors = [];
   const check = (condition, message) => { if (!condition) errors.push(message); };
@@ -226,6 +230,8 @@ export async function validateWorldSpatialWave03b({
   let index;
   let site;
   let provenance;
+  let reviewA;
+  let reviewB;
   let atlas;
   let worldSpatial;
   let characters;
@@ -240,6 +246,8 @@ export async function validateWorldSpatialWave03b({
       readJson(repositoryRoot, WAVE_03B_INDEX_PATH),
       readJson(repositoryRoot, WAVE_03B_SITE_PATH),
       readJson(repositoryRoot, WAVE_03B_PROVENANCE_PATH),
+      readJson(repositoryRoot, WAVE_03B_REVIEW_A_PATH),
+      readJson(repositoryRoot, WAVE_03B_REVIEW_B_PATH),
       readJson(repositoryRoot, ATLAS_PATH),
       importRepositoryModule(repositoryRoot, WORLD_SPATIAL_PATH),
       importRepositoryModule(repositoryRoot, CHARACTERS_PATH),
@@ -249,11 +257,13 @@ export async function validateWorldSpatialWave03b({
       readJson(repositoryRoot, WAVE_04_NARRATIVE_PATH),
       readJson(repositoryRoot, WAVE_04_WORLD_PATH),
     ]);
-    [schema, index, site, provenance, atlas, worldSpatial, characters, quests, narrative, bestiary, wave04Narrative, wave04World] = loaded;
+    [schema, index, site, provenance, reviewA, reviewB, atlas, worldSpatial, characters, quests, narrative, bestiary, wave04Narrative, wave04World] = loaded;
     schema = schemaOverride ?? schema;
     index = indexOverride ?? index;
     site = siteOverride ?? site;
     provenance = provenanceOverride ?? provenance;
+    reviewA = reviewAOverride ?? reviewA;
+    reviewB = reviewBOverride ?? reviewB;
   } catch (error) {
     return { valid: false, errors: [`Unable to load Wave 03B inputs: ${error.message}`], stats: null };
   }
@@ -269,10 +279,17 @@ export async function validateWorldSpatialWave03b({
     && provenance.direction && typeof provenance.direction === "object" && !Array.isArray(provenance.direction)
     && provenance.publication && typeof provenance.publication === "object" && !Array.isArray(provenance.publication)
     && provenance.tool && typeof provenance.tool === "object" && !Array.isArray(provenance.tool)
+    && provenance.reviewEvidence && typeof provenance.reviewEvidence === "object" && !Array.isArray(provenance.reviewEvidence)
     && Array.isArray(provenance.records) && provenance.records.every((record) => record && typeof record === "object" && !Array.isArray(record));
-  if (!validIndexShape || !validProvenanceShape) {
+  const validReviewShape = (review) => review && typeof review === "object" && !Array.isArray(review)
+    && review.subject && typeof review.subject === "object" && !Array.isArray(review.subject)
+    && review.review && typeof review.review === "object" && !Array.isArray(review.review)
+    && Array.isArray(review.review.verified) && Array.isArray(review.review.limitations);
+  if (!validIndexShape || !validProvenanceShape || !validReviewShape(reviewA) || !validReviewShape(reviewB)) {
     if (!validIndexShape) errors.push("Wave 03B index has an invalid structural shape");
     if (!validProvenanceShape) errors.push("Wave 03B provenance has an invalid structural shape");
+    if (!validReviewShape(reviewA)) errors.push("Wave 03B review A manifest has an invalid structural shape");
+    if (!validReviewShape(reviewB)) errors.push("Wave 03B review B manifest has an invalid structural shape");
     return { valid: false, errors, stats: generic.stats, evidence: { sourceArtifacts: generic.evidence?.sourceArtifacts ?? {} } };
   }
   check(sameObject(generic.stats, WAVE_03B_EXPECTED_STATS), `Wave 03B count contract drifted: ${JSON.stringify(generic.stats)}`);
@@ -295,12 +312,36 @@ export async function validateWorldSpatialWave03b({
   check(index.sites?.length === 1 && index.sites[0]?.id === site.id && index.sites[0]?.siteId === site.siteId && index.sites[0]?.path === WAVE_03B_SITE_PATH, "Index must contain exactly the Hollow Abbey packet record");
   check(sameObject(index.sites?.[0]?.counts, WAVE_03B_EXPECTED_STATS), "Index counts differ from the exact packet contract");
 
-  const [schemaEvidence, indexEvidence, siteEvidence] = await Promise.all([
+  const [schemaEvidence, indexEvidence, siteEvidence, reviewAEvidence, reviewBEvidence] = await Promise.all([
     fileEvidence(repositoryRoot, SITE_BLOCKOUT_V2_SCHEMA_PATH),
     fileEvidence(repositoryRoot, WAVE_03B_INDEX_PATH),
     fileEvidence(repositoryRoot, WAVE_03B_SITE_PATH),
+    fileEvidence(repositoryRoot, WAVE_03B_REVIEW_A_PATH),
+    fileEvidence(repositoryRoot, WAVE_03B_REVIEW_B_PATH),
   ]);
   check(index.sites?.[0]?.sha256 === siteEvidence.sha256 && index.sites?.[0]?.bytes === siteEvidence.bytes, "Index site payload evidence drifted");
+
+  const frozenReviewSubject = {
+    schemaPath: SITE_BLOCKOUT_V2_SCHEMA_PATH,
+    schemaSha256: schemaEvidence.sha256,
+    indexPath: WAVE_03B_INDEX_PATH,
+    indexSha256: indexEvidence.sha256,
+    sitePath: WAVE_03B_SITE_PATH,
+    siteSha256: siteEvidence.sha256,
+  };
+  check(reviewA.schema === "SableReachSpatialReviewManifestV1" && reviewA.id === "review.world-spatial-wave-03b.a", "Wave 03B review A identity drifted");
+  check(reviewB.schema === "SableReachSpatialReviewManifestV1" && reviewB.id === "review.world-spatial-wave-03b.b", "Wave 03B review B identity drifted");
+  check(sameObject(reviewA.subject, frozenReviewSubject) && sameObject(reviewB.subject, frozenReviewSubject), "Wave 03B reviews do not bind the frozen schema/index/site artifacts");
+  check(reviewA.review?.role === "independent_canon_and_spatial_semantics_reviewer"
+    && reviewB.review?.role === "independent_integration_and_evidence_reviewer", "Wave 03B independent review roles drifted");
+  for (const [label, manifest] of [["A", reviewA], ["B", reviewB]]) {
+    check(manifest.review.mode === "independent_read_only_frozen_artifact_review"
+      && manifest.review.independent === true
+      && manifest.review.mutationDuringReview === false
+      && manifest.review.disposition === "accept_noncanonical_reference", `Wave 03B review ${label} disposition or independence drifted`);
+    check(manifest.review.verified.length >= 6 && manifest.review.limitations.length >= 5, `Wave 03B review ${label} scope or limitation evidence is incomplete`);
+  }
+  check(reviewA.review.rejectedFixtureCount === 53, "Wave 03B review A adversarial-fixture evidence drifted");
 
   check(site.authority?.classification === "noncanonical_site_local_reference" && site.authority?.precedence?.length === 5, "Site-local authority or precedence drifted");
   check(sameArray(site.zones.map(({ id }) => id), ["zone.hollow-abbey.exterior-court", "zone.hollow-abbey.nave-deep", "zone.hollow-abbey.foundry"]), "Hollow Abbey zone identities or order drifted");
@@ -612,18 +653,30 @@ export async function validateWorldSpatialWave03b({
     [SITE_BLOCKOUT_V2_SCHEMA_PATH, { ...schemaEvidence, role: "machine_contract", maturity: "reference_schema_v2" }],
     [WAVE_03B_INDEX_PATH, { ...indexEvidence, role: "release_index", maturity: WAVE_03B_REVIEWED_MATURITY }],
     [WAVE_03B_SITE_PATH, { ...siteEvidence, role: "site_local_spatial_reference", maturity: WAVE_03B_REVIEWED_MATURITY }],
+    [WAVE_03B_REVIEW_A_PATH, { ...reviewAEvidence, role: "independent_review_manifest", maturity: "evidence_for_independently_reviewed_noncanonical_reference" }],
+    [WAVE_03B_REVIEW_B_PATH, { ...reviewBEvidence, role: "independent_review_manifest", maturity: "evidence_for_independently_reviewed_noncanonical_reference" }],
   ]);
-  check(provenance.id === "provenance.world-spatial-wave-03b" && provenance.records?.length === 3, "Wave 03B provenance identity or record count drifted");
+  check(provenance.id === "provenance.world-spatial-wave-03b" && provenance.records?.length === 5, "Wave 03B provenance identity or record count drifted");
   check(provenance.tool?.name === "built_in_code_workflow" && provenance.tool?.mode === "site_local_reference_authoring", "Wave 03B provenance tool/mode drifted");
   check(provenance.publication?.privacy === "repository_relative_redacted"
     && ["externalProviderIdentifiers", "workstationPaths", "usernames", "emails", "signedUrls"].every((key) => provenance.publication[key] === false), "Wave 03B provenance privacy flags drifted");
   check(provenance.direction?.sha256 === sha256(Buffer.from(provenance.direction?.text ?? "", "utf8")), "Wave 03B direction hash drifted");
+  check(sameObject(provenance.reviewEvidence, {
+    reviewMode: "two_independent_read_only_frozen_artifact_reviews",
+    schemaSha256: schemaEvidence.sha256,
+    indexSha256: indexEvidence.sha256,
+    siteSha256: siteEvidence.sha256,
+    reviewAManifestPath: WAVE_03B_REVIEW_A_PATH,
+    reviewAManifestSha256: reviewAEvidence.sha256,
+    reviewBManifestPath: WAVE_03B_REVIEW_B_PATH,
+    reviewBManifestSha256: reviewBEvidence.sha256,
+  }), "Wave 03B provenance review-evidence chain drifted");
   check(sameSet(ids(provenance.records, "path"), new Set(expectedProvenance.keys())), "Wave 03B provenance path set drifted");
   for (const record of provenance.records ?? []) {
     const expected = expectedProvenance.get(record.path);
     check(expected && record.sha256 === expected.sha256 && record.bytes === expected.bytes && record.role === expected.role && record.maturity === expected.maturity, `Wave 03B provenance evidence drifted for ${record.path}`);
   }
-  check(!stringValues({ index, site, provenance }).some(privateString), "Wave 03B publication contains external provenance or workstation-identifying text");
+  check(!stringValues({ index, site, provenance, reviewA, reviewB }).some(privateString), "Wave 03B publication contains external provenance or workstation-identifying text");
 
   return {
     valid: errors.length === 0,
@@ -633,6 +686,7 @@ export async function validateWorldSpatialWave03b({
       schema: schemaEvidence,
       index: indexEvidence,
       site: siteEvidence,
+      reviews: { a: reviewAEvidence, b: reviewBEvidence },
       sourceArtifacts: generic.evidence?.sourceArtifacts ?? {},
     },
   };

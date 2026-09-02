@@ -4,6 +4,8 @@ import { readFileSync } from "node:fs";
 import { sha256, validateJsonSchema } from "../tools/worldgen/validate-site-blockout-reference-v2.mjs";
 import {
   WAVE_03B_EXPECTED_STATS,
+  WAVE_03B_REVIEW_A_PATH,
+  WAVE_03B_REVIEW_B_PATH,
   WAVE_03B_REVIEWED_MATURITY,
   validateWorldSpatialWave03b,
 } from "../tools/worldgen/validate-world-spatial-wave-03b.mjs";
@@ -13,6 +15,8 @@ const schema = readJson(new URL("../assets/world/spatial/site-blockout-reference
 const index = readJson(new URL("../assets/world/spatial/wave-03b/index.json", import.meta.url));
 const site = readJson(new URL("../assets/world/spatial/wave-03b/hollow-abbey.site.json", import.meta.url));
 const provenance = readJson(new URL("../assets/world/spatial/wave-03b/provenance.json", import.meta.url));
+const reviewA = readJson(new URL(`../${WAVE_03B_REVIEW_A_PATH}`, import.meta.url));
+const reviewB = readJson(new URL(`../${WAVE_03B_REVIEW_B_PATH}`, import.meta.url));
 
 const validation = await validateWorldSpatialWave03b();
 assert.equal(validation.valid, true, JSON.stringify(validation.errors, null, 2));
@@ -26,6 +30,13 @@ for (const key of ["sourceBindings", "zones", "spaces", "nodes", "links", "activ
 }
 assert.equal(index.status, WAVE_03B_REVIEWED_MATURITY);
 assert.equal(provenance.maturity, WAVE_03B_REVIEWED_MATURITY);
+assert.equal(reviewA.review.disposition, "accept_noncanonical_reference");
+assert.equal(reviewB.review.disposition, "accept_noncanonical_reference");
+assert.equal(reviewA.review.independent, true);
+assert.equal(reviewB.review.independent, true);
+assert.notEqual(reviewA.review.role, reviewB.review.role);
+assert.equal(provenance.reviewEvidence.reviewAManifestSha256, validation.evidence.reviews.a.sha256);
+assert.equal(provenance.reviewEvidence.reviewBManifestSha256, validation.evidence.reviews.b.sha256);
 assert.equal(site.spaces.length, 45);
 assert.deepEqual(site.zones.map(({ spaceIds }) => spaceIds.length), [10, 21, 14]);
 assert.equal(site.nodes.length, 48);
@@ -354,6 +365,34 @@ wslProvenance.direction.sha256 = sha256(Buffer.from(wslProvenance.direction.text
 const wslProvenanceResult = await validateWorldSpatialWave03b({ provenanceOverride: wslProvenance });
 assert.equal(wslProvenanceResult.valid, false);
 assert.ok(wslProvenanceResult.errors.some((message) => message.includes("workstation-identifying text")));
+rejectedFixtures += 1;
+
+const unacceptedReviewA = structuredClone(reviewA);
+unacceptedReviewA.review.disposition = "revise";
+const unacceptedReviewAResult = await validateWorldSpatialWave03b({ reviewAOverride: unacceptedReviewA });
+assert.equal(unacceptedReviewAResult.valid, false);
+assert.ok(unacceptedReviewAResult.errors.some((message) => message.includes("review A disposition or independence drifted")));
+rejectedFixtures += 1;
+
+const selfApprovedReviewB = structuredClone(reviewB);
+selfApprovedReviewB.review.independent = false;
+const selfApprovedReviewBResult = await validateWorldSpatialWave03b({ reviewBOverride: selfApprovedReviewB });
+assert.equal(selfApprovedReviewBResult.valid, false);
+assert.ok(selfApprovedReviewBResult.errors.some((message) => message.includes("review B disposition or independence drifted")));
+rejectedFixtures += 1;
+
+const unfrozenReviewB = structuredClone(reviewB);
+unfrozenReviewB.subject.siteSha256 = "0".repeat(64);
+const unfrozenReviewBResult = await validateWorldSpatialWave03b({ reviewBOverride: unfrozenReviewB });
+assert.equal(unfrozenReviewBResult.valid, false);
+assert.ok(unfrozenReviewBResult.errors.some((message) => message.includes("reviews do not bind the frozen")));
+rejectedFixtures += 1;
+
+const unboundReviewProvenance = structuredClone(provenance);
+unboundReviewProvenance.reviewEvidence.reviewBManifestSha256 = "0".repeat(64);
+const unboundReviewProvenanceResult = await validateWorldSpatialWave03b({ provenanceOverride: unboundReviewProvenance });
+assert.equal(unboundReviewProvenanceResult.valid, false);
+assert.ok(unboundReviewProvenanceResult.errors.some((message) => message.includes("review-evidence chain drifted")));
 rejectedFixtures += 1;
 
 console.log(JSON.stringify({

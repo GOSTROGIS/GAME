@@ -1,0 +1,36 @@
+{
+  "schema": "SableReachSpatialReviewManifestV1",
+  "id": "review.world-spatial-wave-03b.a",
+  "subject": {
+    "schemaPath": "assets/world/spatial/site-blockout-reference-v2.schema.json",
+    "schemaSha256": "5373aae5aa4b69b34a0a17ae24f61cc6c3ff62a0d99feb36b2e6e039b863434a",
+    "indexPath": "assets/world/spatial/wave-03b/index.json",
+    "indexSha256": "39f335072de33a572e5f097fc6d307d270a35bb0d04b2f955cd9ad63edb223ab",
+    "sitePath": "assets/world/spatial/wave-03b/hollow-abbey.site.json",
+    "siteSha256": "a05e1b88b5dbafec09beccadfd7abf1486fcd19049d75096a6f8c938d168eddf"
+  },
+  "review": {
+    "role": "independent_canon_and_spatial_semantics_reviewer",
+    "mode": "independent_read_only_frozen_artifact_review",
+    "independent": true,
+    "mutationDuringReview": false,
+    "disposition": "accept_noncanonical_reference",
+    "verified": [
+      "exact_45_space_48_node_60_link_topology",
+      "canonical_source_binding_and_precedence",
+      "main_litany_gate_and_m02_state_matrices",
+      "hydrology_and_overlay_separation",
+      "route_quest_habitat_and_actor_projection",
+      "schema_reuse_and_adversarial_rejection",
+      "privacy_and_nonclaim_boundaries"
+    ],
+    "rejectedFixtureCount": 53,
+    "limitations": [
+      "noncanonical_site_local_reference_only",
+      "no_exact_atlas_placement_claim",
+      "no_runtime_navigation_or_collision_claim",
+      "no_construction_or_production_geometry_claim",
+      "no_static_or_animated_model_claim"
+    ]
+  }
+}
