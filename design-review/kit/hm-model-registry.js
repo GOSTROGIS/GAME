@@ -9,6 +9,7 @@
 
 import { BESTIARY, ENEMY_FAMILIES } from '../../packages/content/src/bestiary.data.js';
 import {
+  COMPANION_AGENCY_CONTRACTS,
   COMPANION_QUEST_CONTRACTS,
   COSMIC_FACTIONS,
   EXPANSION_CHARACTERS,
@@ -16,6 +17,7 @@ import {
   EXPANSION_ITEMS,
   EXPANSION_QUESTS,
   NARRATIVE_TARGETS,
+  QUEST_ACTOR_CONTRACTS,
 } from '../../packages/content/src/narrative.data.js';
 import { CHARACTERS, FACTIONS } from '../../src/data/characters.js';
 import { artFor, url } from './hm-concept-art.js';
@@ -182,6 +184,12 @@ function originsList() {
 function expansionCharacterList() {
   return EXPANSION_CHARACTERS.map((character) => {
     const pipeline = character.pipeline;
+    const visualBrief = character.visualBrief ?? null;
+    const visualBriefStatus = visualBrief ? 'authored' : 'not-authored';
+    const conceptGenerationBlocked = visualBrief === null;
+    const conceptGenerationBlocker = conceptGenerationBlocked
+      ? 'No canonical visual brief is authored for this character. Concept generation is blocked until an independently reviewed brief is added; appearance must not be inferred from role, faction, or dialogue.'
+      : null;
     const masterSrc = pipeline.conceptMaster ? url(pipeline.conceptMaster) : null;
     const cutoutSrc = pipeline.transparentCutout ? url(pipeline.transparentCutout) : null;
     const hasArt = Boolean(masterSrc || cutoutSrc);
@@ -213,10 +221,15 @@ function expansionCharacterList() {
       animatedModelStatus: pipeline.animatedModelStatus,
       hasIndividualArt: hasArt,
       contradiction: character.contradiction,
-      visualBrief: character.visualBrief,
-      reason: hasArt
-        ? 'Canonical expansion concept art is linked. Static and animated readiness remain independently assessed.'
-        : 'The lore record and visual brief are canonical, but no accepted concept master is linked yet.',
+      visualBrief,
+      visualBriefStatus,
+      conceptGenerationBlocked,
+      conceptGenerationBlocker,
+      reason: conceptGenerationBlocked
+        ? 'The canonical lore and pipeline record exists, but no visual brief is authored. Concept generation is blocked; appearance must not be inferred from role, faction, or dialogue.'
+        : hasArt
+          ? 'Canonical expansion concept art is linked. Static and animated readiness remain independently assessed.'
+          : 'The lore record and visual brief are canonical, but no accepted concept master is linked yet.',
     });
   });
 }
@@ -278,6 +291,8 @@ export function buildRegistry() {
     expansionCharacters: Object.freeze(expansionCharacterList()),
     expansionCreatures: Object.freeze(expansionCreatureList()),
     companionContracts: Object.freeze([...COMPANION_QUEST_CONTRACTS]),
+    agencyContracts: Object.freeze([...COMPANION_AGENCY_CONTRACTS]),
+    actorContracts: Object.freeze([...QUEST_ACTOR_CONTRACTS]),
   });
 }
 
@@ -302,6 +317,8 @@ export function tally(registry) {
     expansionItems: EXPANSION_ITEMS.length,
     expansionQuests: EXPANSION_QUESTS.length,
     companionContracts: registry.companionContracts.length,
+    agencyContracts: registry.agencyContracts.length,
+    actorContracts: registry.actorContracts.length,
     expansionAwaitingArt: expansionRows.filter((row) => row.tier === 'awaiting-art').length,
     expansionStaticModels: expansionRows.filter((row) => row.tier === 'static-model').length,
     expansionAnimatedModels: expansionRows.filter((row) => row.tier === 'animated-model').length,

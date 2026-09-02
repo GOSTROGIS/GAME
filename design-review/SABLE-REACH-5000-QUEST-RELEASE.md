@@ -43,7 +43,7 @@ String similarity is only an early warning. Passing a shingle or embedding thres
 
 ## Character, guest, and follower law
 
-There is no anonymous quest-giver tier. Every person who owns a decision, betrayal, reward, testimony, sacrifice, or persistent consequence receives a canonical character record with desire, fear, contradiction, secret, voice law, faction affinities, quest ownership, and concept/static/animated pipeline fields.
+There is no anonymous quest-giver tier. Every person who owns a decision, betrayal, reward, testimony, sacrifice, or persistent consequence receives a canonical character record with desire, fear, contradiction, an authored secret or an explicitly reviewed equivalent-depth variant, voice law, faction affinities, quest ownership, and concept/static/animated pipeline fields. An equivalent-depth variant is a deliberate character contract, never permission to leave the record shallow or to invent a late secret.
 
 Every quest has at least one quest-exclusive support character. Returning principals may give quests, oppose them, travel as guests, or become followers, but cannot replace the exclusive support role.
 
@@ -90,6 +90,8 @@ An accepted batch is immutable. Sequels get new IDs, consume concrete state valu
 
 Every new character and creature appears in MODEL MAKER as soon as its canonical record exists. Missing assets remain visible as `awaiting-art` or `unassessed`; a concept image never claims a static or animated model exists. Accepted concept files are immutable and replacements use a new version.
 
+For Wave 04, Claude Design must open the complete environment and habitat handoff directly at `packages/content/manifests/quest-wave-04-v11.world.json`. The nearby `packages/content/manifests/quest-wave-04-v11.spatial-index.json` is only a compact compatibility index and is not a substitute for the full detailed contract. Neither file grants runtime integration, canonical GIS placement, production geometry, construction readiness, or release authority.
+
 Art is produced in family-owned groups of at most six subjects. Saints retain white-gold cathedral beauty, incomplete halos, veils, confined light, and ominous procedural anatomy. Charnel forms retain impossible black-nacre bodies, door-like ribs, misplaced mouths, backward articulation, and non-gory but severe horror. Every master and cutout receives independent canon and identity review.
 
 ## Completion evidence
@@ -108,4 +110,6 @@ The 5,000 target is complete only when all of the following pass over the comple
 
 Until those checks pass, the production target remains active and interim counts are progress, not completion.
 
-Current checkpoint: 37 canonical authored quests exist; 36 are release-attested across three closed batches, and one is queued in open batch 0004. MODEL MAKER exposes 49 expansion characters, 33 expansion creatures, and two autonomous companion contracts without claiming static or animated readiness.
+Current checkpoint: the authored corpus contains 49 quests, 70 expansion characters, 39 expansion creatures, and 67 signature items. Forty-eight quests are release-attested across four closed batches; `relic_mirror_gave_birth_elsewhere` remains the single quest in review. Agency coverage is six explicit contracts: four autonomous guest/follower contracts and two bounded agency contracts that transfer no consent or decision authority.
+
+Senn Avir and Mora Quay intentionally use the reviewed `equivalent-depth-without-secret-v1` variant; no secret may be invented merely to satisfy a field shape. Leto Fain and Senn Avir still lack visual briefs, so their art work orders are blocked even though their narrative records are counted. All Wave 04 site placement remains host-relative and provisional with `exactAtlasCoordinate: null`; these records do not claim runtime, GIS, model, animation, or production readiness.

@@ -1,0 +1,916 @@
+{
+  "schemaVersion": 1,
+  "kind": "state-reachability-report",
+  "batchId": "quest-batch-0004",
+  "packetSha256": "b69438aafea971fb2b047e74a2e9a5ce2ca8668d5f4f172ebb720fa97456cade",
+  "verdict": "PASS",
+  "quests": [
+    {
+      "id": "faction_the_lantern_named_us_last",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        },
+        {
+          "key": "hearthmere_tool_precedent",
+          "mode": "all-values",
+          "values": [
+            "exposure_controls_standing",
+            "least_represented_controls_precedent",
+            "appealable_cart_discretion"
+          ]
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "league_abandonment_authority",
+          "values": [
+            "appeal_map_public_and_staffed",
+            "enoch_holds_private_map_and_personal_liability",
+            "forecast_alias_confined_to_rehearsal_only",
+            "nullstreet_route_rotates_with_other_omissions"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "side_seven_lamps_for_six_streets",
+          "writerValues": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ],
+          "admittedValues": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "hearthmere_tool_precedent",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "aftermath_cart_accepts_office",
+          "writerValues": [
+            "exposure_controls_standing",
+            "least_represented_controls_precedent",
+            "appealable_cart_discretion"
+          ],
+          "admittedValues": [
+            "exposure_controls_standing",
+            "least_represented_controls_precedent",
+            "appealable_cart_discretion"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "aftermath_maintenance_window_miracle",
+          "writerValues": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ],
+          "admittedValues": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "faction_living_appeal_aftercare",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "living_predefined_use_eligibility",
+          "mode": "living_actor_record_only",
+          "values": [
+            "eligible",
+            "revoked",
+            "expired"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "living_aftercare_operation"
+        },
+        {
+          "key": "staff_interrupt_readiness",
+          "mode": "six_physical_cutoffs",
+          "values": [
+            "ready",
+            "isolated",
+            "repair_due"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "living_aftercare_operation"
+        },
+        {
+          "key": "living_appeal_capacity",
+          "mode": "occupied_threshold_and_exit",
+          "values": [
+            "available",
+            "queued",
+            "protected_return"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "living_aftercare_operation"
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "living_aftercare_operation",
+          "key": "discharged_memory_aftercare",
+          "values": [
+            "living_authority_aftercare_with_all_six_wings_staffed",
+            "bounded_adverse_evidence_use_with_two_wings_paused",
+            "all_clinical_residue_equipment_quarantined_pending_living_review"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "living_predefined_use_eligibility",
+          "mode": "living_actor_record_only",
+          "readKind": "operational-state-v1",
+          "domain": "living_aftercare_operation",
+          "values": [
+            "eligible",
+            "revoked",
+            "expired"
+          ],
+          "definitionQuestId": "faction_living_appeal_aftercare",
+          "runtimeContractSha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e",
+          "verdict": "PASS"
+        },
+        {
+          "key": "staff_interrupt_readiness",
+          "mode": "six_physical_cutoffs",
+          "readKind": "operational-state-v1",
+          "domain": "living_aftercare_operation",
+          "values": [
+            "ready",
+            "isolated",
+            "repair_due"
+          ],
+          "definitionQuestId": "faction_living_appeal_aftercare",
+          "runtimeContractSha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e",
+          "verdict": "PASS"
+        },
+        {
+          "key": "living_appeal_capacity",
+          "mode": "occupied_threshold_and_exit",
+          "readKind": "operational-state-v1",
+          "domain": "living_aftercare_operation",
+          "values": [
+            "available",
+            "queued",
+            "protected_return"
+          ],
+          "definitionQuestId": "faction_living_appeal_aftercare",
+          "runtimeContractSha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e",
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "character_the_face_noon_borrowed",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "seraphel_material_load_state",
+          "mode": "three_bounded_material_loads",
+          "values": [
+            "compression_within_limit",
+            "torsion_within_limit",
+            "thermal_within_limit",
+            "any_load_outside_limit"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "authority"
+        },
+        {
+          "key": "four_mortal_witness_exit_states",
+          "mode": "all_four_independent_exits",
+          "values": [
+            "all_open",
+            "one_withdrawn",
+            "fallback_route_active",
+            "test_aborted"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "authority"
+        },
+        {
+          "key": "contrition_refusal_pressure",
+          "mode": "read_only_encounter_pressure",
+          "values": [
+            "absent",
+            "gathering",
+            "threshold_reached"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "authority"
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "seraphel_borrowed_face_authority",
+          "values": [
+            "material_evidence_published_with_pane_withdrawn",
+            "mortal_fallback_executed",
+            "test_aborted_with_all_witness_exits_open"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "seraphel_material_load_state",
+          "mode": "three_bounded_material_loads",
+          "readKind": "operational-state-v1",
+          "domain": "authority",
+          "values": [
+            "compression_within_limit",
+            "torsion_within_limit",
+            "thermal_within_limit",
+            "any_load_outside_limit"
+          ],
+          "definitionQuestId": "character_the_face_noon_borrowed",
+          "runtimeContractSha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e",
+          "verdict": "PASS"
+        },
+        {
+          "key": "four_mortal_witness_exit_states",
+          "mode": "all_four_independent_exits",
+          "readKind": "operational-state-v1",
+          "domain": "authority",
+          "values": [
+            "all_open",
+            "one_withdrawn",
+            "fallback_route_active",
+            "test_aborted"
+          ],
+          "definitionQuestId": "character_the_face_noon_borrowed",
+          "runtimeContractSha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e",
+          "verdict": "PASS"
+        },
+        {
+          "key": "contrition_refusal_pressure",
+          "mode": "read_only_encounter_pressure",
+          "readKind": "operational-state-v1",
+          "domain": "authority",
+          "values": [
+            "absent",
+            "gathering",
+            "threshold_reached"
+          ],
+          "definitionQuestId": "character_the_face_noon_borrowed",
+          "runtimeContractSha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e",
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "character_a_hunger_needs_an_address",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "maw_trust_appetite_balance",
+          "mode": "all-values",
+          "values": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ]
+        },
+        {
+          "key": "charnel_appetite_levy",
+          "mode": "all-values",
+          "values": [
+            "licensed_feeding_requires_embodied_reparation",
+            "fear_commons_worker_owned_and_revocable",
+            "appetite_law_refused_each_hunt_personally_answerable"
+          ]
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "maw_civic_boundary_role",
+          "values": [
+            "household_invitations_rotate_with_expiry",
+            "public_patrol_retained_without_inherited_address",
+            "camp_relocates_livestock_lane_and_refusal_households",
+            "hunger_ceases_boundary_patrol_until_new_hosting_law"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "maw_trust_appetite_balance",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "main_mercy_has_a_mouth",
+          "writerValues": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ],
+          "admittedValues": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "charnel_appetite_levy",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "faction_hunger_asked_taxed",
+          "writerValues": [
+            "licensed_feeding_requires_embodied_reparation",
+            "fear_commons_worker_owned_and_revocable",
+            "appetite_law_refused_each_hunt_personally_answerable"
+          ],
+          "admittedValues": [
+            "licensed_feeding_requires_embodied_reparation",
+            "fear_commons_worker_owned_and_revocable",
+            "appetite_law_refused_each_hunt_personally_answerable"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "side_seven_lamps_for_six_streets",
+          "writerValues": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ],
+          "admittedValues": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "regional_the_tide_refused_harbor",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "neutral_medicine_governance",
+          "mode": "all-values",
+          "values": [
+            "heart_made_random",
+            "bias_declared_and_appealable",
+            "heart_destroyed_hospice_manual"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "anchor_field_shadow_barrier",
+          "values": [
+            "two_tide_barrier_then_dismantle",
+            "wet_clinic_relocated_with_inland_fleet",
+            "anchor_field_reopens_with_reduced_refuge_load"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "neutral_medicine_governance",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "side_the_hospice_grows_a_heart",
+          "writerValues": [
+            "heart_made_random",
+            "bias_declared_and_appealable",
+            "heart_destroyed_hospice_manual"
+          ],
+          "admittedValues": [
+            "heart_made_random",
+            "bias_declared_and_appealable",
+            "heart_destroyed_hospice_manual"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "regional_the_fog_came_to_collect_our_outlines",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "living_borrower_ledger",
+          "mode": "named_living_borrowers_only",
+          "values": [
+            "balanced",
+            "borrower_missing",
+            "creditor_missing"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "infrastructure"
+        },
+        {
+          "key": "single_escrow_body_state",
+          "mode": "exactly_one_body",
+          "values": [
+            "present",
+            "held",
+            "returned"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "infrastructure"
+        },
+        {
+          "key": "four_leg_positions",
+          "mode": "exactly_four_bank_positions",
+          "values": [
+            "all_four_bound",
+            "one_bank_unbound",
+            "exchange_frozen"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "infrastructure"
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "warden_reed_visibility_compact",
+          "values": [
+            "all_living_outlines_returned",
+            "exchange_frozen_with_body_held",
+            "causeway_edge_closed_until_first_light"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "living_borrower_ledger",
+          "mode": "named_living_borrowers_only",
+          "readKind": "operational-state-v1",
+          "domain": "infrastructure",
+          "values": [
+            "balanced",
+            "borrower_missing",
+            "creditor_missing"
+          ],
+          "definitionQuestId": "regional_the_fog_came_to_collect_our_outlines",
+          "runtimeContractSha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e",
+          "verdict": "PASS"
+        },
+        {
+          "key": "single_escrow_body_state",
+          "mode": "exactly_one_body",
+          "readKind": "operational-state-v1",
+          "domain": "infrastructure",
+          "values": [
+            "present",
+            "held",
+            "returned"
+          ],
+          "definitionQuestId": "regional_the_fog_came_to_collect_our_outlines",
+          "runtimeContractSha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e",
+          "verdict": "PASS"
+        },
+        {
+          "key": "four_leg_positions",
+          "mode": "exactly_four_bank_positions",
+          "readKind": "operational-state-v1",
+          "domain": "infrastructure",
+          "values": [
+            "all_four_bound",
+            "one_bank_unbound",
+            "exchange_frozen"
+          ],
+          "definitionQuestId": "regional_the_fog_came_to_collect_our_outlines",
+          "runtimeContractSha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e",
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "regional_the_graves_grew_upward",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "dead_settlement_claims",
+          "mode": "all-values",
+          "values": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ]
+        },
+        {
+          "key": "graven_cairn_winter",
+          "mode": "all-values",
+          "values": [
+            "unused_road_corridor_preserves_cairn_breeding",
+            "march_villages_share_seasonal_hibernation",
+            "artificial_grave_warmth_ends_herd_disperses"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "ecology",
+          "key": "pallid_root_covenant",
+          "values": [
+            "anonymous_pollination_with_tending_share",
+            "named_plots_relocated_with_portable_markers",
+            "root_routes_cessate_and_winter_rations_contract",
+            "orchard_fallow_with_household_aftercare"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "dead_settlement_claims",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "side_the_dead_vote_no",
+          "writerValues": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ],
+          "admittedValues": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "graven_cairn_winter",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "regional_cairns_keep_winter",
+          "writerValues": [
+            "unused_road_corridor_preserves_cairn_breeding",
+            "march_villages_share_seasonal_hibernation",
+            "artificial_grave_warmth_ends_herd_disperses"
+          ],
+          "admittedValues": [
+            "unused_road_corridor_preserves_cairn_breeding",
+            "march_villages_share_seasonal_hibernation",
+            "artificial_grave_warmth_ends_herd_disperses"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "regional_an_echo_arrived_first",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        },
+        {
+          "key": "abbey_silence_labor",
+          "mode": "all-values",
+          "values": [
+            "future_silence_individually_paid_and_revocable",
+            "quiet_collectivized_as_labor_commons",
+            "bell_refused_halix_carries_erased_names"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "foreword_echo_custody",
+          "values": [
+            "counterweight_cause_built_and_result_debt_published",
+            "drain_cause_built_with_downstream_flood_duty",
+            "controlled_fall_accepted_and_abbey_service_moves"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "main_the_bell_that_forgot_you",
+          "writerValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "admittedValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "abbey_silence_labor",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "profession_bell_paid_in_silence",
+          "writerValues": [
+            "future_silence_individually_paid_and_revocable",
+            "quiet_collectivized_as_labor_commons",
+            "bell_refused_halix_carries_erased_names"
+          ],
+          "admittedValues": [
+            "future_silence_individually_paid_and_revocable",
+            "quiet_collectivized_as_labor_commons",
+            "bell_refused_halix_carries_erased_names"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "profession_the_furnace_inhaled_our_names",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        },
+        {
+          "key": "cinderward_sacrificial_address",
+          "mode": "all-values",
+          "values": [
+            "archive_burns_pressure_released_history_displaced",
+            "all_streets_share_permanent_fire_scar",
+            "civic_office_burns_district_self_governs"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "ember_gate_breath_labor_law",
+          "values": [
+            "paid_breath_graph_runs_with_cold_center",
+            "union_refusal_rebalances_heat_and_reduces_output",
+            "typed_network_shutdown_with_family_heat_debt",
+            "slag_front_isolated_and_bellows_staff_rotated",
+            "manual_names_removed_and_furnace_runs_by_pressure_only"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "aftermath_maintenance_window_miracle",
+          "writerValues": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ],
+          "admittedValues": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "cinderward_sacrificial_address",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "settlement_street_must_burn_once",
+          "writerValues": [
+            "archive_burns_pressure_released_history_displaced",
+            "all_streets_share_permanent_fire_scar",
+            "civic_office_burns_district_self_governs"
+          ],
+          "admittedValues": [
+            "archive_burns_pressure_released_history_displaced",
+            "all_streets_share_permanent_fire_scar",
+            "civic_office_burns_district_self_governs"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "settlement_the_harbor_rang_below_tide",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "gloamharbor_vertical_testimony",
+          "values": [
+            "forty_place_manifest_holds_at_flood",
+            "mortal_watch_replaces_unsafe_bell_route",
+            "four_boats_keep_distinct_ten_place_faces",
+            "flood_return_pauses_until_duplicate_notch_is_cleared"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "main_the_bell_that_forgot_you",
+          "writerValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "admittedValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "relic_the_acre_crossed_a_border",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "dead_settlement_claims",
+          "mode": "all-values",
+          "values": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ]
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "walking_acre_service_title",
+          "values": [
+            "five_services_cross_with_former_site_outages",
+            "acre_halts_and_services_split",
+            "soil_returns_while_school_and_fire_remain_mobile"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "dead_settlement_claims",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "side_the_dead_vote_no",
+          "writerValues": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ],
+          "admittedValues": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ],
+          "verdict": "PASS"
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "side_seven_lamps_for_six_streets",
+          "writerValues": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ],
+          "admittedValues": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "id": "profession_the_well_drank_the_way_home",
+      "verdict": "PASS",
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "return_water_office",
+          "values": [
+            "reservoir_runs_reduced_yield",
+            "three_caravan_loops_receive_measured_rotation",
+            "still_shutdown_and_brine_marsh_filters",
+            "source_two_exhausted_and_population_relocated",
+            "return_water_office_runs_with_crossquest_ration_aftercare"
+          ]
+        }
+      ],
+      "readProofs": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "readKind": "narrative-state-v1",
+          "writerQuestId": "main_the_bell_that_forgot_you",
+          "writerValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "admittedValues": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ],
+          "verdict": "PASS"
+        }
+      ]
+    }
+  ]
+}

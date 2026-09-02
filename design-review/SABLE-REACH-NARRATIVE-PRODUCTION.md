@@ -27,7 +27,7 @@ Production uses 417 immutable batches: 416 batches of twelve quests and one fina
 Every quest owns all of the following:
 
 1. One story genome: primary mechanic, dilemma, location history, and persistent consequence.
-2. At least one quest-exclusive supporting character with desire, fear, contradiction, secret, voice constraint, visual brief, and complete concept/static/animated pipeline fields.
+2. At least one quest-exclusive supporting character with desire, fear, contradiction, an authored secret or explicitly reviewed equivalent-depth variant, voice constraint, and complete concept/static/animated pipeline fields. A visual brief is mandatory before art production; a missing brief blocks that subject rather than licensing improvised design.
 3. One signature reward item with a unique world rule and a history that matters after acquisition.
 4. A non-generic objective shape. Talk, gather, defeat, acquire, and interact may appear as connective tissue, never as the complete design.
 5. At least three materially different outcomes. Failure transforms the situation and continues play; it does not merely reset the task.
@@ -86,6 +86,8 @@ The character register is generated from canonical content, not a hand-maintaine
 
 When an accepted PNG or model becomes available, its repository-relative path is written to the canonical pipeline record in the same batch. MODEL MAKER then displays it automatically for Claude Design. Files remain immutable after acceptance; replacements use a new version.
 
+Equivalent-depth variants are explicit, exceptional contracts. Senn Avir and Mora Quay use `equivalent-depth-without-secret-v1`; their authored desire, fear, contradiction, owned decision, voice, and alignment function replace a manufactured reveal. Leto Fain and Senn Avir currently have no visual brief. Their narrative records remain counted, but their concept-art, static-model, and animated-model work orders are blocked until reviewed briefs are added.
+
 ## Creature and encounter law
 
 There are no `skeleton`, `bandit`, `wolf`, `demon`, or other generic combat rows. Every admitted form requires authored anatomy, locomotion, ecology, origin, purpose, readable cue, unique mechanic, counterplay, narrative use, visual brief, and production pipeline.
@@ -135,3 +137,11 @@ Those arcs consume actual outcome keys from the first tranche and create their o
 Wave 03 was admitted only from the immutable v2 packet and its normative machine annex after independent state/machine and semantic-collision reviewers passed the exact content hashes recorded in batch evidence. The rejected v1 packet remains outside the repository.
 
 The accepted slice adds twelve quests, twelve quest-exclusive support characters, nine authored creature forms, twelve schema-v2 artifacts, and two autonomous companion contracts. The canonical corpus now contains 37 quests, 49 expansion characters, 33 expansion creatures, 37 signature items, and two companion contracts. Batch 0003 closes with the final Wave 02 quest plus the first eleven Wave 03 quests; the twelfth Wave 03 quest opens batch 0004. This remains progress toward 5,000 accepted quests, not completion evidence.
+
+## Accepted Wave 04 v11
+
+Wave 04 v11 adds twelve quests, 21 supporting characters, six non-generic creature forms, and 30 signature items. The resulting authored corpus contains exactly 49 quests, 70 expansion characters, 39 expansion creatures, and 67 signature items. Forty-eight quests are release-attested across four closed batches; `relic_mirror_gave_birth_elsewhere` is the single quest still in review.
+
+The agency register now contains six contracts: four autonomous guest/follower contracts and two bounded agency contracts. Bounded agency may order already eligible material or perform enumerated material-test actions, but cannot originate consent, eligibility, command, office, remedy, or victim intention. These contracts are content and validation surfaces only; they do not prove runtime companion implementation.
+
+World production coverage now exposes 39 general creature habitat envelopes and 49 quest environment programmes. Claude Design must use `packages/content/manifests/quest-wave-04-v11.world.json` as the explicit full-detail Wave 04 handoff. `packages/content/manifests/quest-wave-04-v11.spatial-index.json` is a compact compatibility index only. Every Wave 04 quest programme is a host-relative provisional reservation with `exactAtlasCoordinate: null`; neither manifest grants canonical GIS placement, runtime integration, production geometry, or construction readiness.

@@ -4,9 +4,11 @@ import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { EXPANSION_QUESTS } from "../../packages/content/src/narrative.data.js";
+import { OPERATIONAL_READ_KIND, classifyStateRead } from "../../packages/content/src/quest-wave-04.runtime.js";
 
 const LEDGER_URL = new URL("../../packages/content/src/quest-release-ledger.json", import.meta.url);
 const HEX_256 = /^[a-f0-9]{64}$/;
+const QUEST_WAVE_04_RUNTIME_SHA256 = "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e";
 const BATCH_ID = /^quest-batch-(\d{4})$/;
 const EVIDENCE_PATH = /^design-review\/quest-release-evidence\/quest-batch-\d{4}\.(packet|collision|state)\.json$/;
 const PORTFOLIOS = Object.freeze([
@@ -162,6 +164,32 @@ export async function validateQuestRelease({ ledgerUrl = LEDGER_URL, requireTarg
         if (!stateRow || stateRow.verdict !== "PASS") errors.push(issue(`${path}.stateReportPath.quests.${quest.id}`, "quest_state_review_not_passed", stateRow?.verdict));
         if (stateRow && !sameJson(stateRow.stateReads, quest.stateReads ?? [])) errors.push(issue(`${path}.stateReportPath.quests.${quest.id}.stateReads`, "state_read_evidence_mismatch", quest.id));
         if (stateRow && !sameJson(stateRow.stateWrites, quest.stateWrites ?? [])) errors.push(issue(`${path}.stateReportPath.quests.${quest.id}.stateWrites`, "state_write_evidence_mismatch", quest.id));
+        if (stateRow) {
+          const reads = quest.stateReads ?? [];
+          const proofs = stateRow.readProofs ?? [];
+          if (proofs.length !== reads.length) errors.push(issue(`${path}.stateReportPath.quests.${quest.id}.readProofs`, "state_read_proof_count_mismatch", `${proofs.length}/${reads.length}`));
+          reads.forEach((read, readIndex) => {
+            const proof = proofs[readIndex];
+            let classification;
+            try {
+              classification = classifyStateRead(read);
+            } catch (error) {
+              errors.push(issue(`${path}.stateReportPath.quests.${quest.id}.stateReads.${readIndex}`, "invalid_state_read_runtime_contract", error.message));
+              return;
+            }
+            if (classification.kind === OPERATIONAL_READ_KIND) {
+              if (classification.definition.questId !== quest.id
+                || proof?.readKind !== OPERATIONAL_READ_KIND
+                || proof?.definitionQuestId !== quest.id
+                || proof?.domain !== read.domain
+                || proof?.runtimeContractSha256 !== QUEST_WAVE_04_RUNTIME_SHA256) {
+                errors.push(issue(`${path}.stateReportPath.quests.${quest.id}.readProofs.${readIndex}`, "operational_state_proof_mismatch", read.key));
+              }
+            } else if (!proof?.writerQuestId || (proof.readKind !== undefined && proof.readKind !== "narrative-state-v1")) {
+              errors.push(issue(`${path}.stateReportPath.quests.${quest.id}.readProofs.${readIndex}`, "narrative_state_proof_mismatch", read.key));
+            }
+          });
+        }
       }
     }
   }
@@ -182,7 +210,18 @@ export async function validateQuestRelease({ ledgerUrl = LEDGER_URL, requireTarg
   if (duplicateSupportOwners.length) errors.push(issue("acceptedBatches.quests", "duplicate_exclusive_support", duplicateSupportOwners));
   acceptedQuestRows.forEach(({ row, quest }) => {
     if ((quest.supportingCharacterIds ?? []).length < 1) errors.push(issue(`quests.${row.id}.supportingCharacterIds`, "missing_exclusive_support", row.id));
-    if ((quest.rewardItemIds ?? []).length !== 1) errors.push(issue(`quests.${row.id}.rewardItemIds`, "signature_reward_cardinality", quest.rewardItemIds));
+    if (quest.schemaVersion === 9) {
+      const structure = quest.signatureRewardStructure;
+      if (!structure || !sameJson(structure.itemIds, quest.rewardItemIds ?? [])) {
+        errors.push(issue(`quests.${row.id}.signatureRewardStructure`, "signature_reward_structure_mismatch", structure));
+      } else if (structure.portableSignatureItemId !== null && !(quest.rewardItemIds ?? []).includes(structure.portableSignatureItemId)) {
+        errors.push(issue(`quests.${row.id}.signatureRewardStructure.portableSignatureItemId`, "signature_reward_portable_item_mismatch", structure.portableSignatureItemId));
+      } else if (structure.portableSignatureItemId === null && !structure.noPortableSignatureReason) {
+        errors.push(issue(`quests.${row.id}.signatureRewardStructure.noPortableSignatureReason`, "missing_nonportable_signature_reason", row.id));
+      }
+    } else if ((quest.rewardItemIds ?? []).length !== 1) {
+      errors.push(issue(`quests.${row.id}.rewardItemIds`, "signature_reward_cardinality", quest.rewardItemIds));
+    }
   });
 
   const signatureRewardIds = acceptedQuestRows.flatMap(({ quest }) => quest.rewardItemIds ?? []);

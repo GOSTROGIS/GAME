@@ -1,0 +1,15 @@
+export const QUEST_WAVE_04_ACCEPTANCE: Readonly<Record<string, unknown>>;
+export const QUEST_WAVE_04_SOURCE: Readonly<Record<string, unknown>>;
+export const QUEST_WAVE_04_SUPPORTING_CHARACTERS: readonly Readonly<Record<string, unknown>>[];
+export const QUEST_WAVE_04_CREATURES: readonly Readonly<Record<string, unknown>>[];
+export const QUEST_WAVE_04_ITEMS: readonly Readonly<Record<string, unknown>>[];
+export const QUEST_WAVE_04_QUESTS: readonly Readonly<Record<string, unknown>>[];
+export const QUEST_WAVE_04_PHASE_GRAPHS: readonly Readonly<Record<string, unknown>>[];
+export const QUEST_WAVE_04_COMPANION_CONTRACTS: readonly Readonly<Record<string, unknown>>[];
+export const QUEST_WAVE_04_AUTONOMOUS_COMPANION_CONTRACTS: readonly Readonly<Record<string, unknown>>[];
+export const QUEST_WAVE_04_BOUNDED_PARTICIPATION_CONTRACTS: readonly Readonly<Record<string, unknown>>[];
+export const QUEST_WAVE_04_CHARACTER_BY_ID: ReadonlyMap<string, Readonly<Record<string, unknown>>>;
+export const QUEST_WAVE_04_CREATURE_BY_ID: ReadonlyMap<string, Readonly<Record<string, unknown>>>;
+export const QUEST_WAVE_04_ITEM_BY_ID: ReadonlyMap<string, Readonly<Record<string, unknown>>>;
+export const QUEST_WAVE_04_QUEST_BY_ID: ReadonlyMap<string, Readonly<Record<string, unknown>>>;
+export const QUEST_WAVE_04_PHASE_GRAPH_BY_ID: ReadonlyMap<string, Readonly<Record<string, unknown>>>;

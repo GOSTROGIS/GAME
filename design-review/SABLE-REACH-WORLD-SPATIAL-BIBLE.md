@@ -254,12 +254,12 @@ All 21 founding families and all 178 forms are partitioned exactly once in `FAMI
 
 ### Expansion creatures
 
-All 33 expansion creatures have individual habitat envelopes. Their identities, ecology, locomotion, and cues are canon. Territory/site envelopes, population ranges, and atlas placement remain authored constraints or provisional.
+All 39 expansion creatures have individual general habitat envelopes. Their identities, ecology, locomotion, and cues are canon. Territory/site envelopes, population ranges, and atlas placement remain authored constraints or provisional.
 
 | Creature family | Forms covered | Spatial law |
 |---|---:|---|
 | Lucent Procession | 9 | Restoration sites and processional routes require a witnessed rule, a target, and a readable approach lane |
-| Charnel Households | 10 | Mobile living interiors require legible entry/exit, household use, and a protective function |
+| Charnel Households | 11 | Mobile living interiors require legible entry/exit, household use, and a protective function; Boundary Gnasher colonies remain tied to obsolete invited lines |
 | Remaining Ecologies | 6 | Civic edges and adapted ecologies persist through a named service or exchange outside combat |
 | Noon-Wound Ecologies | 2 | Restored buildings contain conflicting occupancy evidence and changed access |
 | Lucent Propagules | 1 | Breath, masonry, organism, and accountable custodian share one propagation corridor |
@@ -268,12 +268,17 @@ All 33 expansion creatures have individual habitat envelopes. Their identities, 
 | Cairn Beasts expansion | 1 | Hibernation needs a complete no-footfall interval, not transferred grave heat |
 | Dunmire Reflections | 1 | Real and reflected doors open together; uphill water is an authored state |
 | Salt-Waste Brood | 1 | Every horizon is a desired, feared, abandoned, or refused destination embodied as anatomy |
+| Echo Choir extension | 1 | Foreword Cantors occupy measurable stress, warning, and sufficient-cause overlaps rather than generic ruins |
+| Breath Tithe extension | 1 | Union of Last Breaths remains one accountable collective around paid intake, refusal, and safe venting |
+| White Ague extension | 1 | Return Drinker binds reversible route debt to witnessed utility loops without inventing a destination |
+| Anchored Quarantine extension | 1 | Dry Anchor Delegates remain bounded appendages of one fleet and one separable petition, never independent ships |
+| Dunmire Visibility Instruments | 1 | Borrowed Silhouette Escrow is one body with four serialized bank feet and cannot treat reflections as borrowers |
 
 The machine record names each creature's microhabitats, local population range, canonical quest links, visual cue, acoustic layer, scent, and provisional placement status. This allows Claude Design to place an ecology without pretending a final spawn point exists.
 
 ## Accepted quest environment programmes
 
-Every accepted expansion quest has its own environment record. The canonical setpiece sentence is preserved in the machine module. The table below is a blockout index, not a substitute for the full record.
+Every authored expansion quest has its own environment record. The canonical setpiece sentence is preserved in the machine module. The table below is a blockout index, not a substitute for the full record. It indexes 49 programmes: 48 release-attested quests and the single in-review quest `relic_mirror_gave_birth_elsewhere`; table presence alone does not confer release status.
 
 | Quest ID | Location | Host / mode | Minimum spatial programme |
 |---|---|---|---|
@@ -314,6 +319,24 @@ Every accepted expansion quest has its own environment record. The canonical set
 | `settlement_street_must_burn_once` | Cinderward readdressing district | Ember Gate district | Six transfer traces, four address plates, legal fire route, testimony, evacuation loops |
 | `profession_bell_paid_in_silence` | Foundry of Borrowed Quiet | Hollow Abbey foundry | Seven social silence rooms, molten floor, ripple sightline, wage archive, funeral route |
 | `relic_mirror_gave_birth_elsewhere` | Nursery of false horizons | White Meridian ecology | Mirror womb, four landscapes, three feedings, route-debt rescue, creature-first choice |
+| `faction_the_lantern_named_us_last` | Hearthmere counterfactual cistern | Provisional Hearthmere civic insert | District cistern, seven-shutter relief, isolated fuel path, flood sump, exterior appeal return |
+| `faction_living_appeal_aftercare` | Hearthmere six-wing aftercare | Provisional Hearthmere clinical addition | Six sensory habitats, living authorization stations, physical interruption access, patient-controlled exits |
+| `character_the_face_noon_borrowed` | Pale Measure executor court | Provisional Hollow Abbey ruin insert | Four witness bays, halo-alignment track, bounded load stations, pressure crypt, mortal fallback patrol |
+| `character_a_hunger_needs_an_address` | Pale Measure influx perimeter | Provisional refugee-camp landscape | Household decks, potable and waste services, firebreaks, invitation boundaries, deliberate public gap |
+| `regional_the_tide_refused_harbor` | Anchor Field two-tide clinic | Provisional Veil Coast intertidal landscape | Mooring petitions, wet clinic, tethered delegate lanes, two-tide operation, dry appeal return |
+| `regional_the_fog_came_to_collect_our_outlines` | Warden Reed four-bank visibility network | Provisional Dunmire causeway edge | Four banks, paired sight routes, living borrower ledger, safe cells, silhouette-debt return |
+| `regional_the_graves_grew_upward` | Cairnmarket grave-root orchard | Provisional Graven subterranean orchard | Seasonal grave-root chambers, harvest and funeral thresholds, thaw witness, food-service return |
+| `regional_an_echo_arrived_first` | Hollow Abbey foreword cause frames | Provisional nave/crypt/roof system | Four sufficient-cause frames, timed clearances, stress and warning paths, branch-specific return |
+| `profession_the_furnace_inhaled_our_names` | Ember Gate paid-breath furnace | Provisional Cinderward industrial compound | Twelve intake sleeves, six seal pairs, cold human center, shift exchange, safe manual venting |
+| `settlement_the_harbor_rang_below_tide` | Gloamharbor three-waterline bell block | Provisional Veil Coast harbor block | Four harbor houses, three account ledges, submerged bell chamber, dry refuge, boat-accessible return |
+| `relic_the_acre_crossed_a_border` | Bellwater mobile service corridor | Provisional Graven road landscape | Four moving corner cells, five service nodes, former/receiving tie-ins, bypass, streaming handoff |
+| `profession_the_well_drank_the_way_home` | Salt Watch return-water utility | Provisional Mirror-Salt utility landscape | Brine intake, treatment train, potable storage, four reversible loop posts, six-leg condenser, waste marsh |
+
+### Wave 04 full-detail handoff
+
+Claude Design must open `packages/content/manifests/quest-wave-04-v11.world.json` directly for the full Wave 04 environment and habitat contract. It contains the detailed foundations and hazards, typology bindings, semantic anchors, drainage and waste, back-of-house, schedules, habitat anchors, encounter contracts, mutable layers, state serialization, directed graphs, utilities, safe observation cells, objective endpoints, independent egress, and blockout execution contracts. `packages/content/manifests/quest-wave-04-v11.spatial-index.json` is deliberately compact and must never be used as the full design source.
+
+All twelve Wave 04 programmes use host-relative provisional reservations and retain `exactAtlasCoordinate: null`. Their provisional design coordinates may support local blockout reasoning but are not canonical atlas points. The two manifest files are authored handoff references only: they do not prove GIS acceptance, runtime integration, navigation or collision, production geometry, construction readiness, or environment-art acceptance.
 
 ### Quest environment admission gate
 
@@ -382,7 +405,7 @@ Current inherited ceilings include 700 visible draw calls at high quality, 18 vi
 
 For any region, site, creature, building, or quest:
 
-1. Resolve the machine record by canonical ID.
+1. Resolve the machine record by canonical ID. For Wave 04 full-detail work, open `packages/content/manifests/quest-wave-04-v11.world.json` explicitly rather than relying on its compact spatial index.
 2. Read authority and maturity before using coordinates or claiming readiness.
 3. Build graybox from route, room graph, threshold, utility, and design-envelope records.
 4. Place semantic anchors before detailed props.
@@ -395,7 +418,7 @@ For any region, site, creature, building, or quest:
 
 ## Deliberately unresolved decisions
 
-- No exact atlas coordinates exist yet for the 37 expansion quest locations.
+- No exact atlas coordinates exist yet for the 49 expansion quest locations; all twelve Wave 04 additions explicitly retain `exactAtlasCoordinate: null`.
 - Site influence radii are production envelopes, not final settlement boundaries.
 - Veil Coast and Mirror-Salt lack accepted standalone environment keyframes; Veil Coast has only the separately scoped Gloamharbor topology blockout reference described above.
 - Local terrain, bridge geometry, navmesh, crowd schedules, scent simulation, and room meshes outside existing prototypes are not production-ready.

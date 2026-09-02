@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "path": "design-review/quest-release-evidence/quest-wave-04-v11.machine-annex.json",
+    "bytes": 4245855,
+    "sha256": "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962"
+  },
+  "runtime": {
+    "path": "packages/content/src/quest-wave-04.runtime.js",
+    "bytes": 16412,
+    "sha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e"
+  },
+  "evidence": [
+    {
+      "path": "design-review/quest-release-evidence/quest-wave-04-v11.freeze-manifest.json",
+      "bytes": 6538,
+      "sha256": "65f588e4ff25a540f1203ac3655bb0fc25581931809b6c933a98403b3f42dbdf"
+    },
+    {
+      "path": "design-review/quest-release-evidence/quest-wave-04-v11.review-a.manifest.json",
+      "bytes": 5271,
+      "sha256": "cdad9291283cfa2f413f9da4bac681bf899c5a04dc9b3d4d4ee30cd867367f66"
+    },
+    {
+      "path": "design-review/quest-release-evidence/quest-wave-04-v11.review-b.manifest.json",
+      "bytes": 4220,
+      "sha256": "7913bfb59b444e93843b7aa402e52207067ed05176d491eb0ae2d0d9949ef01b"
+    }
+  ],
+  "projections": {
+    "narrative": {
+      "path": "packages/content/manifests/quest-wave-04-v11.narrative.json",
+      "bytes": 311366,
+      "sha256": "3ef2724d281e25cdde6aae24df14beb996e040a836429bac810bc7814e6a7ebb"
+    },
+    "spatialIndex": {
+      "path": "packages/content/manifests/quest-wave-04-v11.spatial-index.json",
+      "bytes": 113103,
+      "sha256": "a1793a15ba051e0df2235323e8c04393ad5db4c804111877a0269ff00eb930c2"
+    },
+    "world": {
+      "path": "packages/content/manifests/quest-wave-04-v11.world.json",
+      "bytes": 3859148,
+      "sha256": "4f22d16df22704fff5a95d9af6541122dd405818d9631ab9126837895fd24eee"
+    }
+  },
+  "sourceCounts": {
+    "supportingCharacters": 21,
+    "newCreatures": 6,
+    "signatureItems": 30,
+    "quests": 12,
+    "phaseGraphs": 12,
+    "companionContracts": 4,
+    "autonomousCompanionContracts": 2,
+    "boundedParticipationContracts": 2,
+    "provisionalFamilyLaws": 2,
+    "existingCreatureEcologyDeepenings": 6,
+    "creatureHabitatEnvelopes": 14,
+    "environmentPrograms": 12
+  },
+  "integratedCounts": {
+    "characters": 70,
+    "creatures": 39,
+    "items": 67,
+    "quests": 49,
+    "autonomousCompanionContracts": 4,
+    "boundedParticipationContracts": 2,
+    "actorContracts": 6,
+    "creatureHabitatEnvelopes": 39,
+    "questEnvironmentRequirements": 49
+  },
+  "readPartitions": {
+    "narrative": 17,
+    "operational": 9
+  },
+  "noSecretCharacterIds": [
+    "mora_quay_dry_berth_steward",
+    "senn_avir_residue_orderly"
+  ],
+  "missingVisualBriefCharacterIds": [
+    "leto_fain_custodian_unclaimed_symptoms",
+    "senn_avir_residue_orderly"
+  ],
+  "ownerMismatch": {
+    "mode": "living_actor_record_only",
+    "targetQuestId": "character_the_face_noon_borrowed"
+  },
+  "halix": {
+    "companionId": "deacon_halix_bell_of_noon",
+    "questId": "settlement_the_harbor_rang_below_tide",
+    "outcomeId": "mortal_watch_replaces_unsafe_bell_route",
+    "phaseGraphId": "phase.v6.harbor.reversible_tide",
+    "terminalPhaseId": "harbor.return"
+  },
+  "packageExports": {
+    "lightweight": "./quest-wave-04",
+    "runtime": "./quest-wave-04/runtime",
+    "world": "./quest-wave-04/world"
+  },
+  "operationalNegativeFixtures": [
+    {
+      "mode": "living_actor_record_only",
+      "snapshot": { "actorKind": "stored_output", "authorizationStatus": "eligible" },
+      "error": "living_actor_record_requires_living_actor"
+    },
+    {
+      "mode": "six_physical_cutoffs",
+      "snapshot": { "cutoffs": ["ready", "ready", "ready", "ready", "ready"] },
+      "error": "six_cutoffs_exact_count_required"
+    },
+    {
+      "mode": "occupied_threshold_and_exit",
+      "snapshot": { "occupied": 1, "capacity": 2, "protectedExitOpen": false, "returnConfirmed": true },
+      "error": "protected_return_requires_open_exit"
+    },
+    {
+      "mode": "three_bounded_material_loads",
+      "snapshot": { "loadKind": "radiance", "withinLimit": true },
+      "error": "material_load_snapshot_invalid"
+    },
+    {
+      "mode": "all_four_independent_exits",
+      "snapshot": { "exits": [false, false, true, true], "fallbackRouteActive": false, "testAborted": false },
+      "error": "four_exit_state_allows_only_one_withdrawal_before_fallback_or_abort"
+    },
+    {
+      "mode": "read_only_encounter_pressure",
+      "snapshot": { "level": 1, "gatheringThreshold": 3, "refusalThreshold": 3 },
+      "error": "encounter_pressure_thresholds_invalid"
+    },
+    {
+      "mode": "named_living_borrowers_only",
+      "snapshot": { "allParticipantsNamedLiving": true, "missingBorrowerIds": ["borrower"], "missingCreditorIds": ["creditor"] },
+      "error": "borrower_and_creditor_missing_is_ambiguous"
+    },
+    {
+      "mode": "exactly_one_body",
+      "snapshot": { "escrowBodyIds": ["one", "two"], "state": "present" },
+      "error": "exactly_one_escrow_body_required"
+    },
+    {
+      "mode": "exactly_four_bank_positions",
+      "snapshot": { "positions": [false, false, true, true], "exchangeFrozen": false },
+      "error": "more_than_one_unbound_bank_requires_frozen_exchange"
+    }
+  ],
+  "operationalPositiveFixtures": [
+    {
+      "mode": "living_actor_record_only",
+      "snapshot": { "actorKind": "living", "authorizationStatus": "eligible" },
+      "value": "eligible"
+    },
+    {
+      "mode": "six_physical_cutoffs",
+      "snapshot": { "cutoffs": ["ready", "ready", "repair_due", "ready", "ready", "ready"] },
+      "value": "repair_due"
+    },
+    {
+      "mode": "occupied_threshold_and_exit",
+      "snapshot": { "occupied": 1, "capacity": 2, "protectedExitOpen": true, "returnConfirmed": true },
+      "value": "protected_return"
+    },
+    {
+      "mode": "three_bounded_material_loads",
+      "snapshot": { "loadKind": "compression", "withinLimit": true },
+      "value": "compression_within_limit"
+    },
+    {
+      "mode": "all_four_independent_exits",
+      "snapshot": { "exits": [true, false, true, true], "fallbackRouteActive": false, "testAborted": false },
+      "value": "one_withdrawn"
+    },
+    {
+      "mode": "read_only_encounter_pressure",
+      "snapshot": { "level": 5, "gatheringThreshold": 3, "refusalThreshold": 7 },
+      "value": "gathering"
+    },
+    {
+      "mode": "named_living_borrowers_only",
+      "snapshot": { "allParticipantsNamedLiving": true, "missingBorrowerIds": ["borrower"], "missingCreditorIds": [] },
+      "value": "borrower_missing"
+    },
+    {
+      "mode": "exactly_one_body",
+      "snapshot": { "escrowBodyIds": ["escrow-body"], "state": "held" },
+      "value": "held"
+    },
+    {
+      "mode": "exactly_four_bank_positions",
+      "snapshot": { "positions": [true, true, true, true], "exchangeFrozen": false },
+      "value": "all_four_bound"
+    }
+  ]
+}

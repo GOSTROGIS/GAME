@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 11,
+  "packetId": "quest-wave-04-v11",
+  "status": "FROZEN_PRIVATE_SUCCESSOR_AUTHOR_CANDIDATE",
+  "releaseApproved": false,
+  "integrationAuthorized": false,
+  "integrated": false,
+  "repositoryMutation": false,
+  "authorApproval": false,
+  "authorBoundary": "Successor author and freezer evidence only; two fresh independent v11 reviews remain mandatory.",
+  "predecessorBoundary": {
+    "frozenV10Manifest": {
+      "path": "../wave-04-v10/wave-04-v10.freeze-manifest.json",
+      "sha256": "2c1756bc54d24bad7d5b515eccf468163d94e5cbecada916ebb5f725b130b2d4",
+      "bytes": 5152
+    },
+    "frozenV10ReviewAManifest": {
+      "path": "../wave-04-v10/reviews/review-a/quest-wave-04-v10.review-a.manifest.json",
+      "sha256": "9761d879eece9e53fb0313bdbfc9d89498d81e851b5310cb65eb391af487ccc0",
+      "bytes": 2338
+    },
+    "frozenV10ReviewBManifest": {
+      "path": "../wave-04-v10/reviews/review-b/quest-wave-04-v10.review-b.manifest.json",
+      "sha256": "94ab6264fb0d3e1939bb6f7803811b5ae13db9da8904274a81b55db4a6958106",
+      "bytes": 10983
+    },
+    "frozenV10ReviewBAudit": {
+      "path": "../wave-04-v10/reviews/review-b/quest-wave-04-v10.review-b.audit.json",
+      "sha256": "d144384caa538d4bfbb78bd7d6b762e67e5ac9e4d45d15eaad657d005a7d1eb9",
+      "bytes": 125438
+    },
+    "frozenV10ReviewBReport": {
+      "path": "../wave-04-v10/reviews/review-b/quest-wave-04-v10.review-b.md",
+      "sha256": "7bdf3b138de25f37ffe1b36081da8eb8be6ca739b051bbd03268355eecd5a288",
+      "bytes": 4547
+    },
+    "v10ReviewAVerdict": "PASS",
+    "v10ReviewBVerdict": "RETURN_FOR_SUCCESSOR_REVISION",
+    "v10ReviewBBlockerIds": [
+      "runtime.companion_forced_outcome_locks_resolve_to_terminal",
+      "runtime.support_character_arc_key_variants_have_discriminator",
+      "runtime.support_character_optional_secret_variants_have_contract",
+      "runtime.custom_state_read_modes_have_executable_contract"
+    ]
+  },
+  "deterministicReproduction": {
+    "isolatedBuildValidateRuns": 2,
+    "byteIdentical": true,
+    "artifactsCompared": 10,
+    "officialOutputsExactToIsolated": true,
+    "validationStatus": "PASS_AUTHOR_VALIDATION_PENDING_TWO_FRESH_INDEPENDENT_REVIEWS",
+    "validationChecks": 46,
+    "validationFailures": 0,
+    "negativeControls": 46
+  },
+  "successorEvidence": {
+    "allowedAuthoredDeltaCount": 28,
+    "authoredSurfaces": 10,
+    "unchangedAuthoredSurfaces": 7,
+    "changedAuthoredSurfaces": 3,
+    "repairedReviewBBlockerIds": [
+      "runtime.companion_forced_outcome_locks_resolve_to_terminal",
+      "runtime.support_character_arc_key_variants_have_discriminator",
+      "runtime.support_character_optional_secret_variants_have_contract",
+      "runtime.custom_state_read_modes_have_executable_contract"
+    ],
+    "halixExistingOutcome": "mortal_watch_replaces_unsafe_bell_route",
+    "halixExistingTerminal": "harbor.return",
+    "supportCharactersUsingCanonicalQuestArcIds": 21,
+    "explicitNoSecretDepthVariantIds": [
+      "senn_avir_residue_orderly",
+      "mora_quay_dry_berth_steward"
+    ],
+    "operationalStateReadRows": 9,
+    "narrativeStateReadRows": 17,
+    "executableOperationalNormalizers": 9,
+    "materialMappingsPreserved": 151,
+    "closurePointersResolved": 1093,
+    "identityCoverage": {
+      "utility": 60,
+      "egress": 24,
+      "item": 30
+    },
+    "predecessorBlockersRecomputedAndClosed": 132,
+    "v6ReviewABlockersRecomputedAndClosed": 23,
+    "v10ReviewBBlockersClosed": 4,
+    "v10WholeTokenRepairPreserved": true,
+    "newSecretCanonAdded": false
+  },
+  "frozenArtifactCount": 15,
+  "frozenArtifacts": [
+    {
+      "path": "build-wave-04-v11.mjs",
+      "sha256": "25ee7890bf7ad412c75cff42612d5fec3e43612ae7f194c51d40d2219365b6c7",
+      "bytes": 24333
+    },
+    {
+      "path": "validate-wave-04-v11.mjs",
+      "sha256": "c4d2ad7a4b61385709eeda875e89d3b85cc0d063c93781a498801a13fac42f83",
+      "bytes": 53841
+    },
+    {
+      "path": "freeze-wave-04-v11.mjs",
+      "sha256": "0a4be4497c116c994511486814a8951c3b65d34fe0ae9ebe156e9120cf88f519",
+      "bytes": 9618
+    },
+    {
+      "path": "quest-wave-04-v11.repair-contract.json",
+      "sha256": "fe5ba2aa7c9cbfa960e5b76ef25f40d4130f639ea0e21288adf367ed004568fc",
+      "bytes": 9429
+    },
+    {
+      "path": "quest-wave-04-v11.runtime-contract.mjs",
+      "sha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e",
+      "bytes": 16412
+    },
+    {
+      "path": "wave-04-v11.schema.json",
+      "sha256": "a61acc5d1a11c209e1ebf78e85ea4391ffac3c07c16212959e757eccd553b709",
+      "bytes": 5068
+    },
+    {
+      "path": "wave-04-v11.source-facts.json",
+      "sha256": "3e9eee8845dc38c860f3b4a5994ff7a36afc03aef2a6915f2493d50d6b9f572a",
+      "bytes": 3060
+    },
+    {
+      "path": "wave-04-v11.negative-fixtures.json",
+      "sha256": "c833b374d7dbda48629e309a86aa642eddf427cb878c7865920652350a7250d2",
+      "bytes": 8775
+    },
+    {
+      "path": "wave-04-v11.combined-review-closure-matrix.json",
+      "sha256": "7cf05e1861c1f89d003bbc8dcf3cddb6ff00deb5304f792b50fb926704c3f055",
+      "bytes": 517890
+    },
+    {
+      "path": "wave-04-v11.machine-annex.json",
+      "sha256": "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962",
+      "bytes": 4245855
+    },
+    {
+      "path": "wave-04-v11.semantic-audit.json",
+      "sha256": "f4fc7fc7cb4a34450be8c253a53778417a16e99300ea1e9f4a34fdf4d35f6091",
+      "bytes": 1259225
+    },
+    {
+      "path": "wave-04-v11.assignment-ledger.json",
+      "sha256": "c20a734ed9735d87f55f2d6114f480e09f36ad30b0ec4c245b77a94aa042a5a3",
+      "bytes": 281951
+    },
+    {
+      "path": "wave-04-v11.integration-mapping.json",
+      "sha256": "d64f2ce4abd42f4084721b0100fa6ce4905a5095b354655049df782b63be1f57",
+      "bytes": 12164
+    },
+    {
+      "path": "wave-04-v11.author-packet.md",
+      "sha256": "efb38d633476be40697bb459c9c906f3514a2204129c28b774405c182cc67fef",
+      "bytes": 1016
+    },
+    {
+      "path": "wave-04-v11.validation.json",
+      "sha256": "09f7418bc3d6f198cd658582ab4347942d116500ba67ef8471f133dd7ea97e31",
+      "bytes": 38357
+    }
+  ],
+  "requiredBeforeIntegration": [
+    "fresh_v11_independent_review_a_pass",
+    "fresh_v11_independent_review_b_pass",
+    "coordinator_authorization"
+  ],
+  "unverifiedBoundaries": [
+    "fresh independent Review A for v11",
+    "fresh independent Review B for v11",
+    "root integration gates",
+    "gameplay balance",
+    "localization",
+    "runtime performance"
+  ],
+  "approvalGranted": false,
+  "releaseDecision": null
+}

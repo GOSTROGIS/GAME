@@ -62,6 +62,18 @@
       "types": "./src/world-spatial.data.d.ts",
       "import": "./dist/world-spatial.data.js"
     },
+    "./quest-wave-04": {
+      "types": "./src/quest-wave-04.data.d.ts",
+      "import": "./dist/quest-wave-04.data.js"
+    },
+    "./quest-wave-04/runtime": {
+      "types": "./src/quest-wave-04.runtime.d.ts",
+      "import": "./dist/quest-wave-04.runtime.js"
+    },
+    "./quest-wave-04/world": {
+      "types": "./src/quest-wave-04.world.d.ts",
+      "import": "./dist/quest-wave-04.world.js"
+    },
     "./bridge-runtime": {
       "types": "./src/bridgeRuntime.ts",
       "import": "./dist/bridgeRuntime.js"

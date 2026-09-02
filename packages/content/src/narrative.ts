@@ -1,5 +1,6 @@
 import {
   ALIGNMENT_HOOKS as alignmentHooksData,
+  COMPANION_AGENCY_CONTRACTS as companionAgencyContractData,
   COMPANION_QUEST_CONTRACTS as companionContractData,
   COSMIC_FACTIONS as factionData,
   EXPANSION_CHARACTERS as characterData,
@@ -10,7 +11,9 @@ import {
   NARRATIVE_TARGETS as targetsData,
   QUEST_AUTHORING_LAW as authoringLawData,
   QUEST_SUPPORT_CHARACTERS as questSupportData,
+  QUEST_ACTOR_CONTRACTS as questActorContractData,
   WORLD_PREMISE as premiseData,
+  interpretCanonicalQuestStateRead as interpretCanonicalStateReadData,
   questSimilarity as similarityData,
   validateNarrativeExpansion as validateData,
 } from "./narrative.data.js";
@@ -18,8 +21,12 @@ import {
 export type CosmicAlignment = "restoration" | "opposition" | "mortal_continuity";
 export type ExpansionArtStatus = "awaiting-art" | "in-review" | "accepted" | "refused";
 export type ExpansionModelStatus = "unassessed" | "queued" | "sculpted" | "animated" | "refused";
-export type QuestStateDomain = "authority" | "admission" | "memory" | "ecology" | "infrastructure" | "obligation";
-export type QuestStateReadMode = "all-values" | "value-precondition";
+export type NarrativeQuestStateDomain = "authority" | "admission" | "memory" | "ecology" | "infrastructure" | "obligation";
+export type OperationalQuestStateDomain = "living_aftercare_operation";
+export type QuestStateDomain = NarrativeQuestStateDomain | OperationalQuestStateDomain;
+export type NarrativeQuestStateReadMode = "all-values" | "value-precondition";
+export type OperationalQuestStateReadMode = "living_actor_record_only" | "six_physical_cutoffs" | "occupied_threshold_and_exit" | "three_bounded_material_loads" | "all_four_independent_exits" | "read_only_encounter_pressure" | "named_living_borrowers_only" | "exactly_one_body" | "exactly_four_bank_positions";
+export type QuestStateReadMode = NarrativeQuestStateReadMode | OperationalQuestStateReadMode;
 export type QuestPortfolioId = "main_cosmic" | "faction_schism" | "character_guest_follower" | "regional" | "settlement" | "profession_systemic" | "world_state_reaction" | "relic_creature_ecology";
 
 export interface CosmicFaction {
@@ -54,10 +61,12 @@ export interface ExpansionCharacter {
   readonly desire: string;
   readonly fear: string;
   readonly contradiction: string;
-  readonly secret: string;
-  readonly voice: { readonly cadence: string; readonly imagery: string; readonly signature: string };
+  readonly secret?: string;
+  readonly depthVariant?: "equivalent-depth-without-secret-v1";
+  readonly voice?: { readonly cadence: string; readonly imagery: string; readonly signature: string };
+  readonly dialogueProfile?: { readonly register: string; readonly taboo: string; readonly signature: string };
   readonly alignmentOptions: readonly string[];
-  readonly visualBrief: string;
+  readonly visualBrief?: string;
   readonly questArcIds: readonly string[];
   readonly ownedDecision?: string;
   readonly pipeline: ExpansionAssetPipeline;
@@ -106,7 +115,30 @@ export interface ExpansionArtifactV2 {
   readonly laterContest: { readonly triggerStateKey: string; readonly contestedQuestion: string; readonly venue: string };
 }
 
-export type ExpansionItem = ExpansionItemV1 | ExpansionArtifactV2;
+export interface ExpansionArtifactV9 extends Omit<ExpansionArtifactV2, "schemaVersion"> {
+  readonly schemaVersion: 9;
+  readonly itemSpecificClauseHash: string;
+  readonly agency?: string;
+  readonly aggregateCapacityPersons?: number;
+  readonly boatCount?: number;
+  readonly canCarryVictimReflexAuthority?: boolean;
+  readonly canCreateOffice?: boolean;
+  readonly canGrantPermission?: boolean;
+  readonly canSupplyRemedy?: boolean;
+  readonly canTransferCommand?: boolean;
+  readonly canonicalServiceIds?: readonly string[];
+  readonly capacityPerBoatPersons?: number;
+  readonly capacityPersons?: number;
+  readonly count?: number;
+  readonly serviceEvidence?: {
+    readonly systemId: string;
+    readonly canonicalServiceIds: readonly string[];
+    readonly allFiveServiceRoutesBound: boolean;
+    readonly formerSiteOutageRemainsVisible: boolean;
+  };
+}
+
+export type ExpansionItem = ExpansionItemV1 | ExpansionArtifactV2 | ExpansionArtifactV9;
 
 export interface ExpansionQuestObjective {
   readonly type: string;
@@ -123,14 +155,25 @@ export interface QuestAuthorshipProof {
   readonly forbiddenSubstitution: string;
 }
 
-export interface QuestStateReadContract {
+export interface NarrativeQuestStateReadContract {
   readonly key: string;
-  readonly mode: QuestStateReadMode;
+  readonly mode: NarrativeQuestStateReadMode;
   readonly values: readonly string[];
+  readonly readKind?: never;
+  readonly domain?: never;
 }
 
-export interface ExpansionQuest {
-  readonly schemaVersion: 2;
+export interface OperationalQuestStateReadContract {
+  readonly key: string;
+  readonly mode: OperationalQuestStateReadMode;
+  readonly values: readonly string[];
+  readonly readKind: "operational-state-v1";
+  readonly domain: OperationalQuestStateDomain;
+}
+
+export type QuestStateReadContract = NarrativeQuestStateReadContract | OperationalQuestStateReadContract;
+
+export interface ExpansionQuestBase {
   readonly id: string;
   readonly chainId: string;
   readonly order: number;
@@ -140,9 +183,6 @@ export interface ExpansionQuest {
   readonly giverId: string;
   readonly supportingCharacterIds: readonly string[];
   readonly creatureIds: readonly string[];
-  readonly stateDomain: QuestStateDomain;
-  readonly stateReads: readonly QuestStateReadContract[];
-  readonly stateWrites: readonly { readonly domain: QuestStateDomain; readonly key: string; readonly values: readonly string[] }[];
   readonly premise: string;
   readonly primaryMechanicId: string;
   readonly dilemmaId: string;
@@ -155,6 +195,44 @@ export interface ExpansionQuest {
   readonly dialogueThesis: string;
   readonly authorshipProof: QuestAuthorshipProof;
 }
+
+export interface ExpansionQuestV2 extends ExpansionQuestBase {
+  readonly schemaVersion: 2;
+  readonly stateDomain: NarrativeQuestStateDomain;
+  readonly stateReads: readonly NarrativeQuestStateReadContract[];
+  readonly stateWrites: readonly { readonly domain: NarrativeQuestStateDomain; readonly key: string; readonly values: readonly string[] }[];
+  readonly signatureRewardStructure?: never;
+  readonly phaseGraphId?: never;
+  readonly participantCharacterIds?: never;
+  readonly returningCharacterIds?: never;
+}
+
+export interface ExpansionQuestV9 extends ExpansionQuestBase {
+  readonly schemaVersion: 9;
+  readonly stateDomain: QuestStateDomain;
+  readonly stateReads: readonly QuestStateReadContract[];
+  readonly stateWrites: readonly { readonly domain: QuestStateDomain; readonly key: string; readonly values: readonly string[] }[];
+  readonly signatureRewardStructure: Readonly<{
+    kind: string;
+    portableSignatureItemId: string | null;
+    itemIds: readonly string[];
+    noPortableSignatureReason: string | null;
+  }>;
+  readonly phaseGraphId: string;
+  readonly participantCharacterIds: readonly string[];
+  readonly returningCharacterIds: readonly string[];
+  readonly creatureAliasIds: readonly string[];
+  readonly foundingCreatureOverlayIds: readonly string[];
+  readonly prerequisiteQuestIds: readonly string[];
+  readonly authoredSemanticContract: Readonly<Record<string, unknown>>;
+  readonly decisiveBeat: Readonly<Record<string, unknown>>;
+  readonly failurePersistence: Readonly<Record<string, unknown>>;
+  readonly outcomeProgram: Readonly<Record<string, unknown>>;
+  readonly structuralDiversityContract: Readonly<Record<string, unknown>>;
+  readonly structuralSignature: string;
+}
+
+export type ExpansionQuest = ExpansionQuestV2 | ExpansionQuestV9;
 
 export interface CompanionQuestContract {
   readonly schemaVersion: 1;
@@ -190,14 +268,61 @@ export interface CompanionQuestContract {
     readonly forcedTrigger: string;
     readonly forcedAction: string;
     readonly forcedOutcomeLock: string;
+    readonly forcedTerminalBinding?: Readonly<{
+      schemaVersion: 1;
+      bindingKind: "existing-owning-quest-outcome-to-phase-terminal";
+      questId: string;
+      outcomeId: string;
+      phaseGraphId: string;
+      fromPhaseId: string;
+      terminalPhaseId: string;
+      transitionKind: string;
+      causalProof: string;
+    }>;
   };
   readonly pipeline: ExpansionAssetPipeline;
+  readonly executableSelectionRules?: Readonly<{
+    eligibleQuery: string;
+    deterministicTieBreak: readonly string[];
+    inaccessibleFallback: string;
+  }>;
+}
+
+export interface CompanionAgencyContract {
+  readonly schemaVersion: 4;
+  readonly questId: string;
+  readonly companionId: string;
+  readonly entryReason: string;
+  readonly prohibitedActions: readonly string[];
+  readonly deterministicOperation?: Readonly<{
+    query: string;
+    order: readonly string[];
+    result: string;
+    inaccessibleFallback: string;
+  }>;
+  readonly authorizesNothing?: true;
+  readonly agencyBoundary?: string;
+  readonly physicalOperator?: false;
+  readonly readOnlyOrderingOnly?: true;
+  readonly executableActions?: readonly string[];
+  readonly rosePaneBoundary?: Readonly<{ function: string; transfers: readonly [] }>;
+  readonly mortalFallbackRequired?: true;
+}
+
+export type QuestActorContract = CompanionQuestContract | CompanionAgencyContract;
+
+export interface QuestStateReadResult {
+  readonly readKind: "narrative-state-v1" | "operational-state-v1";
+  readonly domain: QuestStateDomain;
+  readonly key: string;
+  readonly value: string;
+  readonly satisfied: boolean;
 }
 
 export interface NarrativeValidationResult {
   readonly valid: boolean;
   readonly errors: readonly { readonly path: string; readonly code: string; readonly message: string }[];
-  readonly stats: { readonly factions: number; readonly characters: number; readonly creatures: number; readonly items: number; readonly quests: number; readonly companionContracts: number; readonly capacityTarget: number };
+  readonly stats: { readonly factions: number; readonly characters: number; readonly creatures: number; readonly items: number; readonly quests: number; readonly companionContracts: number; readonly boundedParticipationContracts: number; readonly capacityTarget: number };
 }
 
 export const NARRATIVE_TARGETS = targetsData as Readonly<{
@@ -222,7 +347,11 @@ export const QUEST_AUTHORING_LAW = authoringLawData as Readonly<{
   rejectionRule: string;
   productionRule: string;
   stateDomains: readonly QuestStateDomain[];
+  operationalStateDomains: readonly QuestStateDomain[];
   stateReadModes: readonly QuestStateReadMode[];
+  acceptedQuestSchemaVersions: readonly (2 | 9)[];
+  acceptedItemSchemaVersions: readonly (1 | 2 | 9)[];
+  acceptedCompanionSchemaVersions: readonly (1 | 4)[];
   portfolioIds: readonly QuestPortfolioId[];
 }>;
 export const WORLD_PREMISE = premiseData as Readonly<Record<string, string>>;
@@ -235,15 +364,33 @@ export const ALIGNMENT_HOOKS = alignmentHooksData as readonly { readonly charact
 export const EXPANSION_ITEMS = itemData as readonly ExpansionItem[];
 export const EXPANSION_QUESTS = questData as readonly ExpansionQuest[];
 export const COMPANION_QUEST_CONTRACTS = companionContractData as readonly CompanionQuestContract[];
+export const COMPANION_AGENCY_CONTRACTS = companionAgencyContractData as readonly CompanionAgencyContract[];
+export const BOUNDED_PARTICIPATION_CONTRACTS = COMPANION_AGENCY_CONTRACTS;
+export const QUEST_ACTOR_CONTRACTS = questActorContractData as readonly QuestActorContract[];
 
 export const EXPANSION_CHARACTER_BY_ID: ReadonlyMap<string, ExpansionCharacter> = new Map(EXPANSION_CHARACTERS.map((character) => [character.id, character]));
 export const EXPANSION_CREATURE_BY_ID: ReadonlyMap<string, ExpansionCreature> = new Map(EXPANSION_CREATURES.map((creature) => [creature.id, creature]));
 export const EXPANSION_ITEM_BY_ID: ReadonlyMap<string, ExpansionItem> = new Map(EXPANSION_ITEMS.map((item) => [item.id, item]));
 export const EXPANSION_QUEST_BY_ID: ReadonlyMap<string, ExpansionQuest> = new Map(EXPANSION_QUESTS.map((quest) => [quest.id, quest]));
 export const COMPANION_QUEST_CONTRACT_BY_KEY: ReadonlyMap<string, CompanionQuestContract> = new Map(COMPANION_QUEST_CONTRACTS.map((contract) => [`${contract.questId}|${contract.companionId}`, contract]));
+export const COMPANION_AGENCY_CONTRACT_BY_KEY: ReadonlyMap<string, CompanionAgencyContract> = new Map(COMPANION_AGENCY_CONTRACTS.map((contract) => [`${contract.questId}|${contract.companionId}`, contract]));
 
 export function questSimilarity(left: ExpansionQuest, right: ExpansionQuest): number {
   return similarityData(left, right);
+}
+
+export function interpretCanonicalQuestStateRead(
+  questOrId: string | ExpansionQuest,
+  read: QuestStateReadContract,
+  stateByDomain: Readonly<Record<string, Readonly<Record<string, unknown>>>>,
+  context: Readonly<Record<string, unknown>> = {},
+): QuestStateReadResult {
+  return interpretCanonicalStateReadData(
+    questOrId,
+    read as unknown as Readonly<Record<string, unknown>>,
+    stateByDomain,
+    context,
+  ) as QuestStateReadResult;
 }
 
 export function validateNarrativeExpansion(input?: {
@@ -253,6 +400,7 @@ export function validateNarrativeExpansion(input?: {
   readonly items?: readonly ExpansionItem[];
   readonly quests?: readonly ExpansionQuest[];
   readonly companionContracts?: readonly CompanionQuestContract[];
+  readonly boundedParticipationContracts?: readonly CompanionAgencyContract[];
 }): NarrativeValidationResult {
   return validateData(input) as NarrativeValidationResult;
 }

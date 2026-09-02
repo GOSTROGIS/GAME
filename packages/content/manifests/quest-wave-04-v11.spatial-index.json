@@ -1,0 +1,3302 @@
+{
+  "schemaVersion": 1,
+  "kind": "quest-wave-spatial-compatibility-index",
+  "waveId": "quest-wave-04-v11",
+  "sourceBinding": {
+    "path": "design-review/quest-release-evidence/quest-wave-04-v11.machine-annex.json",
+    "bytes": 4245855,
+    "sha256": "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962"
+  },
+  "fullWorldContractPath": "packages/content/manifests/quest-wave-04-v11.world.json",
+  "creatureHabitatEnvelopes": [
+    {
+      "id": "habitat.boundary_gnasher.pale_measure_influx_perimeter",
+      "creatureId": "boundary_gnasher",
+      "recordKind": "new_form",
+      "questId": "character_a_hunger_needs_an_address",
+      "regionIds": [
+        "territory.hollow-abbey"
+      ],
+      "siteCells": [
+        "site.pale-measure:event_influx_edge"
+      ],
+      "hostRelativeEnvelopeMeters": {
+        "center": [
+          12,
+          -126,
+          -3
+        ],
+        "radius": 96,
+        "elevationBand": [
+          -5,
+          12
+        ]
+      },
+      "moistureBand": "karst_runoff_to_dry_camp_firebreak",
+      "population": {
+        "minimum": 2,
+        "maximum": 8,
+        "densityRule": "one_colony_per_obsolete_invitation_segment"
+      },
+      "anchorBehavior": "Locks three survey legs on an expired invited line while the fourth targets the nearest occupied threshold.",
+      "activityPhases": [
+        "survey_window",
+        "closed"
+      ],
+      "sustenance": "Unlawful crossings and obsolete witnessed invitation lines.",
+      "associations": [
+        "maw_behind_mercy",
+        "camp_night_watch"
+      ],
+      "exclusions": [
+        "ordinary_domestic_threshold",
+        "valid_current_invitation",
+        "refuge_interior",
+        "livestock_quarantine"
+      ],
+      "propagation": "One new colony may bud only when an invitation expires without its physical line being retired.",
+      "cessation": "Renew, revoke, or physically retire the line before the fourth leg lands; consumed lines become dead service trenches and cannot respawn.",
+      "questStateDelta": "Colony and trench states serialize per perimeter segment.",
+      "canonicalPhaseIds": [
+        "survey_window"
+      ],
+      "phaseAuthority": "canonical_SITE_ACTIVITY_DESIGN_phase_id"
+    },
+    {
+      "id": "habitat.foreword_cantor.hollow_abbey_cause_frames",
+      "creatureId": "foreword_cantor",
+      "recordKind": "new_form",
+      "questId": "regional_an_echo_arrived_first",
+      "regionIds": [
+        "territory.hollow-abbey"
+      ],
+      "siteCells": [
+        "site.hollow-abbey:mute_nave_cause_frames"
+      ],
+      "hostRelativeEnvelopeMeters": {
+        "center": [
+          54,
+          -74,
+          6
+        ],
+        "radius": 62,
+        "elevationBand": [
+          -18,
+          44
+        ]
+      },
+      "moistureBand": "roof_rain_karst_drain_gradient",
+      "population": {
+        "minimum": 1,
+        "maximum": 4,
+        "densityRule": "one_per_active_result_cause_debt"
+      },
+      "anchorBehavior": "Nests at the overlap of a measurable stress path, warning source, and empty sufficient-cause frame.",
+      "activityPhases": [
+        "roof_rain",
+        "eclipse",
+        "quiet_shift",
+        "absolute_silence"
+      ],
+      "sustenance": "Overlapping karst stress and repeated warnings.",
+      "associations": [
+        "resonant_urn",
+        "structural_monitor"
+      ],
+      "exclusions": [
+        "materially_insufficient_symbolic_frame",
+        "occupied_safe_clearance",
+        "resolved_result_without_debt"
+      ],
+      "propagation": "A new Cantor can appear only when a persistent built cause creates a distinct future result debt.",
+      "cessation": "A sufficient cause completes, its result debt is sealed, or stress and warning paths cease overlapping.",
+      "questStateDelta": "Cause branch, acoustic lead, structural scar, and remaining population persist.",
+      "canonicalPhaseIds": [
+        "roof_rain"
+      ],
+      "phaseAuthority": "canonical_SITE_ACTIVITY_DESIGN_phase_id"
+    },
+    {
+      "id": "habitat.union_last_breaths.ember_gate_cold_center",
+      "creatureId": "union_of_last_breaths",
+      "recordKind": "new_form",
+      "questId": "profession_the_furnace_inhaled_our_names",
+      "regionIds": [
+        "territory.cinderward"
+      ],
+      "siteCells": [
+        "site.ember-gate:law_forge_pressure_core"
+      ],
+      "hostRelativeEnvelopeMeters": {
+        "center": [
+          36,
+          18,
+          8
+        ],
+        "radius": 48,
+        "elevationBand": [
+          -4,
+          48
+        ]
+      },
+      "moistureBand": "dry_hot_intake_to_cool_condensate",
+      "population": {
+        "minimum": 1,
+        "maximum": 1,
+        "uniqueness": "one_collective_of_twelve_cuffs"
+      },
+      "anchorBehavior": "Eleven cuffs open outward around one cold human center; twelve fixed sleeves connect to six seal pairs.",
+      "activityPhases": [
+        "cold_shift",
+        "furnace_inhale",
+        "hot_shift",
+        "quench",
+        "ash_night"
+      ],
+      "sustenance": "Discarded paid breaths and acknowledged vent labor; it may repossess air only from a recorded unpaid shift debtor.",
+      "associations": [
+        "paid_shift_seals",
+        "cold_center_workers"
+      ],
+      "exclusions": [
+        "sleep_cells",
+        "family_refuge",
+        "sealed_manual_exit",
+        "unrecorded_person"
+      ],
+      "propagation": "none; pooled breath changes pressure but never creates another Union.",
+      "cessation": "Manual shutdown vents all paid breath to the cold center and closes intake sleeves in safe sequence.",
+      "questStateDelta": "Sleeve availability, paid seals, heat-zone debt, and collective refusal persist.",
+      "canonicalPhaseIds": [
+        "cold_shift"
+      ],
+      "phaseAuthority": "canonical_SITE_ACTIVITY_DESIGN_phase_id"
+    },
+    {
+      "id": "habitat.return_drinker.salt_watch_utility_edge",
+      "creatureId": "return_drinker",
+      "recordKind": "new_form",
+      "questId": "profession_the_well_drank_the_way_home",
+      "regionIds": [
+        "territory.mirror-salt-waste"
+      ],
+      "siteCells": [
+        "site.salt-watch:brine_still_outer_loop"
+      ],
+      "hostRelativeEnvelopeMeters": {
+        "center": [
+          104,
+          92,
+          -2
+        ],
+        "radius": 74,
+        "elevationBand": [
+          -6,
+          16
+        ]
+      },
+      "moistureBand": "covered_weak_brine_to_dry_salt_crust",
+      "population": {
+        "minimum": 1,
+        "maximum": 1,
+        "uniqueness": "event_utility_form"
+      },
+      "anchorBehavior": "Six legs remain outside the inhabited tie-in; four measured loop shadows terminate at witness posts, not destinations.",
+      "activityPhases": [
+        "cold_glare",
+        "wind_peak",
+        "long_shadow",
+        "white_night"
+      ],
+      "sustenance": "Reachable return-route debt as authored; water output is treated and measured by the utility rather than consumed directly.",
+      "associations": [
+        "covered_brine_still",
+        "route_witness_posts"
+      ],
+      "exclusions": [
+        "caravan_sleep_cells",
+        "destination_gate",
+        "one_way_refuge",
+        "unwitnessed_departure"
+      ],
+      "propagation": "none",
+      "cessation": "White-wind shutdown, exhausted route-debt input, or manual six-leg isolation.",
+      "questStateDelta": "Leg states, loop coefficients, baffle condition, yield, and brine waste persist.",
+      "canonicalPhaseIds": [
+        "cold_glare"
+      ],
+      "phaseAuthority": "canonical_SITE_ACTIVITY_DESIGN_phase_id"
+    },
+    {
+      "id": "habitat.dry_anchor_delegate.fleet_tethered_appendages",
+      "creatureId": "dry_anchor_delegate",
+      "recordKind": "new_form",
+      "questId": "regional_the_tide_refused_harbor",
+      "regionIds": [
+        "territory.veil-coast"
+      ],
+      "siteCells": [
+        "site.anchor-field:intertidal_pile_edge"
+      ],
+      "hostRelativeEnvelopeMeters": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 210,
+        "elevationBand": [
+          -7,
+          13
+        ]
+      },
+      "moistureBand": "intertidal_surge_to_dry_appeal_chair",
+      "population": {
+        "minimum": 0,
+        "maximum": 6,
+        "ontology": "tethered_petition_load_appendages_not_independent_fleets"
+      },
+      "anchorBehavior": "Each remains shadow-tethered to the unique Fleet and one bollard claim; it may carry load inland only along that tether.",
+      "activityPhases": [
+        "ebb",
+        "flood"
+      ],
+      "sustenance": "Unheard separable landing claims carried within the Fleet's existing collective shadow.",
+      "associations": [
+        "fleet_one_shadow",
+        "six_bollards"
+      ],
+      "exclusions": [
+        "independent_spawn",
+        "settled_safe_cell",
+        "untethered_inland_route",
+        "second_fleet_identity"
+      ],
+      "propagation": "At most one bounded appendage appears per separable bollard petition; it cannot reproduce or become a ship.",
+      "cessation": "Petition is heard, claim is rebound into the Fleet, direct light breaks the tether, or the two-tide operation ends.",
+      "questStateDelta": "Delegate count returns to zero at cessation; heard-claim records and pile loads persist.",
+      "canonicalPhaseIds": [
+        "ebb",
+        "flood"
+      ],
+      "phaseAuthority": "canonical_SITE_ACTIVITY_DESIGN_phase_id"
+    },
+    {
+      "id": "habitat.borrowed_silhouette_escrow.two_bank_pairs",
+      "habitatId": "habitat.borrowed_silhouette_escrow.two_bank_pairs",
+      "creatureId": "borrowed_silhouette_escrow",
+      "questId": "regional_the_fog_came_to_collect_our_outlines",
+      "locationId": "warden_reed_four_bank_visibility",
+      "siteId": "site.warden-reed",
+      "semanticAnchorIds": [
+        "anchor.warden_reed_four_bank_visibility.bank_a",
+        "anchor.warden_reed_four_bank_visibility.bank_b",
+        "anchor.warden_reed_four_bank_visibility.bank_c",
+        "anchor.warden_reed_four_bank_visibility.bank_d"
+      ],
+      "canonicalPhaseIds": [
+        "fog_fall"
+      ],
+      "exactBodyCount": 1,
+      "exactLegCount": 4,
+      "required": [
+        "one_continuous_body_shadow",
+        "four_serialized_bank_feet",
+        "living_borrower_ledger"
+      ],
+      "excluded": [
+        "second_body",
+        "fifth_leg",
+        "safe_cell_entry",
+        "reflection_as_borrower"
+      ],
+      "lifecycleState": "one_body_four_legs_held_across_two_bank_pairs",
+      "phaseAuthority": "canonical_SITE_ACTIVITY_DESIGN_phase_id"
+    }
+  ],
+  "environmentPrograms": [
+    {
+      "schemaVersion": 9,
+      "questId": "faction_the_lantern_named_us_last",
+      "locationId": "hearthmere_counterfactual_cistern",
+      "programKind": "district_cistern_and_civic_insert",
+      "territoryIds": [
+        "territory.graven-march"
+      ],
+      "hostSiteId": "site.hearthmere",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          6400,
+          8320,
+          184
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          -120,
+          80,
+          -6
+        ],
+        "provisionalDesignCoordinate": [
+          6280,
+          8400,
+          178
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 118,
+        "length": 92,
+        "height": 18,
+        "elevationRange": [
+          169,
+          187
+        ]
+      },
+      "typologyIds": [
+        "hearthmere_bell_civic"
+      ],
+      "materialTags": [
+        "wet slate",
+        "bell bronze",
+        "black pine",
+        "clay docket tile"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.appeal",
+          "anchorKey": "appeal",
+          "kind": "exterior_appeal_ramp",
+          "retainedSemanticAnchor": true,
+          "capacity": 80,
+          "stateRule": "always public after first displacement"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.delivery",
+          "anchorKey": "delivery",
+          "kind": "fuel_delivery_court",
+          "retainedSemanticAnchor": true,
+          "capacity": 2,
+          "stateRule": "cart slot isolated from public queue"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.egress_n",
+          "anchorKey": "egress_n",
+          "kind": "north_egress",
+          "retainedSemanticAnchor": true,
+          "capacity": 40,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.egress_s",
+          "anchorKey": "egress_s",
+          "kind": "south_egress",
+          "retainedSemanticAnchor": true,
+          "capacity": 40,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.entry",
+          "anchorKey": "entry",
+          "kind": "public_threshold",
+          "retainedSemanticAnchor": true,
+          "capacity": 48,
+          "stateRule": "open during rehearsal and appeal"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.fuel",
+          "anchorKey": "fuel",
+          "kind": "isolated_fuel_crawl",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "double-lock with manual exterior release"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.maintenance",
+          "anchorKey": "maintenance",
+          "kind": "pump_access",
+          "retainedSemanticAnchor": true,
+          "capacity": 3,
+          "stateRule": "trained crew only"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.refuge",
+          "anchorKey": "refuge",
+          "kind": "dry_household_refuge",
+          "retainedSemanticAnchor": true,
+          "capacity": 36,
+          "stateRule": "remains above maximum authored flood"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.relief",
+          "anchorKey": "relief",
+          "kind": "flooded_district_relief",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "walkable only below warning depth"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.shutter_hall",
+          "anchorKey": "shutter_hall",
+          "kind": "seven_shutter_array",
+          "retainedSemanticAnchor": true,
+          "capacity": 70,
+          "stateRule": "seven individually serialized open/flood/locked states"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.staff",
+          "anchorKey": "staff",
+          "kind": "lamplighter_back_of_house",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "staff credential or emergency open"
+        },
+        {
+          "id": "anchor.hearthmere_counterfactual_cistern.sump",
+          "anchorKey": "sump",
+          "kind": "drainage_sump",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "maintenance only; pump and gravity bypass"
+        }
+      ],
+      "mutableLayers": [
+        "seven_shutter_open_states",
+        "forecast_priority_map",
+        "relief_water_depth",
+        "fuel_fire_state",
+        "brick_sealed_stair",
+        "exterior_appeal_ramp"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [
+          "concept_hearthmere_hold"
+        ],
+        "newPr17ReferenceDecision": "Neither PR17 keyframe applies; Hearthmere's accepted regional reference governs materials only, not this cistern layout."
+      },
+      "graphId": "environment_graph.v6.hearthmere_counterfactual_cistern",
+      "safeObservationCellIds": [
+        "safe_cell.v6.hearthmere_counterfactual_cistern.refuge"
+      ],
+      "objectiveEndpointIds": [
+        "faction_the_lantern_named_us_last.objective.01",
+        "faction_the_lantern_named_us_last.objective.02",
+        "faction_the_lantern_named_us_last.objective.03",
+        "faction_the_lantern_named_us_last.objective.04"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    },
+    {
+      "schemaVersion": 9,
+      "questId": "faction_living_appeal_aftercare",
+      "locationId": "hearthmere_six_wing_aftercare",
+      "programKind": "living_aftercare_equipment_and_appeal_cloister",
+      "territoryIds": [
+        "territory.graven-march"
+      ],
+      "hostSiteId": "site.hearthmere",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          6400,
+          8320,
+          184
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          92,
+          -70,
+          2
+        ],
+        "provisionalDesignCoordinate": [
+          6492,
+          8250,
+          186
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 74,
+        "length": 58,
+        "height": 20,
+        "elevationRange": [
+          176,
+          196
+        ]
+      },
+      "typologyIds": [
+        "hearthmere_unlit_hospice"
+      ],
+      "materialTags": [
+        "washed slate",
+        "dark timber",
+        "unbleached linen",
+        "copper drain"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.appeal",
+          "anchorKey": "appeal",
+          "kind": "patient_appeal_exit",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "patient controlled and fail-open"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.delivery",
+          "anchorKey": "delivery",
+          "kind": "delivery_yard",
+          "retainedSemanticAnchor": true,
+          "capacity": 2,
+          "stateRule": "linen/herb cart"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.egress_a",
+          "anchorKey": "egress_a",
+          "kind": "north_fire_exit",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.egress_b",
+          "anchorKey": "egress_b",
+          "kind": "south_fire_exit",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.mortuary",
+          "anchorKey": "mortuary",
+          "kind": "mortuary_route",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "screened from all patient exits"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.plant",
+          "anchorKey": "plant",
+          "kind": "heat_vent_plant",
+          "retainedSemanticAnchor": true,
+          "capacity": 3,
+          "stateRule": "maintenance only"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.receiving",
+          "anchorKey": "receiving",
+          "kind": "clinical_receiving",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "public/stretcher open"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.staff",
+          "anchorKey": "staff",
+          "kind": "staff_station",
+          "retainedSemanticAnchor": true,
+          "capacity": 10,
+          "stateRule": "staff credential; patients can summon"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.wash",
+          "anchorKey": "wash",
+          "kind": "separated_wash",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "clean/dirty one-way thresholds"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.waste",
+          "anchorKey": "waste",
+          "kind": "waste_hold",
+          "retainedSemanticAnchor": true,
+          "capacity": 3,
+          "stateRule": "outbound sealed only"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.wing_a",
+          "anchorKey": "wing_a",
+          "kind": "sensory_habitat",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "dual donor/patient latch"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.wing_b",
+          "anchorKey": "wing_b",
+          "kind": "sensory_habitat",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "dual donor/patient latch"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.wing_c",
+          "anchorKey": "wing_c",
+          "kind": "sensory_habitat",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "dual donor/patient latch"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.wing_d",
+          "anchorKey": "wing_d",
+          "kind": "sensory_habitat",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "dual donor/patient latch"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.wing_e",
+          "anchorKey": "wing_e",
+          "kind": "sensory_habitat",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "dual donor/patient latch"
+        },
+        {
+          "id": "anchor.hearthmere_six_wing_aftercare.wing_f",
+          "anchorKey": "wing_f",
+          "kind": "sensory_habitat",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "dual donor/patient latch"
+        }
+      ],
+      "mutableLayers": [
+        "six_room_adjacency",
+        "heat_scent_light_sound_states",
+        "latch_ownership",
+        "quarantine_loop",
+        "counterfeit_continuity_edges"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [
+          "concept_hearthmere_hold"
+        ],
+        "newPr17ReferenceDecision": "Neither PR17 keyframe applies; the Hearthmere regional image informs slate, rain, and scale only."
+      },
+      "graphId": "environment_graph.v6.hearthmere_six_wing_aftercare",
+      "safeObservationCellIds": [
+        "safe_cell.v6.hearthmere_six_wing_aftercare.receiving"
+      ],
+      "objectiveEndpointIds": [
+        "faction_living_appeal_aftercare.objective.01",
+        "faction_living_appeal_aftercare.objective.02",
+        "faction_living_appeal_aftercare.objective.03",
+        "faction_living_appeal_aftercare.objective.04",
+        "faction_living_appeal_aftercare.objective.05"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    },
+    {
+      "schemaVersion": 9,
+      "questId": "character_the_face_noon_borrowed",
+      "locationId": "pale_measure_executor_court",
+      "programKind": "ruin_court_insert",
+      "territoryIds": [
+        "territory.hollow-abbey"
+      ],
+      "hostSiteId": "site.pale-measure",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          11776,
+          1536,
+          126
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          0,
+          36,
+          4
+        ],
+        "provisionalDesignCoordinate": [
+          11776,
+          1572,
+          130
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 92,
+        "length": 66,
+        "height": 34,
+        "elevationRange": [
+          113,
+          147
+        ]
+      },
+      "typologyIds": [
+        "hollow_abbey_nave"
+      ],
+      "materialTags": [
+        "bone limestone",
+        "wet black flagstone",
+        "verdigris bronze",
+        "rotted oak"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.pale_measure_executor_court.accessible",
+          "anchorKey": "accessible",
+          "kind": "terraced_refusal_ramp",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "always step-free"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.crypt",
+          "anchorKey": "crypt",
+          "kind": "pressure_crypt",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "vessel and restoration pressure only"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.drain",
+          "anchorKey": "drain",
+          "kind": "karst_drain",
+          "retainedSemanticAnchor": true,
+          "capacity": 2,
+          "stateRule": "maintenance only"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.egress_a",
+          "anchorKey": "egress_a",
+          "kind": "west_exit",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.egress_b",
+          "anchorKey": "egress_b",
+          "kind": "east_exit",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.entry",
+          "anchorKey": "entry",
+          "kind": "mortal_entry",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "survey window only"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.halo",
+          "anchorKey": "halo",
+          "kind": "halo_alignment_track",
+          "retainedSemanticAnchor": true,
+          "capacity": 2,
+          "stateRule": "mechanical stop at every bay"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.patrol",
+          "anchorKey": "patrol",
+          "kind": "mortal_patrol_post",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "activates after forced exit"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.seal",
+          "anchorKey": "seal",
+          "kind": "command_seal_floor",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "tested permission state serialized"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.service",
+          "anchorKey": "service",
+          "kind": "service_dark",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "staff and maintenance"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.witness_a",
+          "anchorKey": "witness_a",
+          "kind": "witness_bay",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "independent exit"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.witness_b",
+          "anchorKey": "witness_b",
+          "kind": "witness_bay",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "independent exit"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.witness_c",
+          "anchorKey": "witness_c",
+          "kind": "witness_bay",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "independent exit"
+        },
+        {
+          "id": "anchor.pale_measure_executor_court.witness_d",
+          "anchorKey": "witness_d",
+          "kind": "witness_bay",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "independent exit"
+        }
+      ],
+      "mutableLayers": [
+        "four_witness_exit_states",
+        "halo_alignment",
+        "command_permission",
+        "pressure_level",
+        "fused_seal",
+        "mortal_patrol_route"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [
+          "concept_hollow_abbey_nave"
+        ],
+        "newPr17ReferenceDecision": "PR17 Cathedral direction is quest-specific to faction_heresy_gentle_horizon and does not govern this court. Hollow Abbey's regional material/acoustic reference applies without importing Cathedral layout."
+      },
+      "graphId": "environment_graph.v6.pale_measure_executor_court",
+      "safeObservationCellIds": [
+        "safe_cell.v6.pale_measure_executor_court.accessible"
+      ],
+      "objectiveEndpointIds": [
+        "character_the_face_noon_borrowed.objective.01",
+        "character_the_face_noon_borrowed.objective.02",
+        "character_the_face_noon_borrowed.objective.03",
+        "character_the_face_noon_borrowed.objective.04"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    },
+    {
+      "schemaVersion": 9,
+      "questId": "character_a_hunger_needs_an_address",
+      "locationId": "pale_measure_influx_perimeter",
+      "programKind": "temporary_exterior_refugee_camp_landscape",
+      "territoryIds": [
+        "territory.hollow-abbey"
+      ],
+      "hostSiteId": "site.pale-measure",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          11776,
+          1536,
+          126
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          0,
+          -112,
+          0
+        ],
+        "provisionalDesignCoordinate": [
+          11776,
+          1424,
+          126
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 220,
+        "length": 176,
+        "height": 26,
+        "elevationRange": [
+          113,
+          139
+        ]
+      },
+      "typologyIds": [
+        "hollow_abbey_nave"
+      ],
+      "materialTags": [
+        "bone limestone",
+        "wet black flagstone",
+        "verdigris bronze",
+        "rotted oak"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.pale_measure_influx_perimeter.cook",
+          "anchorKey": "cook",
+          "kind": "cookhouse_food_store",
+          "retainedSemanticAnchor": true,
+          "capacity": 20,
+          "stateRule": "spark arrestor"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.corner_ne",
+          "anchorKey": "corner_ne",
+          "kind": "invitation_corner",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "stateful issue/revoke post"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.corner_nw",
+          "anchorKey": "corner_nw",
+          "kind": "invitation_corner",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "stateful issue/revoke post"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.corner_se",
+          "anchorKey": "corner_se",
+          "kind": "invitation_corner",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "stateful issue/revoke post"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.corner_sw",
+          "anchorKey": "corner_sw",
+          "kind": "invitation_corner",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "stateful issue/revoke post"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.delivery",
+          "anchorKey": "delivery",
+          "kind": "delivery_turn",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "one-way cart loop"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.drain",
+          "anchorKey": "drain",
+          "kind": "dead_line_service_trench",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "failure mutation utility route"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.egress_a",
+          "anchorKey": "egress_a",
+          "kind": "ruin_refuge_exit",
+          "retainedSemanticAnchor": true,
+          "capacity": 40,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.egress_b",
+          "anchorKey": "egress_b",
+          "kind": "open_route_exit",
+          "retainedSemanticAnchor": true,
+          "capacity": 40,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.entry",
+          "anchorKey": "entry",
+          "kind": "camp_public_entry",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "temporary invitation threshold"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.firebreak",
+          "anchorKey": "firebreak",
+          "kind": "shared_firebreak_crossing",
+          "retainedSemanticAnchor": true,
+          "capacity": 40,
+          "stateRule": "livestock/person split lanes"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.gap",
+          "anchorKey": "gap",
+          "kind": "deliberate_open_gap",
+          "retainedSemanticAnchor": true,
+          "capacity": 20,
+          "stateRule": "never closes; accessible return"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.livestock",
+          "anchorKey": "livestock",
+          "kind": "livestock_quarantine",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "separate crossing"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.refuge",
+          "anchorKey": "refuge",
+          "kind": "ordinary_household_refuge",
+          "retainedSemanticAnchor": true,
+          "capacity": 60,
+          "stateRule": "no Charnel interior reliance"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.sanitation",
+          "anchorKey": "sanitation",
+          "kind": "latrine_graywater",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "downwind and downslope"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.waste",
+          "anchorKey": "waste",
+          "kind": "waste_yard",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "sealed outbound"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.watch",
+          "anchorKey": "watch",
+          "kind": "night_watch",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "views four corners and gap"
+        },
+        {
+          "id": "anchor.pale_measure_influx_perimeter.water",
+          "anchorKey": "water",
+          "kind": "potable_water_point",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "covered draw and spill drain"
+        }
+      ],
+      "mutableLayers": [
+        "four_invitation_states",
+        "expiry_timers",
+        "maw_patrol_target",
+        "gnasher_colonies",
+        "dead_line_trench",
+        "fire_state",
+        "livestock_crossing",
+        "deliberate_gap"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [
+          "concept_hollow_abbey_nave"
+        ],
+        "newPr17ReferenceDecision": "PR17 Cathedral direction is excluded. Hollow Abbey regional art supplies distant ruin/material context only; the camp requires new art and ordinary domestic kit."
+      },
+      "graphId": "environment_graph.v6.pale_measure_influx_perimeter",
+      "safeObservationCellIds": [
+        "safe_cell.v6.pale_measure_influx_perimeter.refuge"
+      ],
+      "objectiveEndpointIds": [
+        "character_a_hunger_needs_an_address.objective.01",
+        "character_a_hunger_needs_an_address.objective.02",
+        "character_a_hunger_needs_an_address.objective.03",
+        "character_a_hunger_needs_an_address.objective.04",
+        "character_a_hunger_needs_an_address.objective.05",
+        "character_a_hunger_needs_an_address.objective.06",
+        "character_a_hunger_needs_an_address.objective.07"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    },
+    {
+      "schemaVersion": 9,
+      "questId": "regional_the_tide_refused_harbor",
+      "locationId": "anchor_field_two_tide_clinic",
+      "programKind": "intertidal_mooring_and_wet_clinic_landscape",
+      "territoryIds": [
+        "territory.veil-coast"
+      ],
+      "hostSiteId": "site.anchor-field",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          2304,
+          4608,
+          7
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          0,
+          0,
+          4
+        ],
+        "provisionalDesignCoordinate": [
+          2304,
+          4608,
+          11
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 420,
+        "length": 286,
+        "height": 20,
+        "elevationRange": [
+          1,
+          21
+        ]
+      },
+      "typologyIds": [
+        "veil_coast_harbor_house"
+      ],
+      "materialTags": [
+        "salt-whitened oak",
+        "black coral",
+        "marine slate",
+        "tarred sailcloth"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.appeal",
+          "anchorKey": "appeal",
+          "kind": "dry_appeal_chair",
+          "retainedSemanticAnchor": true,
+          "capacity": 20,
+          "stateRule": "connected to all six claims"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.bollard_1",
+          "anchorKey": "bollard_1",
+          "kind": "load_bollard",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "proof and petition state"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.bollard_2",
+          "anchorKey": "bollard_2",
+          "kind": "load_bollard",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "proof and petition state"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.bollard_3",
+          "anchorKey": "bollard_3",
+          "kind": "load_bollard",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "proof and petition state"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.bollard_4",
+          "anchorKey": "bollard_4",
+          "kind": "load_bollard",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "proof and petition state"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.bollard_5",
+          "anchorKey": "bollard_5",
+          "kind": "load_bollard",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "proof and petition state"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.bollard_6",
+          "anchorKey": "bollard_6",
+          "kind": "load_bollard",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "proof and petition state"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.clean_pod",
+          "anchorKey": "clean_pod",
+          "kind": "clean_clinic_pod",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "clean staff/patient only"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.delivery",
+          "anchorKey": "delivery",
+          "kind": "supply_landing",
+          "retainedSemanticAnchor": true,
+          "capacity": 3,
+          "stateRule": "ebb/slack only"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.dry_refuge",
+          "anchorKey": "dry_refuge",
+          "kind": "dry_refuge",
+          "retainedSemanticAnchor": true,
+          "capacity": 28,
+          "stateRule": "above authored surge"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.egress_a",
+          "anchorKey": "egress_a",
+          "kind": "landward_egress",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "always land reachable"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.egress_b",
+          "anchorKey": "egress_b",
+          "kind": "storm_boat_egress",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "storm-rated boat"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.land_entry",
+          "anchorKey": "land_entry",
+          "kind": "landward_threshold",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "outside settled safe cells"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.service",
+          "anchorKey": "service",
+          "kind": "harbor_house_service",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "staff and stores"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.shear_void",
+          "anchorKey": "shear_void",
+          "kind": "sacrificial_pile_void",
+          "retainedSemanticAnchor": true,
+          "capacity": 0,
+          "stateRule": "failure detour; never traversable"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.waste",
+          "anchorKey": "waste",
+          "kind": "sealed_waste_float",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "outbound on ebb"
+        },
+        {
+          "id": "anchor.anchor_field_two_tide_clinic.wet_bay",
+          "anchorKey": "wet_bay",
+          "kind": "contaminated_wet_bay",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "dirty one-way flow"
+        }
+      ],
+      "mutableLayers": [
+        "six_pile_loads",
+        "six_petition_states",
+        "tide_phase",
+        "clean_dirty_routes",
+        "fleet_shadow_connections",
+        "delegate_tethers",
+        "shear_void",
+        "clinic_pod_position"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [],
+        "newPr17ReferenceDecision": "Neither PR17 keyframe applies. Veil Coast still lacks standalone accepted regional keyframe; all new environment art remains null."
+      },
+      "graphId": "environment_graph.v6.anchor_field_two_tide_clinic",
+      "safeObservationCellIds": [
+        "safe_cell.v6.anchor_field_two_tide_clinic.dry_refuge"
+      ],
+      "objectiveEndpointIds": [
+        "regional_the_tide_refused_harbor.objective.01",
+        "regional_the_tide_refused_harbor.objective.02"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    },
+    {
+      "schemaVersion": 9,
+      "questId": "regional_the_fog_came_to_collect_our_outlines",
+      "locationId": "warden_reed_four_bank_visibility",
+      "programKind": "causeway_edge_visibility_network",
+      "territoryIds": [
+        "territory.dunmire"
+      ],
+      "hostSiteId": "site.warden-reed",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          4864,
+          4352,
+          68
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          76,
+          -86,
+          4
+        ],
+        "provisionalDesignCoordinate": [
+          4940,
+          4266,
+          72
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 330,
+        "length": 240,
+        "height": 20,
+        "elevationRange": [
+          62,
+          82
+        ]
+      },
+      "typologyIds": [
+        "dunmire_stilt_house"
+      ],
+      "materialTags": [
+        "wet oak",
+        "reed mat",
+        "sunk chapel slate",
+        "pitch cloth"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.bank_a",
+          "anchorKey": "bank_a",
+          "kind": "causeway_bank",
+          "retainedSemanticAnchor": true,
+          "capacity": 20,
+          "stateRule": "public route account"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.bank_b",
+          "anchorKey": "bank_b",
+          "kind": "ferry_bank",
+          "retainedSemanticAnchor": true,
+          "capacity": 20,
+          "stateRule": "ferry account"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.bank_c",
+          "anchorKey": "bank_c",
+          "kind": "household_bank",
+          "retainedSemanticAnchor": true,
+          "capacity": 20,
+          "stateRule": "privacy account"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.bank_d",
+          "anchorKey": "bank_d",
+          "kind": "watch_bank",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "warning account"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.causeway",
+          "anchorKey": "causeway",
+          "kind": "causeway_edge_exception",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "Loaner volume ends here"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.dark_bank",
+          "anchorKey": "dark_bank",
+          "kind": "seasonal_dark_bank",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "failure state with high rope"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.delivery",
+          "anchorKey": "delivery",
+          "kind": "boat_delivery",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "day/first light only"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.egress_a",
+          "anchorKey": "egress_a",
+          "kind": "dry_causeway_return",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.egress_b",
+          "anchorKey": "egress_b",
+          "kind": "boat_return",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.ferry",
+          "anchorKey": "ferry",
+          "kind": "ferry_dock",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "draft/load gate"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.frame_ab",
+          "anchorKey": "frame_ab",
+          "kind": "paired_escrow_frame",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "two-bank only"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.frame_cd",
+          "anchorKey": "frame_cd",
+          "kind": "paired_escrow_frame",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "two-bank only"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.ledger",
+          "anchorKey": "ledger",
+          "kind": "living_borrower_ledger",
+          "retainedSemanticAnchor": true,
+          "capacity": 10,
+          "stateRule": "living unique present borrowers only"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.maintenance",
+          "anchorKey": "maintenance",
+          "kind": "pile_collars",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "boat access"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.refuge",
+          "anchorKey": "refuge",
+          "kind": "raised_clear_refuge",
+          "retainedSemanticAnchor": true,
+          "capacity": 32,
+          "stateRule": "continuous clear air"
+        },
+        {
+          "id": "anchor.warden_reed_four_bank_visibility.service",
+          "anchorKey": "service",
+          "kind": "stilt_service_house",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "staff/store"
+        }
+      ],
+      "mutableLayers": [
+        "four_bank_visibility_weights",
+        "living_borrower_ledger",
+        "fog_density_bands",
+        "ferry_positions",
+        "escrow_pairs",
+        "loaner_edge_volume",
+        "seasonal_dark_bank",
+        "high_rope_return"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [
+          "concept_dunmire_causeway"
+        ],
+        "newPr17ReferenceDecision": "Neither PR17 keyframe applies. Dunmire's accepted regional keyframe supplies materials and causeway scale but not this bank geometry."
+      },
+      "graphId": "environment_graph.v6.warden_reed_four_bank_visibility",
+      "safeObservationCellIds": [
+        "safe_cell.v6.warden_reed_four_bank_visibility.refuge"
+      ],
+      "objectiveEndpointIds": [
+        "regional_the_fog_came_to_collect_our_outlines.objective.01",
+        "regional_the_fog_came_to_collect_our_outlines.objective.02",
+        "regional_the_fog_came_to_collect_our_outlines.objective.03",
+        "regional_the_fog_came_to_collect_our_outlines.objective.04"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    },
+    {
+      "schemaVersion": 9,
+      "questId": "regional_the_graves_grew_upward",
+      "locationId": "cairnmarket_grave_root_orchard",
+      "programKind": "subterranean_seasonal_orchard_compound",
+      "territoryIds": [
+        "territory.graven-march"
+      ],
+      "hostSiteId": "site.cairnmarket",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          8192,
+          10240,
+          212
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          -104,
+          86,
+          5
+        ],
+        "provisionalDesignCoordinate": [
+          8088,
+          10326,
+          217
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 290,
+        "length": 214,
+        "height": 38,
+        "elevationRange": [
+          198,
+          236
+        ]
+      },
+      "typologyIds": [
+        "graven_cairn_hall"
+      ],
+      "materialTags": [
+        "warm cairn stone",
+        "black pine",
+        "flint shingle",
+        "grave lichen"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.delivery",
+          "anchorKey": "delivery",
+          "kind": "market_delivery",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "pack stock turn"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.egress_a",
+          "anchorKey": "egress_a",
+          "kind": "west_slate_egress",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.egress_b",
+          "anchorKey": "egress_b",
+          "kind": "east_store_egress",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.entry",
+          "anchorKey": "entry",
+          "kind": "market_oath_entry",
+          "retainedSemanticAnchor": true,
+          "capacity": 40,
+          "stateRule": "public/worker split"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.fallow",
+          "anchorKey": "fallow",
+          "kind": "memorial_fallow_line",
+          "retainedSemanticAnchor": true,
+          "capacity": 0,
+          "stateRule": "failure mutation no harvest"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.lift_a",
+          "anchorKey": "lift_a",
+          "kind": "worker_lift",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "manual counterweight"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.lift_b",
+          "anchorKey": "lift_b",
+          "kind": "store_lift",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "food only"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.mortuary",
+          "anchorKey": "mortuary",
+          "kind": "burial_wash",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "separate drain"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.refuge_a",
+          "anchorKey": "refuge_a",
+          "kind": "collapse_refuge",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "fire/roof protected"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.refuge_b",
+          "anchorKey": "refuge_b",
+          "kind": "collapse_refuge",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "fire/roof protected"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.roost",
+          "anchorKey": "roost",
+          "kind": "funeral_kite_roost",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "blank-tab protected"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.root_a",
+          "anchorKey": "root_a",
+          "kind": "pollination_root_line",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "tab route A"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.root_b",
+          "anchorKey": "root_b",
+          "kind": "pollination_root_line",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "tab route B"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.root_c",
+          "anchorKey": "root_c",
+          "kind": "pollination_root_line",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "tab route C"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.root_d",
+          "anchorKey": "root_d",
+          "kind": "pollination_root_line",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "tab route D"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.service",
+          "anchorKey": "service",
+          "kind": "vent_irrigation_gallery",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "maintenance only"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.store",
+          "anchorKey": "store",
+          "kind": "winter_food_store",
+          "retainedSemanticAnchor": true,
+          "capacity": 28,
+          "stateRule": "clean food only"
+        },
+        {
+          "id": "anchor.cairnmarket_grave_root_orchard.wash",
+          "anchorKey": "wash",
+          "kind": "food_wash",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "clean/dirty threshold"
+        }
+      ],
+      "mutableLayers": [
+        "four_pollination_routes",
+        "tab_claims",
+        "season_phase",
+        "root_yield",
+        "food_hygiene",
+        "roof_load",
+        "black_fallow",
+        "ration_distribution"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [
+          "concept_graven_march_black_pine_occlusion_basin"
+        ],
+        "newPr17ReferenceDecision": "PR17 Graven March image applies only as regional material, winter absence, and ecology direction. It is not this orchard's layout, coordinate, or quest-location blockout; new orchard art remains null."
+      },
+      "graphId": "environment_graph.v6.cairnmarket_grave_root_orchard",
+      "safeObservationCellIds": [
+        "safe_cell.v6.cairnmarket_grave_root_orchard.refuge_a"
+      ],
+      "objectiveEndpointIds": [
+        "regional_the_graves_grew_upward.objective.01",
+        "regional_the_graves_grew_upward.objective.02",
+        "regional_the_graves_grew_upward.objective.03",
+        "regional_the_graves_grew_upward.objective.04",
+        "regional_the_graves_grew_upward.objective.05",
+        "regional_the_graves_grew_upward.objective.06",
+        "regional_the_graves_grew_upward.objective.07",
+        "regional_the_graves_grew_upward.objective.08"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    },
+    {
+      "schemaVersion": 9,
+      "questId": "regional_an_echo_arrived_first",
+      "locationId": "hollow_abbey_foreword_cause_frames",
+      "programKind": "branching_nave_crypt_roof_system",
+      "territoryIds": [
+        "territory.hollow-abbey"
+      ],
+      "hostSiteId": "site.hollow-abbey",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          11776,
+          2048,
+          96
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          54,
+          -74,
+          5
+        ],
+        "provisionalDesignCoordinate": [
+          11830,
+          1974,
+          101
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 176,
+        "length": 138,
+        "height": 60,
+        "elevationRange": [
+          71,
+          131
+        ]
+      },
+      "typologyIds": [
+        "hollow_abbey_nave"
+      ],
+      "materialTags": [
+        "bone limestone",
+        "wet black flagstone",
+        "verdigris bronze",
+        "rotted oak"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.crypt",
+          "anchorKey": "crypt",
+          "kind": "crypt_descent",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "flood gate"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.delivery",
+          "anchorKey": "delivery",
+          "kind": "cause_material_yard",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "stone/timber"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.drain",
+          "anchorKey": "drain",
+          "kind": "karst_drain",
+          "retainedSemanticAnchor": true,
+          "capacity": 3,
+          "stateRule": "maintenance"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.egress_a",
+          "anchorKey": "egress_a",
+          "kind": "processional_egress",
+          "retainedSemanticAnchor": true,
+          "capacity": 32,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.egress_b",
+          "anchorKey": "egress_b",
+          "kind": "ossuary_egress",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.entry",
+          "anchorKey": "entry",
+          "kind": "processional_entry",
+          "retainedSemanticAnchor": true,
+          "capacity": 32,
+          "stateRule": "open except absolute silence lock"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.frame_buttress",
+          "anchorKey": "frame_buttress",
+          "kind": "buttress_frame",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "compressive sufficient cause"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.frame_counter",
+          "anchorKey": "frame_counter",
+          "kind": "counterweight_frame",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "proofed moving load"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.frame_drain",
+          "anchorKey": "frame_drain",
+          "kind": "drain_frame",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "hydraulic sufficient cause"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.frame_fall",
+          "anchorKey": "frame_fall",
+          "kind": "controlled_fall_frame",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "cleared impact zone"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.refuge",
+          "anchorKey": "refuge",
+          "kind": "safe_clearance",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "outside all branch sweeps"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.return_a",
+          "anchorKey": "return_a",
+          "kind": "upper_return",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "branch-dependent"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.return_b",
+          "anchorKey": "return_b",
+          "kind": "crypt_return",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "branch-dependent"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.roof",
+          "anchorKey": "roof",
+          "kind": "roof_monitor",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "rain/load sensor"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.scar",
+          "anchorKey": "scar",
+          "kind": "persistent_scar_buttress",
+          "retainedSemanticAnchor": true,
+          "capacity": 0,
+          "stateRule": "failure mutation load path"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.service",
+          "anchorKey": "service",
+          "kind": "ossuary_service",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "worker route"
+        },
+        {
+          "id": "anchor.hollow_abbey_foreword_cause_frames.urn",
+          "anchorKey": "urn",
+          "kind": "already_arrived_result_urn",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "one active result"
+        }
+      ],
+      "mutableLayers": [
+        "active_result",
+        "four_cause_branches",
+        "acoustic_lead",
+        "roof_load",
+        "karst_flood",
+        "persistent_scar",
+        "branch_return"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [
+          "concept_hollow_abbey_nave"
+        ],
+        "newPr17ReferenceDecision": "PR17 Cathedral direction is explicitly inapplicable because it belongs only to faction_heresy_gentle_horizon. Hollow Abbey's accepted regional nave reference applies; no new layout claim is imported."
+      },
+      "graphId": "environment_graph.v6.hollow_abbey_foreword_cause_frames",
+      "safeObservationCellIds": [
+        "safe_cell.v6.hollow_abbey_foreword_cause_frames.refuge"
+      ],
+      "objectiveEndpointIds": [
+        "regional_an_echo_arrived_first.objective.01",
+        "regional_an_echo_arrived_first.objective.02",
+        "regional_an_echo_arrived_first.objective.03",
+        "regional_an_echo_arrived_first.objective.04",
+        "regional_an_echo_arrived_first.objective.05"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    },
+    {
+      "schemaVersion": 9,
+      "questId": "profession_the_furnace_inhaled_our_names",
+      "locationId": "ember_gate_paid_breath_furnace",
+      "programKind": "industrial_pressure_and_labor_compound",
+      "territoryIds": [
+        "territory.cinderward"
+      ],
+      "hostSiteId": "site.ember-gate",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          13312,
+          9472,
+          286
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          36,
+          18,
+          5
+        ],
+        "provisionalDesignCoordinate": [
+          13348,
+          9490,
+          291
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 164,
+        "length": 126,
+        "height": 58,
+        "elevationRange": [
+          262,
+          320
+        ]
+      },
+      "typologyIds": [
+        "cinderward_furnace_dwelling",
+        "cinderward_law_forge"
+      ],
+      "materialTags": [
+        "firebrick",
+        "iron plate",
+        "cooled slag glass",
+        "soot plaster",
+        "black iron",
+        "cracked firebrick",
+        "bell bronze"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.annealed",
+          "anchorKey": "annealed",
+          "kind": "annealed_sleeve_void",
+          "retainedSemanticAnchor": true,
+          "capacity": 0,
+          "stateRule": "failure output loss"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.cold_center",
+          "anchorKey": "cold_center",
+          "kind": "human_cold_center",
+          "retainedSemanticAnchor": true,
+          "capacity": 32,
+          "stateRule": "always breathable when occupied"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.condensate",
+          "anchorKey": "condensate",
+          "kind": "condensate_gallery",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "maintenance"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.delivery",
+          "anchorKey": "delivery",
+          "kind": "ore_and_seal_delivery",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "cart and paid seals"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.egress_a",
+          "anchorKey": "egress_a",
+          "kind": "cool_gantry_exit",
+          "retainedSemanticAnchor": true,
+          "capacity": 32,
+          "stateRule": "heat-separated"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.egress_b",
+          "anchorKey": "egress_b",
+          "kind": "manual_quench_exit",
+          "retainedSemanticAnchor": true,
+          "capacity": 32,
+          "stateRule": "heat-separated"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.family",
+          "anchorKey": "family",
+          "kind": "family_heat_refuge",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "outside all furnace draw"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.ore_entry",
+          "anchorKey": "ore_entry",
+          "kind": "industrial_entry",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "load/public split"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.pairs",
+          "anchorKey": "pairs",
+          "kind": "six_pressure_seal_pairs",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "six independent pairs"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.quench",
+          "anchorKey": "quench",
+          "kind": "quench_gallery",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "redundant cistern"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.rings",
+          "anchorKey": "rings",
+          "kind": "seven_service_rings",
+          "retainedSemanticAnchor": true,
+          "capacity": 14,
+          "stateRule": "canonical seven remain distinct"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.shutdown_a",
+          "anchorKey": "shutdown_a",
+          "kind": "manual_shutdown_bay",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "manual power-independent"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.shutdown_b",
+          "anchorKey": "shutdown_b",
+          "kind": "manual_shutdown_bay",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "manual power-independent"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.shutdown_c",
+          "anchorKey": "shutdown_c",
+          "kind": "manual_shutdown_bay",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "manual power-independent"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.sleeves",
+          "anchorKey": "sleeves",
+          "kind": "twelve_intake_sleeves",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "twelve serialized valves"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.staff",
+          "anchorKey": "staff",
+          "kind": "shift_station",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "payroll/pressure handoff"
+        },
+        {
+          "id": "anchor.ember_gate_paid_breath_furnace.waste",
+          "anchorKey": "waste",
+          "kind": "slag_waste_lock",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "cooled outbound"
+        }
+      ],
+      "mutableLayers": [
+        "twelve_sleeve_states",
+        "six_pair_pressures",
+        "seven_heat_zone_outputs",
+        "three_shutdown_bays",
+        "paid_shift_seals",
+        "union_trust",
+        "annealed_sleeve",
+        "household_heat_schedule"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [
+          "concept_cinderward_foundry"
+        ],
+        "newPr17ReferenceDecision": "Neither PR17 keyframe applies. Cinderward's accepted regional reference governs industrial materials and route readability, not this pressure graph."
+      },
+      "graphId": "environment_graph.v6.ember_gate_paid_breath_furnace",
+      "safeObservationCellIds": [
+        "safe_cell.v6.ember_gate_paid_breath_furnace.cold_center"
+      ],
+      "objectiveEndpointIds": [
+        "profession_the_furnace_inhaled_our_names.objective.01",
+        "profession_the_furnace_inhaled_our_names.objective.02",
+        "profession_the_furnace_inhaled_our_names.objective.03",
+        "profession_the_furnace_inhaled_our_names.objective.04"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    },
+    {
+      "schemaVersion": 9,
+      "questId": "settlement_the_harbor_rang_below_tide",
+      "locationId": "gloamharbor_three_waterline_bell_block",
+      "programKind": "harbor_house_block_and_vertical_tide_system",
+      "territoryIds": [
+        "territory.veil-coast"
+      ],
+      "hostSiteId": "site.gloamharbor",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          1536,
+          7168,
+          18
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          68,
+          -54,
+          4
+        ],
+        "provisionalDesignCoordinate": [
+          1604,
+          7114,
+          22
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 128,
+        "length": 104,
+        "height": 30,
+        "elevationRange": [
+          7,
+          37
+        ]
+      },
+      "typologyIds": [
+        "veil_coast_harbor_house"
+      ],
+      "materialTags": [
+        "salt-whitened oak",
+        "black coral",
+        "marine slate",
+        "tarred sailcloth"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.bell",
+          "anchorKey": "bell",
+          "kind": "submerged_bell",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "sounds depth accounts"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.boat",
+          "anchorKey": "boat",
+          "kind": "accessible_evacuation_boat_berth",
+          "retainedSemanticAnchor": true,
+          "capacity": 10,
+          "stateRule": "boat_1: one ten-place boat face; exclusive with the forty-place emergency manifest"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.boat_2",
+          "anchorKey": "boat_2",
+          "kind": "accessible_evacuation_boat_berth",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "one ten-place boat face; exclusive with the forty-place emergency manifest"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.boat_3",
+          "anchorKey": "boat_3",
+          "kind": "accessible_evacuation_boat_berth",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "one ten-place boat face; exclusive with the forty-place emergency manifest"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.boat_4",
+          "anchorKey": "boat_4",
+          "kind": "accessible_evacuation_boat_berth",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "one ten-place boat face; exclusive with the forty-place emergency manifest"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.delivery",
+          "anchorKey": "delivery",
+          "kind": "ebb_delivery",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "ebb/slack only"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.egress_a",
+          "anchorKey": "egress_a",
+          "kind": "upper_stair_exit",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "dry exit"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.egress_b",
+          "anchorKey": "egress_b",
+          "kind": "boat_exit",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "water exit"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.entry",
+          "anchorKey": "entry",
+          "kind": "upper_block_entry",
+          "retainedSemanticAnchor": true,
+          "capacity": 28,
+          "stateRule": "dry all tides"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.ledge_l",
+          "anchorKey": "ledge_l",
+          "kind": "lower_crab_ledge",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "account source 3"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.ledge_m",
+          "anchorKey": "ledge_m",
+          "kind": "middle_crab_ledge",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "account source 2"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.ledge_u",
+          "anchorKey": "ledge_u",
+          "kind": "upper_crab_ledge",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "account source 1"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.lower",
+          "anchorKey": "lower",
+          "kind": "lower_waterline_house",
+          "retainedSemanticAnchor": true,
+          "capacity": 16,
+          "stateRule": "floor +1.5 m"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.middle",
+          "anchorKey": "middle",
+          "kind": "middle_waterline_house",
+          "retainedSemanticAnchor": true,
+          "capacity": 20,
+          "stateRule": "floor +5.0 m"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.refuge",
+          "anchorKey": "refuge",
+          "kind": "dry_refuge_gantry",
+          "retainedSemanticAnchor": true,
+          "capacity": 40,
+          "stateRule": "above flood"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.relocation",
+          "anchorKey": "relocation",
+          "kind": "resident_relocation_units",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "dry temporary homes"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.salted",
+          "anchorKey": "salted",
+          "kind": "salted_floor_ledge",
+          "retainedSemanticAnchor": true,
+          "capacity": 0,
+          "stateRule": "failure resident relocation"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.staff",
+          "anchorKey": "staff",
+          "kind": "bell_watch_service",
+          "retainedSemanticAnchor": true,
+          "capacity": 10,
+          "stateRule": "staff/utilities"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.upper",
+          "anchorKey": "upper",
+          "kind": "upper_waterline_house",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "floor +8.5 m"
+        },
+        {
+          "id": "anchor.gloamharbor_three_waterline_bell_block.waste",
+          "anchorKey": "waste",
+          "kind": "sealed_waste_landing",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "ebb outbound"
+        }
+      ],
+      "mutableLayers": [
+        "three_floor_tide_states",
+        "three_account_orders",
+        "resident_locations",
+        "utility_isolations",
+        "halix_toll_gate",
+        "salted_floor",
+        "dry_relocation",
+        "return_route"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [],
+        "newPr17ReferenceDecision": "Neither PR17 keyframe applies. Veil Coast has no accepted standalone regional keyframe; environment art remains null."
+      },
+      "graphId": "environment_graph.v6.gloamharbor_three_waterline_bell_block",
+      "safeObservationCellIds": [
+        "safe_cell.v6.gloamharbor_three_waterline_bell_block.refuge"
+      ],
+      "objectiveEndpointIds": [
+        "settlement_the_harbor_rang_below_tide.objective.01",
+        "settlement_the_harbor_rang_below_tide.objective.02",
+        "settlement_the_harbor_rang_below_tide.objective.03",
+        "settlement_the_harbor_rang_below_tide.objective.04"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    },
+    {
+      "schemaVersion": 9,
+      "questId": "relic_the_acre_crossed_a_border",
+      "locationId": "bellwater_mobile_service_corridor",
+      "programKind": "mobile_regional_road_corridor",
+      "territoryIds": [
+        "territory.graven-march"
+      ],
+      "hostSiteId": "site.cairnmarket",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          8192,
+          10240,
+          212
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          -176,
+          -286,
+          2
+        ],
+        "provisionalDesignCoordinate": [
+          8016,
+          9954,
+          214
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 520,
+        "length": 120,
+        "height": 24,
+        "elevationRange": [
+          202,
+          226
+        ]
+      },
+      "typologyIds": [
+        "graven_road_assize",
+        "graven_cairn_hall"
+      ],
+      "materialTags": [
+        "split slate",
+        "bare black pine",
+        "ash trays",
+        "unmarked iron",
+        "warm cairn stone",
+        "black pine",
+        "flint shingle",
+        "grave lichen"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.burial",
+          "anchorKey": "burial",
+          "kind": "mortuary_rig",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "SW separate"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.bypass",
+          "anchorKey": "bypass",
+          "kind": "traffic_bypass",
+          "retainedSemanticAnchor": true,
+          "capacity": 40,
+          "stateRule": "always open except crossing marshal"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.corner_ne",
+          "anchorKey": "corner_ne",
+          "kind": "acre_northeast_corner",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "water transfer"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.corner_nw",
+          "anchorKey": "corner_nw",
+          "kind": "acre_northwest_corner",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "school transfer"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.corner_se",
+          "anchorKey": "corner_se",
+          "kind": "acre_southeast_corner",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "fire transfer"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.corner_sw",
+          "anchorKey": "corner_sw",
+          "kind": "acre_southwest_corner",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "burial/tax separate"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.egress_a",
+          "anchorKey": "egress_a",
+          "kind": "former_return",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.egress_b",
+          "anchorKey": "egress_b",
+          "kind": "receiving_return",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.entry",
+          "anchorKey": "entry",
+          "kind": "corridor_entry",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "traffic control"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.fire",
+          "anchorKey": "fire",
+          "kind": "fire_rig",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "SE only"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.former",
+          "anchorKey": "former",
+          "kind": "former_service_tie_in",
+          "retainedSemanticAnchor": true,
+          "capacity": 36,
+          "stateRule": "minimum services"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.handoff",
+          "anchorKey": "handoff",
+          "kind": "receiving_service_yard",
+          "retainedSemanticAnchor": true,
+          "capacity": 36,
+          "stateRule": "operators/capacity"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.maintenance",
+          "anchorKey": "maintenance",
+          "kind": "mobile_service_gantry",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "moving access"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.outage",
+          "anchorKey": "outage",
+          "kind": "former_site_outage_bay",
+          "retainedSemanticAnchor": true,
+          "capacity": 20,
+          "stateRule": "typed response"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.school",
+          "anchorKey": "school",
+          "kind": "school_rig",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "NW only"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.split",
+          "anchorKey": "split",
+          "kind": "split_service_failure",
+          "retainedSemanticAnchor": true,
+          "capacity": 0,
+          "stateRule": "typed outage mutation"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.stock",
+          "anchorKey": "stock",
+          "kind": "convoy_livestock_yard",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "separate water/waste"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.tax",
+          "anchorKey": "tax",
+          "kind": "tax_appeal_rig",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "SW separate"
+        },
+        {
+          "id": "anchor.bellwater_mobile_service_corridor.water",
+          "anchorKey": "water",
+          "kind": "water_rig",
+          "retainedSemanticAnchor": true,
+          "capacity": 18,
+          "stateRule": "NE only"
+        }
+      ],
+      "mutableLayers": [
+        "four_corner_positions",
+        "four_seed_markers",
+        "five_service_states",
+        "former_minimums",
+        "receiving_capacities",
+        "typed_outages",
+        "convoy_position",
+        "bypass_state",
+        "split_service"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [
+          "concept_graven_march_black_pine_occlusion_basin"
+        ],
+        "newPr17ReferenceDecision": "PR17 Graven March keyframe applies only to regional material, winter road closure, and detour readability. It does not place or shape this Bellwater segment."
+      },
+      "graphId": "environment_graph.v6.bellwater_mobile_service_corridor",
+      "safeObservationCellIds": [
+        "safe_cell.v6.bellwater_mobile_service_corridor.handoff"
+      ],
+      "objectiveEndpointIds": [
+        "relic_the_acre_crossed_a_border.objective.01",
+        "relic_the_acre_crossed_a_border.objective.02",
+        "relic_the_acre_crossed_a_border.objective.03",
+        "relic_the_acre_crossed_a_border.objective.04",
+        "relic_the_acre_crossed_a_border.objective.05",
+        "relic_the_acre_crossed_a_border.objective.06",
+        "relic_the_acre_crossed_a_border.objective.07",
+        "relic_the_acre_crossed_a_border.objective.08",
+        "relic_the_acre_crossed_a_border.objective.09"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    },
+    {
+      "schemaVersion": 9,
+      "questId": "profession_the_well_drank_the_way_home",
+      "locationId": "salt_watch_return_water_utility",
+      "programKind": "potable_treatment_storage_distribution_landscape",
+      "territoryIds": [
+        "territory.mirror-salt-waste"
+      ],
+      "hostSiteId": "site.salt-watch",
+      "hostAtlasAnchor": {
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinate": [
+          13824,
+          5120,
+          74
+        ],
+        "authority": "canon",
+        "placementStatus": "atlas_placed"
+      },
+      "placement": {
+        "placementMode": "host_relative_provisional_reservation",
+        "placementStatus": "candidate_blockout_reservation_not_canon",
+        "hostRelativeOriginMeters": [
+          104,
+          92,
+          3
+        ],
+        "provisionalDesignCoordinate": [
+          13928,
+          5212,
+          77
+        ],
+        "coordinateSpaceId": "veyl_local_grid_v1",
+        "coordinateAuthority": "candidate_provisional_derived_from_canonical_host_anchor",
+        "exactAtlasCoordinate": null,
+        "acceptanceRule": "Survey or coordinator placement may move the reservation; semantic anchor IDs and relative geometry must survive the transform."
+      },
+      "designEnvelopeMeters": {
+        "width": 310,
+        "length": 224,
+        "height": 24,
+        "elevationRange": [
+          65,
+          89
+        ]
+      },
+      "typologyIds": [
+        "salt_watch_caravan_house"
+      ],
+      "materialTags": [
+        "gypsum",
+        "salt clay",
+        "wax-sealed mirror",
+        "wrapped timber"
+      ],
+      "semanticAnchors": [
+        {
+          "id": "anchor.salt_watch_return_water_utility.baffle",
+          "anchorKey": "baffle",
+          "kind": "crystallized_baffle",
+          "retainedSemanticAnchor": true,
+          "capacity": 0,
+          "stateRule": "failure reduced yield"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.brine",
+          "anchorKey": "brine",
+          "kind": "brine_waste_basin",
+          "retainedSemanticAnchor": true,
+          "capacity": 8,
+          "stateRule": "lined and isolated"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.condenser",
+          "anchorKey": "condenser",
+          "kind": "six_leg_condenser",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "outside inhabited safe tie-in"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.delivery",
+          "anchorKey": "delivery",
+          "kind": "caravan_delivery",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "stores and empty casks"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.draw",
+          "anchorKey": "draw",
+          "kind": "public_draw",
+          "retainedSemanticAnchor": true,
+          "capacity": 36,
+          "stateRule": "queue/accessible"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.egress_a",
+          "anchorKey": "egress_a",
+          "kind": "caravan_house_return",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.egress_b",
+          "anchorKey": "egress_b",
+          "kind": "outer_service_return",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "fail-open"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.egress_domain_a",
+          "anchorKey": "egress_domain_a",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.egress_domain_b",
+          "anchorKey": "egress_domain_b",
+          "kind": "protected_egress_interior_vertex",
+          "retainedSemanticAnchor": false,
+          "capacity": 10,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.entry",
+          "anchorKey": "entry",
+          "kind": "caravan_house_tie_in",
+          "retainedSemanticAnchor": true,
+          "capacity": 30,
+          "stateRule": "safe inhabited threshold"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.intake",
+          "anchorKey": "intake",
+          "kind": "raw_brine_intake",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "nonpotable restricted"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.loop_1_declared_return",
+          "anchorKey": "loop_1_declared_return",
+          "kind": "closed_loop_return_witness",
+          "retainedSemanticAnchor": false,
+          "capacity": 4,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.loop_2_declared_return",
+          "anchorKey": "loop_2_declared_return",
+          "kind": "closed_loop_return_witness",
+          "retainedSemanticAnchor": false,
+          "capacity": 4,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.loop_3_declared_return",
+          "anchorKey": "loop_3_declared_return",
+          "kind": "closed_loop_return_witness",
+          "retainedSemanticAnchor": false,
+          "capacity": 4,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.loop_4_declared_return",
+          "anchorKey": "loop_4_declared_return",
+          "kind": "closed_loop_return_witness",
+          "retainedSemanticAnchor": false,
+          "capacity": 4,
+          "stateRule": "authored_v5_operational_state_only"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.loop_a",
+          "anchorKey": "loop_a",
+          "kind": "reversible_loop_post",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "1.2 km loop"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.loop_b",
+          "anchorKey": "loop_b",
+          "kind": "reversible_loop_post",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "1.8 km loop"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.loop_c",
+          "anchorKey": "loop_c",
+          "kind": "reversible_loop_post",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "2.4 km loop"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.loop_d",
+          "anchorKey": "loop_d",
+          "kind": "reversible_loop_post",
+          "retainedSemanticAnchor": true,
+          "capacity": 6,
+          "stateRule": "3.1 km loop"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.marsh",
+          "anchorKey": "marsh",
+          "kind": "brine_filter_marsh",
+          "retainedSemanticAnchor": true,
+          "capacity": 4,
+          "stateRule": "failure habitat not potable"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.refuge",
+          "anchorKey": "refuge",
+          "kind": "white_wind_refuge",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "safe settlement tie-in"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.service",
+          "anchorKey": "service",
+          "kind": "utility_service",
+          "retainedSemanticAnchor": true,
+          "capacity": 10,
+          "stateRule": "operators/spares"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.tank_caravan",
+          "anchorKey": "tank_caravan",
+          "kind": "caravan_potable_tank",
+          "retainedSemanticAnchor": true,
+          "capacity": 18,
+          "stateRule": "metered dispatch"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.tank_public",
+          "anchorKey": "tank_public",
+          "kind": "public_potable_tank",
+          "retainedSemanticAnchor": true,
+          "capacity": 24,
+          "stateRule": "resident priority"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.treatment",
+          "anchorKey": "treatment",
+          "kind": "filter_and_still_train",
+          "retainedSemanticAnchor": true,
+          "capacity": 12,
+          "stateRule": "three barriers"
+        },
+        {
+          "id": "anchor.salt_watch_return_water_utility.witness",
+          "anchorKey": "witness",
+          "kind": "loop_witness_station",
+          "retainedSemanticAnchor": true,
+          "capacity": 10,
+          "stateRule": "unique living returns"
+        }
+      ],
+      "mutableLayers": [
+        "four_loop_coefficients",
+        "six_leg_states",
+        "raw_intake",
+        "three_treatment_stages",
+        "potable_tanks",
+        "distribution_priorities",
+        "contamination",
+        "crystallized_baffle",
+        "brine_marsh"
+      ],
+      "environmentArtPipeline": {
+        "environmentKeyframe": null,
+        "blockoutMesh": null,
+        "productionMesh": null,
+        "status": "candidate_blockout_contract_awaiting_art_models_and_two_independent_reviews",
+        "acceptedReferenceIds": [],
+        "newPr17ReferenceDecision": "Neither PR17 keyframe applies. Mirror-Salt still lacks an accepted standalone regional keyframe; all new environment art remains null."
+      },
+      "graphId": "environment_graph.v6.salt_watch_return_water_utility",
+      "safeObservationCellIds": [
+        "safe_cell.v6.salt_watch_return_water_utility.refuge"
+      ],
+      "objectiveEndpointIds": [
+        "profession_the_well_drank_the_way_home.objective.01",
+        "profession_the_well_drank_the_way_home.objective.02",
+        "profession_the_well_drank_the_way_home.objective.03",
+        "profession_the_well_drank_the_way_home.objective.04",
+        "profession_the_well_drank_the_way_home.objective.05",
+        "profession_the_well_drank_the_way_home.objective.06"
+      ],
+      "independentEgressPathIds": [
+        "egress_path_a",
+        "egress_path_b"
+      ],
+      "maturity": "blockout_executable_candidate_not_navmesh_or_production_geometry"
+    }
+  ]
+}

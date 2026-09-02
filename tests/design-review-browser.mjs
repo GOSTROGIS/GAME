@@ -17,13 +17,16 @@ const mime = {
 const fixture = String.raw`<!doctype html>
 <meta charset="utf-8">
 <title>Design review registry browser test</title>
+<p id="roster"></p>
 <main id="subjects"></main>
 <script type="module">
   import { artFor } from './kit/hm-concept-art.js';
   import { buildRegistry, tally } from './kit/hm-model-registry.js';
 
   const registry = buildRegistry();
+  const counts = tally(registry);
   const subjects = [...registry.bestiary, ...registry.namedCast, ...registry.origins, ...registry.expansionCharacters, ...registry.expansionCreatures];
+  document.querySelector('#roster').textContent = counts.expansionAwaitingArt + ' expansion awaiting art · ' + counts.awaitingArt + ' founding bestiary awaiting art';
   const host = document.querySelector('#subjects');
   for (const subject of subjects) {
     const row = document.createElement('button');
@@ -104,11 +107,14 @@ const fixture = String.raw`<!doctype html>
     ]);
     globalThis.__DESIGN_REVIEW_TEST__ = {
       ready: true,
-      counts: tally(registry),
+      counts,
       subjectCount: subjects.length,
       uniqueSubjectCount: new Set(subjects.map(({ id }) => id)).size,
       acceptedCharnel: acceptedCharnel.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
       acceptedRemaining: acceptedRemaining.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
+      missingVisualBriefs: registry.expansionCharacters
+        .filter(({ visualBriefStatus }) => visualBriefStatus === 'not-authored')
+        .map(({ contentId, visualBrief, visualBriefStatus, conceptGenerationBlocked, conceptGenerationBlocker, reason }) => ({ contentId, visualBrief, visualBriefStatus, conceptGenerationBlocked, conceptGenerationBlocker, reason })),
       images,
     };
   } catch (error) {
@@ -165,6 +171,17 @@ try {
   assert.equal(result.uniqueSubjectCount, result.subjectCount);
   assert.equal(result.counts.total, 228);
   assert.equal(result.counts.foundingTotal, 228);
+  assert.equal(result.counts.grandTotal, 337);
+  assert.equal(result.counts.expansionCharacters, 70);
+  assert.equal(result.counts.expansionCreatures, 39);
+  assert.equal(result.counts.expansionItems, 67);
+  assert.equal(result.counts.expansionQuests, 49);
+  assert.equal(result.counts.companionContracts, 4);
+  assert.equal(result.counts.agencyContracts, 2);
+  assert.equal(result.counts.actorContracts, 6);
+  const rosterText = await page.locator('#roster').textContent();
+  assert.match(rosterText, /69 expansion awaiting art/);
+  assert.match(rosterText, /0 founding bestiary awaiting art/);
   assert.equal(await page.locator('[data-subject-id]').count(), result.subjectCount);
   assert.equal(result.acceptedCharnel.length, 17);
   assert.equal(result.acceptedRemaining.length, 13);
@@ -182,6 +199,18 @@ try {
     assert.ok(image.src.startsWith(`${baseUrl}/assets/`), `${image.id} did not load from repository assets`);
   }
 
+  assert.deepEqual(result.missingVisualBriefs.map(({ contentId }) => contentId).sort(), [
+    'leto_fain_custodian_unclaimed_symptoms',
+    'senn_avir_residue_orderly',
+  ]);
+  for (const row of result.missingVisualBriefs) {
+    assert.equal(row.visualBrief, null);
+    assert.equal(row.visualBriefStatus, 'not-authored');
+    assert.equal(row.conceptGenerationBlocked, true);
+    assert.match(row.conceptGenerationBlocker, /No canonical visual brief is authored/);
+    assert.match(row.reason, /Concept generation is blocked/);
+  }
+
   const surfaces = await page.evaluate(async () => {
     const paths = [
       '/design-review/MODEL%20MAKER.html',
@@ -190,6 +219,11 @@ try {
     return Promise.all(paths.map(async (path) => ({ path, text: await (await fetch(path)).text() })));
   });
   assert.match(surfaces[0].text, /REG\.bestiary/);
+  assert.match(surfaces[0].text, /bounded agency contracts/);
+  assert.match(surfaces[0].text, /COUNTS\.expansionAwaitingArt/);
+  assert.match(surfaces[0].text, /expansion awaiting art/);
+  assert.match(surfaces[0].text, /founding bestiary awaiting art/);
+  assert.match(surfaces[0].text, /Visual brief \\u2014 not authored/);
   assert.match(surfaces[1].text, /hm-concept-art\.js/);
   assert.match(surfaces[1].text, /technicalReferences/);
   assert.match(surfaces[1].text, /veil-coast-gloamharbor-tide-refuge-blueprint-v14\.png/);

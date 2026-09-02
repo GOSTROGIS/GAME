@@ -191,6 +191,8 @@ export interface ExpansionCreatureHabitatEnvelope {
   readonly sensorySignature: Readonly<{ visualCue: string; acoustic: string; scent: string }>;
   readonly canonicalQuestIds: readonly string[];
   readonly placement: Readonly<{ status: "provisional_placement"; exactCoordinate: null }>;
+  readonly sourceHabitatId?: string;
+  readonly fullWorldContractPath?: "packages/content/manifests/quest-wave-04-v11.world.json";
   readonly authority: Readonly<{ identityAndEcology: "canon"; spatialEnvelope: "authored_design_constraint"; atlasPlacement: "provisional_placement" }>;
 }
 
@@ -235,6 +237,7 @@ export interface QuestLocationSpatialProgram {
   readonly hostSiteId: string | null;
   readonly placementMode: string;
   readonly placementStatus: "provisional_placement";
+  readonly sourcePlacementStatus?: string;
   readonly exactAtlasCoordinate: null;
   readonly designEnvelopeMeters: readonly [width: number, depth: number, height: number];
   readonly typologyIds: readonly string[];
@@ -243,7 +246,27 @@ export interface QuestLocationSpatialProgram {
   readonly sensory: Readonly<{ visibility: string; acoustic: string; scent: string }>;
   readonly mutableLayers: readonly string[];
   readonly streamingClass: string;
+  readonly blockoutGraphId?: string;
+  readonly safeObservationCellIds?: readonly string[];
+  readonly objectiveEndpointIds?: readonly string[];
+  readonly independentEgressPathIds?: readonly string[];
+  readonly environmentArtPipeline?: Readonly<Record<string, unknown>>;
+  readonly fullWorldContractPath?: "packages/content/manifests/quest-wave-04-v11.world.json";
   readonly authority: Readonly<{ identity: "canon"; program: "authored_design_constraint"; atlasPlacement: "provisional_placement" }>;
+}
+
+export interface QuestWave04SpatialIndex {
+  readonly schemaVersion: 1;
+  readonly kind: "quest-wave-spatial-compatibility-index";
+  readonly waveId: "quest-wave-04-v11";
+  readonly sourceBinding: Readonly<{
+    path: "design-review/quest-release-evidence/quest-wave-04-v11.machine-annex.json";
+    bytes: 4245855;
+    sha256: "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962";
+  }>;
+  readonly fullWorldContractPath: "packages/content/manifests/quest-wave-04-v11.world.json";
+  readonly creatureHabitatEnvelopes: readonly Readonly<Record<string, unknown>>[];
+  readonly environmentPrograms: readonly Readonly<Record<string, unknown>>[];
 }
 
 export interface QuestEnvironmentRequirement extends QuestLocationSpatialProgram {
@@ -296,11 +319,13 @@ export const TRAVERSAL_NETWORK: readonly TraversalNetworkSection[];
 export const SENSOR_FIELD_PROFILES: readonly SensorFieldProfile[];
 export const FAMILY_HABITAT_ENVELOPES: readonly FamilyHabitatEnvelope[];
 export const EXPANSION_CREATURE_HABITAT_ENVELOPES: readonly ExpansionCreatureHabitatEnvelope[];
+export const QUEST_WAVE_04_SPATIAL_INDEX: QuestWave04SpatialIndex;
 export const BUILDING_TYPOLOGIES: readonly BuildingTypology[];
 export const SITE_ACTIVITY_CYCLES: readonly SiteActivityCycle[];
 export const ENVIRONMENTAL_STORYTELLING_LAWS: Readonly<Record<string, unknown>>;
 export const ENVIRONMENT_ART_DIRECTION: Readonly<Record<string, unknown>>;
 export const WORLD_STREAMING_AND_LOD: Readonly<Record<string, unknown>>;
+export const QUEST_WAVE_04_LOCATION_PROGRAMS: Readonly<Record<string, QuestLocationSpatialProgram>>;
 export const QUEST_LOCATION_SPATIAL_PROGRAMS: Readonly<Record<string, QuestLocationSpatialProgram>>;
 export const QUEST_ENVIRONMENT_REQUIREMENTS: readonly QuestEnvironmentRequirement[];
 export const WORLD_SPATIAL_SOURCE_LEDGER: readonly Readonly<{ path: string; role: string; authority: SpatialAuthority }>[];
@@ -323,6 +348,7 @@ export const WORLD_SPATIAL_FOUNDATION: Readonly<{
   streamingAndLod: Readonly<Record<string, unknown>>;
   questLocationPrograms: Readonly<Record<string, QuestLocationSpatialProgram>>;
   questEnvironmentRequirements: readonly QuestEnvironmentRequirement[];
+  questWave04SpatialIndex: QuestWave04SpatialIndex;
   sourceLedger: readonly Readonly<{ path: string; role: string; authority: SpatialAuthority }>[];
 }>;
 

@@ -1,3 +1,20 @@
+import {
+  QUEST_WAVE_04_AUTONOMOUS_COMPANION_CONTRACTS,
+  QUEST_WAVE_04_BOUNDED_PARTICIPATION_CONTRACTS,
+  QUEST_WAVE_04_CREATURES,
+  QUEST_WAVE_04_ITEMS,
+  QUEST_WAVE_04_PHASE_GRAPH_BY_ID,
+  QUEST_WAVE_04_QUESTS,
+  QUEST_WAVE_04_SUPPORTING_CHARACTERS,
+} from "./quest-wave-04.data.js";
+import {
+  OPERATIONAL_READ_KIND,
+  classifyStateRead,
+  interpretStateRead,
+  validateForcedTerminalBinding,
+  validateSupportCharacterDepth,
+} from "./quest-wave-04.runtime.js";
+
 const deepFreeze = (value) => {
   if (value && typeof value === "object" && !Object.isFrozen(value)) {
     Object.freeze(value);
@@ -29,9 +46,29 @@ export const QUEST_AUTHORING_LAW = deepFreeze({
   rejectionRule: "A quest is rejected when its dramatic work could be performed by changing nouns in an accepted quest. Shared locations and factions are allowed; shared narrative function is not.",
   productionRule: "Every accepted quest owns a support character, signature reward, mechanical verb, irreversible world-state delta, dialogue constraint, and visual setpiece. Reuse requires a sequel relationship and new dramatic work on every collision axis.",
   stateDomains: ["authority", "admission", "memory", "ecology", "infrastructure", "obligation"],
+  operationalStateDomains: ["living_aftercare_operation"],
   stateReadModes: ["all-values", "value-precondition"],
+  acceptedQuestSchemaVersions: [2, 9],
+  acceptedItemSchemaVersions: [1, 2, 9],
+  acceptedCompanionSchemaVersions: [1, 4],
   portfolioIds: ["main_cosmic", "faction_schism", "character_guest_follower", "regional", "settlement", "profession_systemic", "world_state_reaction", "relic_creature_ecology"],
 });
+
+const QUEST_SCHEMA_V2_FIELDS = new Set([
+  "authorshipProof", "chainId", "consequenceId", "creatureIds", "dialogueThesis", "dilemmaId", "giverId", "id", "locationId", "loreReveal", "objectives", "order", "outcomes", "portfolioId", "premise", "primaryMechanicId", "rewardItemIds", "schemaVersion", "stateDomain", "stateReads", "stateWrites", "supportingCharacterIds", "title", "type",
+]);
+
+const QUEST_SCHEMA_V9_ONLY_FIELDS = [
+  "authoredSemanticContract", "creatureAliasIds", "decisiveBeat", "failurePersistence", "foundingCreatureOverlayIds", "outcomeProgram", "participantCharacterIds", "phaseGraphId", "prerequisiteQuestIds", "returningCharacterIds", "signatureRewardStructure", "structuralDiversityContract", "structuralSignature",
+];
+
+const QUEST_SCHEMA_V9_FIELDS = new Set([...QUEST_SCHEMA_V2_FIELDS, ...QUEST_SCHEMA_V9_ONLY_FIELDS]);
+const BOUNDED_PARTICIPATION_AUTONOMY_FIELDS = ["mode", "independentAction", "autonomousPriority", "trust", "availability", "exit"];
+const ARTIFACT_SCHEMA_V2_FIELDS = new Set(["activation", "category", "cost", "custody", "id", "laterContest", "lore", "mechanic", "name", "schemaVersion"]);
+const ARTIFACT_SCHEMA_V9_ONLY_FIELDS = [
+  "agency", "aggregateCapacityPersons", "boatCount", "canCarryVictimReflexAuthority", "canCreateOffice", "canGrantPermission", "canSupplyRemedy", "canTransferCommand", "canonicalServiceIds", "capacityPerBoatPersons", "capacityPersons", "count", "itemSpecificClauseHash", "serviceEvidence",
+];
+const ARTIFACT_SCHEMA_V9_FIELDS = new Set([...ARTIFACT_SCHEMA_V2_FIELDS, ...ARTIFACT_SCHEMA_V9_ONLY_FIELDS]);
 
 export const WORLD_PREMISE = deepFreeze({
   id: "the_late_world",
@@ -326,7 +363,7 @@ export const EXPANSION_PRINCIPALS = deepFreeze([
 // no other quest. Recurring principals may carry long arcs, but the people who
 // make a local dilemma concrete cannot be renamed scenery or recycled quest
 // furniture. These records use the same art/model pipeline as the principals.
-export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
+const FOUNDING_QUEST_SUPPORT_CHARACTERS = deepFreeze([
   {
     id: "nima_sorn_keeper_of_one_shadow",
     name: "Nima Sorn",
@@ -1203,6 +1240,11 @@ export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
   },
 ]);
 
+export const QUEST_SUPPORT_CHARACTERS = deepFreeze([
+  ...FOUNDING_QUEST_SUPPORT_CHARACTERS,
+  ...QUEST_WAVE_04_SUPPORTING_CHARACTERS,
+]);
+
 export const EXPANSION_CHARACTERS = deepFreeze([
   ...EXPANSION_PRINCIPALS,
   ...QUEST_SUPPORT_CHARACTERS,
@@ -1838,6 +1880,7 @@ export const EXPANSION_CREATURES = deepFreeze([
       "animatedModelStatus": "unassessed"
     }
   },
+  ...QUEST_WAVE_04_CREATURES,
 ]);
 
 export const ALIGNMENT_HOOKS = deepFreeze([
@@ -2214,6 +2257,7 @@ export const EXPANSION_ITEMS = deepFreeze([
       "venue": "A Salt-Waste road war at the first settlement cut off by accumulated rescue debt."
     }
   },
+  ...QUEST_WAVE_04_ITEMS,
 ]);
 
 const allStateValues = (key, values) => ({ key, mode: "all-values", values });
@@ -3601,6 +3645,7 @@ export const EXPANSION_QUESTS = deepFreeze([
       "forbiddenSubstitution": "Escort, taming, and mirror puzzles cannot substitute because destinations become anatomy and every rescue conserves distance as debt elsewhere."
     }
   },
+  ...QUEST_WAVE_04_QUESTS,
 ]);
 
 export const COMPANION_QUEST_CONTRACTS = deepFreeze([
@@ -3830,7 +3875,55 @@ export const COMPANION_QUEST_CONTRACTS = deepFreeze([
       "animatedModelStatus": "unassessed"
     }
   },
+  ...QUEST_WAVE_04_AUTONOMOUS_COMPANION_CONTRACTS,
 ]);
+
+export const COMPANION_AGENCY_CONTRACTS = deepFreeze([
+  ...QUEST_WAVE_04_BOUNDED_PARTICIPATION_CONTRACTS,
+]);
+export const BOUNDED_PARTICIPATION_CONTRACTS = COMPANION_AGENCY_CONTRACTS;
+export const QUEST_ACTOR_CONTRACTS = deepFreeze([
+  ...COMPANION_QUEST_CONTRACTS,
+  ...COMPANION_AGENCY_CONTRACTS,
+]);
+
+const canonicalQuestById = new Map(EXPANSION_QUESTS.map((quest, index) => [quest.id, { quest, index }]));
+const canonicalStateWriterByKey = new Map(EXPANSION_QUESTS.flatMap((quest, index) => (quest.stateWrites ?? []).map((write) => [write.key, { quest, write, index }])));
+const stateReadSignature = (read) => JSON.stringify({
+  readKind: read?.readKind ?? null,
+  domain: read?.domain ?? null,
+  key: read?.key ?? null,
+  mode: read?.mode ?? null,
+  values: read?.values ?? null,
+});
+
+// The immutable Wave 04 runtime contract resolves narrative rows from a caller-
+// supplied domain. Canonical quests can read state written in a different domain,
+// so public consumers must enter through this ownership adapter. It derives the
+// domain from the unique canonical writer and never trusts the consuming quest or
+// caller to choose it. The exact reviewed runtime bytes remain unchanged.
+export function interpretCanonicalQuestStateRead(questOrId, read, stateByDomain, context = {}) {
+  const questId = typeof questOrId === "string" ? questOrId : questOrId?.id;
+  const canonicalQuestEntry = canonicalQuestById.get(questId);
+  if (!canonicalQuestEntry) throw new Error(`state_read_quest_unknown:${questId}`);
+  const canonicalReadSignatures = new Set((canonicalQuestEntry.quest.stateReads ?? []).map(stateReadSignature));
+  if (!canonicalReadSignatures.has(stateReadSignature(read))) throw new Error(`state_read_not_owned_by_quest:${questId}:${read?.key}`);
+
+  const classification = classifyStateRead(read);
+  if (classification.kind === OPERATIONAL_READ_KIND) {
+    if (classification.definition.questId !== questId) throw new Error(`operational_read_owner_mismatch:${classification.definition.questId}:${questId}`);
+    return interpretStateRead(read, stateByDomain, context);
+  }
+
+  const writer = canonicalStateWriterByKey.get(read.key);
+  if (!writer) throw new Error(`narrative_state_writer_missing:${read.key}`);
+  if (writer.index >= canonicalQuestEntry.index) throw new Error(`narrative_state_writer_not_prior:${read.key}:${questId}`);
+  const interpreterContext = { ...context, questStateDomain: writer.write.domain };
+  if (read.mode === "value-precondition" && interpreterContext.expectedValue === undefined) {
+    interpreterContext.expectedValue = read.values[0];
+  }
+  return interpretStateRead(read, stateByDomain, interpreterContext);
+}
 
 const duplicateValues = (records, selector) => {
   const seen = new Map();
@@ -3875,6 +3968,7 @@ export function validateNarrativeExpansion({
   items = EXPANSION_ITEMS,
   quests = EXPANSION_QUESTS,
   companionContracts = COMPANION_QUEST_CONTRACTS,
+  boundedParticipationContracts = BOUNDED_PARTICIPATION_CONTRACTS,
 } = {}) {
   const errors = [];
   const add = (path, code, message) => errors.push({ path, code, message });
@@ -3892,28 +3986,50 @@ export function validateNarrativeExpansion({
 
   characters.forEach((character, index) => {
     if (!factionIds.has(character.factionId)) add(`characters.${index}.factionId`, "unknown_reference", character.factionId);
-    if (!character.contradiction || !character.secret || !character.voice?.signature) add(`characters.${index}`, "shallow_character", "Every expansion character needs a contradiction, secret, and unique voice signature.");
+    if (!character.contradiction) add(`characters.${index}.contradiction`, "shallow_character", "Every expansion character needs a contradiction.");
+    const dialogueSignature = character.voice?.signature ?? character.dialogueProfile?.signature;
+    if (!dialogueSignature) add(`characters.${index}`, "missing_dialogue_identity", "Every expansion character needs an accepted voice or dialogue-profile signature.");
+    try {
+      validateSupportCharacterDepth(character);
+    } catch (error) {
+      add(`characters.${index}`, "invalid_character_depth", error.message);
+    }
     if (!character.pipeline || !Object.hasOwn(character.pipeline, "conceptMaster") || !Object.hasOwn(character.pipeline, "animatedModel")) add(`characters.${index}.pipeline`, "missing_pipeline", "Art, static-model, and animated-model readiness must be explicit.");
   });
-  duplicateValues(characters, ({ voice }) => voice.signature).forEach(({ value }) => add("characters", "duplicate_voice", value));
+  duplicateValues(characters, (character) => character.voice?.signature ?? character.dialogueProfile?.signature).forEach(({ value }) => add("characters", "duplicate_voice", value));
 
   items.forEach((entry, index) => {
     if (!entry.id || !entry.name || !entry.category || !entry.mechanic || !entry.lore) {
       add(`items.${index}`, "shallow_item", "Every expansion item needs identity, category, mechanic, and lore.");
     }
-    if (entry.schemaVersion !== undefined && entry.schemaVersion !== 1 && entry.schemaVersion !== 2) {
+    const itemSchemaVersion = entry.schemaVersion ?? 1;
+    if (!QUEST_AUTHORING_LAW.acceptedItemSchemaVersions.includes(itemSchemaVersion)) {
       add(`items.${index}.schemaVersion`, "unsupported_item_schema", String(entry.schemaVersion));
     }
-    if (entry.schemaVersion !== 2) return;
-    if (!entry.custody?.defaultHolderId || !entry.custody?.transferRule) add(`items.${index}.custody`, "missing_artifact_custody", "Schema-v2 artifacts need a default holder and transfer rule.");
+    if (![2, 9].includes(itemSchemaVersion)) return;
+    if (itemSchemaVersion === 2) {
+      Object.keys(entry).filter((field) => !ARTIFACT_SCHEMA_V2_FIELDS.has(field)).forEach((field) => {
+        add(`items.${index}.${field}`, "schema_v2_forbidden_item_field", `Schema-v2 artifacts cannot carry schema-v9 field ${field}.`);
+      });
+    }
+    if (itemSchemaVersion === 9) {
+      [...ARTIFACT_SCHEMA_V2_FIELDS, "itemSpecificClauseHash"].filter((field) => !Object.hasOwn(entry, field)).forEach((field) => {
+        add(`items.${index}.${field}`, "missing_schema_v9_item_field", `Schema-v9 artifacts require ${field}.`);
+      });
+      Object.keys(entry).filter((field) => !ARTIFACT_SCHEMA_V9_FIELDS.has(field)).forEach((field) => {
+        add(`items.${index}.${field}`, "schema_v9_forbidden_item_field", `Schema-v9 artifacts cannot carry unrecognized field ${field}.`);
+      });
+    }
+    if (!entry.custody?.defaultHolderId || !entry.custody?.transferRule) add(`items.${index}.custody`, "missing_artifact_custody", "Authored artifacts need a default holder and transfer rule.");
     else if (!characterIds.has(entry.custody.defaultHolderId)) add(`items.${index}.custody.defaultHolderId`, "unknown_reference", entry.custody.defaultHolderId);
-    if (!Array.isArray(entry.activation?.evidence) || entry.activation.evidence.length < 1 || !entry.activation?.procedure) add(`items.${index}.activation`, "missing_artifact_activation", "Schema-v2 artifacts need activation evidence and a procedure.");
-    if (!entry.cost?.limitation || !entry.cost?.worldDebt) add(`items.${index}.cost`, "missing_artifact_cost", "Schema-v2 artifacts need an operational limitation and persistent world debt.");
+    if (!Array.isArray(entry.activation?.evidence) || entry.activation.evidence.length < 1 || !entry.activation?.procedure) add(`items.${index}.activation`, "missing_artifact_activation", "Authored artifacts need activation evidence and a procedure.");
+    if (!entry.cost?.limitation || !entry.cost?.worldDebt) add(`items.${index}.cost`, "missing_artifact_cost", "Authored artifacts need an operational limitation and persistent world debt.");
     if (!entry.laterContest?.triggerStateKey || !entry.laterContest?.contestedQuestion || !entry.laterContest?.venue) {
       add(`items.${index}.laterContest`, "missing_later_contest", "Schema-v2 artifacts need a state-triggered later contest and venue.");
     } else if (!stateOwnerByKey.has(entry.laterContest.triggerStateKey)) {
       add(`items.${index}.laterContest.triggerStateKey`, "unknown_state_read", entry.laterContest.triggerStateKey);
     }
+    if (itemSchemaVersion === 9 && !/^[a-f0-9]{64}$/.test(entry.itemSpecificClauseHash ?? "")) add(`items.${index}.itemSpecificClauseHash`, "invalid_clause_hash", "Schema-v9 artifacts need a content-addressed item-specific clause hash.");
   });
 
   creatures.forEach((entry, index) => {
@@ -3934,7 +4050,7 @@ export function validateNarrativeExpansion({
   duplicateValues(quests, questGenome).forEach(({ value }) => add("quests", "duplicate_story_genome", value));
   duplicateValues(quests, ({ primaryMechanicId }) => primaryMechanicId).forEach(({ value }) => add("quests", "duplicate_primary_mechanic", value));
   duplicateValues(quests, ({ title }) => title.toLowerCase()).forEach(({ value }) => add("quests", "duplicate_title", value));
-  duplicateValues(quests, ({ rewardItemIds }) => rewardItemIds?.[0]).forEach(({ value }) => add("quests", "duplicate_signature_reward", value));
+  duplicateValues(quests.flatMap((entry) => (entry.rewardItemIds ?? []).map((id) => ({ id }))), ({ id }) => id).forEach(({ value }) => add("quests", "duplicate_signature_reward", value));
   duplicateValues(quests, ({ consequenceId }) => consequenceId).forEach(({ value }) => add("quests", "duplicate_state_key", value));
   duplicateValues(quests, objectiveShape).forEach(({ value }) => add("quests", "duplicate_objective_shape", value));
   QUEST_AUTHORING_LAW.requiredProofFields.forEach((field) => {
@@ -3943,7 +4059,23 @@ export function validateNarrativeExpansion({
 
   const supportOwners = new Map();
   quests.forEach((entry, index) => {
-    if (entry.schemaVersion !== 2) add(`quests.${index}.schemaVersion`, "unsupported_quest_schema", "Accepted quests must use schema version 2 state-read contracts.");
+    if (!QUEST_AUTHORING_LAW.acceptedQuestSchemaVersions.includes(entry.schemaVersion)) add(`quests.${index}.schemaVersion`, "unsupported_quest_schema", "Accepted quests must use a closed, executable quest schema.");
+    if (entry.schemaVersion === 2) {
+      Object.keys(entry).filter((field) => !QUEST_SCHEMA_V2_FIELDS.has(field)).forEach((field) => {
+        add(`quests.${index}.${field}`, "schema_v2_forbidden_field", `Schema-v2 quests cannot carry schema-v9 field ${field}.`);
+      });
+    }
+    if (entry.schemaVersion === 9) {
+      QUEST_SCHEMA_V9_ONLY_FIELDS.filter((field) => !Object.hasOwn(entry, field)).forEach((field) => {
+        add(`quests.${index}.${field}`, "missing_schema_v9_field", `Schema-v9 quests require ${field}.`);
+      });
+      Object.keys(entry).filter((field) => !QUEST_SCHEMA_V9_FIELDS.has(field)).forEach((field) => {
+        add(`quests.${index}.${field}`, "schema_v9_forbidden_field", `Schema-v9 quests cannot carry unrecognized field ${field}.`);
+      });
+      const phaseGraph = QUEST_WAVE_04_PHASE_GRAPH_BY_ID.get(entry.phaseGraphId);
+      if (!phaseGraph) add(`quests.${index}.phaseGraphId`, "unknown_phase_graph", String(entry.phaseGraphId));
+      else if (phaseGraph.questId !== entry.id) add(`quests.${index}.phaseGraphId`, "phase_graph_owner_mismatch", `${entry.phaseGraphId} belongs to ${phaseGraph.questId}.`);
+    }
     if (!QUEST_AUTHORING_LAW.portfolioIds.includes(entry.portfolioId)) add(`quests.${index}.portfolioId`, "unknown_portfolio", entry.portfolioId);
     if (!characterIds.has(entry.giverId)) add(`quests.${index}.giverId`, "unknown_reference", entry.giverId);
     if (!Array.isArray(entry.supportingCharacterIds) || entry.supportingCharacterIds.length < 1) {
@@ -3959,6 +4091,16 @@ export function validateNarrativeExpansion({
     });
     if (!Array.isArray(entry.outcomes) || entry.outcomes.length < 3) add(`quests.${index}.outcomes`, "insufficient_branching", "Each expansion quest needs at least three materially distinct outcomes.");
     if (!entry.rewardItemIds?.length) add(`quests.${index}.rewardItemIds`, "missing_signature_reward", "Every quest needs a unique signature reward item.");
+    if (entry.schemaVersion === 9) {
+      const structure = entry.signatureRewardStructure;
+      if (!structure || JSON.stringify(structure.itemIds) !== JSON.stringify(entry.rewardItemIds)) {
+        add(`quests.${index}.signatureRewardStructure`, "signature_reward_structure_mismatch", "Schema-v9 reward structure must preserve the exact ordered reward item set.");
+      } else if (structure.portableSignatureItemId !== null && !entry.rewardItemIds.includes(structure.portableSignatureItemId)) {
+        add(`quests.${index}.signatureRewardStructure.portableSignatureItemId`, "unknown_signature_reward", structure.portableSignatureItemId);
+      } else if (structure.portableSignatureItemId === null && !structure.noPortableSignatureReason) {
+        add(`quests.${index}.signatureRewardStructure.noPortableSignatureReason`, "missing_nonportable_reason", "A nonportable signature set needs an authored reason.");
+      }
+    }
     if (!entry.objectives?.some(({ type }) => !["talk", "gather", "defeat", "acquire", "interact"].includes(type))) add(`quests.${index}.objectives`, "generic_objective_only", "A quest cannot consist only of generic MMO verbs.");
     entry.rewardItemIds?.forEach((itemId) => { if (!itemIds.has(itemId)) add(`quests.${index}.rewardItemIds`, "unknown_reference", itemId); });
     duplicateValues((entry.creatureIds ?? []).map((id) => ({ id })), ({ id }) => id).forEach(({ value }) => add(`quests.${index}.creatureIds`, "duplicate_creature_reference", value));
@@ -3967,7 +4109,10 @@ export function validateNarrativeExpansion({
     QUEST_AUTHORING_LAW.requiredProofFields.forEach((field) => {
       if (!entry.authorshipProof?.[field]) add(`quests.${index}.authorshipProof.${field}`, "missing_authorship_proof", `Every quest must prove its unique ${field}.`);
     });
-    if (!QUEST_AUTHORING_LAW.stateDomains.includes(entry.stateDomain)) add(`quests.${index}.stateDomain`, "unknown_state_domain", entry.stateDomain);
+    const acceptedStateDomains = entry.schemaVersion === 9
+      ? [...QUEST_AUTHORING_LAW.stateDomains, ...QUEST_AUTHORING_LAW.operationalStateDomains]
+      : QUEST_AUTHORING_LAW.stateDomains;
+    if (!acceptedStateDomains.includes(entry.stateDomain)) add(`quests.${index}.stateDomain`, "unknown_state_domain", entry.stateDomain);
     if (!Array.isArray(entry.stateWrites) || entry.stateWrites.length !== 1) {
       add(`quests.${index}.stateWrites`, "invalid_state_write", "Every quest writes exactly one typed consequence state.");
     } else {
@@ -3986,12 +4131,23 @@ export function validateNarrativeExpansion({
           add(path, "invalid_state_read_contract", "Each state read must name a key, mode, and enumerated values.");
           return;
         }
-        if (!QUEST_AUTHORING_LAW.stateReadModes.includes(read.mode)) add(`${path}.mode`, "unknown_state_read_mode", String(read.mode));
         if (!Array.isArray(read.values) || read.values.length < 1 || read.values.some((value) => typeof value !== "string" || !value)) {
           add(`${path}.values`, "missing_state_values", "Every state read must enumerate at least one reachable upstream value.");
           return;
         }
         duplicateValues(read.values.map((value) => ({ value })), ({ value }) => value).forEach(({ value }) => add(`${path}.values`, "duplicate_state_value", value));
+        let classification;
+        try {
+          classification = classifyStateRead(read);
+        } catch (error) {
+          add(path, "invalid_state_read_runtime_contract", error.message);
+          return;
+        }
+        if (classification.kind === OPERATIONAL_READ_KIND) {
+          if (entry.schemaVersion !== 9) add(path, "operational_read_requires_schema_v9", `${read.mode} is executable only in schema-v9 quests.`);
+          if (classification.definition.questId !== entry.id) add(path, "operational_read_owner_mismatch", `${read.mode} belongs to ${classification.definition.questId}.`);
+          return;
+        }
         const owner = stateOwnerByKey.get(read.key);
         if (!owner) {
           add(path, "unknown_state_read", read.key);
@@ -4014,16 +4170,49 @@ export function validateNarrativeExpansion({
     }
   });
 
-  duplicateValues(companionContracts, ({ questId, companionId }) => `${questId}|${companionId}`).forEach(({ value }) => add("companionContracts", "duplicate_companion_contract", value));
+  duplicateValues([...companionContracts, ...boundedParticipationContracts], ({ questId, companionId }) => `${questId}|${companionId}`).forEach(({ value }) => add("participationContracts", "duplicate_participation_contract", value));
+  boundedParticipationContracts.forEach((contract, index) => {
+    const path = `boundedParticipationContracts.${index}`;
+    const questRecord = questById.get(contract.questId);
+    const companion = characterById.get(contract.companionId);
+    if (contract.schemaVersion !== 4) add(`${path}.schemaVersion`, "unsupported_bounded_participation_contract", String(contract.schemaVersion));
+    BOUNDED_PARTICIPATION_AUTONOMY_FIELDS.filter((field) => Object.hasOwn(contract, field)).forEach((field) => {
+      add(`${path}.${field}`, "bounded_contract_autonomy_field", `Bounded participation cannot claim autonomous field ${field}.`);
+    });
+    if (!questRecord) add(`${path}.questId`, "unknown_reference", contract.questId);
+    if (!companion) add(`${path}.companionId`, "unknown_reference", contract.companionId);
+    if (!contract.entryReason) add(`${path}.entryReason`, "missing_participation_reason", "Bounded participation needs an authored reason to enter the quest.");
+    if (!Array.isArray(contract.prohibitedActions) || contract.prohibitedActions.length < 1 || new Set(contract.prohibitedActions).size !== contract.prohibitedActions.length) {
+      add(`${path}.prohibitedActions`, "invalid_agency_prohibitions", "Bounded participation needs explicit, unique prohibited actions.");
+    }
+    if (contract.deterministicOperation) {
+      if (!contract.deterministicOperation.query || !Array.isArray(contract.deterministicOperation.order) || !contract.deterministicOperation.order.length || !contract.deterministicOperation.result || !contract.deterministicOperation.inaccessibleFallback) {
+        add(`${path}.deterministicOperation`, "incomplete_deterministic_operation", "Read-only ordering needs query, ordering, result, and inaccessible fallback.");
+      }
+      if (contract.authorizesNothing !== true || contract.physicalOperator !== false || contract.readOnlyOrderingOnly !== true || !contract.agencyBoundary) {
+        add(path, "agency_boundary_mismatch", "Read-only ordering cannot authorize or physically operate equipment.");
+      }
+    } else if (Array.isArray(contract.executableActions)) {
+      if (!contract.executableActions.length || !contract.rosePaneBoundary?.function || !Array.isArray(contract.rosePaneBoundary?.transfers) || contract.rosePaneBoundary.transfers.length !== 0 || contract.mortalFallbackRequired !== true) {
+        add(path, "incomplete_material_test_agency", "Material-test participation needs executable actions, a zero-transfer boundary, and a mortal fallback.");
+      }
+    } else {
+      add(path, "unknown_agency_contract_shape", "Schema-v4 participation must be read-only ordering or bounded material testing.");
+    }
+  });
+
   companionContracts.forEach((contract, index) => {
     const path = `companionContracts.${index}`;
     const questRecord = questById.get(contract.questId);
     const companion = characterById.get(contract.companionId);
-    if (contract.schemaVersion !== 1) add(`${path}.schemaVersion`, "unsupported_companion_contract", String(contract.schemaVersion));
     if (!questRecord) add(`${path}.questId`, "unknown_reference", contract.questId);
     if (!companion) add(`${path}.companionId`, "unknown_reference", contract.companionId);
+    if (contract.schemaVersion !== 1) {
+      add(`${path}.schemaVersion`, "unsupported_companion_contract", String(contract.schemaVersion));
+      return;
+    }
+    if (!contract.entryReason) add(`${path}.entryReason`, "missing_companion_entry_reason", "Autonomous participation needs an authored reason to enter the quest.");
     if (!['autonomous_guest', 'autonomous_follower'].includes(contract.mode)) add(`${path}.mode`, "unknown_companion_mode", String(contract.mode));
-    if (!contract.entryReason) add(`${path}.entryReason`, "missing_companion_entry_reason", "Autonomous companions need an authored reason to enter the quest.");
 
     const entryRead = questRecord?.stateReads?.find(({ key }) => key === contract.entryCondition?.stateKey);
     if (!entryRead) add(`${path}.entryCondition.stateKey`, "companion_state_not_read_by_quest", String(contract.entryCondition?.stateKey));
@@ -4073,6 +4262,14 @@ export function validateNarrativeExpansion({
     else if (!questRecord?.outcomes?.includes(contract.exit.forcedOutcomeLock)) add(`${path}.exit.forcedOutcomeLock`, "unknown_companion_outcome", contract.exit.forcedOutcomeLock);
     if (!contract.pipeline || !Object.hasOwn(contract.pipeline, "conceptMaster") || !Object.hasOwn(contract.pipeline, "animatedModel")) add(`${path}.pipeline`, "missing_pipeline", "Companion art, static-model, and animated-model readiness must be explicit.");
     else if (companion && JSON.stringify(contract.pipeline) !== JSON.stringify(companion.pipeline)) add(`${path}.pipeline`, "companion_pipeline_mismatch", "A companion contract cannot claim readiness beyond its canonical character record.");
+    if (contract.exit?.forcedTerminalBinding) {
+      const phaseGraph = QUEST_WAVE_04_PHASE_GRAPH_BY_ID.get(contract.exit.forcedTerminalBinding.phaseGraphId);
+      try {
+        validateForcedTerminalBinding(contract, questRecord, phaseGraph);
+      } catch (error) {
+        add(`${path}.exit.forcedTerminalBinding`, "invalid_forced_terminal_binding", error.message);
+      }
+    }
   });
 
   for (let left = 0; left < quests.length; left += 1) {
@@ -4085,6 +4282,6 @@ export function validateNarrativeExpansion({
   return {
     valid: errors.length === 0,
     errors,
-    stats: { factions: factions.length, characters: characters.length, creatures: creatures.length, items: items.length, quests: quests.length, companionContracts: companionContracts.length, capacityTarget: NARRATIVE_TARGETS.authoredQuestTarget },
+    stats: { factions: factions.length, characters: characters.length, creatures: creatures.length, items: items.length, quests: quests.length, companionContracts: companionContracts.length, boundedParticipationContracts: boundedParticipationContracts.length, capacityTarget: NARRATIVE_TARGETS.authoredQuestTarget },
   };
 }

@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "quest-wave-04-v11-review-b-freeze",
+  "reviewId": "quest-wave-04-v11-review-b",
+  "reviewerRole": "fresh_independent_review_b_not_author_not_review_a_not_integrator",
+  "freezeDate": "2026-09-01",
+  "verdict": "PASS",
+  "releaseApproved": false,
+  "integrationAuthorized": false,
+  "integrated": false,
+  "repositoryMutation": false,
+  "candidateModified": false,
+  "sourceBinding": {
+    "v11Freeze": {
+      "path": "wave-04-v11.freeze-manifest.json",
+      "bytes": 6538,
+      "sha256": "65f588e4ff25a540f1203ac3655bb0fc25581931809b6c933a98403b3f42dbdf",
+      "expectedBytes": 6538,
+      "expectedSha256": "65f588e4ff25a540f1203ac3655bb0fc25581931809b6c933a98403b3f42dbdf",
+      "exact": true
+    },
+    "reviewAManifestIntegrityOnly": {
+      "path": "reviews/review-a/quest-wave-04-v11.review-a.manifest.json",
+      "bytes": 5271,
+      "sha256": "cdad9291283cfa2f413f9da4bac681bf899c5a04dc9b3d4d4ee30cd867367f66",
+      "expectedBytes": 5271,
+      "expectedSha256": "cdad9291283cfa2f413f9da4bac681bf899c5a04dc9b3d4d4ee30cd867367f66",
+      "exact": true,
+      "conclusionsReusedAsProof": false
+    }
+  },
+  "boundArtifactCounts": {
+    "v11Candidate": 15,
+    "reviewA": 5
+  },
+  "deterministicReviewReproduction": {
+    "auditRuns": 2,
+    "auditByteIdentical": true,
+    "officialAuditExact": true,
+    "candidateUnchanged": true
+  },
+  "evidenceCounts": {
+    "checks": 37,
+    "passingChecks": 37,
+    "adversarialControls": 80,
+    "passingAdversarialControls": 80,
+    "declaredNegativeFixtures": 47,
+    "isolatedBuildValidateRuns": 2,
+    "reproducedOutputs": 10,
+    "allowedAuthoredDeltas": 28,
+    "authoredSurfaces": 10,
+    "changedAuthoredSurfaces": 3,
+    "unchangedAuthoredSurfaces": 7,
+    "quests": 12,
+    "objectives": 62,
+    "outcomes": 44,
+    "materialMappings": 151,
+    "directPointers": 1093,
+    "identityCoverage": {
+      "utility": 60,
+      "egress": 24,
+      "item": 30
+    },
+    "predecessorClosures": 132,
+    "v6Closures": 23,
+    "v10ReviewBBlockersClosed": 4,
+    "operationalStateReads": 9,
+    "narrativeStateReads": 17,
+    "executableOperationalDefinitions": 9,
+    "executedObjectNormalizerFixtures": 29
+  },
+  "closedBlockerIds": [
+    "runtime.companion_forced_outcome_locks_resolve_to_terminal",
+    "runtime.support_character_arc_key_variants_have_discriminator",
+    "runtime.support_character_optional_secret_variants_have_contract",
+    "runtime.custom_state_read_modes_have_executable_contract"
+  ],
+  "blockerIds": [],
+  "frozenReviewArtifacts": [
+    {
+      "path": "reviews/review-b/audit-quest-wave-04-v11-review-b.mjs",
+      "bytes": 115629,
+      "sha256": "1b6167226c890cc35cafea15150d03b63a7d95a8c4d8a037593acb73fc60522e"
+    },
+    {
+      "path": "reviews/review-b/quest-wave-04-v11.review-b.audit.json",
+      "bytes": 96609,
+      "sha256": "04589358a8b29515936b4e19ff548d908042fc001c729e2d28db01a1f7735636"
+    },
+    {
+      "path": "reviews/review-b/quest-wave-04-v11.review-b.json",
+      "bytes": 2572,
+      "sha256": "10f291b706434b06b0ebd19ed828effc04aaeadb6e753e1096e5a5729134a6a8"
+    },
+    {
+      "path": "reviews/review-b/quest-wave-04-v11.review-b.md",
+      "bytes": 4548,
+      "sha256": "ad654519b08611fee800283f29c3069382768fb019b6a1fe9b19ff8dfd7e59cb"
+    },
+    {
+      "path": "reviews/review-b/freeze-quest-wave-04-v11-review-b.mjs",
+      "bytes": 8334,
+      "sha256": "b73e6b85831c51b52a1721ff88b6b5e44bf36b64b0f60437e1809153706bc395"
+    }
+  ],
+  "reviewerBoundary": "Review B verifies frozen-byte, exact-delta, runtime-contract, semantic-collision, reference, material, pointer, privacy, governance, deterministic-reproduction, and adversarial consistency only. It grants no release, integration, merge, coordinator, gameplay, localization, voice, performance, or streaming approval.",
+  "unverifiedBoundaries": [
+    "root integration and merge gates",
+    "coordinator authorization",
+    "gameplay balance under live simulation",
+    "localization and voiced performance",
+    "runtime performance and streaming",
+    "external canonical GAME checkout unavailable at the historical local path; exact frozen predecessor and internal canonical bindings were used"
+  ]
+}
