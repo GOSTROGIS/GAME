@@ -46,7 +46,7 @@
     <h2 style="margin:0 0 16px;color:var(--bone);font:400 30px var(--display)">No guessing. Follow the concept art or it is a critical failure.</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
       <sc-for list="{{ authority }}" as="a" hint-placeholder-count="3">
-        <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid {{ a.edge }}">
+        <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--line)">
           <p style="margin:0 0 6px;color:{{ a.tone }};font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">Rank {{ a.rank }} &middot; {{ a.bindingLabel }}</p>
           <h3 style="margin:0 0 7px;color:var(--bone);font:500 15px var(--display)">{{ a.name }}</h3>
           <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">{{ a.note }}</p>
@@ -75,17 +75,17 @@
     <h3 style="margin:0 0 12px;color:var(--bone);font:400 25px var(--display)">The art is in the project now, so every render can be checked against it</h3>
     <p style="max-width:940px;margin:0 0 18px;color:#a7aaa4;font:16px/1.6 var(--serif)">Accepted art is indexed under <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">assets/characters/</code> and <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">assets/bestiary/</code>. The adapter resolves repository paths only, so this page is same-origin, survives going offline, and exposes missing or broken assets as explicit gaps. Masters remain ungraded: no resize, recompression, crop, or baked presentation grade is introduced here.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px">
-      <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--ember)">
+      <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--line)">
         <p style="margin:0 0 6px;color:#d4855f;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">Unreviewed</p>
         <h4 style="margin:0 0 7px;color:var(--bone);font:500 15px var(--display)">Two plates came from staging</h4>
         <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Maela Voss and Bera Claymother have cutouts, found in <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px">generated-images/</code> rather than an approved folder. Vendored so they are visible, flagged <em>unreviewed</em> so nothing treats them as rank 2 until a reviewer says so.</p>
       </div>
-      <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--blood)">
+      <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--line)">
         <p style="margin:0 0 6px;color:#c98d78;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">No authority</p>
         <h4 style="margin:0 0 7px;color:var(--bone);font:500 15px var(--display)">A family nobody registered</h4>
         <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Anchored Quarantine &mdash; buoy-corpse and hawser-hand, master and cutout each. Absent from the register, absent from the ten approved masters, and absent from batch 01. Art with no prompt behind it cannot be judged.</p>
       </div>
-      <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--focus)">
+      <div style="padding:16px 18px;background:var(--inset-bg);border:1px solid var(--line)">
         <p style="margin:0 0 6px;color:#7ba6b6;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">Owed</p>
         <h4 style="margin:0 0 7px;color:var(--bone);font:500 15px var(--display)">No provenance sidecars</h4>
         <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Each vendored file still needs source, licence, hash, byte size and maturity recorded before the strict-production gate will accept it. Until then these are <em>prototype</em> assets sitting in the repo, not production ones.</p>
@@ -149,6 +149,23 @@
       </div>
     </sc-for>
   </div>
+
+  <p style="margin:40px 0 14px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Executable spatial blockout reference &mdash; data only, loaded on demand</p>
+  <div style="border:1px solid var(--line);background:var(--ink);padding:18px 20px">
+    <sc-for list="{{ spatialReferences }}" as="r" hint-placeholder-count="1">
+      <article>
+        <span style="color:var(--gold);font:var(--type-nano);letter-spacing:var(--track-micro)">{{ r.band }}</span>
+        <h3 style="margin:5px 0 7px;color:var(--bone);font:500 18px var(--display)">{{ r.name }}</h3>
+        <p style="margin:0 0 10px;max-width:920px;color:#a8ada7;font:var(--type-body-xs)">{{ r.note }}</p>
+        <p style="margin:0 0 14px;max-width:920px;color:#797f7a;font:var(--type-nano);letter-spacing:.04em">{{ r.boundary }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:9px 18px;align-items:center">
+          <a href="{{ r.file }}" style="color:#d9bd82;font:500 11px var(--display);letter-spacing:.08em;text-underline-offset:3px">Open exact spatial annex</a>
+          <a href="{{ r.provenance }}" style="color:#8aa596;font:var(--type-nano);letter-spacing:.06em;text-underline-offset:3px">Review and maturity record</a>
+          <span style="color:#6f7571;font:var(--type-nano)">{{ r.integrity }}</span>
+        </div>
+      </article>
+    </sc-for>
+  </div>
 </section>
 
 <section style="position:relative;z-index:2;max-width:1720px;margin:0 auto;padding:56px clamp(28px,5vw,96px) 0">
@@ -165,7 +182,7 @@
   <p style="max-width:920px;margin:0 0 26px;color:#a7aaa4;font:17px/1.6 var(--serif)">Each family's prompt makes one anatomical impossibility load-bearing &mdash; a torso that is an archive of clay drawers, a rotating dry-stone cairn, a single closed-loop prayer cord, a detached mouth with no body behind it. That violation <em>is</em> the family's identity, so it is the first thing any render is judged on. None of the ten can be built on a humanoid chassis, so all ten are refused rather than approximated.</p>
   <div style="display:grid;gap:8px">
     <sc-for list="{{ lawFamilies }}" as="f" hint-placeholder-count="10">
-      <article style="display:grid;grid-template-columns:200px 1fr 150px;gap:20px;align-items:start;padding:20px 22px;background:var(--glass-bg);border:1px solid var(--blood)">
+      <article style="display:grid;grid-template-columns:200px 1fr 150px;gap:20px;align-items:start;padding:20px 22px;background:var(--glass-bg);border:1px solid var(--line)">
         <div>
           <h3 style="margin:0 0 5px;color:var(--bone-bright);font:500 16px var(--display)">{{ f.name }}</h3>
           <p style="margin:0 0 6px;color:var(--muted);font:var(--type-body-xs)">{{ f.chassis }}</p>
@@ -202,7 +219,7 @@
   <p style="max-width:900px;margin:0 0 26px;color:#a7aaa4;font:17px/1.6 var(--serif)">Concept art is graded as reference &mdash; <code style="color:var(--bone-dim);font:13px ui-monospace,SFMono-Regular,Menlo,monospace">sepia(.18) saturate(.7) contrast(1.18)</code>, the atlas-still grade &mdash; and it is applied to every plate on this page. Nothing is shown raw; the character grade stays reserved for rendered output, so the day a render appears beside a plate the two are told apart without a label.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:12px">
     <sc-for list="{{ coverageTiles }}" as="v" hint-placeholder-count="5">
-      <div style="padding:18px 20px;background:var(--glass-bg);border:1px solid var(--line);border-top:2px solid {{ v.edge }}">
+      <div style="padding:18px 20px;background:var(--glass-bg);border:1px solid var(--line)">
         <p style="margin:0 0 10px;color:var(--gold);font:var(--type-micro);letter-spacing:var(--track-micro);text-transform:uppercase">{{ v.label }}</p>
         <p style="margin:0 0 5px;color:var(--gold-bright);font:30px var(--display)">{{ v.value }}</p>
         <p style="margin:0;color:var(--muted);font:12px/1.4 var(--sans)">{{ v.note }}</p>
@@ -211,7 +228,7 @@
   </div>
   <div style="display:grid;gap:8px">
     <sc-for list="{{ artSets }}" as="s" hint-placeholder-count="6">
-      <article style="display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:14px 20px;background:var(--codex-bg);border:1px solid {{ s.edge }}">
+      <article style="display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:14px 20px;background:var(--codex-bg);border:1px solid var(--line)">
         <div>
           <h3 style="margin:0 0 4px;color:var(--bone);font:500 14px var(--display)">{{ s.name }}</h3>
           <p style="margin:0;color:var(--muted);font:13px var(--serif)">{{ s.detail }}</p>
@@ -327,7 +344,7 @@
   <p style="max-width:920px;margin:0 0 24px;color:var(--muted);font:13px/1.6 var(--sans)">One deliberate departure, stated so it is not mistaken for drift: these are living people, so no anatomical impossibility is requested. The load-bearing detail is instead evidence of a life &mdash; a hip that failed and was never set, a rope scar across both palms, a shoulder an inch higher than the other. The four readable origin plates set that precedent: ordinary anatomy carrying {{ burdenLine }}.</p>
   <div style="display:grid;gap:10px">
     <sc-for list="{{ prompts }}" as="p" hint-placeholder-count="7">
-      <article style="background:var(--glass-bg);border:1px solid var(--moss)">
+      <article style="background:var(--glass-bg);border:1px solid var(--line)">
         <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;padding:16px 20px;border-bottom:1px solid var(--line-soft)">
           <div>
             <h3 style="margin:0 0 3px;color:var(--bone-bright);font:500 18px var(--display)">{{ p.name }}</h3>
@@ -353,14 +370,14 @@
     </div>
     <p style="margin:0;color:var(--muted);font:11px var(--sans);letter-spacing:.06em;text-transform:uppercase">{{ recoveryStat }}</p>
   </div>
-  <div style="margin:0 0 26px;padding:22px 26px;background:linear-gradient(135deg,rgba(110,37,37,.14),rgba(8,12,14,.88));border:1px solid rgba(110,37,37,.46);box-shadow:inset 3px 0 var(--blood)">
+  <div style="margin:0 0 26px;padding:22px 26px;background:linear-gradient(135deg,rgba(110,37,37,.14),rgba(8,12,14,.88));border:1px solid var(--line)">
     <p style="max-width:940px;margin:0;color:#a7aaa4;font:16px/1.6 var(--serif)">I deleted <code style="color:#c98d78;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">Hollow March Character Audit.dc.html</code> as &ldquo;superseded by the Art Bible&rdquo;. It was not superseded &mdash; this page had no equivalent of its encounter-role, ecological-family or faction sections, and a project-wide search afterwards returned nothing for content that had been there an hour before. The canonical half is re-read from <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">bestiary.data.js</code> and <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">characters.js</code> at <code style="color:#b7b6ad;font:13px ui-monospace,SFMono-Regular,Menlo,monospace">main</code>, so it is exact rather than remembered. The authored movement prose was not in the repo; {{ proseLine }} survived in a search transcript and is carried verbatim. The rest is left <strong style="color:#c98d78">blank rather than rewritten</strong> &mdash; inventing a replacement for lost authored text is the same failure the law forbids for art.</p>
   </div>
 
   <p style="margin:0 0 12px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">The seven factions and what each one is hiding</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:10px;margin-bottom:34px">
     <sc-for list="{{ factions }}" as="f" hint-placeholder-count="7">
-      <article style="padding:18px 20px;background:var(--glass-bg);border:1px solid var(--gold)">
+      <article style="padding:18px 20px;background:var(--glass-bg);border:1px solid var(--line)">
         <h3 style="margin:0 0 8px;color:var(--bone-bright);font:500 16px var(--display)">{{ f.name }}</h3>
         <p style="margin:0 0 10px;color:#a7aaa4;font:italic 14px var(--serif)">{{ f.ethos }}</p>
         <dl style="display:grid;grid-template-columns:56px 1fr;gap:5px 12px;margin:0;padding-top:10px;border-top:1px solid var(--line-soft)">
@@ -390,7 +407,7 @@
   <p style="margin:0 0 12px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Twenty-one ecological families &middot; every field repo-exact</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px">
     <sc-for list="{{ families }}" as="f" hint-placeholder-count="21">
-      <article style="padding:16px 18px;background:var(--glass-bg);border:1px solid {{ f.edge }}">
+      <article style="padding:16px 18px;background:var(--glass-bg);border:1px solid var(--line)">
         <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px">
           <h3 style="margin:0 0 6px;color:var(--bone-bright);font:500 15px var(--display)">{{ f.name }}</h3>
           <span style="color:#797f7a;font:var(--type-nano);letter-spacing:var(--track-nano);text-transform:uppercase">{{ f.regionLine }}</span>
@@ -446,7 +463,7 @@
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:10px">
     <sc-for list="{{ openItems }}" as="o" hint-placeholder-count="4">
-      <article style="padding:20px 22px;background:var(--glass-bg);border:1px solid {{ o.edge }}">
+      <article style="padding:20px 22px;background:var(--glass-bg);border:1px solid var(--line)">
         <p style="margin:0 0 9px;color:{{ o.tone }};font:var(--type-micro);letter-spacing:var(--track-micro);text-transform:uppercase">{{ o.owner }}</p>
         <h3 style="margin:0 0 8px;color:var(--bone);font:500 15px var(--display)">{{ o.title }}</h3>
         <p style="margin:0 0 11px;color:#9fa59f;font:14px/1.5 var(--serif)">{{ o.detail }}</p>
@@ -807,6 +824,18 @@ class Component extends DCLogic {
       },
     ];
 
+    const spatialReferences = [
+      {
+        file: '../assets/world/spatial/world-spatial-wave-02-v9.annex.json',
+        provenance: '../assets/world/spatial/world-spatial-wave-02-v9.provenance.json',
+        name: 'World Spatial Wave 02 · Six-Site Deep Blockout',
+        band: 'GLOAMHARBOR · SLUICE CHAPEL · PALE MEASURE · ANCHOR FIELD · SMOTHERED KILN · WHITE MERIDIAN',
+        note: 'Reviewed site-local blockout data: nine frames, twelve structures, sixty-seven rooms, twenty-eight habitat placements, sixty-four utility networks, thirty-six vertical-access systems, thirty-six independent emergency stairs, and three quest crosswalks.',
+        boundary: 'Reviewed noncanonical blockout data only. Site-local fictional meters are not atlas coordinates and are never scale-compatible with the Veil diagram. Not accepted art, production geometry, runtime navigation/collision/streaming evidence, construction guidance, or engineering certification.',
+        integrity: '49,416,945 bytes · SHA-256 4ddba07f…ffe4 · 39 private locators removed',
+      },
+    ];
+
     /* Set-level counts are measured off the register, never typed. A typed
        count on this page has already been wrong once. */
     const setTally = {};
@@ -833,6 +862,7 @@ class Component extends DCLogic {
       observed,
       keyframes,
       technicalReferences,
+      spatialReferences,
       /* Derived, never typed. A hardcoded count that disagrees with the data
          is the exact failure this page legislates against — it shipped once
          already, as "Four character plates" beside a measured "3". */

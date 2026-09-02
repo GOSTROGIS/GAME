@@ -1,0 +1,52 @@
+{
+  "schema": "SableReachPublishedSpatialProvenanceV1",
+  "batchId": "world-spatial-wave-02-v9",
+  "rightsDeclaration": "Owner-authorized original project world reference for environment, habitat, interior, utility, traversal, and quest blockout use.",
+  "records": [
+    {
+      "id": "spatial_blockout_reference.world_spatial_wave_02_v9",
+      "role": "reviewed_noncanonical_spatial_blockout_reference",
+      "path": "assets/world/spatial/world-spatial-wave-02-v9.annex.json",
+      "sha256": "4ddba07f2e7c74700d021421cbc20dd0ee27e9ccef730e9258fb6cfaebb3ffe4",
+      "bytes": 49416945,
+      "generation": {
+        "tool": {
+          "name": "deterministic local spatial authoring"
+        },
+        "mode": "source-bound surgical polygon repair with locator-only public redaction",
+        "outputSha256": "4ddba07f2e7c74700d021421cbc20dd0ee27e9ccef730e9258fb6cfaebb3ffe4"
+      },
+      "reviewEvidence": {
+        "scope": "source payload before locator-only public redaction",
+        "authorFreezeSha256": "af0c6479b8f4d8b187c77425d41a79cafd0d95652fe5d285693511a6344c74f8",
+        "repairDeltaSha256": "b5e99a1b29912d690c2e6cb3cd0b6a5cac08818ec7b2acc9eff429515852b71a",
+        "reviewAManifestSha256": "37006d37fbda1947f4f102086fed908c41476a1e6f72cd4c4926cae26b4b3b44",
+        "reviewBManifestSha256": "df6dd053f50e75946022c76fdc9d69374b113a3ab36b0f443fe05f992bbf3504",
+        "reviewMode": "two independent read-only source reviews"
+      },
+      "publicRedaction": {
+        "mode": "remove unpublished workspace locator fields only",
+        "sourceSha256": "e3b27d70df0acd90f9a40dd4fa4494fdedd3d6740f4b79c3578aadb919dd24db",
+        "sourceBytes": 49420776,
+        "publishedSha256": "4ddba07f2e7c74700d021421cbc20dd0ee27e9ccef730e9258fb6cfaebb3ffe4",
+        "publishedBytes": 49416945,
+        "removedLocatorFields": 39,
+        "removedJsonPointersSha256": "724355523426819b630231dbc8e00e987ae0e8bf90484f0dffce9023e3516d30",
+        "spatialContentChanged": false,
+        "reviewMode": "independent read-only locator-delta audit"
+      },
+      "maturity": {
+        "reviewDisposition": "independently_reviewed_reference",
+        "scope": "six_site_local_meter_blockout",
+        "canonical": false,
+        "atlasExportEligible": false,
+        "exactPlacementClaim": false,
+        "runtimeIntegrated": false,
+        "productionGeometry": false,
+        "productionAsset": false,
+        "releaseReady": false,
+        "constructionReady": false
+      }
+    }
+  ]
+}

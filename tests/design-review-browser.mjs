@@ -154,10 +154,14 @@ const browser = await chromium.launch({
 const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
 const pageErrors = [];
 const providerRequests = [];
+const spatialAnnexRequests = [];
 page.on('pageerror', (error) => pageErrors.push(error.message));
 page.on('request', (request) => {
   if (/googleusercontent|drive\.google|\/thumbnail\?id=/i.test(request.url())) {
     providerRequests.push(request.url());
+  }
+  if (/world-spatial-wave-02-v9\.annex\.json/i.test(request.url())) {
+    spatialAnnexRequests.push(request.url());
   }
 });
 
@@ -228,6 +232,10 @@ try {
   assert.match(surfaces[1].text, /hm-concept-art\.js/);
   assert.match(surfaces[1].text, /technicalReferences/);
   assert.match(surfaces[1].text, /veil-coast-gloamharbor-tide-refuge-blueprint-v14\.png/);
+  assert.match(surfaces[1].text, /spatialReferences/);
+  assert.match(surfaces[1].text, /world-spatial-wave-02-v9\.annex\.json/);
+  assert.match(surfaces[1].text, /Reviewed noncanonical blockout data only/);
+  assert.match(surfaces[1].text, /Not accepted art, production geometry, runtime navigation\/collision\/streaming evidence/);
   for (const surface of surfaces) {
     assert.doesNotMatch(surface.text, /googleusercontent|drive\.google|thumbnail\?id=/i);
   }
@@ -253,9 +261,25 @@ try {
   assert.deepEqual({ width: integratedTechnicalReference.width, height: integratedTechnicalReference.height }, { width: 1536, height: 1024 });
   assert.ok(integratedTechnicalReference.src.startsWith(`${baseUrl}/assets/world/technical/`));
 
+  const integratedSpatialReference = await page.evaluate(() => {
+    const link = [...document.links].find(({ href }) => href.endsWith('/assets/world/spatial/world-spatial-wave-02-v9.annex.json'));
+    const article = link?.closest('article');
+    return {
+      href: link?.href ?? null,
+      text: article?.textContent ?? '',
+      imageCount: article?.querySelectorAll('img').length ?? -1,
+    };
+  });
+  assert.equal(integratedSpatialReference.href, `${baseUrl}/assets/world/spatial/world-spatial-wave-02-v9.annex.json`);
+  assert.match(integratedSpatialReference.text, /Six-Site Deep Blockout/);
+  assert.match(integratedSpatialReference.text, /site-local fictional meters are not atlas coordinates/i);
+  assert.match(integratedSpatialReference.text, /Not accepted art/);
+  assert.equal(integratedSpatialReference.imageCount, 0);
+
   assert.deepEqual(providerRequests, []);
+  assert.deepEqual(spatialAnnexRequests, [], 'The 49 MB spatial annex must remain on demand and must not be fetched during Art Bible hydration');
   assert.deepEqual(pageErrors, []);
-  console.log(JSON.stringify({ valid: true, ...result, providerRequests, pageErrors }, null, 2));
+  console.log(JSON.stringify({ valid: true, ...result, providerRequests, spatialAnnexRequests, pageErrors }, null, 2));
 } catch (error) {
   testFailure = error;
   throw error;

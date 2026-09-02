@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 import { BESTIARY, ENEMY_FAMILIES } from '../packages/content/src/bestiary.data.js';
 import { EXPANSION_CREATURES, EXPANSION_QUESTS } from '../packages/content/src/narrative.data.js';
+import { redactedJsonPointers } from '../tools/worldgen/redact-world-spatial-wave-02-v9.mjs';
 import {
   BUILDING_TYPOLOGIES,
   ENVIRONMENT_ART_DIRECTION,
@@ -31,8 +32,10 @@ import {
 
 const repositoryRoot = fileURLToPath(new URL('../', import.meta.url));
 const atlas = JSON.parse(readFileSync(new URL('../packages/content/manifests/sable-reach.atlas-runtime.json', import.meta.url), 'utf8'));
+const worldSpatialModuleSource = readFileSync(new URL('../packages/content/src/world-spatial.data.js', import.meta.url), 'utf8');
 const ids = (records, field = 'id') => new Set(records.map((record) => record[field]));
 const equalSets = (left, right) => left.size === right.size && [...left].every((value) => right.has(value));
+const valueAtPointer = (value, pointer) => pointer.slice(1).split('/').reduce((current, segment) => current?.[segment.replaceAll('~1', '/').replaceAll('~0', '~')], value);
 
 const validation = validateWorldSpatialFoundation();
 assert.equal(validation.valid, true, JSON.stringify(validation.errors, null, 2));
@@ -184,6 +187,118 @@ assert.equal(veilTechnicalReference.technicalReadiness, false);
 assert.ok(veilTechnicalReference.limitations.some((value) => value.includes('not GIS')));
 assert.ok(veilTechnicalReference.limitations.some((value) => value.includes('gameplay')));
 assert.ok(veilTechnicalReference.limitations.some((value) => value.includes('accessibility-code')));
+
+const spatialBlockoutReferences = ENVIRONMENT_ART_DIRECTION.acceptedSpatialBlockoutReferences;
+assert.equal(spatialBlockoutReferences.length, 1);
+const wave02SpatialReference = spatialBlockoutReferences[0];
+assert.equal(wave02SpatialReference.id, 'technical_world_spatial_wave_02_v9');
+assert.equal(wave02SpatialReference.status, 'approved_noncanonical_blockout_reference');
+assert.equal(wave02SpatialReference.referenceScope, 'six_site_executable_spatial_contract');
+assert.equal(wave02SpatialReference.coordinateSemantics, 'site_local_fictional_meters_not_atlas_coordinates');
+assert.equal(wave02SpatialReference.canonical, false);
+assert.equal(wave02SpatialReference.atlasExportEligible, false);
+assert.equal(wave02SpatialReference.exactPlacementClaim, false);
+assert.equal(wave02SpatialReference.runtimeIntegrated, false);
+assert.equal(wave02SpatialReference.productionGeometry, false);
+assert.equal(wave02SpatialReference.productionAsset, false);
+assert.equal(wave02SpatialReference.releaseReady, false);
+assert.equal(wave02SpatialReference.constructionReady, false);
+assert.deepEqual(wave02SpatialReference.reviewedRepairEvidence, {
+  sourceStationContacts: '132/144',
+  acceptedStationContacts: '144/144',
+  repairedSystems: 10,
+  repairedTransitions: 12,
+  changedPolygonRoots: 24,
+  changedPrimitiveLeaves: 80,
+  outsideAllowlistChanges: 0,
+});
+assert.ok(wave02SpatialReference.limitations.some((value) => value.includes('not canonical atlas placement')));
+assert.ok(wave02SpatialReference.limitations.some((value) => value.includes('runtime navigation')));
+assert.ok(wave02SpatialReference.limitations.some((value) => value.includes('structural')));
+assert.doesNotMatch(worldSpatialModuleSource, /^import .*world-spatial-wave-02-v9\.annex\.json/m, 'The 49 MB annex must remain an on-demand asset rather than a default runtime import');
+
+const wave02AnnexBytes = readFileSync(`${repositoryRoot}${wave02SpatialReference.path}`);
+assert.equal(wave02AnnexBytes.length, 49_416_945);
+assert.equal(createHash('sha256').update(wave02AnnexBytes).digest('hex'), wave02SpatialReference.sha256);
+assert.doesNotMatch(wave02AnnexBytes.toString('utf8'), /["']work[\\/]/i, 'Published annex must not expose an unpublished workspace locator');
+const wave02Annex = JSON.parse(wave02AnnexBytes.toString('utf8'));
+assert.equal(wave02Annex.schema, 'SableReachWorldSpatialWave02V8Annex', 'v9 is a surgical successor and must not relabel the frozen v8 schema');
+assert.equal(wave02Annex.authorSelfApproval, false);
+assert.equal(wave02Annex.integrationAuthorized, false);
+assert.equal(wave02Annex.releaseReady, false);
+assert.equal(wave02Annex.constructionReady, false);
+assert.match(wave02Annex.candidateStatus, /PENDING_TWO_NEW_INDEPENDENT_REVIEWS/, 'Source-authored predecessor status must remain intact in the locator-redacted derivative; later review disposition belongs to the sidecar');
+assert.equal(redactedJsonPointers.length, 39);
+for (const pointer of redactedJsonPointers) assert.equal(valueAtPointer(wave02Annex, pointer), undefined, `${pointer} must be absent from the published derivative`);
+
+const expectedWave02SiteIds = ['site.anchor-field', 'site.gloamharbor', 'site.pale-measure', 'site.sluice-chapel', 'site.smothered-kiln', 'site.white-meridian'];
+assert.deepEqual(wave02Annex.sitePrograms.map(({ siteId }) => siteId).sort(), expectedWave02SiteIds);
+assert.deepEqual([...wave02SpatialReference.siteIds].sort(), expectedWave02SiteIds);
+const sumWave02 = (select) => wave02Annex.sitePrograms.reduce((total, site) => total + select(site), 0);
+const wave02Stairs = wave02Annex.sitePrograms.flatMap(({ accessibilitySystems }) => accessibilitySystems.emergencyStairRegistry);
+const wave02Frames = wave02Annex.sitePrograms.flatMap(({ frames }) => frames);
+const wave02Counts = {
+  frames: sumWave02(({ frames }) => frames.length),
+  structures: sumWave02(({ structures }) => structures.length),
+  rooms: sumWave02(({ structures }) => structures.reduce((total, structure) => total + structure.rooms.length, 0)),
+  habitats: sumWave02(({ habitats }) => habitats.length),
+  hazards: sumWave02(({ hazards }) => hazards.length),
+  utilityNetworks: sumWave02(({ utilityNetworks }) => utilityNetworks.length),
+  utilityNodes: sumWave02(({ utilityNetworks }) => utilityNetworks.reduce((total, network) => total + network.nodes.length, 0)),
+  utilityEdges: sumWave02(({ utilityNetworks }) => utilityNetworks.reduce((total, network) => total + network.edges.length, 0)),
+  serviceProfiles: sumWave02(({ serviceProfiles }) => serviceProfiles.length),
+  roles: sumWave02(({ operations }) => operations.roles.length),
+  operatingTasks: sumWave02(({ operations }) => operations.tasks.length),
+  spatialDomains: sumWave02(({ geometry }) => geometry.domains.length),
+  spatialNodes: sumWave02(({ geometry }) => geometry.nodes.length),
+  spatialRoutes: sumWave02(({ geometry }) => geometry.routes.length),
+  safeCells: sumWave02(({ geometry }) => geometry.safeCells.length),
+  stateGates: sumWave02(({ geometry }) => geometry.stateGates.length),
+  thresholds: sumWave02(({ geometry }) => geometry.thresholds.length),
+  verticalAccessSystems: sumWave02(({ accessibilitySystems }) => accessibilitySystems.verticalAccessSystems.length),
+  emergencyStairs: wave02Stairs.length,
+  emergencyStairFlights: wave02Stairs.reduce((total, stair) => total + stair.flights.length, 0),
+  emergencyStairTreads: wave02Stairs.reduce((total, stair) => total + stair.flights.reduce((flightTotal, flight) => flightTotal + flight.treads.length, 0), 0),
+  emergencyStairSupports: sumWave02(({ accessibilitySystems }) => accessibilitySystems.emergencyStairSupportRegistry.length),
+  landingPlatforms: sumWave02(({ accessibilitySystems }) => accessibilitySystems.landingPlatformRegistry.length),
+  questCrosswalks: wave02Annex.sitePrograms.filter(({ questAuthority }) => questAuthority && Object.keys(questAuthority).length).length,
+};
+assert.deepEqual(wave02Counts, wave02SpatialReference.counts);
+assert.equal(wave02Stairs.reduce((total, stair) => total + stair.stationLandings.length, 0), 144);
+assert.ok(wave02Stairs.every(({ reachesEveryStation }) => reachesEveryStation === true));
+assert.ok(wave02Frames.every(({ atlasExportEligible, originGlobalCoordinate }) => atlasExportEligible === false && originGlobalCoordinate === null));
+
+const wave02Provenance = JSON.parse(readFileSync(`${repositoryRoot}${wave02SpatialReference.provenancePath}`, 'utf8'));
+assert.equal(wave02Provenance.schema, 'SableReachPublishedSpatialProvenanceV1');
+assert.equal(wave02Provenance.records.length, 1);
+const wave02ProvenanceRecord = wave02Provenance.records[0];
+assert.equal(wave02ProvenanceRecord.path, wave02SpatialReference.path);
+assert.equal(wave02ProvenanceRecord.bytes, wave02AnnexBytes.length);
+assert.equal(wave02ProvenanceRecord.sha256, wave02SpatialReference.sha256);
+assert.deepEqual(wave02ProvenanceRecord.reviewEvidence, {
+  scope: 'source payload before locator-only public redaction',
+  authorFreezeSha256: 'af0c6479b8f4d8b187c77425d41a79cafd0d95652fe5d285693511a6344c74f8',
+  repairDeltaSha256: 'b5e99a1b29912d690c2e6cb3cd0b6a5cac08818ec7b2acc9eff429515852b71a',
+  reviewAManifestSha256: '37006d37fbda1947f4f102086fed908c41476a1e6f72cd4c4926cae26b4b3b44',
+  reviewBManifestSha256: 'df6dd053f50e75946022c76fdc9d69374b113a3ab36b0f443fe05f992bbf3504',
+  reviewMode: 'two independent read-only source reviews',
+});
+assert.deepEqual(wave02ProvenanceRecord.publicRedaction, {
+  mode: 'remove unpublished workspace locator fields only',
+  sourceSha256: 'e3b27d70df0acd90f9a40dd4fa4494fdedd3d6740f4b79c3578aadb919dd24db',
+  sourceBytes: 49_420_776,
+  publishedSha256: '4ddba07f2e7c74700d021421cbc20dd0ee27e9ccef730e9258fb6cfaebb3ffe4',
+  publishedBytes: 49_416_945,
+  removedLocatorFields: 39,
+  removedJsonPointersSha256: '724355523426819b630231dbc8e00e987ae0e8bf90484f0dffce9023e3516d30',
+  spatialContentChanged: false,
+  reviewMode: 'independent read-only locator-delta audit',
+});
+assert.equal(createHash('sha256').update([...redactedJsonPointers].sort().join('\n')).digest('hex'), wave02ProvenanceRecord.publicRedaction.removedJsonPointersSha256);
+assert.equal(wave02ProvenanceRecord.maturity.canonical, false);
+assert.equal(wave02ProvenanceRecord.maturity.runtimeIntegrated, false);
+assert.equal(wave02ProvenanceRecord.maturity.productionGeometry, false);
+assert.equal(wave02ProvenanceRecord.maturity.constructionReady, false);
 
 const publishedSurface = JSON.stringify(WORLD_SPATIAL_FOUNDATION);
 assert.doesNotMatch(publishedSurface, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);

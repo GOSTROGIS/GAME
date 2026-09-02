@@ -15,13 +15,14 @@ The world remains fictional. Exact atlas values are modeled design coordinates, 
 
 ## Authority and maturity
 
-Every spatial fact carries one of three authority levels.
+Every spatial fact carries one of four authority levels.
 
 | Level | Meaning | Coordinate rule |
 |---|---|---|
 | `canon` | Accepted GAME canon or an accepted modeled atlas fact | Exact modeled coordinates may be preserved, but they remain `fictional_modeled_not_measured` |
 | `authored_design_constraint` | A production constraint derived from canon | Ranges, capacities, relationships, room graphs, and envelopes are allowed; they are not surveyed facts |
 | `provisional_placement` | A reserved location or boundary not yet fixed by the atlas coordinator | No invented exact atlas point; only host region/site, dimensions, topology, and design intent |
+| `reference` | Independently reviewed supporting material that explains an accepted constraint without becoming canon geometry | May visualize relationships or use declared local/diagram coordinates, but cannot establish surveyed placement, atlas meters, or runtime geometry |
 
 Maturity is independent of authority. A canonical site may be `world_data_only`; a provisional quest location may still be `authored_blockout_contract`; a beautiful keyframe does not make terrain or architecture production-ready.
 
@@ -388,6 +389,21 @@ Gloamharbor's tide-refuge precinct has one independently reviewed two-dimensiona
 
 Build the first graybox from the JSON graph and use the PNG to audit adjacency and route continuity. Treat every JSON x/y value as a diagram pixel, never a world meter. Do not infer surveyed/GIS placement, CAD or structural detail, final construction dimensions, accessibility compliance, room dressing, mood, façade design, collision, navigation, runtime behavior, gameplay behavior, 3D readiness, or production readiness from it. It is not the missing Veil Coast environment keyframe. Generated Veil atmosphere and Mirror-Salt candidates remain unaccepted.
 
+### Reviewed six-site executable blockout reference
+
+Claude Design can open `assets/world/spatial/world-spatial-wave-02-v9.annex.json` on demand for the independently reviewed, noncanonical deep blockout of Gloamharbor, Sluice Chapel, Pale Measure, Anchor Field, Smothered Kiln, and White Meridian. The exact published 49,416,945-byte privacy-redacted derivative is bound by SHA-256 `4ddba07f2e7c74700d021421cbc20dd0ee27e9ccef730e9258fb6cfaebb3ffe4`; `assets/world/spatial/world-spatial-wave-02-v9.provenance.json` binds it to the reviewed source hash, proves that only 39 unpublished workspace locator fields were removed, and records the maturity boundaries.
+
+The reference contains nine local frames, 12 structures, 67 authored rooms, 28 exact local habitat placements, 24 localized hazards, 64 utility networks with 1,529 nodes and 1,247 edges, 69 service profiles, 30 operating roles, 67 tasks, 378 spatial domains, 1,783 nodes, 1,465 routes, 62 safe cells, 51 state gates, 389 thresholds, 36 vertical-access systems, and 36 separate emergency stairs. The stair systems serialize 402 flights, 3,360 treads, 72 supports, and 144 landing platforms. Its three older quest crosswalks address Sluice Chapel, Smothered Kiln, and White Meridian.
+
+Source precedence is strict:
+
+1. The canonical atlas and accepted GAME site records own world placement.
+2. `packages/content/manifests/quest-wave-04-v11.world.json` owns its twelve provisional Wave 04 quest-environment contracts.
+3. The world-v9 annex deepens six existing sites and three earlier quest crosswalks as reviewed noncanonical blockout evidence.
+4. The Veil topology remains a five-cell diagram-pixel reference and must never be scaled or aligned onto the annex's site-local meter frame.
+
+The v9 repair closes 12 formerly disconnected station arrivals across ten access systems, yielding 144/144 station contacts while changing only 24 allowlisted polygon roots. This improves the blockout evidence; it does not make the annex canonical atlas geometry, exact placement, runtime-integrated geometry, a production asset, release-ready, or construction-ready. Final structural, accessibility, fire, geotechnical, code, construction, navigation, collision, streaming, traversal, and performance validation remain unresolved.
+
 ## Streaming and LOD
 
 | Ring | Distance | Required state |
@@ -405,7 +421,7 @@ Current inherited ceilings include 700 visible draw calls at high quality, 18 vi
 
 For any region, site, creature, building, or quest:
 
-1. Resolve the machine record by canonical ID. For Wave 04 full-detail work, open `packages/content/manifests/quest-wave-04-v11.world.json` explicitly rather than relying on its compact spatial index.
+1. Resolve the machine record by canonical ID. For Wave 04 full-detail work, open `packages/content/manifests/quest-wave-04-v11.world.json` explicitly rather than relying on its compact spatial index. For one of the six reviewed deep-blockout sites, open `assets/world/spatial/world-spatial-wave-02-v9.annex.json` on demand and retain its noncanonical local-frame boundary.
 2. Read authority and maturity before using coordinates or claiming readiness.
 3. Build graybox from route, room graph, threshold, utility, and design-envelope records.
 4. Place semantic anchors before detailed props.
@@ -422,6 +438,7 @@ For any region, site, creature, building, or quest:
 - Site influence radii are production envelopes, not final settlement boundaries.
 - Veil Coast and Mirror-Salt lack accepted standalone environment keyframes; Veil Coast has only the separately scoped Gloamharbor topology blockout reference described above.
 - Local terrain, bridge geometry, navmesh, crowd schedules, scent simulation, and room meshes outside existing prototypes are not production-ready.
+- The six-site world-v9 packet is reviewed noncanonical blockout evidence only; it does not establish atlas placement, production geometry, runtime behavior, or engineering compliance.
 - Mobile Charnel interiors require a runtime ingress/egress transform contract before seamless streaming can be claimed.
 - Population ranges require simulation and performance validation before becoming spawn schedules.
 - Thermal bands, visibility ranges, LOD rings, and building dimensions are authored constraints subject to blockout tests, not climatic or surveyed measurements.
