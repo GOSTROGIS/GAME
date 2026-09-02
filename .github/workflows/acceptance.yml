@@ -96,7 +96,7 @@ jobs:
           Write-Output "Verified $($required.Count) hydrated LFS payloads against canonical pointers"
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: 11.19.0
           run_install: false
