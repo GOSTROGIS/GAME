@@ -19,6 +19,17 @@ const PROJECT_ART_METADATA = Object.freeze({
   approvalStatus: "approved_direction",
 });
 
+const TECHNICAL_REFERENCE_METADATA = Object.freeze({
+  provenance: "Owner-authorized original project reference; public records retain repository-relative, content-addressed evidence only.",
+  rightsNote: "Owner-authorized original project topology reference for environment blockout.",
+  maturity: "independently_reviewed_2d_topology_reference_not_production",
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+  technicalReadiness: false,
+  approvalStatus: "approved_2d_topology_reference",
+});
+
 export const WORLD_CONCEPT_ASSETS = Object.freeze([
   {
     id: "concept_hearthmere_hold",
@@ -130,6 +141,53 @@ export const WORLD_SOURCE_ASSETS = Object.freeze([
   },
 ]);
 
+export const WORLD_TECHNICAL_ASSETS = Object.freeze([
+  {
+    id: "technical_veil_coast_gloamharbor_tide_refuge",
+    territoryId: "territory.veil-coast",
+    siteId: "site.gloamharbor",
+    subjectId: "gloamharbor_tide_refuge_precinct",
+    path: "./assets/world/technical/veil-coast-gloamharbor-tide-refuge-blueprint-v14.png",
+    topologyPath: "./assets/world/technical/veil-coast-gloamharbor-tide-refuge-topology-v14.json",
+    ...TECHNICAL_REFERENCE_METADATA,
+    dimensions: Object.freeze({ width: 1536, height: 1024 }),
+    referenceScope: "site_interior_circulation",
+    exactAtlasCoordinate: null,
+    coordinateSemantics: "diagram_pixels_not_meters",
+    generationTool: "deterministic_local_vector_renderer",
+    generationMode: "source_defined_rasterization",
+    sha256: "9784d16b16b5905aa2dbf43cbea32701f68c70eaf955199822ba4583a29d67ab",
+    topologySha256: "0accae6f553bc87cedab082453ed7bd91d44b1991a72add2eb6b6e344f8b9b9a",
+    reviewAFreezeSha256: "f3b4186f316e56f4ccbba7659af2c8dc49be6584370c71434072dd8784aa03de",
+    reviewBFreezeSha256: "66f49d6d11f1a3cc2b3fc8097c746a6f50c39cdde255a74e82d9b85b466fbcda",
+    type: "environment_topology_blueprint",
+    use: Object.freeze([
+      "five_cell_adjacency",
+      "continuous_step_free_bell_route",
+      "independent_right_boardwalk",
+      "roof_and_canopy_coverage",
+      "utility_chain_separation",
+    ]),
+    claims: Object.freeze({
+      cells: 5,
+      internalOpenings: 4,
+      exteriorDoors: 2,
+      frontExteriorDoors: 1,
+      wheelchairRouteNodes: 13,
+      wheelchairRouteEdges: 12,
+      rightBoardwalkNodes: 5,
+      rightBoardwalkEdges: 4,
+      completeSeparateUtilities: 2,
+    }),
+    limitations: Object.freeze([
+      "Not an environment keyframe or mood reference.",
+      "Not CAD, structural, construction, accessibility-code, GIS, runtime, collision, navigation, gameplay, or 3D authority.",
+      "All JSON x/y values are diagram pixels, never world meters.",
+      "Does not establish an exact atlas coordinate, final dimensions, construction detail, or production readiness.",
+    ]),
+  },
+]);
+
 export const REGION_ASSET_KITS = Object.freeze([
   kit(
     "hearthmere", "Hearthmere Hold", "concept_hearthmere_hold",
@@ -227,5 +285,19 @@ export function validateWorldAssets() {
     if (concept.referenceScope === "quest_location" && (!concept.locationId || !concept.questId)) errors.push(`Quest-location concept ${concept.id} lacks canonical links`);
   }
   for (const source of WORLD_SOURCE_ASSETS) if (!conceptIds.has(source.replacedBy)) errors.push(`Source ${source.id} has unresolved replacement ${source.replacedBy}`);
+  const technicalIds = new Set();
+  for (const reference of WORLD_TECHNICAL_ASSETS) {
+    if (technicalIds.has(reference.id)) errors.push(`Duplicate technical reference: ${reference.id}`);
+    technicalIds.add(reference.id);
+    if (!reference.path || !reference.topologyPath || !reference.sha256 || !reference.topologySha256) errors.push(`Technical reference ${reference.id} lacks content-addressed files`);
+    const { width, height } = reference.dimensions ?? {};
+    if (!Number.isInteger(width) || !Number.isInteger(height) || Math.min(width, height) < 768 || Math.max(width, height) > 4096) errors.push(`Technical reference ${reference.id} has unexpected dimensions`);
+    if (reference.approvalStatus !== "approved_2d_topology_reference" || reference.referenceScope !== "site_interior_circulation") errors.push(`Technical reference ${reference.id} overstates or obscures its accepted scope`);
+    if (reference.runtimeBackdrop || reference.runtimeIntegrated || reference.productionAsset || reference.technicalReadiness) errors.push(`Technical reference ${reference.id} makes a false implementation claim`);
+    if (reference.exactAtlasCoordinate !== null) errors.push(`Technical reference ${reference.id} claims an unreviewed atlas coordinate`);
+    if (reference.coordinateSemantics !== "diagram_pixels_not_meters") errors.push(`Technical reference ${reference.id} obscures diagram-coordinate semantics`);
+    if (reference.claims?.cells !== 5 || reference.claims?.internalOpenings !== 4 || reference.claims?.completeSeparateUtilities !== 2) errors.push(`Technical reference ${reference.id} lost reviewed topology claims`);
+    if (!Array.isArray(reference.limitations) || reference.limitations.length < 3) errors.push(`Technical reference ${reference.id} lacks explicit non-authority boundaries`);
+  }
   return { valid: errors.length === 0, errors };
 }

@@ -5,7 +5,7 @@ import { DEFAULT_CHARACTER, validateCharacter, characterSilhouette } from "../sr
 import { BESTIARY, ENEMY_FAMILIES, validateBestiary } from "../src/data/bestiary.js";
 import { CHARACTERS, CHARACTER_RELATIONSHIPS, FACTIONS, STORY_STATE_DEFAULTS, validateCharacters } from "../src/data/characters.js";
 import { SKILL_TREES, SKILL_ACTIONS, CROSS_SKILL_SYNERGIES, MASTERY_TRIALS, validateSkillTrees } from "../src/data/skillTrees.js";
-import { WORLD_CONCEPT_ASSETS, WORLD_SOURCE_ASSETS, REGION_ASSET_KITS, validateWorldAssets } from "../src/data/worldAssets.js";
+import { WORLD_CONCEPT_ASSETS, WORLD_SOURCE_ASSETS, WORLD_TECHNICAL_ASSETS, REGION_ASSET_KITS, validateWorldAssets } from "../src/data/worldAssets.js";
 import { ENCOUNTERS, ENCOUNTER_SPAWNS, validateEncounterSpawns, validateEncounterGroups } from "../src/data/encounters.js";
 import { ENEMY_DEFINITIONS, ENEMY_REGISTRY, ITEM_REGISTRY, CHARACTER_DEFINITIONS, validateRegistries } from "../src/data/registries.js";
 import { validateContentGraph, validatePermanentInteractionLayout } from "../src/data/contentGraph.js";
@@ -79,11 +79,18 @@ check(ENCOUNTERS.length === 7 && validateEncounterGroups().valid, "Expected seve
 check(ENEMY_DEFINITIONS.every(({ runtime }) => runtime?.maxHealth > 0 && runtime?.damage > 0), "A canonical enemy lacks runtime tuning");
 check(CHARACTER_DEFINITIONS.every(({ regionId }) => typeof regionId === "string"), "A canonical character lacks a region");
 check(Object.keys(ITEM_REGISTRY).length >= 200, "Canonical item registry is unexpectedly small");
-for (const asset of [...WORLD_CONCEPT_ASSETS, ...WORLD_SOURCE_ASSETS]) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset.path)), `Missing world asset ${asset.path}`);
+for (const asset of [...WORLD_CONCEPT_ASSETS, ...WORLD_SOURCE_ASSETS, ...WORLD_TECHNICAL_ASSETS]) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset.path)), `Missing world asset ${asset.path}`);
+for (const asset of WORLD_TECHNICAL_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset.topologyPath)), `Missing world topology source ${asset.topologyPath}`);
 for (const asset of CHARACTER_RENDER_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset)), `Missing character render ${asset}`);
 check(REGION_ASSET_KITS.length === 5, "Expected five production regional asset kits");
 check(new Set(WORLD_CONCEPT_ASSETS.map(({ id }) => id)).size === WORLD_CONCEPT_ASSETS.length, "World concept IDs must be unique");
 check(WORLD_CONCEPT_ASSETS.length === 6, "Expected six accepted world concept references");
+check(WORLD_TECHNICAL_ASSETS.length === 1, "Expected one accepted world technical reference");
+const veilTechnicalReference = WORLD_TECHNICAL_ASSETS.find(({ id }) => id === "technical_veil_coast_gloamharbor_tide_refuge");
+check(veilTechnicalReference?.approvalStatus === "approved_2d_topology_reference", "Veil technical reference must retain its reviewed 2D-only status");
+check(veilTechnicalReference?.claims?.cells === 5 && veilTechnicalReference?.claims?.internalOpenings === 4, "Veil technical reference lost reviewed cell topology");
+check(veilTechnicalReference?.runtimeIntegrated === false && veilTechnicalReference?.productionAsset === false && veilTechnicalReference?.technicalReadiness === false, "Veil technical reference overstated implementation readiness");
+check(veilTechnicalReference?.coordinateSemantics === "diagram_pixels_not_meters", "Veil technical reference must not expose diagram coordinates as world meters");
 check(REGION_ASSET_KITS.find(({ id }) => id === "graven_march")?.reference === "concept_graven_march_black_pine_occlusion_basin", "Graven March must resolve its accepted regional keyframe");
 check(WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_graven_march_black_pine_occlusion_basin")?.runtimeBackdrop === true, "Graven March keyframe must declare its legacy runtime use");
 check(REGION_ASSET_KITS.find(({ id }) => id === "hollow_abbey")?.reference === "concept_hollow_abbey_nave", "Cathedral quest art must not replace Hollow Abbey's regional keyframe");
@@ -278,6 +285,7 @@ const result = {
   encounterSpawns: ENCOUNTER_SPAWNS.length,
   encounterGroups: ENCOUNTERS.length,
   worldConcepts: WORLD_CONCEPT_ASSETS.length,
+  worldTechnicalReferences: WORLD_TECHNICAL_ASSETS.length,
   characterRenders: CHARACTER_RENDER_ASSETS.length,
   contentGraph: graph.summary,
   failures,
