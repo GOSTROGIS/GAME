@@ -15,7 +15,7 @@
     "build": "pnpm -r --if-present build",
     "test": "pnpm test:integration-paths && pnpm test:narrative && pnpm test:world-spatial && pnpm test:design-review && node tests/art-index.mjs && node tests/data.mjs && node tests/smoke.mjs",
     "test:narrative": "node tests/narrative-expansion.mjs && node tests/quest-release-ledger.mjs && node tests/quest-wave-04-runtime.mjs",
-    "test:world-spatial": "node tests/world-spatial.mjs && node tests/quest-wave-04-projections.mjs",
+    "test:world-spatial": "node tests/world-spatial.mjs && node tests/world-spatial-wave-03a.mjs && node tests/quest-wave-04-projections.mjs",
     "test:design-review": "node tests/design-review-registry.mjs && node tests/design-review-browser.mjs && node tests/quest-wave-04-package.mjs",
     "test:legacy": "node tests/data.mjs && node tests/smoke.mjs",
     "test:assets": "node tests/raster-art-validator.mjs && node tests/concept-art-privacy.mjs && node tools/assets/validate-raster-art.mjs --strict-provenance && node tools/assets/validate-concept-art-privacy.mjs && node tools/assets/validate-lfs-forward-repair.mjs --require-resolved && node tools/assets/validate.mjs && node tools/assets/validate-prototypes.mjs && node tests/assets3d.mjs",
