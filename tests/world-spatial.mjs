@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 import { BESTIARY, ENEMY_FAMILIES } from '../packages/content/src/bestiary.data.js';
 import { EXPANSION_CREATURES, EXPANSION_QUESTS } from '../packages/content/src/narrative.data.js';
-import { WORLD_SPATIAL_BLOCKOUT_ASSETS } from '../src/data/worldAssets.js';
+import { WORLD_CONCEPT_ASSETS, WORLD_SPATIAL_BLOCKOUT_ASSETS } from '../src/data/worldAssets.js';
 import { inspectPng } from '../tools/assets/validate-raster-art.mjs';
 import { redactedJsonPointers } from '../tools/worldgen/redact-world-spatial-wave-02-v9.mjs';
 import {
@@ -297,7 +297,7 @@ assert.equal(hollowFoundryReference?.promptPacketPath, 'assets/world/prompts/wor
 assert.deepEqual(hollowFoundryReference?.use, ['f01_f08_operational_chain', 'seven_silence_rooms_simultaneous_read', 'deaf_worker_blackwater_ripple_sightline', 'funeral_route_bypasses_molten_floor', 'rain_open_casting_lantern_seven_baffles', 'worker_egress_clearance_repair_and_weathering']);
 assert.match(hollowFoundryReference?.visualReviewBoundary ?? '', /static or animated scene readiness/);
 assert.doesNotMatch(artBibleSource, /No provenance sidecars|Vendored, and still without provenance/);
-assert.match(artBibleSource, /list="\{\{ keyframes \}\}" as="k" hint-placeholder-count="12"/);
+assert.match(artBibleSource, /list="\{\{ keyframes \}\}" as="k" hint-placeholder-count="13"/);
 
 const worldPromptPacketPath = 'assets/world/prompts/world-environments.current.batch-02.prompt-packets.json';
 const worldProvenancePath = 'assets/world/world-environments.current.batch-02.provenance.json';
@@ -613,6 +613,102 @@ assert.equal(foundryRecord.maturity.runtimeIntegrated, false);
 assert.equal(foundryRecord.maturity.productionAsset, false);
 assert.deepEqual(foundryRecord.sourceReferences, foundryPrompt.sourceReferences);
 for (const publishedValue of stringLeaves({ foundryPromptPacket, foundryProvenance })) {
+  assert.doesNotMatch(publishedValue, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);
+}
+
+const hearthmereCivicAsset = WORLD_CONCEPT_ASSETS.find(({ id }) => id === 'concept_hearthmere_civic_spring_spine');
+assert.ok(hearthmereCivicAsset);
+assert.equal(hearthmereCivicAsset.environmentId, 'environment.hearthmere-hold-civic-spring-spine');
+assert.equal(hearthmereCivicAsset.regionId, 'hearthmere');
+assert.equal(hearthmereCivicAsset.siteId, 'site.hearthmere');
+assert.equal(hearthmereCivicAsset.locationId, 'hearthmere_civic_spring_spine');
+assert.equal(hearthmereCivicAsset.referenceScope, 'site_civic_exterior');
+assert.equal(hearthmereCivicAsset.runtimeBackdrop, false);
+assert.equal(hearthmereCivicAsset.runtimeIntegrated, false);
+assert.equal(hearthmereCivicAsset.productionAsset, false);
+assert.match(artBibleSource, /hearthmere-civic-spring-spine-v1\.png/);
+assert.match(artBibleSource, /world-environments\.current\.batch-05\.provenance\.json/);
+
+const hearthmerePromptPacketPath = 'assets/world/prompts/world-environments.current.batch-05.prompt-packets.json';
+const hearthmereProvenancePath = 'assets/world/world-environments.current.batch-05.provenance.json';
+const hearthmerePromptPacket = JSON.parse(readFileSync(`${repositoryRoot}${hearthmerePromptPacketPath}`, 'utf8'));
+const hearthmereProvenance = JSON.parse(readFileSync(`${repositoryRoot}${hearthmereProvenancePath}`, 'utf8'));
+assert.equal(hearthmerePromptPacket.schema, 'SableReachPublicPromptPacketV1');
+assert.equal(hearthmerePromptPacket.records.length, 1);
+assert.equal(hearthmereProvenance.schema, 'SableReachPublishedArtProvenanceV1');
+assert.equal(hearthmereProvenance.records.length, 1);
+assert.equal(hearthmereProvenance.promptSource, hearthmerePromptPacketPath);
+assert.equal(hearthmerePromptPacket.publication.privateExecutionContextPublished, false);
+assert.equal(hearthmerePromptPacket.publication.externalProviderIdentifiersPublished, false);
+assert.equal(hearthmerePromptPacket.publication.supersededRevisionInputsPublished, false);
+const hearthmerePrompt = hearthmerePromptPacket.records[0];
+const hearthmereRecord = hearthmereProvenance.records[0];
+assert.equal(hearthmerePrompt.id, 'prompt.environment.hearthmere_civic_spring_spine');
+assert.equal(hearthmerePrompt.assetPath, hearthmereCivicAsset.path.replace(/^\.\//, ''));
+assert.equal(hearthmerePrompt.bodyStatus, 'exact_accepted_generator_revised_prompt_body');
+assert.equal(hearthmerePrompt.canonicalPublicDirection.length, 2623);
+assert.equal(sha256(hearthmerePrompt.canonicalPublicDirection), hearthmerePrompt.promptSha256);
+assert.equal(hearthmerePrompt.promptSha256, 'ea8266cdf3984dee3a11da727515d69ae1f5287575780243f46ea17a791c639e');
+assert.deepEqual(hearthmerePrompt.lineage.map(({ stage, bodyStatus, canonicalPublicDirection, promptSha256 }) => ({
+  stage,
+  bodyStatus,
+  length: canonicalPublicDirection.length,
+  promptSha256,
+  validHash: sha256(canonicalPublicDirection) === promptSha256,
+})), [
+  { stage: 'base_generation', bodyStatus: 'exact_generator_revised_prompt_body', length: 7779, promptSha256: '9e2a0015ebb1f8e10857d45aed11aa111d05e88d6d07a727d92032ec8682b0a9', validHash: true },
+  { stage: 'corrective_revision', bodyStatus: 'exact_generator_revised_prompt_body', length: 4606, promptSha256: '97294f5ad2864ff5d0278ae634a011f9b363da242dc7418aedccb51fe431a859', validHash: true },
+  { stage: 'accepted_surgical_revision', bodyStatus: 'exact_accepted_generator_revised_prompt_body', length: 2623, promptSha256: 'ea8266cdf3984dee3a11da727515d69ae1f5287575780243f46ea17a791c639e', validHash: true },
+]);
+assert.deepEqual(hearthmerePrompt.sourceReferences, ['assets/world/hearthmere-hold.png']);
+assert.equal(hearthmerePrompt.unpublishedInput.count, 2);
+assert.equal(hearthmereRecord.id, 'environment_keyframe.hearthmere_civic_spring_spine');
+assert.equal(hearthmereRecord.promptRecordId, hearthmerePrompt.id);
+assert.equal(hearthmereRecord.promptSha256, hearthmerePrompt.promptSha256);
+assert.equal(hearthmereRecord.path, hearthmerePrompt.assetPath);
+assert.equal(hearthmereRecord.path, hearthmereCivicAsset.path.replace(/^\.\//, ''));
+const hearthmereBytes = readFileSync(`${repositoryRoot}${hearthmereRecord.path}`);
+assert.equal(hearthmereBytes.length, 3207738);
+assert.equal(hearthmereBytes.length, hearthmereRecord.bytes);
+assert.ok(hearthmereBytes.length <= 8 * 1024 * 1024);
+assert.equal(sha256(hearthmereBytes), hearthmereRecord.sha256);
+assert.equal(hearthmereRecord.sha256, hearthmereCivicAsset.sha256);
+assert.deepEqual(pngDimensions(hearthmereBytes), { width: 1536, height: 1024 });
+const hearthmereRaster = inspectPng(hearthmereBytes);
+assert.deepEqual(
+  {
+    width: hearthmereRaster.width,
+    height: hearthmereRaster.height,
+    bitDepth: hearthmereRaster.bitDepth,
+    colorType: hearthmereRaster.colorType,
+    interlace: hearthmereRaster.interlace,
+    hasAlphaChannel: hearthmereRaster.hasAlphaChannel,
+    chunkTypes: hearthmereRaster.chunkTypes,
+  },
+  {
+    width: 1536,
+    height: 1024,
+    bitDepth: 8,
+    colorType: 2,
+    interlace: 0,
+    hasAlphaChannel: false,
+    chunkTypes: ['IHDR', 'IDAT', 'IEND'],
+  },
+);
+assert.equal(hearthmereRecord.colorSpace, 'sRGB');
+assert.equal(hearthmereRecord.alphaPolicy, 'opaque');
+assert.equal(hearthmereRecord.regionId, 'hearthmere');
+assert.equal(hearthmereRecord.siteId, 'site.hearthmere');
+assert.equal(hearthmereRecord.locationId, 'hearthmere_civic_spring_spine');
+assert.equal(hearthmereRecord.generation.outputSha256, hearthmereRecord.sha256);
+assert.equal(hearthmereRecord.reviewEvidence.reviewMode, 'two independent read-only visual reviews plus coordinator verification');
+assert.equal(hearthmereRecord.reviewEvidence.accepted, true);
+assert.match(hearthmereRecord.reviewEvidence.boundary, /static or animated scene readiness/);
+assert.equal(hearthmereRecord.maturity.runtimeBackdrop, false);
+assert.equal(hearthmereRecord.maturity.runtimeIntegrated, false);
+assert.equal(hearthmereRecord.maturity.productionAsset, false);
+assert.deepEqual(hearthmereRecord.sourceReferences, hearthmerePrompt.sourceReferences);
+for (const publishedValue of stringLeaves({ hearthmerePromptPacket, hearthmereProvenance })) {
   assert.doesNotMatch(publishedValue, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);
 }
 

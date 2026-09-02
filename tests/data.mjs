@@ -87,13 +87,20 @@ for (const asset of WORLD_TECHNICAL_ASSETS) check(existsSync(resolve(new URL("..
 for (const asset of CHARACTER_RENDER_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset)), `Missing character render ${asset}`);
 check(REGION_ASSET_KITS.length === 5, "Expected five production regional asset kits");
 check(new Set(WORLD_CONCEPT_ASSETS.map(({ id }) => id)).size === WORLD_CONCEPT_ASSETS.length, "World concept IDs must be unique");
-check(WORLD_CONCEPT_ASSETS.length === 12, "Expected twelve accepted world concept references");
+check(WORLD_CONCEPT_ASSETS.length === 13, "Expected thirteen accepted world concept references");
 check(WORLD_TECHNICAL_ASSETS.length === 1, "Expected one accepted world technical reference");
 check(WORLD_SPATIAL_BLOCKOUT_ASSETS.length === 3, "Expected three reviewed world spatial blockout references");
 check(new Set(WORLD_SPATIAL_BLOCKOUT_ASSETS.map(({ id }) => id)).size === WORLD_SPATIAL_BLOCKOUT_ASSETS.length, "World spatial blockout IDs must be unique");
 check(WORLD_SPATIAL_BLOCKOUT_ASSETS.every(({ authority, runtimeIntegrated, constructionReady, productionGeometry, staticScene, animatedScene, releaseReady }) => authority === "independently_reviewed_noncanonical_reference" && !runtimeIntegrated && !constructionReady && !productionGeometry && !staticScene && !animatedScene && !releaseReady), "Spatial blockout registry overstates authority or implementation readiness");
 const wardenExterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_warden_reed_four_bank_visibility_exterior");
 const wardenInterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_warden_reed_stilt_service_house_interior");
+const hearthmereCivic = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_hearthmere_civic_spring_spine");
+check(Boolean(hearthmereCivic), "Hearthmere civic spring direction is missing");
+check(hearthmereCivic?.path === "./assets/world/hearthmere-civic-spring-spine-v1.png" && hearthmereCivic?.sha256 === "d8f74db7b7bb138475b15d64d0ee86f779804bafa6b6054afbc0adb46e310a79" && hearthmereCivic?.bytes === 3207738, "Hearthmere civic spring content-addressed evidence changed");
+check(hearthmereCivic?.dimensions?.width === 1536 && hearthmereCivic?.dimensions?.height === 1024 && hearthmereCivic?.colorSpace === "sRGB" && hearthmereCivic?.alphaPolicy === "opaque", "Hearthmere civic spring raster contract changed");
+check(hearthmereCivic?.environmentId === "environment.hearthmere-hold-civic-spring-spine" && hearthmereCivic?.siteId === "site.hearthmere" && hearthmereCivic?.locationId === "hearthmere_civic_spring_spine", "Hearthmere civic spring content binding changed");
+check(hearthmereCivic?.referenceScope === "site_civic_exterior" && hearthmereCivic?.runtimeBackdrop === false && hearthmereCivic?.runtimeIntegrated === false && hearthmereCivic?.productionAsset === false, "Hearthmere civic spring overstates implementation readiness");
+check(JSON.stringify(hearthmereCivic?.use) === JSON.stringify(["civic_spring_spine", "three_route_hierarchy", "resident_scale", "spring_runoff_separation", "working_civic_artifacts", "hearthmere_material_law"]), "Hearthmere civic spring accepted-use boundary changed");
 check(Boolean(wardenExterior && wardenInterior), "Warden Reed exterior/interior direction pair is incomplete");
 for (const [asset, expected] of [
   [wardenExterior, { path: "./assets/world/warden-reed-four-bank-visibility-exterior-v1.png", sha256: "52d94e5252c7f4935772daaa970b58668ea82746491a969d0cad616403eaf17e", bytes: 2709612, scope: "quest_location_exterior" }],
