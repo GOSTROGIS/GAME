@@ -352,6 +352,19 @@ Repairs are additive. New work never erases the silhouette of the harm it addres
 
 Accepted visual direction is indexed by repository-relative paths and content hashes in the machine module. Six accepted keyframes cover Hearthmere, Dunmire, Cinderward, Hollow Abbey, and the Graven March, plus the Cathedral of Six Rehearsed Dawns as quest-location direction. The Cathedral does not replace Hollow Abbey's regional keyframe or claim production geometry. Veil Coast and Mirror-Salt still need independently reviewed standalone keyframes; their data and art laws exist, but no image is claimed as accepted here.
 
+### Accepted technical blockout reference
+
+Gloamharbor's tide-refuge precinct has one independently reviewed two-dimensional topology reference at `assets/world/technical/veil-coast-gloamharbor-tide-refuge-blueprint-v14.png`, paired with the exact machine-readable topology at `assets/world/technical/veil-coast-gloamharbor-tide-refuge-topology-v14.json`. It is a Claude Design blockout aid for the following reviewed relationships:
+
+- five adjacent refuge cells joined by four literal internal openings;
+- one front exterior door at Cell 1 and one right exterior door at Cell 5;
+- a 13-node, 12-edge continuous step-free route from the wheelchair landing to the bell;
+- an independent five-node right boardwalk that does not rejoin the frontage or touch the Cell 1 approach canopy;
+- a main roof, Cell 1 approach canopy, and separate right-boardwalk canopy covering their assigned circulation;
+- one pale gutter/cistern chain and one bronze source/refill/lamp chain kept visibly distinct.
+
+Build the first graybox from the JSON graph and use the PNG to audit adjacency and route continuity. Treat every JSON x/y value as a diagram pixel, never a world meter. Do not infer surveyed/GIS placement, CAD or structural detail, final construction dimensions, accessibility compliance, room dressing, mood, façade design, collision, navigation, runtime behavior, gameplay behavior, 3D readiness, or production readiness from it. It is not the missing Veil Coast environment keyframe. Generated Veil atmosphere and Mirror-Salt candidates remain unaccepted.
+
 ## Streaming and LOD
 
 | Ring | Distance | Required state |
@@ -384,7 +397,7 @@ For any region, site, creature, building, or quest:
 
 - No exact atlas coordinates exist yet for the 37 expansion quest locations.
 - Site influence radii are production envelopes, not final settlement boundaries.
-- Veil Coast and Mirror-Salt lack accepted standalone environment keyframes.
+- Veil Coast and Mirror-Salt lack accepted standalone environment keyframes; Veil Coast has only the separately scoped Gloamharbor topology blockout reference described above.
 - Local terrain, bridge geometry, navmesh, crowd schedules, scent simulation, and room meshes outside existing prototypes are not production-ready.
 - Mobile Charnel interiors require a runtime ingress/egress transform contract before seamless streaming can be claimed.
 - Population ranges require simulation and performance validation before becoming spawn schedules.

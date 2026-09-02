@@ -191,9 +191,32 @@ try {
   });
   assert.match(surfaces[0].text, /REG\.bestiary/);
   assert.match(surfaces[1].text, /hm-concept-art\.js/);
+  assert.match(surfaces[1].text, /technicalReferences/);
+  assert.match(surfaces[1].text, /veil-coast-gloamharbor-tide-refuge-blueprint-v14\.png/);
   for (const surface of surfaces) {
     assert.doesNotMatch(surface.text, /googleusercontent|drive\.google|thumbnail\?id=/i);
   }
+
+  const technicalReferenceImage = await page.evaluate(() => new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve({ width: image.naturalWidth, height: image.naturalHeight, src: image.currentSrc || image.src });
+    image.onerror = () => reject(new Error('Veil technical reference failed to load'));
+    image.src = '/assets/world/technical/veil-coast-gloamharbor-tide-refuge-blueprint-v14.png';
+  }));
+  assert.deepEqual({ width: technicalReferenceImage.width, height: technicalReferenceImage.height }, { width: 1536, height: 1024 });
+  assert.ok(technicalReferenceImage.src.startsWith(`${baseUrl}/assets/world/technical/`));
+
+  await page.goto(`${baseUrl}/design-review/Hollow%20March%20Art%20Bible.dc.html`, { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => {
+    const image = [...document.images].find(({ alt }) => alt === 'Gloamharbor tide-refuge five-cell topology blueprint');
+    return image?.complete && image.naturalWidth === 1536 && image.naturalHeight === 1024;
+  }, null, { timeout: 30_000 });
+  const integratedTechnicalReference = await page.evaluate(() => {
+    const image = [...document.images].find(({ alt }) => alt === 'Gloamharbor tide-refuge five-cell topology blueprint');
+    return { width: image.naturalWidth, height: image.naturalHeight, src: image.currentSrc || image.src };
+  });
+  assert.deepEqual({ width: integratedTechnicalReference.width, height: integratedTechnicalReference.height }, { width: 1536, height: 1024 });
+  assert.ok(integratedTechnicalReference.src.startsWith(`${baseUrl}/assets/world/technical/`));
 
   assert.deepEqual(providerRequests, []);
   assert.deepEqual(pageErrors, []);

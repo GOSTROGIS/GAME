@@ -1,0 +1,51 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "world-technical-references-batch-01",
+  "rightsDeclaration": "Owner-authorized original project reference for environment topology and blockout use.",
+  "records": [
+    {
+      "id": "environment_topology_blueprint.veil_coast_gloamharbor_tide_refuge",
+      "subjectId": "gloamharbor_tide_refuge_precinct",
+      "familyId": "world_technical_references",
+      "rank": "site_interior",
+      "role": "technical_topology_blueprint",
+      "path": "assets/world/technical/veil-coast-gloamharbor-tide-refuge-blueprint-v14.png",
+      "sha256": "9784d16b16b5905aa2dbf43cbea32701f68c70eaf955199822ba4583a29d67ab",
+      "bytes": 43128,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Deterministic topology specification retained as repository-relative JSON; no provider execution context applies.",
+      "generation": {
+        "tool": {
+          "name": "deterministic local vector renderer"
+        },
+        "mode": "source-defined rasterization",
+        "outputSha256": "9784d16b16b5905aa2dbf43cbea32701f68c70eaf955199822ba4583a29d67ab"
+      },
+      "sourceReferences": [
+        {
+          "path": "assets/world/technical/veil-coast-gloamharbor-tide-refuge-topology-v14.json",
+          "sha256": "0accae6f553bc87cedab082453ed7bd91d44b1991a72add2eb6b6e344f8b9b9a",
+          "bytes": 7052
+        }
+      ],
+      "reviewEvidence": {
+        "reviewAFreezeSha256": "f3b4186f316e56f4ccbba7659af2c8dc49be6584370c71434072dd8784aa03de",
+        "reviewBFreezeSha256": "66f49d6d11f1a3cc2b3fc8097c746a6f50c39cdde255a74e82d9b85b466fbcda"
+      },
+      "maturity": {
+        "topologyReference": "authored_and_independently_reviewed",
+        "scope": "two_dimensional_blockout_only",
+        "environmentKeyframe": false,
+        "runtimeBackdrop": false,
+        "runtimeIntegrated": false,
+        "productionAsset": false,
+        "technicalReadiness": false
+      }
+    }
+  ]
+}

@@ -44,6 +44,11 @@ export const SPATIAL_AUTHORITY_LEVELS = deepFreeze([
     meaning: "A location or boundary reserved for production but not yet fixed by the atlas coordinator.",
     coordinateRule: "Must not expose an invented exact atlas point; use a host region/site and a design envelope only.",
   },
+  {
+    id: "reference",
+    meaning: "Human-readable or independently reviewed supporting material that explains an accepted constraint without becoming canon geometry.",
+    coordinateRule: "May visualize relationships or diagram coordinates, but cannot establish surveyed/GIS placement, world meters, or runtime geometry.",
+  },
 ]);
 
 export const VEYL_PROJECTED_CRS = deepFreeze({
@@ -868,6 +873,29 @@ export const ENVIRONMENT_ART_DIRECTION = deepFreeze({
     { id: "concept_graven_march_black_pine_occlusion_basin", path: "assets/world/graven-march-black-pine-occlusion-basin-v5.png", sha256: "8b756803451bbd6893c445a36303c9a7b0b4c0736b98c0d64e4204f777ab9b76", status: "approved_direction", referenceScope: "regional_quest_location", locationId: "graven_march_black_pine_occlusion_basin", exactCoordinate: null, runtimeBackdrop: true, productionAsset: false, use: ["basin topology", "winter road closure", "ecological absence", "five black-pine shadow bands"] },
     { id: "concept_cathedral_six_rehearsed_dawns", path: "assets/world/cathedral-six-rehearsed-dawns-v2.png", sha256: "5c2ab84059a4e62234f5c63fdfaffa9eb226ebe1d3ea11d53a2dea26cd11221c", status: "approved_direction", referenceScope: "quest_location", locationId: "cathedral_of_six_rehearsed_dawns", exactCoordinate: null, runtimeBackdrop: false, productionAsset: false, use: ["six refusal bays", "Lucent material law", "arrested-contact hand canopy", "service-release circulation"] },
   ],
+  acceptedTechnicalReferences: [
+    {
+      id: "technical_veil_coast_gloamharbor_tide_refuge",
+      territoryId: "territory.veil-coast",
+      siteId: "site.gloamharbor",
+      subjectId: "gloamharbor_tide_refuge_precinct",
+      imagePath: "assets/world/technical/veil-coast-gloamharbor-tide-refuge-blueprint-v14.png",
+      imageSha256: "9784d16b16b5905aa2dbf43cbea32701f68c70eaf955199822ba4583a29d67ab",
+      topologyPath: "assets/world/technical/veil-coast-gloamharbor-tide-refuge-topology-v14.json",
+      topologySha256: "0accae6f553bc87cedab082453ed7bd91d44b1991a72add2eb6b6e344f8b9b9a",
+      status: "approved_2d_topology_reference",
+      referenceScope: "site_interior_circulation",
+      exactCoordinate: null,
+      coordinateSemantics: "diagram_pixels_not_meters",
+      environmentKeyframe: false,
+      runtimeBackdrop: false,
+      runtimeIntegrated: false,
+      productionAsset: false,
+      technicalReadiness: false,
+      use: ["five-cell adjacency", "continuous step-free bell route", "independent right boardwalk", "roof and canopy coverage", "separate utility chains"],
+      limitations: ["not a keyframe or mood reference", "not GIS or surveyed placement; JSON x/y values are diagram pixels, never meters", "not CAD, structural, construction, or accessibility-code authority", "not collision, navigation, runtime, gameplay, 3D, or production authority"],
+    },
+  ],
 });
 
 export const WORLD_STREAMING_AND_LOD = deepFreeze({
@@ -1217,6 +1245,8 @@ export const WORLD_SPATIAL_SOURCE_LEDGER = deepFreeze([
   { path: "src/data/worldAssets.js", role: "accepted regional environment language and runtime budgets", authority: "canon" },
   { path: "packages/content/manifests/hearthmere.scene.json", role: "canonical local chunk and prototype spatial contract", authority: "canon" },
   { path: "design-review/SABLE-REACH-NARRATIVE-BIBLE.md", role: "human narrative and faction context", authority: "reference" },
+  { path: "assets/world/technical/veil-coast-gloamharbor-tide-refuge-topology-v14.json", role: "independently reviewed Gloamharbor two-dimensional topology contract", authority: "reference" },
+  { path: "assets/world/technical/veil-coast-gloamharbor-tide-refuge-blueprint-v14.png", role: "independently reviewed Gloamharbor two-dimensional topology visualization", authority: "reference" },
 ]);
 
 const idsEqual = (left, right) => left.size === right.size && [...left].every((id) => right.has(id));

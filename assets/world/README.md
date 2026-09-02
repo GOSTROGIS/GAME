@@ -2,13 +2,19 @@
 
 These images are owner-authorized original project environment references. The public record is intentionally limited to repository-relative paths, content hashes, dimensions, prompt hashes when available, generic tool/mode, rights, approval, and maturity. Runtime metadata, hashes, regional kit IDs, and approval states live in `src/data/worldAssets.js`.
 
+## Technical topology references
+
+`technical/veil-coast-gloamharbor-tide-refuge-blueprint-v14.png` and its exact source contract, `technical/veil-coast-gloamharbor-tide-refuge-topology-v14.json`, are an independently reviewed two-dimensional blockout reference for Gloamharbor's tide-refuge precinct. The reference fixes five-cell adjacency, four internal openings, two exterior doors, a continuous step-free bell route, a separate right boardwalk, roof/canopy coverage, and two distinct utility chains.
+
+This technical reference is not an environment keyframe, mood reference, surveyed/GIS plan, CAD or structural drawing, construction specification, accessibility-code certification, runtime layout, collision/navmesh source, gameplay authority, 3D model, or production-ready asset. Every JSON x/y value is a diagram pixel, never a world meter. Its atlas coordinate and final construction dimensions remain unresolved. The generated atmospheric Veil image and all Mirror-Salt candidates remain outside the accepted public set.
+
 ## Generation mode
 
 - Generic mode: new image generation for Hearthmere, Dunmire, and Hollow Abbey.
 - Generic revision mode: precise reference edit for the accepted Cinderward, Graven March, and Cathedral images.
 - Shared art direction: production environment concept, readable third-person action-RPG traversal and combat routes, grounded dark fantasy materials, cold desaturated atmosphere with restrained warm accents, no logos, captions, UI, or watermarks.
 
-All accepted files are direction and blockout references. The five regional references are also used as legacy 2D runtime backdrops; the Cathedral remains direction-only. None claims final coordinates, collision, navigation, meshes, animation, LOD, or production readiness.
+All accepted keyframes are direction and blockout references. The five regional references are also used as legacy 2D runtime backdrops; the Cathedral remains direction-only. The separate Veil technical reference is topology-only. None claims final coordinates, collision, navigation, meshes, animation, LOD, or production readiness.
 
 ## Prompt records
 

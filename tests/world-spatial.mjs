@@ -15,6 +15,7 @@ import {
   REGION_SPATIAL_PROFILES,
   SITE_ACTIVITY_CYCLES,
   SITE_SPATIAL_ENVELOPES,
+  SPATIAL_AUTHORITY_LEVELS,
   TRAVERSAL_NETWORK,
   VEYL_PROJECTED_CRS,
   WORLD_SPATIAL_BY_EXPANSION_CREATURE_ID,
@@ -124,10 +125,12 @@ assert.equal(WORLD_SPATIAL_BY_QUEST_ID.get('main_noon_came_bleeding')?.locationI
 assert.equal(WORLD_SPATIAL_BY_FAMILY_ID.get('cairn_beasts')?.formIds.length, 10);
 assert.equal(WORLD_SPATIAL_BY_EXPANSION_CREATURE_ID.get('elsewhere_calf')?.placement.exactCoordinate, null);
 
+const spatialAuthorityIds = ids(SPATIAL_AUTHORITY_LEVELS);
 for (const source of WORLD_SPATIAL_SOURCE_LEDGER) {
   assert.equal(source.path.startsWith('/'), false);
   assert.equal(source.path.includes('\\'), false);
   assert.equal(existsSync(`${repositoryRoot}${source.path}`), true, `Missing redacted source-ledger path ${source.path}`);
+  assert.equal(spatialAuthorityIds.has(source.authority), true, `Unknown source-ledger authority ${source.authority}`);
 }
 
 const visualReferences = ENVIRONMENT_ART_DIRECTION.acceptedVisualReferences;
@@ -149,6 +152,30 @@ assert.equal(cathedralReference?.locationId, 'cathedral_of_six_rehearsed_dawns')
 assert.equal(cathedralReference?.exactCoordinate, null);
 assert.equal(cathedralReference?.runtimeBackdrop, false);
 assert.equal(cathedralReference?.productionAsset, false);
+
+const technicalReferences = ENVIRONMENT_ART_DIRECTION.acceptedTechnicalReferences;
+assert.equal(technicalReferences.length, 1);
+const veilTechnicalReference = technicalReferences[0];
+assert.equal(veilTechnicalReference.id, 'technical_veil_coast_gloamharbor_tide_refuge');
+assert.equal(veilTechnicalReference.territoryId, 'territory.veil-coast');
+assert.equal(veilTechnicalReference.siteId, 'site.gloamharbor');
+assert.equal(veilTechnicalReference.subjectId, 'gloamharbor_tide_refuge_precinct');
+assert.equal(REGION_SPATIAL_PROFILES.some(({ id }) => id === veilTechnicalReference.territoryId), true);
+assert.equal(SITE_SPATIAL_ENVELOPES.some(({ id, territoryId }) => id === veilTechnicalReference.siteId && territoryId === veilTechnicalReference.territoryId), true);
+assert.equal(createHash('sha256').update(readFileSync(`${repositoryRoot}${veilTechnicalReference.imagePath}`)).digest('hex'), veilTechnicalReference.imageSha256);
+assert.equal(createHash('sha256').update(readFileSync(`${repositoryRoot}${veilTechnicalReference.topologyPath}`)).digest('hex'), veilTechnicalReference.topologySha256);
+assert.equal(veilTechnicalReference.status, 'approved_2d_topology_reference');
+assert.equal(veilTechnicalReference.referenceScope, 'site_interior_circulation');
+assert.equal(veilTechnicalReference.exactCoordinate, null);
+assert.equal(veilTechnicalReference.coordinateSemantics, 'diagram_pixels_not_meters');
+assert.equal(veilTechnicalReference.environmentKeyframe, false);
+assert.equal(veilTechnicalReference.runtimeBackdrop, false);
+assert.equal(veilTechnicalReference.runtimeIntegrated, false);
+assert.equal(veilTechnicalReference.productionAsset, false);
+assert.equal(veilTechnicalReference.technicalReadiness, false);
+assert.ok(veilTechnicalReference.limitations.some((value) => value.includes('not GIS')));
+assert.ok(veilTechnicalReference.limitations.some((value) => value.includes('gameplay')));
+assert.ok(veilTechnicalReference.limitations.some((value) => value.includes('accessibility-code')));
 
 const publishedSurface = JSON.stringify(WORLD_SPATIAL_FOUNDATION);
 assert.doesNotMatch(publishedSurface, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);

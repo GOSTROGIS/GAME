@@ -1,0 +1,137 @@
+{
+  "schema": "SableReachEnvironmentTopologyBlueprintV14",
+  "assetId": "veil-coast-gloamharbor-tide-refuge-precinct-technical-axonometric-v14",
+  "version": 14,
+  "canvas": { "width": 1536, "height": 1024 },
+  "authority": {
+    "reviewAFreezeSha256": "b91aceb74f983a8610a6d52f248d36669f351366739d29252976700b279c0dc5",
+    "requirementsReportSha256": "486eb8e756416d2430360623159e0a4580add84f03f2a5ae395b7f6d9c8f8a70",
+    "retainedExteriorSha256": "7f4aa0fe89696cae69f480998e95ada02ccb65163df1d04a693ffdad277d6ffc",
+    "priorTechnicalSha256": "d1da3382574041282709212027ff22b2584d4e1b056950ee3217099da60cc228"
+  },
+  "orientation": { "rear": "top", "front": "bottom", "right": "right" },
+  "building": { "x": 270, "y": 240, "width": 900, "height": 380 },
+  "cells": [
+    { "id": "cell-1", "rank": 1, "rect": [270, 240, 180, 380] },
+    { "id": "cell-2", "rank": 2, "rect": [450, 240, 180, 380] },
+    { "id": "cell-3", "rank": 3, "rect": [630, 240, 180, 380] },
+    { "id": "cell-4", "rank": 4, "rect": [810, 240, 180, 380] },
+    { "id": "cell-5", "rank": 5, "rect": [990, 240, 180, 380] }
+  ],
+  "partitions": [
+    { "id": "partition-1-2", "between": ["cell-1", "cell-2"], "x": 450, "span": [240, 620], "opening": { "id": "opening-1-2", "interval": [355, 435] } },
+    { "id": "partition-2-3", "between": ["cell-2", "cell-3"], "x": 630, "span": [240, 620], "opening": { "id": "opening-2-3", "interval": [355, 435] } },
+    { "id": "partition-3-4", "between": ["cell-3", "cell-4"], "x": 810, "span": [240, 620], "opening": { "id": "opening-3-4", "interval": [355, 435] } },
+    { "id": "partition-4-5", "between": ["cell-4", "cell-5"], "x": 990, "span": [240, 620], "opening": { "id": "opening-4-5", "interval": [355, 435] } }
+  ],
+  "outerWalls": [
+    { "id": "rear-wall", "axis": "h", "fixed": 240, "segments": [[270, 1170]] },
+    { "id": "front-wall", "axis": "h", "fixed": 620, "segments": [[270, 315], [385, 1170]] },
+    { "id": "left-wall", "axis": "v", "fixed": 270, "segments": [[240, 620]] },
+    { "id": "right-wall", "axis": "v", "fixed": 1170, "segments": [[240, 355], [435, 620]] }
+  ],
+  "exteriorDoors": [
+    { "id": "cell-1-front-door", "cellId": "cell-1", "wall": "front", "interval": [315, 385], "center": [350, 620], "material": "dark-lashed-timber" },
+    { "id": "cell-5-right-door", "cellId": "cell-5", "wall": "right", "interval": [355, 435], "center": [1170, 395], "material": "dark-lashed-timber", "literalParts": ["void", "left-jamb", "right-jamb", "lintel", "wall-thickness", "threshold"] }
+  ],
+  "route": {
+    "id": "wheelchair-bell-route",
+    "nodes": [
+      { "id": "wheelchair-landing", "point": [350, 835], "coveredBy": "cell1-approach-canopy" },
+      { "id": "approach-bend", "point": [350, 730], "coveredBy": "cell1-approach-canopy" },
+      { "id": "cell-1-front-door", "point": [350, 620], "coveredBy": "cell1-approach-canopy" },
+      { "id": "cell-1-route", "point": [350, 500], "coveredBy": "main-building-roof" },
+      { "id": "opening-1-2", "point": [450, 395], "coveredBy": "main-building-roof" },
+      { "id": "cell-2-route", "point": [540, 395], "coveredBy": "main-building-roof" },
+      { "id": "opening-2-3", "point": [630, 395], "coveredBy": "main-building-roof" },
+      { "id": "cell-3-route", "point": [720, 395], "coveredBy": "main-building-roof" },
+      { "id": "opening-3-4", "point": [810, 395], "coveredBy": "main-building-roof" },
+      { "id": "cell-4-route", "point": [900, 395], "coveredBy": "main-building-roof" },
+      { "id": "opening-4-5", "point": [990, 395], "coveredBy": "main-building-roof" },
+      { "id": "cell-5-route", "point": [1080, 395], "coveredBy": "main-building-roof" },
+      { "id": "bell-contact", "point": [1110, 315], "coveredBy": "main-building-roof" }
+    ],
+    "edges": [
+      ["wheelchair-landing", "approach-bend"],
+      ["approach-bend", "cell-1-front-door"],
+      ["cell-1-front-door", "cell-1-route"],
+      ["cell-1-route", "opening-1-2"],
+      ["opening-1-2", "cell-2-route"],
+      ["cell-2-route", "opening-2-3"],
+      ["opening-2-3", "cell-3-route"],
+      ["cell-3-route", "opening-3-4"],
+      ["opening-3-4", "cell-4-route"],
+      ["cell-4-route", "opening-4-5"],
+      ["opening-4-5", "cell-5-route"],
+      ["cell-5-route", "bell-contact"]
+    ],
+    "surface": "continuous-step-free-timber"
+  },
+  "rightBoardwalk": {
+    "id": "cell5-independent-right-boardwalk",
+    "nodes": [
+      { "id": "cell-5-right-door", "point": [1170, 395], "coveredBy": "right-boardwalk-canopy" },
+      { "id": "right-boardwalk-east", "point": [1260, 395], "coveredBy": "right-boardwalk-canopy" },
+      { "id": "right-boardwalk-turn", "point": [1360, 395], "coveredBy": "right-boardwalk-canopy" },
+      { "id": "right-boardwalk-south", "point": [1360, 650], "coveredBy": "right-boardwalk-canopy" },
+      { "id": "right-isolated-landing", "point": [1360, 775], "coveredBy": "right-boardwalk-canopy" }
+    ],
+    "edges": [
+      ["cell-5-right-door", "right-boardwalk-east"],
+      ["right-boardwalk-east", "right-boardwalk-turn"],
+      ["right-boardwalk-turn", "right-boardwalk-south"],
+      ["right-boardwalk-south", "right-isolated-landing"]
+    ],
+    "surface": "continuous-step-free-timber",
+    "mustNotContact": ["cell1-approach-canopy", "front-wall"]
+  },
+  "canopies": [
+    { "id": "main-building-roof", "rects": [[250, 220, 940, 420]], "construction": "attached-black-tar-roof" },
+    { "id": "cell1-approach-canopy", "rects": [[290, 590, 120, 285]], "construction": "attached-black-tar-canopy" },
+    { "id": "right-boardwalk-canopy", "rects": [[1150, 350, 230, 100], [1310, 350, 100, 470]], "construction": "separate-black-tar-canopy" }
+  ],
+  "frontage": {
+    "solidSegments": [[270, 315], [385, 1170]],
+    "doorGaps": [[315, 385]],
+    "exteriorDeckOrAisle": false
+  },
+  "fixtures": [
+    { "id": "bell", "cellId": "cell-5", "point": [1110, 315] },
+    { "id": "wheelchair", "point": [350, 835] }
+  ],
+  "utilities": [
+    {
+      "id": "pale-gutter-cistern-chain",
+      "material": "pale-metal",
+      "nodes": [
+        { "id": "gutter-inlet", "point": [300, 175] },
+        { "id": "gutter-mid", "point": [720, 175] },
+        { "id": "downpipe", "point": [1120, 175] },
+        { "id": "cistern", "point": [1225, 175] }
+      ],
+      "edges": [["gutter-inlet", "gutter-mid"], ["gutter-mid", "downpipe"], ["downpipe", "cistern"]]
+    },
+    {
+      "id": "bronze-source-refill-lamp-chain",
+      "material": "bronze",
+      "nodes": [
+        { "id": "bronze-source", "point": [280, 85] },
+        { "id": "refill-bench", "point": [560, 85] },
+        { "id": "lamp-header", "point": [850, 85] },
+        { "id": "lamp-bank", "point": [1110, 85] }
+      ],
+      "edges": [["bronze-source", "refill-bench"], ["refill-bench", "lamp-header"], ["lamp-header", "lamp-bank"]]
+    }
+  ],
+  "forbidden": [
+    "frontage-bypass",
+    "frontage-deck",
+    "extra-exterior-door",
+    "uncovered-wheelchair-route",
+    "solid-cell5-right-wall",
+    "boardwalk-frontage-rejoin",
+    "text",
+    "labels",
+    "arrows"
+  ]
+}
