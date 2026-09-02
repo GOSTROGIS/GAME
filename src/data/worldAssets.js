@@ -19,6 +19,17 @@ const PROJECT_ART_METADATA = Object.freeze({
   approvalStatus: "approved_direction",
 });
 
+const DIRECTION_ONLY_ART_METADATA = Object.freeze({
+  revision: 1,
+  provenance: "Owner-authorized original project art; public records retain repository-relative, content-addressed evidence only.",
+  rightsNote: "Owner-authorized original project art for environment direction and blockout reference.",
+  maturity: "approved_environment_direction_not_runtime_or_production",
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+  approvalStatus: "approved_direction",
+});
+
 const TECHNICAL_REFERENCE_METADATA = Object.freeze({
   provenance: "Owner-authorized original project reference; public records retain repository-relative, content-addressed evidence only.",
   rightsNote: "Owner-authorized original project topology reference for environment blockout.",
@@ -123,6 +134,48 @@ export const WORLD_CONCEPT_ASSETS = Object.freeze([
     type: "environment_keyframe",
     use: ["six_refusal_bays", "arrested_contact_geometry", "lucent_material_law", "service_release_route"],
     promptSummary: "Lucent doctrinal interior with six distinct refusal bays, a central pressure vessel, a restrained hand canopy stopped one finger-width away, and a dark service-release route.",
+  },
+  {
+    id: "concept_warden_reed_four_bank_visibility_exterior",
+    environmentId: "environment.warden-reed-four-bank-visibility",
+    regionId: "dunmire",
+    siteId: "site.warden-reed",
+    locationId: "warden_reed_four_bank_visibility",
+    questId: "regional_the_fog_came_to_collect_our_outlines",
+    path: "./assets/world/warden-reed-four-bank-visibility-exterior-v1.png",
+    ...DIRECTION_ONLY_ART_METADATA,
+    dimensions: Object.freeze({ width: 1536, height: 1024 }),
+    bytes: 2709612,
+    colorSpace: "sRGB",
+    alphaPolicy: "opaque",
+    referenceScope: "quest_location_exterior",
+    generationTool: "built_in_image_generation",
+    generationMode: "new_image",
+    sha256: "52d94e5252c7f4935772daaa970b58668ea82746491a969d0cad616403eaf17e",
+    type: "environment_keyframe",
+    use: ["four_bank_visibility", "public_service_route_separation", "fog_wayfinding", "stilt_settlement_materials"],
+    promptSummary: "Occupied four-bank Warden Reed settlement with a single civic escrow frame, separate public, service, ferry, and high-rope routes, blackwater stilt foundations, guide lanterns, and accountable fog visibility.",
+  },
+  {
+    id: "concept_warden_reed_stilt_service_house_interior",
+    environmentId: "environment.warden-reed-four-bank-visibility",
+    regionId: "dunmire",
+    siteId: "site.warden-reed",
+    locationId: "warden_reed_four_bank_visibility",
+    questId: "regional_the_fog_came_to_collect_our_outlines",
+    path: "./assets/world/warden-reed-stilt-service-house-interior-v1.png",
+    ...DIRECTION_ONLY_ART_METADATA,
+    dimensions: Object.freeze({ width: 1536, height: 1024 }),
+    bytes: 2729693,
+    colorSpace: "sRGB",
+    alphaPolicy: "opaque",
+    referenceScope: "quest_location_interior",
+    generationTool: "built_in_image_generation",
+    generationMode: "reference_guided_new_image",
+    sha256: "5494c36be429b7a76b2f2857059cce8a28a495fa23bc27a2e405adf950037089",
+    type: "environment_interior_keyframe",
+    use: ["stilt_service_house", "wet_entry_circulation", "ledger_work_screen", "blackwater_boat_egress", "cistern_and_loft_utilities"],
+    promptSummary: "Occupied stilt service-house interior with a wet entry, family work table, screened ledger station, loft and cistern access, blackwater boat hatch, and readable separation between household, public, and service circulation.",
   },
 ]);
 
@@ -282,7 +335,12 @@ export function validateWorldAssets() {
     if (!concept.path || !concept.sha256 || !concept.provenance || !concept.rightsNote || !concept.maturity) errors.push(`Concept ${concept.id} lacks production provenance`);
     const { width, height } = concept.dimensions ?? {};
     if (!Number.isInteger(width) || !Number.isInteger(height) || Math.min(width, height) < 768 || Math.max(width, height) > 4096) errors.push(`Concept ${concept.id} has unexpected dimensions`);
-    if (concept.referenceScope === "quest_location" && (!concept.locationId || !concept.questId)) errors.push(`Quest-location concept ${concept.id} lacks canonical links`);
+    if (concept.referenceScope?.includes("quest_location") && (!concept.locationId || !concept.questId)) errors.push(`Quest-location concept ${concept.id} lacks canonical links`);
+    if (concept.bytes !== undefined && (!Number.isInteger(concept.bytes) || concept.bytes <= 0)) errors.push(`Concept ${concept.id} has an invalid byte count`);
+    if (concept.maturity === DIRECTION_ONLY_ART_METADATA.maturity) {
+      if (concept.runtimeBackdrop || concept.runtimeIntegrated || concept.productionAsset) errors.push(`Direction-only concept ${concept.id} overstates implementation readiness`);
+      if (concept.environmentId && (concept.colorSpace !== "sRGB" || concept.alphaPolicy !== "opaque")) errors.push(`Direction-only concept ${concept.id} lacks reviewed raster policy`);
+    }
   }
   for (const source of WORLD_SOURCE_ASSETS) if (!conceptIds.has(source.replacedBy)) errors.push(`Source ${source.id} has unresolved replacement ${source.replacedBy}`);
   const technicalIds = new Set();

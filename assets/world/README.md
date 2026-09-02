@@ -16,13 +16,20 @@ The packet deepens Gloamharbor, Sluice Chapel, Pale Measure, Anchor Field, Smoth
 
 Coordinates inside this packet are fictional site-local meters. They are not canonical atlas placement, and they must never be scaled or aligned to the Gloamharbor topology JSON, whose coordinates are diagram pixels. The packet is not an environment keyframe, accepted concept art, production geometry, runtime navigation/collision/streaming evidence, or final structural, accessibility, fire, geotechnical, code, or construction engineering.
 
+`spatial/wave-03a/warden-reed.site.json` is the first Wave 03A machine-readable site-local candidate. It binds `site.warden-reed`, `warden_reed_four_bank_visibility`, and `regional_the_fog_came_to_collect_our_outlines` to the accepted atlas and Wave 04 contracts by repository ID and content hash rather than copying or mutating their authority. The candidate defines two structures, 12 rooms, 15 thresholds, two independent egress paths, six utility systems, five hazards, four habitat placements, eight activity routes, four daily phases, and four quest-objective crosswalks. The exchange and service-house concepts below give visual identity to the same subject without becoming geometric proof.
+
+Wave 03A remains a noncanonical reference pending independent spatial review. Its site-local fictional meters are relocatable and are not atlas coordinates. It is not accepted GIS placement, a surveyed plan, construction or engineering guidance, accessibility- or fire-code certification, runtime navigation/collision/streaming evidence, production geometry, a release authorization, or permission to alter upstream quest and atlas contracts.
+
 ## Generation mode
 
 - Generic mode: new image generation for Hearthmere, Dunmire, and Hollow Abbey.
 - Generic revision mode: precise reference edit for the accepted Cinderward, Graven March, and Cathedral images.
+- Generic reference-guided mode: new image generation for the Warden Reed four-bank exterior and occupied stilt-service-house interior, using accepted repository images only for same-world material and identity continuity.
 - Shared art direction: production environment concept, readable third-person action-RPG traversal and combat routes, grounded dark fantasy materials, cold desaturated atmosphere with restrained warm accents, no logos, captions, UI, or watermarks.
 
-All accepted keyframes are direction and blockout references. The five regional references are also used as legacy 2D runtime backdrops; the Cathedral remains direction-only. The separate Veil technical reference is topology-only. None claims final coordinates, collision, navigation, meshes, animation, LOD, or production readiness.
+All eight accepted world concepts are direction and blockout references. The five regional references are also used as legacy 2D runtime backdrops; the Cathedral and both Warden Reed concepts remain direction-only. The separate Veil technical reference is topology-only, and Wave 03A remains a pending noncanonical machine reference. None claims final coordinates, collision, navigation, meshes, animation, LOD, construction validity, or production readiness.
+
+Public art provenance is split by release scope: `world-environments.current.batch-01.provenance.json` covers Graven March and the Cathedral, while `world-environments.current.batch-02.provenance.json` binds the four legacy keyframes and both Warden Reed concepts. The exact two Warden prompt bodies and the four legacy canonical public directions are content-addressed in `prompts/world-environments.current.batch-02.prompt-packets.json`; no execution locator or private session metadata is published.
 
 ## Prompt records
 
@@ -61,6 +68,18 @@ Black-pine winter basin for `regional_cairns_keep_winter`: twelve dormant cairn 
 SHA-256 `5c2ab84059a4e62234f5c63fdfaffa9eb226ebe1d3ea11d53a2dea26cd11221c`; 1536×1024; prompt SHA-256 `14ff3a3f05e2a2963e48ce7ecc4e5acb8a718dcb7606b7646884df9221a32913`; two independent passes; approved quest-location direction.
 
 Lucent doctrinal interior for `faction_heresy_gentle_horizon`: six materially different refusal bays, Liora's central pressure vessel, a canopy of hands arrested one finger-width above it, restrained ivory/gold material law, and a dark service-release route. It does not replace the Hollow Abbey regional keyframe.
+
+### `warden-reed-four-bank-visibility-exterior-v1.png`
+
+SHA-256 `52d94e5252c7f4935772daaa970b58668ea82746491a969d0cad616403eaf17e`; 1536×1024; two independent visual passes; approved site quest-location exterior direction.
+
+Fog-fall exterior for `regional_the_fog_came_to_collect_our_outlines`: four inhabited banks around blackwater channels, an oak-and-reed causeway, separate cable-ferry and boat return, a raised clear refuge, occupied wetland utilities, high-rope signals, and a low civic escrow frame standing on exactly four structural legs. The image fixes art language and landmark hierarchy, not GIS placement or blockout geometry.
+
+### `warden-reed-stilt-service-house-interior-v1.png`
+
+SHA-256 `5494c36be429b7a76b2f2857059cce8a28a495fa23bc27a2e405adf950037089`; 1536×1024; two independent visual passes; approved site service-house interior direction.
+
+Occupied Warden Reed service-house interior for `regional_the_fog_came_to_collect_our_outlines`: wet mud entry, family room, raised cistern loft, independent causeway and boat exits, reed-work balcony, screened ledger work, accountable water/heat/waste/light systems, and ordinary residents continuing work through fog-fall. It directs materials, occupancy, route legibility, and utility storytelling without certifying dimensions, egress, construction, runtime systems, or production geometry.
 
 ### `cinderward-foundry-draft.png`
 

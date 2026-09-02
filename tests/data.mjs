@@ -84,8 +84,20 @@ for (const asset of WORLD_TECHNICAL_ASSETS) check(existsSync(resolve(new URL("..
 for (const asset of CHARACTER_RENDER_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset)), `Missing character render ${asset}`);
 check(REGION_ASSET_KITS.length === 5, "Expected five production regional asset kits");
 check(new Set(WORLD_CONCEPT_ASSETS.map(({ id }) => id)).size === WORLD_CONCEPT_ASSETS.length, "World concept IDs must be unique");
-check(WORLD_CONCEPT_ASSETS.length === 6, "Expected six accepted world concept references");
+check(WORLD_CONCEPT_ASSETS.length === 8, "Expected eight accepted world concept references");
 check(WORLD_TECHNICAL_ASSETS.length === 1, "Expected one accepted world technical reference");
+const wardenExterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_warden_reed_four_bank_visibility_exterior");
+const wardenInterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_warden_reed_stilt_service_house_interior");
+check(Boolean(wardenExterior && wardenInterior), "Warden Reed exterior/interior direction pair is incomplete");
+for (const [asset, expected] of [
+  [wardenExterior, { path: "./assets/world/warden-reed-four-bank-visibility-exterior-v1.png", sha256: "52d94e5252c7f4935772daaa970b58668ea82746491a969d0cad616403eaf17e", bytes: 2709612, scope: "quest_location_exterior" }],
+  [wardenInterior, { path: "./assets/world/warden-reed-stilt-service-house-interior-v1.png", sha256: "5494c36be429b7a76b2f2857059cce8a28a495fa23bc27a2e405adf950037089", bytes: 2729693, scope: "quest_location_interior" }],
+]) {
+  check(asset?.path === expected.path && asset?.sha256 === expected.sha256 && asset?.bytes === expected.bytes, `Warden Reed ${expected.scope} content-addressed evidence changed`);
+  check(asset?.dimensions?.width === 1536 && asset?.dimensions?.height === 1024 && asset?.colorSpace === "sRGB" && asset?.alphaPolicy === "opaque", `Warden Reed ${expected.scope} raster contract changed`);
+  check(asset?.environmentId === "environment.warden-reed-four-bank-visibility" && asset?.siteId === "site.warden-reed" && asset?.locationId === "warden_reed_four_bank_visibility" && asset?.questId === "regional_the_fog_came_to_collect_our_outlines", `Warden Reed ${expected.scope} canonical binding changed`);
+  check(asset?.referenceScope === expected.scope && asset?.runtimeBackdrop === false && asset?.runtimeIntegrated === false && asset?.productionAsset === false, `Warden Reed ${expected.scope} overstated implementation readiness`);
+}
 const veilTechnicalReference = WORLD_TECHNICAL_ASSETS.find(({ id }) => id === "technical_veil_coast_gloamharbor_tide_refuge");
 check(veilTechnicalReference?.approvalStatus === "approved_2d_topology_reference", "Veil technical reference must retain its reviewed 2D-only status");
 check(veilTechnicalReference?.claims?.cells === 5 && veilTechnicalReference?.claims?.internalOpenings === 4, "Veil technical reference lost reviewed cell topology");

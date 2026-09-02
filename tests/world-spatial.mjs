@@ -33,9 +33,20 @@ import {
 const repositoryRoot = fileURLToPath(new URL('../', import.meta.url));
 const atlas = JSON.parse(readFileSync(new URL('../packages/content/manifests/sable-reach.atlas-runtime.json', import.meta.url), 'utf8'));
 const worldSpatialModuleSource = readFileSync(new URL('../packages/content/src/world-spatial.data.js', import.meta.url), 'utf8');
+const worldReadmeSource = readFileSync(new URL('../assets/world/README.md', import.meta.url), 'utf8');
+const artBibleSource = readFileSync(new URL('../design-review/Hollow March Art Bible.dc.html', import.meta.url), 'utf8');
 const ids = (records, field = 'id') => new Set(records.map((record) => record[field]));
 const equalSets = (left, right) => left.size === right.size && [...left].every((value) => right.has(value));
 const valueAtPointer = (value, pointer) => pointer.slice(1).split('/').reduce((current, segment) => current?.[segment.replaceAll('~1', '/').replaceAll('~0', '~')], value);
+const sha256 = (value) => createHash('sha256').update(value).digest('hex');
+const pngDimensions = (bytes) => ({ width: bytes.readUInt32BE(16), height: bytes.readUInt32BE(20) });
+const stringLeaves = (value) => typeof value === 'string'
+  ? [value]
+  : Array.isArray(value)
+    ? value.flatMap(stringLeaves)
+    : value && typeof value === 'object'
+      ? Object.values(value).flatMap(stringLeaves)
+      : [];
 
 const validation = validateWorldSpatialFoundation();
 assert.equal(validation.valid, true, JSON.stringify(validation.errors, null, 2));
@@ -145,14 +156,17 @@ for (const source of WORLD_SPATIAL_SOURCE_LEDGER) {
 }
 
 const visualReferences = ENVIRONMENT_ART_DIRECTION.acceptedVisualReferences;
-assert.equal(visualReferences.length, 6);
+assert.equal(visualReferences.length, 8);
 for (const reference of visualReferences) {
   const bytes = readFileSync(`${repositoryRoot}${reference.path}`);
-  assert.equal(createHash('sha256').update(bytes).digest('hex'), reference.sha256, `${reference.id} hash changed`);
+  assert.equal(sha256(bytes), reference.sha256, `${reference.id} hash changed`);
   assert.equal(reference.status, 'approved_direction');
+  assert.match(artBibleSource, new RegExp(reference.path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${reference.id} is missing from the Art Bible`);
 }
 const gravenReference = visualReferences.find(({ id }) => id === 'concept_graven_march_black_pine_occlusion_basin');
 const cathedralReference = visualReferences.find(({ id }) => id === 'concept_cathedral_six_rehearsed_dawns');
+const wardenExteriorReference = visualReferences.find(({ id }) => id === 'concept_warden_reed_four_bank_visibility_exterior');
+const wardenInteriorReference = visualReferences.find(({ id }) => id === 'concept_warden_reed_stilt_service_house_interior');
 assert.equal(gravenReference?.referenceScope, 'regional_quest_location');
 assert.equal(gravenReference?.locationId, 'graven_march_black_pine_occlusion_basin');
 assert.equal(gravenReference?.exactCoordinate, null);
@@ -163,6 +177,96 @@ assert.equal(cathedralReference?.locationId, 'cathedral_of_six_rehearsed_dawns')
 assert.equal(cathedralReference?.exactCoordinate, null);
 assert.equal(cathedralReference?.runtimeBackdrop, false);
 assert.equal(cathedralReference?.productionAsset, false);
+for (const reference of [wardenExteriorReference, wardenInteriorReference]) {
+  assert.equal(reference?.siteId, 'site.warden-reed');
+  assert.equal(reference?.locationId, 'warden_reed_four_bank_visibility');
+  assert.equal(reference?.questId, 'regional_the_fog_came_to_collect_our_outlines');
+  assert.equal(reference?.exactCoordinate, null);
+  assert.equal(reference?.runtimeBackdrop, false);
+  assert.equal(reference?.runtimeIntegrated, false);
+  assert.equal(reference?.productionAsset, false);
+  assert.match(reference?.visualReviewBoundary ?? '', /visual review/i);
+}
+assert.equal(wardenExteriorReference?.referenceScope, 'site_quest_location_exterior');
+assert.equal(wardenInteriorReference?.referenceScope, 'site_service_house_interior');
+assert.doesNotMatch(artBibleSource, /No provenance sidecars|Vendored, and still without provenance/);
+assert.match(artBibleSource, /hint-placeholder-count="8"/);
+
+const worldPromptPacketPath = 'assets/world/prompts/world-environments.current.batch-02.prompt-packets.json';
+const worldProvenancePath = 'assets/world/world-environments.current.batch-02.provenance.json';
+const worldPromptPacket = JSON.parse(readFileSync(`${repositoryRoot}${worldPromptPacketPath}`, 'utf8'));
+const worldProvenance = JSON.parse(readFileSync(`${repositoryRoot}${worldProvenancePath}`, 'utf8'));
+assert.equal(worldPromptPacket.schema, 'SableReachPublicPromptPacketV1');
+assert.equal(worldPromptPacket.records.length, 6);
+assert.equal(worldProvenance.schema, 'SableReachPublishedArtProvenanceV1');
+assert.equal(worldProvenance.records.length, 6);
+assert.equal(worldProvenance.promptSource, worldPromptPacketPath);
+const promptById = new Map(worldPromptPacket.records.map((record) => [record.id, record]));
+for (const prompt of worldPromptPacket.records) {
+  assert.equal(sha256(prompt.canonicalPublicDirection), prompt.promptSha256, `${prompt.id} direction hash changed`);
+  assert.equal(prompt.assetPath.startsWith('/'), false);
+  assert.equal(prompt.assetPath.includes('\\'), false);
+  for (const source of prompt.sourceReferences) {
+    assert.equal(source.path.startsWith('/'), false);
+    assert.equal(source.path.includes('\\'), false);
+    const sourceBytes = readFileSync(`${repositoryRoot}${source.path}`);
+    if (source.sha256) assert.equal(sha256(sourceBytes), source.sha256, `${prompt.id} source hash changed`);
+  }
+  if (prompt.bodyStatus === 'canonical_public_direction_from_world_manifest_not_execution_prompt') {
+    assert.equal(worldReadmeSource.includes(prompt.canonicalPublicDirection), true, `${prompt.id} no longer matches its manifest evidence`);
+  }
+}
+const exactWardenPrompts = worldPromptPacket.records.filter(({ bodyStatus }) => bodyStatus === 'exact_generation_prompt_body');
+assert.deepEqual(exactWardenPrompts.map(({ id }) => id).sort(), [
+  'prompt.environment.warden_reed_four_bank_visibility_exterior',
+  'prompt.environment.warden_reed_stilt_service_house_interior',
+]);
+assert.match(promptById.get('prompt.environment.warden_reed_four_bank_visibility_exterior')?.canonicalPublicDirection ?? '', /^Create one new original environment concept image/);
+assert.match(promptById.get('prompt.environment.warden_reed_stilt_service_house_interior')?.canonicalPublicDirection ?? '', /^Create one new original environment interior concept image/);
+assert.equal(promptById.get('prompt.environment.warden_reed_four_bank_visibility_exterior')?.canonicalPublicDirection.length, 2764);
+assert.equal(promptById.get('prompt.environment.warden_reed_stilt_service_house_interior')?.canonicalPublicDirection.length, 3553);
+const expectedLegacyWorldPaths = new Set([
+  'assets/world/hearthmere-hold.png',
+  'assets/world/dunmire-causeway.png',
+  'assets/world/cinderward-foundry.png',
+  'assets/world/hollow-abbey-nave.png',
+]);
+const provenanceByPath = new Map(worldProvenance.records.map((record) => [record.path, record]));
+assert.equal(provenanceByPath.size, worldProvenance.records.length);
+assert.ok([...expectedLegacyWorldPaths].every((path) => provenanceByPath.has(path)));
+assert.equal(provenanceByPath.has('assets/world/graven-march-black-pine-occlusion-basin-v5.png'), false);
+assert.equal(provenanceByPath.has('assets/world/cathedral-six-rehearsed-dawns-v2.png'), false);
+for (const record of worldProvenance.records) {
+  const bytes = readFileSync(`${repositoryRoot}${record.path}`);
+  const prompt = promptById.get(record.promptRecordId);
+  assert.ok(prompt, `${record.id} has no public direction record`);
+  assert.equal(prompt.assetPath, record.path);
+  assert.equal(prompt.promptSha256, record.promptSha256);
+  assert.equal(bytes.length, record.bytes);
+  assert.equal(sha256(bytes), record.sha256);
+  assert.deepEqual(pngDimensions(bytes), record.dimensions);
+  assert.equal(record.colorSpace, 'sRGB');
+  assert.equal(record.alphaPolicy, 'opaque');
+  assert.equal(record.maturity.productionAsset, false);
+  for (const source of record.sourceReferences) {
+    assert.equal(source.path.startsWith('/'), false);
+    assert.equal(source.path.includes('\\'), false);
+    assert.equal(sha256(readFileSync(`${repositoryRoot}${source.path}`)), source.sha256, `${record.id} source hash changed`);
+  }
+}
+for (const path of [wardenExteriorReference.path, wardenInteriorReference.path]) {
+  const record = provenanceByPath.get(path);
+  assert.equal(record.siteId, 'site.warden-reed');
+  assert.equal(record.locationId, 'warden_reed_four_bank_visibility');
+  assert.equal(record.questId, 'regional_the_fog_came_to_collect_our_outlines');
+  assert.equal(record.maturity.runtimeBackdrop, false);
+  assert.equal(record.maturity.runtimeIntegrated, false);
+  assert.equal(record.reviewEvidence.accepted, true);
+  assert.match(record.reviewEvidence.boundary, /not /i);
+}
+for (const publishedValue of stringLeaves({ worldPromptPacket, worldProvenance })) {
+  assert.doesNotMatch(publishedValue, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);
+}
 
 const technicalReferences = ENVIRONMENT_ART_DIRECTION.acceptedTechnicalReferences;
 assert.equal(technicalReferences.length, 1);

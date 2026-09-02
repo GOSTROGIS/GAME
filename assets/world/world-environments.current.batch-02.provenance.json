@@ -1,0 +1,239 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-world-environments-batch-02",
+  "rightsDeclaration": "Owner-authorized original project art; no third-party or franchise source imagery; environment concept and blockout reference use.",
+  "promptSource": "assets/world/prompts/world-environments.current.batch-02.prompt-packets.json",
+  "records": [
+    {
+      "id": "environment_keyframe.hearthmere_hold",
+      "subjectId": "hearthmere_hold",
+      "familyId": "world_environments",
+      "rank": "regional",
+      "role": "environment_keyframe",
+      "path": "assets/world/hearthmere-hold.png",
+      "sha256": "7f17a219ef090f7d3c20e22ab24275a9c39483c4d3c89a8297ef4ef006258b3c",
+      "bytes": 2635313,
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Canonical public direction retained from the world manifest; original execution prompt is not claimed.",
+      "promptRecordId": "prompt.environment.hearthmere_hold",
+      "promptSha256": "19d9e517172e47d0addd4cb50fdc5f4220a02110bd5812098a49bb6683618513",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "new image",
+        "outputSha256": "7f17a219ef090f7d3c20e22ab24275a9c39483c4d3c89a8297ef4ef006258b3c"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "environmentDirection": "approved_legacy_direction",
+        "runtimeBackdrop": true,
+        "runtimeIntegrated": true,
+        "productionAsset": false
+      }
+    },
+    {
+      "id": "environment_keyframe.dunmire_causeway",
+      "subjectId": "dunmire_causeway",
+      "familyId": "world_environments",
+      "rank": "regional",
+      "role": "environment_keyframe",
+      "path": "assets/world/dunmire-causeway.png",
+      "sha256": "f5f7d5c22da1cb175bfc9da6777ba05c9092f60d6c813b92c4c46b6633f99702",
+      "bytes": 2502840,
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Canonical public direction retained from the world manifest; original execution prompt is not claimed.",
+      "promptRecordId": "prompt.environment.dunmire_causeway",
+      "promptSha256": "337dda2242db96636f841b9a17014bee7e2d04f49e251290d8335a8c24b56a62",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "new image",
+        "outputSha256": "f5f7d5c22da1cb175bfc9da6777ba05c9092f60d6c813b92c4c46b6633f99702"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "environmentDirection": "approved_legacy_direction",
+        "runtimeBackdrop": true,
+        "runtimeIntegrated": true,
+        "productionAsset": false
+      }
+    },
+    {
+      "id": "environment_keyframe.cinderward_foundry",
+      "subjectId": "cinderward_foundry",
+      "familyId": "world_environments",
+      "rank": "regional",
+      "role": "environment_keyframe",
+      "path": "assets/world/cinderward-foundry.png",
+      "sha256": "37de3ab742e5368998d6a215ebaa4b96fccfe1d15aeb73e02e5a8b4936c077fa",
+      "bytes": 2621620,
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Canonical public direction retained from the world manifest; original execution prompt is not claimed.",
+      "promptRecordId": "prompt.environment.cinderward_foundry",
+      "promptSha256": "59683b0bb33684e8bbc7554e55d9ed98bcb827e6e8f7a660755d8100eba3ac80",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "versioned reference edit",
+        "outputSha256": "37de3ab742e5368998d6a215ebaa4b96fccfe1d15aeb73e02e5a8b4936c077fa"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "environmentDirection": "approved_legacy_direction",
+        "runtimeBackdrop": true,
+        "runtimeIntegrated": true,
+        "productionAsset": false
+      }
+    },
+    {
+      "id": "environment_keyframe.hollow_abbey_nave",
+      "subjectId": "hollow_abbey_nave",
+      "familyId": "world_environments",
+      "rank": "regional",
+      "role": "environment_keyframe",
+      "path": "assets/world/hollow-abbey-nave.png",
+      "sha256": "d79488872142049443b55ef98532470d632dba9bd9ae5e90ba02bd8403e7bc3b",
+      "bytes": 2555875,
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Canonical public direction retained from the world manifest; original execution prompt is not claimed.",
+      "promptRecordId": "prompt.environment.hollow_abbey_nave",
+      "promptSha256": "ac1db89011f80183dda6b4ed9ce4eb1e989c262faeda120c25d4147194ea4b4f",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "new image",
+        "outputSha256": "d79488872142049443b55ef98532470d632dba9bd9ae5e90ba02bd8403e7bc3b"
+      },
+      "sourceReferences": [],
+      "maturity": {
+        "environmentDirection": "approved_legacy_direction",
+        "runtimeBackdrop": true,
+        "runtimeIntegrated": true,
+        "productionAsset": false
+      }
+    },
+    {
+      "id": "environment_keyframe.warden_reed_four_bank_visibility_exterior",
+      "subjectId": "warden_reed_four_bank_visibility_exterior",
+      "familyId": "world_environments",
+      "rank": "site_quest_location",
+      "role": "environment_keyframe",
+      "siteId": "site.warden-reed",
+      "locationId": "warden_reed_four_bank_visibility",
+      "questId": "regional_the_fog_came_to_collect_our_outlines",
+      "path": "assets/world/warden-reed-four-bank-visibility-exterior-v1.png",
+      "sha256": "52d94e5252c7f4935772daaa970b58668ea82746491a969d0cad616403eaf17e",
+      "bytes": 2709612,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Exact generation prompt body retained; private execution context omitted.",
+      "promptRecordId": "prompt.environment.warden_reed_four_bank_visibility_exterior",
+      "promptSha256": "8d89ba54f8b163ebba951bfd60d279a818d2501a01151c2c1f4e8722ddfaff34",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "new image with repository reference",
+        "outputSha256": "52d94e5252c7f4935772daaa970b58668ea82746491a969d0cad616403eaf17e"
+      },
+      "sourceReferences": [
+        {
+          "path": "assets/world/dunmire-causeway.png",
+          "sha256": "f5f7d5c22da1cb175bfc9da6777ba05c9092f60d6c813b92c4c46b6633f99702",
+          "role": "same_world_material_reference_only"
+        }
+      ],
+      "reviewEvidence": {
+        "reviewMode": "two independent read-only visual reviews",
+        "accepted": true,
+        "boundary": "Visual canon, composition, raster integrity, and forbidden-content review only; not GIS placement, machine-blockout topology, construction, runtime, or production-geometry validation."
+      },
+      "maturity": {
+        "environmentDirection": "authored_and_independently_reviewed",
+        "runtimeBackdrop": false,
+        "runtimeIntegrated": false,
+        "productionAsset": false
+      }
+    },
+    {
+      "id": "environment_keyframe.warden_reed_stilt_service_house_interior",
+      "subjectId": "warden_reed_stilt_service_house_interior",
+      "familyId": "world_environments",
+      "rank": "site_interior",
+      "role": "environment_keyframe",
+      "siteId": "site.warden-reed",
+      "locationId": "warden_reed_four_bank_visibility",
+      "questId": "regional_the_fog_came_to_collect_our_outlines",
+      "path": "assets/world/warden-reed-stilt-service-house-interior-v1.png",
+      "sha256": "5494c36be429b7a76b2f2857059cce8a28a495fa23bc27a2e405adf950037089",
+      "bytes": 2729693,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Exact generation prompt body retained; private execution context omitted.",
+      "promptRecordId": "prompt.environment.warden_reed_stilt_service_house_interior",
+      "promptSha256": "1212c644108de56d6331494c633916fa0b48f6c51b1b7ce6a7f6f4190ede0de0",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "new image with repository references",
+        "outputSha256": "5494c36be429b7a76b2f2857059cce8a28a495fa23bc27a2e405adf950037089"
+      },
+      "sourceReferences": [
+        {
+          "path": "assets/world/warden-reed-four-bank-visibility-exterior-v1.png",
+          "sha256": "52d94e5252c7f4935772daaa970b58668ea82746491a969d0cad616403eaf17e",
+          "role": "accepted_site_identity_reference"
+        },
+        {
+          "path": "assets/world/dunmire-causeway.png",
+          "sha256": "f5f7d5c22da1cb175bfc9da6777ba05c9092f60d6c813b92c4c46b6633f99702",
+          "role": "same_world_material_reference_only"
+        }
+      ],
+      "reviewEvidence": {
+        "reviewMode": "two independent read-only visual reviews",
+        "accepted": true,
+        "boundary": "Visual canon, composition, raster integrity, and forbidden-content review only; not certified dimensions, egress, utilities, construction, runtime, or production-geometry validation."
+      },
+      "maturity": {
+        "environmentDirection": "authored_and_independently_reviewed",
+        "runtimeBackdrop": false,
+        "runtimeIntegrated": false,
+        "productionAsset": false
+      }
+    }
+  ]
+}

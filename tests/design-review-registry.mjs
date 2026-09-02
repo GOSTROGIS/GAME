@@ -96,12 +96,14 @@ assert.equal(registry.expansionCharacters.length, EXPANSION_CHARACTERS.length);
 assert.equal(registry.expansionCreatures.length, EXPANSION_CREATURES.length);
 assert.equal(registry.expansionCharacters.length, 70);
 assert.equal(registry.expansionCreatures.length, 39);
+assert.equal(registry.environments.length, 1);
 assert.deepEqual(registry.companionContracts, COMPANION_QUEST_CONTRACTS);
 assert.deepEqual(registry.agencyContracts, COMPANION_AGENCY_CONTRACTS);
 assert.deepEqual(registry.actorContracts, QUEST_ACTOR_CONTRACTS);
 assert.equal(counts.total, 228);
 assert.equal(counts.foundingTotal, 228);
 assert.equal(counts.grandTotal, 337);
+assert.equal(counts.environments, 1);
 assert.equal(counts.expansionItems, 67);
 assert.equal(counts.expansionQuests, 49);
 assert.equal(counts.companionContracts, 4);
@@ -112,6 +114,66 @@ assert.equal(counts.expansionQuests, EXPANSION_QUESTS.length);
 assert.equal(counts.authoredQuestTarget, NARRATIVE_TARGETS.authoredQuestTarget);
 assert.equal(registry.sculpted.length, 4);
 assert.equal(registry.queuedBestiary.length, 174);
+
+const subjectRows = [...registry.bestiary, ...registry.namedCast, ...registry.origins, ...registry.expansionCharacters, ...registry.expansionCreatures];
+assert.equal(subjectRows.length, counts.grandTotal, 'Environment references must not alter the 337-subject total');
+const wardenEnvironment = registry.environments[0];
+assert.equal(wardenEnvironment.id, 'environment.warden-reed-four-bank-visibility');
+assert.equal(wardenEnvironment.contentId, 'warden_reed_four_bank_visibility');
+assert.equal(wardenEnvironment.siteId, 'site.warden-reed');
+assert.equal(wardenEnvironment.locationId, 'warden_reed_four_bank_visibility');
+assert.equal(wardenEnvironment.questId, 'regional_the_fog_came_to_collect_our_outlines');
+assert.equal(wardenEnvironment.staticScene, null);
+assert.equal(wardenEnvironment.staticSceneStatus, 'awaiting-model');
+assert.equal(wardenEnvironment.animatedScene, null);
+assert.equal(wardenEnvironment.animatedSceneStatus, 'unassessed');
+assert.deepEqual(wardenEnvironment.motionSystems, [
+  'fog_density_bands',
+  'ferry_positions',
+  'guide_lanterns',
+  'high_rope_return',
+  'water_surface',
+]);
+assert.equal(wardenEnvironment.runtimeBackdrop, false);
+assert.equal(wardenEnvironment.runtimeIntegrated, false);
+assert.equal(wardenEnvironment.productionAsset, false);
+assert.ok(wardenEnvironment.limitations.some((line) => /Not GIS, construction, structural, collision, navigation, or production-geometry authority/.test(line)));
+assert.deepEqual(wardenEnvironment.exteriorConcept, {
+  id: 'concept_warden_reed_four_bank_visibility_exterior',
+  path: 'assets/world/warden-reed-four-bank-visibility-exterior-v1.png',
+  src: '../assets/world/warden-reed-four-bank-visibility-exterior-v1.png',
+  sha256: '52d94e5252c7f4935772daaa970b58668ea82746491a969d0cad616403eaf17e',
+  bytes: 2709612,
+  dimensions: { width: 1536, height: 1024 },
+  colorSpace: 'sRGB',
+  alphaPolicy: 'opaque',
+  referenceScope: 'quest_location_exterior',
+  approvalStatus: 'approved_direction',
+  maturity: 'approved_environment_direction_not_runtime_or_production',
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+});
+assert.deepEqual(wardenEnvironment.interiorConcept, {
+  id: 'concept_warden_reed_stilt_service_house_interior',
+  path: 'assets/world/warden-reed-stilt-service-house-interior-v1.png',
+  src: '../assets/world/warden-reed-stilt-service-house-interior-v1.png',
+  sha256: '5494c36be429b7a76b2f2857059cce8a28a495fa23bc27a2e405adf950037089',
+  bytes: 2729693,
+  dimensions: { width: 1536, height: 1024 },
+  colorSpace: 'sRGB',
+  alphaPolicy: 'opaque',
+  referenceScope: 'quest_location_interior',
+  approvalStatus: 'approved_direction',
+  maturity: 'approved_environment_direction_not_runtime_or_production',
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+});
+assert.equal(wardenEnvironment.exteriorSrc, wardenEnvironment.exteriorConcept.src);
+assert.equal(wardenEnvironment.interiorSrc, wardenEnvironment.interiorConcept.src);
+assert.equal(/^https?:/i.test(wardenEnvironment.exteriorSrc), false);
+assert.equal(/^https?:/i.test(wardenEnvironment.interiorSrc), false);
 
 const expansionRows = [...registry.expansionCharacters, ...registry.expansionCreatures];
 for (const [contentId, masterSrc] of acceptedExpansionMasters) {
