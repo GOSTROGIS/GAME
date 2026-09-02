@@ -97,15 +97,15 @@ assert.equal(registry.expansionCharacters.length, EXPANSION_CHARACTERS.length);
 assert.equal(registry.expansionCreatures.length, EXPANSION_CREATURES.length);
 assert.equal(registry.expansionCharacters.length, 70);
 assert.equal(registry.expansionCreatures.length, 39);
-assert.equal(registry.environments.length, 2);
+assert.equal(registry.environments.length, 3);
 assert.deepEqual(registry.companionContracts, COMPANION_QUEST_CONTRACTS);
 assert.deepEqual(registry.agencyContracts, COMPANION_AGENCY_CONTRACTS);
 assert.deepEqual(registry.actorContracts, QUEST_ACTOR_CONTRACTS);
 assert.equal(counts.total, 228);
 assert.equal(counts.foundingTotal, 228);
 assert.equal(counts.grandTotal, 337);
-assert.equal(counts.environments, 2);
-assert.equal(counts.spatialBlockouts, 2);
+assert.equal(counts.environments, 3);
+assert.equal(counts.spatialBlockouts, 3);
 assert.equal(counts.expansionItems, 67);
 assert.equal(counts.expansionQuests, 49);
 assert.equal(counts.companionContracts, 4);
@@ -302,6 +302,68 @@ assert.equal(hollowEnvironment.blockoutReferences[0].payloadSrc, '../assets/worl
 assert.equal(hollowEnvironment.blockoutReferences[0].runtimeIntegrated, false);
 assert.equal(hollowEnvironment.blockoutReferences[0].constructionReady, false);
 assert.equal(hollowEnvironment.blockoutReferences[0].productionGeometry, false);
+
+const hearthmereEnvironment = registry.environments.find(({ id }) => id === 'environment.hearthmere-hold-civic-spring-spine');
+assert.ok(hearthmereEnvironment);
+assert.equal(hearthmereEnvironment.contentId, 'hearthmere_civic_spring_spine');
+assert.equal(hearthmereEnvironment.name, 'Hearthmere Hold Civic Spring Spine');
+assert.equal(hearthmereEnvironment.regionId, 'hearthmere');
+assert.equal(hearthmereEnvironment.siteId, 'site.hearthmere');
+assert.equal(hearthmereEnvironment.routeId, null);
+assert.equal(hearthmereEnvironment.locationId, 'hearthmere_civic_spring_spine');
+assert.equal(hearthmereEnvironment.questId, null);
+assert.deepEqual(hearthmereEnvironment.landmarkIds, []);
+assert.equal(hearthmereEnvironment.staticScene, null);
+assert.equal(hearthmereEnvironment.staticSceneStatus, 'awaiting-model');
+assert.equal(hearthmereEnvironment.animatedScene, null);
+assert.equal(hearthmereEnvironment.animatedSceneStatus, 'unassessed');
+assert.deepEqual(hearthmereEnvironment.motionSystems, [
+  'spring_channel_flow',
+  'roof_runoff_rain_chains',
+  'civic_service_handcarts',
+  'ration_and_ledger_queues',
+  'bell_yoke_service',
+]);
+assert.equal(hearthmereEnvironment.runtimeBackdrop, false);
+assert.equal(hearthmereEnvironment.runtimeIntegrated, false);
+assert.equal(hearthmereEnvironment.productionAsset, false);
+assert.ok(hearthmereEnvironment.limitations.some((line) => /Not GIS, construction, structural, collision, navigation, or production-geometry authority/.test(line)));
+assert.equal(Object.isFrozen(hearthmereEnvironment.concepts), true);
+assert.equal(hearthmereEnvironment.concepts.length, 1);
+assert.deepEqual(hearthmereEnvironment.exteriorConcept, {
+  id: 'concept_hearthmere_civic_spring_spine',
+  path: 'assets/world/hearthmere-civic-spring-spine-v1.png',
+  src: '../assets/world/hearthmere-civic-spring-spine-v1.png',
+  sha256: 'd8f74db7b7bb138475b15d64d0ee86f779804bafa6b6054afbc0adb46e310a79',
+  bytes: 3207738,
+  dimensions: { width: 1536, height: 1024 },
+  colorSpace: 'sRGB',
+  alphaPolicy: 'opaque',
+  referenceScope: 'site_civic_exterior',
+  approvalStatus: 'approved_direction',
+  maturity: 'approved_environment_direction_not_runtime_or_production',
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+});
+assert.equal(hearthmereEnvironment.concepts[0], hearthmereEnvironment.exteriorConcept);
+assert.equal(hearthmereEnvironment.exteriorSrc, hearthmereEnvironment.exteriorConcept.src);
+assert.equal(/^https?:/i.test(hearthmereEnvironment.exteriorSrc), false);
+assert.equal(hearthmereEnvironment.interiorConcept, null);
+assert.equal(hearthmereEnvironment.interiorSrc, null);
+assert.equal(Object.isFrozen(hearthmereEnvironment.blockoutReferences), true);
+assert.equal(hearthmereEnvironment.blockoutReferences.length, 1);
+assert.equal(hearthmereEnvironment.blockoutReferences[0].id, 'spatial_blockout.wave-03c.hearthmere');
+assert.equal(hearthmereEnvironment.blockoutReferences[0].schemaVersion, 2);
+assert.equal(hearthmereEnvironment.blockoutReferences[0].payloadSrc, '../assets/world/spatial/wave-03c/hearthmere.site.json');
+assert.equal(hearthmereEnvironment.blockoutReferences[0].indexSrc, '../assets/world/spatial/wave-03c/index.json');
+assert.equal(hearthmereEnvironment.blockoutReferences[0].provenanceSrc, '../assets/world/spatial/wave-03c/provenance.json');
+assert.equal(hearthmereEnvironment.blockoutReferences[0].schemaSrc, '../assets/world/spatial/site-blockout-reference-v2.schema.json');
+assert.equal(hearthmereEnvironment.blockoutReferences[0].runtimeIntegrated, false);
+assert.equal(hearthmereEnvironment.blockoutReferences[0].constructionReady, false);
+assert.equal(hearthmereEnvironment.blockoutReferences[0].productionGeometry, false);
+assert.equal(hearthmereEnvironment.blockoutReferences[0].staticScene, false);
+assert.equal(hearthmereEnvironment.blockoutReferences[0].animatedScene, false);
 
 const environmentBoundSpatialIds = WORLD_SPATIAL_BLOCKOUT_ASSETS
   .filter(({ environmentIds }) => environmentIds.length)

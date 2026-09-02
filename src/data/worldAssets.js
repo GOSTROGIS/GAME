@@ -447,6 +447,28 @@ export const WORLD_SPATIAL_BLOCKOUT_ASSETS = Object.freeze([
     ]),
     ...SPATIAL_BLOCKOUT_REFERENCE_METADATA,
   }),
+  Object.freeze({
+    id: "spatial_blockout.wave-03c.hearthmere",
+    waveId: "world-spatial-wave-03c",
+    name: "World Spatial Wave 03C · Hearthmere",
+    sourceType: "site_blockout_reference",
+    environmentIds: Object.freeze(["environment.hearthmere-hold-civic-spring-spine"]),
+    siteIds: Object.freeze(["site.hearthmere"]),
+    indexPath: "assets/world/spatial/wave-03c/index.json",
+    payloadPath: "assets/world/spatial/wave-03c/hearthmere.site.json",
+    provenancePath: "assets/world/spatial/wave-03c/provenance.json",
+    schemaPath: "assets/world/spatial/site-blockout-reference-v2.schema.json",
+    schemaVersion: 2,
+    sha256: "b2d46282e15d7db4753eb64ab39221b8482503d7b6eebef5eec9b62b1633cfe1",
+    bytes: 214988,
+    counts: Object.freeze({ sites: 1, zones: 4, spaces: 32, nodes: 37, traversableNodes: 35, overlayProxyNodes: 2, links: 41, directedArcs: 82, safeCells: 6, stateMachines: 11, phases: 5, hydrology: 6, habitats: 11, actors: 26, encounters: 4, routes: 21, overlays: 10, quests: 10, objectives: 35, sourceBindings: 28 }),
+    summary: "Thirty-two spaces and thirty-seven nodes bind Hearthmere's civic spring spine, clean-water and runoff systems, resident schedules, habitats, encounters, routes, overlays, and ten quest crossings without promoting the reference to canon.",
+    limitations: Object.freeze([
+      "The site-local fictional-meter frame is relocatable and subordinate to canonical identities, quest state, and the atlas site anchor.",
+      "Reference only; not exact or surveyed placement, atlas-export geometry, runtime navigation or collision, construction guidance, production geometry, static or animated models, or a release-ready asset.",
+    ]),
+    ...SPATIAL_BLOCKOUT_REFERENCE_METADATA,
+  }),
 ]);
 
 export const REGION_ASSET_KITS = Object.freeze([

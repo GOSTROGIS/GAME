@@ -86,6 +86,24 @@ const ENVIRONMENT_DEFINITIONS = Object.freeze([
       'upper_cloister_route_state',
     ]),
   }),
+  Object.freeze({
+    id: 'environment.hearthmere-hold-civic-spring-spine',
+    contentId: 'hearthmere_civic_spring_spine',
+    name: 'Hearthmere Hold Civic Spring Spine',
+    regionId: 'hearthmere',
+    siteId: 'site.hearthmere',
+    locationId: 'hearthmere_civic_spring_spine',
+    questId: null,
+    conceptIds: Object.freeze(['concept_hearthmere_civic_spring_spine']),
+    blockoutReferenceIds: Object.freeze(['spatial_blockout.wave-03c.hearthmere']),
+    motionSystems: Object.freeze([
+      'spring_channel_flow',
+      'roof_runoff_rain_chains',
+      'civic_service_handcarts',
+      'ration_and_ledger_queues',
+      'bell_yoke_service',
+    ]),
+  }),
 ]);
 
 // The canonical content id is `glasswood`; the older prompt-law key includes
@@ -391,7 +409,8 @@ function environmentList() {
   return ENVIRONMENT_DEFINITIONS.map((definition) => {
     const concepts = Object.freeze(definition.conceptIds.map((id) => environmentConcept(id, definition.id)));
     const blockoutReferences = Object.freeze(definition.blockoutReferenceIds.map((id) => environmentBlockout(id, definition.id)));
-    const [exteriorConcept, interiorConcept] = concepts;
+    const exteriorConcept = concepts[0] ?? null;
+    const interiorConcept = concepts[1] ?? null;
     return Object.freeze({
       id: definition.id,
       contentId: definition.contentId,
@@ -409,8 +428,8 @@ function environmentList() {
       blockoutReferences,
       exteriorConcept,
       interiorConcept,
-      exteriorSrc: exteriorConcept.src,
-      interiorSrc: interiorConcept.src,
+      exteriorSrc: exteriorConcept?.src ?? null,
+      interiorSrc: interiorConcept?.src ?? null,
       staticScene: null,
       staticSceneStatus: 'awaiting-model',
       animatedScene: null,

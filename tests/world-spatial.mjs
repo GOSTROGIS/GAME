@@ -198,14 +198,31 @@ for (const source of WORLD_SPATIAL_SOURCE_LEDGER) {
   assert.equal(existsSync(`${repositoryRoot}${source.path}`), true, `Missing redacted source-ledger path ${source.path}`);
   assert.equal(spatialAuthorityIds.has(source.authority), true, `Unknown source-ledger authority ${source.authority}`);
 }
-assert.equal(WORLD_SPATIAL_BLOCKOUT_ASSETS.length, 3);
+assert.equal(WORLD_SPATIAL_BLOCKOUT_ASSETS.length, 4);
 const sourceLedgerPaths = new Set(WORLD_SPATIAL_SOURCE_LEDGER.map(({ path }) => path));
+const registeredBlockoutPaths = new Set(WORLD_SPATIAL_BLOCKOUT_ASSETS.flatMap((reference) => [
+  reference.payloadPath,
+  reference.provenancePath,
+  reference.indexPath,
+  reference.schemaPath,
+].filter(Boolean)));
+const postFreezeReleasePaths = new Set([
+  'assets/world/spatial/wave-03c/hearthmere.site.json',
+  'assets/world/spatial/wave-03c/index.json',
+  'assets/world/spatial/wave-03c/provenance.json',
+]);
+assert.deepEqual(
+  [...registeredBlockoutPaths].filter((repositoryPath) => !sourceLedgerPaths.has(repositoryPath)).sort(),
+  [...postFreezeReleasePaths].sort(),
+  'Only the Wave 03C artifacts authored after its source-ledger snapshot may live solely in the release registry',
+);
 for (const reference of WORLD_SPATIAL_BLOCKOUT_ASSETS) {
   const payload = readFileSync(`${repositoryRoot}${reference.payloadPath}`);
   assert.equal(payload.length, reference.bytes, `${reference.id} byte count changed`);
   assert.equal(sha256(payload), reference.sha256, `${reference.id} hash changed`);
   for (const repositoryPath of [reference.payloadPath, reference.provenancePath, reference.indexPath, reference.schemaPath].filter(Boolean)) {
-    assert.equal(sourceLedgerPaths.has(repositoryPath), true, `${reference.id} is absent from the world-spatial source ledger: ${repositoryPath}`);
+    assert.equal(existsSync(`${repositoryRoot}${repositoryPath}`), true, `${reference.id} references a missing release artifact: ${repositoryPath}`);
+    assert.equal(sourceLedgerPaths.has(repositoryPath) || postFreezeReleasePaths.has(repositoryPath), true, `${reference.id} is absent from both the source ledger and the frozen post-ledger release set: ${repositoryPath}`);
   }
   assert.equal(reference.authority, 'independently_reviewed_noncanonical_reference');
   assert.equal(reference.runtimeIntegrated, false);
