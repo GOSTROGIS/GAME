@@ -8,6 +8,14 @@ These images are owner-authorized original project environment references. The p
 
 This technical reference is not an environment keyframe, mood reference, surveyed/GIS plan, CAD or structural drawing, construction specification, accessibility-code certification, runtime layout, collision/navmesh source, gameplay authority, 3D model, or production-ready asset. Every JSON x/y value is a diagram pixel, never a world meter. Its atlas coordinate and final construction dimensions remain unresolved. The generated atmospheric Veil image and all Mirror-Salt candidates remain outside the accepted public set.
 
+## Reviewed machine spatial references
+
+`spatial/world-spatial-wave-02-v9.annex.json` is an independently reviewed, noncanonical six-site blockout reference for Claude Design. The published privacy-redacted derivative is 49,416,945 bytes with SHA-256 `4ddba07f2e7c74700d021421cbc20dd0ee27e9ccef730e9258fb6cfaebb3ffe4`; its review, source-to-public hash binding, 39-field locator-only redaction delta, and maturity record are in `spatial/world-spatial-wave-02-v9.provenance.json`.
+
+The packet deepens Gloamharbor, Sluice Chapel, Pale Measure, Anchor Field, Smothered Kiln, and White Meridian with nine site-local frames, 12 structures, 67 rooms, 28 habitat placements, 24 localized hazards, 64 utility networks, 69 service profiles, 62 safe cells, 36 vertical-access systems, 36 independent emergency stairs, and three quest crosswalks. A reviewed surgical repair closes all 144 station contacts; it changes 24 allowlisted polygon roots across 12 transitions and introduces no atlas coordinates.
+
+Coordinates inside this packet are fictional site-local meters. They are not canonical atlas placement, and they must never be scaled or aligned to the Gloamharbor topology JSON, whose coordinates are diagram pixels. The packet is not an environment keyframe, accepted concept art, production geometry, runtime navigation/collision/streaming evidence, or final structural, accessibility, fire, geotechnical, code, or construction engineering.
+
 ## Generation mode
 
 - Generic mode: new image generation for Hearthmere, Dunmire, and Hollow Abbey.
