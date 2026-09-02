@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 
 import { BESTIARY } from '../packages/content/src/bestiary.data.js';
 import { CHARACTERS } from '../src/data/characters.js';
-import { COMPANION_QUEST_CONTRACTS, EXPANSION_CHARACTERS, EXPANSION_CREATURES, EXPANSION_ITEMS, EXPANSION_QUESTS, NARRATIVE_TARGETS } from '../packages/content/src/narrative.data.js';
+import { COMPANION_AGENCY_CONTRACTS, COMPANION_QUEST_CONTRACTS, EXPANSION_CHARACTERS, EXPANSION_CREATURES, EXPANSION_ITEMS, EXPANSION_QUESTS, NARRATIVE_TARGETS, QUEST_ACTOR_CONTRACTS } from '../packages/content/src/narrative.data.js';
 import {
   ART_INDEX,
   CONCEPT_ART,
@@ -94,15 +94,19 @@ assert.equal(registry.namedCast.length, 42);
 assert.equal(registry.origins.length, 8);
 assert.equal(registry.expansionCharacters.length, EXPANSION_CHARACTERS.length);
 assert.equal(registry.expansionCreatures.length, EXPANSION_CREATURES.length);
-assert.equal(registry.expansionCharacters.length, 49);
-assert.equal(registry.expansionCreatures.length, 33);
+assert.equal(registry.expansionCharacters.length, 70);
+assert.equal(registry.expansionCreatures.length, 39);
 assert.deepEqual(registry.companionContracts, COMPANION_QUEST_CONTRACTS);
+assert.deepEqual(registry.agencyContracts, COMPANION_AGENCY_CONTRACTS);
+assert.deepEqual(registry.actorContracts, QUEST_ACTOR_CONTRACTS);
 assert.equal(counts.total, 228);
 assert.equal(counts.foundingTotal, 228);
-assert.equal(counts.grandTotal, 310);
-assert.equal(counts.expansionItems, 37);
-assert.equal(counts.expansionQuests, 37);
-assert.equal(counts.companionContracts, 2);
+assert.equal(counts.grandTotal, 337);
+assert.equal(counts.expansionItems, 67);
+assert.equal(counts.expansionQuests, 49);
+assert.equal(counts.companionContracts, 4);
+assert.equal(counts.agencyContracts, 2);
+assert.equal(counts.actorContracts, 6);
 assert.equal(counts.expansionItems, EXPANSION_ITEMS.length);
 assert.equal(counts.expansionQuests, EXPANSION_QUESTS.length);
 assert.equal(counts.authoredQuestTarget, NARRATIVE_TARGETS.authoredQuestTarget);
@@ -133,12 +137,36 @@ assert.equal(new Set(registry.expansionCharacters.map(({ id }) => id)).size, EXP
 
 for (const row of registry.expansionCharacters) {
   assert.ok(row.contradiction);
-  assert.ok(row.visualBrief);
   assert.ok(['awaiting-art', 'queued', 'static-model', 'animated-model'].includes(row.tier));
   assert.equal(/^https?:/i.test(row.plate || ''), false);
   assert.ok(Object.hasOwn(row, 'staticModel'));
   assert.ok(Object.hasOwn(row, 'animatedModel'));
 }
+
+const missingVisualBriefIds = new Set([
+  'leto_fain_custodian_unclaimed_symptoms',
+  'senn_avir_residue_orderly',
+]);
+const missingVisualBriefRows = registry.expansionCharacters.filter(({ contentId }) => missingVisualBriefIds.has(contentId));
+assert.equal(missingVisualBriefRows.length, 2);
+for (const row of registry.expansionCharacters) {
+  if (missingVisualBriefIds.has(row.contentId)) {
+    assert.equal(row.visualBrief, null);
+    assert.equal(row.visualBriefStatus, 'not-authored');
+    assert.equal(row.conceptGenerationBlocked, true);
+    assert.match(row.conceptGenerationBlocker, /No canonical visual brief is authored/);
+    assert.match(row.reason, /Concept generation is blocked/);
+  } else {
+    assert.ok(row.visualBrief);
+    assert.equal(row.visualBriefStatus, 'authored');
+    assert.equal(row.conceptGenerationBlocked, false);
+    assert.equal(row.conceptGenerationBlocker, null);
+  }
+}
+
+assert.ok(registry.companionContracts.every(({ schemaVersion, mode }) => schemaVersion === 1 && ['autonomous_guest', 'autonomous_follower'].includes(mode)));
+assert.ok(registry.agencyContracts.every(({ schemaVersion, mode }) => schemaVersion === 4 && mode === undefined));
+assert.equal(new Set(registry.actorContracts.map(({ questId, companionId }) => `${questId}|${companionId}`)).size, 6);
 
 for (const row of registry.expansionCreatures) {
   assert.ok(row.mechanic?.cue);

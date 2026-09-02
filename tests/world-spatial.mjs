@@ -10,6 +10,7 @@ import {
   ENVIRONMENT_ART_DIRECTION,
   EXPANSION_CREATURE_HABITAT_ENVELOPES,
   FAMILY_HABITAT_ENVELOPES,
+  QUEST_WAVE_04_SPATIAL_INDEX,
   QUEST_ENVIRONMENT_REQUIREMENTS,
   QUEST_LOCATION_SPATIAL_PROGRAMS,
   REGION_SPATIAL_PROFILES,
@@ -42,8 +43,8 @@ assert.deepEqual(validation.stats, {
   buildingTypologies: 15,
   familyHabitats: 21,
   foundingFormsCovered: 178,
-  expansionCreatureHabitats: 33,
-  questEnvironments: 37,
+  expansionCreatureHabitats: 39,
+  questEnvironments: 49,
   authoredQuestCapacity: 5000,
 });
 
@@ -71,10 +72,17 @@ assert.ok(FAMILY_HABITAT_ENVELOPES.every(({ microhabitats, sensorySignature }) =
 
 assert.equal(EXPANSION_CREATURE_HABITAT_ENVELOPES.length, EXPANSION_CREATURES.length);
 assert.ok(equalSets(ids(EXPANSION_CREATURE_HABITAT_ENVELOPES, 'creatureId'), ids(EXPANSION_CREATURES)));
+const wave04CreatureIds = ids(QUEST_WAVE_04_SPATIAL_INDEX.creatureHabitatEnvelopes, 'creatureId');
 for (const envelope of EXPANSION_CREATURE_HABITAT_ENVELOPES) {
   assert.equal(envelope.placement.status, 'provisional_placement');
   assert.equal(envelope.placement.exactCoordinate, null);
-  assert.ok(envelope.microhabitats.length >= 4);
+  if (wave04CreatureIds.has(envelope.creatureId)) {
+    assert.ok(envelope.microhabitats.length >= 1);
+    assert.ok(envelope.sourceHabitatId);
+    assert.equal(envelope.fullWorldContractPath, 'packages/content/manifests/quest-wave-04-v11.world.json');
+  } else {
+    assert.ok(envelope.microhabitats.length >= 4);
+  }
   assert.ok(envelope.locomotionConstraint && envelope.sensorySignature.visualCue && envelope.sensorySignature.acoustic && envelope.sensorySignature.scent);
 }
 

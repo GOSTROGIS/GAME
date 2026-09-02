@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 
 import {
+  BOUNDED_PARTICIPATION_CONTRACTS,
   COMPANION_QUEST_CONTRACTS,
   COSMIC_FACTIONS,
   EXPANSION_CHARACTERS,
@@ -21,12 +22,12 @@ assert.equal(NARRATIVE_TARGETS.expansionCreatureLimit, null);
 assert.equal(QUEST_AUTHORING_LAW.authorMayApproveOwnQuest, false);
 assert.equal(QUEST_AUTHORING_LAW.independentReviewers, 2);
 assert.equal(COSMIC_FACTIONS.length, 3);
-assert.equal(EXPANSION_CHARACTERS.length, 49);
-assert.equal(EXPANSION_CREATURES.length, 33);
-assert.equal(EXPANSION_QUESTS.length, 37);
-assert.equal(EXPANSION_ITEMS.length, 37);
-assert.equal(COMPANION_QUEST_CONTRACTS.length, 2);
-assert.equal(EXPANSION_ITEMS.length, EXPANSION_QUESTS.length);
+assert.equal(EXPANSION_CHARACTERS.length, 70);
+assert.equal(EXPANSION_CREATURES.length, 39);
+assert.equal(EXPANSION_QUESTS.length, 49);
+assert.equal(EXPANSION_ITEMS.length, 67);
+assert.equal(COMPANION_QUEST_CONTRACTS.length, 4);
+assert.equal(BOUNDED_PARTICIPATION_CONTRACTS.length, 2);
 
 const acceptedExpansionMasters = new Map([
   ['arch_lumen_seraphel_orr', 'assets/characters/npcs/lucent-synod/arch-lumen-seraphel-orr-v1.png'],
@@ -67,7 +68,7 @@ const acceptedExpansionMasters = new Map([
 
 const unique = (records, selector) => new Set(records.map(selector)).size === records.length;
 assert.ok(unique(EXPANSION_CHARACTERS, ({ id }) => id));
-assert.ok(unique(EXPANSION_CHARACTERS, ({ voice }) => voice.signature));
+assert.ok(unique(EXPANSION_CHARACTERS, (character) => (character.voice?.signature ?? character.dialogueProfile?.signature).normalize('NFKC').trim().toLowerCase()));
 assert.ok(unique(EXPANSION_CREATURES, ({ id }) => id));
 assert.ok(unique(EXPANSION_CREATURES, ({ mechanic }) => mechanic.id));
 assert.ok(unique(EXPANSION_QUESTS, ({ primaryMechanicId }) => primaryMechanicId));
@@ -75,10 +76,10 @@ assert.ok(unique(EXPANSION_QUESTS, ({ rewardItemIds }) => rewardItemIds[0]));
 assert.ok(unique(EXPANSION_QUESTS, ({ supportingCharacterIds }) => supportingCharacterIds[0]));
 assert.ok(EXPANSION_QUESTS.every(({ supportingCharacterIds }) => supportingCharacterIds.length >= 1));
 assert.ok(EXPANSION_QUESTS.every(({ authorshipProof }) => QUEST_AUTHORING_LAW.requiredProofFields.every((field) => authorshipProof[field])));
-assert.ok(EXPANSION_QUESTS.every(({ stateDomain, stateWrites }) => QUEST_AUTHORING_LAW.stateDomains.includes(stateDomain) && stateWrites.length === 1));
-assert.ok(EXPANSION_QUESTS.every(({ schemaVersion }) => schemaVersion === 2));
+assert.ok(EXPANSION_QUESTS.every(({ stateDomain, stateWrites }) => [...QUEST_AUTHORING_LAW.stateDomains, ...QUEST_AUTHORING_LAW.operationalStateDomains].includes(stateDomain) && stateWrites.length === 1));
+assert.ok(EXPANSION_QUESTS.every(({ schemaVersion }) => QUEST_AUTHORING_LAW.acceptedQuestSchemaVersions.includes(schemaVersion)));
 assert.ok(EXPANSION_QUESTS.every(({ portfolioId }) => QUEST_AUTHORING_LAW.portfolioIds.includes(portfolioId)));
-assert.ok(EXPANSION_QUESTS.every(({ stateReads }) => stateReads.every(({ key, mode, values }) => key && QUEST_AUTHORING_LAW.stateReadModes.includes(mode) && values.length >= 1)));
+assert.ok(EXPANSION_QUESTS.every(({ stateReads }) => stateReads.every(({ key, mode, values, readKind }) => key && (readKind === 'operational-state-v1' || QUEST_AUTHORING_LAW.stateReadModes.includes(mode)) && values.length >= 1)));
 
 const conditionalSuccession = EXPANSION_QUESTS.find(({ id }) => id === 'aftermath_person_engine_must_outlive');
 assert.ok(conditionalSuccession);
@@ -99,15 +100,14 @@ for (const creature of EXPANSION_CREATURES.slice(-9)) {
   assert.ok(creature.purpose);
 }
 
-for (const artifact of EXPANSION_ITEMS.slice(-12)) {
-  assert.equal(artifact.schemaVersion, 2);
+for (const artifact of EXPANSION_ITEMS.filter(({ schemaVersion }) => [2, 9].includes(schemaVersion))) {
   assert.ok(artifact.custody.defaultHolderId && artifact.custody.transferRule);
   assert.ok(artifact.activation.evidence.length && artifact.activation.procedure);
   assert.ok(artifact.cost.limitation && artifact.cost.worldDebt);
   assert.ok(artifact.laterContest.triggerStateKey && artifact.laterContest.contestedQuestion && artifact.laterContest.venue);
 }
 
-assert.equal(new Set(COMPANION_QUEST_CONTRACTS.map(({ questId, companionId }) => `${questId}|${companionId}`)).size, 2);
+assert.equal(new Set(COMPANION_QUEST_CONTRACTS.map(({ questId, companionId }) => `${questId}|${companionId}`)).size, COMPANION_QUEST_CONTRACTS.length);
 for (const contract of COMPANION_QUEST_CONTRACTS) {
   const companion = EXPANSION_CHARACTERS.find(({ id }) => id === contract.companionId);
   const quest = EXPANSION_QUESTS.find(({ id }) => id === contract.questId);
@@ -160,7 +160,7 @@ const brokenCompanion = {
   ...COMPANION_QUEST_CONTRACTS[0],
   independentAction: { ...COMPANION_QUEST_CONTRACTS[0].independentAction, playerOverride: true },
 };
-const brokenCompanionResult = validateNarrativeExpansion({ companionContracts: [brokenCompanion, COMPANION_QUEST_CONTRACTS[1]] });
+const brokenCompanionResult = validateNarrativeExpansion({ companionContracts: [brokenCompanion, ...COMPANION_QUEST_CONTRACTS.slice(1)] });
 assert.equal(brokenCompanionResult.valid, false);
 assert.ok(brokenCompanionResult.errors.some(({ code }) => code === 'non_autonomous_companion_action'));
 

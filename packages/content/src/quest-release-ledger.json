@@ -88,12 +88,36 @@
         {"id":"settlement_street_must_burn_once","portfolio":"settlement","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]},
         {"id":"profession_bell_paid_in_silence","portfolio":"profession_systemic","authorRole":"wave-03-v2-revision-author","reviewerRoles":["wave03-v2-state-and-machine-reviewer","wave03-v2-semantic-collision-reviewer"]}
       ]
+    },
+    {
+      "id": "quest-batch-0004",
+      "status": "accepted",
+      "packetPath": "design-review/quest-release-evidence/quest-batch-0004.packet.json",
+      "packetSha256": "b69438aafea971fb2b047e74a2e9a5ce2ca8668d5f4f172ebb720fa97456cade",
+      "collisionReportPath": "design-review/quest-release-evidence/quest-batch-0004.collision.json",
+      "collisionReportSha256": "e0b6d84b882180b5d4d93f88b6134b18304fe8c09b1b09a730b4c570e3f0c25a",
+      "stateReportPath": "design-review/quest-release-evidence/quest-batch-0004.state.json",
+      "stateReportSha256": "ad8a6d8b184f4c49a3a656cf08e76a076b05aa7bde24469a9262fa26da10d4a9",
+      "quests": [
+        {"id":"faction_the_lantern_named_us_last","portfolio":"faction_schism","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]},
+        {"id":"faction_living_appeal_aftercare","portfolio":"faction_schism","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]},
+        {"id":"character_the_face_noon_borrowed","portfolio":"character_guest_follower","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]},
+        {"id":"character_a_hunger_needs_an_address","portfolio":"character_guest_follower","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]},
+        {"id":"regional_the_tide_refused_harbor","portfolio":"regional","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]},
+        {"id":"regional_the_fog_came_to_collect_our_outlines","portfolio":"regional","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]},
+        {"id":"regional_the_graves_grew_upward","portfolio":"regional","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]},
+        {"id":"regional_an_echo_arrived_first","portfolio":"regional","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]},
+        {"id":"profession_the_furnace_inhaled_our_names","portfolio":"profession_systemic","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]},
+        {"id":"settlement_the_harbor_rang_below_tide","portfolio":"settlement","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]},
+        {"id":"relic_the_acre_crossed_a_border","portfolio":"relic_creature_ecology","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]},
+        {"id":"profession_the_well_drank_the_way_home","portfolio":"profession_systemic","authorRole":"wave04-v11-successor-author","reviewerRoles":["wave04-v11-independent-review-a","wave04-v11-independent-review-b"]}
+      ]
     }
   ],
   "inReviewBatches": [
     {
-      "id": "quest-batch-0004",
-      "status": "open_for_wave_04",
+      "id": "quest-batch-0005",
+      "status": "open_for_next_reviewed_batch",
       "quests": [
         { "id": "relic_mirror_gave_birth_elsewhere" }
       ]

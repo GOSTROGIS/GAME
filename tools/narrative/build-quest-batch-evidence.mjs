@@ -9,8 +9,13 @@ import {
   questSimilarity,
   validateNarrativeExpansion,
 } from "../../packages/content/src/narrative.data.js";
+import {
+  OPERATIONAL_READ_KIND,
+  classifyStateRead,
+} from "../../packages/content/src/quest-wave-04.runtime.js";
 
 const HEX_256 = /^[a-f0-9]{64}$/;
+const QUEST_WAVE_04_RUNTIME_SHA256 = "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e";
 const ROOT = fileURLToPath(new URL("../../", import.meta.url));
 const EVIDENCE_DIR = resolve(ROOT, "design-review/quest-release-evidence");
 const sha256 = (bytes) => createHash("sha256").update(bytes).digest("hex");
@@ -106,6 +111,20 @@ const stateOwnerByKey = new Map(EXPANSION_QUESTS.flatMap((quest) => (quest.state
 const stateRows = canonicalQuests.map((quest) => {
   const stateReads = quest.stateReads ?? [];
   const readProofs = stateReads.map((read) => {
+    const classification = classifyStateRead(read);
+    if (classification.kind === OPERATIONAL_READ_KIND) {
+      if (classification.definition.questId !== quest.id) fail(`${quest.id} cannot use operational mode owned by ${classification.definition.questId}.`);
+      return {
+        key: read.key,
+        mode: read.mode,
+        readKind: OPERATIONAL_READ_KIND,
+        domain: read.domain,
+        values: read.values,
+        definitionQuestId: classification.definition.questId,
+        runtimeContractSha256: QUEST_WAVE_04_RUNTIME_SHA256,
+        verdict: "PASS",
+      };
+    }
     const owner = stateOwnerByKey.get(read.key) ?? fail(`No writer exists for ${quest.id} read ${read.key}.`);
     const writerValues = owner.write.values;
     const coveredValues = read.values;
@@ -116,6 +135,7 @@ const stateRows = canonicalQuests.map((quest) => {
     return {
       key: read.key,
       mode: read.mode,
+      readKind: "narrative-state-v1",
       writerQuestId: owner.quest.id,
       writerValues,
       admittedValues: coveredValues,

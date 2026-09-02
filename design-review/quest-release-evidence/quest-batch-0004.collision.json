@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "kind": "semantic-collision-report",
+  "batchId": "quest-batch-0004",
+  "packetSha256": "b69438aafea971fb2b047e74a2e9a5ce2ca8668d5f4f172ebb720fa97456cade",
+  "verdict": "PASS",
+  "corpusQuestCount": 49,
+  "machineChecks": {
+    "canonicalNarrativeValidator": "PASS",
+    "maxPairwiseShingleSimilarity": {
+      "score": 0.0037974683544303796,
+      "left": "relic_the_acre_crossed_a_border",
+      "right": "profession_the_well_drank_the_way_home"
+    },
+    "note": "Shingle similarity is warning evidence only; the listed non-author semantic attestations control admission."
+  },
+  "reviewerAttestations": [
+    {
+      "reviewerRole": "wave04-v11-independent-review-a",
+      "reviewedPayloadSha256": "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962",
+      "reviewManifestSha256": "cdad9291283cfa2f413f9da4bac681bf899c5a04dc9b3d4d4ee30cd867367f66",
+      "questIds": [
+        "faction_the_lantern_named_us_last",
+        "faction_living_appeal_aftercare",
+        "character_the_face_noon_borrowed",
+        "character_a_hunger_needs_an_address",
+        "regional_the_tide_refused_harbor",
+        "regional_the_fog_came_to_collect_our_outlines",
+        "regional_the_graves_grew_upward",
+        "regional_an_echo_arrived_first",
+        "profession_the_furnace_inhaled_our_names",
+        "settlement_the_harbor_rang_below_tide",
+        "relic_the_acre_crossed_a_border",
+        "profession_the_well_drank_the_way_home"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave04-v11-independent-review-b",
+      "reviewedPayloadSha256": "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962",
+      "reviewManifestSha256": "7913bfb59b444e93843b7aa402e52207067ed05176d491eb0ae2d0d9949ef01b",
+      "questIds": [
+        "faction_the_lantern_named_us_last",
+        "faction_living_appeal_aftercare",
+        "character_the_face_noon_borrowed",
+        "character_a_hunger_needs_an_address",
+        "regional_the_tide_refused_harbor",
+        "regional_the_fog_came_to_collect_our_outlines",
+        "regional_the_graves_grew_upward",
+        "regional_an_echo_arrived_first",
+        "profession_the_furnace_inhaled_our_names",
+        "settlement_the_harbor_rang_below_tide",
+        "relic_the_acre_crossed_a_border",
+        "profession_the_well_drank_the_way_home"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    }
+  ],
+  "quests": [
+    {
+      "id": "faction_the_lantern_named_us_last",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "No evacuation timer or forecast puzzle substitutes: success recursively removes another household's route, and play continues into an unplanned emergency whose map inherits every prior edit.",
+      "canonicalForbiddenSubstitution": "No evacuation timer or forecast puzzle substitutes: success recursively removes another household's route, and play continues into an unplanned emergency whose map inherits every prior edit."
+    },
+    {
+      "id": "faction_living_appeal_aftercare",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "No output becomes an inhabitant, claimant, patient, population, speaker, consenting party, custodian, or authority actor.",
+      "canonicalForbiddenSubstitution": "No output becomes an inhabitant, claimant, patient, population, speaker, consenting party, custodian, or authority actor."
+    },
+    {
+      "id": "character_the_face_noon_borrowed",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "The pane never transfers command, permission, office, remedy, or victim-reflex authority.",
+      "canonicalForbiddenSubstitution": "The pane never transfers command, permission, office, remedy, or victim-reflex authority."
+    },
+    {
+      "id": "character_a_hunger_needs_an_address",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "No tower-defense or boundary survey substitutes because invitations expire during ordinary camp operation and the autonomous guardian may refuse the geometry the player wants.",
+      "canonicalForbiddenSubstitution": "No tower-defense or boundary survey substitutes because invitations expire during ordinary camp operation and the autonomous guardian may refuse the geometry the player wants."
+    },
+    {
+      "id": "regional_the_tide_refused_harbor",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "No seawall construction or escort substitutes because surge, clinical circulation, and political petition share one unique connected-shadow body under two irreversible tide windows.",
+      "canonicalForbiddenSubstitution": "No seawall construction or escort substitutes because surge, clinical circulation, and political petition share one unique connected-shadow body under two irreversible tide windows."
+    },
+    {
+      "id": "regional_the_fog_came_to_collect_our_outlines",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "No swarm, colony, plural Escrow, variable body count, extra leg, or safe-cell exchange may substitute.",
+      "canonicalForbiddenSubstitution": "No swarm, colony, plural Escrow, variable body count, extra leg, or safe-cell exchange may substitute."
+    },
+    {
+      "id": "regional_the_graves_grew_upward",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "No gather-and-vote or burial quest substitutes because a simulated season, per-tab flight cessation, food hygiene, labor circulation, and winter yield are causally joined.",
+      "canonicalForbiddenSubstitution": "No gather-and-vote or burial quest substitutes because a simulated season, per-tab flight cessation, food hygiene, labor circulation, and winter yield are causally joined."
+    },
+    {
+      "id": "regional_an_echo_arrived_first",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "No prediction puzzle substitutes because the player must construct a real load-bearing antecedent under acoustic lead time and then traverse its irreversible physical aftermath.",
+      "canonicalForbiddenSubstitution": "No prediction puzzle substitutes because the player must construct a real load-bearing antecedent under acoustic lead time and then traverse its irreversible physical aftermath."
+    },
+    {
+      "id": "profession_the_furnace_inhaled_our_names",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "No valve puzzle or labor vote substitutes because pressure, payroll, body heat, autonomous creature refusal, households, and manual egress fail concurrently in one network.",
+      "canonicalForbiddenSubstitution": "No valve puzzle or labor vote substitutes because pressure, payroll, body heat, autonomous creature refusal, households, and manual egress fail concurrently in one network."
+    },
+    {
+      "id": "settlement_the_harbor_rang_below_tide",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "No competing capacity register or unmapped boat may substitute.",
+      "canonicalForbiddenSubstitution": "No competing capacity register or unmapped boat may substitute."
+    },
+    {
+      "id": "relic_the_acre_crossed_a_border",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "No moving-house, tenancy, or address quest substitutes because the play loop is continuous operation of five typed utilities across four locomotion events and two settlements.",
+      "canonicalForbiddenSubstitution": "No moving-house, tenancy, or address quest substitutes because the play loop is continuous operation of five typed utilities across four locomotion events and two settlements."
+    },
+    {
+      "id": "profession_the_well_drank_the_way_home",
+      "verdict": "PASS",
+      "authorRole": "wave04-v11-successor-author",
+      "reviewerRoles": [
+        "wave04-v11-independent-review-a",
+        "wave04-v11-independent-review-b"
+      ],
+      "distinctDramaticWork": "No destination, shelter, or road-restoration quest substitutes because the dominant loop is quantified intake, treatment, storage, contamination, distribution, waste, and restart.",
+      "canonicalForbiddenSubstitution": "No destination, shelter, or road-restoration quest substitutes because the dominant loop is quantified intake, treatment, storage, contamination, distribution, waste, and restart."
+    }
+  ]
+}

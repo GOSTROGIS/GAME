@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "batchId": "quest-batch-0004",
+  "questIds": [
+    "faction_the_lantern_named_us_last",
+    "faction_living_appeal_aftercare",
+    "character_the_face_noon_borrowed",
+    "character_a_hunger_needs_an_address",
+    "regional_the_tide_refused_harbor",
+    "regional_the_fog_came_to_collect_our_outlines",
+    "regional_the_graves_grew_upward",
+    "regional_an_echo_arrived_first",
+    "profession_the_furnace_inhaled_our_names",
+    "settlement_the_harbor_rang_below_tide",
+    "relic_the_acre_crossed_a_border",
+    "profession_the_well_drank_the_way_home"
+  ],
+  "sourceReviewPayloads": [
+    {
+      "id": "quest-wave-04-v11-machine-annex",
+      "path": "design-review/quest-release-evidence/quest-wave-04-v11.machine-annex.json",
+      "serialization": "exact immutable reviewed UTF-8 source bytes",
+      "byteLength": 4245855,
+      "sha256": "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962"
+    },
+    {
+      "id": "quest-wave-04-v11-runtime-contract",
+      "path": "packages/content/src/quest-wave-04.runtime.js",
+      "serialization": "exact immutable reviewed UTF-8 runtime-contract bytes",
+      "byteLength": 16412,
+      "sha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e"
+    },
+    {
+      "id": "quest-wave-04-v11-independent-review-a",
+      "path": "design-review/quest-release-evidence/quest-wave-04-v11.review-a.manifest.json",
+      "serialization": "exact immutable independent review manifest",
+      "byteLength": 5271,
+      "sha256": "cdad9291283cfa2f413f9da4bac681bf899c5a04dc9b3d4d4ee30cd867367f66"
+    },
+    {
+      "id": "quest-wave-04-v11-independent-review-b",
+      "path": "design-review/quest-release-evidence/quest-wave-04-v11.review-b.manifest.json",
+      "serialization": "exact immutable independent review manifest",
+      "byteLength": 4220,
+      "sha256": "7913bfb59b444e93843b7aa402e52207067ed05176d491eb0ae2d0d9949ef01b"
+    }
+  ],
+  "reviewerAttestations": [
+    {
+      "reviewerRole": "wave04-v11-independent-review-a",
+      "reviewedPayloadSha256": "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962",
+      "reviewManifestSha256": "cdad9291283cfa2f413f9da4bac681bf899c5a04dc9b3d4d4ee30cd867367f66",
+      "questIds": [
+        "faction_the_lantern_named_us_last",
+        "faction_living_appeal_aftercare",
+        "character_the_face_noon_borrowed",
+        "character_a_hunger_needs_an_address",
+        "regional_the_tide_refused_harbor",
+        "regional_the_fog_came_to_collect_our_outlines",
+        "regional_the_graves_grew_upward",
+        "regional_an_echo_arrived_first",
+        "profession_the_furnace_inhaled_our_names",
+        "settlement_the_harbor_rang_below_tide",
+        "relic_the_acre_crossed_a_border",
+        "profession_the_well_drank_the_way_home"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    },
+    {
+      "reviewerRole": "wave04-v11-independent-review-b",
+      "reviewedPayloadSha256": "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962",
+      "reviewManifestSha256": "7913bfb59b444e93843b7aa402e52207067ed05176d491eb0ae2d0d9949ef01b",
+      "questIds": [
+        "faction_the_lantern_named_us_last",
+        "faction_living_appeal_aftercare",
+        "character_the_face_noon_borrowed",
+        "character_a_hunger_needs_an_address",
+        "regional_the_tide_refused_harbor",
+        "regional_the_fog_came_to_collect_our_outlines",
+        "regional_the_graves_grew_upward",
+        "regional_an_echo_arrived_first",
+        "profession_the_furnace_inhaled_our_names",
+        "settlement_the_harbor_rang_below_tide",
+        "relic_the_acre_crossed_a_border",
+        "profession_the_well_drank_the_way_home"
+      ],
+      "verdict": "PASS",
+      "independentFromAuthor": true,
+      "bytesEditedByReviewer": 0
+    }
+  ],
+  "questReviews": [
+    { "id": "faction_the_lantern_named_us_last", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] },
+    { "id": "faction_living_appeal_aftercare", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] },
+    { "id": "character_the_face_noon_borrowed", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] },
+    { "id": "character_a_hunger_needs_an_address", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] },
+    { "id": "regional_the_tide_refused_harbor", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] },
+    { "id": "regional_the_fog_came_to_collect_our_outlines", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] },
+    { "id": "regional_the_graves_grew_upward", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] },
+    { "id": "regional_an_echo_arrived_first", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] },
+    { "id": "profession_the_furnace_inhaled_our_names", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] },
+    { "id": "settlement_the_harbor_rang_below_tide", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] },
+    { "id": "relic_the_acre_crossed_a_border", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] },
+    { "id": "profession_the_well_drank_the_way_home", "verdict": "PASS", "authorRole": "wave04-v11-successor-author", "reviewerRoles": ["wave04-v11-independent-review-a", "wave04-v11-independent-review-b"] }
+  ]
+}

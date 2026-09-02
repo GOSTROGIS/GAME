@@ -1,4 +1,5 @@
 import atlasJson from "../manifests/sable-reach.atlas-runtime.json" with { type: "json" };
+import questWave04SpatialIndexJson from "../manifests/quest-wave-04-v11.spatial-index.json" with { type: "json" };
 
 import { BESTIARY, ENEMY_FAMILIES } from "./bestiary.data.js";
 import { EXPANSION_CREATURES, EXPANSION_QUESTS, NARRATIVE_TARGETS } from "./narrative.data.js";
@@ -16,6 +17,8 @@ const unionField = (records, field) => unique(records.flatMap((record) => record
 const rangeAcross = (records, field, fallback = [0, 1]) => records.length
   ? [Math.min(...records.map((record) => record[field][0])), Math.max(...records.map((record) => record[field][1]))]
   : fallback;
+
+export const QUEST_WAVE_04_SPATIAL_INDEX = deepFreeze(questWave04SpatialIndexJson);
 
 export const WORLD_SPATIAL_TARGETS = deepFreeze({
   schemaVersion: 1,
@@ -474,8 +477,54 @@ const questIdsByCreature = new Map(EXPANSION_CREATURES.map((creature) => [
   creature.id,
   EXPANSION_QUESTS.filter((quest) => quest.creatureIds.includes(creature.id)).map((quest) => quest.id),
 ]));
+const questWave04HabitatByCreatureId = new Map(QUEST_WAVE_04_SPATIAL_INDEX.creatureHabitatEnvelopes.map((entry) => [entry.creatureId, entry]));
+const questWave04EnvironmentByQuestId = new Map(QUEST_WAVE_04_SPATIAL_INDEX.environmentPrograms.map((entry) => [entry.questId, entry]));
 
 export const EXPANSION_CREATURE_HABITAT_ENVELOPES = deepFreeze(EXPANSION_CREATURES.map((creature) => {
+  const questHabitat = questWave04HabitatByCreatureId.get(creature.id);
+  if (questHabitat) {
+    const environment = questWave04EnvironmentByQuestId.get(questHabitat.questId);
+    const territoryIds = questHabitat.regionIds ?? environment?.territoryIds ?? [];
+    const siteIds = unique([
+      ...(questHabitat.siteId ? [questHabitat.siteId] : []),
+      ...(questHabitat.siteCells ?? []).map((cell) => cell.split(":")[0]),
+      ...(environment?.hostSiteId ? [environment.hostSiteId] : []),
+    ]);
+    const population = questHabitat.population;
+    const exactCount = questHabitat.exactBodyCount;
+    const localCount = Number.isInteger(exactCount)
+      ? [exactCount, exactCount]
+      : [population?.minimum ?? 1, population?.maximum ?? 1];
+    const regionSenses = REGION_DESIGN[territoryIds[0]]?.senses;
+    return {
+      creatureId: creature.id,
+      creatureName: creature.name,
+      familyId: creature.familyId,
+      territoryIds,
+      siteIds,
+      habitatIds: [questHabitat.habitatId ?? questHabitat.id],
+      spatialMode: questHabitat.recordKind ?? questHabitat.lifecycleState ?? "quest_bound_authored_habitat",
+      microhabitats: questHabitat.siteCells ?? questHabitat.semanticAnchorIds ?? [environment?.locationId].filter(Boolean),
+      environmentalLimits: questHabitat.exclusions ?? questHabitat.excluded ?? questHabitat.required ?? [],
+      populationEnvelope: {
+        localCount,
+        clustering: population?.uniqueness ?? population?.densityRule ?? population?.ontology ?? questHabitat.lifecycleState ?? "quest_bound_population",
+        authority: "authored_design_constraint",
+      },
+      activity: questHabitat.anchorBehavior ?? questHabitat.lifecycleState,
+      locomotionConstraint: creature.locomotion,
+      sensorySignature: {
+        visualCue: creature.mechanic.cue,
+        acoustic: creature.sound,
+        scent: regionSenses?.scent?.join(", ") ?? "",
+      },
+      canonicalQuestIds: questIdsByCreature.get(creature.id),
+      placement: { status: "provisional_placement", exactCoordinate: null },
+      sourceHabitatId: questHabitat.habitatId ?? questHabitat.id,
+      fullWorldContractPath: QUEST_WAVE_04_SPATIAL_INDEX.fullWorldContractPath,
+      authority: { identityAndEcology: "canon", spatialEnvelope: "authored_design_constraint", atlasPlacement: "provisional_placement" },
+    };
+  }
   const family = EXPANSION_FAMILY_ENVELOPES[creature.familyId];
   const uniquePopulation = ["boss", "miniboss"].includes(creature.rank);
   return {
@@ -486,7 +535,7 @@ export const EXPANSION_CREATURE_HABITAT_ENVELOPES = deepFreeze(EXPANSION_CREATUR
     siteIds: family.siteIds,
     habitatIds: family.habitatIds,
     spatialMode: family.spatialMode,
-    microhabitats: unique([...family.microhabitats, ...EXPANSION_CREATURE_MICROHABITATS[creature.id]]),
+    microhabitats: unique([...family.microhabitats, ...(EXPANSION_CREATURE_MICROHABITATS[creature.id] ?? [])]),
     environmentalLimits: family.environmentalLimits,
     populationEnvelope: {
       localCount: uniquePopulation ? [1, 1] : creature.rank === "elite" ? [1, 3] : creature.rank === "specialist" ? [1, 4] : [2, 8],
@@ -945,7 +994,7 @@ const locationProgram = (territoryIds, hostSiteId, placementMode, designEnvelope
   authority: { identity: "canon", program: "authored_design_constraint", atlasPlacement: "provisional_placement" },
 });
 
-const QUEST_LOCATION_PROGRAMS = deepFreeze({
+const BASE_QUEST_LOCATION_PROGRAMS = deepFreeze({
   hearthmere_dusk_circuit: locationProgram(
     ["territory.graven-march"], "site.hearthmere", "settlement_exterior_loop", [220, 180, 46], ["hearthmere_slate_tenant_house", "hearthmere_bell_civic"],
     ["wet slate", "patched black pine", "clay names", "cold repaired stone", "banked ember"],
@@ -1207,6 +1256,43 @@ const QUEST_LOCATION_PROGRAMS = deepFreeze({
   ),
 });
 
+export const QUEST_WAVE_04_LOCATION_PROGRAMS = deepFreeze(Object.fromEntries(
+  QUEST_WAVE_04_SPATIAL_INDEX.environmentPrograms.map((program) => {
+    const regionSenses = REGION_DESIGN[program.territoryIds[0]]?.senses;
+    return [program.locationId, {
+      territoryIds: program.territoryIds,
+      hostSiteId: program.hostSiteId,
+      placementMode: program.placement.placementMode,
+      placementStatus: "provisional_placement",
+      sourcePlacementStatus: program.placement.placementStatus,
+      exactAtlasCoordinate: program.placement.exactAtlasCoordinate,
+      designEnvelopeMeters: [program.designEnvelopeMeters.width, program.designEnvelopeMeters.length, program.designEnvelopeMeters.height],
+      typologyIds: program.typologyIds,
+      materialTags: program.materialTags,
+      spatialBeats: program.semanticAnchors.map((anchor) => `${anchor.kind}: ${anchor.stateRule ?? anchor.id}`),
+      sensory: {
+        visibility: regionSenses?.visibilityMeters ? `regional authored visibility ${regionSenses.visibilityMeters[0]}-${regionSenses.visibilityMeters[1]} meters` : "",
+        acoustic: regionSenses?.acoustic?.join(", ") ?? "",
+        scent: regionSenses?.scent?.join(", ") ?? "",
+      },
+      mutableLayers: program.mutableLayers,
+      streamingClass: program.programKind,
+      blockoutGraphId: program.graphId,
+      safeObservationCellIds: program.safeObservationCellIds,
+      objectiveEndpointIds: program.objectiveEndpointIds,
+      independentEgressPathIds: program.independentEgressPathIds,
+      environmentArtPipeline: program.environmentArtPipeline,
+      fullWorldContractPath: QUEST_WAVE_04_SPATIAL_INDEX.fullWorldContractPath,
+      authority: { identity: "canon", program: "authored_design_constraint", atlasPlacement: "provisional_placement" },
+    }];
+  }),
+));
+
+const QUEST_LOCATION_PROGRAMS = deepFreeze({
+  ...BASE_QUEST_LOCATION_PROGRAMS,
+  ...QUEST_WAVE_04_LOCATION_PROGRAMS,
+});
+
 export const QUEST_LOCATION_SPATIAL_PROGRAMS = QUEST_LOCATION_PROGRAMS;
 
 export const QUEST_ENVIRONMENT_REQUIREMENTS = deepFreeze(EXPANSION_QUESTS.map((quest) => {
@@ -1242,6 +1328,8 @@ export const WORLD_SPATIAL_SOURCE_LEDGER = deepFreeze([
   { path: "tools/worldgen/crs/veyl_local_grid_v1.wkt", role: "canonical engineering coordinate reference system", authority: "canon" },
   { path: "packages/content/src/bestiary.data.js", role: "canonical founding creature families and habitat profiles", authority: "canon" },
   { path: "packages/content/src/narrative.data.js", role: "canonical expansion quests, creatures, and world-state contracts", authority: "canon" },
+  { path: "packages/content/manifests/quest-wave-04-v11.spatial-index.json", role: "compact accepted Wave 04 spatial compatibility index", authority: "authored_design_constraint" },
+  { path: "packages/content/manifests/quest-wave-04-v11.world.json", role: "full Wave 04 Claude Design environment, habitat, utility, and blockout contract", authority: "authored_design_constraint" },
   { path: "src/data/worldAssets.js", role: "accepted regional environment language and runtime budgets", authority: "canon" },
   { path: "packages/content/manifests/hearthmere.scene.json", role: "canonical local chunk and prototype spatial contract", authority: "canon" },
   { path: "design-review/SABLE-REACH-NARRATIVE-BIBLE.md", role: "human narrative and faction context", authority: "reference" },
@@ -1405,6 +1493,7 @@ export const WORLD_SPATIAL_FOUNDATION = deepFreeze({
   streamingAndLod: WORLD_STREAMING_AND_LOD,
   questLocationPrograms: QUEST_LOCATION_SPATIAL_PROGRAMS,
   questEnvironmentRequirements: QUEST_ENVIRONMENT_REQUIREMENTS,
+  questWave04SpatialIndex: QUEST_WAVE_04_SPATIAL_INDEX,
   sourceLedger: WORLD_SPATIAL_SOURCE_LEDGER,
 });
 

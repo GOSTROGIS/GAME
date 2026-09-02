@@ -81,7 +81,7 @@ Founding characters may enter any cosmic storyline when their existing values cr
 
 ## Quest-exclusive supporting cast
 
-Recurring principals carry campaign arcs, but every admitted quest also owns at least one supporting character who appears in no other quest. This is a hard production rule: local people cannot be renamed scenery orbiting the same dozen celebrities.
+Recurring principals carry campaign arcs, but every admitted quest also owns at least one supporting character who appears in no other quest. This is a hard production rule: local people cannot be renamed scenery orbiting the same dozen celebrities. A supporting character normally carries an authored secret; an explicitly reviewed equivalent-depth variant may replace that field only when desire, fear, contradiction, owned decision, voice, alignment consequences, and quest function still provide the same dramatic depth.
 
 The first thirteen are:
 
@@ -99,7 +99,7 @@ The first thirteen are:
 - Bek Tallow, the hospice clerk whose donated tissue may have taught its living heart whom to deprioritize.
 - Eri Cinderglass, a living claimant opposing rule by the dead while basing her own claim on a purchased ancestry.
 
-Each has the same concept-master, transparent-cutout, static-model, and animated-model fields as a principal. MODEL MAKER therefore exposes twenty-five expansion characters now, not merely the recurring twelve.
+Each has the same concept-master, transparent-cutout, static-model, and animated-model fields as a principal. These thirteen remain the foundation rather than the current roster ceiling. The accepted expansion register now exposes 70 character records. Wave 04 deliberately applies `equivalent-depth-without-secret-v1` to Senn Avir and Mora Quay; later writers must preserve that choice instead of fabricating a revelation. Leto Fain and Senn Avir have complete narrative identities but no visual brief, so both remain blocked from concept-art prompting until independently reviewed briefs exist.
 
 ## Main campaign spine
 
@@ -167,6 +167,12 @@ Each accepted record also carries an authorship proof: a unique visual setpiece,
 
 The operational batch, collision, state, character-art, and review contract is maintained in `SABLE-REACH-NARRATIVE-PRODUCTION.md`.
 
+### Wave 04 v11 checkpoint
+
+The current authored corpus contains 49 quests, 70 expansion characters, 39 expansion creatures, and 67 signature items. Forty-eight quests are release-attested across four closed batches; `relic_mirror_gave_birth_elsewhere` is the sole quest still in review. These are progress counts toward 5,000, not completion evidence.
+
+Six agency contracts are explicit: four autonomous guest/follower contracts and two bounded contracts. The bounded contracts let Vael order already eligible records without authorizing anything and let Seraphel participate in defined material tests without transferring command, permission, office, remedy, or victim intention. They are authored narrative/operation boundaries, not evidence that companion runtime behavior has shipped.
+
 The 5,000-quest allocation is a portfolio, not a template:
 
 | Stratum | Target | Distinct job |
@@ -198,14 +204,14 @@ Every creature requires:
 7. a narrative use that can complicate a quest;
 8. concept-master, cutout, static-model, and animated-model fields with honest statuses.
 
-The founding 178 remain intact. The first expansion admits eighteen additional forms: six Lucent procession forms, six Charnel household forms, and six neutral living systems. Their machine-readable records are validated against generic admission and duplicate mechanics.
+The founding 178 remain intact. The first expansion admitted eighteen additional forms: six Lucent procession forms, six Charnel household forms, and six neutral living systems. Later accepted waves bring the expansion register to 39 non-generic creatures. Wave 04 contributes Boundary Gnasher, Foreword Cantor, Union of Last Breaths, Return Drinker, Dry Anchor Delegate, and Borrowed Silhouette Escrow; each retains a distinct ecology and counterplay contract.
 
 ## Swarm production workflow
 
 Quest production runs in immutable batches. An author cannot approve their own work.
 
 1. **Canon coordinator:** freezes world-state inputs, available characters, unused genome coordinates, unresolved consequences, and art/model readiness.
-2. **Character owner:** writes desire, fear, contradiction, secret, voice law, relationship changes, and dialogue thesis.
+2. **Character owner:** writes desire, fear, contradiction, an authored secret or explicit equivalent-depth variant, voice law, relationship changes, and dialogue thesis.
 3. **Region owner:** writes local history, ecology, location law, civic stakeholders, and what changes on the map.
 4. **Mechanic owner:** writes the bespoke activity, readable state changes, failure behavior, and counterplay.
 5. **Cross-review:** separate reviewers test canon, moral ambiguity, objective distinctness, outcome materiality, reward uniqueness, and similarity.
@@ -226,6 +232,8 @@ Every expansion character and creature has an explicit pipeline record:
 - independent status for art, static model, and animated model
 
 MODEL MAKER reads those records directly. Empty fields display as unassessed or awaiting art; they are never inferred as ready. When an accepted PNG or model becomes available, its repository-relative path is linked in the canonical record and becomes visible in the same subject register.
+
+An `awaiting-art` status does not waive the visual-brief gate. In the current Wave 04 roster, Leto Fain and Senn Avir are explicitly blocked because `visualBrief` is absent; neither may enter prompt generation, concept review, static modeling, or animated modeling until that authored brief passes review.
 
 Concept art must translate story mechanics into measurable form. A beautiful design that does not expose its cue, counterplay, load-bearing anatomy, or signature contradiction is not production-ready.
 

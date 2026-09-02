@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "quest-wave-04-v11-review-a-freeze",
+  "reviewId": "quest-wave-04-v11-review-a",
+  "reviewerRole": "fresh_independent_review_a_not_author_not_review_b_not_integrator",
+  "freezeDate": "2026-09-01",
+  "verdict": "PASS",
+  "releaseApproved": false,
+  "integrationAuthorized": false,
+  "integrated": false,
+  "repositoryMutation": false,
+  "candidateModified": false,
+  "sourceBinding": {
+    "v11Freeze": {
+      "path": "wave-04-v11.freeze-manifest.json",
+      "bytes": 6538,
+      "sha256": "65f588e4ff25a540f1203ac3655bb0fc25581931809b6c933a98403b3f42dbdf",
+      "expectedBytes": 6538,
+      "expectedSha256": "65f588e4ff25a540f1203ac3655bb0fc25581931809b6c933a98403b3f42dbdf",
+      "exact": true
+    },
+    "v10Freeze": {
+      "path": "../wave-04-v10/wave-04-v10.freeze-manifest.json",
+      "bytes": 5152,
+      "sha256": "2c1756bc54d24bad7d5b515eccf468163d94e5cbecada916ebb5f725b130b2d4",
+      "expectedBytes": 5152,
+      "expectedSha256": "2c1756bc54d24bad7d5b515eccf468163d94e5cbecada916ebb5f725b130b2d4",
+      "exact": true
+    },
+    "v10ReviewA": {
+      "path": "../wave-04-v10/reviews/review-a/quest-wave-04-v10.review-a.manifest.json",
+      "bytes": 2338,
+      "sha256": "9761d879eece9e53fb0313bdbfc9d89498d81e851b5310cb65eb391af487ccc0",
+      "expectedBytes": 2338,
+      "expectedSha256": "9761d879eece9e53fb0313bdbfc9d89498d81e851b5310cb65eb391af487ccc0",
+      "exact": true
+    },
+    "v10ReviewB": {
+      "path": "../wave-04-v10/reviews/review-b/quest-wave-04-v10.review-b.manifest.json",
+      "bytes": 10983,
+      "sha256": "94ab6264fb0d3e1939bb6f7803811b5ae13db9da8904274a81b55db4a6958106",
+      "expectedBytes": 10983,
+      "expectedSha256": "94ab6264fb0d3e1939bb6f7803811b5ae13db9da8904274a81b55db4a6958106",
+      "exact": true
+    },
+    "v10ReviewBAudit": {
+      "path": "../wave-04-v10/reviews/review-b/quest-wave-04-v10.review-b.audit.json",
+      "bytes": 125438,
+      "sha256": "d144384caa538d4bfbb78bd7d6b762e67e5ac9e4d45d15eaad657d005a7d1eb9",
+      "expectedBytes": 125438,
+      "expectedSha256": "d144384caa538d4bfbb78bd7d6b762e67e5ac9e4d45d15eaad657d005a7d1eb9",
+      "exact": true
+    },
+    "v10ReviewBReport": {
+      "path": "../wave-04-v10/reviews/review-b/quest-wave-04-v10.review-b.md",
+      "bytes": 4547,
+      "sha256": "7bdf3b138de25f37ffe1b36081da8eb8be6ca739b051bbd03268355eecd5a288",
+      "expectedBytes": 4547,
+      "expectedSha256": "7bdf3b138de25f37ffe1b36081da8eb8be6ca739b051bbd03268355eecd5a288",
+      "exact": true
+    }
+  },
+  "boundArtifactCounts": {
+    "v11Candidate": 15,
+    "v10Candidate": 14,
+    "v10ReviewA": 4,
+    "v10ReviewB": 4
+  },
+  "evidenceCounts": {
+    "checks": 39,
+    "passingChecks": 39,
+    "adversarialControls": 76,
+    "passingAdversarialControls": 76,
+    "declaredNegativeFixtures": 47,
+    "allowedAuthoredDeltas": 28,
+    "authoredSurfaces": 10,
+    "unchangedAuthoredSurfaces": 7,
+    "changedAuthoredSurfaces": 3,
+    "materialMappings": 151,
+    "directPointers": 1093,
+    "identityCoverage": {
+      "utility": 60,
+      "egress": 24,
+      "item": 30
+    },
+    "predecessorClosures": 132,
+    "v6Closures": 23,
+    "v10ReviewBBlockersClosed": 4,
+    "isolatedBuildValidateRuns": 2,
+    "reproducedOutputs": 10
+  },
+  "closedBlockerIds": [
+    "runtime.companion_forced_outcome_locks_resolve_to_terminal",
+    "runtime.support_character_arc_key_variants_have_discriminator",
+    "runtime.support_character_optional_secret_variants_have_contract",
+    "runtime.custom_state_read_modes_have_executable_contract"
+  ],
+  "blockerIds": [],
+  "reviewBMayProceed": true,
+  "frozenReviewArtifacts": [
+    {
+      "path": "reviews/review-a/audit-quest-wave-04-v11-review-a.mjs",
+      "bytes": 114846,
+      "sha256": "3326746a611b186157bec5f2af2f1c090c4658069bce33691b3a73e7f0cd8270"
+    },
+    {
+      "path": "reviews/review-a/quest-wave-04-v11.review-a.audit.json",
+      "bytes": 117501,
+      "sha256": "e3910af316d835f53b0e7d92dc942db52827041ce19b23fce1078018151c47f8"
+    },
+    {
+      "path": "reviews/review-a/quest-wave-04-v11.review-a.json",
+      "bytes": 1878,
+      "sha256": "71e63e2c23e698be73cc5ac273642755d2f943f52031cf5e5099fca50b902fc1"
+    },
+    {
+      "path": "reviews/review-a/quest-wave-04-v11.review-a.md",
+      "bytes": 2965,
+      "sha256": "d1cc106afd798c28621a0421bfcd27357ae32afa74cb727239f77398fa3f5b9e"
+    },
+    {
+      "path": "reviews/review-a/freeze-quest-wave-04-v11-review-a.mjs",
+      "bytes": 9442,
+      "sha256": "6db72f68554e16b3231d35a7e148312dcfc97997e3c78c0eb8b33e47c649a6e8"
+    }
+  ],
+  "reviewerBoundary": "Review A establishes frozen-byte, exact-delta, runtime-contract, structural, semantic, material, pointer, privacy, governance, and adversarial consistency only. It grants no release, integration, Review B verdict, coordinator approval, or canonical merge approval.",
+  "unverifiedBoundaries": [
+    "fresh independent Review B for v11",
+    "root integration and merge gates",
+    "gameplay balance under live simulation",
+    "localization and voiced performance",
+    "runtime performance and streaming",
+    "external canonical GAME checkout unavailable at the historical local path; exact frozen predecessor and internal canonical bindings were used"
+  ]
+}

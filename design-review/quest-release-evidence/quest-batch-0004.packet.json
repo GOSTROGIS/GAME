@@ -1,0 +1,2759 @@
+{
+  "schemaVersion": 1,
+  "kind": "quest-batch-packet",
+  "batchId": "quest-batch-0004",
+  "questIds": [
+    "faction_the_lantern_named_us_last",
+    "faction_living_appeal_aftercare",
+    "character_the_face_noon_borrowed",
+    "character_a_hunger_needs_an_address",
+    "regional_the_tide_refused_harbor",
+    "regional_the_fog_came_to_collect_our_outlines",
+    "regional_the_graves_grew_upward",
+    "regional_an_echo_arrived_first",
+    "profession_the_furnace_inhaled_our_names",
+    "settlement_the_harbor_rang_below_tide",
+    "relic_the_acre_crossed_a_border",
+    "profession_the_well_drank_the_way_home"
+  ],
+  "sourceReviewPayloads": [
+    {
+      "id": "quest-wave-04-v11-machine-annex",
+      "path": "design-review/quest-release-evidence/quest-wave-04-v11.machine-annex.json",
+      "serialization": "exact immutable reviewed UTF-8 source bytes",
+      "byteLength": 4245855,
+      "sha256": "12183ae9cbded83a65503c42b32c75f4824fad80c0da5f6c5340abd6dce11962"
+    },
+    {
+      "id": "quest-wave-04-v11-runtime-contract",
+      "path": "packages/content/src/quest-wave-04.runtime.js",
+      "serialization": "exact immutable reviewed UTF-8 runtime-contract bytes",
+      "byteLength": 16412,
+      "sha256": "8a59a9bf876d22986e4d9ff801a3ddf35d52444beca5102cc7742e4d53f1b18e"
+    },
+    {
+      "id": "quest-wave-04-v11-independent-review-a",
+      "path": "design-review/quest-release-evidence/quest-wave-04-v11.review-a.manifest.json",
+      "serialization": "exact immutable independent review manifest",
+      "byteLength": 5271,
+      "sha256": "cdad9291283cfa2f413f9da4bac681bf899c5a04dc9b3d4d4ee30cd867367f66"
+    },
+    {
+      "id": "quest-wave-04-v11-independent-review-b",
+      "path": "design-review/quest-release-evidence/quest-wave-04-v11.review-b.manifest.json",
+      "serialization": "exact immutable independent review manifest",
+      "byteLength": 4220,
+      "sha256": "7913bfb59b444e93843b7aa402e52207067ed05176d491eb0ae2d0d9949ef01b"
+    }
+  ],
+  "canonicalQuests": [
+    {
+      "schemaVersion": 9,
+      "id": "faction_the_lantern_named_us_last",
+      "chainId": "remaining_hands_abandonment_list",
+      "order": 1,
+      "type": "faction",
+      "portfolioId": "faction_schism",
+      "title": "The Lantern That Named Us Last",
+      "giverId": "enoch_last_lamplighter",
+      "supportingCharacterIds": [
+        "latch_vey_counterfactual_lamplighter",
+        "minn_ash_public_route_witness"
+      ],
+      "creatureIds": [],
+      "prerequisiteQuestIds": [
+        "side_seven_lamps_for_six_streets",
+        "aftermath_cart_accepts_office",
+        "aftermath_maintenance_window_miracle"
+      ],
+      "stateDomain": "authority",
+      "stateReads": [
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        },
+        {
+          "key": "hearthmere_tool_precedent",
+          "mode": "all-values",
+          "values": [
+            "exposure_controls_standing",
+            "least_represented_controls_precedent",
+            "appealable_cart_discretion"
+          ]
+        },
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "league_abandonment_authority",
+          "values": [
+            "appeal_map_public_and_staffed",
+            "enoch_holds_private_map_and_personal_liability",
+            "forecast_alias_confined_to_rehearsal_only",
+            "nullstreet_route_rotates_with_other_omissions"
+          ]
+        }
+      ],
+      "premise": "Enoch's already-captive lamp intelligence ranks loss during a live rehearsal, but each successful rescue forces it to move abandonment onto somebody else; the drill becomes a real fuel-and-flood emergency before anyone can constitutionalize the result.",
+      "primaryMechanicId": "self_modifying_evacuations_under_real_alarm",
+      "dilemmaId": "save_the_route_now_or_preserve_appeal_capacity_for_the_next_displaced_household",
+      "locationId": "hearthmere_counterfactual_cistern",
+      "consequenceId": "league_abandonment_authority",
+      "objectives": [
+        {
+          "type": "open_live_shutter_trial",
+          "target": "two_conflicting_disaster_hypotheses",
+          "rule": "The first opened route fixes a real household's starting priority; there is no neutral calibration run."
+        },
+        {
+          "type": "adaptive_forecast_spiral",
+          "target": "self_modifying_cistern_graph",
+          "required": 3,
+          "rule": "Each completed rescue closes or floods a different path and Latch must immediately name the newly displaced household in an if-then interrupt."
+        },
+        {
+          "type": "unscheduled_fuel_flood_response",
+          "target": "occupied_service_crawl_and_relief_sump",
+          "rule": "This is the decisive beat: use an omitted route while the forecast attempts to make its temporary loss ranking civic fact."
+        },
+        {
+          "type": "carry_displaced_household_through_appeal_return",
+          "target": "exterior_ramp_and_public_loss_map",
+          "rule": "Finish with aftercare and an executable return path; the outcome is inferred from whose burden remains visible, not chosen at a verdict prompt."
+        }
+      ],
+      "outcomes": [
+        "appeal_map_public_and_staffed",
+        "enoch_holds_private_map_and_personal_liability",
+        "forecast_alias_confined_to_rehearsal_only",
+        "nullstreet_route_rotates_with_other_omissions"
+      ],
+      "rewardItemIds": [
+        "counterfactual_wick",
+        "appeal_route_turning_cord",
+        "household_burden_board"
+      ],
+      "loreReveal": "The League's early lists were reversible rehearsal tools. Captive Lucent calculation made each saved route appear to prove that the newly displaced route had always been the efficient sacrifice.",
+      "dialogueThesis": "A rehearsal becomes a sentence when the model is allowed to convert a temporary emergency burden into a person's permanent civic worth.",
+      "authorshipProof": {
+        "setpiece": "Six angelic fingers press from Enoch's black lamp over a flooded relief while seven shutters physically rewire after every rescue and a real fuel fire enters the exercise.",
+        "failureTransformation": "The omitted household survives through a temporary staffed exterior route. For the next two linked civic quests, response crews owe a visible extra shift and the interior stair remains under appeal rather than declared permanently solved.",
+        "dialogueConstraint": "Latch speaks only in if-then clauses, and every then names the person newly burdened by the proposed rescue.",
+        "persistentWorldChange": "Nullstreet's exterior route has a visible two-quest staffing counter, the burden board retains every displaced household, and the sealed interior stair remains an unresolved appeal rather than a civic fact.",
+        "forbiddenSubstitution": "No evacuation timer or forecast puzzle substitutes: success recursively removes another household's route, and play continues into an unplanned emergency whose map inherits every prior edit."
+      },
+      "phaseGraphId": "phase.v6.lantern.cycle_interrupt",
+      "structuralSignature": "live_trial>recursive_map_rewrite>surprise_emergency>evacuation_aftercare",
+      "decisiveBeat": {
+        "phaseId": "lantern.real_alarm",
+        "objectiveIndex": 2,
+        "disclosureTiming": "The decisive operation occurs at lantern.real_alarm; it is a real graph node and objective 2, not a shared penultimate disclosure/refusal beat."
+      },
+      "outcomeProgram": {
+        "type": "burden_map_inference",
+        "selectionMethod": "derived_from_serialized_operations_and_burden",
+        "terminalChoicePrompt": false
+      },
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "cycle_with_interrupt",
+        "orderedObjectiveRoles": [
+          "open_live_shutter_trial",
+          "adaptive_forecast_spiral",
+          "unscheduled_fuel_flood_response",
+          "carry_displaced_household_through_appeal_return"
+        ],
+        "decisiveBeatIndex": 2,
+        "failureContinuationMode": "temporary_crossquest_aftercare",
+        "outcomeMode": "burden_map_inference",
+        "derivation": {
+          "objectiveCount": 4,
+          "objectiveTypes": [
+            "open_live_shutter_trial",
+            "adaptive_forecast_spiral",
+            "unscheduled_fuel_flood_response",
+            "carry_displaced_household_through_appeal_return"
+          ],
+          "phaseGraphId": "phase.v6.lantern.cycle_interrupt",
+          "phaseTopologyCanonicalization": {
+            "family": "cycle_with_interrupt",
+            "nodeCount": 6,
+            "edgeCount": 6,
+            "invalidEdges": [],
+            "sources": [
+              "lantern.open"
+            ],
+            "sinks": [
+              "lantern.aftercare"
+            ],
+            "splitNodes": [
+              "lantern.rewrite"
+            ],
+            "joinNodes": [
+              "lantern.rewrite"
+            ],
+            "maximumOutDegree": 2,
+            "maximumInDegree": 2,
+            "hasCycle": true,
+            "edgeKindCounts": {
+              "advance": 4,
+              "feedback": 1,
+              "interrupt": 1
+            },
+            "degreeSignature": "0:1,1:0,1:1,1:1,1:1,2:2"
+          },
+          "supportingCharacterCount": 2,
+          "participantCharacterCount": 3,
+          "creatureCount": 1,
+          "signatureItemCount": 3,
+          "outcomeCount": 4,
+          "stateWriteValueCount": 4
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [
+        "enoch_last_lamplighter"
+      ],
+      "participantCharacterIds": [
+        "latch_vey_counterfactual_lamplighter",
+        "minn_ash_public_route_witness",
+        "enoch_last_lamplighter"
+      ],
+      "foundingCreatureOverlayIds": [],
+      "creatureAliasIds": [
+        "sixth_shutter_forecast"
+      ],
+      "signatureRewardStructure": {
+        "kind": "mixed_portable_and_public_record",
+        "portableSignatureItemId": "counterfactual_wick",
+        "itemIds": [
+          "counterfactual_wick",
+          "appeal_route_turning_cord",
+          "household_burden_board"
+        ],
+        "noPortableSignatureReason": null
+      },
+      "failurePersistence": {
+        "class": "temporary_crossquest_aftercare",
+        "continuationNode": "lantern.aftercare",
+        "evidence": {
+          "key": "aftercare_turns_remaining",
+          "type": "integer",
+          "value": 2
+        },
+        "worldReadableProof": "The omitted household survives through a temporary staffed exterior route. For the next two linked civic quests, response crews owe a visible extra shift and the interior stair remains under appeal rather than declared permanently solved.",
+        "crossQuestReadable": true,
+        "doesNotRequirePermanentScar": true
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 4,
+        "objectiveTypes": [
+          "open_live_shutter_trial",
+          "adaptive_forecast_spiral",
+          "unscheduled_fuel_flood_response",
+          "carry_displaced_household_through_appeal_return"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "Seven named household routes recursively transfer a visible burden during rehearsal, then survive an actual fuel-and-flood interrupt."
+      }
+    },
+    {
+      "schemaVersion": 9,
+      "id": "faction_living_appeal_aftercare",
+      "chainId": "vaels_casebook",
+      "order": 2,
+      "type": "faction",
+      "portfolioId": "faction_schism",
+      "title": "The Living Appeal at Ward's End",
+      "giverId": "canoness_vael_kindly_knife",
+      "supportingCharacterIds": [
+        "leto_fain_custodian_unclaimed_symptoms",
+        "senn_avir_residue_orderly"
+      ],
+      "creatureIds": [
+        "contrition_oculus"
+      ],
+      "prerequisiteQuestIds": [
+        "side_the_disease_called_grief",
+        "side_the_hospice_grows_a_heart",
+        "main_archive_of_open_wounds"
+      ],
+      "stateDomain": "living_aftercare_operation",
+      "locationId": "hearthmere_six_wing_aftercare",
+      "consequenceId": "discharged_memory_aftercare",
+      "rewardItemIds": [
+        "discharge_veil",
+        "six_interrupt_cords",
+        "living_authority_slate",
+        "residue_quarantine_bowls"
+      ],
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "reversible_equipment_state_with_living_appeal",
+        "orderedObjectiveRoles": [
+          "verify_living_authority",
+          "route_fixed_records",
+          "execute_interrupt_drill",
+          "witness_vael_read_only_ordering",
+          "bind_contrition_overlay"
+        ],
+        "decisiveBeatIndex": 2,
+        "failureContinuationMode": "living_staff_and_appeal_capacity_debt",
+        "derivation": {
+          "objectiveCount": 5,
+          "objectiveTypes": [
+            "verify_living_authority",
+            "route_fixed_records",
+            "execute_interrupt_drill",
+            "witness_vael_read_only_ordering",
+            "bind_contrition_overlay"
+          ],
+          "phaseGraphId": "phase.v6.aftercare.living_equipment_and_appeal",
+          "phaseTopologyCanonicalization": {
+            "family": "reversible_equipment_state_with_living_appeal",
+            "nodeCount": 5,
+            "edgeCount": 6,
+            "invalidEdges": [],
+            "sources": [],
+            "sinks": [
+              "aftercare.living_appeal"
+            ],
+            "splitNodes": [
+              "aftercare.rack_layout",
+              "aftercare.staff_transfer"
+            ],
+            "joinNodes": [
+              "aftercare.rack_layout"
+            ],
+            "maximumOutDegree": 2,
+            "maximumInDegree": 2,
+            "hasCycle": true,
+            "edgeKindCounts": {
+              "authorize_predefined_use": 1,
+              "living_revocation": 1,
+              "staff_operation": 1,
+              "staff_return": 1,
+              "safety_interrupt": 1,
+              "living_review": 1
+            },
+            "degreeSignature": "1:0,1:1,1:1,1:2,2:2"
+          },
+          "supportingCharacterCount": 2,
+          "participantCharacterCount": 4,
+          "creatureCount": 1,
+          "signatureItemCount": 4,
+          "outcomeCount": 3,
+          "stateWriteValueCount": 4
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [
+        "canoness_vael_kindly_knife",
+        "roa_nullstreet_seventh_tenant"
+      ],
+      "participantCharacterIds": [
+        "leto_fain_custodian_unclaimed_symptoms",
+        "senn_avir_residue_orderly",
+        "canoness_vael_kindly_knife",
+        "roa_nullstreet_seventh_tenant"
+      ],
+      "foundingCreatureOverlayIds": [
+        "contrition_oculus"
+      ],
+      "creatureAliasIds": [],
+      "signatureRewardStructure": {
+        "kind": "clinical_nonportable_set",
+        "portableSignatureItemId": "discharge_veil",
+        "itemIds": [
+          "discharge_veil",
+          "six_interrupt_cords",
+          "living_authority_slate",
+          "residue_quarantine_bowls"
+        ],
+        "noPortableSignatureReason": null
+      },
+      "failurePersistence": {
+        "class": "living_staff_and_appeal_capacity_debt",
+        "continuationNode": "aftercare.living_appeal",
+        "evidence": {
+          "key": "living_aftercare_debt_shifts",
+          "type": "integer",
+          "value": 2
+        },
+        "worldReadableProof": "Closed racks carry repair tags and the living appeal threshold carries a two-shift queue marker.",
+        "crossQuestReadable": true,
+        "doesNotRequirePermanentScar": true
+      },
+      "stateReads": [
+        {
+          "key": "living_predefined_use_eligibility",
+          "mode": "living_actor_record_only",
+          "values": [
+            "eligible",
+            "revoked",
+            "expired"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "living_aftercare_operation"
+        },
+        {
+          "key": "staff_interrupt_readiness",
+          "mode": "six_physical_cutoffs",
+          "values": [
+            "ready",
+            "isolated",
+            "repair_due"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "living_aftercare_operation"
+        },
+        {
+          "key": "living_appeal_capacity",
+          "mode": "occupied_threshold_and_exit",
+          "values": [
+            "available",
+            "queued",
+            "protected_return"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "living_aftercare_operation"
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "living_aftercare_operation",
+          "key": "discharged_memory_aftercare",
+          "values": [
+            "living_authority_aftercare_with_all_six_wings_staffed",
+            "bounded_adverse_evidence_use_with_two_wings_paused",
+            "all_clinical_residue_equipment_quarantined_pending_living_review"
+          ]
+        }
+      ],
+      "premise": "Six fixed donor-bound output records remain nonliving equipment evidence while living donors, patients, or already-lawful living stewards authorize one predefined use; staff operate every transfer, Vael only selects among eligible records, and a living patient appeal meets Contrition pressure at an executable exit.",
+      "primaryMechanicId": "living_authority_staff_operation_and_physical_interrupt",
+      "dilemmaId": "preserve_adverse_equipment_evidence_or_close_a_needed_test_when_living_review_capacity_is_exhausted",
+      "objectives": [
+        {
+          "id": "aftercare.objective.01",
+          "type": "verify_living_authority",
+          "target": "six_donor_or_existing_lawful_living_steward_bindings",
+          "required": 6
+        },
+        {
+          "id": "aftercare.objective.02",
+          "type": "route_fixed_records",
+          "target": "six_routed_staffed_wing_anchors",
+          "required": 6
+        },
+        {
+          "id": "aftercare.objective.03",
+          "type": "execute_interrupt_drill",
+          "target": "correlation_fault_interlock",
+          "required": 1
+        },
+        {
+          "id": "aftercare.objective.04",
+          "type": "witness_vael_read_only_ordering",
+          "target": "lexicographically_first_already_eligible_record",
+          "required": 1
+        },
+        {
+          "id": "aftercare.objective.05",
+          "type": "bind_contrition_overlay",
+          "target": "living_refusal_pressure_at_patient_appeal_anchor",
+          "required": 1
+        }
+      ],
+      "outcomes": [
+        "living_authority_aftercare_with_all_six_wings_staffed",
+        "bounded_adverse_evidence_use_with_two_wings_paused",
+        "all_clinical_residue_equipment_quarantined_pending_living_review"
+      ],
+      "loreReveal": "The ward once mistook durable clinical output for a legal subject. The correction fixes every record as donor-bound nonliving evidence and makes living review, staff labor, and appeal capacity visible instead.",
+      "dialogueThesis": "Evidence may outlast a patient without inheriting that person's agency; the living still owe one another an executable refusal and review path.",
+      "authorshipProof": {
+        "setpiece": "Six inert record racks pulse under staff-operated cutoffs while living eligibility slates remain outside the equipment boundary and Contrition tests only a living refusal at the appeal exit.",
+        "failureTransformation": "Equipment isolates, the living ward acquires a named staffing debt, and no output changes location, eligibility, or control state by itself.",
+        "dialogueConstraint": "Every authorization statement names a living actor; output is discussed only as evidence, equipment state, or clinical measurement.",
+        "persistentWorldChange": "The appeal queue and repair ledger remain readable for later quests while all six racks stay fixed to their donor-bound evidence records.",
+        "forbiddenSubstitution": "No output becomes an inhabitant, claimant, patient, population, speaker, consenting party, custodian, or authority actor."
+      },
+      "phaseGraphId": "phase.v6.aftercare.living_equipment_and_appeal",
+      "structuralSignature": "living_authority_roster>six_fixed_records>staffed_interrupt>operational_selection>living_handoff",
+      "decisiveBeat": {
+        "phaseId": "aftercare.interrupt",
+        "objectiveIndex": 2,
+        "disclosureTiming": "The decisive beat is a living worker's reachable physical interrupt after a predefined-use equipment operation."
+      },
+      "outcomeProgram": {
+        "mode": "living_authority_clinical_state_machine",
+        "continuationNode": "aftercare.handoff",
+        "persistenceKeys": [
+          "living_authority_aftercare_protocol",
+          "wing_staffing_debt",
+          "contrition_pressure_overlay_state"
+        ]
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 5,
+        "objectiveTypes": [
+          "verify_living_authority",
+          "route_fixed_records",
+          "execute_interrupt_drill",
+          "witness_vael_read_only_ordering",
+          "bind_contrition_overlay"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "Living donors and already-lawful living stewards govern one predefined equipment use; records remain fixed output evidence and never become patients, inhabitants, claimants, or actors."
+      }
+    },
+    {
+      "schemaVersion": 9,
+      "id": "character_the_face_noon_borrowed",
+      "chainId": "seraphel_first_face",
+      "order": 1,
+      "type": "character",
+      "portfolioId": "character_guest_follower",
+      "title": "The Face That Noon Borrowed",
+      "giverId": "arch_lumen_seraphel_orr",
+      "supportingCharacterIds": [
+        "cail_orren_executor_face_without_body",
+        "tava_orr_weight_clerk"
+      ],
+      "creatureIds": [],
+      "prerequisiteQuestIds": [
+        "faction_heresy_gentle_horizon",
+        "main_noon_came_bleeding",
+        "main_archive_of_open_wounds"
+      ],
+      "stateDomain": "authority",
+      "locationId": "pale_measure_executor_court",
+      "consequenceId": "seraphel_borrowed_face_authority",
+      "rewardItemIds": [
+        "executor_rose_pane",
+        "three_load_cells"
+      ],
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "irreversible_state_machine",
+        "orderedObjectiveRoles": [
+          "align_inert_surface",
+          "execute_three_load_cells",
+          "verify_four_mortal_exits",
+          "publish_or_fallback"
+        ],
+        "decisiveBeatIndex": 1,
+        "failureContinuationMode": "relationship_authority_shift",
+        "derivation": {
+          "objectiveCount": 4,
+          "objectiveTypes": [
+            "align_inert_surface",
+            "execute_three_load_cells",
+            "verify_four_mortal_exits",
+            "publish_or_fallback"
+          ],
+          "phaseGraphId": "phase.v6.face.irreversible_material_trial",
+          "phaseTopologyCanonicalization": {
+            "family": "irreversible_state_machine",
+            "nodeCount": 4,
+            "edgeCount": 3,
+            "invalidEdges": [],
+            "sources": [
+              "face.zero"
+            ],
+            "sinks": [
+              "face.fallback"
+            ],
+            "splitNodes": [],
+            "joinNodes": [],
+            "maximumOutDegree": 1,
+            "maximumInDegree": 1,
+            "hasCycle": false,
+            "edgeKindCounts": {
+              "irreversible_transition": 3
+            },
+            "degreeSignature": "0:1,1:0,1:1,1:1"
+          },
+          "supportingCharacterCount": 2,
+          "participantCharacterCount": 2,
+          "creatureCount": 0,
+          "signatureItemCount": 2,
+          "outcomeCount": 3,
+          "stateWriteValueCount": 3
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [],
+      "participantCharacterIds": [
+        "cail_orren_executor_face_without_body",
+        "tava_orr_weight_clerk"
+      ],
+      "foundingCreatureOverlayIds": [
+        "contrition_oculus"
+      ],
+      "creatureAliasIds": [],
+      "signatureRewardStructure": {
+        "kind": "bounded_test_set",
+        "portableSignatureItemId": null,
+        "itemIds": [
+          "executor_rose_pane",
+          "three_load_cells"
+        ],
+        "noPortableSignatureReason": "The signature is accountable site infrastructure or a complete measurement set; extraction would destroy its authored mechanic."
+      },
+      "failurePersistence": {
+        "class": "relationship_authority_shift",
+        "continuationNode": "face.fallback",
+        "evidence": {
+          "key": "material_test_clerk_authority",
+          "type": "enum",
+          "value": "dual_mortal_clerks"
+        },
+        "worldReadableProof": "The test remains adverse but inconclusive; Tava loses sole calibration authority and every later material claim requires two independent mortal clerks.",
+        "crossQuestReadable": false,
+        "doesNotRequirePermanentScar": true
+      },
+      "stateReads": [
+        {
+          "key": "seraphel_material_load_state",
+          "mode": "three_bounded_material_loads",
+          "values": [
+            "compression_within_limit",
+            "torsion_within_limit",
+            "thermal_within_limit",
+            "any_load_outside_limit"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "authority"
+        },
+        {
+          "key": "four_mortal_witness_exit_states",
+          "mode": "all_four_independent_exits",
+          "values": [
+            "all_open",
+            "one_withdrawn",
+            "fallback_route_active",
+            "test_aborted"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "authority"
+        },
+        {
+          "key": "contrition_refusal_pressure",
+          "mode": "read_only_encounter_pressure",
+          "values": [
+            "absent",
+            "gathering",
+            "threshold_reached"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "authority"
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "seraphel_borrowed_face_authority",
+          "values": [
+            "material_evidence_published_with_pane_withdrawn",
+            "mortal_fallback_executed",
+            "test_aborted_with_all_witness_exits_open"
+          ]
+        }
+      ],
+      "premise": "Three bounded load cells test whether Seraphel's borrowed face repeats a mortal injury in material behavior. The Rose Pane is an inert alignment and dust surface; four mortal witnesses retain their exits, and any failed tolerance withdraws all Lucent hardware for a mortal fallback.",
+      "primaryMechanicId": "three_numeric_material_load_cells_and_mortal_fallback",
+      "dilemmaId": "publish_adverse_material_evidence_without_transferring_any_authority_to_the_instrument",
+      "objectives": [
+        {
+          "id": "face.objective.01",
+          "type": "align_inert_surface",
+          "target": "executor_rose_pane"
+        },
+        {
+          "id": "face.objective.02",
+          "type": "execute_three_load_cells",
+          "target": "compression_torsion_thermal",
+          "required": 3
+        },
+        {
+          "id": "face.objective.03",
+          "type": "verify_four_mortal_exits",
+          "target": "witness_bays",
+          "required": 4
+        },
+        {
+          "id": "face.objective.04",
+          "type": "publish_or_fallback",
+          "target": "material_evidence_or_mortal_protocol"
+        }
+      ],
+      "outcomes": [
+        "material_evidence_published_with_pane_withdrawn",
+        "mortal_fallback_executed",
+        "test_aborted_with_all_witness_exits_open"
+      ],
+      "loreReveal": "Seraphel's face can repeat a load pattern as matter. Repetition is evidence only: the instrument cannot command, permit, appoint, cure, or carry the victim's will.",
+      "dialogueThesis": "A scar can prove an act without inheriting the victim's authority.",
+      "authorshipProof": {
+        "setpiece": "Three load cells press, twist, and heat a blank Rose Pane while four open witness exits frame Seraphel's face and dust records the variance.",
+        "failureTransformation": "One tolerance failure drops the halo, opens the mortal patrol route, and preserves the unproven material trace.",
+        "dialogueConstraint": "No speaker treats the pane, scar, repeated reflex, or face as a legal actor.",
+        "persistentWorldChange": "The court retains numeric load evidence, exit state, and whether Lucent hardware was withdrawn.",
+        "forbiddenSubstitution": "The pane never transfers command, permission, office, remedy, or victim-reflex authority."
+      },
+      "phaseGraphId": "phase.v6.face.irreversible_material_trial",
+      "structuralSignature": "align>three_bounded_loads>four_exit_check>publish_or_mortal_fallback",
+      "decisiveBeat": {
+        "phaseId": "face.repeat",
+        "action": "execute_three_numeric_material_loads",
+        "disclosureTiming": "The material test is the decisive executable node."
+      },
+      "outcomeProgram": {
+        "mode": "irreversible_material_test_with_mortal_fallback",
+        "continuationNode": "face.fallback",
+        "persistenceKeys": [
+          "face_material_evidence_result",
+          "rose_pane_withdrawn_state"
+        ]
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 4,
+        "objectiveTypes": [
+          "align_inert_surface",
+          "execute_three_load_cells",
+          "verify_four_mortal_exits",
+          "publish_or_fallback"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "Inert Rose Pane evidence passes three numeric load cells before four mortal exits and a mortal-only fallback determine publication."
+      }
+    },
+    {
+      "schemaVersion": 9,
+      "id": "character_a_hunger_needs_an_address",
+      "chainId": "maw_civic_body",
+      "order": 1,
+      "type": "character",
+      "portfolioId": "character_guest_follower",
+      "title": "A Hunger Needs an Address",
+      "giverId": "maw_behind_mercy",
+      "supportingCharacterIds": [
+        "drom_hesh_boundary_host",
+        "orra_dell_night_invitations"
+      ],
+      "creatureIds": [
+        "boundary_gnasher"
+      ],
+      "prerequisiteQuestIds": [
+        "main_mercy_has_a_mouth",
+        "faction_hunger_asked_taxed",
+        "side_seven_lamps_for_six_streets"
+      ],
+      "stateDomain": "admission",
+      "stateReads": [
+        {
+          "key": "maw_trust_appetite_balance",
+          "mode": "all-values",
+          "values": [
+            "maw_proves_restraint",
+            "maw_fed_chosen_memory",
+            "party_cuts_emergency_exit"
+          ]
+        },
+        {
+          "key": "charnel_appetite_levy",
+          "mode": "all-values",
+          "values": [
+            "licensed_feeding_requires_embodied_reparation",
+            "fear_commons_worker_owned_and_revocable",
+            "appetite_law_refused_each_hunt_personally_answerable"
+          ]
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "admission",
+          "key": "maw_civic_boundary_role",
+          "values": [
+            "household_invitations_rotate_with_expiry",
+            "public_patrol_retained_without_inherited_address",
+            "camp_relocates_livestock_lane_and_refusal_households",
+            "hunger_ceases_boundary_patrol_until_new_hosting_law"
+          ]
+        }
+      ],
+      "premise": "A temporary influx camp must survive by changing invitations faster than a lethal perimeter changes appetite. The Maw patrols by its own harm-reduction rule and refuses the final enclosure, while obsolete invitation lines breed Boundary Gnashers.",
+      "primaryMechanicId": "evolving_invitation_perimeter_patrol",
+      "dilemmaId": "protect_domestic_life_without_turning_invitation_into_permanent_predatory_border",
+      "locationId": "pale_measure_influx_perimeter",
+      "consequenceId": "maw_civic_boundary_role",
+      "objectives": [
+        {
+          "type": "commission_lived_influx_camp",
+          "target": "water_sanitation_cooking_livestock_firebreak_and_refuge",
+          "rule": "A boundary is invalid until ordinary life and two emergency returns work without the Maw."
+        },
+        {
+          "type": "issue_witnessed_temporary_invitation",
+          "target": "contested_caravan_household",
+          "rule": "Invitation has a visible expiry and an accessible revocation station."
+        },
+        {
+          "type": "run_autonomous_harm_patrol",
+          "target": "maw_reachable_boundary_candidates",
+          "rule": "The Maw selects the highest immediate harm-reduction edge, then lowest stable anchor ID; unreachable candidates fall back to the open public route."
+        },
+        {
+          "type": "redirect_obsolete_line_bite",
+          "target": "boundary_gnasher_colony",
+          "rule": "Revoke or renew the line before the fourth survey leg lands so the dead geometry becomes useful service trench rather than an occupied route."
+        },
+        {
+          "type": "revoke_invitation_during_fire_and_livestock_crossing",
+          "target": "shared_corner_without_person_bait",
+          "rule": "The decisive beat tests whether protection survives when invitation and evacuation conflict."
+        },
+        {
+          "type": "honor_maw_final_gap_refusal",
+          "target": "unsealed_accessible_return",
+          "rule": "The Maw cannot be worshiped, forced to close, or fed a person to complete the perimeter."
+        },
+        {
+          "type": "complete_night_watch_without_predatory_bite",
+          "target": "households_dependants_and_public_route",
+          "rule": "End on one full lived shift; no civic-status hearing resolves the danger."
+        }
+      ],
+      "outcomes": [
+        "household_invitations_rotate_with_expiry",
+        "public_patrol_retained_without_inherited_address",
+        "camp_relocates_livestock_lane_and_refusal_households",
+        "hunger_ceases_boundary_patrol_until_new_hosting_law"
+      ],
+      "rewardItemIds": [
+        "civic_tooth_stone",
+        "invitation_expiry_bowls"
+      ],
+      "loreReveal": "The Maw can honor witnessed invitations but cannot make predation civic. Its one surviving restraint is to leave a route by which dependants and obligation can escape its protection.",
+      "dialogueThesis": "A safe address becomes captivity when nobody can revoke entry, leave protection, or survive the guardian's hunger.",
+      "authorshipProof": {
+        "setpiece": "A four-corner camp perimeter visibly rewrites invitation marks during fire, livestock movement, cooking, sanitation, and night watch while the Maw deliberately leaves one human-scale gap.",
+        "failureTransformation": "The patrol fails to hold all three fronts. Invited households and livestock relocate to the ash terrace while the Hunger keeps only the public night lane.",
+        "dialogueConstraint": "Drom may name only invitations, expiries, and dependants; he cannot call the Maw sacred, owned, or harmless.",
+        "persistentWorldChange": "Eleven household bowls and the livestock tally move to the ash terrace; the old lane keeps only public patrol marks and an expiring invitation rack.",
+        "forbiddenSubstitution": "No tower-defense or boundary survey substitutes because invitations expire during ordinary camp operation and the autonomous guardian may refuse the geometry the player wants."
+      },
+      "phaseGraphId": "phase.v6.hunger.multi_front_join",
+      "structuralSignature": "camp_commission>temporary_invitation>autonomous_patrol>obsolete_line_redirect>compound_emergency>final_gap_refusal>lived_night",
+      "decisiveBeat": {
+        "phaseId": "hunger.refusal",
+        "objectiveIndex": 5,
+        "disclosureTiming": "The decisive operation occurs at hunger.refusal; it is a real graph node and objective 5, not a shared penultimate disclosure/refusal beat."
+      },
+      "outcomeProgram": {
+        "type": "household_schedule_aggregation",
+        "selectionMethod": "derived_from_serialized_operations_and_burden",
+        "terminalChoicePrompt": false
+      },
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "multi_front_join",
+        "orderedObjectiveRoles": [
+          "commission_lived_influx_camp",
+          "issue_witnessed_temporary_invitation",
+          "run_autonomous_harm_patrol",
+          "redirect_obsolete_line_bite",
+          "revoke_invitation_during_fire_and_livestock_crossing",
+          "honor_maw_final_gap_refusal",
+          "complete_night_watch_without_predatory_bite"
+        ],
+        "decisiveBeatIndex": 5,
+        "failureContinuationMode": "population_relocation",
+        "outcomeMode": "household_schedule_aggregation",
+        "derivation": {
+          "objectiveCount": 7,
+          "objectiveTypes": [
+            "commission_lived_influx_camp",
+            "issue_witnessed_temporary_invitation",
+            "run_autonomous_harm_patrol",
+            "redirect_obsolete_line_bite",
+            "revoke_invitation_during_fire_and_livestock_crossing",
+            "honor_maw_final_gap_refusal",
+            "complete_night_watch_without_predatory_bite"
+          ],
+          "phaseGraphId": "phase.v6.hunger.multi_front_join",
+          "phaseTopologyCanonicalization": {
+            "family": "multi_front_join",
+            "nodeCount": 6,
+            "edgeCount": 7,
+            "invalidEdges": [],
+            "sources": [
+              "hunger.muster"
+            ],
+            "sinks": [
+              "hunger.night"
+            ],
+            "splitNodes": [
+              "hunger.muster"
+            ],
+            "joinNodes": [
+              "hunger.refusal"
+            ],
+            "maximumOutDegree": 3,
+            "maximumInDegree": 3,
+            "hasCycle": false,
+            "edgeKindCounts": {
+              "front": 3,
+              "join": 3,
+              "advance": 1
+            },
+            "degreeSignature": "0:3,1:0,1:1,1:1,1:1,3:1"
+          },
+          "supportingCharacterCount": 2,
+          "participantCharacterCount": 5,
+          "creatureCount": 1,
+          "signatureItemCount": 2,
+          "outcomeCount": 4,
+          "stateWriteValueCount": 4
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [
+        "bek_tallow_patient_zero_of_policy",
+        "roa_nullstreet_seventh_tenant",
+        "enoch_last_lamplighter"
+      ],
+      "participantCharacterIds": [
+        "drom_hesh_boundary_host",
+        "orra_dell_night_invitations",
+        "bek_tallow_patient_zero_of_policy",
+        "roa_nullstreet_seventh_tenant",
+        "enoch_last_lamplighter"
+      ],
+      "foundingCreatureOverlayIds": [],
+      "creatureAliasIds": [],
+      "signatureRewardStructure": {
+        "kind": "distributed_household_set",
+        "portableSignatureItemId": "civic_tooth_stone",
+        "itemIds": [
+          "civic_tooth_stone",
+          "invitation_expiry_bowls"
+        ],
+        "noPortableSignatureReason": null
+      },
+      "failurePersistence": {
+        "class": "population_relocation",
+        "continuationNode": "hunger.night",
+        "evidence": {
+          "key": "relocated_household_count",
+          "type": "integer",
+          "value": 11
+        },
+        "worldReadableProof": "The patrol fails to hold all three fronts. Invited households and livestock relocate to the ash terrace while the Hunger keeps only the public night lane.",
+        "crossQuestReadable": false,
+        "doesNotRequirePermanentScar": true
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 7,
+        "objectiveTypes": [
+          "commission_lived_influx_camp",
+          "issue_witnessed_temporary_invitation",
+          "run_autonomous_harm_patrol",
+          "redirect_obsolete_line_bite",
+          "revoke_invitation_during_fire_and_livestock_crossing",
+          "honor_maw_final_gap_refusal",
+          "complete_night_watch_without_predatory_bite"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "A lived-in camp invites, patrols, revokes, and survives a final voluntary non-bite across three measured fronts."
+      }
+    },
+    {
+      "schemaVersion": 9,
+      "id": "regional_the_tide_refused_harbor",
+      "chainId": "veil_coast_anchor_debt",
+      "order": 1,
+      "type": "regional",
+      "portfolioId": "regional",
+      "title": "The Tide That Refused Harbor",
+      "giverId": "sister_calve_unlit_hospice",
+      "supportingCharacterIds": [
+        "sorel_vane_pilot_dry_anchors",
+        "tesk_marrow_ebb_counter"
+      ],
+      "creatureIds": [
+        "dry_anchor_delegate"
+      ],
+      "prerequisiteQuestIds": [
+        "side_the_hospice_grows_a_heart"
+      ],
+      "stateDomain": "infrastructure",
+      "stateReads": [
+        {
+          "key": "neutral_medicine_governance",
+          "mode": "all-values",
+          "values": [
+            "heart_made_random",
+            "bias_declared_and_appealable",
+            "heart_destroyed_hospice_manual"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "anchor_field_shadow_barrier",
+          "values": [
+            "two_tide_barrier_then_dismantle",
+            "wet_clinic_relocated_with_inland_fleet",
+            "anchor_field_reopens_with_reduced_refuge_load"
+          ]
+        }
+      ],
+      "premise": "At Anchor Field, the unique Fleet in One Shadow carries storm surge only through its already-lashed connected anchor shadows. In one ebb-to-storm window the player must keep a wet clinic functioning while six bollards translate load and crew petitions without spawning another Fleet.",
+      "primaryMechanicId": "two_tide_shadow_load_and_wet_clinic_operation",
+      "dilemmaId": "carry_surge_and_care_without_permanent_settlement_capture_or_fleet_duplication",
+      "locationId": "anchor_field_two_tide_clinic",
+      "consequenceId": "anchor_field_shadow_barrier",
+      "objectives": [
+        {
+          "type": "ebb_window_connect_six_load_cells",
+          "target": "bollards_piles_clean_dirty_clinic_and_dry_refuge",
+          "rule": "Every cell must have a hydraulic load path, an appeal chair, and separate patient/contaminated return before flood."
+        },
+        {
+          "type": "storm_window_hold_unique_fleet_shadow",
+          "target": "surge_hawser_and_delegate_petitions",
+          "rule": "This is the decisive continuous operation: population remains one Fleet; Delegates are bounded appendages that cease when claims are heard or rebound."
+        }
+      ],
+      "outcomes": [
+        "two_tide_barrier_then_dismantle",
+        "wet_clinic_relocated_with_inland_fleet",
+        "anchor_field_reopens_with_reduced_refuge_load"
+      ],
+      "rewardItemIds": [
+        "hawser_of_declared_exposure",
+        "memorial_ballast_scale"
+      ],
+      "loreReveal": "The first refusal signal mixed political exile with plague procedure; the Fleet's connected shadow still carries that unresolved classification whenever it carries water load.",
+      "dialogueThesis": "A barrier that protects a harbor can still be the body of people the harbor refuses to admit.",
+      "authorshipProof": {
+        "setpiece": "Six intertidal bollards darken in a load wave beneath one vast anchor-shaped shadow while a clean pod and contaminated wet clinic travel on distinct pile lanes.",
+        "failureTransformation": "The barrier misses its second tide; Fleet One Shadow withdraws inland and the clinic migrates with it, ending the anchorage service until a later seasonal return.",
+        "dialogueConstraint": "Sorel speaks in load paths and crew pluralities, never treating a Delegate as an independent vessel or the Fleet as divisible people.",
+        "persistentWorldChange": "Wet-clinic berths and Fleet's single shadow marker migrate inland on the next service schedule, while the failed anchorage board shows no clinic arrival window.",
+        "forbiddenSubstitution": "No seawall construction or escort substitutes because surge, clinical circulation, and political petition share one unique connected-shadow body under two irreversible tide windows."
+      },
+      "phaseGraphId": "phase.v6.tide.timed_windows",
+      "structuralSignature": "ebb_construction_window>storm_load_clinic_hold",
+      "decisiveBeat": {
+        "phaseId": "tide.ebb_lock",
+        "objectiveIndex": 0,
+        "disclosureTiming": "The decisive operation occurs at tide.ebb_lock; it is a real graph node and objective 0, not a shared penultimate disclosure/refusal beat."
+      },
+      "outcomeProgram": {
+        "type": "time_window_physical_state",
+        "selectionMethod": "explicit_terminal_choice_after_executable_constraints",
+        "terminalChoicePrompt": true
+      },
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "timed_window_state_machine",
+        "orderedObjectiveRoles": [
+          "ebb_window_connect_six_load_cells",
+          "storm_window_hold_unique_fleet_shadow"
+        ],
+        "decisiveBeatIndex": 0,
+        "failureContinuationMode": "creature_migration_or_cessation",
+        "outcomeMode": "time_window_physical_state",
+        "derivation": {
+          "objectiveCount": 2,
+          "objectiveTypes": [
+            "ebb_window_connect_six_load_cells",
+            "storm_window_hold_unique_fleet_shadow"
+          ],
+          "phaseGraphId": "phase.v6.tide.timed_windows",
+          "phaseTopologyCanonicalization": {
+            "family": "timed_window_state_machine",
+            "nodeCount": 5,
+            "edgeCount": 4,
+            "invalidEdges": [],
+            "sources": [
+              "tide.manifest"
+            ],
+            "sinks": [
+              "tide.cease",
+              "tide.evacuate"
+            ],
+            "splitNodes": [
+              "tide.ebb_lock"
+            ],
+            "joinNodes": [],
+            "maximumOutDegree": 2,
+            "maximumInDegree": 1,
+            "hasCycle": false,
+            "edgeKindCounts": {
+              "time_gate": 2,
+              "advance": 1,
+              "failure_branch": 1
+            },
+            "degreeSignature": "0:1,1:0,1:0,1:1,1:2"
+          },
+          "supportingCharacterCount": 2,
+          "participantCharacterCount": 3,
+          "creatureCount": 1,
+          "signatureItemCount": 2,
+          "outcomeCount": 3,
+          "stateWriteValueCount": 3
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [
+        "moth_winn_surname_ferryman"
+      ],
+      "participantCharacterIds": [
+        "sorel_vane_pilot_dry_anchors",
+        "tesk_marrow_ebb_counter",
+        "moth_winn_surname_ferryman"
+      ],
+      "foundingCreatureOverlayIds": [
+        "fleet_one_shadow"
+      ],
+      "creatureAliasIds": [],
+      "signatureRewardStructure": {
+        "kind": "load_instrument_pair",
+        "portableSignatureItemId": "hawser_of_declared_exposure",
+        "itemIds": [
+          "hawser_of_declared_exposure",
+          "memorial_ballast_scale"
+        ],
+        "noPortableSignatureReason": null
+      },
+      "failurePersistence": {
+        "class": "creature_migration_or_cessation",
+        "continuationNode": "tide.evacuate",
+        "evidence": {
+          "key": "fleet_service_presence",
+          "type": "enum",
+          "value": "migrated_inland"
+        },
+        "worldReadableProof": "The barrier misses its second tide; Fleet One Shadow withdraws inland and the clinic migrates with it, ending the anchorage service until a later seasonal return.",
+        "crossQuestReadable": false,
+        "doesNotRequirePermanentScar": true
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 2,
+        "objectiveTypes": [
+          "ebb_window_connect_six_load_cells",
+          "storm_window_hold_unique_fleet_shadow"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "Six directed hawser cells transfer one impossible Fleet shadow between ebb proof and flood demand while clean, dirty, and refuge routes remain separate."
+      }
+    },
+    {
+      "schemaVersion": 9,
+      "id": "regional_the_fog_came_to_collect_our_outlines",
+      "chainId": "dunmire_borrowed_visibility",
+      "order": 1,
+      "type": "regional",
+      "portfolioId": "regional",
+      "title": "The Fog Came to Collect Our Outlines",
+      "giverId": "moth_winn_surname_ferryman",
+      "supportingCharacterIds": [
+        "mera_wold_keeper_borrowed_sight",
+        "pel_reed_safe_cell_keeper"
+      ],
+      "creatureIds": [
+        "borrowed_silhouette_escrow"
+      ],
+      "prerequisiteQuestIds": [],
+      "stateDomain": "infrastructure",
+      "locationId": "warden_reed_four_bank_visibility",
+      "consequenceId": "warden_reed_visibility_compact",
+      "rewardItemIds": [
+        "fog_loan_reed",
+        "four_bank_sight_vanes",
+        "safe_cell_occupancy_reeds"
+      ],
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "four_way_join_then_conservation",
+        "orderedObjectiveRoles": [
+          "verify_single_body",
+          "place_four_legs",
+          "run_edge_exchange",
+          "reconcile_living_count"
+        ],
+        "decisiveBeatIndex": 1,
+        "failureContinuationMode": "weather_seasonal_lock",
+        "derivation": {
+          "objectiveCount": 4,
+          "objectiveTypes": [
+            "verify_single_body",
+            "place_four_legs",
+            "run_edge_exchange",
+            "reconcile_living_count"
+          ],
+          "phaseGraphId": "phase.v6.fog.simultaneous_barrier",
+          "phaseTopologyCanonicalization": {
+            "family": "four_way_join_then_conservation",
+            "nodeCount": 8,
+            "edgeCount": 10,
+            "invalidEdges": [],
+            "sources": [
+              "fog.ledger"
+            ],
+            "sinks": [
+              "fog.dawn"
+            ],
+            "splitNodes": [
+              "fog.ledger"
+            ],
+            "joinNodes": [
+              "fog.concurrent"
+            ],
+            "maximumOutDegree": 4,
+            "maximumInDegree": 4,
+            "hasCycle": false,
+            "edgeKindCounts": {
+              "place_leg": 4,
+              "join_one_body": 4,
+              "exchange": 1,
+              "reconcile": 1
+            },
+            "degreeSignature": "0:4,1:0,1:1,1:1,1:1,1:1,1:1,4:1"
+          },
+          "supportingCharacterCount": 2,
+          "participantCharacterCount": 4,
+          "creatureCount": 1,
+          "signatureItemCount": 3,
+          "outcomeCount": 3,
+          "stateWriteValueCount": 3
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [
+        "orra_rain_in_ribs",
+        "bessa_vein_weather_bailiff"
+      ],
+      "participantCharacterIds": [
+        "mera_wold_keeper_borrowed_sight",
+        "pel_reed_safe_cell_keeper",
+        "orra_rain_in_ribs",
+        "bessa_vein_weather_bailiff"
+      ],
+      "foundingCreatureOverlayIds": [
+        "fog_loaner"
+      ],
+      "creatureAliasIds": [],
+      "signatureRewardStructure": {
+        "kind": "four_bank_fixed_network",
+        "portableSignatureItemId": "fog_loan_reed",
+        "itemIds": [
+          "fog_loan_reed",
+          "four_bank_sight_vanes",
+          "safe_cell_occupancy_reeds"
+        ],
+        "noPortableSignatureReason": null
+      },
+      "failurePersistence": {
+        "class": "weather_seasonal_lock",
+        "continuationNode": "fog.dawn",
+        "evidence": {
+          "key": "fog_seasons_locked",
+          "type": "integer",
+          "value": 1
+        },
+        "worldReadableProof": "The simultaneous visibility proof breaks before dawn. Outline loans cease for one full fog season while ferries operate on narrow published weather windows.",
+        "crossQuestReadable": false,
+        "doesNotRequirePermanentScar": true
+      },
+      "stateReads": [
+        {
+          "key": "living_borrower_ledger",
+          "mode": "named_living_borrowers_only",
+          "values": [
+            "balanced",
+            "borrower_missing",
+            "creditor_missing"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "infrastructure"
+        },
+        {
+          "key": "single_escrow_body_state",
+          "mode": "exactly_one_body",
+          "values": [
+            "present",
+            "held",
+            "returned"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "infrastructure"
+        },
+        {
+          "key": "four_leg_positions",
+          "mode": "exactly_four_bank_positions",
+          "values": [
+            "all_four_bound",
+            "one_bank_unbound",
+            "exchange_frozen"
+          ],
+          "readKind": "operational-state-v1",
+          "domain": "infrastructure"
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "warden_reed_visibility_compact",
+          "values": [
+            "all_living_outlines_returned",
+            "exchange_frozen_with_body_held",
+            "causeway_edge_closed_until_first_light"
+          ]
+        }
+      ],
+      "premise": "Four Warden Reed banks use one Fog Loaner at the marked edge and exactly one low Escrow body standing on four serialized stilt legs. Living borrower count cannot change; reflections never enter the ledger, and the raised refuge remains outside the exchange.",
+      "primaryMechanicId": "one_body_four_leg_escrow_exchange",
+      "dilemmaId": "return_every_living_outline_without_moving_the_exchange_into_safe_cells",
+      "objectives": [
+        {
+          "id": "fog.objective.01",
+          "type": "verify_single_body",
+          "target": "borrowed_silhouette_escrow",
+          "required": 1
+        },
+        {
+          "id": "fog.objective.02",
+          "type": "place_four_legs",
+          "target": "four_bank_anchors",
+          "required": 4
+        },
+        {
+          "id": "fog.objective.03",
+          "type": "run_edge_exchange",
+          "target": "one_fog_loaner"
+        },
+        {
+          "id": "fog.objective.04",
+          "type": "reconcile_living_count",
+          "target": "living_borrower_ledger"
+        }
+      ],
+      "outcomes": [
+        "all_living_outlines_returned",
+        "exchange_frozen_with_body_held",
+        "causeway_edge_closed_until_first_light"
+      ],
+      "loreReveal": "The Escrow was always one bounded transfer body. Its four legs witness four bank positions without multiplying it or changing the living count.",
+      "dialogueThesis": "Four positions do not make four bodies.",
+      "authorshipProof": {
+        "setpiece": "One low body spans four bank marks on exactly four stilt legs while a single Loaner exchanges one bounded silhouette at the causeway edge.",
+        "failureTransformation": "The body freezes on all four legs, the raised refuge stays clear, and wardens restore the last verified living count.",
+        "dialogueConstraint": "Every reference uses one Escrow body and four legs.",
+        "persistentWorldChange": "Four leg positions, living borrower count, and edge closure state remain serialized.",
+        "forbiddenSubstitution": "No swarm, colony, plural Escrow, variable body count, extra leg, or safe-cell exchange may substitute."
+      },
+      "phaseGraphId": "phase.v6.fog.simultaneous_barrier",
+      "structuralSignature": "one_body>four_leg_hold>single_edge_exchange>living_count_reconciliation",
+      "decisiveBeat": {
+        "phaseId": "fog.concurrent",
+        "objectiveIndex": 1,
+        "disclosureTiming": "The one-body/four-leg proof occurs only after all four bank legs join the explicit concurrent node."
+      },
+      "outcomeProgram": {
+        "mode": "simultaneous_single_body_barrier",
+        "continuationNode": "fog.return",
+        "persistenceKeys": [
+          "single_escrow_four_leg_state",
+          "returned_living_outline_count"
+        ]
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 4,
+        "objectiveTypes": [
+          "verify_single_body",
+          "place_four_legs",
+          "run_edge_exchange",
+          "reconcile_living_count"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "Exactly one Escrow body stands on four serialized legs while one separate Fog Loaner conserves visibility across a four-bank exchange."
+      }
+    },
+    {
+      "schemaVersion": 9,
+      "id": "regional_the_graves_grew_upward",
+      "chainId": "graven_march_root_treaty",
+      "order": 1,
+      "type": "regional",
+      "portfolioId": "regional",
+      "title": "The Graves Grew Upward",
+      "giverId": "king_ash_without_country",
+      "supportingCharacterIds": [
+        "arden_pike_orchard_sexton",
+        "iress_pike_thaw_witness"
+      ],
+      "creatureIds": [],
+      "prerequisiteQuestIds": [
+        "side_the_dead_vote_no",
+        "regional_cairns_keep_winter"
+      ],
+      "stateDomain": "ecology",
+      "stateReads": [
+        {
+          "key": "dead_settlement_claims",
+          "mode": "all-values",
+          "values": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ]
+        },
+        {
+          "key": "graven_cairn_winter",
+          "mode": "all-values",
+          "values": [
+            "unused_road_corridor_preserves_cairn_breeding",
+            "march_villages_share_seasonal_hibernation",
+            "artificial_grave_warmth_ends_herd_disperses"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "ecology",
+          "key": "pallid_root_covenant",
+          "values": [
+            "anonymous_pollination_with_tending_share",
+            "named_plots_relocated_with_portable_markers",
+            "root_routes_cessate_and_winter_rations_contract",
+            "orchard_fallow_with_household_aftercare"
+          ]
+        }
+      ],
+      "premise": "A full compressed growing year passes through Cairnmarket's subterranean grave-root orchard. Anonymous Funeral Kite routes produce winter food until any reclaimed name makes its exact tab heavy and immediately ends that pollination line.",
+      "primaryMechanicId": "seasonal_anonymous_pollination_and_famine_forecast",
+      "dilemmaId": "feed_the_living_without_making_anonymity_an_extractive_crop_title",
+      "locationId": "cairnmarket_grave_root_orchard",
+      "consequenceId": "pallid_root_covenant",
+      "objectives": [
+        {
+          "type": "winter_prepare_grave_root_beds",
+          "target": "burial_hygiene_ventilation_and_fallow_rows",
+          "rule": "No food root may cross an active burial wash or named grave threshold."
+        },
+        {
+          "type": "thaw_release_blank_tab_routes",
+          "target": "roost_to_four_pollination_lines",
+          "rule": "Route protection must preserve the canonical item-claim counterplay at every tab."
+        },
+        {
+          "type": "first_bloom_balance_spores_and_market_labor",
+          "target": "root_support_irrigation_and_lifts",
+          "rule": "The market continues above while workers can retreat through two independent collapse refuges."
+        },
+        {
+          "type": "forecast_winter_yield_from_live_routes",
+          "target": "food_store_and_funeral_detours",
+          "rule": "Yield comes from measured route-hours, never from the number of names exposed."
+        },
+        {
+          "type": "honor_midseason_name_claim",
+          "target": "one_heavy_tab_and_exact_pollination_line",
+          "rule": "This is the decisive beat: the claimed tab immediately stops its flight and route while all unclaimed names remain blank and protected."
+        },
+        {
+          "type": "replan_remaining_ecology",
+          "target": "kite_roosts_spore_density_and_worker_lanes",
+          "rule": "Do not replace the lost line by copying another dead person's route."
+        },
+        {
+          "type": "harvest_with_food_mortuary_separation",
+          "target": "stores_wash_lifts_and_market_distribution",
+          "rule": "Contaminated beds stay visible and cannot be laundered into the ration count."
+        },
+        {
+          "type": "leave_winter_fallow_or_named_debt",
+          "target": "orchard_after_population_departure",
+          "rule": "End on an ecological state and ration consequence, not a covenant vote."
+        }
+      ],
+      "outcomes": [
+        "anonymous_pollination_with_tending_share",
+        "named_plots_relocated_with_portable_markers",
+        "root_routes_cessate_and_winter_rations_contract",
+        "orchard_fallow_with_household_aftercare"
+      ],
+      "rewardItemIds": [
+        "pollen_name_spade",
+        "portable_marker_harness"
+      ],
+      "loreReveal": "The orchard did not discover anonymous graves; Cairnmarket's first famine office deliberately made anonymity a pollination license and later forgot that the dead could still be reclaimed.",
+      "dialogueThesis": "Food grown from protected forgetting is still a debt when a name returns and its route must stop at once.",
+      "authorshipProof": {
+        "setpiece": "A year moves through a terraced underground orchard as blank funeral tabs carry pale spores until one reclaimed tab folds heavy and its entire root line goes dark.",
+        "failureTransformation": "Pollination continues below winter need. The orchard issues a quantified ration share, relocates two family markers, and records which root routes ceased rather than carving a universal scar.",
+        "dialogueConstraint": "Arden may discuss yield only as route-hours and debts; he cannot read, infer, or inventory an unclaimed name.",
+        "persistentWorldChange": "The winter board reads a 0.72 ration fraction, two portable markers occupy named tending stops, and ceased root routes are crossed out in the harvest graph.",
+        "forbiddenSubstitution": "No gather-and-vote or burial quest substitutes because a simulated season, per-tab flight cessation, food hygiene, labor circulation, and winter yield are causally joined."
+      },
+      "phaseGraphId": "phase.v6.graves.seasonal_cycle",
+      "structuralSignature": "winter_bed>thaw_routes>bloom_labor>yield_forecast>claim_interrupt>ecology_replan>harvest_hygiene>winter_fallow",
+      "decisiveBeat": {
+        "phaseId": "graves.claim",
+        "objectiveIndex": 4,
+        "disclosureTiming": "The decisive operation occurs at graves.claim; it is a real graph node and objective 4, not a shared penultimate disclosure/refusal beat."
+      },
+      "outcomeProgram": {
+        "type": "seasonal_yield_covenant",
+        "selectionMethod": "derived_from_serialized_operations_and_burden",
+        "terminalChoicePrompt": false
+      },
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "seasonal_cycle",
+        "orderedObjectiveRoles": [
+          "winter_prepare_grave_root_beds",
+          "thaw_release_blank_tab_routes",
+          "first_bloom_balance_spores_and_market_labor",
+          "forecast_winter_yield_from_live_routes",
+          "honor_midseason_name_claim",
+          "replan_remaining_ecology",
+          "harvest_with_food_mortuary_separation",
+          "leave_winter_fallow_or_named_debt"
+        ],
+        "decisiveBeatIndex": 4,
+        "failureContinuationMode": "resource_rationing",
+        "outcomeMode": "seasonal_yield_covenant",
+        "derivation": {
+          "objectiveCount": 8,
+          "objectiveTypes": [
+            "winter_prepare_grave_root_beds",
+            "thaw_release_blank_tab_routes",
+            "first_bloom_balance_spores_and_market_labor",
+            "forecast_winter_yield_from_live_routes",
+            "honor_midseason_name_claim",
+            "replan_remaining_ecology",
+            "harvest_with_food_mortuary_separation",
+            "leave_winter_fallow_or_named_debt"
+          ],
+          "phaseGraphId": "phase.v6.graves.seasonal_cycle",
+          "phaseTopologyCanonicalization": {
+            "family": "seasonal_cycle",
+            "nodeCount": 6,
+            "edgeCount": 7,
+            "invalidEdges": [],
+            "sources": [],
+            "sinks": [],
+            "splitNodes": [
+              "graves.bloom"
+            ],
+            "joinNodes": [
+              "graves.harvest"
+            ],
+            "maximumOutDegree": 2,
+            "maximumInDegree": 2,
+            "hasCycle": true,
+            "edgeKindCounts": {
+              "season": 5,
+              "interrupt": 1,
+              "advance": 1
+            },
+            "degreeSignature": "1:1,1:1,1:1,1:1,1:2,2:1"
+          },
+          "supportingCharacterCount": 2,
+          "participantCharacterCount": 2,
+          "creatureCount": 0,
+          "signatureItemCount": 2,
+          "outcomeCount": 4,
+          "stateWriteValueCount": 4
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [],
+      "participantCharacterIds": [
+        "arden_pike_orchard_sexton",
+        "iress_pike_thaw_witness"
+      ],
+      "foundingCreatureOverlayIds": [
+        "funeral_kite"
+      ],
+      "creatureAliasIds": [],
+      "signatureRewardStructure": {
+        "kind": "family_marker_pair",
+        "portableSignatureItemId": "pollen_name_spade",
+        "itemIds": [
+          "pollen_name_spade",
+          "portable_marker_harness"
+        ],
+        "noPortableSignatureReason": null
+      },
+      "failurePersistence": {
+        "class": "resource_rationing",
+        "continuationNode": "graves.harvest",
+        "evidence": {
+          "key": "winter_ration_fraction",
+          "type": "ratio",
+          "value": 0.72
+        },
+        "worldReadableProof": "Pollination continues below winter need. The orchard issues a quantified ration share, relocates two family markers, and records which root routes ceased rather than carving a universal scar.",
+        "crossQuestReadable": true,
+        "doesNotRequirePermanentScar": true
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 8,
+        "objectiveTypes": [
+          "winter_prepare_grave_root_beds",
+          "thaw_release_blank_tab_routes",
+          "first_bloom_balance_spores_and_market_labor",
+          "forecast_winter_yield_from_live_routes",
+          "honor_midseason_name_claim",
+          "replan_remaining_ecology",
+          "harvest_with_food_mortuary_separation",
+          "leave_winter_fallow_or_named_debt"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "Six seasonal operations bind grave-root ecology, live name claims, separated harvest, and a recomputable winter food debt."
+      }
+    },
+    {
+      "schemaVersion": 9,
+      "id": "regional_an_echo_arrived_first",
+      "chainId": "hollow_abbey_before_sound",
+      "order": 1,
+      "type": "regional",
+      "portfolioId": "regional",
+      "title": "An Echo Arrived First",
+      "giverId": "wound_scribe_keth",
+      "supportingCharacterIds": [
+        "pera_knell_architect_word_before"
+      ],
+      "creatureIds": [
+        "foreword_cantor"
+      ],
+      "prerequisiteQuestIds": [
+        "main_the_bell_that_forgot_you",
+        "profession_bell_paid_in_silence"
+      ],
+      "stateDomain": "authority",
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        },
+        {
+          "key": "abbey_silence_labor",
+          "mode": "all-values",
+          "values": [
+            "future_silence_individually_paid_and_revocable",
+            "quiet_collectivized_as_labor_commons",
+            "bell_refused_halix_carries_erased_names"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "authority",
+          "key": "foreword_echo_custody",
+          "values": [
+            "counterweight_cause_built_and_result_debt_published",
+            "drain_cause_built_with_downstream_flood_duty",
+            "controlled_fall_accepted_and_abbey_service_moves"
+          ]
+        }
+      ],
+      "premise": "A result has already sounded in Hollow Abbey. Pera confesses at the threshold that she once caused a rescue order to preserve her legend; the player must now stage a materially sufficient alternate cause in real time without pretending symbolism can satisfy load, timing, or harm.",
+      "primaryMechanicId": "branching_real_time_antecedent_construction",
+      "dilemmaId": "satisfy_arrived_result_with_real_structure_or_leave_causal_debt_exposed",
+      "locationId": "hollow_abbey_foreword_cause_frames",
+      "consequenceId": "foreword_echo_custody",
+      "objectives": [
+        {
+          "type": "receive_one_already_arrived_result",
+          "target": "urn_acoustic_lead_and_occupied_clearance",
+          "rule": "Pera's confession is spoken before entry because the pre-echo has already repeated it."
+        },
+        {
+          "type": "choose_and_build_sufficient_cause_branch",
+          "target": "counterweight_drain_buttress_or_controlled_fall",
+          "rule": "The cause must meet its own material load and timing budget before the Foreword Cantor reaches the body frame."
+        },
+        {
+          "type": "keep_karst_and_return_paths_live",
+          "target": "roof_crypt_drain_service_and_two_egress_loops",
+          "rule": "Maintenance and drainage continue during the branch; no route may rely on the future result."
+        },
+        {
+          "type": "accept_permanent_cause_mutation",
+          "target": "new_buttress_channel_or_damage_gap",
+          "rule": "Wrong staging still becomes real architecture and changes which later causes are possible."
+        },
+        {
+          "type": "exit_through_effect_changed_abbey",
+          "target": "branch_specific_return",
+          "rule": "The final verb is traversal through the consequence, not a custody verdict."
+        }
+      ],
+      "outcomes": [
+        "counterweight_cause_built_and_result_debt_published",
+        "drain_cause_built_with_downstream_flood_duty",
+        "controlled_fall_accepted_and_abbey_service_moves"
+      ],
+      "rewardItemIds": [
+        "antecedent_urn",
+        "cause_load_urn_set"
+      ],
+      "loreReveal": "Foreword echoes do not predict a privileged future; repeated warnings pressure inhabitants to manufacture whichever sufficient cause will make the already-heard result honest.",
+      "dialogueThesis": "A warning can save lives while coercing the world to become the story that made the warning true.",
+      "authorshipProof": {
+        "setpiece": "A result rings from one urn before its cause frame fills, while counterweights turn toward three materially different branches and rain maps the only safe clearances.",
+        "failureTransformation": "No branch reaches sufficient load before the echo repeats. The abbey adopts a temporary controlled-fall cause and owes one public cause review after each major repair.",
+        "dialogueConstraint": "Pera states her fraud before any instruction and may describe only measurable load, interval, and clearance afterward.",
+        "persistentWorldChange": "Four cause-review tokens hang at the abbey works desk and one is removed only after a later major repair receives public causal accounting.",
+        "forbiddenSubstitution": "No prediction puzzle substitutes because the player must construct a real load-bearing antecedent under acoustic lead time and then traverse its irreversible physical aftermath."
+      },
+      "phaseGraphId": "phase.v6.echo.branching_alternative",
+      "structuralSignature": "arrived_result>branch_build_under_lead>parallel_safety_maintenance>permanent_mutation>consequence_traversal",
+      "decisiveBeat": {
+        "phaseId": "echo.select",
+        "objectiveIndex": 1,
+        "disclosureTiming": "The decisive operation occurs at echo.select; it is a real graph node and objective 1, not a shared penultimate disclosure/refusal beat."
+      },
+      "outcomeProgram": {
+        "type": "constructed_cause_branch",
+        "selectionMethod": "explicit_terminal_choice_after_executable_constraints",
+        "terminalChoicePrompt": true
+      },
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "branching_alternative_dag",
+        "orderedObjectiveRoles": [
+          "receive_one_already_arrived_result",
+          "choose_and_build_sufficient_cause_branch",
+          "keep_karst_and_return_paths_live",
+          "accept_permanent_cause_mutation",
+          "exit_through_effect_changed_abbey"
+        ],
+        "decisiveBeatIndex": 1,
+        "failureContinuationMode": "causal_institutional_debt",
+        "outcomeMode": "constructed_cause_branch",
+        "derivation": {
+          "objectiveCount": 5,
+          "objectiveTypes": [
+            "receive_one_already_arrived_result",
+            "choose_and_build_sufficient_cause_branch",
+            "keep_karst_and_return_paths_live",
+            "accept_permanent_cause_mutation",
+            "exit_through_effect_changed_abbey"
+          ],
+          "phaseGraphId": "phase.v6.echo.branching_alternative",
+          "phaseTopologyCanonicalization": {
+            "family": "branching_alternative_dag",
+            "nodeCount": 8,
+            "edgeCount": 10,
+            "invalidEdges": [],
+            "sources": [
+              "echo.result"
+            ],
+            "sinks": [
+              "echo.return"
+            ],
+            "splitNodes": [
+              "echo.select"
+            ],
+            "joinNodes": [
+              "echo.mutation"
+            ],
+            "maximumOutDegree": 4,
+            "maximumInDegree": 4,
+            "hasCycle": false,
+            "edgeKindCounts": {
+              "advance": 2,
+              "branch": 4,
+              "join": 4
+            },
+            "degreeSignature": "0:1,1:0,1:1,1:1,1:1,1:1,1:4,4:1"
+          },
+          "supportingCharacterCount": 1,
+          "participantCharacterCount": 2,
+          "creatureCount": 1,
+          "signatureItemCount": 2,
+          "outcomeCount": 3,
+          "stateWriteValueCount": 3
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [
+        "parn_exit_law"
+      ],
+      "participantCharacterIds": [
+        "pera_knell_architect_word_before",
+        "parn_exit_law"
+      ],
+      "foundingCreatureOverlayIds": [],
+      "creatureAliasIds": [],
+      "signatureRewardStructure": {
+        "kind": "branch_measurement_set",
+        "portableSignatureItemId": "antecedent_urn",
+        "itemIds": [
+          "antecedent_urn",
+          "cause_load_urn_set"
+        ],
+        "noPortableSignatureReason": null
+      },
+      "failurePersistence": {
+        "class": "causal_institutional_debt",
+        "continuationNode": "echo.mutation",
+        "evidence": {
+          "key": "cause_reviews_owed",
+          "type": "integer",
+          "value": 4
+        },
+        "worldReadableProof": "No branch reaches sufficient load before the echo repeats. The abbey adopts a temporary controlled-fall cause and owes one public cause review after each major repair.",
+        "crossQuestReadable": false,
+        "doesNotRequirePermanentScar": true
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 5,
+        "objectiveTypes": [
+          "receive_one_already_arrived_result",
+          "choose_and_build_sufficient_cause_branch",
+          "keep_karst_and_return_paths_live",
+          "accept_permanent_cause_mutation",
+          "exit_through_effect_changed_abbey"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "An already-arrived result forces one of four unequal material causes, then permanently changes both abbey structure and return path."
+      }
+    },
+    {
+      "schemaVersion": 9,
+      "id": "profession_the_furnace_inhaled_our_names",
+      "chainId": "ember_gate_breath_levy",
+      "order": 1,
+      "type": "side",
+      "portfolioId": "profession_systemic",
+      "title": "The Furnace Inhaled Our Names",
+      "giverId": "tor_vannic_defector_of_dawn",
+      "supportingCharacterIds": [
+        "kell_argo_steward_shared_exhale"
+      ],
+      "creatureIds": [
+        "union_of_last_breaths"
+      ],
+      "prerequisiteQuestIds": [
+        "aftermath_maintenance_window_miracle",
+        "settlement_street_must_burn_once"
+      ],
+      "stateDomain": "obligation",
+      "stateReads": [
+        {
+          "key": "dawn_maintenance_constitution",
+          "mode": "all-values",
+          "values": [
+            "public_rotating_maintenance",
+            "permanent_noon_hidden_worker_deaths",
+            "charnel_maintained_dark_interval"
+          ]
+        },
+        {
+          "key": "cinderward_sacrificial_address",
+          "mode": "all-values",
+          "values": [
+            "archive_burns_pressure_released_history_displaced",
+            "all_streets_share_permanent_fire_scar",
+            "civic_office_burns_district_self_governs"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "ember_gate_breath_labor_law",
+          "values": [
+            "paid_breath_graph_runs_with_cold_center",
+            "union_refusal_rebalances_heat_and_reduces_output",
+            "typed_network_shutdown_with_family_heat_debt",
+            "slag_front_isolated_and_bellows_staff_rotated",
+            "manual_names_removed_and_furnace_runs_by_pressure_only"
+          ]
+        }
+      ],
+      "premise": "A live Ember Gate shift cascades across twelve intake sleeves, six seal pairs, seven occupied heat zones, and three manual shutdown bays. The Union of Last Breaths protects a cold human center but repossesses air when Kell's living intake hears an unpaid name command.",
+      "primaryMechanicId": "cascading_paid_breath_pressure_network",
+      "dilemmaId": "preserve_heat_and_output_without_treating_named_workers_as_furnace_fuel",
+      "locationId": "ember_gate_paid_breath_furnace",
+      "consequenceId": "ember_gate_breath_labor_law",
+      "objectives": [
+        {
+          "type": "take_live_shift_handover",
+          "target": "cold_center_workers_families_and_twelve_sleeves",
+          "rule": "Kell's tissue-name response is audible in the initial intake test; it is not withheld as a later confession."
+        },
+        {
+          "type": "stabilize_cascading_pressure_pairs",
+          "target": "six_pairs_seven_heat_zones_and_condensate",
+          "required": 4,
+          "rule": "Pairs fail concurrently, mask one another's cues, and may be stabilized in different orders with named household heat loss."
+        },
+        {
+          "type": "honor_union_autonomous_refusal",
+          "target": "unpaid_name_command_and_paid_shift_seal",
+          "rule": "The Union may refuse repossession or leave the cold center; the player cannot override its protected human-breath priority."
+        },
+        {
+          "type": "run_manual_shutdown_or_rebalanced_output",
+          "target": "three_bays_two_heat_separated_exits_and_quench",
+          "rule": "Close on an industrial operating state with workers evacuated or heat continuity proven."
+        }
+      ],
+      "outcomes": [
+        "paid_breath_graph_runs_with_cold_center",
+        "union_refusal_rebalances_heat_and_reduces_output",
+        "typed_network_shutdown_with_family_heat_debt",
+        "slag_front_isolated_and_bellows_staff_rotated",
+        "manual_names_removed_and_furnace_runs_by_pressure_only"
+      ],
+      "rewardItemIds": [
+        "breath_receipt_that_breathes_back"
+      ],
+      "loreReveal": "Ember Gate's first breath levy was not metaphorical payroll: a worker's lung tissue became the intake that taught the furnace to hear names as commands.",
+      "dialogueThesis": "Acknowledged labor is not consent if the machine can repossess the worker's next breath whenever the ledger calls their name.",
+      "authorshipProof": {
+        "setpiece": "Twelve sleeve cuffs inhale in conflicting rhythms around one walkable cold center while six paired pressure seals and seven occupied heat zones cascade under masked alarms.",
+        "failureTransformation": "A pressure front is isolated without injury, but the cold center loses two shifts and the union receives six paid recovery shifts before output may normalize.",
+        "dialogueConstraint": "Kell speaks in paid breaths and named heat recipients; he cannot call donated tissue voluntary fuel after the intake answers his name.",
+        "persistentWorldChange": "Six paid-recovery-shift tiles and two cold-center outages remain on the typed pressure floor until workers complete them.",
+        "forbiddenSubstitution": "No valve puzzle or labor vote substitutes because pressure, payroll, body heat, autonomous creature refusal, households, and manual egress fail concurrently in one network."
+      },
+      "phaseGraphId": "phase.v6.furnace.cascading_fronts",
+      "structuralSignature": "live_shift_handover>concurrent_cascade_triage>autonomous_labor_refusal>manual_shutdown_or_rebalance",
+      "decisiveBeat": {
+        "phaseId": "furnace.union",
+        "objectiveIndex": 2,
+        "disclosureTiming": "The decisive operation occurs at furnace.union; it is a real graph node and objective 2, not a shared penultimate disclosure/refusal beat."
+      },
+      "outcomeProgram": {
+        "type": "typed_network_operating_state",
+        "selectionMethod": "derived_from_serialized_operations_and_burden",
+        "terminalChoicePrompt": false
+      },
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "cascading_multi_front",
+        "orderedObjectiveRoles": [
+          "take_live_shift_handover",
+          "stabilize_cascading_pressure_pairs",
+          "honor_union_autonomous_refusal",
+          "run_manual_shutdown_or_rebalanced_output"
+        ],
+        "decisiveBeatIndex": 2,
+        "failureContinuationMode": "labor_schedule_debt",
+        "outcomeMode": "typed_network_operating_state",
+        "derivation": {
+          "objectiveCount": 4,
+          "objectiveTypes": [
+            "take_live_shift_handover",
+            "stabilize_cascading_pressure_pairs",
+            "honor_union_autonomous_refusal",
+            "run_manual_shutdown_or_rebalanced_output"
+          ],
+          "phaseGraphId": "phase.v6.furnace.cascading_fronts",
+          "phaseTopologyCanonicalization": {
+            "family": "cascading_multi_front",
+            "nodeCount": 7,
+            "edgeCount": 8,
+            "invalidEdges": [],
+            "sources": [
+              "furnace.handover"
+            ],
+            "sinks": [
+              "furnace.rebalance",
+              "furnace.shutdown"
+            ],
+            "splitNodes": [
+              "furnace.handover",
+              "furnace.union"
+            ],
+            "joinNodes": [
+              "furnace.union"
+            ],
+            "maximumOutDegree": 3,
+            "maximumInDegree": 3,
+            "hasCycle": false,
+            "edgeKindCounts": {
+              "propagate": 6,
+              "advance": 1,
+              "failure_branch": 1
+            },
+            "degreeSignature": "0:3,1:0,1:0,1:1,1:1,1:1,3:2"
+          },
+          "supportingCharacterCount": 1,
+          "participantCharacterCount": 3,
+          "creatureCount": 1,
+          "signatureItemCount": 1,
+          "outcomeCount": 5,
+          "stateWriteValueCount": 5
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [
+        "dara_kest_heat_mourner",
+        "mayor_sile_rusk_chimney_elected"
+      ],
+      "participantCharacterIds": [
+        "kell_argo_steward_shared_exhale",
+        "dara_kest_heat_mourner",
+        "mayor_sile_rusk_chimney_elected"
+      ],
+      "foundingCreatureOverlayIds": [],
+      "creatureAliasIds": [],
+      "signatureRewardStructure": {
+        "kind": "single_fixed_graph",
+        "portableSignatureItemId": null,
+        "itemIds": [
+          "breath_receipt_that_breathes_back"
+        ],
+        "noPortableSignatureReason": "The signature is accountable site infrastructure or a complete measurement set; extraction would destroy its authored mechanic."
+      },
+      "failurePersistence": {
+        "class": "labor_schedule_debt",
+        "continuationNode": "furnace.shutdown",
+        "evidence": {
+          "key": "paid_recovery_shifts",
+          "type": "integer",
+          "value": 6
+        },
+        "worldReadableProof": "A pressure front is isolated without injury, but the cold center loses two shifts and the union receives six paid recovery shifts before output may normalize.",
+        "crossQuestReadable": true,
+        "doesNotRequirePermanentScar": true
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 4,
+        "objectiveTypes": [
+          "take_live_shift_handover",
+          "stabilize_cascading_pressure_pairs",
+          "honor_union_autonomous_refusal",
+          "run_manual_shutdown_or_rebalanced_output"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "Thirty-one pieces of equipment and thirty-three operational links transfer paid breath through refusal, manual shutdown, quench, and cold return."
+      }
+    },
+    {
+      "schemaVersion": 9,
+      "id": "settlement_the_harbor_rang_below_tide",
+      "chainId": "gloamharbor_missing_echo",
+      "order": 1,
+      "type": "side",
+      "portfolioId": "settlement",
+      "title": "The Harbor Rang Below the Tide",
+      "giverId": "deacon_halix_bell_of_noon",
+      "supportingCharacterIds": [
+        "nerin_quay_diver_missing_toll",
+        "mora_quay_dry_berth_steward"
+      ],
+      "creatureIds": [],
+      "prerequisiteQuestIds": [
+        "main_the_bell_that_forgot_you"
+      ],
+      "stateDomain": "infrastructure",
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "gloamharbor_vertical_testimony",
+          "values": [
+            "forty_place_manifest_holds_at_flood",
+            "mortal_watch_replaces_unsafe_bell_route",
+            "four_boats_keep_distinct_ten_place_faces",
+            "flood_return_pauses_until_duplicate_notch_is_cleared"
+          ]
+        }
+      ],
+      "premise": "Three inhabited waterlines are traversed through one canonical ebb-slack-flood cycle. One forty-place emergency manifest can place each resident either on the dry refuge gantry or on exactly one of four mapped ten-place boats.",
+      "primaryMechanicId": "vertical_tide_gated_testimony_traversal",
+      "dilemmaId": "hear_deeper_testimony_without_wetting_people_faster_than_they_can_return",
+      "locationId": "gloamharbor_three_waterline_bell_block",
+      "consequenceId": "gloamharbor_vertical_testimony",
+      "objectives": [
+        {
+          "id": "harbor.objective.01",
+          "type": "verify_three_depth_returns",
+          "target": "upper_middle_lower_waterlines",
+          "required": 3
+        },
+        {
+          "id": "harbor.objective.02",
+          "type": "assign_single_emergency_manifest",
+          "target": "forty_exclusive_notches",
+          "required": 40
+        },
+        {
+          "id": "harbor.objective.03",
+          "type": "map_four_boats",
+          "target": "four_semantic_boat_anchors",
+          "required": 4
+        },
+        {
+          "id": "harbor.objective.04",
+          "type": "execute_flood_return",
+          "target": "refuge_or_boat_without_duplicate_assignment"
+        }
+      ],
+      "outcomes": [
+        "forty_place_manifest_holds_at_flood",
+        "mortal_watch_replaces_unsafe_bell_route",
+        "four_boats_keep_distinct_ten_place_faces",
+        "flood_return_pauses_until_duplicate_notch_is_cleared"
+      ],
+      "rewardItemIds": [
+        "low_water_clapper",
+        "refuge_capacity_staff",
+        "four_boat_notch_faces"
+      ],
+      "loreReveal": "The last ringer survived by leaving the bell. The harbor made martyrdom from absence because a living abandonment witness would have weakened every hereditary toll.",
+      "dialogueThesis": "Depth can preserve testimony, but no account earns the right to wet a home before its people can leave and return.",
+      "authorshipProof": {
+        "setpiece": "Three shell-faced crabs ring different depths while one forty-notch staff shifts physical markers between the dry gantry and four mapped ten-place boat faces.",
+        "failureTransformation": "A duplicated notch freezes the flood operation, keeps the dry return open, and sends the contested resident to a staffed relocation unit.",
+        "dialogueConstraint": "Mora states one forty-place capacity and Halix names a reachable return before any toll.",
+        "persistentWorldChange": "The forty exclusive notches, four boat anchors, flooded stair state, and selected return remain visible.",
+        "forbiddenSubstitution": "No competing capacity register or unmapped boat may substitute."
+      },
+      "phaseGraphId": "phase.v6.harbor.reversible_tide",
+      "structuralSignature": "three_depth_testimony>forty_exclusive_manifest>four_mapped_boats>changed_route_return",
+      "decisiveBeat": {
+        "phaseId": "harbor.flood",
+        "objectiveIndex": 1,
+        "disclosureTiming": "The decisive operation occurs at harbor.flood; it is a real graph node and objective 1, not a shared penultimate disclosure/refusal beat."
+      },
+      "outcomeProgram": {
+        "type": "capacity_and_tide_account",
+        "selectionMethod": "derived_from_serialized_operations_and_burden",
+        "terminalChoicePrompt": false
+      },
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "reversible_state_machine",
+        "orderedObjectiveRoles": [
+          "verify_three_depth_returns",
+          "assign_single_emergency_manifest",
+          "map_four_boats",
+          "execute_flood_return"
+        ],
+        "decisiveBeatIndex": 1,
+        "failureContinuationMode": "service_topology",
+        "outcomeMode": "capacity_and_tide_account",
+        "derivation": {
+          "objectiveCount": 4,
+          "objectiveTypes": [
+            "verify_three_depth_returns",
+            "assign_single_emergency_manifest",
+            "map_four_boats",
+            "execute_flood_return"
+          ],
+          "phaseGraphId": "phase.v6.harbor.reversible_tide",
+          "phaseTopologyCanonicalization": {
+            "family": "reversible_state_machine",
+            "nodeCount": 4,
+            "edgeCount": 5,
+            "invalidEdges": [],
+            "sources": [],
+            "sinks": [
+              "harbor.return"
+            ],
+            "splitNodes": [
+              "harbor.slack",
+              "harbor.flood"
+            ],
+            "joinNodes": [
+              "harbor.slack"
+            ],
+            "maximumOutDegree": 2,
+            "maximumInDegree": 2,
+            "hasCycle": true,
+            "edgeKindCounts": {
+              "reversible_transition": 4,
+              "advance": 1
+            },
+            "degreeSignature": "1:0,1:1,1:2,2:2"
+          },
+          "supportingCharacterCount": 2,
+          "participantCharacterCount": 4,
+          "creatureCount": 0,
+          "signatureItemCount": 3,
+          "outcomeCount": 4,
+          "stateWriteValueCount": 4
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [
+        "moth_winn_surname_ferryman",
+        "elian_brine_mirror_husband"
+      ],
+      "participantCharacterIds": [
+        "nerin_quay_diver_missing_toll",
+        "mora_quay_dry_berth_steward",
+        "moth_winn_surname_ferryman",
+        "elian_brine_mirror_husband"
+      ],
+      "foundingCreatureOverlayIds": [
+        "witness_crab"
+      ],
+      "creatureAliasIds": [],
+      "signatureRewardStructure": {
+        "kind": "capacity_infrastructure_bundle",
+        "portableSignatureItemId": null,
+        "itemIds": [
+          "low_water_clapper",
+          "refuge_capacity_staff",
+          "four_boat_notch_faces"
+        ],
+        "noPortableSignatureReason": "The signature is accountable site infrastructure or a complete measurement set; extraction would destroy its authored mechanic."
+      },
+      "failurePersistence": {
+        "class": "service_topology",
+        "trigger": "duplicate_manifest_notch_or_unreachable_return",
+        "stateDelta": "freeze_flood_operation_and_route_contested_resident_to_staffed_relocation",
+        "worldReadableProof": "The forty-notch staff freezes at the duplicated slot, all four ten-place boat faces remain mapped, and the dry return stays open.",
+        "reversibleBy": "physically_clear_the_prior_assignment_then_revalidate_refuge_or_boat_return"
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 4,
+        "objectiveTypes": [
+          "verify_three_depth_returns",
+          "assign_single_emergency_manifest",
+          "map_four_boats",
+          "execute_flood_return"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "Three depth accounts converge on one exclusive forty-place refuge-or-boat manifest and four distinct ten-place flood returns."
+      }
+    },
+    {
+      "schemaVersion": 9,
+      "id": "relic_the_acre_crossed_a_border",
+      "chainId": "remaining_ecologies_walking_land",
+      "order": 1,
+      "type": "side",
+      "portfolioId": "relic_creature_ecology",
+      "title": "The Acre Crossed a Border",
+      "giverId": "enoch_last_lamplighter",
+      "supportingCharacterIds": [
+        "vela_shale_surveyor_owns_no_ground"
+      ],
+      "creatureIds": [],
+      "prerequisiteQuestIds": [
+        "side_the_dead_vote_no",
+        "side_seven_lamps_for_six_streets"
+      ],
+      "stateDomain": "obligation",
+      "stateReads": [
+        {
+          "key": "dead_settlement_claims",
+          "mode": "all-values",
+          "values": [
+            "cosmic_claims_refused",
+            "descendants_override_dead",
+            "king_loses_speaking_authority"
+          ]
+        },
+        {
+          "key": "hidden_households_status",
+          "mode": "all-values",
+          "values": [
+            "street_registered_and_taxed",
+            "street_hidden_and_underfed",
+            "street_joins_unwritten_roads"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "obligation",
+          "key": "walking_acre_service_title",
+          "values": [
+            "five_services_cross_with_former_site_outages",
+            "acre_halts_and_services_split",
+            "soil_returns_while_school_and_fire_remain_mobile"
+          ]
+        }
+      ],
+      "premise": "The Acre moves a Bellwater Road corridor while five distinct civic services stay minimally operational. Every service transfer belongs to one legal-corner move and seed-marker state; failure produces a real outage at either the former or receiving settlement rather than a readdressing dispute.",
+      "primaryMechanicId": "mobile_five_service_continuity_across_four_corner_moves",
+      "dilemmaId": "feed_receiving_settlement_without_hiding_former_settlement_service_outages",
+      "locationId": "bellwater_mobile_service_corridor",
+      "consequenceId": "walking_acre_service_title",
+      "objectives": [
+        {
+          "type": "open_regional_moving_corridor",
+          "target": "bellwater_chainage_detour_convoy_and_livestock",
+          "rule": "Traffic, emergency bypass, and service access must work before the Acre lifts a post."
+        },
+        {
+          "type": "move_northwest_corner_school",
+          "target": "school_source_destination_and_seed_marker",
+          "rule": "Class continuity transfers exactly at the northwest move; tax, water, fire, and burial do not."
+        },
+        {
+          "type": "move_northeast_corner_water",
+          "target": "cistern_source_pipe_dependency_and_seed_marker",
+          "rule": "Minimum potable service must exist at both ends during the lift."
+        },
+        {
+          "type": "respond_to_former_site_outage",
+          "target": "specific_service_lost_by_completed_corner",
+          "rule": "The decisive beat is operational: restore minimum service or record the outage; do not redraw title."
+        },
+        {
+          "type": "move_southeast_corner_fire",
+          "target": "watch_bell_cart_clearance_and_seed_marker",
+          "rule": "Fire response transfers only when the emergency bypass remains open."
+        },
+        {
+          "type": "move_southwest_corner_burial_and_tax",
+          "target": "separate_mortuary_and_levy_dependencies",
+          "rule": "Two services share one corner but remain separately owned, routed, metered, and restorable."
+        },
+        {
+          "type": "keep_mobile_public_ingress_and_egress",
+          "target": "acre_population_one_convoy_and_stock",
+          "rule": "Residents can enter and leave moving services without crossing a lifted post."
+        },
+        {
+          "type": "restore_former_settlement_minimums",
+          "target": "five_typed_outage_nodes",
+          "rule": "No service may be detached merely to make the transfer affordable."
+        },
+        {
+          "type": "complete_receiving_shift_handover",
+          "target": "new_operators_capacities_and_return_convoy",
+          "rule": "End with service continuity measurements, not a property ruling."
+        }
+      ],
+      "outcomes": [
+        "five_services_cross_with_former_site_outages",
+        "acre_halts_and_services_split",
+        "soil_returns_while_school_and_fire_remain_mobile"
+      ],
+      "rewardItemIds": [
+        "boundary_seed_without_title"
+      ],
+      "loreReveal": "The Acre learned ownership from famine maps, but the five services attached later because settlements used the moving field to export duties they did not want to rebuild.",
+      "dialogueThesis": "Mobile land does not make obligations weightless; someone still waits for water, burial, school, tax appeal, and fire response after the soil leaves.",
+      "authorshipProof": {
+        "setpiece": "One rectangular field advances along a live road one fence-post corner at a time while five differently colored-by-shape service rigs remain connected to both settlements.",
+        "failureTransformation": "The Acre halts before the border. School and fire remain mobile, water holds the former-origin minimum, burial keeps the border lay-by, tax opens only at the receiving ledger, and every displaced household receives an explicit return stop.",
+        "dialogueConstraint": "Vela may speak only in service capacities, outage minutes, and seed-marker states; she cannot argue tenancy, address, or abstract ownership during motion.",
+        "persistentWorldChange": "School and fire kites continue with the Acre; water, burial, and tax kites remain at their three accountable stations—former origin, border lay-by, and receiving ledger—and household return stops stay serialized on the corridor.",
+        "forbiddenSubstitution": "No moving-house, tenancy, or address quest substitutes because the play loop is continuous operation of five typed utilities across four locomotion events and two settlements."
+      },
+      "phaseGraphId": "phase.v6.acre.mobile_services",
+      "structuralSignature": "corridor_open>school_corner>water_corner>outage_response>fire_corner>burial_tax_corner>mobile_access>former_minimums>operator_handoff",
+      "decisiveBeat": {
+        "phaseId": "acre.handoff",
+        "objectiveIndex": 8,
+        "disclosureTiming": "The receiving shift handoff closes all five exact service transforms and former-site debts."
+      },
+      "outcomeProgram": {
+        "type": "service_partition_state",
+        "selectionMethod": "explicit_terminal_choice_after_executable_constraints",
+        "terminalChoicePrompt": true
+      },
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "five_service_branch_with_former_site_debt",
+        "orderedObjectiveRoles": [
+          "open_regional_moving_corridor",
+          "move_northwest_corner_school",
+          "move_northeast_corner_water",
+          "respond_to_former_site_outage",
+          "move_southeast_corner_fire",
+          "move_southwest_corner_burial_and_tax",
+          "keep_mobile_public_ingress_and_egress",
+          "restore_former_settlement_minimums",
+          "complete_receiving_shift_handover"
+        ],
+        "decisiveBeatIndex": 8,
+        "failureContinuationMode": "population_service_relocation",
+        "outcomeMode": "service_partition_state",
+        "derivation": {
+          "objectiveCount": 9,
+          "objectiveTypes": [
+            "open_regional_moving_corridor",
+            "move_northwest_corner_school",
+            "move_northeast_corner_water",
+            "respond_to_former_site_outage",
+            "move_southeast_corner_fire",
+            "move_southwest_corner_burial_and_tax",
+            "keep_mobile_public_ingress_and_egress",
+            "restore_former_settlement_minimums",
+            "complete_receiving_shift_handover"
+          ],
+          "phaseGraphId": "phase.v6.acre.mobile_services",
+          "phaseTopologyCanonicalization": {
+            "family": "five_service_branch_with_former_site_debt",
+            "nodeCount": 9,
+            "edgeCount": 9,
+            "invalidEdges": [],
+            "sources": [
+              "acre.corridor"
+            ],
+            "sinks": [
+              "acre.handoff"
+            ],
+            "splitNodes": [
+              "acre.water"
+            ],
+            "joinNodes": [
+              "acre.handoff"
+            ],
+            "maximumOutDegree": 2,
+            "maximumInDegree": 2,
+            "hasCycle": false,
+            "edgeKindCounts": {
+              "move_service": 5,
+              "outage_interrupt": 1,
+              "former_site_minimum": 1,
+              "receiving_handoff": 1,
+              "debt_handoff": 1
+            },
+            "degreeSignature": "0:1,1:1,1:1,1:1,1:1,1:1,1:1,1:2,2:0"
+          },
+          "supportingCharacterCount": 1,
+          "participantCharacterCount": 4,
+          "creatureCount": 0,
+          "signatureItemCount": 1,
+          "outcomeCount": 3,
+          "stateWriteValueCount": 3
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [
+        "pell_nacreyear_road_witness",
+        "iro_pennant_without_wind",
+        "mara_quoin_counter_deed"
+      ],
+      "participantCharacterIds": [
+        "vela_shale_surveyor_owns_no_ground",
+        "pell_nacreyear_road_witness",
+        "iro_pennant_without_wind",
+        "mara_quoin_counter_deed"
+      ],
+      "foundingCreatureOverlayIds": [
+        "acre_that_walks"
+      ],
+      "creatureAliasIds": [],
+      "signatureRewardStructure": {
+        "kind": "nonportable_service_signals",
+        "portableSignatureItemId": null,
+        "itemIds": [
+          "boundary_seed_without_title"
+        ],
+        "noPortableSignatureReason": "The signature is accountable site infrastructure or a complete measurement set; extraction would destroy its authored mechanic."
+      },
+      "failurePersistence": {
+        "class": "population_service_relocation",
+        "continuationNode": "acre.refuge",
+        "evidence": {
+          "key": "mobile_service_partition",
+          "type": "enum",
+          "value": "school_fire_mobile_water_origin_burial_border_tax_receiving"
+        },
+        "worldReadableProof": "The Acre halts before the border. School and fire remain mobile, water holds the former-origin minimum, burial keeps the border lay-by, tax opens only at the receiving ledger, and every displaced household receives an explicit return stop.",
+        "crossQuestReadable": false,
+        "doesNotRequirePermanentScar": true
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 9,
+        "objectiveTypes": [
+          "open_regional_moving_corridor",
+          "move_northwest_corner_school",
+          "move_northeast_corner_water",
+          "respond_to_former_site_outage",
+          "move_southeast_corner_fire",
+          "move_southwest_corner_burial_and_tax",
+          "keep_mobile_public_ingress_and_egress",
+          "restore_former_settlement_minimums",
+          "complete_receiving_shift_handover"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "A translated civic corridor moves school, water, fire, burial, and tax as five exact service systems while the former settlement remains owed minimums."
+      }
+    },
+    {
+      "schemaVersion": 9,
+      "id": "profession_the_well_drank_the_way_home",
+      "chainId": "salt_watch_return_water",
+      "order": 1,
+      "type": "side",
+      "portfolioId": "profession_systemic",
+      "title": "The Well Drank the Way Home",
+      "giverId": "pell_nacreyear_road_witness",
+      "supportingCharacterIds": [
+        "vara_oss_stiller_last_returns",
+        "brin_oss_return_water_carrier"
+      ],
+      "creatureIds": [
+        "return_drinker"
+      ],
+      "prerequisiteQuestIds": [
+        "main_the_bell_that_forgot_you"
+      ],
+      "stateDomain": "infrastructure",
+      "stateReads": [
+        {
+          "key": "calendar_and_relationship_rewrite",
+          "mode": "all-values",
+          "values": [
+            "seasons_restored_bond_lost",
+            "halix_silenced_time_stays_broken",
+            "debt_transferred_to_synod"
+          ]
+        }
+      ],
+      "stateWrites": [
+        {
+          "domain": "infrastructure",
+          "key": "return_water_office",
+          "values": [
+            "reservoir_runs_reduced_yield",
+            "three_caravan_loops_receive_measured_rotation",
+            "still_shutdown_and_brine_marsh_filters",
+            "source_two_exhausted_and_population_relocated",
+            "return_water_office_runs_with_crossquest_ration_aftercare"
+          ]
+        }
+      ],
+      "premise": "Salt Watch runs a measurable water utility whose condenser accepts only witnessed reversible loops as one input. The route proves reversibility but never becomes a destination organ; failures contaminate yield, crystallize equipment, and create brine waste rather than a one-way refuge.",
+      "primaryMechanicId": "route_proof_driven_potable_utility_shift",
+      "dilemmaId": "allocate_finite_treated_water_without_consuming_return_capacity_or_hiding_brine_harm",
+      "locationId": "salt_watch_return_water_utility",
+      "consequenceId": "return_water_office",
+      "objectives": [
+        {
+          "type": "calibrate_brine_intake_storage_and_treatment",
+          "target": "weak_brine_foundation_filters_tanks_and_distribution",
+          "rule": "The utility starts with quantified demand, storage, loss, contamination, and minimum service."
+        },
+        {
+          "type": "sample_four_reversible_travel_loops",
+          "target": "witness_anchors_isochrones_shadow_windows_and_accessible_alternatives",
+          "rule": "A completed out-and-back loop contributes a measured coefficient; it creates no doorway, shelter, destination, or relationship road."
+        },
+        {
+          "type": "operate_six_leg_condenser_states",
+          "target": "return_drinker_and_route_debt_input",
+          "rule": "Each lifted leg changes yield and return friction while the form remains outside the inhabited safe tie-in."
+        },
+        {
+          "type": "triage_live_contamination_event",
+          "target": "potable_tank_caravan_tank_and_public_draw",
+          "rule": "The decisive beat sacrifices yield, storage, or delivery time; no failure turns a route into a refuge."
+        },
+        {
+          "type": "dispatch_measured_water_during_demand_surge",
+          "target": "residents_refugees_caravans_and_still_continuity",
+          "rule": "Every allocation has liters, treatment state, and named deferred demand."
+        },
+        {
+          "type": "dispose_brine_and_restart_after_white_wind",
+          "target": "sealed_waste_basin_filter_marsh_and_manual_return",
+          "rule": "End on a utility shift with reduced yield or safe shutdown, not a destination decision."
+        }
+      ],
+      "outcomes": [
+        "reservoir_runs_reduced_yield",
+        "three_caravan_loops_receive_measured_rotation",
+        "still_shutdown_and_brine_marsh_filters",
+        "source_two_exhausted_and_population_relocated",
+        "return_water_office_runs_with_crossquest_ration_aftercare"
+      ],
+      "rewardItemIds": [
+        "homeward_dross_cup"
+      ],
+      "loreReveal": "The first return still did not make paths drinkable. It used the measured proof that a traveler could return as a condenser coefficient, then quietly made route debt part of its foundation law.",
+      "dialogueThesis": "Water can be public while the journeys that produce it are consumed from people who still need to come home.",
+      "authorshipProof": {
+        "setpiece": "A six-legged route condenser beads measured water over covered tanks while four loop shadows pulse on a wind wall and a separate brine basin grows crystalline fins.",
+        "failureTransformation": "Source Two is physically exhausted rather than called clean. Its population enters a measured caravan rotation while rejected brine continues returning only to its own loop.",
+        "dialogueConstraint": "Vara speaks only in liters, salinity, return duration, storage loss, and deferred demand; she cannot describe a route as a home or a destination.",
+        "persistentWorldChange": "Source Two's gauge remains at zero yield, its population appears on a measured caravan roster, and each rejected flask can return only along its own closed loop.",
+        "forbiddenSubstitution": "No destination, shelter, or road-restoration quest substitutes because the dominant loop is quantified intake, treatment, storage, contamination, distribution, waste, and restart."
+      },
+      "phaseGraphId": "phase.v6.well.resource_feedback",
+      "structuralSignature": "intake_calibration>reversibility_sampling>condenser_operation>contamination_triage>demand_dispatch>brine_restart",
+      "decisiveBeat": {
+        "phaseId": "well.dispatch",
+        "objectiveIndex": 4,
+        "disclosureTiming": "Measured public and caravan dispatch occurs only after contamination isolation and before white-wind restart."
+      },
+      "outcomeProgram": {
+        "type": "source_balance_and_ration",
+        "selectionMethod": "derived_from_serialized_operations_and_burden",
+        "terminalChoicePrompt": false
+      },
+      "structuralDiversityContract": {
+        "schemaVersion": 9,
+        "objectiveGraphKind": "resource_feedback_pipeline",
+        "orderedObjectiveRoles": [
+          "calibrate_brine_intake_storage_and_treatment",
+          "sample_four_reversible_travel_loops",
+          "operate_six_leg_condenser_states",
+          "triage_live_contamination_event",
+          "dispatch_measured_water_during_demand_surge",
+          "dispose_brine_and_restart_after_white_wind"
+        ],
+        "decisiveBeatIndex": 4,
+        "failureContinuationMode": "resource_exhaustion",
+        "outcomeMode": "source_balance_and_ration",
+        "derivation": {
+          "objectiveCount": 6,
+          "objectiveTypes": [
+            "calibrate_brine_intake_storage_and_treatment",
+            "sample_four_reversible_travel_loops",
+            "operate_six_leg_condenser_states",
+            "triage_live_contamination_event",
+            "dispatch_measured_water_during_demand_surge",
+            "dispose_brine_and_restart_after_white_wind"
+          ],
+          "phaseGraphId": "phase.v6.well.resource_feedback",
+          "phaseTopologyCanonicalization": {
+            "family": "resource_feedback_pipeline",
+            "nodeCount": 5,
+            "edgeCount": 5,
+            "invalidEdges": [],
+            "sources": [],
+            "sinks": [],
+            "splitNodes": [],
+            "joinNodes": [],
+            "maximumOutDegree": 1,
+            "maximumInDegree": 1,
+            "hasCycle": true,
+            "edgeKindCounts": {
+              "advance": 4,
+              "feedback": 1
+            },
+            "degreeSignature": "1:1,1:1,1:1,1:1,1:1"
+          },
+          "supportingCharacterCount": 2,
+          "participantCharacterCount": 2,
+          "creatureCount": 1,
+          "signatureItemCount": 1,
+          "outcomeCount": 5,
+          "stateWriteValueCount": 5
+        },
+        "stalePredecessorObjectiveTypes": [],
+        "currentObjectiveTypesExact": true
+      },
+      "returningCharacterIds": [],
+      "participantCharacterIds": [
+        "vara_oss_stiller_last_returns",
+        "brin_oss_return_water_carrier"
+      ],
+      "foundingCreatureOverlayIds": [],
+      "creatureAliasIds": [],
+      "signatureRewardStructure": {
+        "kind": "source_separated_set",
+        "portableSignatureItemId": "homeward_dross_cup",
+        "itemIds": [
+          "homeward_dross_cup"
+        ],
+        "noPortableSignatureReason": null
+      },
+      "failurePersistence": {
+        "class": "resource_exhaustion",
+        "continuationNode": "well.return",
+        "evidence": {
+          "key": "source_two_yield_liters_per_day",
+          "type": "integer",
+          "value": 0
+        },
+        "worldReadableProof": "Source Two is physically exhausted rather than called clean. Its population enters a measured caravan rotation while rejected brine continues returning only to its own loop.",
+        "crossQuestReadable": true,
+        "doesNotRequirePermanentScar": true
+      },
+      "authoredSemanticContract": {
+        "manualObjectiveBindings": 6,
+        "objectiveTypes": [
+          "calibrate_brine_intake_storage_and_treatment",
+          "sample_four_reversible_travel_loops",
+          "operate_six_leg_condenser_states",
+          "triage_live_contamination_event",
+          "dispatch_measured_water_during_demand_surge",
+          "dispose_brine_and_restart_after_white_wind"
+        ],
+        "noIndexModuloOrCycleAssignment": true,
+        "completionEvidenceDistinct": true,
+        "narrativeNote": "Four witnessed out-and-back routes feed one treatment train whose potable, caravan, rejected-brine, condenser, and restart states remain physically separated."
+      }
+    }
+  ]
+}
