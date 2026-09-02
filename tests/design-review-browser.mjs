@@ -314,6 +314,7 @@ try {
     { id: 'concept_hollow_abbey_processional_west_arrival', width: 1536, height: 1024 },
     { id: 'concept_hollow_abbey_mute_nave_route_read', width: 1536, height: 1024 },
     { id: 'concept_hollow_abbey_rain_court_work_nexus', width: 1536, height: 1024 },
+    { id: 'concept_hollow_abbey_foundry_operational_chain', width: 1536, height: 1024 },
   ]);
   for (const image of result.environmentImages) {
     assert.ok(image.src.startsWith(`${baseUrl}/assets/world/`), `${image.id} did not load from repository world assets`);

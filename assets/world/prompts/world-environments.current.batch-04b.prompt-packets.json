@@ -1,0 +1,26 @@
+{
+  "schema": "SableReachPublicPromptPacketV1",
+  "batchId": "current-world-environments-batch-04b",
+  "publication": {
+    "scope": "repository_relative_prompt_direction",
+    "privateExecutionContextPublished": false,
+    "externalProviderIdentifiersPublished": false,
+    "supersededRevisionInputsPublished": false
+  },
+  "rightsDeclaration": "Owner-authorized original project art direction for environment concept and blockout reference use.",
+  "records": [
+    {
+      "id": "prompt.environment.hollow_abbey_foundry_operational_chain",
+      "assetPath": "assets/world/hollow-abbey-foundry-operational-chain-v1.png",
+      "bodyStatus": "exact_accepted_revision_prompt_body",
+      "canonicalPublicDirection": "Literal localized addition to this exact 1536×1024 image. Preserve every existing pixel and feature as closely as possible, especially everything below the circular lantern. Do not alter the seven silence rooms, archive, foundry functions, routes, water systems, camera, lighting, materials, weather, or the existing six suspended panels.\n\nThe lantern currently has EXACTLY SIX fully visible suspended dark polygonal acoustic panels grouped from the center toward the right, plus a conspicuous empty suspension bay/gap on the FAR LEFT beneath the lantern ring. ADD EXACTLY ONE new panel in that empty far-left gap. It must match the existing six panels in material, size, clipped-corner silhouette, bottom height, outline, and two-chain suspension. Place it fully visible with clean air gaps on both sides. Do not add any other panel or panel-like support. Do not shift, resize, duplicate, repaint, delete, merge, or obscure any of the current six panels. The result must have EXACTLY SEVEN actual suspended panels total: the one new far-left panel plus the six unchanged existing panels. Remove any unused dangling chain in the new panel position by attaching it correctly to the added panel. No partial eighth panel, no background slab, no extra fin, no panel-shaped roof rib.\n\nKeep the lantern unmistakably open to cold storm sky. Preserve the high annular gutter so rain remains captured at roof level and does not fall into the foundry or blackwater circuit.\n\nAbsolutely no other change. No text, numbers, labels, signs, rune, notation, diagram, arrows, inset, split screen, UI, logo, watermark, people, figures, statues, creatures, iconography, or new props. Same polished stylized 3D dark-fantasy direction-only concept. No exact-dimension, engineering, collision, runtime, model, construction, or production-readiness claim.",
+      "promptSha256": "edc49b7f065a5ef4ec45a9976e8120c3b6ba238f59e7d76f18ffa294cb121ec6",
+      "sourceReferences": [],
+      "unpublishedInput": {
+        "count": 1,
+        "role": "superseded_private_revision_source",
+        "reason": "Raw revision input remains private; no execution locator is published."
+      }
+    }
+  ]
+}
