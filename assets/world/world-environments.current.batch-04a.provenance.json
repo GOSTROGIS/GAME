@@ -1,0 +1,58 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-world-environments-batch-04a",
+  "rightsDeclaration": "Owner-authorized original project art; no third-party or franchise source imagery; environment concept and blockout reference use.",
+  "promptSource": "assets/world/prompts/world-environments.current.batch-04a.prompt-packets.json",
+  "records": [
+    {
+      "id": "environment_keyframe.hollow_abbey_rain_court_work_nexus",
+      "subjectId": "hollow_abbey_rain_court_work_nexus",
+      "familyId": "world_environments",
+      "rank": "site_court",
+      "role": "environment_keyframe",
+      "regionId": "hollow_abbey",
+      "siteId": "site.hollow-abbey",
+      "routeId": "route.processional-steps",
+      "locationId": "hollow_abbey_processional_and_mute_nave",
+      "questId": "main_a_litany_unspoken",
+      "landmarkIds": ["abbey_gate", "mute_nave"],
+      "path": "assets/world/hollow-abbey-rain-court-work-nexus-v1.png",
+      "sha256": "a5e5ae1dfe2ec15a7f17f649356404f4f276ba8db89bcdd07bc2273cd555b074",
+      "bytes": 3200004,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Exact accepted revision prompt body retained; private execution context and superseded input locator omitted.",
+      "promptRecordId": "prompt.environment.hollow_abbey_rain_court_work_nexus",
+      "promptSha256": "2f5f5b0207448f1c253c5fa240094798fd0511233e06e695bb0638bdf5718c9c",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference-guided revision",
+        "outputSha256": "a5e5ae1dfe2ec15a7f17f649356404f4f276ba8db89bcdd07bc2273cd555b074"
+      },
+      "sourceReferences": [
+        {
+          "path": "assets/characters/npcs/exact-word/nhal-without-shadow-v1.png",
+          "sha256": "1ffd628343a714bd77a5c0e7d28b94ed521ece0d94e88296e93e91edda1435d5",
+          "role": "accepted_gatewarden_identity_and_empty_body_silhouette_authority_only"
+        }
+      ],
+      "reviewEvidence": {
+        "reviewMode": "two independent read-only visual reviews",
+        "accepted": true,
+        "boundary": "Accepted player-height gate and rain-court composition, four-way route hierarchy, Nhal staging and supernatural rain cue, shallow local drainage, maintenance evidence, material continuity, framing, and forbidden-content direction only; exact architecture, measurements, GIS placement, drainage behavior, collision, final Nhal construction and VFX, runtime integration, and production geometry remain unapproved."
+      },
+      "maturity": {
+        "environmentDirection": "authored_and_independently_reviewed",
+        "runtimeBackdrop": false,
+        "runtimeIntegrated": false,
+        "productionAsset": false
+      }
+    }
+  ]
+}

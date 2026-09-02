@@ -1,0 +1,32 @@
+{
+  "schema": "SableReachPublicPromptPacketV1",
+  "batchId": "current-world-environments-batch-04a",
+  "publication": {
+    "scope": "repository_relative_prompt_direction",
+    "privateExecutionContextPublished": false,
+    "externalProviderIdentifiersPublished": false,
+    "supersededRevisionInputsPublished": false
+  },
+  "rightsDeclaration": "Owner-authorized original project art direction for environment concept and blockout reference use.",
+  "records": [
+    {
+      "id": "prompt.environment.hollow_abbey_rain_court_work_nexus",
+      "assetPath": "assets/world/hollow-abbey-rain-court-work-nexus-v1.png",
+      "bodyStatus": "exact_accepted_revision_prompt_body",
+      "canonicalPublicDirection": "Use case: precise-object-edit.\nAsset type: corrected Hollow Abbey rain-court environment concept for Claude Design blockout, social staging, and material-transition reference.\nInput images: Image 1 is the generated rain-court edit target. Image 2 is the accepted Gatewarden Nhal identity and empty-body silhouette authority only.\n\nPrimary request: Preserve Image 1's complete successful composition almost exactly: the deep gatehouse viewpoint, broad unobstructed regroup floor, exactly FOUR route destinations, exactly ONE Gatewarden Nhal in the same lateral left recess, central Mute Nave rise, low left cloister-plot passage, broad lower-right rectangular foundry-receiving portal with empty trolley, far-right upper service stair, shallow rain film, restrained lighting, and no other figure or creature.\n\nNhal identity correction:\n- Keep exactly one Nhal, no duplicates.\n- Make Nhal unmistakably an absence held by wet black and verdigris shell/armor, matching Image 2: an empty hood with no face, eyes, skull, flesh, or head inside; hollow gaps where a conventional torso or body would be; the exact-key staff remains supported by the shell.\n- Open one narrow roof drip or gutter seam directly above the recess. A visible thread of rain must enter the empty hood, continue visibly through the hollow torso cavity, and fall out below/behind the shell. The falling water is the only living motion inside the absence.\n- Do not make Nhal transparent glass, a ghost, a statue, or an ordinary armored person. Nhal remains lateral and never blocks any route.\n\nMaterial and maintenance correction, without adding route mouths:\n- Add a restrained cracked pale choir-tile band embedded in the floor and short broad rise leading only to the central Mute Nave entrance.\n- Beyond the low left root-dark passage, reveal two narrow terraced grave-soil plot beds with sparse pale blind vines and small gold rain lichen. No lush green growth.\n- Strengthen one clearly swept dry crescent just inside the gate and one small clean dry work island beside a side threshold, both distinct from the wet traversal film.\n- Add recently retied plain utility cords at basin hooks and two unmatched older verdigris bronze repair clamps on damaged limestone. These are maintenance details, not symbols or decoration.\n- Keep movable catch basins, grates, boot/porter wear, wall hooks, and all props outside the main traversal and conversation space.\n- Add subtle bone-limestone karst pitting, solution scars, damp mineral runout, and visibly repaired courses so the architecture reads as maintained Hollow Abbey karst rather than pristine generic Gothic.\n\nWater remains only a shallow graded film and the single Nhal roof drip, feeding local drains. No deep water, river, stream, canal, bridge, waterfall, moat, bell-well connection, foundry outflow, crypt flood, or Abbey Sink connection.\n\nDo not add any person, creature, corpse, saint statue, humanoid silhouette, fifth route, incidental open arch, readable text, letters, numbers, labels, signs, runes, UI, arrows, map, cutaway, logo, watermark, border, split screen, saturated color, neon, or lens flare. Preserve 1536×1024 landscape and polished stylized 3D dark-fantasy production-concept finish.",
+      "promptSha256": "2f5f5b0207448f1c253c5fa240094798fd0511233e06e695bb0638bdf5718c9c",
+      "sourceReferences": [
+        {
+          "path": "assets/characters/npcs/exact-word/nhal-without-shadow-v1.png",
+          "sha256": "1ffd628343a714bd77a5c0e7d28b94ed521ece0d94e88296e93e91edda1435d5",
+          "role": "accepted_gatewarden_identity_and_empty_body_silhouette_authority_only"
+        }
+      ],
+      "unpublishedInput": {
+        "count": 1,
+        "role": "superseded_private_revision_source",
+        "reason": "Raw revision input remains private; no execution locator is published."
+      }
+    }
+  ]
+}

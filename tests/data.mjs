@@ -84,7 +84,7 @@ for (const asset of WORLD_TECHNICAL_ASSETS) check(existsSync(resolve(new URL("..
 for (const asset of CHARACTER_RENDER_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset)), `Missing character render ${asset}`);
 check(REGION_ASSET_KITS.length === 5, "Expected five production regional asset kits");
 check(new Set(WORLD_CONCEPT_ASSETS.map(({ id }) => id)).size === WORLD_CONCEPT_ASSETS.length, "World concept IDs must be unique");
-check(WORLD_CONCEPT_ASSETS.length === 10, "Expected ten accepted world concept references");
+check(WORLD_CONCEPT_ASSETS.length === 11, "Expected eleven accepted world concept references");
 check(WORLD_TECHNICAL_ASSETS.length === 1, "Expected one accepted world technical reference");
 const wardenExterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_warden_reed_four_bank_visibility_exterior");
 const wardenInterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_warden_reed_stilt_service_house_interior");
@@ -100,10 +100,12 @@ for (const [asset, expected] of [
 }
 const hollowArrival = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_hollow_abbey_processional_west_arrival");
 const hollowInterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_hollow_abbey_mute_nave_route_read");
-check(Boolean(hollowArrival && hollowInterior), "Hollow Abbey supplemental exterior/interior direction pair is incomplete");
+const hollowRainCourt = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_hollow_abbey_rain_court_work_nexus");
+check(Boolean(hollowArrival && hollowInterior && hollowRainCourt), "Hollow Abbey supplemental direction set is incomplete");
 for (const [asset, expected] of [
   [hollowArrival, { path: "./assets/world/hollow-abbey-processional-west-arrival-v1.png", sha256: "e10cf6c4e1469d23f49f0fc38ebb49d0dad51f490b1f8bf23c1c2e82ced72e29", bytes: 2762634, scope: "site_arrival_exterior", landmarks: ["abbey_gate"] }],
   [hollowInterior, { path: "./assets/world/hollow-abbey-mute-nave-route-read-v1.png", sha256: "2e5582779702fed33fef3ee092f109a0c39403431752f11c22bbad95b7288826", bytes: 2715661, scope: "site_interior_route_read", landmarks: ["mute_nave", "last_bell_crypt"] }],
+  [hollowRainCourt, { path: "./assets/world/hollow-abbey-rain-court-work-nexus-v1.png", sha256: "a5e5ae1dfe2ec15a7f17f649356404f4f276ba8db89bcdd07bc2273cd555b074", bytes: 3200004, scope: "site_court_work_nexus", landmarks: ["abbey_gate", "mute_nave"] }],
 ]) {
   check(asset?.path === expected.path && asset?.sha256 === expected.sha256 && asset?.bytes === expected.bytes, `Hollow Abbey ${expected.scope} content-addressed evidence changed`);
   check(asset?.dimensions?.width === 1536 && asset?.dimensions?.height === 1024 && asset?.colorSpace === "sRGB" && asset?.alphaPolicy === "opaque", `Hollow Abbey ${expected.scope} raster contract changed`);

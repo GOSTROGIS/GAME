@@ -46,8 +46,10 @@ const ENVIRONMENT_DEFINITIONS = Object.freeze([
     siteId: 'site.warden-reed',
     locationId: 'warden_reed_four_bank_visibility',
     questId: 'regional_the_fog_came_to_collect_our_outlines',
-    exteriorConceptId: 'concept_warden_reed_four_bank_visibility_exterior',
-    interiorConceptId: 'concept_warden_reed_stilt_service_house_interior',
+    conceptIds: Object.freeze([
+      'concept_warden_reed_four_bank_visibility_exterior',
+      'concept_warden_reed_stilt_service_house_interior',
+    ]),
     motionSystems: Object.freeze([
       'fog_density_bands',
       'ferry_positions',
@@ -66,8 +68,11 @@ const ENVIRONMENT_DEFINITIONS = Object.freeze([
     locationId: 'hollow_abbey_processional_and_mute_nave',
     questId: 'main_a_litany_unspoken',
     landmarkIds: Object.freeze(['abbey_gate', 'mute_nave', 'last_bell_crypt']),
-    exteriorConceptId: 'concept_hollow_abbey_processional_west_arrival',
-    interiorConceptId: 'concept_hollow_abbey_mute_nave_route_read',
+    conceptIds: Object.freeze([
+      'concept_hollow_abbey_processional_west_arrival',
+      'concept_hollow_abbey_mute_nave_route_read',
+      'concept_hollow_abbey_rain_court_work_nexus',
+    ]),
     motionSystems: Object.freeze([
       'roof_rain_now',
       'delayed_rain_returns',
@@ -347,8 +352,8 @@ function environmentConcept(id, expectedEnvironmentId) {
 
 function environmentList() {
   return ENVIRONMENT_DEFINITIONS.map((definition) => {
-    const exteriorConcept = environmentConcept(definition.exteriorConceptId, definition.id);
-    const interiorConcept = environmentConcept(definition.interiorConceptId, definition.id);
+    const concepts = Object.freeze(definition.conceptIds.map((id) => environmentConcept(id, definition.id)));
+    const [exteriorConcept, interiorConcept] = concepts;
     return Object.freeze({
       id: definition.id,
       contentId: definition.contentId,
@@ -362,6 +367,7 @@ function environmentList() {
       landmarkIds: definition.landmarkIds ?? Object.freeze([]),
       tier: 'reference',
       directionStatus: 'approved_direction',
+      concepts,
       exteriorConcept,
       interiorConcept,
       exteriorSrc: exteriorConcept.src,

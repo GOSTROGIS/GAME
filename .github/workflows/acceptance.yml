@@ -27,7 +27,7 @@ jobs:
           lfs: false
           fetch-depth: 0
 
-      - name: Fetch required historical, browser, and changed concept-art LFS payloads
+      - name: Fetch required historical, referenced, browser, and changed concept-art LFS payloads
         shell: pwsh
         run: |
           git lfs fsck --pointers HEAD
@@ -36,8 +36,9 @@ jobs:
           git lfs pull --include="assets/3d/runtime/bridge/**,assets/3d/seeds/slipcurve/**,tools/worldgen/generated/source/**" --exclude=""
           if ($LASTEXITCODE -ne 0) { throw "Unable to fetch the repaired historical LFS payloads" }
 
-          $browserFixtures = @(
+          $acceptanceFixtures = @(
             'assets/characters/npcs/grave-tithe/sera-dusk-v1-cutout.png'
+            'assets/characters/npcs/exact-word/nhal-without-shadow-v1.png'
             'assets/bestiary/forms/ashbound/ash-husk-v1.png'
             'assets/bestiary/forms/charnel-households/door-lung-courser-v1.png'
             'assets/bestiary/forms/charnel-households/reverse-rib-bride-v1.png'
@@ -48,8 +49,8 @@ jobs:
             'assets/bestiary/forms/charnel-households/threshold-lamb-v1.png'
             'assets/bestiary/forms/charnel-weather/eave-lung-v1.png'
           )
-          git lfs pull --include="$($browserFixtures -join ',')" --exclude=""
-          if ($LASTEXITCODE -ne 0) { throw "Unable to fetch the browser acceptance LFS fixtures" }
+          git lfs pull --include="$($acceptanceFixtures -join ',')" --exclude=""
+          if ($LASTEXITCODE -ne 0) { throw "Unable to fetch the referenced and browser acceptance LFS fixtures" }
 
           $base = $env:RASTER_ART_BASE_SHA
           if ([string]::IsNullOrWhiteSpace($base) -or $base -match '^0+$') { $base = 'HEAD^' }
@@ -68,11 +69,11 @@ jobs:
             $_ -like 'tools/worldgen/generated/source/*'
           })
           $changedLfs = @($changed | Where-Object { $lfsPaths -contains $_ })
-          $missingBrowserFixtures = @($browserFixtures | Where-Object { $lfsPaths -notcontains $_ })
-          if ($missingBrowserFixtures.Count -ne 0) {
-            throw "Browser acceptance fixture is not tracked by Git LFS: $($missingBrowserFixtures -join ', ')"
+          $missingAcceptanceFixtures = @($acceptanceFixtures | Where-Object { $lfsPaths -notcontains $_ })
+          if ($missingAcceptanceFixtures.Count -ne 0) {
+            throw "Referenced or browser acceptance fixture is not tracked by Git LFS: $($missingAcceptanceFixtures -join ', ')"
           }
-          $required = @($historical + $browserFixtures + $changedLfs | Sort-Object -Unique)
+          $required = @($historical + $acceptanceFixtures + $changedLfs | Sort-Object -Unique)
 
           foreach ($asset in $required) {
             $pointer = (git cat-file -p "HEAD:$asset") -join "`n"

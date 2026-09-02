@@ -345,6 +345,11 @@ function renderPlateBlock(plateSrc, caption, methodLine) {
 }
 
 function renderEnvironmentConcepts(environment) {
+  const conceptLabel = (concept, index) => index === 0
+    ? 'Exterior'
+    : index === 1
+      ? 'Interior'
+      : titleCase(concept.referenceScope.replaceAll('_', ' '));
   const conceptFigure = (label, concept, alt) => `<figure class="environment-concept" data-environment-concept="${concept.referenceScope}">
     <img src="${concept.src}" alt="${alt}">
     <figcaption>
@@ -352,10 +357,9 @@ function renderEnvironmentConcepts(environment) {
       <span style="color:#8d938d;font:var(--type-body-xs)">${concept.dimensions.width}\u00d7${concept.dimensions.height} \u00b7 ${concept.alphaPolicy} sRGB \u00b7 ${(concept.bytes / 1048576).toFixed(2)} MiB</span>
     </figcaption>
   </figure>`;
-  plateBlock.innerHTML = `<p class="eyebrow" style="margin:0 0 10px">Environment concepts \u00b7 exterior and interior</p>
+  plateBlock.innerHTML = `<p class="eyebrow" style="margin:0 0 10px">Environment concepts \u00b7 ${environment.concepts.length} accepted reference${environment.concepts.length === 1 ? '' : 's'}</p>
     <div class="environment-concepts">
-      ${conceptFigure('Exterior', environment.exteriorConcept, `${environment.name} exterior concept direction`)}
-      ${conceptFigure('Interior', environment.interiorConcept, `${environment.name} interior concept direction`)}
+      ${environment.concepts.map((concept, index) => conceptFigure(conceptLabel(concept, index), concept, `${environment.name} ${concept.referenceScope.replaceAll('_', ' ')} concept direction`)).join('')}
     </div>`;
 }
 
@@ -599,7 +603,7 @@ function mountEnvironment(environment) {
     eyebrow: 'Sable Reach \u00b7 environment reference \u00b7 direction only',
     title: environment.name,
     idTag: environment.id,
-    stat: `2 accepted concept references \u00b7 static scene ${environment.staticSceneStatus} \u00b7 animated scene ${environment.animatedSceneStatus}`,
+    stat: `${environment.concepts.length} accepted concept reference${environment.concepts.length === 1 ? '' : 's'} \u00b7 static scene ${environment.staticSceneStatus} \u00b7 animated scene ${environment.animatedSceneStatus}`,
   });
   renderEnvironmentConcepts(environment);
   tierBody.innerHTML = `
@@ -732,7 +736,7 @@ function buildGroups(filter) {
   const f = filter.trim().toLowerCase();
   const match = (s, extra) => !f || s.name.toLowerCase().includes(f) || (extra || '').toLowerCase().includes(f);
   const groups = [
-    { label: `Environments \u2014 direction and scene pipeline (${REG.environments.length})`, rows: REG.environments.filter((s) => match(s, `${s.regionId} ${s.siteId} ${s.locationId} ${s.questId}`)).map((s) => rowHtml(s, `${s.siteId} \u00b7 exterior + interior`)) },
+    { label: `Environments \u2014 direction and scene pipeline (${REG.environments.length})`, rows: REG.environments.filter((s) => match(s, `${s.regionId} ${s.siteId} ${s.locationId} ${s.questId}`)).map((s) => rowHtml(s, `${s.siteId} \u00b7 ${s.concepts.length} accepted concepts`)) },
     { label: `Bestiary \u2014 sculpted (${REG.sculpted.length})`, rows: REG.sculpted.filter((s) => match(s, s.family)).map((s) => rowHtml(s, s.family)) },
     { label: `Named characters \u2014 generic rig (${REG.namedCast.length})`, rows: REG.namedCast.filter((s) => match(s, s.role + ' ' + s.faction)).map((s) => rowHtml(s, s.role)) },
     { label: `Expansion characters \u2014 lore and production pipeline (${REG.expansionCharacters.length})`, rows: REG.expansionCharacters.filter((s) => match(s, s.role + ' ' + s.faction + ' ' + s.epithet)).map((s) => rowHtml(s, `${s.faction} \u00b7 ${s.epithet}`)) },
