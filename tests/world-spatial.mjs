@@ -36,6 +36,8 @@ const atlas = JSON.parse(readFileSync(new URL('../packages/content/manifests/sab
 const worldSpatialModuleSource = readFileSync(new URL('../packages/content/src/world-spatial.data.js', import.meta.url), 'utf8');
 const worldReadmeSource = readFileSync(new URL('../assets/world/README.md', import.meta.url), 'utf8');
 const artBibleSource = readFileSync(new URL('../design-review/Hollow March Art Bible.dc.html', import.meta.url), 'utf8');
+const worldSpatialBibleSource = readFileSync(new URL('../design-review/SABLE-REACH-WORLD-SPATIAL-BIBLE.md', import.meta.url), 'utf8');
+const hollowAbbeyDossierSource = readFileSync(new URL('../design-review/world-sites/HOLLOW-ABBEY-PRECINCT-BIBLE.md', import.meta.url), 'utf8');
 const ids = (records, field = 'id') => new Set(records.map((record) => record[field]));
 const equalSets = (left, right) => left.size === right.size && [...left].every((value) => right.has(value));
 const valueAtPointer = (value, pointer) => pointer.slice(1).split('/').reduce((current, segment) => current?.[segment.replaceAll('~1', '/').replaceAll('~0', '~')], value);
@@ -62,6 +64,46 @@ assert.deepEqual(validation.stats, {
   questEnvironments: 49,
   authoredQuestCapacity: 5000,
 });
+
+const hollowAbbeyEnvelope = SITE_SPATIAL_ENVELOPES.find(({ id }) => id === 'site.hollow-abbey');
+assert.ok(hollowAbbeyEnvelope);
+assert.equal(hollowAbbeyEnvelope.atlasAnchor.coordinate[2], 96);
+assert.equal(hollowAbbeyEnvelope.designEnvelope.coreRadiusMeters, 256);
+assert.equal(hollowAbbeyEnvelope.designEnvelope.influenceRadiusMeters, 960);
+assert.deepEqual(hollowAbbeyEnvelope.designEnvelope.verticalRangeMeters, [67, 184]);
+for (const authorityLabel of ['[CANON]', '[DESIGN CONSTRAINT]', '[DERIVED]', '[PROPOSAL]', '[ART REFERENCE]', '[OPEN]', '[NONCLAIM]']) {
+  assert.match(hollowAbbeyDossierSource, new RegExp(`\\${authorityLabel}`), `Hollow Abbey dossier is missing ${authorityLabel}`);
+}
+for (const characterName of ['Gatewarden Nhal', 'Moira Quiet', 'Seln Clause', 'Brother Iven', 'Aven Tongueless', 'Elo Veer', 'Mott Vane', 'Netta Aster']) {
+  assert.match(hollowAbbeyDossierSource, new RegExp(characterName), `Hollow Abbey dossier is missing ${characterName}`);
+}
+for (const questBoundActorName of ['Pera Knell', 'Parn Exit-Law', 'Foreword Cantor', 'Deacon Halix', 'Ader Coil', 'Wound-Scribe Keth']) {
+  assert.match(hollowAbbeyDossierSource, new RegExp(questBoundActorName), `Hollow Abbey dossier is missing quest-bound actor ${questBoundActorName}`);
+}
+for (const requiredContract of [
+  '256 m core radius',
+  '960 m influence radius',
+  '67–184 m design range',
+  'M02 Memory Return stair',
+  'sealed and cannot bypass Cantor Oss or the Clapper interaction',
+  'an already released M02 remains passable',
+  'P06 SALTWARD / OUTBOUND SHELF',
+  'drain_cause_built_with_downstream_flood_duty',
+  'karst_flood',
+  'Five systems with explicit boundaries',
+  'no authority connects that receptor to Abbey Sink',
+]) {
+  assert.ok(hollowAbbeyDossierSource.includes(requiredContract), `Hollow Abbey dossier is missing contract: ${requiredContract}`);
+}
+const hollowAbbeyRepositoryReferences = [...hollowAbbeyDossierSource.matchAll(/`((?:assets|design-review|packages|src|tests|tools)\/[^`\r\n]+)`/g)]
+  .flatMap(([, paths]) => paths.split(/;\s*/));
+assert.equal(new Set(hollowAbbeyRepositoryReferences).size, 57);
+for (const referencedPath of new Set(hollowAbbeyRepositoryReferences)) {
+  assert.equal(existsSync(`${repositoryRoot}${referencedPath}`), true, `Hollow Abbey dossier path does not resolve: ${referencedPath}`);
+}
+assert.ok(worldSpatialBibleSource.includes('design-review/world-sites/HOLLOW-ABBEY-PRECINCT-BIBLE.md'));
+assert.doesNotMatch(hollowAbbeyDossierSource, /SABLE-REACH-QUEST-WAVE-03/);
+assert.doesNotMatch(hollowAbbeyDossierSource, /(?:[A-Za-z]:\\|https?:\/\/|drive\.google|(?:call|session|folder)[_-]?id\s*[:=]|@[a-z0-9.-]+\.[a-z]{2,})/i);
 
 assert.equal(WORLD_SPATIAL_TARGETS.authoredQuestCapacity, 5_000);
 assert.equal(WORLD_SPATIAL_TARGETS.currentAcceptedQuestCount, EXPANSION_QUESTS.length);

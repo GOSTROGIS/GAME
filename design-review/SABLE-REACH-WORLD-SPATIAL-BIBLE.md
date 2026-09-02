@@ -419,6 +419,8 @@ Current inherited ceilings include 700 visible draw calls at high quality, 18 vi
 
 ## Claude Design handoff
 
+For Hollow Abbey work, begin with `design-review/world-sites/HOLLOW-ABBEY-PRECINCT-BIBLE.md`. It is the reviewed site-level bridge from current GAME data and accepted art into a proposed precinct graph, room-by-room architecture, separate water systems, habitat exclusions, eight founding-character routines plus quest-bound actors, quest staging, phase deltas, and model/streaming requirements. Preserve its inline authority labels: its coordinates, room codes, dimensions, schedules, and local routes are blockout proposals unless a cited canonical or design-constraint source says otherwise.
+
 For any region, site, creature, building, or quest:
 
 1. Resolve the machine record by canonical ID. For Wave 04 full-detail work, open `packages/content/manifests/quest-wave-04-v11.world.json` explicitly rather than relying on its compact spatial index. For one of the six reviewed deep-blockout sites, open `assets/world/spatial/world-spatial-wave-02-v9.annex.json` on demand and retain its noncanonical local-frame boundary.
