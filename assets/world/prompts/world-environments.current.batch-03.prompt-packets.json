@@ -1,0 +1,56 @@
+{
+  "schema": "SableReachPublicPromptPacketV1",
+  "batchId": "current-world-environments-batch-03",
+  "publication": {
+    "scope": "repository_relative_prompt_direction",
+    "privateExecutionContextPublished": false,
+    "externalProviderIdentifiersPublished": false,
+    "supersededRevisionInputsPublished": false
+  },
+  "rightsDeclaration": "Owner-authorized original project art direction for environment concept and blockout reference use.",
+  "records": [
+    {
+      "id": "prompt.environment.hollow_abbey_processional_west_arrival",
+      "assetPath": "assets/world/hollow-abbey-processional-west-arrival-v1.png",
+      "bodyStatus": "exact_accepted_revision_prompt_body",
+      "canonicalPublicDirection": "Edit the FIRST attached generated Hollow Abbey exterior concept. Preserve its accepted Sable Reach identity almost exactly: same wet bone-limestone ruin, facade, eclipse rain, near-black blue shadows, restrained verdigris and old-gold practicals, foreground Processional Steps arrival, central Exact-Word gate, karst shelf materials, composition quality, and absence of any river or stream. The SECOND image remains palette/material authority only.\n\nMake one targeted spatial correction in the right half so the nonverbal route graph is unambiguous to a world builder:\n\n1. Keep the central foreground-to-gate stair as the primary arrival and gate route.\n2. Convert the existing right-hand stairs into a clearly optional high shelf loop. The stair must stay fully inside frame and visibly connect to an upper terrace.\n3. Show that upper terrace curving or stepping back down to REJOIN a lower onward road within the frame; it must no longer look like an isolated climb that exits nowhere.\n4. Strengthen the lower onward Processional Steps continuation toward Salt Watch: from the gate/rain-court threshold, a continuous, visibly paved limestone path must sweep through the right middle ground, pass the visible rejoin point from the high loop, and continue into the far-right distance. Use continuous surface material, edges, parapet/marker rhythm, and unobstructed line of travel—not arrows, overlays, or labels.\n5. Separate route hierarchy with elevation and lighting: primary gate stair central; optional high loop upper right; onward continuation lower/mid right. All three must read as connected choices in one perspective.\n\nDo not add a river, stream, bridge, canal, waterfall, lake, deep flooding, or hydraulic link. Keep local water only as rain sheen, shallow runoff, catch basins, and bell-well heads. Do not add detailed people, named characters, creatures, readable text, letters, UI, signs, arrows, colored route paint, logos, watermarks, borders, split screen, inset diagrams, map, plan, cutaway, survey marks, or engineering claims. Preserve the polished wide 1536×1024 dark-fantasy production-concept rendering.",
+      "promptSha256": "4229aa8e863a160b9bb4cfb871ddce757b7ff8ca55bfe4ab55a55deb21664298",
+      "sourceReferences": [
+        {
+          "path": "assets/world/hollow-abbey-nave.png",
+          "sha256": "d79488872142049443b55ef98532470d632dba9bd9ae5e90ba02bd8403e7bc3b",
+          "role": "approved_regional_palette_and_material_authority_only"
+        }
+      ],
+      "unpublishedInput": {
+        "count": 1,
+        "role": "superseded_private_revision_source",
+        "reason": "Raw revision input remains private; no execution locator is published."
+      }
+    },
+    {
+      "id": "prompt.environment.hollow_abbey_mute_nave_route_read",
+      "assetPath": "assets/world/hollow-abbey-mute-nave-route-read-v1.png",
+      "bodyStatus": "exact_accepted_revision_prompt_body",
+      "canonicalPublicDirection": "Revise the FIRST attached generated Hollow Abbey interior. The SECOND attached approved nave keyframe remains binding palette/material/weather authority. The THIRD attached Hush Order plate is family silhouette authority only. Produce a meaningfully complementary playable-camera frame, not another centered re-render of the approved keyframe.\n\nCamera and composition correction:\n- Move the camera down to plausible third-person play height, about human eye level, and off the central axis near one side-aisle entrance.\n- Look diagonally across the encounter space so floor widths, waist-high cover, door clearances, stairs, and recovery distance read at player scale.\n- Remove the dominant centered enthroned/devotional figure and reduce the eclipse aperture to an off-axis lighting source. The approved keyframe already owns the grand axial view; this frame must own side-aisle combat and circulation.\n- Keep cinematic quality but prioritize spatial accountability.\n\nRoute graph correction, shown without labels or overlays:\n1. A clear central quest spine remains visible across the middle distance.\n2. Both left and right side aisles must read as complete optional loops, each with a visible entrance, an unobstructed length, and a visible lateral crossover that rejoins the central spine.\n3. A believable stair or broken ramp rises to an upper-cloister path; show where that upper route continues and a second visible point where it returns to the lower circulation.\n4. Preserve one clearly distinct crypt descent beyond the encounter space, but make it materially blacker, colder, and less lamp-filled so it reads as the dangerous black-crypt continuation rather than a shrine.\n5. Pull giant urns, rails, and debris away from route mouths, corners, lateral crossovers, and combat recovery zones. Retain urn-field occlusion as deliberate edge clusters and a few cover islands, with long enough sightlines for flank tracking and third-person camera recovery.\n\nArchitecture and art identity:\n- Wet bone-limestone, cracked choir tile, restrained verdigris/resonant bronze, broken arches, mute choir-screen fragments, tongueless-saint niches, upper cloister remnants, black crypt stair, sparse gravewax practicals.\n- Cold near-black blue shadows, desaturated gray stone, deep verdigris, restrained old gold, eclipse-white shafts, wet-floor bounce, burial-dust dry pockets.\n- Roof rain, shallow runnels, delayed rain rings, subtle urn resonance, and still pressure pockets. No river, canal, stream, or deep flood and no hydraulic connection to Abbey Sink.\n- Do not use repetitive generic Gothic clergy statues as the visual subject. Architecture can have eroded anonymous niches, but no dominant saint/throne tableau.\n\nCreature correction:\n- Remove every ordinary hooded, robed, or human-bodied figure from the current image.\n- At most two tiny distant Hush-family proxies may appear. If present, they must read only as the attached family grammar: one continuous closed-loop cord skeleton with an empty stitched shell and no normal torso beneath. Keep them too small and indistinct to establish a named individual or precise anatomy.\n- No player portrait, named character, ordinary monk, Cantor Oss, boss, Echo Choir, Ossuary Vermin, corpses, gore, or congregation.\n\nRendering: polished stylized 3D dark-fantasy production concept, wide 1536×1024 landscape, mature grounded materials, controlled contrast, no glossy game screenshot UI.\n\nForbidden: text, readable letters, labels, captions, UI, HUD, logos, watermarks, arrows, colored path overlays, borders, split screen, inset diagram, cutaway, blueprint, plan view, exact dimensions, engineering claims, pristine cathedral restoration, saturated color, neon, lens flare, cute/comic anatomy, generic glowing magic.",
+      "promptSha256": "436ea290791c6001a7c2a709d3e0abf07e46bf7520ff0127ced7010a00b188fb",
+      "sourceReferences": [
+        {
+          "path": "assets/world/hollow-abbey-nave.png",
+          "sha256": "d79488872142049443b55ef98532470d632dba9bd9ae5e90ba02bd8403e7bc3b",
+          "role": "approved_regional_palette_material_and_weather_authority"
+        },
+        {
+          "path": "assets/bestiary/hush-order-plate.png",
+          "sha256": "0becf8376c5226f2ddc23169a1223651d56a4bf579f29d29b977e2ad547b80dd",
+          "role": "family_silhouette_authority_only"
+        }
+      ],
+      "unpublishedInput": {
+        "count": 1,
+        "role": "superseded_private_revision_source",
+        "reason": "Raw revision input remains private; no execution locator is published."
+      }
+    }
+  ]
+}

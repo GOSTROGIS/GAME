@@ -355,7 +355,7 @@ function renderEnvironmentConcepts(environment) {
   plateBlock.innerHTML = `<p class="eyebrow" style="margin:0 0 10px">Environment concepts \u00b7 exterior and interior</p>
     <div class="environment-concepts">
       ${conceptFigure('Exterior', environment.exteriorConcept, `${environment.name} exterior concept direction`)}
-      ${conceptFigure('Interior', environment.interiorConcept, `${environment.name} stilt service-house interior concept direction`)}
+      ${conceptFigure('Interior', environment.interiorConcept, `${environment.name} interior concept direction`)}
     </div>`;
 }
 
@@ -616,8 +616,8 @@ function mountEnvironment(environment) {
     </div>
     <p class="eyebrow" style="margin:24px 0 10px">Motion systems to author</p>
     <ul class="motion-systems">${environment.motionSystems.map((system) => `<li>${system}</li>`).join('')}</ul>
-    <p class="eyebrow" style="margin:24px 0 8px">Canonical links</p>
-    <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Site <code>${environment.siteId}</code> \u00b7 location <code>${environment.locationId}</code> \u00b7 quest <code>${environment.questId}</code></p>
+    <p class="eyebrow" style="margin:24px 0 8px">Content bindings</p>
+    <p style="margin:0;color:#9fa59f;font:var(--type-body-xs)">Site <code>${environment.siteId}</code>${environment.routeId ? ` \u00b7 route <code>${environment.routeId}</code>` : ''} \u00b7 location <code>${environment.locationId}</code> \u00b7 quest <code>${environment.questId}</code></p>
     <p class="eyebrow" style="margin:24px 0 8px">Authority boundary</p>
     <ul style="margin:0;padding-left:18px;color:#9fa59f;font:var(--type-body-sm)">${environment.limitations.map((item) => `<li style="margin:0 0 7px">${item}</li>`).join('')}</ul>
   `;

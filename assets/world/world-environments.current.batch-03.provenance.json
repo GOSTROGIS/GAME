@@ -1,0 +1,113 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-world-environments-batch-03",
+  "rightsDeclaration": "Owner-authorized original project art; no third-party or franchise source imagery; environment concept and blockout reference use.",
+  "promptSource": "assets/world/prompts/world-environments.current.batch-03.prompt-packets.json",
+  "records": [
+    {
+      "id": "environment_keyframe.hollow_abbey_processional_west_arrival",
+      "subjectId": "hollow_abbey_processional_west_arrival",
+      "familyId": "world_environments",
+      "rank": "site_arrival",
+      "role": "environment_keyframe",
+      "regionId": "hollow_abbey",
+      "siteId": "site.hollow-abbey",
+      "routeId": "route.processional-steps",
+      "locationId": "hollow_abbey_processional_and_mute_nave",
+      "questId": "main_a_litany_unspoken",
+      "landmarkIds": ["abbey_gate"],
+      "path": "assets/world/hollow-abbey-processional-west-arrival-v1.png",
+      "sha256": "e10cf6c4e1469d23f49f0fc38ebb49d0dad51f490b1f8bf23c1c2e82ced72e29",
+      "bytes": 2762634,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Exact accepted revision prompt body retained; private execution context and superseded input locator omitted.",
+      "promptRecordId": "prompt.environment.hollow_abbey_processional_west_arrival",
+      "promptSha256": "4229aa8e863a160b9bb4cfb871ddce757b7ff8ca55bfe4ab55a55deb21664298",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference-guided revision",
+        "outputSha256": "e10cf6c4e1469d23f49f0fc38ebb49d0dad51f490b1f8bf23c1c2e82ced72e29"
+      },
+      "sourceReferences": [
+        {
+          "path": "assets/world/hollow-abbey-nave.png",
+          "sha256": "d79488872142049443b55ef98532470d632dba9bd9ae5e90ba02bd8403e7bc3b",
+          "role": "approved_regional_palette_and_material_authority_only"
+        }
+      ],
+      "reviewEvidence": {
+        "reviewMode": "two independent read-only visual reviews",
+        "accepted": true,
+        "boundary": "Accepted arrival, route hierarchy, material continuity, framing, and forbidden-content direction only; not canonical facade massing, exact topology, GIS placement, construction, runtime, or production geometry."
+      },
+      "maturity": {
+        "environmentDirection": "authored_and_independently_reviewed",
+        "runtimeBackdrop": false,
+        "runtimeIntegrated": false,
+        "productionAsset": false
+      }
+    },
+    {
+      "id": "environment_keyframe.hollow_abbey_mute_nave_route_read",
+      "subjectId": "hollow_abbey_mute_nave_route_read",
+      "familyId": "world_environments",
+      "rank": "site_interior",
+      "role": "environment_keyframe",
+      "regionId": "hollow_abbey",
+      "siteId": "site.hollow-abbey",
+      "routeId": "route.processional-steps",
+      "locationId": "hollow_abbey_processional_and_mute_nave",
+      "questId": "main_a_litany_unspoken",
+      "landmarkIds": ["mute_nave", "last_bell_crypt"],
+      "path": "assets/world/hollow-abbey-mute-nave-route-read-v1.png",
+      "sha256": "2e5582779702fed33fef3ee092f109a0c39403431752f11c22bbad95b7288826",
+      "bytes": 2715661,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "Exact accepted revision prompt body retained; private execution context and superseded input locator omitted.",
+      "promptRecordId": "prompt.environment.hollow_abbey_mute_nave_route_read",
+      "promptSha256": "436ea290791c6001a7c2a709d3e0abf07e46bf7520ff0127ced7010a00b188fb",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference-guided revision",
+        "outputSha256": "2e5582779702fed33fef3ee092f109a0c39403431752f11c22bbad95b7288826"
+      },
+      "sourceReferences": [
+        {
+          "path": "assets/world/hollow-abbey-nave.png",
+          "sha256": "d79488872142049443b55ef98532470d632dba9bd9ae5e90ba02bd8403e7bc3b",
+          "role": "approved_regional_palette_material_and_weather_authority"
+        },
+        {
+          "path": "assets/bestiary/hush-order-plate.png",
+          "sha256": "0becf8376c5226f2ddc23169a1223651d56a4bf579f29d29b977e2ad547b80dd",
+          "role": "family_silhouette_authority_only"
+        }
+      ],
+      "reviewEvidence": {
+        "reviewMode": "two independent read-only visual reviews",
+        "accepted": true,
+        "boundary": "Accepted playable-camera circulation, route readability, material continuity, framing, and forbidden-content direction only; stairs, pits, inlay, room dimensions, topology, creature anatomy, runtime behavior, construction, and production geometry remain unapproved."
+      },
+      "maturity": {
+        "environmentDirection": "authored_and_independently_reviewed",
+        "runtimeBackdrop": false,
+        "runtimeIntegrated": false,
+        "productionAsset": false
+      }
+    }
+  ]
+}

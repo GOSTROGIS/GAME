@@ -118,16 +118,18 @@ const fixture = String.raw`<!doctype html>
     const acceptedRemaining = subjects.filter(({ contentId }) => acceptedRemainingIds.has(contentId));
     const wardenEnvironment = environments.find(({ id }) => id === 'environment.warden-reed-four-bank-visibility');
     if (!wardenEnvironment) throw new Error('Warden Reed environment is missing from the registry');
+    const hollowEnvironment = environments.find(({ id }) => id === 'environment.hollow-abbey-processional-and-mute-nave');
+    if (!hollowEnvironment) throw new Error('Hollow Abbey environment is missing from the registry');
     const images = await Promise.all([
       loadArt('npc.sera-dusk'),
       loadArt('enemy.ash-husk'),
       ...acceptedCharnel.map(loadSubjectArt),
       ...acceptedRemaining.map(loadSubjectArt),
     ]);
-    const environmentImages = await Promise.all([
-      loadRepositoryImage(wardenEnvironment.exteriorConcept.id, wardenEnvironment.exteriorSrc),
-      loadRepositoryImage(wardenEnvironment.interiorConcept.id, wardenEnvironment.interiorSrc),
-    ]);
+    const environmentImages = await Promise.all(environments.flatMap((environment) => [
+      loadRepositoryImage(environment.exteriorConcept.id, environment.exteriorSrc),
+      loadRepositoryImage(environment.interiorConcept.id, environment.interiorSrc),
+    ]));
     globalThis.__DESIGN_REVIEW_TEST__ = {
       ready: true,
       counts,
@@ -145,6 +147,19 @@ const fixture = String.raw`<!doctype html>
         runtimeBackdrop: wardenEnvironment.runtimeBackdrop,
         runtimeIntegrated: wardenEnvironment.runtimeIntegrated,
         productionAsset: wardenEnvironment.productionAsset,
+      },
+      hollowEnvironment: {
+        id: hollowEnvironment.id,
+        routeId: hollowEnvironment.routeId,
+        landmarkIds: hollowEnvironment.landmarkIds,
+        staticScene: hollowEnvironment.staticScene,
+        staticSceneStatus: hollowEnvironment.staticSceneStatus,
+        animatedScene: hollowEnvironment.animatedScene,
+        animatedSceneStatus: hollowEnvironment.animatedSceneStatus,
+        motionSystems: hollowEnvironment.motionSystems,
+        runtimeBackdrop: hollowEnvironment.runtimeBackdrop,
+        runtimeIntegrated: hollowEnvironment.runtimeIntegrated,
+        productionAsset: hollowEnvironment.productionAsset,
       },
       acceptedCharnel: acceptedCharnel.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
       acceptedRemaining: acceptedRemaining.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
@@ -214,8 +229,8 @@ try {
   assert.equal(result.counts.total, 228);
   assert.equal(result.counts.foundingTotal, 228);
   assert.equal(result.counts.grandTotal, 337);
-  assert.equal(result.counts.environments, 1);
-  assert.equal(result.environmentCount, 1);
+  assert.equal(result.counts.environments, 2);
+  assert.equal(result.environmentCount, 2);
   assert.equal(result.uniqueEnvironmentCount, result.environmentCount);
   assert.equal(result.counts.expansionCharacters, 70);
   assert.equal(result.counts.expansionCreatures, 39);
@@ -255,9 +270,24 @@ try {
     runtimeIntegrated: false,
     productionAsset: false,
   });
+  assert.deepEqual(result.hollowEnvironment, {
+    id: 'environment.hollow-abbey-processional-and-mute-nave',
+    routeId: 'route.processional-steps',
+    landmarkIds: ['abbey_gate', 'mute_nave', 'last_bell_crypt'],
+    staticScene: null,
+    staticSceneStatus: 'awaiting-model',
+    animatedScene: null,
+    animatedSceneStatus: 'unassessed',
+    motionSystems: ['roof_rain_now', 'delayed_rain_returns', 'eclipse_light_shafts', 'urn_resonance_fields', 'silence_pressure_zones', 'upper_cloister_route_state'],
+    runtimeBackdrop: false,
+    runtimeIntegrated: false,
+    productionAsset: false,
+  });
   assert.deepEqual(result.environmentImages.map(({ id, width, height }) => ({ id, width, height })), [
     { id: 'concept_warden_reed_four_bank_visibility_exterior', width: 1536, height: 1024 },
     { id: 'concept_warden_reed_stilt_service_house_interior', width: 1536, height: 1024 },
+    { id: 'concept_hollow_abbey_processional_west_arrival', width: 1536, height: 1024 },
+    { id: 'concept_hollow_abbey_mute_nave_route_read', width: 1536, height: 1024 },
   ]);
   for (const image of result.environmentImages) {
     assert.ok(image.src.startsWith(`${baseUrl}/assets/world/`), `${image.id} did not load from repository world assets`);

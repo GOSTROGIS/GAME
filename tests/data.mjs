@@ -84,7 +84,7 @@ for (const asset of WORLD_TECHNICAL_ASSETS) check(existsSync(resolve(new URL("..
 for (const asset of CHARACTER_RENDER_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset)), `Missing character render ${asset}`);
 check(REGION_ASSET_KITS.length === 5, "Expected five production regional asset kits");
 check(new Set(WORLD_CONCEPT_ASSETS.map(({ id }) => id)).size === WORLD_CONCEPT_ASSETS.length, "World concept IDs must be unique");
-check(WORLD_CONCEPT_ASSETS.length === 8, "Expected eight accepted world concept references");
+check(WORLD_CONCEPT_ASSETS.length === 10, "Expected ten accepted world concept references");
 check(WORLD_TECHNICAL_ASSETS.length === 1, "Expected one accepted world technical reference");
 const wardenExterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_warden_reed_four_bank_visibility_exterior");
 const wardenInterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_warden_reed_stilt_service_house_interior");
@@ -97,6 +97,19 @@ for (const [asset, expected] of [
   check(asset?.dimensions?.width === 1536 && asset?.dimensions?.height === 1024 && asset?.colorSpace === "sRGB" && asset?.alphaPolicy === "opaque", `Warden Reed ${expected.scope} raster contract changed`);
   check(asset?.environmentId === "environment.warden-reed-four-bank-visibility" && asset?.siteId === "site.warden-reed" && asset?.locationId === "warden_reed_four_bank_visibility" && asset?.questId === "regional_the_fog_came_to_collect_our_outlines", `Warden Reed ${expected.scope} canonical binding changed`);
   check(asset?.referenceScope === expected.scope && asset?.runtimeBackdrop === false && asset?.runtimeIntegrated === false && asset?.productionAsset === false, `Warden Reed ${expected.scope} overstated implementation readiness`);
+}
+const hollowArrival = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_hollow_abbey_processional_west_arrival");
+const hollowInterior = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_hollow_abbey_mute_nave_route_read");
+check(Boolean(hollowArrival && hollowInterior), "Hollow Abbey supplemental exterior/interior direction pair is incomplete");
+for (const [asset, expected] of [
+  [hollowArrival, { path: "./assets/world/hollow-abbey-processional-west-arrival-v1.png", sha256: "e10cf6c4e1469d23f49f0fc38ebb49d0dad51f490b1f8bf23c1c2e82ced72e29", bytes: 2762634, scope: "site_arrival_exterior", landmarks: ["abbey_gate"] }],
+  [hollowInterior, { path: "./assets/world/hollow-abbey-mute-nave-route-read-v1.png", sha256: "2e5582779702fed33fef3ee092f109a0c39403431752f11c22bbad95b7288826", bytes: 2715661, scope: "site_interior_route_read", landmarks: ["mute_nave", "last_bell_crypt"] }],
+]) {
+  check(asset?.path === expected.path && asset?.sha256 === expected.sha256 && asset?.bytes === expected.bytes, `Hollow Abbey ${expected.scope} content-addressed evidence changed`);
+  check(asset?.dimensions?.width === 1536 && asset?.dimensions?.height === 1024 && asset?.colorSpace === "sRGB" && asset?.alphaPolicy === "opaque", `Hollow Abbey ${expected.scope} raster contract changed`);
+  check(asset?.environmentId === "environment.hollow-abbey-processional-and-mute-nave" && asset?.siteId === "site.hollow-abbey" && asset?.routeId === "route.processional-steps" && asset?.locationId === "hollow_abbey_processional_and_mute_nave" && asset?.questId === "main_a_litany_unspoken", `Hollow Abbey ${expected.scope} canonical binding changed`);
+  check(JSON.stringify(asset?.landmarkIds) === JSON.stringify(expected.landmarks), `Hollow Abbey ${expected.scope} landmark binding changed`);
+  check(asset?.referenceScope === expected.scope && asset?.runtimeBackdrop === false && asset?.runtimeIntegrated === false && asset?.productionAsset === false, `Hollow Abbey ${expected.scope} overstated implementation readiness`);
 }
 const veilTechnicalReference = WORLD_TECHNICAL_ASSETS.find(({ id }) => id === "technical_veil_coast_gloamharbor_tide_refuge");
 check(veilTechnicalReference?.approvalStatus === "approved_2d_topology_reference", "Veil technical reference must retain its reviewed 2D-only status");

@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 import { BESTIARY, ENEMY_FAMILIES } from '../packages/content/src/bestiary.data.js';
 import { EXPANSION_CREATURES, EXPANSION_QUESTS } from '../packages/content/src/narrative.data.js';
+import { inspectPng } from '../tools/assets/validate-raster-art.mjs';
 import { redactedJsonPointers } from '../tools/worldgen/redact-world-spatial-wave-02-v9.mjs';
 import {
   BUILDING_TYPOLOGIES,
@@ -156,7 +157,7 @@ for (const source of WORLD_SPATIAL_SOURCE_LEDGER) {
 }
 
 const visualReferences = ENVIRONMENT_ART_DIRECTION.acceptedVisualReferences;
-assert.equal(visualReferences.length, 8);
+assert.equal(visualReferences.length, 10);
 for (const reference of visualReferences) {
   const bytes = readFileSync(`${repositoryRoot}${reference.path}`);
   assert.equal(sha256(bytes), reference.sha256, `${reference.id} hash changed`);
@@ -167,6 +168,8 @@ const gravenReference = visualReferences.find(({ id }) => id === 'concept_graven
 const cathedralReference = visualReferences.find(({ id }) => id === 'concept_cathedral_six_rehearsed_dawns');
 const wardenExteriorReference = visualReferences.find(({ id }) => id === 'concept_warden_reed_four_bank_visibility_exterior');
 const wardenInteriorReference = visualReferences.find(({ id }) => id === 'concept_warden_reed_stilt_service_house_interior');
+const hollowArrivalReference = visualReferences.find(({ id }) => id === 'concept_hollow_abbey_processional_west_arrival');
+const hollowInteriorReference = visualReferences.find(({ id }) => id === 'concept_hollow_abbey_mute_nave_route_read');
 assert.equal(gravenReference?.referenceScope, 'regional_quest_location');
 assert.equal(gravenReference?.locationId, 'graven_march_black_pine_occlusion_basin');
 assert.equal(gravenReference?.exactCoordinate, null);
@@ -189,8 +192,25 @@ for (const reference of [wardenExteriorReference, wardenInteriorReference]) {
 }
 assert.equal(wardenExteriorReference?.referenceScope, 'site_quest_location_exterior');
 assert.equal(wardenInteriorReference?.referenceScope, 'site_service_house_interior');
+for (const reference of [hollowArrivalReference, hollowInteriorReference]) {
+  assert.equal(reference?.siteId, 'site.hollow-abbey');
+  assert.equal(reference?.routeId, 'route.processional-steps');
+  assert.equal(reference?.locationId, 'hollow_abbey_processional_and_mute_nave');
+  assert.equal(reference?.questId, 'main_a_litany_unspoken');
+  assert.equal(reference?.exactCoordinate, null);
+  assert.equal(reference?.runtimeBackdrop, false);
+  assert.equal(reference?.runtimeIntegrated, false);
+  assert.equal(reference?.productionAsset, false);
+  assert.match(reference?.visualReviewBoundary ?? '', /illustrative/i);
+  assert.equal(reference?.provenancePath, 'assets/world/world-environments.current.batch-03.provenance.json');
+  assert.equal(reference?.promptPacketPath, 'assets/world/prompts/world-environments.current.batch-03.prompt-packets.json');
+}
+assert.equal(hollowArrivalReference?.referenceScope, 'site_arrival_exterior');
+assert.deepEqual(hollowArrivalReference?.landmarkIds, ['abbey_gate']);
+assert.equal(hollowInteriorReference?.referenceScope, 'site_interior_route_read');
+assert.deepEqual(hollowInteriorReference?.landmarkIds, ['mute_nave', 'last_bell_crypt']);
 assert.doesNotMatch(artBibleSource, /No provenance sidecars|Vendored, and still without provenance/);
-assert.match(artBibleSource, /hint-placeholder-count="8"/);
+assert.match(artBibleSource, /hint-placeholder-count="10"/);
 
 const worldPromptPacketPath = 'assets/world/prompts/world-environments.current.batch-02.prompt-packets.json';
 const worldProvenancePath = 'assets/world/world-environments.current.batch-02.provenance.json';
@@ -243,6 +263,7 @@ for (const record of worldProvenance.records) {
   assert.equal(prompt.assetPath, record.path);
   assert.equal(prompt.promptSha256, record.promptSha256);
   assert.equal(bytes.length, record.bytes);
+  assert.ok(bytes.length <= 8 * 1024 * 1024, `${record.id} exceeds the 8 MiB environment-art limit`);
   assert.equal(sha256(bytes), record.sha256);
   assert.deepEqual(pngDimensions(bytes), record.dimensions);
   assert.equal(record.colorSpace, 'sRGB');
@@ -265,6 +286,99 @@ for (const path of [wardenExteriorReference.path, wardenInteriorReference.path])
   assert.match(record.reviewEvidence.boundary, /not /i);
 }
 for (const publishedValue of stringLeaves({ worldPromptPacket, worldProvenance })) {
+  assert.doesNotMatch(publishedValue, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);
+}
+
+const hollowPromptPacketPath = 'assets/world/prompts/world-environments.current.batch-03.prompt-packets.json';
+const hollowProvenancePath = 'assets/world/world-environments.current.batch-03.provenance.json';
+const hollowPromptPacket = JSON.parse(readFileSync(`${repositoryRoot}${hollowPromptPacketPath}`, 'utf8'));
+const hollowProvenance = JSON.parse(readFileSync(`${repositoryRoot}${hollowProvenancePath}`, 'utf8'));
+assert.equal(hollowPromptPacket.schema, 'SableReachPublicPromptPacketV1');
+assert.equal(hollowPromptPacket.records.length, 2);
+assert.equal(hollowProvenance.schema, 'SableReachPublishedArtProvenanceV1');
+assert.equal(hollowProvenance.records.length, 2);
+assert.equal(hollowProvenance.promptSource, hollowPromptPacketPath);
+assert.equal(hollowPromptPacket.publication.supersededRevisionInputsPublished, false);
+const hollowPromptById = new Map(hollowPromptPacket.records.map((record) => [record.id, record]));
+assert.deepEqual([...hollowPromptById.keys()].sort(), [
+  'prompt.environment.hollow_abbey_mute_nave_route_read',
+  'prompt.environment.hollow_abbey_processional_west_arrival',
+]);
+for (const prompt of hollowPromptPacket.records) {
+  assert.equal(prompt.bodyStatus, 'exact_accepted_revision_prompt_body');
+  assert.equal(sha256(prompt.canonicalPublicDirection), prompt.promptSha256, `${prompt.id} direction hash changed`);
+  assert.equal(prompt.assetPath.startsWith('/'), false);
+  assert.equal(prompt.assetPath.includes('\\'), false);
+  assert.equal(prompt.unpublishedInput.count, 1);
+  assert.equal(prompt.unpublishedInput.role, 'superseded_private_revision_source');
+  for (const source of prompt.sourceReferences) {
+    assert.equal(source.path.startsWith('/'), false);
+    assert.equal(source.path.includes('\\'), false);
+    assert.equal(sha256(readFileSync(`${repositoryRoot}${source.path}`)), source.sha256, `${prompt.id} source hash changed`);
+  }
+}
+assert.equal(hollowPromptById.get('prompt.environment.hollow_abbey_processional_west_arrival')?.canonicalPublicDirection.length, 2126);
+assert.equal(hollowPromptById.get('prompt.environment.hollow_abbey_mute_nave_route_read')?.canonicalPublicDirection.length, 3765);
+assert.match(hollowPromptById.get('prompt.environment.hollow_abbey_processional_west_arrival')?.canonicalPublicDirection ?? '', /^Edit the FIRST attached generated Hollow Abbey exterior concept/);
+assert.match(hollowPromptById.get('prompt.environment.hollow_abbey_mute_nave_route_read')?.canonicalPublicDirection ?? '', /^Revise the FIRST attached generated Hollow Abbey interior/);
+const hollowProvenanceByPath = new Map(hollowProvenance.records.map((record) => [record.path, record]));
+assert.equal(hollowProvenanceByPath.size, 2);
+for (const [reference, expectedLandmarks] of [
+  [hollowArrivalReference, ['abbey_gate']],
+  [hollowInteriorReference, ['mute_nave', 'last_bell_crypt']],
+]) {
+  const record = hollowProvenanceByPath.get(reference.path);
+  const prompt = hollowPromptById.get(record.promptRecordId);
+  const bytes = readFileSync(`${repositoryRoot}${record.path}`);
+  assert.ok(prompt, `${record.id} has no exact accepted prompt record`);
+  assert.equal(prompt.assetPath, record.path);
+  assert.equal(prompt.promptSha256, record.promptSha256);
+  assert.equal(bytes.length, record.bytes);
+  assert.ok(bytes.length <= 8 * 1024 * 1024, `${record.id} exceeds the 8 MiB environment-art limit`);
+  assert.equal(sha256(bytes), record.sha256);
+  assert.deepEqual(pngDimensions(bytes), record.dimensions);
+  const raster = inspectPng(bytes);
+  assert.deepEqual(
+    {
+      width: raster.width,
+      height: raster.height,
+      bitDepth: raster.bitDepth,
+      colorType: raster.colorType,
+      interlace: raster.interlace,
+      hasAlphaChannel: raster.hasAlphaChannel,
+      chunkTypes: raster.chunkTypes,
+    },
+    {
+      width: 1536,
+      height: 1024,
+      bitDepth: 8,
+      colorType: 2,
+      interlace: 0,
+      hasAlphaChannel: false,
+      chunkTypes: ['IHDR', 'IDAT', 'IEND'],
+    },
+  );
+  assert.equal(record.colorSpace, 'sRGB');
+  assert.equal(record.alphaPolicy, 'opaque');
+  assert.equal(record.regionId, 'hollow_abbey');
+  assert.equal(record.siteId, 'site.hollow-abbey');
+  assert.equal(record.routeId, 'route.processional-steps');
+  assert.equal(record.locationId, 'hollow_abbey_processional_and_mute_nave');
+  assert.equal(record.questId, 'main_a_litany_unspoken');
+  assert.deepEqual(record.landmarkIds, expectedLandmarks);
+  assert.equal(record.generation.outputSha256, record.sha256);
+  assert.equal(record.reviewEvidence.accepted, true);
+  assert.match(record.reviewEvidence.boundary, /not |remain unapproved/i);
+  assert.equal(record.maturity.runtimeBackdrop, false);
+  assert.equal(record.maturity.runtimeIntegrated, false);
+  assert.equal(record.maturity.productionAsset, false);
+  for (const source of record.sourceReferences) {
+    assert.equal(source.path.startsWith('/'), false);
+    assert.equal(source.path.includes('\\'), false);
+    assert.equal(sha256(readFileSync(`${repositoryRoot}${source.path}`)), source.sha256, `${record.id} source hash changed`);
+  }
+}
+for (const publishedValue of stringLeaves({ hollowPromptPacket, hollowProvenance })) {
   assert.doesNotMatch(publishedValue, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);
 }
 
