@@ -104,6 +104,6 @@
     "@hollow-march/shared": "workspace:*"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2"
+    "@types/node": "^26.3.0"
   }
 }
