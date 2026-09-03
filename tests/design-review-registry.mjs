@@ -97,14 +97,14 @@ assert.equal(registry.expansionCharacters.length, EXPANSION_CHARACTERS.length);
 assert.equal(registry.expansionCreatures.length, EXPANSION_CREATURES.length);
 assert.equal(registry.expansionCharacters.length, 70);
 assert.equal(registry.expansionCreatures.length, 39);
-assert.equal(registry.environments.length, 3);
+assert.equal(registry.environments.length, 4);
 assert.deepEqual(registry.companionContracts, COMPANION_QUEST_CONTRACTS);
 assert.deepEqual(registry.agencyContracts, COMPANION_AGENCY_CONTRACTS);
 assert.deepEqual(registry.actorContracts, QUEST_ACTOR_CONTRACTS);
 assert.equal(counts.total, 228);
 assert.equal(counts.foundingTotal, 228);
 assert.equal(counts.grandTotal, 337);
-assert.equal(counts.environments, 3);
+assert.equal(counts.environments, 4);
 assert.equal(counts.spatialBlockouts, 3);
 assert.equal(counts.expansionItems, 67);
 assert.equal(counts.expansionQuests, 49);
@@ -364,6 +364,57 @@ assert.equal(hearthmereEnvironment.blockoutReferences[0].constructionReady, fals
 assert.equal(hearthmereEnvironment.blockoutReferences[0].productionGeometry, false);
 assert.equal(hearthmereEnvironment.blockoutReferences[0].staticScene, false);
 assert.equal(hearthmereEnvironment.blockoutReferences[0].animatedScene, false);
+
+const cairnmarketOrchardEnvironment = registry.environments.find(({ id }) => id === 'environment.cairnmarket-grave-root-orchard-civic-system');
+assert.ok(cairnmarketOrchardEnvironment);
+assert.equal(cairnmarketOrchardEnvironment.contentId, 'cairnmarket_grave_root_orchard');
+assert.equal(cairnmarketOrchardEnvironment.name, 'Cairnmarket Grave-Root Orchard Civic System');
+assert.equal(cairnmarketOrchardEnvironment.regionId, 'graven_march');
+assert.equal(cairnmarketOrchardEnvironment.siteId, 'site.cairnmarket');
+assert.equal(cairnmarketOrchardEnvironment.routeId, null);
+assert.equal(cairnmarketOrchardEnvironment.locationId, 'cairnmarket_grave_root_orchard');
+assert.equal(cairnmarketOrchardEnvironment.questId, 'regional_the_graves_grew_upward');
+assert.deepEqual(cairnmarketOrchardEnvironment.landmarkIds, []);
+assert.equal(cairnmarketOrchardEnvironment.staticScene, null);
+assert.equal(cairnmarketOrchardEnvironment.staticSceneStatus, 'awaiting-model');
+assert.equal(cairnmarketOrchardEnvironment.animatedScene, null);
+assert.equal(cairnmarketOrchardEnvironment.animatedSceneStatus, 'unassessed');
+assert.deepEqual(cairnmarketOrchardEnvironment.motionSystems, [
+  'four_root_route_state',
+  'funeral_kite_pollination_lines',
+  'manual_root_tray_hoists',
+  'separate_food_mortuary_drainage',
+  'collapse_refuge_access',
+]);
+assert.equal(cairnmarketOrchardEnvironment.runtimeBackdrop, false);
+assert.equal(cairnmarketOrchardEnvironment.runtimeIntegrated, false);
+assert.equal(cairnmarketOrchardEnvironment.productionAsset, false);
+assert.match(cairnmarketOrchardEnvironment.reason, /no independently reviewed machine blockout is bound yet/i);
+assert.equal(Object.isFrozen(cairnmarketOrchardEnvironment.concepts), true);
+assert.equal(cairnmarketOrchardEnvironment.concepts.length, 1);
+assert.equal(cairnmarketOrchardEnvironment.exteriorConcept, null);
+assert.equal(cairnmarketOrchardEnvironment.exteriorSrc, null);
+assert.deepEqual(cairnmarketOrchardEnvironment.interiorConcept, {
+  id: 'concept_cairnmarket_grave_root_orchard_civic_system',
+  path: 'assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png',
+  src: '../assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png',
+  sha256: '6f73cc5e847b9b67be7ae7eea2407fed48b9192d81b87a786447497cf4d54667',
+  bytes: 3061458,
+  dimensions: { width: 1536, height: 1024 },
+  colorSpace: 'sRGB',
+  alphaPolicy: 'opaque',
+  referenceScope: 'site_quest_location_subterranean_civic_system',
+  approvalStatus: 'approved_direction',
+  maturity: 'approved_environment_direction_not_runtime_or_production',
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+});
+assert.equal(cairnmarketOrchardEnvironment.concepts[0], cairnmarketOrchardEnvironment.interiorConcept);
+assert.equal(cairnmarketOrchardEnvironment.interiorSrc, cairnmarketOrchardEnvironment.interiorConcept.src);
+assert.equal(/^https?:/i.test(cairnmarketOrchardEnvironment.interiorSrc), false);
+assert.equal(Object.isFrozen(cairnmarketOrchardEnvironment.blockoutReferences), true);
+assert.equal(cairnmarketOrchardEnvironment.blockoutReferences.length, 0);
 
 const environmentBoundSpatialIds = WORLD_SPATIAL_BLOCKOUT_ASSETS
   .filter(({ environmentIds }) => environmentIds.length)

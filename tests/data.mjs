@@ -87,7 +87,7 @@ for (const asset of WORLD_TECHNICAL_ASSETS) check(existsSync(resolve(new URL("..
 for (const asset of CHARACTER_RENDER_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset)), `Missing character render ${asset}`);
 check(REGION_ASSET_KITS.length === 5, "Expected five production regional asset kits");
 check(new Set(WORLD_CONCEPT_ASSETS.map(({ id }) => id)).size === WORLD_CONCEPT_ASSETS.length, "World concept IDs must be unique");
-check(WORLD_CONCEPT_ASSETS.length === 13, "Expected thirteen accepted world concept references");
+check(WORLD_CONCEPT_ASSETS.length === 14, "Expected fourteen accepted world concept references");
 check(WORLD_TECHNICAL_ASSETS.length === 1, "Expected one accepted world technical reference");
 check(WORLD_SPATIAL_BLOCKOUT_ASSETS.length === 4, "Expected four reviewed world spatial blockout references");
 check(new Set(WORLD_SPATIAL_BLOCKOUT_ASSETS.map(({ id }) => id)).size === WORLD_SPATIAL_BLOCKOUT_ASSETS.length, "World spatial blockout IDs must be unique");
@@ -108,6 +108,13 @@ check(hearthmereCivic?.dimensions?.width === 1536 && hearthmereCivic?.dimensions
 check(hearthmereCivic?.environmentId === "environment.hearthmere-hold-civic-spring-spine" && hearthmereCivic?.siteId === "site.hearthmere" && hearthmereCivic?.locationId === "hearthmere_civic_spring_spine", "Hearthmere civic spring content binding changed");
 check(hearthmereCivic?.referenceScope === "site_civic_exterior" && hearthmereCivic?.runtimeBackdrop === false && hearthmereCivic?.runtimeIntegrated === false && hearthmereCivic?.productionAsset === false, "Hearthmere civic spring overstates implementation readiness");
 check(JSON.stringify(hearthmereCivic?.use) === JSON.stringify(["civic_spring_spine", "three_route_hierarchy", "resident_scale", "spring_runoff_separation", "working_civic_artifacts", "hearthmere_material_law"]), "Hearthmere civic spring accepted-use boundary changed");
+const cairnmarketOrchard = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_cairnmarket_grave_root_orchard_civic_system");
+check(Boolean(cairnmarketOrchard), "Cairnmarket grave-root orchard direction is missing");
+check(cairnmarketOrchard?.path === "./assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png" && cairnmarketOrchard?.sha256 === "6f73cc5e847b9b67be7ae7eea2407fed48b9192d81b87a786447497cf4d54667" && cairnmarketOrchard?.bytes === 3061458, "Cairnmarket orchard content-addressed evidence changed");
+check(cairnmarketOrchard?.dimensions?.width === 1536 && cairnmarketOrchard?.dimensions?.height === 1024 && cairnmarketOrchard?.colorSpace === "sRGB" && cairnmarketOrchard?.alphaPolicy === "opaque", "Cairnmarket orchard raster contract changed");
+check(cairnmarketOrchard?.environmentId === "environment.cairnmarket-grave-root-orchard-civic-system" && cairnmarketOrchard?.siteId === "site.cairnmarket" && cairnmarketOrchard?.locationId === "cairnmarket_grave_root_orchard" && cairnmarketOrchard?.questId === "regional_the_graves_grew_upward", "Cairnmarket orchard content binding changed");
+check(cairnmarketOrchard?.referenceScope === "site_quest_location_subterranean_civic_system" && cairnmarketOrchard?.runtimeBackdrop === false && cairnmarketOrchard?.runtimeIntegrated === false && cairnmarketOrchard?.productionAsset === false, "Cairnmarket orchard overstates implementation readiness");
+check(JSON.stringify(cairnmarketOrchard?.use) === JSON.stringify(["four_root_route_bays", "funeral_kite_claim_state", "suspended_root_trays", "food_mortuary_separation", "collapse_refuges", "manual_service_hoists"]), "Cairnmarket orchard accepted-use boundary changed");
 check(Boolean(wardenExterior && wardenInterior), "Warden Reed exterior/interior direction pair is incomplete");
 for (const [asset, expected] of [
   [wardenExterior, { path: "./assets/world/warden-reed-four-bank-visibility-exterior-v1.png", sha256: "52d94e5252c7f4935772daaa970b58668ea82746491a969d0cad616403eaf17e", bytes: 2709612, scope: "quest_location_exterior" }],

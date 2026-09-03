@@ -1,0 +1,53 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-world-environments-batch-06",
+  "rightsDeclaration": "Owner-authorized original project art; no third-party or franchise source imagery; environment concept and blockout reference use.",
+  "promptSource": "assets/world/prompts/world-environments.current.batch-06.prompt-packets.json",
+  "records": [
+    {
+      "id": "environment_keyframe.cairnmarket_grave_root_orchard_civic_system",
+      "subjectId": "cairnmarket_grave_root_orchard_civic_system",
+      "environmentId": "environment.cairnmarket-grave-root-orchard-civic-system",
+      "familyId": "world_environments",
+      "rank": "site_quest_location_subterranean_civic_system",
+      "role": "environment_keyframe",
+      "regionId": "graven_march",
+      "siteId": "site.cairnmarket",
+      "locationId": "cairnmarket_grave_root_orchard",
+      "questId": "regional_the_graves_grew_upward",
+      "path": "assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png",
+      "sha256": "6f73cc5e847b9b67be7ae7eea2407fed48b9192d81b87a786447497cf4d54667",
+      "bytes": 3061458,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "The exact accepted final generator-revised prompt body is retained; earlier draft prompt bodies, private revision images, and execution locators are omitted.",
+      "promptRecordId": "prompt.environment.cairnmarket_grave_root_orchard_civic_system",
+      "promptSha256": "c67a7666a6f491e7efee890fa7b9d738a39b7c453aa0d346abd718a1543ce849",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference-guided revision",
+        "outputSha256": "6f73cc5e847b9b67be7ae7eea2407fed48b9192d81b87a786447497cf4d54667"
+      },
+      "sourceReferences": [
+        "assets/world/graven-march-black-pine-occlusion-basin-v5.png"
+      ],
+      "reviewEvidence": {
+        "reviewMode": "two independent read-only visual reviews plus coordinator verification",
+        "accepted": true,
+        "boundary": "Approved subterranean civic-system direction for four Funeral Kites with sixteen blank tabs, one locally heavy claimed fold, four suspended root-route bays with only bay two stopped, three continuing bays, separate food-wash and mortuary work, maintained memorial fallow, two manual hoists, two collapse refuges, two exterior egresses, inhabited maintenance, regional material continuity, framing, and forbidden-content compliance only; exact atlas or GIS placement, surveyed coordinates, boundaries, dimensions, topology, adjacency, hydrology or sanitation capacity, structure, construction, accessibility, fire code, collision, navigation, streaming, runtime integration, creature concept acceptance, static or animated scene readiness, production geometry, and production-asset status remain illustrative and unapproved."
+      },
+      "maturity": {
+        "environmentDirection": "authored_and_independently_reviewed",
+        "runtimeBackdrop": false,
+        "runtimeIntegrated": false,
+        "productionAsset": false
+      }
+    }
+  ]
+}
