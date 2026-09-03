@@ -124,6 +124,26 @@ const ENVIRONMENT_DEFINITIONS = Object.freeze([
       'collapse_refuge_access',
     ]),
   }),
+  Object.freeze({
+    id: 'environment.bellwater-mobile-service-corridor-four-corner-transfer',
+    contentId: 'bellwater_mobile_service_corridor',
+    name: 'Bellwater Mobile-Service Corridor Four-Corner Transfer',
+    regionId: 'graven_march',
+    siteId: 'site.cairnmarket',
+    locationId: 'bellwater_mobile_service_corridor',
+    questId: 'relic_the_acre_crossed_a_border',
+    conceptIds: Object.freeze(['concept_bellwater_mobile_service_corridor_four_corner_transfer']),
+    exteriorConceptIndex: 0,
+    interiorConceptIndex: null,
+    blockoutReferenceIds: Object.freeze([]),
+    motionSystems: Object.freeze([
+      'manual_acre_corner_transfer',
+      'five_civic_service_line_states',
+      'school_rope_outage',
+      'reduced_school_service',
+      'convoy_and_pack_movement',
+    ]),
+  }),
 ]);
 
 // The canonical content id is `glasswood`; the older prompt-law key includes

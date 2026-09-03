@@ -139,6 +139,8 @@ const fixture = String.raw`<!doctype html>
     if (!hearthmereEnvironment) throw new Error('Hearthmere Civic Spring environment is missing from the registry');
     const cairnmarketOrchardEnvironment = environments.find(({ id }) => id === 'environment.cairnmarket-grave-root-orchard-civic-system');
     if (!cairnmarketOrchardEnvironment) throw new Error('Cairnmarket Grave-Root Orchard environment is missing from the registry');
+    const bellwaterCorridorEnvironment = environments.find(({ id }) => id === 'environment.bellwater-mobile-service-corridor-four-corner-transfer');
+    if (!bellwaterCorridorEnvironment) throw new Error('Bellwater Mobile-Service Corridor environment is missing from the registry');
     const images = await Promise.all([
       loadArt('npc.sera-dusk'),
       loadArt('enemy.ash-husk'),
@@ -226,6 +228,27 @@ const fixture = String.raw`<!doctype html>
         productionAsset: cairnmarketOrchardEnvironment.productionAsset,
         blockoutIds: cairnmarketOrchardEnvironment.blockoutReferences.map(({ id }) => id),
       },
+      bellwaterCorridorEnvironment: {
+        id: bellwaterCorridorEnvironment.id,
+        contentId: bellwaterCorridorEnvironment.contentId,
+        siteId: bellwaterCorridorEnvironment.siteId,
+        routeId: bellwaterCorridorEnvironment.routeId,
+        locationId: bellwaterCorridorEnvironment.locationId,
+        questId: bellwaterCorridorEnvironment.questId,
+        conceptIds: bellwaterCorridorEnvironment.concepts.map(({ id }) => id),
+        exteriorSrc: bellwaterCorridorEnvironment.exteriorSrc,
+        interiorConcept: bellwaterCorridorEnvironment.interiorConcept,
+        interiorSrc: bellwaterCorridorEnvironment.interiorSrc,
+        staticScene: bellwaterCorridorEnvironment.staticScene,
+        staticSceneStatus: bellwaterCorridorEnvironment.staticSceneStatus,
+        animatedScene: bellwaterCorridorEnvironment.animatedScene,
+        animatedSceneStatus: bellwaterCorridorEnvironment.animatedSceneStatus,
+        motionSystems: bellwaterCorridorEnvironment.motionSystems,
+        runtimeBackdrop: bellwaterCorridorEnvironment.runtimeBackdrop,
+        runtimeIntegrated: bellwaterCorridorEnvironment.runtimeIntegrated,
+        productionAsset: bellwaterCorridorEnvironment.productionAsset,
+        blockoutIds: bellwaterCorridorEnvironment.blockoutReferences.map(({ id }) => id),
+      },
       acceptedCharnel: acceptedCharnel.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
       acceptedRemaining: acceptedRemaining.map(({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel }) => ({ contentId, artStatus, tier, masterSrc, cutoutSrc, staticModel, animatedModel })),
       missingVisualBriefs: registry.expansionCharacters
@@ -297,9 +320,9 @@ try {
   assert.equal(result.counts.total, 228);
   assert.equal(result.counts.foundingTotal, 228);
   assert.equal(result.counts.grandTotal, 337);
-  assert.equal(result.counts.environments, 4);
+  assert.equal(result.counts.environments, 5);
   assert.equal(result.counts.spatialBlockouts, 3);
-  assert.equal(result.environmentCount, 4);
+  assert.equal(result.environmentCount, 5);
   assert.equal(result.uniqueEnvironmentCount, result.environmentCount);
   assert.equal(result.counts.expansionCharacters, 70);
   assert.equal(result.counts.expansionCreatures, 39);
@@ -397,6 +420,27 @@ try {
     productionAsset: false,
     blockoutIds: [],
   });
+  assert.deepEqual(result.bellwaterCorridorEnvironment, {
+    id: 'environment.bellwater-mobile-service-corridor-four-corner-transfer',
+    contentId: 'bellwater_mobile_service_corridor',
+    siteId: 'site.cairnmarket',
+    routeId: null,
+    locationId: 'bellwater_mobile_service_corridor',
+    questId: 'relic_the_acre_crossed_a_border',
+    conceptIds: ['concept_bellwater_mobile_service_corridor_four_corner_transfer'],
+    exteriorSrc: '../assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png',
+    interiorConcept: null,
+    interiorSrc: null,
+    staticScene: null,
+    staticSceneStatus: 'awaiting-model',
+    animatedScene: null,
+    animatedSceneStatus: 'unassessed',
+    motionSystems: ['manual_acre_corner_transfer', 'five_civic_service_line_states', 'school_rope_outage', 'reduced_school_service', 'convoy_and_pack_movement'],
+    runtimeBackdrop: false,
+    runtimeIntegrated: false,
+    productionAsset: false,
+    blockoutIds: [],
+  });
   assert.deepEqual(result.environmentImages.map(({ id, width, height }) => ({ id, width, height })), [
     { id: 'concept_warden_reed_four_bank_visibility_exterior', width: 1536, height: 1024 },
     { id: 'concept_warden_reed_stilt_service_house_interior', width: 1536, height: 1024 },
@@ -406,6 +450,7 @@ try {
     { id: 'concept_hollow_abbey_foundry_operational_chain', width: 1536, height: 1024 },
     { id: 'concept_hearthmere_civic_spring_spine', width: 1536, height: 1024 },
     { id: 'concept_cairnmarket_grave_root_orchard_civic_system', width: 1536, height: 1024 },
+    { id: 'concept_bellwater_mobile_service_corridor_four_corner_transfer', width: 1536, height: 1024 },
   ]);
   for (const image of result.environmentImages) {
     assert.ok(image.src.startsWith(`${baseUrl}/assets/world/`), `${image.id} did not load from repository world assets`);
@@ -559,6 +604,35 @@ try {
   assert.match(orchardUi.tierText, /Static scene · awaiting-model/);
   assert.match(orchardUi.tierText, /Animated scene · unassessed/);
   assert.doesNotMatch(orchardUi.tierText, /quest\s+null/i);
+
+  await page.locator('#selectorBtn').click();
+  await page.locator('.selrow[data-id="environment.bellwater-mobile-service-corridor-four-corner-transfer"]').click();
+  const bellwaterConcept = page.locator('[data-environment-concept="site_quest_location_mobile_service_corridor"]');
+  await bellwaterConcept.waitFor({ state: 'visible', timeout: 30_000 });
+  const bellwaterUi = await page.evaluate(() => {
+    const concept = document.querySelector('[data-environment-concept="site_quest_location_mobile_service_corridor"]');
+    const image = concept?.querySelector('img');
+    const placeholder = document.querySelector('#placeholderImg');
+    return {
+      conceptText: concept?.textContent ?? '',
+      conceptSrc: image?.currentSrc || image?.src || '',
+      width: image?.naturalWidth ?? 0,
+      height: image?.naturalHeight ?? 0,
+      placeholderSrc: placeholder?.currentSrc || placeholder?.src || '',
+      placeholderAlt: placeholder?.alt ?? '',
+      tierText: document.querySelector('#tierBody')?.textContent ?? '',
+      blockoutCount: document.querySelectorAll('[data-environment-blockout]').length,
+    };
+  });
+  assert.match(bellwaterUi.conceptText, /Exterior · accepted direction/);
+  assert.equal(bellwaterUi.conceptSrc, `${baseUrl}/assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png`);
+  assert.deepEqual({ width: bellwaterUi.width, height: bellwaterUi.height }, { width: 1536, height: 1024 });
+  assert.equal(bellwaterUi.placeholderSrc, bellwaterUi.conceptSrc);
+  assert.match(bellwaterUi.placeholderAlt, /exterior concept direction/i);
+  assert.match(bellwaterUi.tierText, /Static scene · awaiting-model/);
+  assert.match(bellwaterUi.tierText, /Animated scene · unassessed/);
+  assert.equal(bellwaterUi.blockoutCount, 0);
+  assert.deepEqual(providerRequests, [], 'Bellwater must use its same-origin repository image without an external network fallback');
   await page.waitForTimeout(250);
   trackedRealSurface = null;
   assert.deepEqual(
@@ -589,6 +663,17 @@ try {
   });
   assert.deepEqual({ width: orchardArtBibleImage.width, height: orchardArtBibleImage.height }, { width: 1536, height: 1024 });
   assert.equal(orchardArtBibleImage.src, `${baseUrl}/assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png`);
+
+  const bellwaterArtBibleLocator = page.locator('img[alt="Bellwater mobile-service corridor four-corner transfer environment keyframe"]');
+  await bellwaterArtBibleLocator.scrollIntoViewIfNeeded();
+  await bellwaterArtBibleLocator.evaluate((image) => image.decode());
+  const bellwaterArtBibleImage = await page.evaluate(() => {
+    const image = [...document.images].find(({ alt }) => alt === 'Bellwater mobile-service corridor four-corner transfer environment keyframe');
+    return { width: image.naturalWidth, height: image.naturalHeight, src: image.currentSrc || image.src };
+  });
+  assert.deepEqual({ width: bellwaterArtBibleImage.width, height: bellwaterArtBibleImage.height }, { width: 1536, height: 1024 });
+  assert.equal(bellwaterArtBibleImage.src, `${baseUrl}/assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png`);
+  assert.deepEqual(providerRequests, [], 'Bellwater Art Bible keyframe must not use an external network fallback');
 
   await page.waitForFunction(() => [
     '/assets/world/spatial/world-spatial-wave-02-v9.annex.json',

@@ -36,6 +36,7 @@ Every material statement in this dossier carries an authority label. The labels 
 | Generic accepted spatial contract | `assets/world/spatial/site-blockout-reference-v2.schema.json` | Shape of a future machine-readable payload; this prose is not that payload |
 | Accepted Graven March image record | `assets/world/world-environments.current.batch-01.provenance.json`; `assets/world/README.md` | Rights, hash, dimensions, maturity, and visual-use boundary |
 | Accepted Cairnmarket orchard supplemental reference | `assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png`; `assets/world/prompts/world-environments.current.batch-06.prompt-packets.json`; `assets/world/world-environments.current.batch-06.provenance.json`; `packages/content/src/world-spatial.data.js` | Exact asset, prompt hash, redacted provenance, independent-review state, and direction-only boundary; not Wave04 program-slot evidence |
+| Accepted Bellwater corridor supplemental reference | `assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png`; `assets/world/prompts/world-environments.current.batch-07.prompt-packets.json`; `assets/world/world-environments.current.batch-07.provenance.json`; `packages/content/src/world-spatial.data.js` | Exact asset, prompt hash, redacted provenance, independent-review state, and direction-only boundary; not Wave04 program-slot evidence |
 | Existing accepted site dossiers | `design-review/world-sites/HEARTHMERE-HOLD-PRECINCT-BIBLE.md`; `design-review/world-sites/HOLLOW-ABBEY-PRECINCT-BIBLE.md` | Handoff discipline only; they do not supply Cairnmarket facts |
 
 ### 1.3 Immutable selected-record ledger
@@ -1249,13 +1250,15 @@ Use frost-spalled slate, black-pine ties, flint details, grave lichen, blank cla
 No karst cave, cathedral, royal crypt, giant sacred tree, conventional fruit orchard, corpse crop, bodies as fertilizer, bone architecture, glowing magic roots, steampunk machinery, powered lift, rail, modern plumbing, readable names, signs, runes, text, logos, watermark, UI, labels, map view, impossible circulation, extra root lines, generic birds, named-character portraits, catastrophic universal ruin, or geometry presented as survey or production truth.
 ```
 
-### 25.3 Art brief B — Bellwater four-corner service transfer
+### 25.3 Accepted supplemental reference B — Bellwater four-corner service transfer
 
-**[PROPOSAL]** Suggested future ID: `concept_bellwater_mobile_service_corridor_four_corner_transfer`.
+**[ART REFERENCE]** ID: `concept_bellwater_mobile_service_corridor_four_corner_transfer`.
 
-**[PROPOSAL]** Suggested future path: `assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v1.png`.
+**[ART REFERENCE]** Path: `assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png`.
 
-Status: brief only; no file, acceptance, provenance, runtime integration, or model exists.
+Status: `approved_direction` as an accepted supplemental exterior environment reference. The opaque sRGB PNG is 1536 × 1024, 2,846,754 bytes, and SHA-256 `2f2fa3d2248bf12f673d3929894b7f544792d8ff805cbf99909d189272838871`. Its exact accepted correction prompt is bound through `assets/world/prompts/world-environments.current.batch-07.prompt-packets.json` with prompt SHA-256 `567b100d8611e5aaeb9b7c5c17501dc20a4a2622fd5c147b6b4a53517fa5f010`; redacted rights, raster, review, and maturity evidence is bound through `assets/world/world-environments.current.batch-07.provenance.json`. Two independent read-only visual reviews and coordinator verification accepted the direction.
+
+**[NONCLAIM]** This acceptance supplies visual direction only. It does not establish exact GIS placement, copied external graph geometry, engineering adequacy, a runtime backdrop, collision, navmesh, blockout mesh, production mesh, static model, rig, or animation. It also does not populate the still-null `environmentKeyframe` field in the older accepted Wave04 program record; the current supplemental reference and that immutable historical program slot are separate evidence surfaces.
 
 #### Composition
 
@@ -1279,7 +1282,9 @@ Status: brief only; no file, acceptance, provenance, runtime integration, or mod
 9. Service lines do not cross unprotected pedestrian or stock paths.
 10. The Acre has no face, building, rider, animal body, vehicle language, or extra support.
 
-#### Prompt packet
+#### Foundational brief
+
+The text below is the foundational composition brief retained for human review. It is not the exact final revision prompt; use the content-addressed batch-07 prompt packet above for that evidence.
 
 ```text
 Create one polished stylized-3D dark-fantasy production environment concept of the Bellwater mobile service corridor outside Cairnmarket, landscape 1536×1024. Use the accepted Graven March winter-basin image only for cold slate and black-pine material behavior, winter sleet, ash-filtered light, deep occlusion, visible repairs, and restrained practical warmth. Do not inherit its coordinates or basin layout.
@@ -1305,7 +1310,7 @@ No second Acre, continuous turf across the landscape, five or more supports, few
 - Bellwater has exactly one bounded Acre, four supports, one moving corner, three bearing corners, one visible seed-marker action, and five separate services.
 - Burial and tax remain separate despite sharing the southwest corner.
 - No image contains readable text, label, logo, UI, private provenance, exact-coordinate claim, invented named-character design, or model/runtime claim.
-- A generated image remains a draft until separate reviewers accept canon fidelity, spatial readability, route hierarchy, mechanics, anatomy, forbidden-content compliance, and reference boundaries.
+- An accepted image remains direction-only and must continue to pass canon fidelity, spatial readability, route hierarchy, mechanics, anatomy, forbidden-content compliance, and reference-boundary checks whenever its bytes or binding metadata change.
 
 ## 26. Streaming, LOD, models, and technical handoff
 
@@ -1377,7 +1382,7 @@ Each mechanism needs a neutral state, state ownership, collision ownership, audi
 
 - The existing Graven March image is accepted direction and a runtime backdrop, not a production environment mesh.
 - The Cairnmarket grave-root orchard image is an accepted supplemental interior-direction reference with redacted batch-06 prompt/provenance and no runtime or model claim.
-- The Bellwater four-corner service-transfer keyframe remains absent from the published registry at this checkpoint.
+- The Bellwater four-corner service-transfer image is an accepted supplemental exterior-direction reference with redacted batch-07 prompt/provenance and no runtime or model claim.
 - The Wave04 orchard and corridor records report `environmentKeyframe`, `blockoutMesh`, and `productionMesh` as null.
 - Relevant new named characters and creatures may have null concept, cutout, static model, or animated model fields. Use generic, clearly labeled proxies where evidence is absent.
 - A concept image embedded in a registry does not prove model, rig, animation, collision, or runtime readiness.
@@ -1417,7 +1422,7 @@ Deliver the site in small, reviewable slices. Rejection of one slice should not 
 13. **Fail-forward pass:** outcome-specific route, stock, marker, outage, maintenance, sound, and occupancy deltas.
 14. **Sensory and weather pass:** cold/dry, sleet, thaw, winter absence; redundant cue review; no color-only state.
 15. **LOD/streaming proxy pass:** cell boundaries, landmark reads, pinning request points, instrumented—not claimed—budgets.
-16. **Art handoff:** two briefs, accepted regional reference, hard forbidden lists, independent-review packet.
+16. **Art handoff:** two accepted supplemental references, accepted regional reference, hard forbidden lists, and independent-review packets.
 
 Each slice review should include one overhead image, at least two player-height route images, one before/after state comparison, count summary, collision/nav status labels, source ledger, unresolved assumptions, and a no-private-provenance check.
 
@@ -1434,10 +1439,10 @@ Each slice review should include one overhead image, at least two player-height 
 | Water destinations | Build isolated schematic tanks, wash paths, and sealed collection | Watershed, permanent outlet, potable safety, sewer, or treatment |
 | Earlier quest graphs | Preserve sockets and height/clearance | Executable crosswalk or graph ownership |
 | Orchard geometry | Use hash-only proxy plus the accepted supplemental reference within its batch-06 boundary | Copied graph, final undercroft placement, runtime backdrop, or production mesh |
-| Corridor geometry | Use hash-only proxy and art brief | Copied graph, moving nav implementation, or final road works |
+| Corridor geometry | Use hash-only proxy plus the accepted supplemental reference within its batch-07 boundary | Copied graph, moving nav implementation, runtime backdrop, or final road works |
 | Named actor staging | Place labeled generic proxies under relevant quest state | Permanent residency, appearance, rig, or animation |
 | Creature models | Use exact cue volumes and silhouette placeholders | Accepted subject art, static model, rig, animation, or combat readiness |
-| New keyframes | Use the independently accepted orchard reference; generate the Bellwater brief independently | Bellwater acceptance, runtime backdrop, or production asset before evidence |
+| New keyframes | Use both independently accepted supplemental references within their separate evidence boundaries | Runtime backdrop, model, or production-asset status before separate evidence |
 | Runtime budgets | Instrument proposed cells and LOD reads | Performance compliance before target-hardware measurement |
 
 Promotion of a spatial proposal requires exact source bindings, schema validation, independent topology and semantic review, clear authority labels, safe-cell and egress checks, privacy review, and a release record that states limitations without inflating maturity.
@@ -1455,7 +1460,7 @@ Promotion of a spatial proposal requires exact source bindings, schema validatio
 9. **[NONCLAIM]** `prototype_playable`, `blockout_ready_not_production_geometry`, or `blockout_executable_candidate_not_navmesh_or_production_geometry` does not mean production geometry, collision, navmesh, runtime logic, or performance is complete.
 10. **[NONCLAIM]** N17/N18 and overlay summaries do not import or reproduce any external graph node, edge, coordinate, utility, safe cell, egress, encounter volume, or objective endpoint.
 11. **[NONCLAIM]** The accepted winter-basin keyframe controls only documented regional and quest-location direction. Its composition is not Cairnmarket geometry.
-12. **[NONCLAIM]** The orchard image is accepted only as the supplemental visual reference bound in §25.2; it is not copied graph evidence, a runtime backdrop, model sheet, or production approval. The Bellwater brief is not yet a published art asset at this checkpoint.
+12. **[NONCLAIM]** The orchard and Bellwater images are accepted only as the separate supplemental visual references bound in §§25.2–25.3; neither is copied graph evidence, a runtime backdrop, model sheet, or production approval.
 13. **[NONCLAIM]** An environment keyframe containing a creature or person does not accept that subject's concept art, anatomy sheet, static model, rig, or animation.
 14. **[NONCLAIM]** Five population roles are not five named characters or fixed spawns. The 460–740 population range is not a crowd-rendering requirement.
 15. **[NONCLAIM]** Safe cells are candidate social/refuge spaces, not guaranteed invulnerability or AI exclusion volumes.
@@ -1518,7 +1523,7 @@ Promotion of a spatial proposal requires exact source bindings, schema validatio
 ### Art, models, streaming, and privacy
 
 - [ ] Existing Graven March art is used only within its approved scope.
-- [ ] The orchard reference stays within its accepted batch-06 supplemental-direction boundary; the Bellwater brief is generated, reviewed, and versioned independently rather than treated as accepted in advance.
+- [ ] The orchard and Bellwater references stay within their independently accepted batch-06 and batch-07 supplemental-direction boundaries.
 - [ ] No named-character appearance is invented to populate an environment image.
 - [ ] No art inclusion becomes an unsupported static-model, rig, animation, collision, navmesh, runtime, or production claim.
 - [ ] LOD and streaming values remain planning targets until measured.
