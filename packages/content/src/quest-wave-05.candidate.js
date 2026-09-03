@@ -1,5 +1,3 @@
-import { EXPANSION_QUESTS } from "./narrative.data.js";
-
 const deepFreeze = (value) => {
   if (value && typeof value === "object" && !Object.isFrozen(value)) {
     Object.freeze(value);
@@ -50,7 +48,8 @@ export const QUEST_WAVE_05_CANDIDATE_META = deepFreeze({
     supportingCharacters: 12,
     signatureItems: 12,
     environmentBriefs: 12,
-    previouslyUnusedExpansionCreatures: 18,
+    genuinelyUnusedExpansionCreatures: 15,
+    returningCreatureOverlays: 3,
   },
   sitePlan: [
     { siteId: "site.salt-watch", territoryId: "territory.mirror-salt-waste", questCount: 4, lucentLed: 2, charnelLed: 2 },
@@ -65,13 +64,78 @@ export const QUEST_WAVE_05_CANDIDATE_META = deepFreeze({
   },
   sourcePolicy: {
     authorityOrder: ["packages/content/src/narrative.data.js", "packages/content/src/world-spatial.data.js"],
+    designConstraintReferences: ["design-review/world-sites/CAIRNMARKET-PRECINCT-BIBLE.md"],
+    designConstraintBoundary: "Precinct S/N/L/SC identifiers remain authored proposals and cannot promote canon, registration, geometry, or runtime readiness.",
     prohibitedPromotion: "A candidate record cannot enter canonical arrays, release ledgers, runtime projections, art acceptance, or model readiness without separate review and integration.",
     privacy: "Only repository-relative source descriptions and generic authoring roles are published.",
   },
   claims: CANDIDATE_CLAIMS,
 });
 
-export const QUEST_WAVE_05_ACCEPTED_COLLISION_SCOPE = deepFreeze(EXPANSION_QUESTS.map(({ id }) => id));
+export const QUEST_WAVE_05_ACCEPTED_CORPUS_BINDING = deepFreeze({
+  schemaVersion: 1,
+  id: "accepted-expansion-quest-corpus-49-wave05-v1",
+  digestVersion: "recursive-key-sorted-canonical-json-v1",
+  digestAlgorithm: "sha256",
+  digestScope: "Complete accepted EXPANSION_QUESTS records, recursively key-sorted and ordered by quest id.",
+  questCount: 49,
+  canonicalJsonBytes: 187488,
+  sha256: "ad3d218bb952f8868e0f2c01e79784dcb84bc18581970c124345619e635fa9d0",
+  structuredCreatureReferenceFields: ["creatureIds", "foundingCreatureOverlayIds", "creatureAliasIds"],
+  questIds: [
+    "aftermath_cart_accepts_office",
+    "aftermath_census_of_absences",
+    "aftermath_child_older_than_road",
+    "aftermath_cost_that_learned_to_vote",
+    "aftermath_every_door_mothers_voice",
+    "aftermath_house_outlived_tenants",
+    "aftermath_maintenance_window_miracle",
+    "aftermath_person_engine_must_outlive",
+    "aftermath_purity_blooms_at_dusk",
+    "aftermath_roof_made_of_weather",
+    "aftermath_three_hands_one_lever",
+    "aftermath_village_arrives_before_dead",
+    "character_a_hunger_needs_an_address",
+    "character_saint_cannot_inherit_body",
+    "character_the_face_noon_borrowed",
+    "character_thirteen_pilgrims_one_feet",
+    "faction_heresy_gentle_horizon",
+    "faction_hunger_asked_taxed",
+    "faction_living_appeal_aftercare",
+    "faction_the_lantern_named_us_last",
+    "main_a_sun_small_enough",
+    "main_archive_of_open_wounds",
+    "main_mercy_has_a_mouth",
+    "main_noon_came_bleeding",
+    "main_parliament_of_one_mouth",
+    "main_the_bell_that_forgot_you",
+    "main_the_door_in_mothers_rib",
+    "main_the_engine_with_an_off_switch",
+    "main_the_saint_cast_two_shadows",
+    "profession_bell_paid_in_silence",
+    "profession_the_furnace_inhaled_our_names",
+    "profession_the_well_drank_the_way_home",
+    "reaction_machine_widowed_minute",
+    "reaction_orchard_casts_legal_shadow",
+    "reaction_rain_owes_door_answer",
+    "regional_an_echo_arrived_first",
+    "regional_cairns_keep_winter",
+    "regional_flood_learned_last_name",
+    "regional_the_fog_came_to_collect_our_outlines",
+    "regional_the_graves_grew_upward",
+    "regional_the_tide_refused_harbor",
+    "relic_mirror_gave_birth_elsewhere",
+    "relic_the_acre_crossed_a_border",
+    "settlement_street_must_burn_once",
+    "settlement_the_harbor_rang_below_tide",
+    "side_seven_lamps_for_six_streets",
+    "side_the_dead_vote_no",
+    "side_the_disease_called_grief",
+    "side_the_hospice_grows_a_heart",
+  ],
+});
+
+export const QUEST_WAVE_05_ACCEPTED_COLLISION_SCOPE = QUEST_WAVE_05_ACCEPTED_CORPUS_BINDING.questIds;
 
 export const QUEST_WAVE_05_HIGH_RISK_ANALOGUES = deepFreeze([
   {
@@ -104,7 +168,67 @@ export const QUEST_WAVE_05_HIGH_RISK_ANALOGUES = deepFreeze([
     risk: "scheduled maintenance darkness",
     prohibition: "No candidate schedules dark intervals across dependencies or pauses a beneficial miracle to expose its upkeep.",
   },
+  {
+    questId: "aftermath_cart_accepts_office",
+    risk: "physical evidence authors precedent through a nonhuman office at assize",
+    prohibition: "No candidate may rank exhibits on a rotating docket, make material weight author standing, or constitute a tool as an office. The wedding-ribs hearing may narrow only a copied motion through a live bounded demonstration and voluntary position exchange.",
+  },
 ]);
+
+export const QUEST_WAVE_05_RETURNING_CREATURE_ANALOGUES = deepFreeze([
+  {
+    id: "analogue.witness_crab.shelter_contract_not_tide_manifest",
+    creatureId: "witness_crab",
+    candidateQuestId: "wave05_salt_rain_signed_under_roof",
+    acceptedQuestId: "settlement_the_harbor_rang_below_tide",
+    acceptedReferenceField: "foundingCreatureOverlayIds",
+    candidateReferenceField: "foundingCreatureOverlayIds",
+    authoredDistinction: "The accepted harbor operation allocates forty exclusive refuge-or-boat notches across a reversible ebb/slack/flood graph. The candidate keeps the Crab outside a Salt Watch wind lock as corroborating shell testimony while six performed storm clauses determine contractual standing; it has no tide cycle, boat capacity, manifest assignment, or flood-return operation.",
+  },
+  {
+    id: "analogue.funeral_kite.nursery_risk_not_pollination_yield",
+    creatureId: "funeral_kite",
+    candidateQuestId: "wave05_salt_name_too_heavy_to_fly",
+    acceptedQuestId: "regional_the_graves_grew_upward",
+    acceptedReferenceField: "foundingCreatureOverlayIds",
+    candidateReferenceField: "foundingCreatureOverlayIds",
+    authoredDistinction: "The accepted Cairnmarket program runs a compressed growing year in a grave-root orchard where a reclaimed heavy tab stops one exact pollination line and changes winter yield. The candidate stages aerial blank-tab interception over sealed Salt Watch cocoons to decide disclosure of adaptation evidence; there is no orchard, pollination route-hour economy, harvest, ration forecast, or named grave reclamation.",
+  },
+  {
+    id: "analogue.acre.departed_soil_forensics_not_mobile_services",
+    creatureId: "acre_that_walks",
+    candidateQuestId: "wave05_salt_field_left_without_moving",
+    acceptedQuestId: "relic_the_acre_crossed_a_border",
+    acceptedReferenceField: "foundingCreatureOverlayIds",
+    candidateReferenceField: "foundingCreatureOverlayIds",
+    authoredDistinction: "The accepted Bellwater corridor moves four Acre corners while five civic services remain operational across former and receiving settlements. The candidate never moves or services the Acre: it germinates four nonrenewable cores from already departed Salt Watch soil to apportion contamination and route debt, with the creature only a distant autonomous overlay beyond play bounds.",
+  },
+]);
+
+export const QUEST_WAVE_05_CREATURE_REFERENCE_AUDIT = deepFreeze({
+  schemaVersion: 1,
+  acceptedCorpusBindingId: QUEST_WAVE_05_ACCEPTED_CORPUS_BINDING.id,
+  inspectedAcceptedFields: QUEST_WAVE_05_ACCEPTED_CORPUS_BINDING.structuredCreatureReferenceFields,
+  genuinelyUnusedCreatureIds: [
+    "apse_seraph",
+    "corridor_maw",
+    "door_lung_courser",
+    "ember_midwife",
+    "gold_shutter_penitent",
+    "jointless_advocate",
+    "mercy_eater",
+    "misericord_of_borrowed_pain",
+    "noon_bailiff",
+    "rain_notary",
+    "reliquary_of_the_last_breath",
+    "reverse_rib_bride",
+    "shutter_stag",
+    "throat_orchard",
+    "unbroken_note_engine",
+  ],
+  returningOverlayCreatureIds: ["acre_that_walks", "funeral_kite", "witness_crab"],
+  conclusion: "Fifteen forms have no accepted reference across all three structured fields; three formerly misclassified forms are accepted founding overlays and receive exact semantic-analogue review.",
+});
 
 export const QUEST_WAVE_05_SUPPORTING_CHARACTERS = deepFreeze([
   candidateRecord({
@@ -194,7 +318,7 @@ export const QUEST_WAVE_05_SUPPORTING_CHARACTERS = deepFreeze([
     factionId: "league_of_remaining_hands",
     role: "Cairnmarket pack handler whose animals remember an inhaled route",
     questId: "wave05_cairn_road_exhaled_in_shares",
-    desire: "Return Crown Road as a public route without exposing the sanctuary path the Courser swallowed beside it.",
+    desire: "Restore the public Crown Road access obligation without claiming where its unresolved route lies or exposing the sanctuary turn swallowed beside it.",
     fear: "That her animals are the only surviving map and will be seized as civic instruments.",
     contradiction: "She insists no creature should carry a road by force while breeding pack goats to follow inherited turns they have never seen.",
     secret: "She deliberately drove the Courser across the sanctuary fork before it inhaled the road.",
@@ -467,12 +591,12 @@ export const QUEST_WAVE_05_SIGNATURE_ITEMS = deepFreeze([
     },
     cost: {
       limitation: "Each tack fixes one segment and makes later rerouting require a public appeal.",
-      worldDebt: "The restored road becomes less adaptable to winter movement and sanctuary secrecy.",
+      worldDebt: "The recognized public-access evidence becomes less adaptable to winter movement and sanctuary secrecy.",
     },
     laterContest: {
-      triggerStateKey: "cairnmarket_exhaled_route_title",
+      triggerStateKey: "cairnmarket_exhaled_access_evidence",
       contestedQuestion: "Can a fixed public segment be lifted when its hidden neighbor becomes a refuge route?",
-      venue: "A Crown Road closure during a sanctuary evacuation.",
+      venue: "A closure of the unresolved Crown Road access during a sanctuary evacuation; the hearing may not rename the accepted Bellwater Road approach.",
     },
   }),
   candidateRecord({
@@ -652,12 +776,76 @@ export const QUEST_WAVE_05_SIGNATURE_ITEMS = deepFreeze([
   }),
 ]);
 
+const proposedTopology = ({
+  code,
+  id,
+  nodes: semanticNodeIds,
+  edges: edgeBindings,
+  exclusions = [],
+  temporarySafeStageNodeId,
+  acceptedPrecinctCrosswalk = null,
+  routeIdentityBoundary = null,
+  concurrency,
+  resetPolicy,
+}) => {
+  const pad = (value) => String(value).padStart(2, "0");
+  const nodes = semanticNodeIds.map((semanticId, index) => ({
+    id: semanticId,
+    graphNodeId: `N-W05-${code}-${pad(index + 1)}`,
+    stationId: `S-W05-${code}-${pad(index + 1)}`,
+    role: semanticId === temporarySafeStageNodeId ? "temporary_quest_safe_stage" : "objective_or_traversal_stage",
+    geometryStatus: "unmeasured_proposal",
+  }));
+  const edges = edgeBindings.map(([idValue, fromNodeId, toNodeId], index) => ({
+    id: idValue,
+    graphLinkId: `L-W05-${code}-${pad(index + 1)}`,
+    fromNodeId,
+    toNodeId,
+    direction: "bidirectional",
+    traversalStatus: "proposed_not_runtime_validated",
+  }));
+  const safeNode = nodes.find(({ id: nodeId }) => nodeId === temporarySafeStageNodeId);
+
+  return {
+    schemaVersion: 2,
+    id,
+    nodes,
+    edges,
+    exclusions: exclusions.map((entry, index) => ({
+      id: entry.id,
+      exclusionId: `X-W05-${code}-${pad(index + 1)}`,
+      anchorNodeId: entry.anchorNodeId,
+      rule: entry.rule,
+      status: "proposal_guardrail_not_runtime_volume",
+    })),
+    crosswalk: {
+      namespace: "wave05_candidate_local_nonregistered",
+      stations: nodes.map(({ id: semanticNodeId, stationId }) => ({ id: stationId, semanticNodeId })),
+      nodes: nodes.map(({ id: semanticNodeId, graphNodeId }) => ({ id: graphNodeId, semanticNodeId })),
+      links: edges.map(({ id: topologyEdgeId, graphLinkId }) => ({ id: graphLinkId, topologyEdgeId })),
+      safeStages: [{
+        id: `SC-W05-${code}-01`,
+        semanticNodeId: temporarySafeStageNodeId,
+        graphNodeId: safeNode?.graphNodeId ?? null,
+        registeredSafeCellId: null,
+        registryStatus: "nonregistered_temporary_quest_safe_stage",
+        reachabilityStatus: "candidate_graph_connectivity_only_not_runtime_or_navigation_proof",
+      }],
+      acceptedPrecinct: acceptedPrecinctCrosswalk,
+    },
+    registeredSafeCellClaims: [],
+    routeIdentityBoundary,
+    concurrency,
+    resetPolicy,
+  };
+};
+
 const environmentBrief = (record) => candidateRecord({
   coordinate: null,
   siteAnchorUse: "canonical_site_identity_only",
   geometryStatus: "proposed_topology_not_measured_geometry",
   runtimeStatus: "not_integrated",
-  safeCellRule: "All dialogue, choice, and recovery cells remain outside creature pressure volumes and retain an unblocked route to a canonical building threshold.",
+  safeStagePolicy: "The SC-W05 record is a candidate-local, nonregistered temporary quest-safe stage. It asserts only graph connectivity in this brief, never canonical safe-cell status, invulnerability, navigation, collision, capacity, or a validated route to built geometry.",
   ...record,
 });
 
@@ -670,13 +858,21 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     typologyIds: ["salt_watch_caravan_house"],
     habitatPlacement: "supported_by_existing_site_affinity",
     locationId: "salt_watch_paired_twilight_still_apron",
-    topology: {
+    topology: proposedTopology({
+      code: "SW01",
       id: "stationary_opposed_aperture_triangle",
-      nodes: ["still_north_lip", "still_south_lip", "burial_sheath_witness", "herd_refusal_lane", "wind_lock_safe_cell"],
-      edges: ["north_to_witness", "south_to_witness", "witness_to_refusal_lane", "either_still_to_wind_lock"],
+      nodes: ["still_north_lip", "still_south_lip", "burial_sheath_witness", "herd_refusal_lane", "wind_lock_temporary_safe_stage"],
+      edges: [
+        ["north_to_witness", "still_north_lip", "burial_sheath_witness"],
+        ["south_to_witness", "still_south_lip", "burial_sheath_witness"],
+        ["witness_to_refusal_lane", "burial_sheath_witness", "herd_refusal_lane"],
+        ["north_to_wind_lock", "still_north_lip", "wind_lock_temporary_safe_stage"],
+        ["south_to_wind_lock", "still_south_lip", "wind_lock_temporary_safe_stage"],
+      ],
+      temporarySafeStageNodeId: "wind_lock_temporary_safe_stage",
       concurrency: "Both still lips read one stationary antler mismatch while the refusal lane remains free; the player never escorts or steers the herd.",
       resetPolicy: "A missed aperture advances salinity and sheath exposure rather than respawning the herd or resetting calibration.",
-    },
+    }),
     environmentNeeds: [
       "A readable false-horizon glare band behind two covered brine-still lips.",
       "An east-facing salt sheath visible as testimony but not placed on a travel choke point.",
@@ -696,13 +892,22 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     typologyIds: ["salt_watch_caravan_house"],
     habitatPlacement: "supported_by_existing_site_affinity",
     locationId: "salt_watch_unsheltered_clause_wind_lock",
-    topology: {
+    topology: proposedTopology({
+      code: "SW02",
       id: "parallel_sheltered_and_exposed_testimony_lanes",
-      nodes: ["caravan_common_safe_cell", "inner_wind_lock", "outer_storm_lane", "six_drop_act_ring", "lidless_shell_account", "open_refusal_exit"],
-      edges: ["common_to_inner", "inner_to_outer", "outer_to_drop_ring", "outer_to_shell_account", "both_lanes_to_refusal_exit"],
+      nodes: ["caravan_common_temporary_safe_stage", "inner_wind_lock", "outer_storm_lane", "six_drop_act_ring", "lidless_shell_account", "open_refusal_exit"],
+      edges: [
+        ["common_to_inner", "caravan_common_temporary_safe_stage", "inner_wind_lock"],
+        ["inner_to_outer", "inner_wind_lock", "outer_storm_lane"],
+        ["outer_to_drop_ring", "outer_storm_lane", "six_drop_act_ring"],
+        ["outer_to_shell_account", "outer_storm_lane", "lidless_shell_account"],
+        ["outer_to_refusal_exit", "outer_storm_lane", "open_refusal_exit"],
+        ["inner_to_refusal_exit", "inner_wind_lock", "open_refusal_exit"],
+      ],
+      temporarySafeStageNodeId: "caravan_common_temporary_safe_stage",
       concurrency: "One actor speaks under shelter while another performs a mirrored act outside; neither lane substitutes for the other.",
       resetPolicy: "A failed act becomes a wet or dry evidentiary strand and changes the final standing calculation.",
-    },
+    }),
     environmentNeeds: [
       "Two-stage wind lock remains operable throughout every quest state.",
       "Six moving droplets and one stationary clause are legible without written UI in the storm lane.",
@@ -722,18 +927,25 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     typologyIds: ["salt_watch_caravan_house"],
     habitatPlacement: "supported_by_existing_site_affinity",
     locationId: "salt_watch_departed_soil_afterimage_beds",
-    topology: {
+    topology: proposedTopology({
+      code: "SW03",
       id: "radial_soil_history_without_creature_relocation",
-      nodes: ["four_core_sampling_fans", "founder_bed", "brine_lens_edge", "afterimage_frame", "route_debt_safe_cell"],
-      edges: ["each_fan_to_frame", "founder_bed_to_frame", "lens_edge_to_frame", "frame_to_safe_cell"],
+      nodes: ["four_core_sampling_fans", "founder_bed", "brine_lens_edge", "afterimage_frame", "route_debt_temporary_safe_stage"],
+      edges: [
+        ["fans_to_frame", "four_core_sampling_fans", "afterimage_frame"],
+        ["founder_bed_to_frame", "founder_bed", "afterimage_frame"],
+        ["lens_edge_to_frame", "brine_lens_edge", "afterimage_frame"],
+        ["frame_to_route_debt_stage", "afterimage_frame", "route_debt_temporary_safe_stage"],
+      ],
+      temporarySafeStageNodeId: "route_debt_temporary_safe_stage",
       concurrency: "Four historical soil cores germinate together while the Acre remains an autonomous distant ecological presence.",
       resetPolicy: "Contaminated cores cannot be recollected; their failed germination becomes part of the custody evidence.",
-    },
+    }),
     environmentNeeds: [
       "Former field positions appear through soil, roots, and salinity, not through moved corner objectives.",
       "The current Acre is visible beyond play bounds with one lifted-corner cue but cannot be commanded, escorted, or harvested.",
       "Brine disposal and potable collection remain visibly separate.",
-      "The route-debt exit provides a dialogue-safe cell with an uninterrupted horizon sightline.",
+      "The route-debt exit provides a candidate-local temporary dialogue stage with an uninterrupted horizon sightline; it is not a registered safe cell.",
     ],
     utilitiesAndActivity: ["covered brine treatment", "lichen racks", "white_night crust watch", "sealed contamination trays"],
     decisiveMutation: "Former beds become marked as restitution plots, public contamination evidence, or fallow no-claim ground.",
@@ -748,16 +960,24 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     typologyIds: ["salt_watch_caravan_house"],
     habitatPlacement: "supported_by_existing_site_affinity",
     locationId: "salt_watch_blank_name_mirror_nursery",
-    topology: {
+    topology: proposedTopology({
+      code: "SW04",
       id: "aerial_tab_capture_over_sealed_triage_spokes",
-      nodes: ["mirror_nursery_safe_cell", "three_cocoon_spokes", "updraft_capture_arc", "claimant_item_table", "gate_horizon_exit"],
-      edges: ["nursery_to_each_spoke", "each_spoke_to_capture_arc", "claimant_table_to_capture_arc", "nursery_to_exit"],
+      nodes: ["mirror_nursery_temporary_safe_stage", "three_cocoon_spokes", "updraft_capture_arc", "claimant_item_table", "gate_horizon_exit"],
+      edges: [
+        ["nursery_to_spokes", "mirror_nursery_temporary_safe_stage", "three_cocoon_spokes"],
+        ["spokes_to_capture_arc", "three_cocoon_spokes", "updraft_capture_arc"],
+        ["claimant_table_to_capture_arc", "claimant_item_table", "updraft_capture_arc"],
+        ["nursery_to_exit", "mirror_nursery_temporary_safe_stage", "gate_horizon_exit"],
+        ["capture_arc_to_exit", "updraft_capture_arc", "gate_horizon_exit"],
+      ],
+      temporarySafeStageNodeId: "mirror_nursery_temporary_safe_stage",
       concurrency: "Kite tabs move above three sealed cocoons whose adaptation bands change independently; no cocoon is opened or fought.",
       resetPolicy: "An escaped tab removes one lineage clue permanently and advances a different cocoon's uncertainty state.",
-    },
+    }),
     environmentNeeds: [
       "Gestational mirrors read as protected working organs, never decorative glazing.",
-      "Funeral Kite flight has vertical clearance and never crosses sleep-cell or dialogue-safe volumes.",
+      "Funeral Kite flight has vertical clearance and never crosses sleep-cell volumes or the candidate-local temporary dialogue stage.",
       "Cocoon bands show ordered material responses without revealing a creature body.",
       "The horizon gate remains an accountable exit and never becomes a false-path trap during choice dialogue.",
     ],
@@ -773,16 +993,44 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     territoryId: "territory.graven-march",
     typologyIds: ["graven_cairn_hall", "graven_road_assize"],
     habitatPlacement: "proposed_site_local_charnel_presence_requires_independent_review",
-    locationId: "cairnmarket_exhaled_crown_road_apron",
-    topology: {
+    locationId: "cairnmarket_exhaled_crown_road_access_assize",
+    topology: proposedTopology({
+      code: "CM01",
       id: "timed_exhalation_segments_to_fixed_public_spine",
-      nodes: ["road_apron_safe_cell", "courser_rib_crossing", "three_exhalation_catchments", "oath_circle", "sanctuary_fork_exclusion"],
-      edges: ["apron_to_crossing", "crossing_to_each_catchment", "catchments_to_oath_circle", "fork_excluded_from_public_spine"],
+      nodes: ["arrival_fan_temporary_safe_stage", "courser_rib_crossing", "three_exhalation_catchments", "oath_circle", "sanctuary_fork_boundary"],
+      edges: [
+        ["arrival_fan_to_crossing", "arrival_fan_temporary_safe_stage", "courser_rib_crossing"],
+        ["crossing_to_catchments", "courser_rib_crossing", "three_exhalation_catchments"],
+        ["catchments_to_oath_circle", "three_exhalation_catchments", "oath_circle"],
+        ["crossing_to_sanctuary_boundary", "courser_rib_crossing", "sanctuary_fork_boundary"],
+      ],
+      exclusions: [{ id: "sanctuary_fork_interior_exclusion", anchorNodeId: "sanctuary_fork_boundary", rule: "No public-spine edge, objective, encounter volume, or camera path enters or resolves the protected sanctuary fork." }],
+      temporarySafeStageNodeId: "arrival_fan_temporary_safe_stage",
+      acceptedPrecinctCrosswalk: {
+        status: "precinct_proposal_ids_only_not_registration_or_geometry",
+        spaces: [
+          { semanticNodeId: "arrival_fan_temporary_safe_stage", precinctSpaceId: "S01" },
+          { semanticNodeId: "oath_circle", precinctSpaceId: "S10" },
+        ],
+        nodes: [
+          { semanticNodeId: "arrival_fan_temporary_safe_stage", precinctNodeId: "N01" },
+          { semanticNodeId: "oath_circle", precinctNodeId: "N10" },
+        ],
+        links: [{ precinctLinkId: "L12", purpose: "arrival fan toward hall apron" }, { precinctLinkId: "L06", purpose: "hall apron toward oath circle" }],
+        safeCellCandidates: [],
+      },
+      routeIdentityBoundary: {
+        acceptedModeledApproach: "Bellwater Road",
+        canonicalAccessSemantic: "Crown Road access",
+        candidateConnector: "Cairnmarket arrival fan",
+        relationship: "unresolved_do_not_alias",
+        geometryClaim: false,
+      },
       concurrency: "Three route segments appear on successive breaths; players cross one rib threshold but never travel inside a body.",
       resetPolicy: "Unpinned segments disperse and alter pack-animal memory; recovered segments stay fixed for the remainder of the quest.",
-    },
+    }),
     environmentNeeds: [
-      "Crown Road remains usable around the hearing even while segments are absent.",
+      "Crown Road access semantics remain legible around the hearing; Bellwater Road stays the only accepted modeled approach and is never renamed or geometrically extended by this candidate.",
       "The last open rib door clearly frames the next public segment, with a separate unreadable sanctuary fork.",
       "Animal-memory turns use pack behavior rather than floating map graphics.",
       "Charnel presence is a proposed quest condition, not a canonical Cairnmarket habitat claim.",
@@ -790,7 +1038,7 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     utilitiesAndActivity: ["market_day road claims", "pack stock yard", "movable jurisdiction frames", "covered witness jars"],
     decisiveMutation: "Pinned slate segments create a rigid public spine, a seasonal public route, or an intentionally incomplete road protecting the sanctuary fork.",
     failurePersistence: "Each missed exhalation changes a lead animal's remembered turn and leaves a visible road discontinuity for later traversal.",
-    artDirection: "Open slate assize beside a visibly interrupted Crown Road, Door-Lung Courser exhaling terrain strips, pack animals holding route memory; no moving-cover composition.",
+    artDirection: "Open slate assize at the Cairnmarket arrival-fan interface, Door-Lung Courser exhaling proposed terrain strips and pack animals holding route memory; show no mapped Crown Road geometry, no Bellwater alias, and no moving-cover composition.",
   }),
   environmentBrief({
     id: "env.wave05.cairnmarket.reversible_vow_assize",
@@ -800,18 +1048,43 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     typologyIds: ["graven_road_assize"],
     habitatPlacement: "proposed_site_local_charnel_presence_requires_independent_review",
     locationId: "cairnmarket_two_position_precedent_court",
-    topology: {
+    topology: proposedTopology({
+      code: "CM02",
       id: "harmless_telegraph_then_nonviolent_position_exchange",
-      nodes: ["demonstration_pad", "two_vow_positions", "advocate_precedent_lane", "three_separate_testimony_chairs", "unlocked_appeal_safe_cell"],
-      edges: ["pad_to_precedent_lane", "lane_to_both_positions", "positions_to_testimony_chairs", "all_hearing_nodes_to_appeal"],
+      nodes: ["demonstration_pad", "two_vow_positions", "advocate_precedent_lane", "three_separate_testimony_chairs", "appeal_exit", "living_gallery_temporary_safe_stage"],
+      edges: [
+        ["pad_to_precedent_lane", "demonstration_pad", "advocate_precedent_lane"],
+        ["precedent_lane_to_vow_positions", "advocate_precedent_lane", "two_vow_positions"],
+        ["vow_positions_to_testimony_chairs", "two_vow_positions", "three_separate_testimony_chairs"],
+        ["precedent_lane_to_appeal_exit", "advocate_precedent_lane", "appeal_exit"],
+        ["precedent_lane_to_living_gallery", "advocate_precedent_lane", "living_gallery_temporary_safe_stage"],
+      ],
+      temporarySafeStageNodeId: "living_gallery_temporary_safe_stage",
+      acceptedPrecinctCrosswalk: {
+        status: "precinct_proposal_ids_only_not_registration_or_geometry",
+        spaces: [
+          { semanticNodeId: "demonstration_pad", precinctSpaceId: "S03" },
+          { semanticNodeId: "three_separate_testimony_chairs", precinctSpaceId: "S04" },
+          { semanticNodeId: "appeal_exit", precinctSpaceId: "S07" },
+          { semanticNodeId: "living_gallery_temporary_safe_stage", precinctSpaceId: "S05" },
+        ],
+        nodes: [
+          { semanticNodeId: "demonstration_pad", precinctNodeId: "N03" },
+          { semanticNodeId: "three_separate_testimony_chairs", precinctNodeId: "N04" },
+          { semanticNodeId: "appeal_exit", precinctNodeId: "N07" },
+          { semanticNodeId: "living_gallery_temporary_safe_stage", precinctNodeId: "N05" },
+        ],
+        links: [{ precinctLinkId: "L02", purpose: "witness ring to three ash chairs" }, { precinctLinkId: "L03", purpose: "witness ring to living gallery" }, { precinctLinkId: "L05", purpose: "witness ring to appeal exit" }],
+        safeCellCandidates: [{ id: "SC01", status: "precinct_proposal_not_registered", semanticNodeId: "living_gallery_temporary_safe_stage" }],
+      },
       concurrency: "One harmless telegraph must complete before two actors exchange positions without attacking; order is mechanically irreversible.",
       resetPolicy: "A harmful precedent remains folded into the Advocate and must be narrowed through outcome, never replayed cleanly.",
-    },
+    }),
     environmentNeeds: [
       "Movable jurisdiction frames and three ash deposits remain materially separate.",
       "The Bride's two pointed positions have equal access and an attack-free connecting path.",
       "The Advocate's copied silhouette is readable against neutral open sky.",
-      "The appeal exit stays unlocked during every verdict and serves as the only choice-safe cell.",
+      "The appeal exit stays unlocked during every verdict; choice dialogue uses the nonregistered temporary stage crosswalked to the precinct's proposed SC01 boundary.",
     ],
     utilitiesAndActivity: ["perimeter braziers", "ash as evidence", "court_peak audience ring", "road circulation maintained"],
     decisiveMutation: "The court floor keeps a reversible crease, a spouse-specific exception, or a dangerous general precedent embodied in the Advocate.",
@@ -826,16 +1099,46 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     typologyIds: ["graven_cairn_hall"],
     habitatPlacement: "proposed_site_local_charnel_presence_requires_independent_review",
     locationId: "cairnmarket_breathless_warning_gallery",
-    topology: {
+    topology: proposedTopology({
+      code: "CM03",
       id: "eleven_command_gauntlet_with_one_silent_orientation",
-      nodes: ["oath_circle_safe_cell", "eleven_audible_facing_bays", "silent_twelfth_sightline", "prevention_shield_route", "family_cairn_gate", "rear_den_exclusion"],
-      edges: ["circle_to_shield_route", "route_past_eleven_bays", "route_to_silent_sightline", "sightline_to_cairn_gate", "den_excluded_from_active_route"],
+      nodes: ["oath_circle", "market_bay", "winter_store_temporary_safe_stage", "eleven_audible_facing_bays", "silent_twelfth_sightline", "prevention_shield_route", "family_cairn_gate", "rear_den_boundary"],
+      edges: [
+        ["winter_store_to_market_bay", "winter_store_temporary_safe_stage", "market_bay"],
+        ["market_bay_to_oath_circle", "market_bay", "oath_circle"],
+        ["oath_circle_to_shield_route", "oath_circle", "prevention_shield_route"],
+        ["shield_route_past_eleven_bays", "prevention_shield_route", "eleven_audible_facing_bays"],
+        ["shield_route_to_silent_sightline", "prevention_shield_route", "silent_twelfth_sightline"],
+        ["silent_sightline_to_family_gate", "silent_twelfth_sightline", "family_cairn_gate"],
+        ["family_gate_to_rear_den_boundary", "family_cairn_gate", "rear_den_boundary"],
+      ],
+      exclusions: [{ id: "rear_den_protected_route_exclusion", anchorNodeId: "rear_den_boundary", rule: "No warning test, creature pressure, healing suppression, or final choice may enter or close the protected wildlife route." }],
+      temporarySafeStageNodeId: "winter_store_temporary_safe_stage",
+      acceptedPrecinctCrosswalk: {
+        status: "precinct_proposal_ids_only_not_registration_or_geometry",
+        spaces: [
+          { semanticNodeId: "oath_circle", precinctSpaceId: "S10" },
+          { semanticNodeId: "market_bay", precinctSpaceId: "S11" },
+          { semanticNodeId: "winter_store_temporary_safe_stage", precinctSpaceId: "S13" },
+          { semanticNodeId: "family_cairn_gate", precinctSpaceId: "S12" },
+          { semanticNodeId: "rear_den_boundary", precinctSpaceId: "S14" },
+        ],
+        nodes: [
+          { semanticNodeId: "oath_circle", precinctNodeId: "N10" },
+          { semanticNodeId: "market_bay", precinctNodeId: "N11" },
+          { semanticNodeId: "winter_store_temporary_safe_stage", precinctNodeId: "N13" },
+          { semanticNodeId: "family_cairn_gate", precinctNodeId: "N12" },
+          { semanticNodeId: "rear_den_boundary", precinctNodeId: "N14" },
+        ],
+        links: [{ precinctLinkId: "L07", purpose: "oath circle to market bay" }, { precinctLinkId: "L08", purpose: "oath circle to family cairn" }, { precinctLinkId: "L09", purpose: "market bay to winter store" }, { precinctLinkId: "L10", purpose: "family cairn to rear den gate" }],
+        safeCellCandidates: [{ id: "SC03", status: "precinct_proposal_not_registered", semanticNodeId: "winter_store_temporary_safe_stage" }],
+      },
       concurrency: "Audible orders pressure movement while the silent throat supplies orientation; healing is disabled but prevention remains available.",
       resetPolicy: "Obeyed false commands close or open physical market passages permanently for the quest state.",
-    },
+    }),
     environmentNeeds: [
       "Family cairn gate opens under witnessed custody and no more than the authored seasonal interval.",
-      "Mercy-Eater suppresses recovery at the perimeter while never entering the safe cell or den route.",
+      "Mercy-Eater suppresses recovery at the perimeter while never entering the temporary quest-safe stage or protected den route.",
       "The silent throat is readable by facing alone; no text or audio substitute supplies its meaning.",
       "Winter store and wildlife route cannot both be sealed by any authored outcome.",
     ],
@@ -852,13 +1155,34 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     typologyIds: ["graven_road_assize"],
     habitatPlacement: "proposed_site_local_charnel_presence_requires_independent_review",
     locationId: "cairnmarket_opposed_exterior_front_pads",
-    topology: {
+    topology: proposedTopology({
+      code: "CM04",
       id: "two_disjoint_exteriors_with_nontraversable_body_relation",
-      nodes: ["market_exterior_pad", "displaced_camp_exterior_pad", "independent_ridge_sightline", "assize_safe_cell", "sealed_maw_interior_exclusion"],
-      edges: ["market_pad_to_sightline", "camp_pad_to_sightline", "both_pads_to_assize_by_external_routes", "no_edge_through_maw"],
+      nodes: ["market_exterior_pad", "displaced_camp_exterior_pad", "independent_ridge_sightline", "living_witness_temporary_safe_stage", "sealed_maw_exterior_boundary"],
+      edges: [
+        ["market_pad_to_sightline", "market_exterior_pad", "independent_ridge_sightline"],
+        ["camp_pad_to_sightline", "displaced_camp_exterior_pad", "independent_ridge_sightline"],
+        ["sightline_to_living_witness_stage", "independent_ridge_sightline", "living_witness_temporary_safe_stage"],
+        ["sightline_to_maw_exterior_boundary", "independent_ridge_sightline", "sealed_maw_exterior_boundary"],
+      ],
+      exclusions: [{ id: "sealed_maw_interior_exclusion", anchorNodeId: "sealed_maw_exterior_boundary", rule: "No edge, objective, camera, actor, item, light, or encounter volume crosses the exterior boundary into the Corridor Maw." }],
+      temporarySafeStageNodeId: "living_witness_temporary_safe_stage",
+      acceptedPrecinctCrosswalk: {
+        status: "precinct_proposal_ids_only_not_registration_or_geometry",
+        spaces: [
+          { semanticNodeId: "market_exterior_pad", precinctSpaceId: "S11" },
+          { semanticNodeId: "living_witness_temporary_safe_stage", precinctSpaceId: "S05" },
+        ],
+        nodes: [
+          { semanticNodeId: "market_exterior_pad", precinctNodeId: "N11" },
+          { semanticNodeId: "living_witness_temporary_safe_stage", precinctNodeId: "N05" },
+        ],
+        links: [],
+        safeCellCandidates: [{ id: "SC01", status: "precinct_proposal_not_registered", semanticNodeId: "living_witness_temporary_safe_stage" }],
+      },
       concurrency: "Two parties mark exterior faces simultaneously while the player coordinates through ridge signals, never through the creature.",
       resetPolicy: "A mismatched mark shifts legal standing to one exterior; it cannot be scrubbed until the final hearing.",
-    },
+    }),
     environmentNeeds: [
       "Both Maw frames have distinct exterior attached-shadow angles and no enterable portal surface.",
       "Two external routes connect the pads to the assize without implying their exact canonical placement.",
@@ -878,13 +1202,21 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     typologyIds: ["cinderward_furnace_dwelling"],
     habitatPlacement: "supported_by_existing_site_affinity",
     locationId: "ember_gate_vacant_keystone_address_row",
-    topology: {
+    topology: proposedTopology({
+      code: "EG01",
       id: "three_dwellings_to_single_structural_self_judgment",
-      nodes: ["three_address_thresholds", "shared_heat_gallery", "vacant_function_slot", "seraph_judgment_line", "two_exit_resident_safe_cells"],
-      edges: ["each_threshold_to_gallery", "gallery_to_function_slot", "function_slot_to_judgment_line", "each_dwelling_to_two_exits"],
+      nodes: ["three_address_thresholds", "shared_heat_gallery", "vacant_function_slot", "seraph_judgment_line", "resident_two_exit_temporary_safe_stage"],
+      edges: [
+        ["thresholds_to_gallery", "three_address_thresholds", "shared_heat_gallery"],
+        ["gallery_to_function_slot", "shared_heat_gallery", "vacant_function_slot"],
+        ["function_slot_to_judgment_line", "vacant_function_slot", "seraph_judgment_line"],
+        ["thresholds_to_resident_stage", "three_address_thresholds", "resident_two_exit_temporary_safe_stage"],
+        ["gallery_to_resident_stage", "shared_heat_gallery", "resident_two_exit_temporary_safe_stage"],
+      ],
+      temporarySafeStageNodeId: "resident_two_exit_temporary_safe_stage",
       concurrency: "Address plates circulate among dwellings while residents evacuate by heat-separated exits; the Seraph remains on one fixed survey line.",
       resetPolicy: "Every classification seals one service plate and changes the remaining distribution; no building is restored to a clean initial state.",
-    },
+    }),
     environmentNeeds: [
       "Physical doors and civic addresses remain visually separate systems.",
       "The Seraph has one visibly missing keystone socket and a lawful approach lane.",
@@ -904,13 +1236,22 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     typologyIds: ["cinderward_law_forge"],
     habitatPlacement: "supported_by_existing_site_affinity",
     locationId: "ember_gate_refusal_vial_quench_gallery",
-    topology: {
+    topology: proposedTopology({
+      code: "EG02",
       id: "injury_transfer_matrix_to_refusal_interrupt",
-      nodes: ["three_living_triage_cells", "misericord_transfer_arc", "occupied_vial_rack", "empty_vial_interrupt", "manual_shutdown_safe_cell", "trapped_lower_gallery"],
-      edges: ["triage_cells_to_transfer_arc", "transfer_arc_to_vial_rack", "empty_vial_to_shutdown", "shutdown_to_lower_gallery_rescue"],
+      nodes: ["three_living_triage_cells", "misericord_transfer_arc", "occupied_vial_rack", "empty_vial_interrupt", "manual_shutdown_temporary_safe_stage", "trapped_lower_gallery"],
+      edges: [
+        ["triage_cells_to_transfer_arc", "three_living_triage_cells", "misericord_transfer_arc"],
+        ["transfer_arc_to_vial_rack", "misericord_transfer_arc", "occupied_vial_rack"],
+        ["vial_rack_to_empty_vial_interrupt", "occupied_vial_rack", "empty_vial_interrupt"],
+        ["empty_vial_to_shutdown", "empty_vial_interrupt", "manual_shutdown_temporary_safe_stage"],
+        ["shutdown_to_lower_gallery_rescue", "manual_shutdown_temporary_safe_stage", "trapped_lower_gallery"],
+        ["transfer_arc_to_lower_gallery", "misericord_transfer_arc", "trapped_lower_gallery"],
+      ],
+      temporarySafeStageNodeId: "manual_shutdown_temporary_safe_stage",
       concurrency: "Pain moves among living triage cells while idealized reconstruction advances; one deliberate minor wound and one empty-vial break can interrupt different systems.",
       resetPolicy: "Transferred pain, completed reconstructions, and spoken refusals remain assigned; failure changes available labor and rescue time.",
-    },
+    }),
     environmentNeeds: [
       "Pain transfer is represented by occupied wing seats and work interruption, never gore.",
       "The empty vial is spatially distinct from occupied breath records and breaks without destroying the archive.",
@@ -930,13 +1271,21 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     typologyIds: ["cinderward_law_forge", "cinderward_furnace_dwelling"],
     habitatPlacement: "supported_by_existing_site_affinity",
     locationId: "ember_gate_flat_shadow_warrant_lane",
-    topology: {
+    topology: proposedTopology({
+      code: "EG03",
       id: "cancelled_action_fork_to_material_exposure",
-      nodes: ["safe_rehearsal_cell", "flat_shadow_verdict_gap", "three_fault_targets", "penitent_counterweight_lane", "public_evidence_balcony", "appeal_exit"],
-      edges: ["rehearsal_to_verdict", "verdict_to_each_fault", "faults_to_counterweight", "counterweight_to_balcony", "balcony_to_appeal"],
+      nodes: ["rehearsal_temporary_safe_stage", "flat_shadow_verdict_gap", "three_fault_targets", "penitent_counterweight_lane", "public_evidence_balcony", "appeal_exit"],
+      edges: [
+        ["rehearsal_to_verdict", "rehearsal_temporary_safe_stage", "flat_shadow_verdict_gap"],
+        ["verdict_to_fault_targets", "flat_shadow_verdict_gap", "three_fault_targets"],
+        ["fault_targets_to_counterweight", "three_fault_targets", "penitent_counterweight_lane"],
+        ["counterweight_to_balcony", "penitent_counterweight_lane", "public_evidence_balcony"],
+        ["balcony_to_appeal", "public_evidence_balcony", "appeal_exit"],
+      ],
+      temporarySafeStageNodeId: "rehearsal_temporary_safe_stage",
       concurrency: "The Bailiff predicts one initiated motion while the Penitent exposes exactly one redirected target; intent and evidence stay distinct.",
       resetPolicy: "A completed predicted act remains charged; a cancellation preserves both the abandoned motion and any exposed fault.",
-    },
+    }),
     environmentNeeds: [
       "A flat shadow completes the next animation before the solid Bailiff moves.",
       "One torso shutter and its lowest counterweight remain readable from the dark flank.",
@@ -956,13 +1305,22 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
     typologyIds: ["cinderward_law_forge"],
     habitatPlacement: "supported_by_existing_site_affinity",
     locationId: "ember_gate_unscheduled_black_pipe_array",
-    topology: {
+    topology: proposedTopology({
+      code: "EG04",
       id: "asynchronous_three_sound_convergence_without_clock",
-      nodes: ["quench_knock_source", "slag_fracture_source", "manual_egress_bell", "warm_black_pipe", "twelve_fixed_pipes", "change_window", "maintenance_exit_safe_cell"],
-      edges: ["three_sources_to_black_pipe", "black_pipe_between_fixed_pipes", "black_pipe_to_change_window", "change_window_to_exit"],
+      nodes: ["quench_knock_source", "slag_fracture_source", "manual_egress_bell", "warm_black_pipe", "twelve_fixed_pipes", "change_window", "maintenance_exit_temporary_safe_stage"],
+      edges: [
+        ["quench_source_to_black_pipe", "quench_knock_source", "warm_black_pipe"],
+        ["slag_source_to_black_pipe", "slag_fracture_source", "warm_black_pipe"],
+        ["egress_bell_to_black_pipe", "manual_egress_bell", "warm_black_pipe"],
+        ["black_pipe_to_fixed_array", "warm_black_pipe", "twelve_fixed_pipes"],
+        ["black_pipe_to_change_window", "warm_black_pipe", "change_window"],
+        ["change_window_to_exit_stage", "change_window", "maintenance_exit_temporary_safe_stage"],
+      ],
+      temporarySafeStageNodeId: "maintenance_exit_temporary_safe_stage",
       concurrency: "Three independently caused sounds arrive out of phase; their difference, not silence, opens one change window.",
       resetPolicy: "A repeated cadence is learned by the Engine and can never open the same window again.",
-    },
+    }),
     environmentNeeds: [
       "Twelve sounding pipes frost while one black pipe stays warm and visually silent.",
       "No shared clock, scheduled dark interval, or paused miracle coordinates the sources.",
@@ -977,6 +1335,7 @@ export const QUEST_WAVE_05_ENVIRONMENT_BRIEFS = deepFreeze([
 ]);
 
 const HIGH_RISK_IDS = deepFreeze(QUEST_WAVE_05_HIGH_RISK_ANALOGUES.map(({ questId }) => questId));
+const RETURNING_CREATURE_ANALOGUE_IDS = deepFreeze(QUEST_WAVE_05_RETURNING_CREATURE_ANALOGUES.map(({ id }) => id));
 
 const questCandidate = (record) => candidateRecord({
   ...record,
@@ -984,9 +1343,16 @@ const questCandidate = (record) => candidateRecord({
   stateReads: record.stateReads ?? [],
   prerequisiteQuestIds: record.prerequisiteQuestIds ?? [],
   returningCharacterIds: record.returningCharacterIds ?? [],
+  creatureIds: record.creatureIds ?? [],
+  foundingCreatureOverlayIds: record.foundingCreatureOverlayIds ?? [],
+  creatureAliasIds: record.creatureAliasIds ?? [],
   collisionAnalysis: {
+    acceptedCorpusBindingId: QUEST_WAVE_05_ACCEPTED_CORPUS_BINDING.id,
+    acceptedCorpusDigestVersion: QUEST_WAVE_05_ACCEPTED_CORPUS_BINDING.digestVersion,
+    acceptedCorpusSha256: QUEST_WAVE_05_ACCEPTED_CORPUS_BINDING.sha256,
     comparedAcceptedQuestIds: QUEST_WAVE_05_ACCEPTED_COLLISION_SCOPE,
     highRiskAnalogueIdsChecked: HIGH_RISK_IDS,
+    returningCreatureAnalogueIdsChecked: RETURNING_CREATURE_ANALOGUE_IDS,
     ...record.collisionAnalysis,
   },
 });
@@ -1024,7 +1390,7 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       { id: "observe_opposed_antlers", type: "simultaneous_ecology_read", nodeIds: ["still_north_lip", "still_south_lip"], success: "Record one naturally occurring mismatch from both fixed stations.", failureCarry: "Unobserved salinity continues crystallizing at the unattended lip." },
       { id: "keep_refusal_lane_empty", type: "negative_space_stewardship", nodeIds: ["herd_refusal_lane"], success: "Prevent factions, props, and player tools from occupying the herd's exit.", failureCarry: "The herd abandons one interval and the corresponding still cannot be restored this quest." },
       { id: "cross_read_still_yield", type: "paired_utility_calibration", nodeIds: ["still_north_lip", "still_south_lip"], success: "Balance potable yield against crystallization without changing herd direction.", failureCarry: "One still gains a persistent salinity fault that alters the final water estimate." },
-      { id: "hear_cera_grave_bearing", type: "owned_disclosure", nodeIds: ["burial_sheath_witness", "wind_lock_safe_cell"], success: "Create a safe opportunity for Cera to disclose the moved sheath.", failureCarry: "Cera withholds the bearing and the grave can no longer support the split outcome." },
+      { id: "hear_cera_grave_bearing", type: "owned_disclosure", nodeIds: ["burial_sheath_witness", "wind_lock_temporary_safe_stage"], success: "Create a protected opportunity for Cera to disclose the moved sheath.", failureCarry: "Cera withholds the bearing and the grave can no longer support the split outcome." },
       { id: "constitute_twilight_custody", type: "three_way_ecological_constitution", nodeIds: ["burial_sheath_witness"], success: "Assign the paired interval with both still and herd costs visible.", failureCarry: "Earlier salinity and exposure remain part of the chosen state." },
     ],
     decisiveBeat: "Cera places her family compass on the sheath while both antler apertures exist at once; the player must bind the interval before either owner can be treated as leftover light.",
@@ -1067,7 +1433,8 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
     leadFactionId: "charnel_night",
     giverId: "orra_rain_in_ribs",
     supportingCharacterIds: ["dren_saal_clause_beneath_shelter"],
-    creatureIds: ["rain_notary", "witness_crab"],
+    creatureIds: ["rain_notary"],
+    foundingCreatureOverlayIds: ["witness_crab"],
     signatureItemId: "unsheltered_clause_spindle",
     environmentId: "env.wave05.salt_watch.unsheltered_clause_wind_lock",
     locationId: "salt_watch_unsheltered_clause_wind_lock",
@@ -1088,7 +1455,7 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
     objectiveTopology: "two_concurrent_coercion_lanes_feed_three_account_cross_examination_then_one_act_is_freely_repeated_or_refused",
     objectives: [
       { id: "open_accountable_wind_exit", type: "coercion_boundary_setup", nodeIds: ["inner_wind_lock", "open_refusal_exit"], success: "Create a genuinely usable exit before testing any promise.", failureCarry: "Acts completed while the exit is unsafe remain presumptively coerced." },
-      { id: "perform_sheltered_clause", type: "stationary_clause_mirror", nodeIds: ["caravan_common_safe_cell", "six_drop_act_ring"], success: "Complete the forbidden action's mirror beneath the six moving droplets.", failureCarry: "The stationary seventh clause stains one duty as breached." },
+      { id: "perform_sheltered_clause", type: "stationary_clause_mirror", nodeIds: ["caravan_common_temporary_safe_stage", "six_drop_act_ring"], success: "Complete the forbidden action's mirror beneath the six moving droplets.", failureCarry: "The stationary seventh clause stains one duty as breached." },
       { id: "repeat_act_outside", type: "free_repetition_trial", nodeIds: ["outer_storm_lane"], success: "Repeat or deliberately refuse the same material act once leaving is possible.", failureCarry: "A failed outside act preserves sincerity but not enforceability." },
       { id: "cross_examine_rear_account", type: "minority_testimony_flank", nodeIds: ["lidless_shell_account"], success: "Answer the rear account rather than the two agreeing shell faces.", failureCarry: "The majority version becomes the public starting presumption." },
       { id: "spin_surviving_clause", type: "contract_constitution", nodeIds: ["inner_wind_lock", "outer_storm_lane"], success: "Join only the evidence that exists on both sides of the coercion boundary.", failureCarry: "Wet and dry strands preserve every contradiction in the enacted record." },
@@ -1119,8 +1486,9 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       forbiddenSubstitution: "Cannot become a counterfactual-cistern quest: there is no prediction, alarm spiral, evacuation hypothesis, or conserved appeal capacity; the mechanic constitutes evidence through present acts.",
     },
     collisionAnalysis: {
-      nearestAcceptedQuestIds: ["faction_the_lantern_named_us_last", "reaction_rain_owes_door_answer"],
-      distinction: "The accepted cistern quest tests self-modifying evacuation forecasts, while this adjudicates coercion by repeating one act across a newly usable exit. The accepted rain appeal litigates future forecasts; this rain is a witness to past shelter leverage, not a prediction.",
+      nearestAcceptedQuestIds: ["faction_the_lantern_named_us_last", "reaction_rain_owes_door_answer", "settlement_the_harbor_rang_below_tide"],
+      returningCreatureAnalogueId: "analogue.witness_crab.shelter_contract_not_tide_manifest",
+      distinction: "The accepted cistern quest tests self-modifying evacuation forecasts, while this adjudicates coercion by repeating one act across a newly usable exit. The accepted rain appeal litigates future forecasts; this rain is a witness to past shelter leverage, not a prediction. The accepted Witness Crab harbor operation assigns forty exclusive refuge-or-boat notches across ebb, slack, flood, and return; this Crab supplies one exterior shell account to a six-act shelter-contract hearing with no tide graph, boats, capacity manifest, or flood-return operation.",
       uniqueGenome: "coercive shelter / concurrent mirrored acts / minority shell account / post-storm free repetition",
     },
   }),
@@ -1133,7 +1501,8 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
     leadFactionId: "lucent_synod",
     giverId: "subcanon_liora_seventh_apology",
     supportingCharacterIds: ["oma_threll_gardener_of_departed_soil"],
-    creatureIds: ["acre_that_walks"],
+    creatureIds: [],
+    foundingCreatureOverlayIds: ["acre_that_walks"],
     signatureItemId: "germination_afterimage_frame",
     environmentId: "env.wave05.salt_watch.departed_soil_forensics",
     locationId: "salt_watch_departed_soil_afterimage_beds",
@@ -1156,7 +1525,7 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       { id: "sample_four_departed_positions", type: "irreversible_soil_sampling", nodeIds: ["four_core_sampling_fans"], success: "Collect four stratified cores without disturbing the current distant boundary.", failureCarry: "A collapsed core removes one time layer from every later inference." },
       { id: "observe_lifted_corner_timestamp", type: "remote_ecology_cue", nodeIds: ["brine_lens_edge"], success: "Use one naturally lifted stake only to date germination lag.", failureCarry: "A missed cue broadens the contamination interval and weakens causal certainty." },
       { id: "run_parallel_germination", type: "consumptive_profession_assay", nodeIds: ["afterimage_frame"], success: "Grow one unclaimed seed through all surviving cores simultaneously.", failureCarry: "Failed growth becomes disclosed lost yield, not a reloadable sample." },
-      { id: "disclose_founder_bed", type: "owned_professional_confession", nodeIds: ["founder_bed", "route_debt_safe_cell"], success: "Give Oma the conditions to reveal her household's contaminated title.", failureCarry: "Without disclosure, the field can be assigned duty only prospectively." },
+      { id: "disclose_founder_bed", type: "owned_professional_confession", nodeIds: ["founder_bed", "route_debt_temporary_safe_stage"], success: "Give Oma the conditions to reveal her household's contaminated title.", failureCarry: "Without disclosure, the field can be assigned duty only prospectively." },
       { id: "attach_aftercare_duty", type: "historical_obligation_ruling", nodeIds: ["afterimage_frame"], success: "Bind aftercare to field, grower, or ground while preserving the Acre's autonomous route.", failureCarry: "Every missing core becomes an explicit uncertainty in the ruling." },
     ],
     decisiveBeat: "The best-growing tray reveals the strongest poison and Oma offers to destroy her own title; Liora must demonstrate that refusal remains possible even when restitution would feed everyone.",
@@ -1186,6 +1555,7 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
     },
     collisionAnalysis: {
       nearestAcceptedQuestIds: ["relic_the_acre_crossed_a_border", "profession_the_well_drank_the_way_home"],
+      returningCreatureAnalogueId: "analogue.acre.departed_soil_forensics_not_mobile_services",
       distinction: "The accepted Acre quest moves four corners and five services between settlements. This Acre remains outside the playable assay and the mechanic reconstructs delayed soil obligation. The accepted well quest operates a water utility; brine is evidence here, not a treatment network.",
       uniqueGenome: "departed ecology / consumptive root chronology / hidden founder contamination / aftercare without ownership",
     },
@@ -1199,7 +1569,8 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
     leadFactionId: "charnel_night",
     giverId: "vekh_tallowmouth_appetite_assessor",
     supportingCharacterIds: ["kevrin_tab_undertaker_of_unhatched_names"],
-    creatureIds: ["funeral_kite", "ember_midwife"],
+    creatureIds: ["ember_midwife"],
+    foundingCreatureOverlayIds: ["funeral_kite"],
     signatureItemId: "blank_name_cocoon_weight",
     environmentId: "env.wave05.salt_watch.blank_name_nursery",
     locationId: "salt_watch_blank_name_mirror_nursery",
@@ -1222,7 +1593,7 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       { id: "read_three_band_orders", type: "sealed_adaptation_triage", nodeIds: ["three_cocoon_spokes"], success: "Identify each cocoon's three learned material threats without opening it.", failureCarry: "An unread band becomes an explicit unknown resistance in the final policy." },
       { id: "claim_inward_kite_tabs", type: "aerial_relationship_intercept", nodeIds: ["updraft_capture_arc", "claimant_item_table"], success: "Make targeted tabs too heavy to dive by presenting a related object.", failureCarry: "An escaped tab permanently removes one family association." },
       { id: "prevent_fourth_complete_cycle", type: "noncombat_threat_interruption", nodeIds: ["three_cocoon_spokes"], success: "Keep local stimuli from supplying a complete resistance cycle.", failureCarry: "A cocoon gains one disclosed environmental resistance rather than spawning an enemy." },
-      { id: "offer_kevrin_name", type: "owned_identity_stake", nodeIds: ["mirror_nursery_safe_cell"], success: "Create, but do not compel, the option for Kevrin to anchor the audit with his abandoned name.", failureCarry: "Without his name, lineage and risk cannot be fully linked." },
+      { id: "offer_kevrin_name", type: "owned_identity_stake", nodeIds: ["mirror_nursery_temporary_safe_stage"], success: "Create, but do not compel, the option for Kevrin to anchor the audit with his abandoned name.", failureCarry: "Without his name, lineage and risk cannot be fully linked." },
       { id: "write_two_layer_nursery_rule", type: "identity_risk_separation", nodeIds: ["gate_horizon_exit"], success: "Choose what the public may know about risk, lineage, and place.", failureCarry: "Erased associations and learned resistances remain true under every rule." },
     ],
     decisiveBeat: "A blank tab folds inward over the highest-risk cocoon; Kevrin offers his own funerary name as weight, knowing the act will make his past legally unreachable.",
@@ -1251,8 +1622,9 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       forbiddenSubstitution: "Cannot become grief diagnosis or a collectible-memory quest: nobody's sorrow is treated, no body is opened, and the mechanic separates biosecurity evidence from persecutable identity.",
     },
     collisionAnalysis: {
-      nearestAcceptedQuestIds: ["side_the_disease_called_grief", "relic_mirror_gave_birth_elsewhere"],
-      distinction: "The accepted grief quest separates symptom from erased witness through surgery; this performs sealed biosecurity and never diagnoses a person. The accepted mirror quest raises a new destination-organ and negotiates creature custody; this controls disclosure for already gestating cocoons without birthing or routing them.",
+      nearestAcceptedQuestIds: ["side_the_disease_called_grief", "relic_mirror_gave_birth_elsewhere", "regional_the_graves_grew_upward"],
+      returningCreatureAnalogueId: "analogue.funeral_kite.nursery_risk_not_pollination_yield",
+      distinction: "The accepted grief quest separates symptom from erased witness through surgery; this performs sealed biosecurity and never diagnoses a person. The accepted mirror quest raises a new destination-organ and negotiates creature custody; this controls disclosure for already gestating cocoons without birthing or routing them. The accepted Funeral Kite orchard compresses a growing year, stops one named pollination route, and recalculates winter yield; this nursery intercepts blank tabs to separate adaptation risk from lineage and has no grave-root cultivation, route-hours, harvest, ration forecast, or reclaimed grave.",
       uniqueGenome: "funerary anonymity / sealed adaptation triage / personal name ballast / two-layer hazard record",
     },
   }),
@@ -1268,8 +1640,8 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
     creatureIds: ["door_lung_courser"],
     signatureItemId: "exhaled_road_tack",
     environmentId: "env.wave05.cairnmarket.exhaled_road_assize",
-    locationId: "cairnmarket_exhaled_crown_road_apron",
-    premise: "A Door-Lung Courser has inhaled the Crown Road winter detour together with the unmarked fork to a Charnel sanctuary; Halix would restore one official road, while Bessa's pack animals remember why the two routes became inseparable.",
+    locationId: "cairnmarket_exhaled_crown_road_access_assize",
+    premise: "A Door-Lung Courser has inhaled route evidence attached to Cairnmarket's unresolved Crown Road access together with an unmarked Charnel sanctuary fork; Halix would restore one official access obligation, while Bessa's pack animals remember why the two claims became inseparable. This does not identify that access as the accepted modeled Bellwater Road approach.",
     loreReveal: "Cairnmarket's public road acquired its safest winter turns by following sanctuary traffic that the oath circle later removed from every map.",
     dialogueThesis: "A public road can depend on a secret without earning the right to expose it.",
     primaryMechanic: {
@@ -1280,26 +1652,26 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
     },
     dilemma: {
       id: "complete_public_route_protect_sanctuary_or_preserve_seasonal_flex",
-      poles: ["fix the complete Crown Road", "leave the sanctuary overlap missing", "make the road seasonal and animal-led"],
+      poles: ["recognize the complete Crown Road access obligation without locating it", "leave the sanctuary overlap absent from public evidence", "make the access obligation seasonal and animal-attested"],
       irreducibleCost: "Completion exposes refuge movement, incompletion limits trade, and seasonal flexibility denies travelers a dependable civic route.",
     },
     objectiveTopology: "successive_creature_exhalations_are_matched_to_animal_turns_then_selected_segments_fix_one_public_spine",
     objectives: [
-      { id: "map_pack_memory_without_cartography", type: "animal_route_recital", nodeIds: ["road_apron_safe_cell"], success: "Read three inherited turns from pack behavior without drawing the sanctuary fork.", failureCarry: "A frightened animal substitutes a plausible but unverified turn." },
+      { id: "map_pack_memory_without_cartography", type: "animal_route_recital", nodeIds: ["arrival_fan_temporary_safe_stage"], success: "Read three inherited turns from pack behavior without drawing the sanctuary fork.", failureCarry: "A frightened animal substitutes a plausible but unverified turn." },
       { id: "cross_final_rib_threshold", type: "counterplay_threshold_crossing", nodeIds: ["courser_rib_crossing"], success: "Use the final open rib door to force the Courser to exhale the stolen path behind it.", failureCarry: "A closed door removes one route share from recovery." },
       { id: "catch_three_exhaled_shares", type: "timed_terrain_capture", nodeIds: ["three_exhalation_catchments"], success: "Hold distinct public segments long enough to compare them with animal turns.", failureCarry: "An uncaught share disperses and its winter function transfers to pack memory." },
-      { id: "exclude_sanctuary_fork", type: "protected_omission", nodeIds: ["sanctuary_fork_exclusion"], success: "Prevent official tools and Halix's restoring note from fixing the hidden fork.", failureCarry: "An exposed overlap becomes unavoidable testimony in the oath circle." },
+      { id: "exclude_sanctuary_fork", type: "protected_omission", nodeIds: ["sanctuary_fork_boundary"], success: "Prevent official tools and Halix's restoring note from fixing the separately declared hidden-fork exclusion.", failureCarry: "An exposed overlap becomes unavoidable testimony in the oath circle." },
       { id: "tack_public_spine", type: "selective_route_constitution", nodeIds: ["oath_circle"], success: "Fix complete, incomplete, or seasonal public segments with consequences visible.", failureCarry: "Dispersed and exposed shares remain part of the enacted route." },
     ],
     decisiveBeat: "The Courser exhales a single strip bearing both a market rut and sanctuary handprints; Bessa can release the lead goat's remembered turn only if the player accepts what the official road borrowed.",
     failurePersistence: "Missed breaths rewrite pack memory, and every tack permanently fixes one recovered segment during the candidate state. There is no clean escort retry.",
     characterVoiceConstraint: "Halix proclaims road purpose but must whisper when a name would expose sanctuary residents; Bessa gives directions only from an animal's facing.",
     stateDomain: "infrastructure",
-    stateWrites: [{ key: "cairnmarket_exhaled_route_title", values: ["crown_road_fixed_with_refuge_disclosed", "public_spine_ends_before_sanctuary_overlap", "animal_led_winter_route_remains_revocable"] }],
+    stateWrites: [{ key: "cairnmarket_exhaled_access_evidence", values: ["crown_road_access_obligation_recognized_refuge_exposed", "public_access_evidence_stops_before_sanctuary_overlap", "animal_attested_winter_access_remains_revocable"] }],
     outcomes: [
-      { id: "crown_road_fixed_with_refuge_disclosed", consequence: "Trade becomes reliable and the hidden sanctuary gains dangerous public standing." },
-      { id: "public_spine_ends_before_sanctuary_overlap", consequence: "Refuge remains concealed while pack traffic and emergency travel stop at an admitted gap." },
-      { id: "animal_led_winter_route_remains_revocable", consequence: "The road follows seasonal pack memory and cannot be guaranteed by either cosmic faction." },
+      { id: "crown_road_access_obligation_recognized_refuge_exposed", consequence: "Trade claims gain reliable public evidence and the hidden sanctuary gains dangerous standing, without locating Crown Road or changing Bellwater Road." },
+      { id: "public_access_evidence_stops_before_sanctuary_overlap", consequence: "Refuge remains concealed while pack traffic and emergency travel confront an admitted evidentiary gap." },
+      { id: "animal_attested_winter_access_remains_revocable", consequence: "Seasonal access depends on pack memory and cannot be guaranteed by either cosmic faction or promoted into a mapped route." },
     ],
     spatialMutation: "Recovered slate road strips, one deliberate discontinuity, and changed pack-route behavior persist without assigning exact site geometry.",
     structuralSignature: {
@@ -1307,13 +1679,13 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       coreVerb: "pin only the public share of a swallowed road",
       decisionMaterial: "route segments",
       failureCarrier: "animal memory substitution",
-      spatialChange: "rigid incomplete or seasonal Crown Road",
+      spatialChange: "rigid, incomplete, or seasonal public-access evidence at the arrival fan without route geometry",
     },
     authorshipProof: {
       setpiece: "A rib-doored creature exhales pieces of mountain road behind itself while pack animals turn toward a sanctuary erased from civic maps.",
       failureTransformation: "Lost terrain survives as altered animal knowledge, and fixed pieces constrain later winter routing.",
       dialogueConstraint: "The sanctuary fork may be described by obligation and animal behavior but never casually named as a destination.",
-      persistentWorldChange: "Crown Road becomes complete and exposing, incomplete and protective, or seasonally governed by pack memory.",
+      persistentWorldChange: "The Crown Road access obligation becomes complete and exposing, incomplete and protective, or seasonally attested by pack memory; its route identity remains unresolved.",
       forbiddenSubstitution: "Cannot become a moving-cover escort or collective-walking vote: the player captures terrain after discrete breaths, protects an omission, and never accompanies cargo or moves by quorum.",
     },
     collisionAnalysis: {
@@ -1355,7 +1727,7 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       { id: "teach_advocate_narrow_shape", type: "deliberate_counterplay_failure", nodeIds: ["advocate_precedent_lane"], success: "Allow completion without dodging so the Advocate copies a survivable fold.", failureCarry: "An accidental success preserves the previous lethal precedent." },
       { id: "release_two_rib_hands", type: "vow_cue_read", nodeIds: ["two_vow_positions"], success: "Wait until exactly two rib-hands mark separate promised positions.", failureCarry: "A premature move binds one participant to the wrong mark." },
       { id: "exchange_without_attack", type: "nonviolent_position_swap", nodeIds: ["two_vow_positions"], success: "Move both participants across the connecting path with no offensive act.", failureCarry: "Violence makes the vow anatomically enforceable under every outcome." },
-      { id: "unfold_at_appeal", type: "precedent_scope_ruling", nodeIds: ["unlocked_appeal_safe_cell"], success: "Constitute personal, general, or void scope while both positions are empty.", failureCarry: "The copied impact and any forced mark remain public evidence." },
+      { id: "unfold_at_appeal", type: "precedent_scope_ruling", nodeIds: ["appeal_exit", "living_gallery_temporary_safe_stage"], success: "Constitute personal, general, or void scope while both positions are empty.", failureCarry: "The copied impact and any forced mark remain public evidence." },
     ],
     decisiveBeat: "Tarn identifies himself as the missing spouse only after the harmless precedent has been folded, forcing the player to decide whether his paid demonstration can also count as intimate consent.",
     failurePersistence: "The Advocate retains the first completed silhouette, and the Bride retains every coerced position. Later steps must work with that embodied law.",
@@ -1383,8 +1755,8 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       forbiddenSubstitution: "Cannot become split-self interrogation or posthumous testimony: all claimants are present, the core act is intentional safe failure, and law changes through copied motion rather than recovered facts.",
     },
     collisionAnalysis: {
-      nearestAcceptedQuestIds: ["main_the_saint_cast_two_shadows", "side_the_dead_vote_no"],
-      distinction: "The accepted saint quest attributes acts across authentic continuations; no identity attribution occurs here. The accepted dead-vote quest verifies posthumous refusal; all participants here act live, and precedent is produced by a designed bodily demonstration.",
+      nearestAcceptedQuestIds: ["main_the_saint_cast_two_shadows", "side_the_dead_vote_no", "aftermath_cart_accepts_office"],
+      distinction: "The accepted saint quest attributes acts across authentic continuations; no identity attribution occurs here. The accepted dead-vote quest verifies posthumous refusal; all participants here act live. The accepted Cart assize ranks weighted physical exhibits on one rotating axle, turns a civic tool into an appealable office, and lets material rotation author evidentiary law. This hearing uses no exhibit docket, axle, evidence reconstruction, standing rank, or office: present living participants deliberately complete one bounded harmless motion that the Advocate copies, then voluntarily exchange vow positions to narrow the motion's future force.",
       uniqueGenome: "paid demonstrator / intentional harmless impact / creature-copied precedent / nonviolent vow exchange",
     },
   }),
@@ -1421,8 +1793,8 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       { id: "classify_eleven_inherited_orders", type: "compulsory_command_sort", nodeIds: ["eleven_audible_facing_bays"], success: "Distinguish route safety content from obedience pressure across all audible throats.", failureCarry: "Each obeyed false order moves a physical chain or gate." },
       { id: "face_breathless_twelfth", type: "silent_cue_alignment", nodeIds: ["silent_twelfth_sightline"], success: "Align the blank token to orientation without supplying missing words.", failureCarry: "A guessed translation becomes attributable to the player rather than the dead." },
       { id: "open_family_cairn_evidence", type: "owned_ancestral_disclosure", nodeIds: ["family_cairn_gate"], success: "Allow Elka to reveal the origin of the silent throat under witnessed custody.", failureCarry: "The orientation remains usable but its intent unproven." },
-      { id: "walk_protected_disobedience", type: "live_noncommand_test", nodeIds: ["prevention_shield_route", "rear_den_exclusion"], success: "Complete a safe route contrary to an audible command without entering the wildlife interval.", failureCarry: "Closed chains and consumed healing constrain the final access rule." },
-      { id: "assign_warning_status", type: "advice_authority_constitution", nodeIds: ["oath_circle_safe_cell"], success: "Make the facing binding, subordinate, or nonbinding with its cost visible.", failureCarry: "Every prior gate movement persists." },
+      { id: "walk_protected_disobedience", type: "live_noncommand_test", nodeIds: ["prevention_shield_route", "rear_den_boundary"], success: "Complete a protected route contrary to an audible command without entering the separately declared wildlife exclusion.", failureCarry: "Closed chains and consumed healing constrain the final access rule." },
+      { id: "assign_warning_status", type: "advice_authority_constitution", nodeIds: ["oath_circle", "winter_store_temporary_safe_stage"], success: "Make the facing binding, subordinate, or nonbinding with its cost visible.", failureCarry: "Every prior gate movement persists." },
     ],
     decisiveBeat: "Elka opens her family course and reveals that the silent facing points toward the market, not away from danger; whether it means evacuate, confess, or keep access open cannot be recovered without inventing words.",
     failurePersistence: "Commands obeyed in error reposition chains and den gates. Healing consumed by the Mercy-Eater leaves named stations unavailable. The final rule must acknowledge both.",
@@ -1487,8 +1859,8 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       { id: "establish_two_exterior_teams", type: "disjoint_witness_setup", nodeIds: ["market_exterior_pad", "displaced_camp_exterior_pad"], success: "Place accountable witnesses on both exterior faces without using the Maw as passage.", failureCarry: "An unwitnessed face loses equal standing at the hearing." },
       { id: "align_attached_shadow_angles", type: "remote_frame_correspondence", nodeIds: ["independent_ridge_sightline"], success: "Signal simultaneous marks when the two attached shadows show matching exterior relation.", failureCarry: "A mismatch rotates presumption toward one locality." },
       { id: "catalog_domestic_continuity", type: "displacement_evidence_walk", nodeIds: ["displaced_camp_exterior_pad"], success: "Document lived continuity without treating objects as proof of consent.", failureCarry: "Lost evidence weakens remedy but never converts presence into agreement." },
-      { id: "exclude_maw_interior", type: "negative_route_enforcement", nodeIds: ["sealed_maw_interior_exclusion"], success: "Complete all transfers by external route and signal.", failureCarry: "Any entry attempt closes that frame and removes reversal as a safe outcome." },
-      { id: "hear_both_ground_claims", type: "dual_exterior_assize", nodeIds: ["assize_safe_cell"], success: "Adjudicate reversal, admission, or commons without describing either exterior as inside.", failureCarry: "Earlier presumption and evidence losses remain binding inputs." },
+      { id: "exclude_maw_interior", type: "negative_route_enforcement", nodeIds: ["sealed_maw_exterior_boundary"], success: "Complete all transfers by external route and signal while the separately declared interior exclusion stays unentered.", failureCarry: "Any entry attempt closes that frame and removes reversal as a safe outcome." },
+      { id: "hear_both_ground_claims", type: "dual_exterior_assize", nodeIds: ["living_witness_temporary_safe_stage"], success: "Adjudicate reversal, admission, or commons without describing either exterior as inside.", failureCarry: "Earlier presumption and evidence losses remain binding inputs." },
     ],
     decisiveBeat: "Sivren reveals the aggressor-side chalk beneath his mantle, proving the market gained an inhabited camp rather than empty ground; only he can spend the mark on reversal or standing.",
     failurePersistence: "Mismatched marks rotate public presumption, destroyed domestic evidence stays absent, and attempted entry seals one frame. The quest never resets through interior traversal.",
@@ -1552,10 +1924,10 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
     objectiveTopology: "three_address_function_decouplings_feed_one_vacant_slot_then_residents_clear_two_exits_before_structural_self_judgment",
     objectives: [
       { id: "trace_four_layers_per_dwelling", type: "address_function_occupancy_audit", nodeIds: ["three_address_thresholds"], success: "Identify door, address, current civic function, and resident group separately at all three homes.", failureCarry: "A collapsed layer assigns one service to the wrong threshold." },
-      { id: "exercise_two_heat_exits", type: "resident_egress_proof", nodeIds: ["two_exit_resident_safe_cells", "shared_heat_gallery"], success: "Move residents through both heat-separated exits without crossing a furnace mouth.", failureCarry: "A failed egress makes that dwelling ineligible for the private exception." },
+      { id: "exercise_two_heat_exits", type: "resident_egress_proof", nodeIds: ["resident_two_exit_temporary_safe_stage", "shared_heat_gallery"], success: "Move residents through both proposed heat-separated exits without crossing a furnace mouth.", failureCarry: "A failed egress makes that dwelling ineligible for the private exception." },
       { id: "empty_function_slot_materially", type: "vacancy_proof", nodeIds: ["vacant_function_slot"], success: "Remove power, worker, records, and claimant from one civic function before using its plate.", failureCarry: "A merely nominal vacancy turns residents into unauthorized office occupants." },
       { id: "occupy_missing_judgment_line", type: "creature_counterclassification", nodeIds: ["seraph_judgment_line"], success: "Place the blank function in the vacant keystone line and make the Seraph classify its own structural omission.", failureCarry: "A mistimed placement seals the nearest address service." },
-      { id: "assign_home_status", type: "dwelling_civic_constitution", nodeIds: ["two_exit_resident_safe_cells"], success: "Choose private exception, public function, or rejected judgment with resident costs visible.", failureCarry: "Misassigned services and lost egress options persist." },
+      { id: "assign_home_status", type: "dwelling_civic_constitution", nodeIds: ["resident_two_exit_temporary_safe_stage"], success: "Choose private exception, public function, or rejected judgment with resident costs visible.", failureCarry: "Misassigned services and lost egress options persist." },
     ],
     decisiveBeat: "Jorra admits that the blank plate belonged to an occupied fire escape; using it can save three homes only if those six residents are first made visible to a judgment designed to erase unclassified occupancy.",
     failurePersistence: "Misplaced plates move real rations, votes, and repairs; failed exit proofs remain unsafe. The Seraph does not restore the row between attempts.",
@@ -1621,7 +1993,7 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       { id: "accept_bounded_minor_wounds", type: "transfer_seat_counterplay", nodeIds: ["misericord_transfer_arc"], success: "Close empty wing seats through deliberate bounded wounds without assigning pain to a nonconsenting body.", failureCarry: "Unclosed seats move agony and incapacity to the nearest unwounded station." },
       { id: "separate_empty_from_occupied_vials", type: "record_preservation", nodeIds: ["occupied_vial_rack", "empty_vial_interrupt"], success: "Identify the clouding empty vial without breaking captured breaths.", failureCarry: "A broken occupied vial erases one dead worker's recoverable account." },
       { id: "return_maud_spouse_refusal", type: "posthumous_interrupt", nodeIds: ["empty_vial_interrupt"], success: "Brace and break the empty vessel so refusal, not an ideal body, returns.", failureCarry: "If reconstruction finishes first, its missing loyalty cannot be restored this quest." },
-      { id: "execute_command_disposition", type: "rescue_labor_constitution", nodeIds: ["manual_shutdown_safe_cell", "trapped_lower_gallery"], success: "Continue rescue under refusal, disclosed idealization, or injured living labor.", failureCarry: "Station losses and returned partial voices determine achievable rescue scope." },
+      { id: "execute_command_disposition", type: "rescue_labor_constitution", nodeIds: ["manual_shutdown_temporary_safe_stage", "trapped_lower_gallery"], success: "Continue rescue under refusal, disclosed idealization, or injured living labor.", failureCarry: "Station losses and returned partial voices determine achievable rescue scope." },
     ],
     decisiveBeat: "Maud hears her spouse refuse the promotion that gave her command while trapped workers call from below; honoring the dead may invalidate the only current rescue order.",
     failurePersistence: "Transferred pain removes named workstations, broken occupied vials erase accounts, and completed idealizations permanently omit loyalties. No diagnosis or resurrection retry reverses them.",
@@ -1683,7 +2055,7 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
     },
     objectiveTopology: "three_initiated_actions_fork_through_cancelled_facings_into_distinct_material_exposures_before_original_actor_decides_the_real_blow",
     objectives: [
-      { id: "observe_shadow_future", type: "prospective_cue_read", nodeIds: ["safe_rehearsal_cell", "flat_shadow_verdict_gap"], success: "Identify the Bailiff shadow's completed next animation before committing the solid action.", failureCarry: "An unobserved prediction becomes the court's uncontested account of intent." },
+      { id: "observe_shadow_future", type: "prospective_cue_read", nodeIds: ["rehearsal_temporary_safe_stage", "flat_shadow_verdict_gap"], success: "Identify the Bailiff shadow's completed next animation before committing the solid action.", failureCarry: "An unobserved prediction becomes the court's uncontested account of intent." },
       { id: "cancel_across_three_facings", type: "animation_intent_separation", nodeIds: ["flat_shadow_verdict_gap", "three_fault_targets"], success: "Create three distinct abandoned motions without completing their predicted impacts.", failureCarry: "A completed motion produces a binding charge and removes that target from neutral testing." },
       { id: "close_penitent_shutter_from_dark", type: "exposure_counterweight_control", nodeIds: ["penitent_counterweight_lane"], success: "Strike the rising weight from its dark side and meter exactly one dawn slice.", failureCarry: "Excess exposure closes a worker route and anneals away one fault." },
       { id: "publish_intent_and_fault_separately", type: "dual_evidence_filing", nodeIds: ["public_evidence_balcony"], success: "File abandoned motion and exposed material defect as non-substitutable records.", failureCarry: "Merged evidence makes useful discovery count as proof of guilt." },
@@ -1752,9 +2124,9 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
       { id: "separate_three_sound_owners", type: "independent_cause_assignment", nodeIds: ["quench_knock_source", "slag_fracture_source", "manual_egress_bell"], success: "Give each sound to a different actor with no shared trigger or countdown.", failureCarry: "Coordinated sources become one learned cadence and cannot be reused." },
       { id: "route_echoes_without_synchronizing", type: "asynchronous_acoustic_routing", nodeIds: ["warm_black_pipe", "twelve_fixed_pipes"], success: "Open physical paths for all echoes while leaving their timing uncontrolled.", failureCarry: "A blocked route freezes its associated worker or pressure state." },
       { id: "recognize_difference_not_silence", type: "lawful_rest_detection", nodeIds: ["change_window"], success: "Turn the key in the unequal overlap where the note admits difference.", failureCarry: "A silent or counted attempt strengthens the Engine and removes that cadence." },
-      { id: "exercise_exit_during_rest", type: "bounded_state_change", nodeIds: ["change_window", "maintenance_exit_safe_cell"], success: "Move workers through manual egress before changing pressure or law.", failureCarry: "Workers left inside become named claimants against any operational outcome." },
+      { id: "exercise_exit_during_rest", type: "bounded_state_change", nodeIds: ["change_window", "maintenance_exit_temporary_safe_stage"], success: "Move workers through manual egress before changing pressure or law.", failureCarry: "Workers left inside become named claimants against any operational outcome." },
       { id: "alter_pressure_without_fixing_cadence", type: "unscheduled_system_edit", nodeIds: ["change_window"], success: "Change one furnace state without preserving the successful timing as procedure.", failureCarry: "A documented cadence becomes unusable for future rests." },
-      { id: "constitute_change_right", type: "infrastructure_rights_ruling", nodeIds: ["maintenance_exit_safe_cell"], success: "Protect unpredictability, rotate custody, or abandon a ring with consequences visible.", failureCarry: "Frozen stations and learned cadences persist under every ruling." },
+      { id: "constitute_change_right", type: "infrastructure_rights_ruling", nodeIds: ["maintenance_exit_temporary_safe_stage"], success: "Protect unpredictability, rotate custody, or abandon a ring with consequences visible.", failureCarry: "Frozen stations and learned cadences persist under every ruling." },
     ],
     decisiveBeat: "Enver recognizes the fatal cadence that once opened the pipe and must destroy it before the player relies on it, leaving the next lawful rest to three workers who cannot be told when to act.",
     failurePersistence: "Every synchronized attempt is learned and permanently rejected. Blocked echoes freeze named stations, and workers not evacuated during a rest remain claimants against the final system.",
@@ -1792,19 +2164,39 @@ export const QUEST_WAVE_05_QUESTS = deepFreeze([
 export const QUEST_WAVE_05_ART_AND_REGISTRY_IMPLICATIONS = deepFreeze({
   maturity: "planning_only_until_narrative_review",
   creatureArtBaseline: {
-    totalPngs: 24,
+    totalPngs: 18,
     workOrders: [
       { familyId: "lucent_procession", creatureIds: ["apse_seraph", "misericord_of_borrowed_pain", "noon_bailiff", "unbroken_note_engine", "reliquary_of_the_last_breath", "gold_shutter_penitent"], requestedAfterAcceptance: ["transparent_cutout"] },
       { familyId: "charnel_households", creatureIds: ["door_lung_courser", "reverse_rib_bride", "throat_orchard", "jointless_advocate", "mercy_eater", "corridor_maw"], requestedAfterAcceptance: ["transparent_cutout"] },
-      { familyId: "remaining_ecologies", creatureIds: ["shutter_stag", "rain_notary", "witness_crab", "acre_that_walks", "funeral_kite", "ember_midwife"], requestedAfterAcceptance: ["concept_master", "transparent_cutout"] },
+      { familyId: "remaining_ecologies", creatureIds: ["shutter_stag", "rain_notary", "ember_midwife"], requestedAfterAcceptance: ["concept_master", "transparent_cutout"] },
     ],
-    note: "This baseline records the candidate-planning delta observed at authoring time; actual canonical pipeline state must be re-read before any art work order.",
+    returningOverlayReuse: ["witness_crab", "acre_that_walks", "funeral_kite"],
+    note: "The eighteen-image baseline covers only the fifteen genuinely quest-unused forms. The three returning overlays require registry/art-state verification and reuse, not a duplicate candidate work order. Actual canonical pipeline state must be re-read before any art request.",
   },
   supportingCharacterArtBaseline: {
     totalPngs: 24,
     workOrders: [
-      { family: "remaining_hands", maximumSubjects: 6, splitPolicy: "two work orders because eleven proposed supports use this family direction" },
-      { family: "charnel_households", maximumSubjects: 6, splitPolicy: "one work order for the single proposed Charnel support after narrative acceptance" },
+      {
+        id: "wave05_support_remaining_hands_01",
+        family: "remaining_hands",
+        maximumSubjects: 6,
+        characterIds: ["cera_voss_keeper_of_two_twilights", "dren_saal_clause_beneath_shelter", "oma_threll_gardener_of_departed_soil", "bessa_orrn_packmother_of_the_missing_road", "tarn_vey_bearer_of_the_harmless_precedent", "elka_morn_warden_of_the_breathless_warning"],
+        requestedAfterAcceptance: ["concept_master", "transparent_cutout"],
+      },
+      {
+        id: "wave05_support_remaining_hands_02",
+        family: "remaining_hands",
+        maximumSubjects: 6,
+        characterIds: ["jorra_kelm_fitter_of_addressless_rooms", "maud_renn_quench_widow_still_on_shift", "cael_ors_striker_of_uncommitted_blows", "enver_rowse_keeper_of_the_unscheduled_rest"],
+        requestedAfterAcceptance: ["concept_master", "transparent_cutout"],
+      },
+      {
+        id: "wave05_support_charnel_households_01",
+        family: "charnel_households",
+        maximumSubjects: 6,
+        characterIds: ["kevrin_tab_undertaker_of_unhatched_names", "sivren_latch_witness_outside_both_fronts"],
+        requestedAfterAcceptance: ["concept_master", "transparent_cutout"],
+      },
     ],
   },
   environmentArtBaseline: {
@@ -1812,7 +2204,7 @@ export const QUEST_WAVE_05_ART_AND_REGISTRY_IMPLICATIONS = deepFreeze({
     references: ["site.salt-watch keyframe", "site.cairnmarket keyframe", "site.ember-gate keyframe"],
     note: "Each needs its own reviewed site-direction packet; a keyframe is reference art, not topology, runtime, or production geometry.",
   },
-  totalPlannedPngs: 51,
+  totalPlannedPngs: 45,
   modelRegistry: {
     charactersAndCreatures: "If later accepted into canonical narrative modules, existing registry derivation can enumerate records at their actual pipeline tier.",
     environments: "Three explicit environment registry records and local concept or blockout links would be required in a separate integration change.",
@@ -1822,15 +2214,29 @@ export const QUEST_WAVE_05_ART_AND_REGISTRY_IMPLICATIONS = deepFreeze({
   claims: CANDIDATE_CLAIMS,
 });
 
-export const QUEST_WAVE_05_CHARACTER_BY_ID = new Map(QUEST_WAVE_05_SUPPORTING_CHARACTERS.map((record) => [record.id, record]));
-export const QUEST_WAVE_05_ITEM_BY_ID = new Map(QUEST_WAVE_05_SIGNATURE_ITEMS.map((record) => [record.id, record]));
-export const QUEST_WAVE_05_ENVIRONMENT_BY_ID = new Map(QUEST_WAVE_05_ENVIRONMENT_BRIEFS.map((record) => [record.id, record]));
-export const QUEST_WAVE_05_QUEST_BY_ID = new Map(QUEST_WAVE_05_QUESTS.map((record) => [record.id, record]));
+const immutableLookup = (records) => {
+  const lookup = Object.create(null);
+  records.forEach((record) => { lookup[record.id] = record; });
+  return deepFreeze(lookup);
+};
+
+export const QUEST_WAVE_05_CHARACTER_BY_ID = immutableLookup(QUEST_WAVE_05_SUPPORTING_CHARACTERS);
+export const QUEST_WAVE_05_ITEM_BY_ID = immutableLookup(QUEST_WAVE_05_SIGNATURE_ITEMS);
+export const QUEST_WAVE_05_ENVIRONMENT_BY_ID = immutableLookup(QUEST_WAVE_05_ENVIRONMENT_BRIEFS);
+export const QUEST_WAVE_05_QUEST_BY_ID = immutableLookup(QUEST_WAVE_05_QUESTS);
+
+export const questWave05Character = (id) => QUEST_WAVE_05_CHARACTER_BY_ID[id] ?? null;
+export const questWave05Item = (id) => QUEST_WAVE_05_ITEM_BY_ID[id] ?? null;
+export const questWave05Environment = (id) => QUEST_WAVE_05_ENVIRONMENT_BY_ID[id] ?? null;
+export const questWave05Quest = (id) => QUEST_WAVE_05_QUEST_BY_ID[id] ?? null;
 
 export default deepFreeze({
   meta: QUEST_WAVE_05_CANDIDATE_META,
+  acceptedCorpusBinding: QUEST_WAVE_05_ACCEPTED_CORPUS_BINDING,
   acceptedCollisionScope: QUEST_WAVE_05_ACCEPTED_COLLISION_SCOPE,
   highRiskAnalogues: QUEST_WAVE_05_HIGH_RISK_ANALOGUES,
+  returningCreatureAnalogues: QUEST_WAVE_05_RETURNING_CREATURE_ANALOGUES,
+  creatureReferenceAudit: QUEST_WAVE_05_CREATURE_REFERENCE_AUDIT,
   supportingCharacters: QUEST_WAVE_05_SUPPORTING_CHARACTERS,
   signatureItems: QUEST_WAVE_05_SIGNATURE_ITEMS,
   environmentBriefs: QUEST_WAVE_05_ENVIRONMENT_BRIEFS,

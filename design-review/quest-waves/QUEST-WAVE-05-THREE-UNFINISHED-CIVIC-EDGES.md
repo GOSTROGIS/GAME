@@ -2,7 +2,7 @@
 
 Status: **noncanonical authored candidate**
 Candidate ID: `quest-wave-05-three-unfinished-civic-edges-candidate-v1`
-Scope: 12 quests, 12 exclusive supporting characters, 12 signature items, 12 environment briefs, and 18 previously quest-unused expansion creatures
+Scope: 12 quests, 12 exclusive supporting characters, 12 signature items, 12 environment briefs, 15 genuinely quest-unused expansion creatures, and 3 explicitly returning creature overlays
 Acceptance: **not reviewed, not accepted, not release-attested, and not integrated**
 
 ## 1. Authority and nonclaim legend
@@ -20,24 +20,26 @@ Acceptance: **not reviewed, not accepted, not release-attested, and not integrat
 
 [C] The accepted expansion currently contains 49 quests. All 49 have distinct primary mechanics, dilemmas, locations, consequences, exclusive support ownership, signature rewards, and objective shapes under the existing narrative validator.
 
-[C] Exactly 18 current expansion creatures have no accepted quest reference. They form three six-creature families:
+[C] Accepted quests expose three structured creature-reference fields: `creatureIds`, `foundingCreatureOverlayIds`, and `creatureAliasIds`. Reading all three—not only `creatureIds`—leaves exactly 15 expansion creatures without an accepted quest reference:
 
-- Lucent Procession: Apse Seraph, Misericord of Borrowed Pain, Noon Bailiff, Engine of the Unbroken Note, Reliquary of the Last Breath, and Gold-Shutter Penitent.
-- Charnel Households: Door-Lung Courser, Reverse-Rib Bride, Throat Orchard, Jointless Advocate, Mercy-Eater, and Corridor Maw.
-- Remaining Ecologies: Shutter Stag, Rain Notary, Witness Crab, The Acre That Walks, Funeral Kite, and Ember Midwife.
+- [C] Lucent Procession: Apse Seraph, Misericord of Borrowed Pain, Noon Bailiff, Engine of the Unbroken Note, Reliquary of the Last Breath, and Gold-Shutter Penitent.
+- [C] Charnel Households: Door-Lung Courser, Reverse-Rib Bride, Throat Orchard, Jointless Advocate, Mercy-Eater, and Corridor Maw.
+- [C] Remaining Ecologies: Shutter Stag, Rain Notary, and Ember Midwife.
+
+[C] Witness Crab, The Acre That Walks, and Funeral Kite are already used through `foundingCreatureOverlayIds`, respectively by `settlement_the_harbor_rang_below_tide`, `relic_the_acre_crossed_a_border`, and `regional_the_graves_grew_upward`. [P] Wave 05 may reuse them only as declared returning overlays with exact analogue analysis; it never counts them among the 15 unused forms.
 
 [C] Salt Watch, Cairnmarket, and Ember Gate are the only three atlas sites without a registered spatial blockout reference. Their existing accepted quests are all led by the League of Remaining Hands.
 
-[P] Wave 05 therefore authors four quests per site, exactly two Lucent-led and two Charnel-led at each site. It introduces faction ambiguity without increasing the already dominant League-led giver count and gives every currently unused expansion creature one non-generic dramatic function.
+[P] Wave 05 therefore authors four quests per site, exactly two Lucent-led and two Charnel-led at each site. It introduces faction ambiguity without increasing the already dominant League-led giver count, gives all 15 genuinely unused expansion creatures a non-generic dramatic function, and places the three returning overlays only where an explicit authored distinction prevents semantic duplication.
 
 ## 3. Exact production matrix
 
 | # | Site | Lead | Giver | Exclusive support | Creatures | Portfolio | State domain |
 |---:|---|---|---|---|---|---|---|
 | 1 | Salt Watch | Lucent | Roen Fitch | Cera Voss | Shutter Stag | settlement | ecology |
-| 2 | Salt Watch | Charnel | Orra Rain-in-Ribs | Dren Saal | Rain Notary; Witness Crab | faction schism | memory |
-| 3 | Salt Watch | Lucent | Subcanon Liora | Oma Threll | The Acre That Walks | profession systemic | infrastructure |
-| 4 | Salt Watch | Charnel | Vekh Tallowmouth | Kevrin Tab | Funeral Kite; Ember Midwife | relic/creature ecology | admission |
+| 2 | Salt Watch | Charnel | Orra Rain-in-Ribs | Dren Saal | Rain Notary **[new]**; Witness Crab **[returning overlay]** | faction schism | memory |
+| 3 | Salt Watch | Lucent | Subcanon Liora | Oma Threll | The Acre That Walks **[returning overlay]** | profession systemic | infrastructure |
+| 4 | Salt Watch | Charnel | Vekh Tallowmouth | Kevrin Tab | Funeral Kite **[returning overlay]**; Ember Midwife **[new]** | relic/creature ecology | admission |
 | 5 | Cairnmarket | Lucent | Deacon Halix | Bessa Orrn | Door-Lung Courser | settlement | infrastructure |
 | 6 | Cairnmarket | Charnel | Ilar Rook | Tarn Vey | Reverse-Rib Bride; Jointless Advocate | character/guest/follower | authority |
 | 7 | Cairnmarket | Lucent | Saint Vespera | Elka Morn | Throat Orchard; Mercy-Eater | regional | memory |
@@ -66,6 +68,8 @@ Portfolio totals are exactly three settlement, three regional, two character, tw
 [C] Cairnmarket is atlas-placed at `[8192, 10240, 212]`. [D] Its current influence envelope is 760 metres around a 176-metre core, with a 198–254 metre vertical design range and population direction of 460–740.
 
 [C] Its water comes from crown snowmelt tanks; access is Crown Road; subsistence is goats and black rye; industries are slate, grave lichen, and pack animals; family cairns open once each winter; governance occurs through a market oath circle.
+
+[C] The accepted atlas route terminating at Cairnmarket is Bellwater Road. [C] Crown Road is the site's access semantic, while the current atlas supplies no separately modeled Crown Road polyline into the settlement. [G] They are unresolved identities and must never be silently aliased. [P] Wave 05 uses the proposed Cairnmarket arrival fan as a semantic interface only: Bellwater Road remains the accepted modeled approach; Crown Road access remains the canonical access obligation; neither receives new geometry here.
 
 [D] The cairn hall provides a road apron, oath circle, market bay, family cairn gallery, winter store, and rear den gate. The road assize provides a witness ring, three materially separate ash chairs, living gallery, evidence bay, and an appeal exit that stays unlocked during verdict.
 
@@ -127,9 +131,9 @@ Persistent failure: escaped tabs erase relationships and delayed readings create
 
 ### 6.1 The Road Exhaled in Shares
 
-[P] A Door-Lung Courser has swallowed a winter road and an adjacent sanctuary fork. The player crosses the final open rib threshold, catches road segments exhaled behind the creature, matches them against animal-memory turns, and fixes only public shares.
+[P] A Door-Lung Courser has swallowed route evidence attached to Cairnmarket's unresolved Crown Road access obligation and an adjacent sanctuary fork. The player crosses the final open rib threshold, catches proposed route segments exhaled behind the creature, matches them against animal-memory turns, and fixes only public shares. [G] This neither maps Crown Road nor identifies it with the accepted Bellwater Road approach.
 
-Objective graph: read pack behavior without a map → execute creature counterplay once → catch three successive terrain shares → protect a cartographic omission → constitute complete, incomplete, or seasonal public road.
+Objective graph: read pack behavior without a map → execute creature counterplay once → catch three successive terrain shares → protect a cartographic omission → constitute complete, incomplete, or seasonal public-access evidence without locating Crown Road.
 
 Decisive beat: one exhaled strip contains both market ruts and sanctuary handprints. Bessa owns the disclosure that her animals preserve the hidden overlap.
 
@@ -240,7 +244,7 @@ Persistent failure: every synchronized attempt is learned and permanently refuse
 | Unsheltered-Clause Spindle | Separates coerced shelter acts from free repetition | Guarantee repayment | When weather has ended enough for a promise |
 | Germination Afterimage Frame | Reveals delayed duties in departed soil | Name an owner or move the Acre | Whether living terrain owes aftercare |
 | Blank-Name Cocoon Weight | Links risk and one temporary accountable name | Expose body or location automatically | When inheritable danger may remain anonymous |
-| Exhaled-Road Tack | Fixes one public road share | Reveal adjacent swallowed routes | When refuge need may lift fixed public ground |
+| Exhaled-Road Tack | Fixes one proposed public-access evidence share | Reveal adjacent swallowed routes | When refuge need may lift fixed public ground |
 | Reversible Exception Crease | Caps precedent at demonstrated harm | Generalize beyond its recorded impact | Whether repeated demonstration becomes labor coercion |
 | Breathless Warning Token | Preserves direction without command | Recover missing words | Whether silent direction may close a road |
 | Exterior-Side Chalk | Proves territory exchange from outside | Establish consent or permit Maw entry | Governance of ground moved without travel |
@@ -251,35 +255,51 @@ Persistent failure: every synchronized attempt is learned and permanently refuse
 
 ## 10. Environment implementation contracts
 
-[P] Each quest has an independent environment brief with a unique topology, at least five named functional nodes, explicit edges, an activity/utility dependency, safe-cell rule, failure carry, persistent mutation, and art direction.
+[P] Each quest has an independent environment brief with a unique schema-v2 topology, at least five structured functional nodes, explicit endpoint-bearing edges, separately typed exclusions, an activity/utility dependency, one nonregistered temporary quest-safe stage, failure carry, persistent mutation, and art direction.
 
 [G] Common rules:
 
 - Coordinates are `null`. Canonical site identity is inherited; exact placement is not.
 - Geometry is proposed topology, never surveyed, final, collision-ready, navigation-ready, accessible, structural, or construction geometry.
-- Dialogue, choice, and recovery cells stay outside creature pressure and retain an unblocked route to a canonical building threshold.
+- [P] Every environment owns an exact candidate-local `S-W05-*` station, `N-W05-*` graph-node, `L-W05-*` graph-link, and `SC-W05-*` temporary-stage crosswalk. These identifiers are proposal-local and do not enter any accepted spatial registry.
+- [G] Every `SC-W05-*` record sets `registeredSafeCellId: null` and `registryStatus: nonregistered_temporary_quest_safe_stage`. It proves only connectivity in the authored candidate graph—not canonical safety, invulnerability, capacity, AI exclusion, collision, navigation, accessibility, or a route to built geometry.
+- [G] Exclusions are separate `X-W05-*` records anchored at a traversable boundary node. An exclusion is never smuggled into the node or edge list as if it were a route.
+- [G] Machine checks require unique S/N/L/SC identifiers, valid edge endpoints, full graph connectivity from the temporary stage, exact objective-to-node references, exclusion anchors that resolve, and an empty `registeredSafeCellClaims` array.
 - Creature counters must remain readable without converting lore cues into generic enemy arenas.
 - Utilities continue operating as civic systems. Brine, snowmelt, heat, quench, condensate, waste, egress, and road access are never decorative set dressing.
 - Every environment visualizes earlier failure and the chosen state without text labels.
 
-| Environment | Topology identity | Safe-cell anchor | Permanent evidence |
+| Environment | Topology identity | Nonregistered temporary stage | Permanent evidence |
 |---|---|---|---|
 | Paired Twilight Stills | opposed stationary aperture triangle | wind lock | salinity and grave bearing |
 | Unsheltered Clause | concurrent sheltered/exposed lanes | caravan common | wet/dry contract strands |
 | Departed Soil | radial history assay, no creature relocation | route-debt exit | root chronology and fallow markers |
 | Blank-Name Nursery | aerial tab arc over sealed triage spokes | mirror nursery | separated risk/lineage record |
 | Exhaled Road | successive terrain catchments to public spine | road apron | tacked segments and intentional gap |
-| Reversible Vow | safe failure before nonviolent position exchange | appeal exit | copied impact and vow marks |
-| Breathless Warning | eleven pressures plus one silent sightline | oath circle | chain positions and refusal route |
-| Exterior Front | two disjoint exteriors through third sightline | assize | chalk standing and camp evidence |
-| Vacant Keystone | three dwelling audits to one self-judgment | resident egress cells | address/service reassignment |
-| Refusal Quench | injury-transfer matrix crossing reconstruction clock | manual shutdown cell | inactive stations and vial history |
-| Prospective Warrant | cancelled motion forks into material targets | rehearsal/appeal cells | charges separated from fault samples |
-| Black-Pipe Rest | three unclocked sound causes converge once | maintenance exit | learned failed cadences and ring state |
+| Reversible Vow | bounded failure before nonviolent position exchange | living-gallery stage beside unlocked appeal | copied impact and vow marks |
+| Breathless Warning | eleven pressures plus one silent sightline | winter-store stage | chain positions and refusal route |
+| Exterior Front | two disjoint exteriors through third sightline | living-witness stage | chalk standing and camp evidence |
+| Vacant Keystone | three dwelling audits to one self-judgment | resident two-exit stage | address/service reassignment |
+| Refusal Quench | injury-transfer matrix crossing reconstruction clock | manual-shutdown stage | inactive stations and vial history |
+| Prospective Warrant | cancelled motion forks into material targets | rehearsal stage | charges separated from fault samples |
+| Black-Pipe Rest | three unclocked sound causes converge once | maintenance-exit stage | learned failed cadences and ring state |
+
+### 10.1 Cairnmarket precinct crosswalk and route boundary
+
+[D] `design-review/world-sites/CAIRNMARKET-PRECINCT-BIBLE.md` defines proposal-local spaces `S01`–`S16`, nodes `N01`–`N18`, links `L01`–`L20`, and safe-cell candidates `SC01`–`SC03`. [G] These remain precinct proposals, not registered runtime cells or final geometry. The candidate records only the following exact semantic interfaces:
+
+| Wave 05 environment | Candidate semantic nodes | Precinct S/N crosswalk | Precinct link obligations | Precinct SC reference |
+|---|---|---|---|---|
+| Exhaled Road | arrival fan; oath circle | `S01/N01`; `S10/N10` | `L12` toward hall apron; `L06` toward oath circle | none |
+| Reversible Vow | witness/demonstration; ash chairs; appeal; living gallery | `S03/N03`; `S04/N04`; `S07/N07`; `S05/N05` | `L02`, `L03`, `L05` | `SC01`, explicitly `precinct_proposal_not_registered` |
+| Breathless Warning | oath; market bay; winter store; family cairn; rear den boundary | `S10/N10`; `S11/N11`; `S13/N13`; `S12/N12`; `S14/N14` | `L07`, `L08`, `L09`, `L10` | `SC03`, explicitly `precinct_proposal_not_registered` |
+| Exterior Front | market exterior; living witness stage | `S11/N11`; `S05/N05` | none claimed; external routes remain proposals | `SC01`, explicitly `precinct_proposal_not_registered` |
+
+[G] The Exhaled Road graph additionally freezes `Bellwater Road` as the accepted modeled approach, `Crown Road access` as the canonical access semantic, and `Cairnmarket arrival fan` as the proposed connector, with relationship `unresolved_do_not_alias` and `geometryClaim: false`.
 
 ## 11. Full-corpus collision contract
 
-[C] Every Wave 05 quest stores the exact accepted 49-quest ID set as its comparison scope. The standalone test confirms set equality and performs 588 candidate-to-accepted prose comparisons.
+[P] The candidate freezes the 49 accepted quest IDs as a literal corpus binding rather than deriving its proof scope from whatever happens to be loaded at runtime. Binding ID: `accepted-expansion-quest-corpus-49-wave05-v1`; digest version: `recursive-key-sorted-canonical-json-v1`; canonical JSON byte count: `187488`; SHA-256: `ad3d218bb952f8868e0f2c01e79784dcb84bc18581970c124345619e635fa9d0`. [G] The digest covers complete accepted `EXPANSION_QUESTS` records, recursively key-sorted and ordered by quest ID. The standalone test independently recomputes bytes and digest, confirms exact ID equality, and performs 588 candidate-to-accepted prose comparisons. Any accepted-corpus edit invalidates this evidence until a new binding version and new semantic review are authored.
 
 Accepted comparison IDs:
 
@@ -335,7 +355,7 @@ Accepted comparison IDs:
 
 [G] String distance is an early-warning gate only. Semantic review remains mandatory.
 
-## 12. Six high-risk analogue prohibitions
+## 12. Seven high-risk analogue prohibitions
 
 | Accepted analogue | Collision risk | Wave 05 prohibition |
 |---|---|---|
@@ -345,8 +365,21 @@ Accepted comparison IDs:
 | `main_mercy_has_a_mouth` | negotiating-predator interior | The Corridor Maw is never entered, fed, illuminated, or negotiated with. |
 | `side_the_disease_called_grief` | diagnostic separation of grief and witness | No pain, refusal, memory, or grief is treated as a symptom. |
 | `aftermath_maintenance_window_miracle` | scheduled darkness across dependencies | No clock or dark interval coordinates the black-pipe quest; repeatability causes failure. |
+| `aftermath_cart_accepts_office` | physical evidence authors precedent through a nonhuman office at assize | No rotating exhibit docket, weighted standing, axle-authored evidence, or tool-office is recreated. The wedding-ribs hearing narrows copied motion through a live bounded demonstration and voluntary position exchange. |
 
 Nearest-neighbor distinctions are written per quest in the candidate data. Reviewers must evaluate dramatic function, not merely IDs or wording.
+
+### 12.1 Three returning-creature exact analogues
+
+[C] These forms are not unused. Each already appears in an accepted quest's `foundingCreatureOverlayIds`. [P] Their Wave 05 reuse carries a named exact analogue and an authored mechanical distinction:
+
+| Returning form | Accepted analogue | Wave 05 candidate | Required distinction |
+|---|---|---|---|
+| Witness Crab | `settlement_the_harbor_rang_below_tide` | `wave05_salt_rain_signed_under_roof` | Accepted play is a three-waterline, forty-notch, four-boat flood manifest. Candidate play is six performed shelter clauses plus one exterior shell account; no tide graph, boat capacity, manifest, or flood-return operation. |
+| The Acre That Walks | `relic_the_acre_crossed_a_border` | `wave05_salt_field_left_without_moving` | Accepted play moves four corners and five civic services along Bellwater Road. Candidate play consumes four cores from soil already departed; the distant Acre never moves, carries a service, or repairs an outage. |
+| Funeral Kite | `regional_the_graves_grew_upward` | `wave05_salt_name_too_heavy_to_fly` | Accepted play runs a grave-root growing year, halts one reclaimed-name pollination line, and recalculates winter yield. Candidate play intercepts tabs over sealed cocoons to separate adaptation risk from lineage; no orchard, route-hours, harvest, ration forecast, or grave reclamation. |
+
+[G] Each candidate quest names the accepted analogue in `nearestAcceptedQuestIds`, records its exact analogue ID, and also acknowledges all three exact analogues in `returningCreatureAnalogueIdsChecked`. ID presence does not substitute for independent semantic review.
 
 ## 13. Structural uniqueness inventory
 
@@ -369,12 +402,16 @@ Their failure carriers are likewise unique: salinity/sheath exposure; wet/dry co
 
 ## 14. Art and MODEL MAKER implications
 
-[P] If—and only if—the narrative batch is later accepted, the observed authoring-time baseline is 51 PNGs:
+[P] If—and only if—the narrative batch is later accepted, the observed authoring-time baseline is 45 PNGs:
 
 - 12 cutouts for the six Lucent Procession and six Charnel Household forms whose concept masters are currently accepted.
-- 12 master/cutout pairs for the six Remaining Ecology forms: 12 PNGs.
+- 3 master/cutout pairs for the genuinely unused Remaining Ecology forms—Shutter Stag, Rain Notary, and Ember Midwife: 6 PNGs.
 - 12 master/cutout pairs for the proposed support cast: 24 PNGs.
 - One reviewed site-direction keyframe for each of Salt Watch, Cairnmarket, and Ember Gate: 3 PNGs.
+
+[P] The support pairs are partitioned into three machine-readable, maximum-six-subject work orders: Remaining Hands `6 + 4`, and Charnel Households `2`. Every order names its exact character membership and requests one concept master plus one transparent cutout per subject.
+
+[P] Witness Crab, The Acre That Walks, and Funeral Kite are returning overlays. They require a fresh read of their canonical art/registry state and reuse of accepted records; this candidate does not issue duplicate concept-art work orders for them.
 
 [G] Actual pipeline records must be reread before creating any work order; the baseline may become stale. Art generation follows narrative acceptance, reviewed visual briefs, family ownership, independent art review, and existing maximum-six-subject work orders.
 
@@ -386,13 +423,16 @@ A reviewer should reject or return the candidate unless all of the following rem
 
 - Exactly 12 quests, 12 exclusive support characters, 12 items, and 12 environments exist.
 - Exactly four quests occur at each target site, with two Lucent and two Charnel leads.
-- All 18 previously unused expansion creatures appear exactly once.
-- Every giver and creature ID resolves to the current canonical expansion data.
+- All 15 genuinely unused expansion creatures appear exactly once through `creatureIds`; the three returning overlays appear exactly once through `foundingCreatureOverlayIds`; `creatureAliasIds` is still checked even when empty.
+- Every giver, creature, item holder, territory, prerequisite, and returning-character ID resolves to the current accepted data or the candidate-owned namespace permitted for that field.
 - Every environment resolves its site, territory, and building typology without inventing an atlas coordinate.
 - Every Cairnmarket Charnel placement remains labeled proposal pending habitat review.
 - Each support, item, environment, mechanic, dilemma, location, state key, topology, and structural signature is unique within the batch.
 - Every quest owns at least five substantive objectives, a decisive beat, persistent failure, three state values, a spatial mutation, a dialogue constraint, and all five authorship-proof fields.
-- Every quest compares against the exact 49 accepted IDs and all six high-risk analogues.
+- Every quest binds its collision evidence to the frozen 49-quest corpus ID, version, byte count, and SHA-256; it checks all seven high-risk analogues and all three returning-creature exact analogues.
+- Every topology has valid edge endpoints, one connected component reachable from its nonregistered temporary stage, exact objective-node references, separate anchored exclusions, exact candidate-local S/N/L/SC crosswalks, and no registered-safe-cell claim.
+- Cairnmarket crosswalks use exact precinct proposal IDs without importing their geometry or promoting `SC01`–`SC03`; Bellwater Road and Crown Road remain explicitly unresolved and unaliased.
+- Exported lookup tables are frozen plain records with pure nullable lookup functions, not mutable `Map` instances.
 - No support master, cutout, model, environment runtime, production geometry, construction, review, acceptance, or release claim is promoted.
 - Published strings contain no private path, account, URL, session, provider, or external-call provenance.
 - Two reviewers who did not author the quest complete semantic and state/referential review before any acceptance proposal.
@@ -400,11 +440,11 @@ A reviewer should reject or return the candidate unless all of the following rem
 ## 16. Open questions intentionally left open
 
 - [P] Whether any Charnel Household form may receive a reviewed Cairnmarket site habitat.
-- [P] Exact topology, scale, coordinates, safe-cell dimensions, encounter pressure volumes, actor schedules, collision, navigation, and streaming implementation.
+- [P] Exact scale, coordinates, registered safe-cell dimensions or behavior, encounter pressure volumes, actor schedules, collision, navigation, and streaming implementation. Candidate topology proves only authored graph consistency.
 - [P] Whether Senn Avir receives an accepted visual brief and remains the giver of the ninth quest.
 - [P] Whether each proposed state write is admitted, renamed, sequenced, or refused during canonical state-ledger review.
 - [P] Whether the 12 item mechanics remain balanced and contestable in later quests.
 - [P] Whether each visual brief passes family art direction and forbidden-content review.
-- [P] Whether any candidate should read an accepted prior state; no prerequisite or state-read relationship is claimed here.
+- [P] Whether any candidate should read an accepted prior state; no prerequisite or state-read relationship is claimed here. Empty arrays are deliberate and their foreign-key gates already reject unknown future additions.
 
 [G] These unknowns are not omissions to fill implicitly. They are decision gates for the next independent review and integration wave.
