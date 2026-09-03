@@ -348,9 +348,9 @@ function renderPlateBlock(plateSrc, caption, methodLine) {
 }
 
 function renderEnvironmentConcepts(environment) {
-  const conceptLabel = (concept, index) => index === 0
+  const conceptLabel = (concept) => concept === environment.exteriorConcept
     ? 'Exterior'
-    : index === 1
+    : concept === environment.interiorConcept
       ? 'Interior'
       : titleCase(concept.referenceScope.replaceAll('_', ' '));
   const conceptFigure = (label, concept, alt) => `<figure class="environment-concept" data-environment-concept="${concept.referenceScope}">
@@ -362,7 +362,7 @@ function renderEnvironmentConcepts(environment) {
   </figure>`;
   plateBlock.innerHTML = `<p class="eyebrow" style="margin:0 0 10px">Environment concepts \u00b7 ${environment.concepts.length} accepted reference${environment.concepts.length === 1 ? '' : 's'}</p>
     <div class="environment-concepts">
-      ${environment.concepts.map((concept, index) => conceptFigure(conceptLabel(concept, index), concept, `${environment.name} ${concept.referenceScope.replaceAll('_', ' ')} concept direction`)).join('')}
+      ${environment.concepts.map((concept) => conceptFigure(conceptLabel(concept), concept, `${environment.name} ${concept.referenceScope.replaceAll('_', ' ')} concept direction`)).join('')}
     </div>`;
 }
 
@@ -592,8 +592,9 @@ function mountEnvironment(environment) {
   active = null;
   comparing = false; overlay.hidden = true; cmpBox.hidden = true; cmp.hidden = true;
   placeholderView.hidden = false;
-  placeholderImg.src = environment.exteriorSrc;
-  placeholderImg.alt = `${environment.name} exterior concept direction`;
+  const primaryConcept = environment.exteriorConcept || environment.interiorConcept || environment.concepts[0] || null;
+  placeholderImg.src = primaryConcept?.src || '';
+  placeholderImg.alt = `${environment.name} ${primaryConcept === environment.interiorConcept ? 'interior' : 'exterior'} concept direction`;
   placeholderImg.style.visibility = 'visible';
 
   placeholderView.querySelector('.msg').innerHTML = `

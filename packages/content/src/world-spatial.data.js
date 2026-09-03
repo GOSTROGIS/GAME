@@ -473,9 +473,14 @@ const EXPANSION_CREATURE_MICROHABITATS = deepFreeze({
   elsewhere_calf: ["false-horizon nursery", "route-debt refuge"],
 });
 
+const canonicalCreatureReferenceIds = (quest) => [
+  ...(quest.creatureIds ?? []),
+  ...(quest.foundingCreatureOverlayIds ?? []),
+];
+
 const questIdsByCreature = new Map(EXPANSION_CREATURES.map((creature) => [
   creature.id,
-  EXPANSION_QUESTS.filter((quest) => quest.creatureIds.includes(creature.id)).map((quest) => quest.id),
+  EXPANSION_QUESTS.filter((quest) => canonicalCreatureReferenceIds(quest).includes(creature.id)).map((quest) => quest.id),
 ]));
 const questWave04HabitatByCreatureId = new Map(QUEST_WAVE_04_SPATIAL_INDEX.creatureHabitatEnvelopes.map((entry) => [entry.creatureId, entry]));
 const questWave04EnvironmentByQuestId = new Map(QUEST_WAVE_04_SPATIAL_INDEX.environmentPrograms.map((entry) => [entry.questId, entry]));
@@ -920,6 +925,42 @@ export const ENVIRONMENT_ART_DIRECTION = deepFreeze({
     { id: "concept_cinderward_foundry", path: "assets/world/cinderward-foundry.png", sha256: "37de3ab742e5368998d6a215ebaa4b96fccfe1d15aeb73e02e5a8b4936c077fa", status: "approved_direction", use: ["industrial verticality", "cold/heat contrast", "shortcut loops", "furnace arena"] },
     { id: "concept_hollow_abbey_nave", path: "assets/world/hollow-abbey-nave.png", sha256: "d79488872142049443b55ef98532470d632dba9bd9ae5e90ba02bd8403e7bc3b", status: "approved_direction", use: ["nave lanes", "eclipse rain", "upper traversal", "resonant urn field"] },
     { id: "concept_graven_march_black_pine_occlusion_basin", path: "assets/world/graven-march-black-pine-occlusion-basin-v5.png", sha256: "8b756803451bbd6893c445a36303c9a7b0b4c0736b98c0d64e4204f777ab9b76", status: "approved_direction", referenceScope: "regional_quest_location", locationId: "graven_march_black_pine_occlusion_basin", exactCoordinate: null, runtimeBackdrop: true, productionAsset: false, use: ["basin topology", "winter road closure", "ecological absence", "five black-pine shadow bands"] },
+    {
+      id: "concept_cairnmarket_grave_root_orchard_civic_system",
+      path: "assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png",
+      sha256: "6f73cc5e847b9b67be7ae7eea2407fed48b9192d81b87a786447497cf4d54667",
+      status: "approved_direction",
+      referenceScope: "site_quest_location_subterranean_civic_system",
+      siteId: "site.cairnmarket",
+      locationId: "cairnmarket_grave_root_orchard",
+      questId: "regional_the_graves_grew_upward",
+      exactCoordinate: null,
+      runtimeBackdrop: false,
+      runtimeIntegrated: false,
+      productionAsset: false,
+      provenancePath: "assets/world/world-environments.current.batch-06.provenance.json",
+      promptPacketPath: "assets/world/prompts/world-environments.current.batch-06.prompt-packets.json",
+      visualReviewBoundary: "Approved subterranean civic-system composition, exact Funeral Kite and route-state readability, separate food and mortuary circulation, refuge and egress hierarchy, material continuity, framing, and forbidden-content direction only; GIS placement, dimensions, topology, hydrology, sanitation, structure, construction, collision, navigation, runtime behavior, creature concept acceptance, static or animated scene readiness, and production geometry remain illustrative and unapproved.",
+      use: ["four suspended root-route bays", "one locally stopped Funeral Kite claim", "separate food-wash and mortuary work", "two manual hoists", "two collapse refuges", "two exterior egresses"],
+    },
+    {
+      id: "concept_bellwater_mobile_service_corridor_four_corner_transfer",
+      path: "assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png",
+      sha256: "2f2fa3d2248bf12f673d3929894b7f544792d8ff805cbf99909d189272838871",
+      status: "approved_direction",
+      referenceScope: "site_quest_location_mobile_service_corridor",
+      siteId: "site.cairnmarket",
+      locationId: "bellwater_mobile_service_corridor",
+      questId: "relic_the_acre_crossed_a_border",
+      exactCoordinate: null,
+      runtimeBackdrop: false,
+      runtimeIntegrated: false,
+      productionAsset: false,
+      provenancePath: "assets/world/world-environments.current.batch-07.provenance.json",
+      promptPacketPath: "assets/world/prompts/world-environments.current.batch-07.prompt-packets.json",
+      visualReviewBoundary: "Approved visual direction for the isolated exhausted-soil Acre, exactly four separated corner supports with only the right-front support raised by a wheeled manual gantry, clear negative space beneath the slab center, one seed pad, five distinct service lines with only the school rope disconnected, reduced but operating school service, four other active civic stations, road egress, convoy movement, material continuity, framing, weather, lighting, and forbidden-content compliance only; exact GIS placement, dimensions, topology, utility performance, structure, construction, accessibility, fire code, collision, navigation, streaming, runtime or simulation behavior, creature acceptance, static or animated scene readiness, models, rigs, animation, VFX, and production geometry remain illustrative and unapproved.",
+      use: ["four-corner Acre transfer", "one raised right-front support", "five distinct civic service lines", "only the school rope disconnected", "five separate civic stations", "road and convoy egress"],
+    },
     { id: "concept_cathedral_six_rehearsed_dawns", path: "assets/world/cathedral-six-rehearsed-dawns-v2.png", sha256: "5c2ab84059a4e62234f5c63fdfaffa9eb226ebe1d3ea11d53a2dea26cd11221c", status: "approved_direction", referenceScope: "quest_location", locationId: "cathedral_of_six_rehearsed_dawns", exactCoordinate: null, runtimeBackdrop: false, productionAsset: false, use: ["six refusal bays", "Lucent material law", "arrested-contact hand canopy", "service-release circulation"] },
     {
       id: "concept_warden_reed_four_bank_visibility_exterior",
@@ -1505,7 +1546,7 @@ export const WORLD_SPATIAL_SOURCE_LEDGER = deepFreeze([
   { path: "packages/content/src/bestiary.data.js", role: "canonical founding creature families and habitat profiles", authority: "canon" },
   { path: "packages/content/src/narrative.data.js", role: "canonical expansion quests, creatures, and world-state contracts", authority: "canon" },
   { path: "packages/content/manifests/quest-wave-04-v11.spatial-index.json", role: "compact accepted Wave 04 spatial compatibility index", authority: "authored_design_constraint" },
-  { path: "packages/content/manifests/quest-wave-04-v11.world.json", role: "full Wave 04 Claude Design environment, habitat, utility, and blockout contract", authority: "authored_design_constraint" },
+  { path: "packages/content/manifests/quest-wave-04-v11.world.json", role: "full Wave 04 environment, habitat, utility, and blockout contract", authority: "authored_design_constraint" },
   { path: "src/data/worldAssets.js", role: "accepted regional environment language and runtime budgets", authority: "canon" },
   { path: "packages/content/manifests/hearthmere.scene.json", role: "canonical local chunk and prototype spatial contract", authority: "canon" },
   { path: "design-review/SABLE-REACH-NARRATIVE-BIBLE.md", role: "human narrative and faction context", authority: "reference" },
