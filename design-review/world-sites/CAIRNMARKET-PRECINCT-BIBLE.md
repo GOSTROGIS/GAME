@@ -2,7 +2,7 @@
 
 Status: deep, noncanonical design handoff for a future Cairnmarket site blockout, environment concept work, quest staging, ecology staging, audio/lighting planning, and later model integration. This document is not a canon source, accepted spatial payload, construction document, surveyed GIS product, runtime implementation, or claim of finished geometry.
 
-Audience: Claude Design, world and environment art, quest design, encounter design, technical art, audio, lighting, VFX, animation, model integration, and independent reviewers.
+Audience: environment production design, world and environment art, quest design, encounter design, technical art, audio, lighting, VFX, animation, model integration, and independent reviewers.
 
 ## 1. Reading law, authority boundary, and source ledger
 
@@ -35,6 +35,7 @@ Every material statement in this dossier carries an authority label. The labels 
 | Compact Wave04 site/program binding | `packages/content/manifests/quest-wave-04-v11.spatial-index.json` | Cross-check of host, reservation, graph ID, objectives, and maturity |
 | Generic accepted spatial contract | `assets/world/spatial/site-blockout-reference-v2.schema.json` | Shape of a future machine-readable payload; this prose is not that payload |
 | Accepted Graven March image record | `assets/world/world-environments.current.batch-01.provenance.json`; `assets/world/README.md` | Rights, hash, dimensions, maturity, and visual-use boundary |
+| Accepted Cairnmarket orchard supplemental reference | `assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png`; `assets/world/prompts/world-environments.current.batch-06.prompt-packets.json`; `assets/world/world-environments.current.batch-06.provenance.json`; `packages/content/src/world-spatial.data.js` | Exact asset, prompt hash, redacted provenance, independent-review state, and direction-only boundary; not Wave04 program-slot evidence |
 | Existing accepted site dossiers | `design-review/world-sites/HEARTHMERE-HOLD-PRECINCT-BIBLE.md`; `design-review/world-sites/HOLLOW-ABBEY-PRECINCT-BIBLE.md` | Handoff discipline only; they do not supply Cairnmarket facts |
 
 ### 1.3 Immutable selected-record ledger
@@ -136,12 +137,12 @@ local Z = H - 212
 
 ### 3.4 Provisional Wave04 reservations
 
-| External program | Accepted host-relative reservation | Provisional modeled coordinate | Envelope | Boundary |
-|---|---:|---:|---:|---|
-| `cairnmarket_grave_root_orchard` | **[DESIGN CONSTRAINT]** `[-104, 86, 5]` | **[DESIGN CONSTRAINT]** `[8088, 10326, 217]` | 290 × 214 × 38 m; elevation 198–236 m | Candidate reservation, not canon; total radial test 315.16 m within 760 m influence |
-| `bellwater_mobile_service_corridor` | **[DESIGN CONSTRAINT]** `[-176, -286, 2]` | **[DESIGN CONSTRAINT]** `[8016, 9954, 214]` | 520 × 120 × 24 m; elevation 202–226 m | Candidate reservation, not canon; total radial test 602.65 m within 760 m influence |
+| External program | Accepted atlas-axis delta `Δ[E,N,H]` | Converted proposed local `(X,Y,Z)` | Provisional modeled atlas coordinate | Envelope | Boundary |
+|---|---:|---:|---:|---:|---|
+| `cairnmarket_grave_root_orchard` | **[DESIGN CONSTRAINT]** `[-104, 86, 5]` | **[DERIVED]** `[134.35, 12.73, 5]` | **[DESIGN CONSTRAINT]** `[8088, 10326, 217]` | 290 × 214 × 38 m; elevation 198–236 m | Candidate reservation, not canon; total radial test 315.16 m within 760 m influence |
+| `bellwater_mobile_service_corridor` | **[DESIGN CONSTRAINT]** `[-176, -286, 2]` | **[DERIVED]** `[-77.78, 326.68, 2]` | **[DESIGN CONSTRAINT]** `[8016, 9954, 214]` | 520 × 120 × 24 m; elevation 202–226 m | Candidate reservation, not canon; total radial test 602.65 m within 760 m influence |
 
-**[DESIGN CONSTRAINT]** Either reservation may move under survey or coordinator placement. Semantic anchor IDs and relative program logic must survive a transform. **[NONCLAIM]** Neither `provisionalDesignCoordinate` is an exact atlas coordinate.
+**[DESIGN CONSTRAINT]** The accepted deltas are easting, northing, and elevation offsets in the atlas `veyl_local_grid_v1` axes. They are not local `X/Y/Z` values and must never be applied directly in the rotated authoring frame. The converted local values above are derived through the inverse adapter in §3.3 and are rounded to two decimals for blockout communication. Either reservation may move under survey or coordinator placement. Semantic anchor IDs and relative program logic must survive a transform. **[NONCLAIM]** Neither `provisionalDesignCoordinate` is an exact atlas coordinate.
 
 ## 4. Landform, approach, occlusion, seasons, and weather
 
@@ -310,7 +311,7 @@ All twenty links are stored once as bidirectional local relationships. State mac
 | L17 | N16–N13 | Winter-store service door | 2.4 m clear | Food-only transfer after inspection | **[PROPOSAL]** |
 | L18 | N12–N15 | Orchard custody passage | 2.0 m clear | Ends at external-program handoff; no graph geometry implied | **[PROPOSAL]** |
 | L19 | N14–N16 | Keeper and animal bypass | 2.8 m clear | Residents never need to cross an active hearth or blocked den interval | **[PROPOSAL]** applying traversal law |
-| L20 | N07–N09 | Witnessed inter-building return | 2.2 m clear | Secondary court-to-hall rejoin; failure changes evidence placement, not connectivity | **[PROPOSAL]** |
+| L20 | N05–N07 | Living-gallery appeal bypass | 2.2 m clear | Independent second exit from SC01; rejoins the public appeal route without crossing evidence custody | **[PROPOSAL]** |
 
 **[PROPOSAL]** Use believable rise, landing depth, cart turning, and handrail proxies in graybox. **[NONCLAIM]** The numerical clearances are review targets, not code compliance or final collision dimensions.
 
@@ -319,7 +320,7 @@ All twenty links are stored once as bidirectional local relationships. State mac
 | Route | Ordered local intent | Operational law |
 |---|---|---|
 | R01 Bellwater arrival and bypass | N01→N02 or N09; N01↔N08; N08↔N07 | A hearing cannot erase the inter-site road read |
-| R02 Public assize circuit | N02→N03→N05→N03→N07 | Living witnesses can enter, speak, and leave without crossing evidence custody |
+| R02 Public assize circuit | N02→N03→N05→N07 | Living witnesses can enter, speak, and leave by L20 without crossing evidence custody; L03 remains the independent return to N03 |
 | R03 Evidence custody circuit | N03↔N04 and N03↔N06, returning through N07 | Ash deposits, exhibits, and living testimony never merge into one queue |
 | R04 Market and oath circuit | N09→N10→N11→N16→N09 | Public market flow forms a loop and remains distinct from the store transfer |
 | R05 Family cairn custody | N10→N12→N14→N16→N09 | Witnessed opening and wildlife closure never trap a visitor |
@@ -367,7 +368,7 @@ The six canonical room names, five canonical edges, utilities, props, and traver
 
 **[DESIGN CONSTRAINT]** The apron is the public edge of the hall. **[PROPOSAL]** Make it a slightly crowned split-slate surface large enough for one loaded pack string to turn without occupying the oath doorway. A dry curb catches harness drips and road grit before they enter. Two low stones indicate the audience queue through wear rather than a barrier.
 
-Props: pack harness, removable hitch rail, blank map markers, boot scraper, cracked lichen basket, and a road-chain inspection hook. The apron must show L11, L12, L15, and L20 at the same time.
+Props: pack harness, removable hitch rail, blank map markers, boot scraper, cracked lichen basket, and a road-chain inspection hook. The apron must show L11, L12, and L15 at the same time; L20 belongs to the assize's living-gallery/appeal relation.
 
 ### 7.2 S10 — Oath circle
 
@@ -492,7 +493,7 @@ The threshold ends at N15. N17 holds only graph identity and state. Any modeled 
 | L17 | Winter-store service door | food transfer / sealed-dry / emergency ration issue |
 | L18 | Orchard custody passage | unavailable / overlay pinned / fallow-return |
 | L19 | Keeper and animal bypass | keeper-open / wildlife-protected / resident emergency |
-| L20 | Witnessed inter-building return | open / crowd-metered / weather-guarded |
+| L20 | Living-gallery appeal bypass | open / crowd-metered / weather-guarded; never verdict-locked |
 
 ## 10. Materials, assembly, repair, and weathering
 
@@ -597,9 +598,9 @@ Each anchor must persist across LOD and state changes sufficiently to retain its
 
 | System | Source and scope | Proposed path | Isolation law | Nonclaim |
 |---|---|---|---|---|
-| H01 Crown snowmelt collection | Canonical snowmelt tanks; hall typology water | Roof/drip collection → lidded tanks in S16 → inspected potable and stock draw points | Stock draw below human draw; overflow terminates in a shallow local spreader | No claimed watershed, pipe capacity, potable certification, or Crown Road hydrologic link |
-| H02 Food and market wash | Proposed response to market/orchard hygiene | Clean draw → S16 inspection table → S11 market wash → removable silt/organic capture → proposed shallow stone soak field | Never crosses S12, mortuary tools, ash-evidence cleaning, or stock waste | No accepted outlet coordinate or engineering adequacy |
-| H03 Mortuary and evidence isolation | Hall ash trench plus accepted orchard burial-wash separation | S12/S15 covered wash and S04 evidence cleaning remain in separate sealed collection → removable mineral-bed/residue cassettes → controlled service removal | No connection to H01/H02; no discharge into orchard irrigation, public road, den habitat, or food store | No sewer, stream, deep aquifer, or treatment claim |
+| `hydrology.cairnmarket_crown_snowmelt` | Canonical snowmelt tanks; hall typology water | Roof/drip collection → lidded tanks in S16 → inspected potable and stock draw points | Stock draw below human draw; overflow terminates in a shallow local spreader | No claimed watershed, pipe capacity, potable certification, or Crown Road hydrologic link |
+| `hydrology.cairnmarket_market_wash` | Proposed response to market/orchard hygiene | Clean draw → S16 inspection table → S11 market wash → removable silt/organic capture → proposed shallow stone soak field | Never crosses S12, mortuary tools, ash-evidence cleaning, or stock waste | No accepted outlet coordinate or engineering adequacy |
+| `hydrology.cairnmarket_mortuary_isolation` | Hall ash trench plus accepted orchard burial-wash separation | S12/S15 covered wash and S04 evidence cleaning remain in separate sealed collection → removable mineral-bed/residue cassettes → controlled service removal | No connection to `hydrology.cairnmarket_crown_snowmelt` or `hydrology.cairnmarket_market_wash`; no discharge into orchard irrigation, public road, den habitat, or food store | No sewer, stream, deep aquifer, or treatment claim |
 
 **[OPEN]** The current authority does not place a local spring, stream, culvert, sewer, or permanent outfall at Cairnmarket. Do not invent one. Brief thaw rills and tank overflow may terminate in local proposed spreaders only.
 
@@ -644,10 +645,10 @@ Every critical low-light cue requires a non-light companion: latch angle, chain 
 | Market food | N16–N11 after inspection | N16–N13 for sealed winter inventory | Mortuary wash and animal waste |
 | Winter store | N16–N13 | Public issue N13–N11 only | General market browsing |
 | Tank maintenance | S16 perimeter loop | S09 tool staging | Pack turn and food-clean threshold |
-| Cairn custody | R05 | L20/L19 resident return | Active hearth and public market congestion |
+| Cairn custody | R05 | L19 to N16, then L15/L12 through the arrival fan | Active hearth and public market congestion |
 | Den keeping | N16–N14 | Observe from S16 if gate closed | Public shortcut through protected wildlife interval |
 | Assize evidence | N02–N03–N06 | Remove through N07 under witnessed state | Living gallery and market food route |
-| Appeal / evacuation | N03–N07–N08 or N07–N09 | Alternate public loop through S01 | Evidence bay, ash chairs, and closed den route |
+| Appeal / evacuation | N03–N07–N08 or N05–N07–N08 | Alternate public loop through S01 toward N09 | Evidence bay, ash chairs, and closed den route |
 
 ## 13. Activity phases and an inhabited settlement
 
@@ -696,36 +697,36 @@ Do not use a uniform crowd pass. Market-day density belongs to court and market 
 
 ## 14. Four habitat envelopes
 
-### 14.1 H01 — Settled graven-upland civic edge
+### 14.1 `habitat.cairnmarket_civic_edge` — Settled graven-upland civic edge
 
-**[CANON]** Cairnmarket lies in `habitat.graven-upland`. **[PROPOSAL]** H01 covers S01–S13 and S16 as an inhabited slate-upland edge. It supports people, goats, pack animals, lichen work, and transient non-hostile ecology. Hostile or quest-specific forms do not spawn inside its three safe cells merely because their broader habitat includes the territory.
+**[CANON]** Cairnmarket lies in `habitat.graven-upland`. **[PROPOSAL]** `habitat.cairnmarket_civic_edge` covers S01–S13 and S16 as an inhabited slate-upland edge. It supports people, goats, pack animals, lichen work, and transient non-hostile ecology. Hostile or quest-specific forms do not spawn inside its three safe cells merely because their broader habitat includes the territory.
 
 Environmental cues: frost-spalled slate, handled warm stones, wet pine, short thaw rills, swept civic thresholds, pack traffic, and additive repairs. Counterplay is ordinary visibility and multiple public exits, not an invisible safe-zone aura.
 
-### 14.2 H02 — Cairn Beast winter-den interval
+### 14.2 `habitat.cairnmarket_cairn_beast_interval` — Cairn Beast winter-den interval
 
 **[CANON/DESIGN CONSTRAINT]** Cairn Beasts occupy Graven March warm-cairn edges, black-pine dens, and closed winter roads; their family signature is stone mass carrying residual grave heat, pebble clicks, chest-stone sub-bass, lichen, warmed slate, and wet fur. The Winter Cairn Choir requires a complete no-footfall interval; grave heat is contextual and not portable.
 
-**[PROPOSAL]** H02 begins at S14 and extends into a transformable off-core ridge/basin reservation. Only entry state, first cue, keeper access, and safe-cell exclusion belong to the local precinct. Preserve one non-factional animal escape route. Do not distribute every Cairn Beast form around the market or convert the den gate into a generic monster door.
+**[PROPOSAL]** `habitat.cairnmarket_cairn_beast_interval` begins at S14 and extends into a transformable off-core ridge/basin reservation. Only entry state, first cue, keeper access, and safe-cell exclusion belong to the local precinct. Preserve one non-factional animal escape route. Do not distribute every Cairn Beast form around the market or convert the den gate into a generic monster door.
 
-### 14.3 H03 — Funeral Kite grave-root orchard overlay
+### 14.3 `habitat.cairnmarket_funeral_kite_orchard` — Funeral Kite grave-root orchard overlay
 
-**[DESIGN CONSTRAINT]** H03 is the external `overlay.funeral_kite.cairnmarket_orchard`, anchored at the accepted roost semantic anchor. It supports four seasonal pollination lines. Its accepted encounter phase is dusk.
+**[DESIGN CONSTRAINT]** `habitat.cairnmarket_funeral_kite_orchard` is the external `overlay.funeral_kite.cairnmarket_orchard`, anchored at the accepted roost semantic anchor. It supports four seasonal pollination lines. Its accepted encounter phase is dusk.
 
 **[PROPOSAL]** The local precinct owns only S15, N17, the clean/dirty custody read, and overlay availability. Funeral Kites do not cross into S12, S13, or S16 as ambient decoration. The local habitat boundary must remain at least one readable threshold away from SC01–SC03.
 
-### 14.4 H04 — Acre and quarantine-road service overlay
+### 14.4 `habitat.cairnmarket_acre_service_corridor` — Acre and quarantine-road service overlay
 
 **[CANON/DESIGN CONSTRAINT]** The Acre That Walks uses maintained road margins, disputed fields, unclaimed burial routes, famine-field boundaries, and shared harvest corridors. Exactly one Acre occupies the accepted setpiece population envelope. It moves one legal corner at a time while the other three remain load-bearing.
 
-**[PROPOSAL]** H04 attaches at S08/N18 and remains outside the local traversal graph. The public bypass, stock separation, former-return direction, receiving-handoff direction, and non-factional escape/retreat route must stay readable. The Acre is not a building, vehicle, mount, terrain tile, or generic boss arena.
+**[PROPOSAL]** `habitat.cairnmarket_acre_service_corridor` attaches at S08/N18 and remains outside the local traversal graph. The public bypass, stock separation, former-return direction, receiving-handoff direction, and non-factional escape/retreat route must stay readable. The Acre is not a building, vehicle, mount, terrain tile, or generic boss arena.
 
 ### 14.5 Habitat exclusions
 
 - No hostile form enters SC01–SC03 unless a later accepted state explicitly phases that cell out of safe use.
-- H02 never crosses an active hearth or uses S11 as an animal shortcut.
-- H03 never treats names, bodies, or grave markers as collectible clutter.
-- H04 never spreads continuous Acre soil across the whole road landscape.
+- `habitat.cairnmarket_cairn_beast_interval` never crosses an active hearth or uses S11 as an animal shortcut.
+- `habitat.cairnmarket_funeral_kite_orchard` never treats names, bodies, or grave markers as collectible clutter.
+- `habitat.cairnmarket_acre_service_corridor` never spreads continuous Acre soil across the whole road landscape.
 - Funeral Kite and Acre encounters do not overlap each other in the local core.
 - Regional creature eligibility is not permission to populate every eligible species. The first packet stages only the two accepted encounter overlays plus bounded Cairn Beast cues.
 - Ordinary goats and pack animals remain visually distinct from Cairn Beasts; stone mass and grave heat are not costume pieces for livestock.
@@ -736,7 +737,7 @@ Environmental cues: frost-spalled slate, handled warm stones, wet pine, short th
 
 | Safe cell | Space | Capacity target | Active phases | Protection read | Exclusions |
 |---|---|---:|---|---|---|
-| SC01 Living Witness Shelter | S05 | 24 | All four | Wind-break, open rail to S03, direct sight to L05 | No ash testimony, evidence storage, Funeral Kite, Acre, or Cairn Beast spawn |
+| SC01 Living Witness Shelter | S05 | 24 | All four | Wind-break; independent traversable exits through L03 to N03 and L20 to N07; direct sight to L05 | No ash testimony, evidence storage, Funeral Kite, Acre, or Cairn Beast spawn |
 | SC02 Market Hearth Margin | S11 | 18 | Cold morning, market day, dusk; contracted winter footprint | Two exits, low warming stone, visible service door | No open flame in store path, no hostile ecology, no stock tether |
 | SC03 Winter Store Vestibule | S13 | 12 | All four, highest priority winter night | Dry raised floor, N11 and N16 approaches, ration station | No contaminated goods, mortuary tools, combat cover, or cinematic lock-in |
 
@@ -1047,7 +1048,7 @@ Objective wording, order, and rules below are canonical. Local-support assignmen
 
 | # | Canonical objective type | Canonical target and rule | Proposed Cairnmarket support | External ownership |
 |---:|---|---|---|---|
-| 1 | `winter_prepare_grave_root_beds` | Burial hygiene, ventilation, and fallow rows; no food root crosses active burial wash or named-grave threshold | S12/S15 custody read; H03 unavailable until separation reads | External wash, mortuary, service, and fallow anchors |
+| 1 | `winter_prepare_grave_root_beds` | Burial hygiene, ventilation, and fallow rows; no food root crosses active burial wash or named-grave threshold | S12/S15 custody read; `habitat.cairnmarket_funeral_kite_orchard` unavailable until separation reads | External wash, mortuary, service, and fallow anchors |
 | 2 | `thaw_release_blank_tab_routes` | Roost to four lines; preserve item-claim counterplay at every tab | S15 airflow/slack-line preview | External roost and four root routes |
 | 3 | `first_bloom_balance_spores_and_market_labor` | Root support, irrigation, and lifts; market continues while workers have two independent refuges | S11/S13/S16 market and store pressure | External supports, irrigation, lifts, refuges, egress |
 | 4 | `forecast_winter_yield_from_live_routes` | Food store and funeral detours; yield uses route-hours, never exposed-name count | S11/S13 inventory gap and distribution queue | External live-route accounting and detours |
@@ -1197,13 +1198,15 @@ It may not establish:
 - an apparent figure as a canonical character or creature;
 - a production mesh, material set, collision surface, navmesh, or lighting rig.
 
-### 25.2 Art brief A — Grave-root orchard civic system
+### 25.2 Accepted supplemental reference A — Grave-root orchard civic system
 
-**[PROPOSAL]** Suggested future ID: `concept_cairnmarket_grave_root_orchard_civic_system`.
+**[ART REFERENCE]** ID: `concept_cairnmarket_grave_root_orchard_civic_system`.
 
-**[PROPOSAL]** Suggested future path: `assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png`.
+**[ART REFERENCE]** Path: `assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png`.
 
-Status: brief only; no file, acceptance, provenance, runtime integration, or model exists.
+Status: `approved_direction` as an accepted supplemental interior environment reference. The opaque sRGB PNG is 1536 × 1024, 3,061,458 bytes, and SHA-256 `6f73cc5e847b9b67be7ae7eea2407fed48b9192d81b87a786447497cf4d54667`. Its exact accepted revision prompt is bound through `assets/world/prompts/world-environments.current.batch-06.prompt-packets.json` with prompt SHA-256 `c67a7666a6f491e7efee890fa7b9d738a39b7c453aa0d346abd718a1543ce849`; redacted rights, raster, review, and maturity evidence is bound through `assets/world/world-environments.current.batch-06.provenance.json`. Two independent read-only visual reviews and coordinator verification accepted the direction.
+
+**[NONCLAIM]** This acceptance supplies visual direction only. It does not establish exact GIS placement, copied external graph geometry, engineering adequacy, a runtime backdrop, collision, navmesh, blockout mesh, production mesh, static model, rig, or animation. It also does not populate the still-null `environmentKeyframe` field in the older accepted Wave04 program record; the current supplemental registry and that immutable historical program slot are separate evidence surfaces.
 
 #### Composition
 
@@ -1228,7 +1231,9 @@ Status: brief only; no file, acceptance, provenance, runtime integration, or mod
 9. One claimed kite/tab state makes one exact line visibly slack, capped, stopped, or fallow while the other three lines continue.
 10. Cold slate/pine mass and sparse amber work light remain consistent with the accepted Graven March reference.
 
-#### Prompt packet
+#### Foundational brief
+
+The text below is the foundational composition brief retained for human review. It is not the exact final revision prompt; use the content-addressed batch-06 prompt packet above for that evidence.
 
 ```text
 Create one polished stylized-3D dark-fantasy production environment concept of the Cairnmarket grave-root orchard civic system, landscape 1536×1024. Use the accepted Graven March winter-basin reference only for cold slate-and-black-pine palette, ash-filtered winter atmosphere, long occlusion shadows, restrained practical warmth, weathering, and inhabited austerity; do not copy its geography or layout.
@@ -1371,7 +1376,8 @@ Each mechanism needs a neutral state, state ownership, collision ownership, audi
 ### 26.6 Current model and art maturity
 
 - The existing Graven March image is accepted direction and a runtime backdrop, not a production environment mesh.
-- Both proposed new environment keyframes are absent.
+- The Cairnmarket grave-root orchard image is an accepted supplemental interior-direction reference with redacted batch-06 prompt/provenance and no runtime or model claim.
+- The Bellwater four-corner service-transfer keyframe remains absent from the published registry at this checkpoint.
 - The Wave04 orchard and corridor records report `environmentKeyframe`, `blockoutMesh`, and `productionMesh` as null.
 - Relevant new named characters and creatures may have null concept, cutout, static model, or animated model fields. Use generic, clearly labeled proxies where evidence is absent.
 - A concept image embedded in a registry does not prove model, rig, animation, collision, or runtime readiness.
@@ -1392,7 +1398,7 @@ Every blockout slice should carry:
 - open questions and prohibited assumptions;
 - repository-relative asset references only.
 
-## 27. Claude Design blockout sequence
+## 27. Environment-production blockout sequence
 
 Deliver the site in small, reviewable slices. Rejection of one slice should not invalidate unrelated work.
 
@@ -1404,7 +1410,7 @@ Deliver the site in small, reviewable slices. Rejection of one slice should not 
 6. **Service seam:** S15/S16, tanks, pack turn, food inspection, mortuary isolation, keeper bypass, three schematic water/sanitation systems.
 7. **Safe cells and routes:** SC01–SC03, R01–R08, player-height sightline and route-closure tests.
 8. **Living-world pass:** four phases, five ordinary actor roles, ambient interactions, maintenance props, occupancy and audio deltas.
-9. **Ecology pass:** H01–H04, Cairn Beast first cues, safe-cell exclusions, non-hostile escape routes.
+9. **Ecology pass:** the four `habitat.cairnmarket_*` envelopes, Cairn Beast first cues, safe-cell exclusions, and non-hostile escape routes.
 10. **Earlier-quest sockets:** Dead Vote, stationary Cart, and Winter Choir envelopes as clearly labeled reservations, not executable integrations.
 11. **Orchard interface:** N17 hash binding, S15 handoff, seventeen-objective ledger subset, accepted expected counts, no copied external geometry.
 12. **Acre interface:** N18 hash binding, S08 handoff, five service silhouettes, accepted expected counts, no copied external geometry.
@@ -1427,11 +1433,11 @@ Each slice review should include one overhead image, at least two player-height 
 | Local safe cells | Mark and test SC01–SC03 physically | Invulnerability, AI exclusion, capacity, or accessibility acceptance |
 | Water destinations | Build isolated schematic tanks, wash paths, and sealed collection | Watershed, permanent outlet, potable safety, sewer, or treatment |
 | Earlier quest graphs | Preserve sockets and height/clearance | Executable crosswalk or graph ownership |
-| Orchard geometry | Use hash-only proxy and art brief | Copied graph, final undercroft placement, or production mesh |
+| Orchard geometry | Use hash-only proxy plus the accepted supplemental reference within its batch-06 boundary | Copied graph, final undercroft placement, runtime backdrop, or production mesh |
 | Corridor geometry | Use hash-only proxy and art brief | Copied graph, moving nav implementation, or final road works |
 | Named actor staging | Place labeled generic proxies under relevant quest state | Permanent residency, appearance, rig, or animation |
 | Creature models | Use exact cue volumes and silhouette placeholders | Accepted subject art, static model, rig, animation, or combat readiness |
-| New keyframes | Generate against briefs and review independently | Accepted reference, runtime backdrop, or production asset before evidence |
+| New keyframes | Use the independently accepted orchard reference; generate the Bellwater brief independently | Bellwater acceptance, runtime backdrop, or production asset before evidence |
 | Runtime budgets | Instrument proposed cells and LOD reads | Performance compliance before target-hardware measurement |
 
 Promotion of a spatial proposal requires exact source bindings, schema validation, independent topology and semantic review, clear authority labels, safe-cell and egress checks, privacy review, and a release record that states limitations without inflating maturity.
@@ -1449,7 +1455,7 @@ Promotion of a spatial proposal requires exact source bindings, schema validatio
 9. **[NONCLAIM]** `prototype_playable`, `blockout_ready_not_production_geometry`, or `blockout_executable_candidate_not_navmesh_or_production_geometry` does not mean production geometry, collision, navmesh, runtime logic, or performance is complete.
 10. **[NONCLAIM]** N17/N18 and overlay summaries do not import or reproduce any external graph node, edge, coordinate, utility, safe cell, egress, encounter volume, or objective endpoint.
 11. **[NONCLAIM]** The accepted winter-basin keyframe controls only documented regional and quest-location direction. Its composition is not Cairnmarket geometry.
-12. **[NONCLAIM]** The two art briefs are not art assets, generated images, accepted references, provenance records, backdrops, model sheets, or production approvals.
+12. **[NONCLAIM]** The orchard image is accepted only as the supplemental visual reference bound in §25.2; it is not copied graph evidence, a runtime backdrop, model sheet, or production approval. The Bellwater brief is not yet a published art asset at this checkpoint.
 13. **[NONCLAIM]** An environment keyframe containing a creature or person does not accept that subject's concept art, anatomy sheet, static model, rig, or animation.
 14. **[NONCLAIM]** Five population roles are not five named characters or fixed spawns. The 460–740 population range is not a crowd-rendering requirement.
 15. **[NONCLAIM]** Safe cells are candidate social/refuge spaces, not guaranteed invulnerability or AI exclusion volumes.
@@ -1512,7 +1518,7 @@ Promotion of a spatial proposal requires exact source bindings, schema validatio
 ### Art, models, streaming, and privacy
 
 - [ ] Existing Graven March art is used only within its approved scope.
-- [ ] Each new art brief is generated, reviewed, and versioned independently; neither is treated as accepted in advance.
+- [ ] The orchard reference stays within its accepted batch-06 supplemental-direction boundary; the Bellwater brief is generated, reviewed, and versioned independently rather than treated as accepted in advance.
 - [ ] No named-character appearance is invented to populate an environment image.
 - [ ] No art inclusion becomes an unsupported static-model, rig, animation, collision, navmesh, runtime, or production claim.
 - [ ] LOD and streaming values remain planning targets until measured.

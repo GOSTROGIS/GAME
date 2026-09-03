@@ -144,6 +144,17 @@ for (const envelope of EXPANSION_CREATURE_HABITAT_ENVELOPES) {
   assert.ok(envelope.locomotionConstraint && envelope.sensorySignature.visualCue && envelope.sensorySignature.acoustic && envelope.sensorySignature.scent);
 }
 
+for (const envelope of EXPANSION_CREATURE_HABITAT_ENVELOPES) {
+  const expectedQuestIds = EXPANSION_QUESTS
+    .filter((quest) => [
+      ...(quest.creatureIds ?? []),
+      ...(quest.foundingCreatureOverlayIds ?? []),
+    ].includes(envelope.creatureId))
+    .map(({ id }) => id)
+    .sort();
+  assert.deepEqual([...envelope.canonicalQuestIds].sort(), expectedQuestIds, `${envelope.creatureId} must bind every accepted direct and founding-overlay quest reference`);
+}
+
 assert.equal(Object.keys(QUEST_LOCATION_SPATIAL_PROGRAMS).length, new Set(EXPANSION_QUESTS.map(({ locationId }) => locationId)).size);
 assert.ok(equalSets(new Set(Object.keys(QUEST_LOCATION_SPATIAL_PROGRAMS)), new Set(EXPANSION_QUESTS.map(({ locationId }) => locationId))));
 assert.equal(QUEST_ENVIRONMENT_REQUIREMENTS.length, EXPANSION_QUESTS.length);

@@ -473,9 +473,14 @@ const EXPANSION_CREATURE_MICROHABITATS = deepFreeze({
   elsewhere_calf: ["false-horizon nursery", "route-debt refuge"],
 });
 
+const canonicalCreatureReferenceIds = (quest) => [
+  ...(quest.creatureIds ?? []),
+  ...(quest.foundingCreatureOverlayIds ?? []),
+];
+
 const questIdsByCreature = new Map(EXPANSION_CREATURES.map((creature) => [
   creature.id,
-  EXPANSION_QUESTS.filter((quest) => quest.creatureIds.includes(creature.id)).map((quest) => quest.id),
+  EXPANSION_QUESTS.filter((quest) => canonicalCreatureReferenceIds(quest).includes(creature.id)).map((quest) => quest.id),
 ]));
 const questWave04HabitatByCreatureId = new Map(QUEST_WAVE_04_SPATIAL_INDEX.creatureHabitatEnvelopes.map((entry) => [entry.creatureId, entry]));
 const questWave04EnvironmentByQuestId = new Map(QUEST_WAVE_04_SPATIAL_INDEX.environmentPrograms.map((entry) => [entry.questId, entry]));
@@ -1523,7 +1528,7 @@ export const WORLD_SPATIAL_SOURCE_LEDGER = deepFreeze([
   { path: "packages/content/src/bestiary.data.js", role: "canonical founding creature families and habitat profiles", authority: "canon" },
   { path: "packages/content/src/narrative.data.js", role: "canonical expansion quests, creatures, and world-state contracts", authority: "canon" },
   { path: "packages/content/manifests/quest-wave-04-v11.spatial-index.json", role: "compact accepted Wave 04 spatial compatibility index", authority: "authored_design_constraint" },
-  { path: "packages/content/manifests/quest-wave-04-v11.world.json", role: "full Wave 04 Claude Design environment, habitat, utility, and blockout contract", authority: "authored_design_constraint" },
+  { path: "packages/content/manifests/quest-wave-04-v11.world.json", role: "full Wave 04 environment, habitat, utility, and blockout contract", authority: "authored_design_constraint" },
   { path: "src/data/worldAssets.js", role: "accepted regional environment language and runtime budgets", authority: "canon" },
   { path: "packages/content/manifests/hearthmere.scene.json", role: "canonical local chunk and prototype spatial contract", authority: "canon" },
   { path: "design-review/SABLE-REACH-NARRATIVE-BIBLE.md", role: "human narrative and faction context", authority: "reference" },
