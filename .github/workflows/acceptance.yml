@@ -22,7 +22,7 @@ jobs:
       RASTER_ART_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before || '' }}
     steps:
       - name: Check out source without automatic LFS hydration
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           lfs: false
           fetch-depth: 0
