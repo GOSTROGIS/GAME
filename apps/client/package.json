@@ -12,7 +12,7 @@
     "test:bridge": "tsc -p tsconfig.bridge-test.json && node --test .bridge-test-dist/test/bridge-runtime.test.js"
   },
   "dependencies": {
-    "@colyseus/sdk": "^0.17.18",
+    "@colyseus/sdk": "^0.18.2",
     "@hearthmere/content": "workspace:*",
     "@hollow-march/shared": "workspace:*",
     "three": "^0.180.0"
