@@ -1,5 +1,6 @@
 import { createServer } from "node:http";
-import { readFile, stat } from "node:fs/promises";
+import { open, stat } from "node:fs/promises";
+import { pipeline } from "node:stream/promises";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -21,21 +22,36 @@ const mime = {
 };
 
 const server = createServer(async (request, response) => {
+  let file;
   try {
     const url = new URL(request.url, `http://${request.headers.host || "localhost"}`);
     const requestPath = decodeURIComponent(url.pathname);
     let filePath = normalize(join(root, requestPath === "/" ? "index.html" : requestPath));
     if (!filePath.startsWith(root)) throw new Error("Path outside game root");
     if ((await stat(filePath)).isDirectory()) filePath = join(filePath, "index.html");
-    const body = await readFile(filePath);
+    file = await open(filePath, "r");
+    const metadata = await file.stat();
+    if (!metadata.isFile()) throw new Error("Not a regular file");
     response.writeHead(200, {
       "content-type": mime[extname(filePath)] || "application/octet-stream",
       "cache-control": "no-cache",
+      "content-length": metadata.size,
     });
-    response.end(body);
+    if (request.method === "HEAD") {
+      response.end();
+    } else {
+      // Backpressure bounds memory even when serving large assets to slow clients.
+      await pipeline(file.createReadStream({ autoClose: false }), response);
+    }
   } catch {
+    if (response.headersSent || response.destroyed) {
+      response.destroy();
+      return;
+    }
     response.writeHead(404, { "content-type": "text/plain; charset=utf-8" });
     response.end("Not found");
+  } finally {
+    await file?.close().catch(() => {});
   }
 });
 
