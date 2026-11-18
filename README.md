@@ -113,3 +113,9 @@ The capability matrix intentionally distinguishes authored, validated, habitat-v
 ## GitHub integration
 
 The repository uses Git LFS for large GIS and 3D authoring/runtime binaries. `.github/workflows/acceptance.yml` reproduces the pinned GIS environment and complete Windows browser/WebGL acceptance suite on pushes and pull requests to `main`. Dependabot covers pnpm, Python GIS requirements, and GitHub Actions; the pull-request template requires stable-ID, provenance, GIS, authority, navigation, and maturity evidence.
+
+## Local coding assistant
+
+Run [Open Ollama Tools.cmd](Open%20Ollama%20Tools.cmd) from a Windows checkout to open a developer chat with this repository selected. The launcher looks for the shared Ollama Tools installation alongside your repository collection. For a different location, set `OLLAMA_TOOLS_DIR` to the folder containing `Start Ollama Tools.cmd`.
+
+The companion runs with the [Ollama](https://ollama.com/) model runtime on your computer.
