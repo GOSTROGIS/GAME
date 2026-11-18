@@ -177,5 +177,14 @@
       const flags = new URLSearchParams(location.search);
       if (flags.get("renderer") === "webgl" || flags.get("network") === "1" || flags.get("assetLab") === "1") import("./apps/client/src/main.ts");
     </script>
+  <script>
+  if (["127.0.0.1", "localhost", "[::1]"].includes(location.hostname)) {
+    const widget = document.createElement("script");
+    widget.src = "http://127.0.0.1:11435/embed.js";
+    widget.dataset.app = "GAME";
+    widget.defer = true;
+    document.head.append(widget);
+  }
+  </script>
   </body>
 </html>
