@@ -97,14 +97,14 @@ assert.equal(registry.expansionCharacters.length, EXPANSION_CHARACTERS.length);
 assert.equal(registry.expansionCreatures.length, EXPANSION_CREATURES.length);
 assert.equal(registry.expansionCharacters.length, 70);
 assert.equal(registry.expansionCreatures.length, 39);
-assert.equal(registry.environments.length, 3);
+assert.equal(registry.environments.length, 5);
 assert.deepEqual(registry.companionContracts, COMPANION_QUEST_CONTRACTS);
 assert.deepEqual(registry.agencyContracts, COMPANION_AGENCY_CONTRACTS);
 assert.deepEqual(registry.actorContracts, QUEST_ACTOR_CONTRACTS);
 assert.equal(counts.total, 228);
 assert.equal(counts.foundingTotal, 228);
 assert.equal(counts.grandTotal, 337);
-assert.equal(counts.environments, 3);
+assert.equal(counts.environments, 5);
 assert.equal(counts.spatialBlockouts, 3);
 assert.equal(counts.expansionItems, 67);
 assert.equal(counts.expansionQuests, 49);
@@ -364,6 +364,108 @@ assert.equal(hearthmereEnvironment.blockoutReferences[0].constructionReady, fals
 assert.equal(hearthmereEnvironment.blockoutReferences[0].productionGeometry, false);
 assert.equal(hearthmereEnvironment.blockoutReferences[0].staticScene, false);
 assert.equal(hearthmereEnvironment.blockoutReferences[0].animatedScene, false);
+
+const cairnmarketOrchardEnvironment = registry.environments.find(({ id }) => id === 'environment.cairnmarket-grave-root-orchard-civic-system');
+assert.ok(cairnmarketOrchardEnvironment);
+assert.equal(cairnmarketOrchardEnvironment.contentId, 'cairnmarket_grave_root_orchard');
+assert.equal(cairnmarketOrchardEnvironment.name, 'Cairnmarket Grave-Root Orchard Civic System');
+assert.equal(cairnmarketOrchardEnvironment.regionId, 'graven_march');
+assert.equal(cairnmarketOrchardEnvironment.siteId, 'site.cairnmarket');
+assert.equal(cairnmarketOrchardEnvironment.routeId, null);
+assert.equal(cairnmarketOrchardEnvironment.locationId, 'cairnmarket_grave_root_orchard');
+assert.equal(cairnmarketOrchardEnvironment.questId, 'regional_the_graves_grew_upward');
+assert.deepEqual(cairnmarketOrchardEnvironment.landmarkIds, []);
+assert.equal(cairnmarketOrchardEnvironment.staticScene, null);
+assert.equal(cairnmarketOrchardEnvironment.staticSceneStatus, 'awaiting-model');
+assert.equal(cairnmarketOrchardEnvironment.animatedScene, null);
+assert.equal(cairnmarketOrchardEnvironment.animatedSceneStatus, 'unassessed');
+assert.deepEqual(cairnmarketOrchardEnvironment.motionSystems, [
+  'four_root_route_state',
+  'funeral_kite_pollination_lines',
+  'manual_root_tray_hoists',
+  'separate_food_mortuary_drainage',
+  'collapse_refuge_access',
+]);
+assert.equal(cairnmarketOrchardEnvironment.runtimeBackdrop, false);
+assert.equal(cairnmarketOrchardEnvironment.runtimeIntegrated, false);
+assert.equal(cairnmarketOrchardEnvironment.productionAsset, false);
+assert.match(cairnmarketOrchardEnvironment.reason, /no independently reviewed machine blockout is bound yet/i);
+assert.equal(Object.isFrozen(cairnmarketOrchardEnvironment.concepts), true);
+assert.equal(cairnmarketOrchardEnvironment.concepts.length, 1);
+assert.equal(cairnmarketOrchardEnvironment.exteriorConcept, null);
+assert.equal(cairnmarketOrchardEnvironment.exteriorSrc, null);
+assert.deepEqual(cairnmarketOrchardEnvironment.interiorConcept, {
+  id: 'concept_cairnmarket_grave_root_orchard_civic_system',
+  path: 'assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png',
+  src: '../assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png',
+  sha256: '6f73cc5e847b9b67be7ae7eea2407fed48b9192d81b87a786447497cf4d54667',
+  bytes: 3061458,
+  dimensions: { width: 1536, height: 1024 },
+  colorSpace: 'sRGB',
+  alphaPolicy: 'opaque',
+  referenceScope: 'site_quest_location_subterranean_civic_system',
+  approvalStatus: 'approved_direction',
+  maturity: 'approved_environment_direction_not_runtime_or_production',
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+});
+assert.equal(cairnmarketOrchardEnvironment.concepts[0], cairnmarketOrchardEnvironment.interiorConcept);
+assert.equal(cairnmarketOrchardEnvironment.interiorSrc, cairnmarketOrchardEnvironment.interiorConcept.src);
+assert.equal(/^https?:/i.test(cairnmarketOrchardEnvironment.interiorSrc), false);
+assert.equal(Object.isFrozen(cairnmarketOrchardEnvironment.blockoutReferences), true);
+assert.equal(cairnmarketOrchardEnvironment.blockoutReferences.length, 0);
+
+const bellwaterCorridorEnvironment = registry.environments.find(({ id }) => id === 'environment.bellwater-mobile-service-corridor-four-corner-transfer');
+assert.ok(bellwaterCorridorEnvironment);
+assert.equal(bellwaterCorridorEnvironment.contentId, 'bellwater_mobile_service_corridor');
+assert.equal(bellwaterCorridorEnvironment.name, 'Bellwater Mobile-Service Corridor Four-Corner Transfer');
+assert.equal(bellwaterCorridorEnvironment.regionId, 'graven_march');
+assert.equal(bellwaterCorridorEnvironment.siteId, 'site.cairnmarket');
+assert.equal(bellwaterCorridorEnvironment.routeId, null);
+assert.equal(bellwaterCorridorEnvironment.locationId, 'bellwater_mobile_service_corridor');
+assert.equal(bellwaterCorridorEnvironment.questId, 'relic_the_acre_crossed_a_border');
+assert.deepEqual(bellwaterCorridorEnvironment.landmarkIds, []);
+assert.equal(bellwaterCorridorEnvironment.staticScene, null);
+assert.equal(bellwaterCorridorEnvironment.staticSceneStatus, 'awaiting-model');
+assert.equal(bellwaterCorridorEnvironment.animatedScene, null);
+assert.equal(bellwaterCorridorEnvironment.animatedSceneStatus, 'unassessed');
+assert.deepEqual(bellwaterCorridorEnvironment.motionSystems, [
+  'manual_acre_corner_transfer',
+  'five_civic_service_line_states',
+  'school_rope_outage',
+  'reduced_school_service',
+  'convoy_and_pack_movement',
+]);
+assert.equal(bellwaterCorridorEnvironment.runtimeBackdrop, false);
+assert.equal(bellwaterCorridorEnvironment.runtimeIntegrated, false);
+assert.equal(bellwaterCorridorEnvironment.productionAsset, false);
+assert.match(bellwaterCorridorEnvironment.reason, /no independently reviewed machine blockout is bound yet/i);
+assert.equal(Object.isFrozen(bellwaterCorridorEnvironment.concepts), true);
+assert.equal(bellwaterCorridorEnvironment.concepts.length, 1);
+assert.deepEqual(bellwaterCorridorEnvironment.exteriorConcept, {
+  id: 'concept_bellwater_mobile_service_corridor_four_corner_transfer',
+  path: 'assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png',
+  src: '../assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png',
+  sha256: '2f2fa3d2248bf12f673d3929894b7f544792d8ff805cbf99909d189272838871',
+  bytes: 2846754,
+  dimensions: { width: 1536, height: 1024 },
+  colorSpace: 'sRGB',
+  alphaPolicy: 'opaque',
+  referenceScope: 'site_quest_location_mobile_service_corridor',
+  approvalStatus: 'approved_direction',
+  maturity: 'approved_environment_direction_not_runtime_or_production',
+  runtimeBackdrop: false,
+  runtimeIntegrated: false,
+  productionAsset: false,
+});
+assert.equal(bellwaterCorridorEnvironment.concepts[0], bellwaterCorridorEnvironment.exteriorConcept);
+assert.equal(bellwaterCorridorEnvironment.exteriorSrc, bellwaterCorridorEnvironment.exteriorConcept.src);
+assert.equal(/^https?:/i.test(bellwaterCorridorEnvironment.exteriorSrc), false);
+assert.equal(bellwaterCorridorEnvironment.interiorConcept, null);
+assert.equal(bellwaterCorridorEnvironment.interiorSrc, null);
+assert.equal(Object.isFrozen(bellwaterCorridorEnvironment.blockoutReferences), true);
+assert.equal(bellwaterCorridorEnvironment.blockoutReferences.length, 0);
 
 const environmentBoundSpatialIds = WORLD_SPATIAL_BLOCKOUT_ASSETS
   .filter(({ environmentIds }) => environmentIds.length)

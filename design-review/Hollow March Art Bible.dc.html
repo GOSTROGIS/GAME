@@ -130,7 +130,7 @@
 
   <p style="margin:40px 0 14px;color:var(--gold);font:500 10px var(--display);letter-spacing:.22em;text-transform:uppercase">Environment keyframes &mdash; moved here from the Theme Reference so the art lives in one place</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:12px">
-    <sc-for list="{{ keyframes }}" as="k" hint-placeholder-count="13">
+    <sc-for list="{{ keyframes }}" as="k" hint-placeholder-count="15">
       <div style="position:relative;overflow:hidden;border:1px solid var(--line);background:var(--ink)">
         <img src="{{ k.file }}" alt="{{ k.alt }}" loading="lazy" decoding="async" style="display:block;width:100%;height:240px;object-fit:cover;opacity:.78">
         <div style="position:absolute;inset:auto 0 0;padding:44px 18px 15px;background:linear-gradient(transparent,rgba(4,7,8,.96))">
@@ -836,6 +836,16 @@ class Component extends DCLogic {
         note: 'Twelve dormant cairn bodies, three failed dens, five occlusion bands, a closed public road, and a readable trade detour.',
         boundary: 'Approved regional quest-location direction and legacy 2D backdrop; exact atlas coordinate unresolved.',
         provenance: '../assets/world/world-environments.current.batch-01.provenance.json' },
+      { file: '../assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png', name: 'Cairnmarket · Grave-Root Orchard', band: 'SITE QUEST · SUBTERRANEAN CIVIC SYSTEM',
+        alt: 'Cairnmarket grave-root orchard civic system environment keyframe',
+        note: 'Four suspended root-route bays, four rigid Funeral Kites, one locally stopped claim, separate food and mortuary work, two manual hoists, two collapse refuges, and two exterior egresses establish the maintained orchard interior.',
+        boundary: 'Approved supplemental environment direction only; exact GIS placement, dimensions, topology, drainage capacity, structure, construction, collision, navigation, creature concept acceptance, runtime, static or animated scene readiness, and production geometry remain illustrative and unapproved.',
+        provenance: '../assets/world/world-environments.current.batch-06.provenance.json' },
+      { file: '../assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png', name: 'Bellwater · Mobile-Service Corridor', band: 'SITE QUEST · FOUR-CORNER TRANSFER',
+        alt: 'Bellwater mobile-service corridor four-corner transfer environment keyframe',
+        note: 'One exhausted-soil Acre, exactly four separated corner supports, one wheeled manual gantry, five distinct civic service lines with only the school rope disconnected, reduced school service, four other active stations, and open convoy egress establish the Bellwater exterior.',
+        boundary: 'Approved supplemental visual direction only; exact GIS placement, dimensions, topology, utility performance, structure, construction, collision, navigation, streaming, runtime or simulation behavior, models, rigs, animation, VFX, static or animated scene readiness, and production geometry remain illustrative and unapproved.',
+        provenance: '../assets/world/world-environments.current.batch-07.provenance.json' },
       { file: '../assets/world/cathedral-six-rehearsed-dawns-v2.png', name: 'Cathedral of Six Rehearsed Dawns', band: 'FACTION QUEST · GENTLE HORIZON',
         alt: 'Cathedral of Six Rehearsed Dawns environment keyframe',
         note: 'Six materially distinct refusal bays, Liora’s pressure vessel, arrested-contact hand canopy, and a dark service-release route.',

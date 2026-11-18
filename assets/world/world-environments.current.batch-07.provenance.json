@@ -1,0 +1,51 @@
+{
+  "schema": "SableReachPublishedArtProvenanceV1",
+  "batchId": "current-world-environments-batch-07",
+  "rightsDeclaration": "Owner-authorized original project art; no third-party or franchise source imagery; environment concept and blockout reference use.",
+  "promptSource": "assets/world/prompts/world-environments.current.batch-07.prompt-packets.json",
+  "records": [
+    {
+      "id": "environment_keyframe.bellwater_mobile_service_corridor_four_corner_transfer",
+      "subjectId": "bellwater_mobile_service_corridor_four_corner_transfer",
+      "environmentId": "environment.bellwater-mobile-service-corridor-four-corner-transfer",
+      "familyId": "world_environments",
+      "rank": "site_quest_location_mobile_service_corridor",
+      "role": "environment_keyframe",
+      "regionId": "graven_march",
+      "siteId": "site.cairnmarket",
+      "locationId": "bellwater_mobile_service_corridor",
+      "questId": "relic_the_acre_crossed_a_border",
+      "path": "assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png",
+      "sha256": "2f2fa3d2248bf12f673d3929894b7f544792d8ff805cbf99909d189272838871",
+      "bytes": 2846754,
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "colorSpace": "sRGB",
+      "alphaPolicy": "opaque",
+      "promptAvailability": "The exact accepted correction prompt body is retained; five earlier corrective prompt bodies, private revision images, and execution locators are omitted.",
+      "promptRecordId": "prompt.environment.bellwater_mobile_service_corridor_four_corner_transfer",
+      "promptSha256": "567b100d8611e5aaeb9b7c5c17501dc20a4a2622fd5c147b6b4a53517fa5f010",
+      "generation": {
+        "tool": {
+          "name": "built-in image generation"
+        },
+        "mode": "reference-guided revision",
+        "outputSha256": "2f2fa3d2248bf12f673d3929894b7f544792d8ff805cbf99909d189272838871"
+      },
+      "sourceReferences": [],
+      "reviewEvidence": {
+        "reviewMode": "two independent read-only visual reviews plus coordinator verification",
+        "accepted": true,
+        "boundary": "Approved visual direction for one isolated rectangular exhausted-soil Acre, exactly four separated corner supports with three grounded and the right-front support raised by a wheeled manual gantry, clear negative space beneath the slab center, one dry-stone seed pad, exactly four taut connected services with no fifth taut strand, one thick braided school rope ending locally in a short slack capped cut end followed by a broad visible air gap and no U-tail or continuation, reduced but operating school service, fully active and separate water, fire, burial, and tax stations, protected rack placement, readable left and right road egress, convoy and pack movement, regional black-pine enclosure, cold wet slate-and-pine material continuity, anonymous human scale, framing, weather, lighting, and forbidden-content compliance only; exact atlas or GIS placement, surveyed coordinates, boundaries, scene dimensions, topology, adjacency, utility routing or capacity, hydrology, sanitation, electrical or mechanical performance, structure, construction, accessibility, fire code, collision, navigation, streaming, runtime integration, simulation behavior, creature concept acceptance, static or animated scene readiness, models, rigs, animation, VFX implementation, production geometry, and production-asset status remain illustrative and unapproved."
+      },
+      "maturity": {
+        "environmentDirection": "authored_and_independently_reviewed",
+        "runtimeBackdrop": false,
+        "runtimeIntegrated": false,
+        "productionAsset": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "SableReachPublicPromptPacketV1",
+  "batchId": "current-world-environments-batch-06",
+  "publication": {
+    "scope": "repository_relative_prompt_direction",
+    "privateExecutionContextPublished": false,
+    "externalProviderIdentifiersPublished": false,
+    "supersededRevisionInputsPublished": false
+  },
+  "rightsDeclaration": "Owner-authorized original project art direction for environment concept and blockout reference use.",
+  "records": [
+    {
+      "id": "prompt.environment.cairnmarket_grave_root_orchard_civic_system",
+      "assetPath": "assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png",
+      "bodyStatus": "exact_accepted_generator_revised_prompt_body",
+      "canonicalPublicDirection": "Surgical v6 correction of this exact Cairnmarket orchard v5 image. Preserve every accepted feature as closely as possible: 1536×1024 camera and crop; exactly four route bays; exactly four rigid black-cloth Funeral Kites at the same positions; bay 2 alone dark, capped, slack, and stopped; bays 1, 3, and 4 active; suspended trays on independent slate piers; memorial-fallow bed; food-wash and mortuary separation; two manual hoists; two snowy exterior egress directions; workers; clean store; cold slate/black-pine material law; lighting and weather.\n\nMake only TWO surgical changes.\n\n1. KITE 2 TAB CORRECTION. On the SECOND KITE FROM THE LEFT only, remove the extra lowest separate blank rectangular tab currently hanging beneath its folded tab. Reconstruct the black rigid frame and empty air behind it. Keep exactly four physical tabs on kite 2 total: three flat blank rectangular tabs and one central lower inward-folded tab. The folded tab is one continuous physical tab with two visible planes forming a deep V crease; it is longer, thicker, and hangs lower than the folded tabs on kites 1, 3, and 4, but it is NOT accompanied by another rectangle. Do not change the tab count or folds on kites 1, 3, or 4. Every kite remains exactly three flat blank tabs plus one folded blank tab. No marks, scratches, borders, writing, pseudo-writing, runes, stains, or symbols.\n\n2. SECOND REFUGE CLARITY. Keep the existing right-foreground thick-slate enclosure as refuge two. Make the existing LEFT-REAR interior service room unmistakably a separate collapse refuge without creating a third exterior exit: give it a low, very thick load-bearing slate roof, deep enclosed side walls, a single inward-facing rectangular refuge doorway opening ONLY into the orchard interior, one heavy timber lintel with visible repair splints, and refuge stores immediately visible inside—folded blankets, plain sealed water jars, a low bench, and hand tools. Its back wall is solid and unbroken; it does not lead outdoors and cannot read as a snowy egress. Keep the only two exterior egress directions at lower-left and upper-right exactly as they are.\n\nNo other change. Do not alter the four kite positions, any other tab, any route state, crop, people, trays, roots, water, hoists, fallow bed, mortuary table, drains, store, exits, or lighting. Forbidden: fifth kite; extra/missing tab; second folded tab on any kite; active bay 2; stopped bay 1/3/4; new refuge; new exterior door; bird anatomy; corpse/bone/blood; cave/karst; cathedral; powered machinery; text/UI/logo/watermark; survey/runtime/model claim.",
+      "promptSha256": "c67a7666a6f491e7efee890fa7b9d738a39b7c453aa0d346abd718a1543ce849",
+      "lineageDisclosure": "The exact accepted final revision prompt is published. Earlier draft-generation and corrective prompt bodies, private revision images, and execution locators are omitted.",
+      "sourceReferences": [
+        "assets/world/graven-march-black-pine-occlusion-basin-v5.png"
+      ],
+      "unpublishedInput": {
+        "count": 5,
+        "role": "superseded_private_draft_and_revision_sources",
+        "reason": "Raw revision inputs remain private; no execution locator is published."
+      }
+    }
+  ]
+}

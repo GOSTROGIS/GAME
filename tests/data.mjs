@@ -87,7 +87,7 @@ for (const asset of WORLD_TECHNICAL_ASSETS) check(existsSync(resolve(new URL("..
 for (const asset of CHARACTER_RENDER_ASSETS) check(existsSync(resolve(new URL("../", import.meta.url).pathname.replace(/^\/(\w:)/, "$1"), asset)), `Missing character render ${asset}`);
 check(REGION_ASSET_KITS.length === 5, "Expected five production regional asset kits");
 check(new Set(WORLD_CONCEPT_ASSETS.map(({ id }) => id)).size === WORLD_CONCEPT_ASSETS.length, "World concept IDs must be unique");
-check(WORLD_CONCEPT_ASSETS.length === 13, "Expected thirteen accepted world concept references");
+check(WORLD_CONCEPT_ASSETS.length === 15, "Expected fifteen accepted world concept references");
 check(WORLD_TECHNICAL_ASSETS.length === 1, "Expected one accepted world technical reference");
 check(WORLD_SPATIAL_BLOCKOUT_ASSETS.length === 4, "Expected four reviewed world spatial blockout references");
 check(new Set(WORLD_SPATIAL_BLOCKOUT_ASSETS.map(({ id }) => id)).size === WORLD_SPATIAL_BLOCKOUT_ASSETS.length, "World spatial blockout IDs must be unique");
@@ -108,6 +108,21 @@ check(hearthmereCivic?.dimensions?.width === 1536 && hearthmereCivic?.dimensions
 check(hearthmereCivic?.environmentId === "environment.hearthmere-hold-civic-spring-spine" && hearthmereCivic?.siteId === "site.hearthmere" && hearthmereCivic?.locationId === "hearthmere_civic_spring_spine", "Hearthmere civic spring content binding changed");
 check(hearthmereCivic?.referenceScope === "site_civic_exterior" && hearthmereCivic?.runtimeBackdrop === false && hearthmereCivic?.runtimeIntegrated === false && hearthmereCivic?.productionAsset === false, "Hearthmere civic spring overstates implementation readiness");
 check(JSON.stringify(hearthmereCivic?.use) === JSON.stringify(["civic_spring_spine", "three_route_hierarchy", "resident_scale", "spring_runoff_separation", "working_civic_artifacts", "hearthmere_material_law"]), "Hearthmere civic spring accepted-use boundary changed");
+const cairnmarketOrchard = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_cairnmarket_grave_root_orchard_civic_system");
+check(Boolean(cairnmarketOrchard), "Cairnmarket grave-root orchard direction is missing");
+check(cairnmarketOrchard?.path === "./assets/world/cairnmarket-grave-root-orchard-civic-system-v1.png" && cairnmarketOrchard?.sha256 === "6f73cc5e847b9b67be7ae7eea2407fed48b9192d81b87a786447497cf4d54667" && cairnmarketOrchard?.bytes === 3061458, "Cairnmarket orchard content-addressed evidence changed");
+check(cairnmarketOrchard?.dimensions?.width === 1536 && cairnmarketOrchard?.dimensions?.height === 1024 && cairnmarketOrchard?.colorSpace === "sRGB" && cairnmarketOrchard?.alphaPolicy === "opaque", "Cairnmarket orchard raster contract changed");
+check(cairnmarketOrchard?.environmentId === "environment.cairnmarket-grave-root-orchard-civic-system" && cairnmarketOrchard?.siteId === "site.cairnmarket" && cairnmarketOrchard?.locationId === "cairnmarket_grave_root_orchard" && cairnmarketOrchard?.questId === "regional_the_graves_grew_upward", "Cairnmarket orchard content binding changed");
+check(cairnmarketOrchard?.referenceScope === "site_quest_location_subterranean_civic_system" && cairnmarketOrchard?.runtimeBackdrop === false && cairnmarketOrchard?.runtimeIntegrated === false && cairnmarketOrchard?.productionAsset === false, "Cairnmarket orchard overstates implementation readiness");
+check(JSON.stringify(cairnmarketOrchard?.use) === JSON.stringify(["four_root_route_bays", "funeral_kite_claim_state", "suspended_root_trays", "food_mortuary_separation", "collapse_refuges", "manual_service_hoists"]), "Cairnmarket orchard accepted-use boundary changed");
+const bellwaterCorridor = WORLD_CONCEPT_ASSETS.find(({ id }) => id === "concept_bellwater_mobile_service_corridor_four_corner_transfer");
+check(Boolean(bellwaterCorridor), "Bellwater mobile-service corridor direction is missing");
+check(bellwaterCorridor?.path === "./assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png" && bellwaterCorridor?.sha256 === "2f2fa3d2248bf12f673d3929894b7f544792d8ff805cbf99909d189272838871" && bellwaterCorridor?.bytes === 2846754, "Bellwater corridor content-addressed evidence changed");
+check(bellwaterCorridor?.dimensions?.width === 1536 && bellwaterCorridor?.dimensions?.height === 1024 && bellwaterCorridor?.colorSpace === "sRGB" && bellwaterCorridor?.alphaPolicy === "opaque", "Bellwater corridor raster contract changed");
+check(bellwaterCorridor?.environmentId === "environment.bellwater-mobile-service-corridor-four-corner-transfer" && bellwaterCorridor?.regionId === "graven_march" && bellwaterCorridor?.siteId === "site.cairnmarket" && bellwaterCorridor?.locationId === "bellwater_mobile_service_corridor" && bellwaterCorridor?.questId === "relic_the_acre_crossed_a_border", "Bellwater corridor content binding changed");
+check(bellwaterCorridor?.referenceScope === "site_quest_location_mobile_service_corridor" && bellwaterCorridor?.exactCoordinate === null && bellwaterCorridor?.runtimeBackdrop === false && bellwaterCorridor?.runtimeIntegrated === false && bellwaterCorridor?.productionAsset === false, "Bellwater corridor overstates implementation readiness");
+check(bellwaterCorridor?.type === "environment_exterior_keyframe" && bellwaterCorridor?.promptSha256 === "567b100d8611e5aaeb9b7c5c17501dc20a4a2622fd5c147b6b4a53517fa5f010", "Bellwater corridor publication binding changed");
+check(JSON.stringify(bellwaterCorridor?.use) === JSON.stringify(["four_corner_acre_transfer", "five_civic_service_lines", "school_rope_outage", "reduced_school_service", "manual_gantry_and_seed_pad", "road_convoy_egress"]), "Bellwater corridor accepted-use boundary changed");
 check(Boolean(wardenExterior && wardenInterior), "Warden Reed exterior/interior direction pair is incomplete");
 for (const [asset, expected] of [
   [wardenExterior, { path: "./assets/world/warden-reed-four-bank-visibility-exterior-v1.png", sha256: "52d94e5252c7f4935772daaa970b58668ea82746491a969d0cad616403eaf17e", bytes: 2709612, scope: "quest_location_exterior" }],

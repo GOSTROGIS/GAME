@@ -104,6 +104,46 @@ const ENVIRONMENT_DEFINITIONS = Object.freeze([
       'bell_yoke_service',
     ]),
   }),
+  Object.freeze({
+    id: 'environment.cairnmarket-grave-root-orchard-civic-system',
+    contentId: 'cairnmarket_grave_root_orchard',
+    name: 'Cairnmarket Grave-Root Orchard Civic System',
+    regionId: 'graven_march',
+    siteId: 'site.cairnmarket',
+    locationId: 'cairnmarket_grave_root_orchard',
+    questId: 'regional_the_graves_grew_upward',
+    conceptIds: Object.freeze(['concept_cairnmarket_grave_root_orchard_civic_system']),
+    exteriorConceptIndex: null,
+    interiorConceptIndex: 0,
+    blockoutReferenceIds: Object.freeze([]),
+    motionSystems: Object.freeze([
+      'four_root_route_state',
+      'funeral_kite_pollination_lines',
+      'manual_root_tray_hoists',
+      'separate_food_mortuary_drainage',
+      'collapse_refuge_access',
+    ]),
+  }),
+  Object.freeze({
+    id: 'environment.bellwater-mobile-service-corridor-four-corner-transfer',
+    contentId: 'bellwater_mobile_service_corridor',
+    name: 'Bellwater Mobile-Service Corridor Four-Corner Transfer',
+    regionId: 'graven_march',
+    siteId: 'site.cairnmarket',
+    locationId: 'bellwater_mobile_service_corridor',
+    questId: 'relic_the_acre_crossed_a_border',
+    conceptIds: Object.freeze(['concept_bellwater_mobile_service_corridor_four_corner_transfer']),
+    exteriorConceptIndex: 0,
+    interiorConceptIndex: null,
+    blockoutReferenceIds: Object.freeze([]),
+    motionSystems: Object.freeze([
+      'manual_acre_corner_transfer',
+      'five_civic_service_line_states',
+      'school_rope_outage',
+      'reduced_school_service',
+      'convoy_and_pack_movement',
+    ]),
+  }),
 ]);
 
 // The canonical content id is `glasswood`; the older prompt-law key includes
@@ -409,8 +449,12 @@ function environmentList() {
   return ENVIRONMENT_DEFINITIONS.map((definition) => {
     const concepts = Object.freeze(definition.conceptIds.map((id) => environmentConcept(id, definition.id)));
     const blockoutReferences = Object.freeze(definition.blockoutReferenceIds.map((id) => environmentBlockout(id, definition.id)));
-    const exteriorConcept = concepts[0] ?? null;
-    const interiorConcept = concepts[1] ?? null;
+    const exteriorConcept = definition.exteriorConceptIndex === null
+      ? null
+      : concepts[definition.exteriorConceptIndex ?? 0] ?? null;
+    const interiorConcept = definition.interiorConceptIndex === null
+      ? null
+      : concepts[definition.interiorConceptIndex ?? 1] ?? null;
     return Object.freeze({
       id: definition.id,
       contentId: definition.contentId,
@@ -443,7 +487,9 @@ function environmentList() {
         'No static or animated 3D scene has been accepted.',
         'Not GIS, construction, structural, collision, navigation, or production-geometry authority.',
       ]),
-      reason: 'Accepted concept direction and independently reviewed noncanonical blockout data are linked for scene authoring. Static and animated environment readiness remain independently unclaimed.',
+      reason: blockoutReferences.length
+        ? 'Accepted concept direction and independently reviewed noncanonical blockout data are linked for scene authoring. Static and animated environment readiness remain independently unclaimed.'
+        : 'Accepted concept direction is linked for scene authoring; no independently reviewed machine blockout is bound yet. Static and animated environment readiness remain independently unclaimed.',
     });
   });
 }

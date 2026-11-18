@@ -144,6 +144,17 @@ for (const envelope of EXPANSION_CREATURE_HABITAT_ENVELOPES) {
   assert.ok(envelope.locomotionConstraint && envelope.sensorySignature.visualCue && envelope.sensorySignature.acoustic && envelope.sensorySignature.scent);
 }
 
+for (const envelope of EXPANSION_CREATURE_HABITAT_ENVELOPES) {
+  const expectedQuestIds = EXPANSION_QUESTS
+    .filter((quest) => [
+      ...(quest.creatureIds ?? []),
+      ...(quest.foundingCreatureOverlayIds ?? []),
+    ].includes(envelope.creatureId))
+    .map(({ id }) => id)
+    .sort();
+  assert.deepEqual([...envelope.canonicalQuestIds].sort(), expectedQuestIds, `${envelope.creatureId} must bind every accepted direct and founding-overlay quest reference`);
+}
+
 assert.equal(Object.keys(QUEST_LOCATION_SPATIAL_PROGRAMS).length, new Set(EXPANSION_QUESTS.map(({ locationId }) => locationId)).size);
 assert.ok(equalSets(new Set(Object.keys(QUEST_LOCATION_SPATIAL_PROGRAMS)), new Set(EXPANSION_QUESTS.map(({ locationId }) => locationId))));
 assert.equal(QUEST_ENVIRONMENT_REQUIREMENTS.length, EXPANSION_QUESTS.length);
@@ -234,7 +245,7 @@ for (const reference of WORLD_SPATIAL_BLOCKOUT_ASSETS) {
 }
 
 const visualReferences = ENVIRONMENT_ART_DIRECTION.acceptedVisualReferences;
-assert.equal(visualReferences.length, 12);
+assert.equal(visualReferences.length, 14);
 for (const reference of visualReferences) {
   const bytes = readFileSync(`${repositoryRoot}${reference.path}`);
   assert.equal(sha256(bytes), reference.sha256, `${reference.id} hash changed`);
@@ -249,6 +260,8 @@ const hollowArrivalReference = visualReferences.find(({ id }) => id === 'concept
 const hollowInteriorReference = visualReferences.find(({ id }) => id === 'concept_hollow_abbey_mute_nave_route_read');
 const hollowRainCourtReference = visualReferences.find(({ id }) => id === 'concept_hollow_abbey_rain_court_work_nexus');
 const hollowFoundryReference = visualReferences.find(({ id }) => id === 'concept_hollow_abbey_foundry_operational_chain');
+const cairnmarketOrchardReference = visualReferences.find(({ id }) => id === 'concept_cairnmarket_grave_root_orchard_civic_system');
+const bellwaterCorridorReference = visualReferences.find(({ id }) => id === 'concept_bellwater_mobile_service_corridor_four_corner_transfer');
 assert.equal(gravenReference?.referenceScope, 'regional_quest_location');
 assert.equal(gravenReference?.locationId, 'graven_march_black_pine_occlusion_basin');
 assert.equal(gravenReference?.exactCoordinate, null);
@@ -313,8 +326,32 @@ assert.equal(hollowFoundryReference?.provenancePath, 'assets/world/world-environ
 assert.equal(hollowFoundryReference?.promptPacketPath, 'assets/world/prompts/world-environments.current.batch-04b.prompt-packets.json');
 assert.deepEqual(hollowFoundryReference?.use, ['f01_f08_operational_chain', 'seven_silence_rooms_simultaneous_read', 'deaf_worker_blackwater_ripple_sightline', 'funeral_route_bypasses_molten_floor', 'rain_open_casting_lantern_seven_baffles', 'worker_egress_clearance_repair_and_weathering']);
 assert.match(hollowFoundryReference?.visualReviewBoundary ?? '', /static or animated scene readiness/);
+assert.equal(cairnmarketOrchardReference?.referenceScope, 'site_quest_location_subterranean_civic_system');
+assert.equal(cairnmarketOrchardReference?.siteId, 'site.cairnmarket');
+assert.equal(cairnmarketOrchardReference?.locationId, 'cairnmarket_grave_root_orchard');
+assert.equal(cairnmarketOrchardReference?.questId, 'regional_the_graves_grew_upward');
+assert.equal(cairnmarketOrchardReference?.exactCoordinate, null);
+assert.equal(cairnmarketOrchardReference?.runtimeBackdrop, false);
+assert.equal(cairnmarketOrchardReference?.runtimeIntegrated, false);
+assert.equal(cairnmarketOrchardReference?.productionAsset, false);
+assert.equal(cairnmarketOrchardReference?.provenancePath, 'assets/world/world-environments.current.batch-06.provenance.json');
+assert.equal(cairnmarketOrchardReference?.promptPacketPath, 'assets/world/prompts/world-environments.current.batch-06.prompt-packets.json');
+assert.deepEqual(cairnmarketOrchardReference?.use, ['four suspended root-route bays', 'one locally stopped Funeral Kite claim', 'separate food-wash and mortuary work', 'two manual hoists', 'two collapse refuges', 'two exterior egresses']);
+assert.match(cairnmarketOrchardReference?.visualReviewBoundary ?? '', /static or animated scene readiness/);
+assert.equal(bellwaterCorridorReference?.referenceScope, 'site_quest_location_mobile_service_corridor');
+assert.equal(bellwaterCorridorReference?.siteId, 'site.cairnmarket');
+assert.equal(bellwaterCorridorReference?.locationId, 'bellwater_mobile_service_corridor');
+assert.equal(bellwaterCorridorReference?.questId, 'relic_the_acre_crossed_a_border');
+assert.equal(bellwaterCorridorReference?.exactCoordinate, null);
+assert.equal(bellwaterCorridorReference?.runtimeBackdrop, false);
+assert.equal(bellwaterCorridorReference?.runtimeIntegrated, false);
+assert.equal(bellwaterCorridorReference?.productionAsset, false);
+assert.equal(bellwaterCorridorReference?.provenancePath, 'assets/world/world-environments.current.batch-07.provenance.json');
+assert.equal(bellwaterCorridorReference?.promptPacketPath, 'assets/world/prompts/world-environments.current.batch-07.prompt-packets.json');
+assert.deepEqual(bellwaterCorridorReference?.use, ['four-corner Acre transfer', 'one raised right-front support', 'five distinct civic service lines', 'only the school rope disconnected', 'five separate civic stations', 'road and convoy egress']);
+assert.match(bellwaterCorridorReference?.visualReviewBoundary ?? '', /static or animated scene readiness/);
 assert.doesNotMatch(artBibleSource, /No provenance sidecars|Vendored, and still without provenance/);
-assert.match(artBibleSource, /list="\{\{ keyframes \}\}" as="k" hint-placeholder-count="13"/);
+assert.match(artBibleSource, /list="\{\{ keyframes \}\}" as="k" hint-placeholder-count="15"/);
 
 const worldPromptPacketPath = 'assets/world/prompts/world-environments.current.batch-02.prompt-packets.json';
 const worldProvenancePath = 'assets/world/world-environments.current.batch-02.provenance.json';
@@ -726,6 +763,193 @@ assert.equal(hearthmereRecord.maturity.runtimeIntegrated, false);
 assert.equal(hearthmereRecord.maturity.productionAsset, false);
 assert.deepEqual(hearthmereRecord.sourceReferences, hearthmerePrompt.sourceReferences);
 for (const publishedValue of stringLeaves({ hearthmerePromptPacket, hearthmereProvenance })) {
+  assert.doesNotMatch(publishedValue, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);
+}
+
+const cairnmarketOrchardAsset = WORLD_CONCEPT_ASSETS.find(({ id }) => id === 'concept_cairnmarket_grave_root_orchard_civic_system');
+assert.ok(cairnmarketOrchardAsset);
+assert.equal(cairnmarketOrchardAsset.environmentId, 'environment.cairnmarket-grave-root-orchard-civic-system');
+assert.equal(cairnmarketOrchardAsset.regionId, 'graven_march');
+assert.equal(cairnmarketOrchardAsset.siteId, 'site.cairnmarket');
+assert.equal(cairnmarketOrchardAsset.locationId, 'cairnmarket_grave_root_orchard');
+assert.equal(cairnmarketOrchardAsset.questId, 'regional_the_graves_grew_upward');
+assert.equal(cairnmarketOrchardAsset.referenceScope, 'site_quest_location_subterranean_civic_system');
+assert.equal(cairnmarketOrchardAsset.runtimeBackdrop, false);
+assert.equal(cairnmarketOrchardAsset.runtimeIntegrated, false);
+assert.equal(cairnmarketOrchardAsset.productionAsset, false);
+assert.match(artBibleSource, /cairnmarket-grave-root-orchard-civic-system-v1\.png/);
+assert.match(artBibleSource, /world-environments\.current\.batch-06\.provenance\.json/);
+
+const cairnmarketPromptPacketPath = 'assets/world/prompts/world-environments.current.batch-06.prompt-packets.json';
+const cairnmarketProvenancePath = 'assets/world/world-environments.current.batch-06.provenance.json';
+const cairnmarketPromptPacket = JSON.parse(readFileSync(`${repositoryRoot}${cairnmarketPromptPacketPath}`, 'utf8'));
+const cairnmarketProvenance = JSON.parse(readFileSync(`${repositoryRoot}${cairnmarketProvenancePath}`, 'utf8'));
+assert.equal(cairnmarketPromptPacket.schema, 'SableReachPublicPromptPacketV1');
+assert.equal(cairnmarketPromptPacket.records.length, 1);
+assert.equal(cairnmarketProvenance.schema, 'SableReachPublishedArtProvenanceV1');
+assert.equal(cairnmarketProvenance.records.length, 1);
+assert.equal(cairnmarketProvenance.promptSource, cairnmarketPromptPacketPath);
+assert.equal(cairnmarketPromptPacket.publication.privateExecutionContextPublished, false);
+assert.equal(cairnmarketPromptPacket.publication.externalProviderIdentifiersPublished, false);
+assert.equal(cairnmarketPromptPacket.publication.supersededRevisionInputsPublished, false);
+const cairnmarketPrompt = cairnmarketPromptPacket.records[0];
+const cairnmarketRecord = cairnmarketProvenance.records[0];
+assert.equal(cairnmarketPrompt.id, 'prompt.environment.cairnmarket_grave_root_orchard_civic_system');
+assert.equal(cairnmarketPrompt.assetPath, cairnmarketOrchardAsset.path.replace(/^\.\//, ''));
+assert.equal(cairnmarketPrompt.bodyStatus, 'exact_accepted_generator_revised_prompt_body');
+assert.equal(cairnmarketPrompt.canonicalPublicDirection.length, 2587);
+assert.equal(sha256(cairnmarketPrompt.canonicalPublicDirection), cairnmarketPrompt.promptSha256);
+assert.equal(cairnmarketPrompt.promptSha256, 'c67a7666a6f491e7efee890fa7b9d738a39b7c453aa0d346abd718a1543ce849');
+assert.deepEqual(cairnmarketPrompt.sourceReferences, ['assets/world/graven-march-black-pine-occlusion-basin-v5.png']);
+assert.equal(cairnmarketPrompt.unpublishedInput.count, 5);
+assert.equal(cairnmarketRecord.id, 'environment_keyframe.cairnmarket_grave_root_orchard_civic_system');
+assert.equal(cairnmarketRecord.environmentId, cairnmarketOrchardAsset.environmentId);
+assert.equal(cairnmarketRecord.promptRecordId, cairnmarketPrompt.id);
+assert.equal(cairnmarketRecord.promptSha256, cairnmarketPrompt.promptSha256);
+assert.equal(cairnmarketRecord.path, cairnmarketPrompt.assetPath);
+assert.equal(cairnmarketRecord.path, cairnmarketOrchardAsset.path.replace(/^\.\//, ''));
+const cairnmarketBytes = readFileSync(`${repositoryRoot}${cairnmarketRecord.path}`);
+assert.equal(cairnmarketBytes.length, 3061458);
+assert.equal(cairnmarketBytes.length, cairnmarketRecord.bytes);
+assert.ok(cairnmarketBytes.length <= 8 * 1024 * 1024);
+assert.equal(sha256(cairnmarketBytes), cairnmarketRecord.sha256);
+assert.equal(cairnmarketRecord.sha256, cairnmarketOrchardAsset.sha256);
+assert.deepEqual(pngDimensions(cairnmarketBytes), { width: 1536, height: 1024 });
+const cairnmarketRaster = inspectPng(cairnmarketBytes);
+assert.deepEqual(
+  {
+    width: cairnmarketRaster.width,
+    height: cairnmarketRaster.height,
+    bitDepth: cairnmarketRaster.bitDepth,
+    colorType: cairnmarketRaster.colorType,
+    interlace: cairnmarketRaster.interlace,
+    hasAlphaChannel: cairnmarketRaster.hasAlphaChannel,
+    chunkTypes: cairnmarketRaster.chunkTypes,
+  },
+  {
+    width: 1536,
+    height: 1024,
+    bitDepth: 8,
+    colorType: 2,
+    interlace: 0,
+    hasAlphaChannel: false,
+    chunkTypes: ['IHDR', 'IDAT', 'IEND'],
+  },
+);
+assert.equal(cairnmarketRecord.colorSpace, 'sRGB');
+assert.equal(cairnmarketRecord.alphaPolicy, 'opaque');
+assert.equal(cairnmarketRecord.regionId, 'graven_march');
+assert.equal(cairnmarketRecord.siteId, 'site.cairnmarket');
+assert.equal(cairnmarketRecord.locationId, 'cairnmarket_grave_root_orchard');
+assert.equal(cairnmarketRecord.questId, 'regional_the_graves_grew_upward');
+assert.equal(cairnmarketRecord.generation.outputSha256, cairnmarketRecord.sha256);
+assert.equal(cairnmarketRecord.reviewEvidence.reviewMode, 'two independent read-only visual reviews plus coordinator verification');
+assert.equal(cairnmarketRecord.reviewEvidence.accepted, true);
+assert.match(cairnmarketRecord.reviewEvidence.boundary, /creature concept acceptance/);
+assert.match(cairnmarketRecord.reviewEvidence.boundary, /static or animated scene readiness/);
+assert.equal(cairnmarketRecord.maturity.runtimeBackdrop, false);
+assert.equal(cairnmarketRecord.maturity.runtimeIntegrated, false);
+assert.equal(cairnmarketRecord.maturity.productionAsset, false);
+assert.deepEqual(cairnmarketRecord.sourceReferences, cairnmarketPrompt.sourceReferences);
+for (const publishedValue of stringLeaves({ cairnmarketPromptPacket, cairnmarketProvenance })) {
+  assert.doesNotMatch(publishedValue, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);
+}
+
+const bellwaterCorridorAsset = WORLD_CONCEPT_ASSETS.find(({ id }) => id === 'concept_bellwater_mobile_service_corridor_four_corner_transfer');
+assert.ok(bellwaterCorridorAsset);
+assert.equal(bellwaterCorridorAsset.environmentId, 'environment.bellwater-mobile-service-corridor-four-corner-transfer');
+assert.equal(bellwaterCorridorAsset.regionId, 'graven_march');
+assert.equal(bellwaterCorridorAsset.siteId, 'site.cairnmarket');
+assert.equal(bellwaterCorridorAsset.locationId, 'bellwater_mobile_service_corridor');
+assert.equal(bellwaterCorridorAsset.questId, 'relic_the_acre_crossed_a_border');
+assert.equal(bellwaterCorridorAsset.referenceScope, 'site_quest_location_mobile_service_corridor');
+assert.equal(bellwaterCorridorAsset.exactCoordinate, null);
+assert.equal(bellwaterCorridorAsset.runtimeBackdrop, false);
+assert.equal(bellwaterCorridorAsset.runtimeIntegrated, false);
+assert.equal(bellwaterCorridorAsset.productionAsset, false);
+assert.match(artBibleSource, /bellwater-mobile-service-corridor-four-corner-transfer-v2\.png/);
+assert.match(artBibleSource, /world-environments\.current\.batch-07\.provenance\.json/);
+
+const bellwaterPromptPacketPath = 'assets/world/prompts/world-environments.current.batch-07.prompt-packets.json';
+const bellwaterProvenancePath = 'assets/world/world-environments.current.batch-07.provenance.json';
+const bellwaterPromptPacket = JSON.parse(readFileSync(`${repositoryRoot}${bellwaterPromptPacketPath}`, 'utf8'));
+const bellwaterProvenance = JSON.parse(readFileSync(`${repositoryRoot}${bellwaterProvenancePath}`, 'utf8'));
+assert.equal(bellwaterPromptPacket.schema, 'SableReachPublicPromptPacketV1');
+assert.equal(bellwaterPromptPacket.records.length, 1);
+assert.equal(bellwaterProvenance.schema, 'SableReachPublishedArtProvenanceV1');
+assert.equal(bellwaterProvenance.records.length, 1);
+assert.equal(bellwaterProvenance.promptSource, bellwaterPromptPacketPath);
+assert.equal(bellwaterPromptPacket.publication.privateExecutionContextPublished, false);
+assert.equal(bellwaterPromptPacket.publication.externalProviderIdentifiersPublished, false);
+assert.equal(bellwaterPromptPacket.publication.supersededRevisionInputsPublished, false);
+const bellwaterPrompt = bellwaterPromptPacket.records[0];
+const bellwaterRecord = bellwaterProvenance.records[0];
+assert.equal(bellwaterPrompt.id, 'prompt.environment.bellwater_mobile_service_corridor_four_corner_transfer');
+assert.equal(bellwaterPrompt.assetPath, bellwaterCorridorAsset.path.replace(/^\.\//, ''));
+assert.equal(bellwaterPrompt.bodyStatus, 'exact_accepted_generator_revised_prompt_body');
+assert.equal(bellwaterPrompt.canonicalPublicDirection.length, 1675);
+assert.equal(Buffer.byteLength(bellwaterPrompt.canonicalPublicDirection, 'utf8'), 1677);
+assert.equal(sha256(bellwaterPrompt.canonicalPublicDirection), bellwaterPrompt.promptSha256);
+assert.equal(bellwaterPrompt.promptSha256, '567b100d8611e5aaeb9b7c5c17501dc20a4a2622fd5c147b6b4a53517fa5f010');
+assert.deepEqual(bellwaterPrompt.sourceReferences, []);
+assert.equal(bellwaterPrompt.unpublishedInput.count, 5);
+assert.equal(bellwaterRecord.id, 'environment_keyframe.bellwater_mobile_service_corridor_four_corner_transfer');
+assert.equal(bellwaterRecord.subjectId, 'bellwater_mobile_service_corridor_four_corner_transfer');
+assert.equal(bellwaterRecord.environmentId, bellwaterCorridorAsset.environmentId);
+assert.equal(bellwaterRecord.familyId, 'world_environments');
+assert.equal(bellwaterRecord.rank, 'site_quest_location_mobile_service_corridor');
+assert.equal(bellwaterRecord.role, 'environment_keyframe');
+assert.equal(bellwaterRecord.promptRecordId, bellwaterPrompt.id);
+assert.equal(bellwaterRecord.promptSha256, bellwaterPrompt.promptSha256);
+assert.equal(bellwaterRecord.path, bellwaterPrompt.assetPath);
+assert.equal(bellwaterRecord.path, bellwaterCorridorAsset.path.replace(/^\.\//, ''));
+const bellwaterBytes = readFileSync(`${repositoryRoot}${bellwaterRecord.path}`);
+assert.equal(bellwaterBytes.length, 2846754);
+assert.equal(bellwaterBytes.length, bellwaterRecord.bytes);
+assert.ok(bellwaterBytes.length <= 8 * 1024 * 1024);
+assert.equal(sha256(bellwaterBytes), bellwaterRecord.sha256);
+assert.equal(bellwaterRecord.sha256, bellwaterCorridorAsset.sha256);
+assert.deepEqual(pngDimensions(bellwaterBytes), { width: 1536, height: 1024 });
+const bellwaterRaster = inspectPng(bellwaterBytes);
+assert.deepEqual(
+  {
+    width: bellwaterRaster.width,
+    height: bellwaterRaster.height,
+    bitDepth: bellwaterRaster.bitDepth,
+    colorType: bellwaterRaster.colorType,
+    interlace: bellwaterRaster.interlace,
+    hasAlphaChannel: bellwaterRaster.hasAlphaChannel,
+    chunkTypes: bellwaterRaster.chunkTypes,
+  },
+  {
+    width: 1536,
+    height: 1024,
+    bitDepth: 8,
+    colorType: 2,
+    interlace: 0,
+    hasAlphaChannel: false,
+    chunkTypes: ['IHDR', 'IDAT', 'IEND'],
+  },
+);
+assert.equal(bellwaterRecord.colorSpace, 'sRGB');
+assert.equal(bellwaterRecord.alphaPolicy, 'opaque');
+assert.equal(bellwaterRecord.regionId, 'graven_march');
+assert.equal(bellwaterRecord.siteId, 'site.cairnmarket');
+assert.equal(bellwaterRecord.locationId, 'bellwater_mobile_service_corridor');
+assert.equal(bellwaterRecord.questId, 'relic_the_acre_crossed_a_border');
+assert.equal(bellwaterRecord.generation.tool.name, 'built-in image generation');
+assert.equal(bellwaterRecord.generation.mode, 'reference-guided revision');
+assert.equal(bellwaterRecord.generation.outputSha256, bellwaterRecord.sha256);
+assert.equal(bellwaterRecord.reviewEvidence.reviewMode, 'two independent read-only visual reviews plus coordinator verification');
+assert.equal(bellwaterRecord.reviewEvidence.accepted, true);
+assert.match(bellwaterRecord.reviewEvidence.boundary, /exact atlas or GIS placement/);
+assert.match(bellwaterRecord.reviewEvidence.boundary, /collision, navigation/);
+assert.match(bellwaterRecord.reviewEvidence.boundary, /static or animated scene readiness/);
+assert.equal(bellwaterRecord.maturity.runtimeBackdrop, false);
+assert.equal(bellwaterRecord.maturity.runtimeIntegrated, false);
+assert.equal(bellwaterRecord.maturity.productionAsset, false);
+assert.deepEqual(bellwaterRecord.sourceReferences, bellwaterPrompt.sourceReferences);
+for (const publishedValue of stringLeaves({ bellwaterPromptPacket, bellwaterProvenance })) {
   assert.doesNotMatch(publishedValue, /(?:[A-Za-z]:\\|https?:\/\/|drive\/folders|call[_-]?id|session[_-]?id|username|e-?mail|@(?:gmail|outlook))/i);
 }
 

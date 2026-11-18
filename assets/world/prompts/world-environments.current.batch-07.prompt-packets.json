@@ -1,0 +1,27 @@
+{
+  "schema": "SableReachPublicPromptPacketV1",
+  "batchId": "current-world-environments-batch-07",
+  "publication": {
+    "scope": "repository_relative_prompt_direction",
+    "privateExecutionContextPublished": false,
+    "externalProviderIdentifiersPublished": false,
+    "supersededRevisionInputsPublished": false
+  },
+  "rightsDeclaration": "Owner-authorized original project art direction for environment concept and blockout reference use.",
+  "records": [
+    {
+      "id": "prompt.environment.bellwater_mobile_service_corridor_four_corner_transfer",
+      "assetPath": "assets/world/bellwater-mobile-service-corridor-four-corner-transfer-v2.png",
+      "bodyStatus": "exact_accepted_generator_revised_prompt_body",
+      "canonicalPublicDirection": "Make a tightly scoped correction to the referenced Bellwater Mobile Service Corridor concept image. Preserve the composition, camera, lighting, landscape, one walking Acre, four massive raised right-front corner supports, five separated civic stations, residents, convoy traffic, black-pine continuity, materials, colors, scale, and every other accepted visual feature. Change only the foreground service rack and the lines running from it toward the Acre's gantry. The corrected mechanical state must be immediately countable and unambiguous: EXACTLY FOUR taut, continuous service connections travel from the near rack all the way toward the gantry—(1) one gray water pipe, (2) one iron chain, (3) one lower pale burial cord, and (4) one thin weighted tax cord. There must be NO fifth taut strand, cable, rope, pipe, chain, shadow-line, or hidden continuation. The school service is the only outage: show one distinct thick braided school rope ending at the near rack in a short slack capped cut end, followed by a wide, plainly visible open-air gap; completely remove the upper thick braided continuation beyond that gap toward the gantry. Do not leave a deep U-shaped tail that could read as a sixth service, do not add a replacement cable, and do not let shadows or overlapping railings visually reconnect the broken school rope. The four connected services and one disconnected school rope should be separable even at thumbnail scale. Keep this as polished stylized 3D dark-fantasy production concept art, wide 3:2 landscape, player-height three-quarter view, cold raking light, near-black decayed world, no text, labels, logo, watermark, diagram overlay, border, or UI.",
+      "promptSha256": "567b100d8611e5aaeb9b7c5c17501dc20a4a2622fd5c147b6b4a53517fa5f010",
+      "lineageDisclosure": "The exact accepted correction prompt is published. Five earlier corrective prompt bodies, private revision images, and execution locators are omitted.",
+      "sourceReferences": [],
+      "unpublishedInput": {
+        "count": 5,
+        "role": "superseded_private_revision_sources",
+        "reason": "Prior revision inputs remain private; no execution locator is published."
+      }
+    }
+  ]
+}
