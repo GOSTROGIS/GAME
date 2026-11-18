@@ -179,11 +179,34 @@
     </script>
   <script>
   if (["127.0.0.1", "localhost", "[::1]"].includes(location.hostname)) {
-    const widget = document.createElement("script");
-    widget.src = "http://127.0.0.1:11435/embed.js";
-    widget.dataset.app = "GAME";
-    widget.defer = true;
-    document.head.append(widget);
+    const link = document.createElement("a");
+    link.href = "http://127.0.0.1:11435/app/?profile=app%3AGAME";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "App guide";
+    (document.querySelector("nav, footer") || document.body).append(link);
+    let loading = false;
+    link.addEventListener("click", event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      const toggle = document.querySelector("[data-local-guide-panel] button");
+      if (toggle) { toggle.click(); return; }
+      if (loading) return;
+      loading = true;
+      const widget = document.createElement("script");
+      widget.src = "http://127.0.0.1:11435/embed.js";
+      widget.dataset.app = "GAME";
+      widget.onload = () => {
+        loading = false;
+        document.querySelector("[data-local-guide-panel] button")?.click();
+      };
+      widget.onerror = () => {
+        loading = false;
+        widget.remove();
+        link.textContent = "Start Ollama Tools, then try the guide again";
+      };
+      document.head.append(widget);
+    });
   }
   </script>
   </body>
