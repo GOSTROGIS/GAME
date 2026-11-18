@@ -119,3 +119,14 @@ The repository uses Git LFS for large GIS and 3D authoring/runtime binaries. `.g
 Run [Open Ollama Tools.cmd](Open%20Ollama%20Tools.cmd) from a Windows checkout to open a developer chat with this repository selected. The launcher looks for the shared Ollama Tools installation alongside your repository collection. For a different location, set `OLLAMA_TOOLS_DIR` to the folder containing `Start Ollama Tools.cmd`.
 
 The companion runs with the [Ollama](https://ollama.com/) model runtime on your computer.
+
+### Assistant model
+
+The [assistant profile](assistant/profile.json) defines GAME Guide. To create and run its local model from this checkout, use
+
+```powershell
+ollama create guide-app-game:v1 -f assistant/Modelfile
+ollama run guide-app-game:v1
+```
+
+For source lookup and available app tools, open the shared developer assistant from this checkout.
